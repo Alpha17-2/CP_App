@@ -1,7 +1,8 @@
 import 'package:CP_App/Providers/Contest_List.dart';
 import 'Providers/MathsProblemList.dart';
 import 'Providers/TrendingProblems.dart';
-
+import 'Providers/StringProblemlist.dart';
+import 'Screens/Detail Screen/ShowString.dart';
 import 'package:CP_App/Providers/topic_list.dart';
 import 'package:CP_App/Screens/Display%20Screens/Homepage.dart';
 import 'package:flutter/material.dart';
@@ -41,6 +42,9 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(
           create: (context) => ArrayProblems(),
         ),
+        ChangeNotifierProvider(
+          create: (context) => StringProblems(),
+        )
       ],
       child: MaterialApp(
         theme: ThemeData(
@@ -59,6 +63,7 @@ class MyApp extends StatelessWidget {
           FundamentalProblems.routeName: (context) => FundamentalProblems(),
           ShowMathsProblem.routeName: (context) => ShowMathsProblem(),
           ShowArrayProblems.routeName: (context) => ShowArrayProblems(),
+          ShowStringProblem.routeName: (context) => ShowStringProblem(),
         },
       ),
     );
