@@ -1,7 +1,6 @@
 import 'package:CP_App/Helpers/DeviceSize.dart';
 import 'package:flutter/material.dart';
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
-import 'ListOfFundamentalP.dart';
 
 class ProbandSol extends StatefulWidget {
   String inputExplanation;

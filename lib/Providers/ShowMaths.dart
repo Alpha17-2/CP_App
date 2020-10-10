@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:CP_App/Providers/MathsProblemList.dart';
 
-class FundamentalProblems extends StatelessWidget {
-  static const routeName = '/FundamentalProblems';
+class ShowMathsProblem extends StatelessWidget {
+  static const routeName = '/MathsProblems';
   @override
   Widget build(BuildContext context) {
     final list = Provider.of<MathsProblem>(context).ProblemList;
@@ -42,7 +42,7 @@ class FundamentalProblems extends StatelessWidget {
                 ],
               ),
               Container(
-                height: displayHeight(context) * 0.9,
+                height: displayHeight(context) * 0.85,
                 width: displayWidth(context) * 1.0,
                 child: ListView.builder(
                     shrinkWrap: true,

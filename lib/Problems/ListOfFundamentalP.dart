@@ -1,8 +1,6 @@
 import 'package:CP_App/Helpers/DeviceSize.dart';
 import 'package:CP_App/Helpers/display_problems.dart';
-import 'package:CP_App/Screens/Display%20Screens/Problem_List_Screen.dart';
 import 'package:flutter/material.dart';
-import 'SolutionPage.dart';
 import 'package:provider/provider.dart';
 import 'package:CP_App/Providers/Fundamental_Problems_list.dart';
 

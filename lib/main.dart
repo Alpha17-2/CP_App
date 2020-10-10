@@ -1,7 +1,7 @@
 import 'package:CP_App/Providers/Contest_List.dart';
 import 'Providers/MathsProblemList.dart';
 import 'Providers/TrendingProblems.dart';
-import 'Screens/Display Screens/ShowMaths.dart';
+import 'Providers/ShowMaths.dart';
 import 'package:CP_App/Providers/topic_list.dart';
 import 'package:CP_App/Screens/Display%20Screens/Homepage.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +20,6 @@ import 'Providers/Fundamental_Problems_list.dart';
 void main() {
   runApp(MyApp());
 }
-// modified by Gayatri!!
 
 class MyApp extends StatelessWidget {
   @override

@@ -1,6 +1,6 @@
 import 'package:CP_App/Problems/ListOfFundamentalP.dart';
 
-import 'package:CP_App/Screens/Display%20Screens/ShowMaths.dart';
+import 'package:CP_App/Providers/ShowMaths.dart';
 import 'package:flutter/material.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
 
