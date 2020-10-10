@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'Single_Contest.dart';
 
 class ContestList extends ChangeNotifier {
+  // This is my contest list.
+
   List<SingleContest> listOfContest = [
     SingleContest(
         title: 'HHKB Programming Contest 2020',
