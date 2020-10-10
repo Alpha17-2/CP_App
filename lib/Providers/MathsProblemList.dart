@@ -78,13 +78,13 @@ class MathsProblem extends ChangeNotifier {
       description:
           "Given a binary string , count the number of substrings which starts and ends with 1",
       input: "111\n101010101",
-      output: "3\n10",
+      output: "6\n15",
       inputExplain:
           "For 101010101 the number of substrings which start and end with 1 are 10",
       prereq: "Basic Maths ",
       code: "null",
       explaination:
-          "1.Initialise a variable named cnt with 0. cnt the number of 1 in the given substring\n2.Now Apply the formula of finding sum upto (n-1) places i.e. ((n-1)n)/2\n3. For example:\n 111\n In this case the number of 1's are 3 .In this case we have to first find the pattern. If we observe we will find that if in this case the 1(at index 0)can form a substring with 1(at index 2 and index 3)i.e. 2 substrings.The 1(at index 1) can form pair with 1 at index(2)i.e. 1 substring.and the 1(at index 3)cannot form pair with any 1 as it is at the last position.\nwe found that the pattern formed here is (2+1).Here cnt was 3 i.e. we have to find sum of(n-1) terms",
+          "1.Initialise a variable named cnt with 0. cnt the number of 1 in the given substring\n2.Now Apply the formula of finding sum upto (n-1) places i.e. ((n-1)n)/2\n3. For example:\n 111\n In this case the number of 1's are 3 .In this case we have to first find the pattern. If we observe we will find that if in this case the 1(at index 0)can form a substring with 1(at index 2 and index 3)i.e. 2 substrings.The 1(at index 1) can form pair with 1 at index(2)i.e. 1 substring.and the 1(at index 3)cannot form pair with any 1 as it is at the last position.\nwe found that the pattern formed here is (2+1).Here cnt was 3 i.e. we have to find sum of(n-1) terms and count the number of ones and add it to cnt",
     ),
     SingleProblem(
       title: "Sexy Prime",
