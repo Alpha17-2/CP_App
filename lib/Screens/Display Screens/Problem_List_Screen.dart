@@ -1,6 +1,7 @@
-import 'package:CP_App/Problems/ListOfFundamentalP.dart';
-
-import 'package:CP_App/Providers/ShowMaths.dart';
+import 'package:CP_App/Screens/Detail%20Screen/ShowFundamental.dart';
+import 'package:CP_App/Screens/Detail Screen/ShowArray.dart';
+import 'package:CP_App/Screens/Detail Screen/ShowMaths.dart';
+import 'package:CP_App/Screens/Detail Screen/ShowFundamental.dart';
 import 'package:flutter/material.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
 
@@ -56,6 +57,20 @@ class Problems extends StatelessWidget {
               ),
               onTap: () {
                 Navigator.of(context).pushNamed(ShowMathsProblem.routeName);
+              },
+            ),
+            ListTile(
+              title: Text(
+                'Arrays',
+                style: TextStyle(
+                  fontFamily: 'Quattrocento',
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: displayWidth(context) * 0.065,
+                ),
+              ),
+              onTap: () {
+                Navigator.of(context).pushNamed(ShowArrayProblems.routeName);
               },
             ),
           ],

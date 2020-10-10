@@ -1,25 +1,28 @@
 import 'package:CP_App/Providers/Contest_List.dart';
 import 'Providers/MathsProblemList.dart';
 import 'Providers/TrendingProblems.dart';
-import 'Providers/ShowMaths.dart';
+
 import 'package:CP_App/Providers/topic_list.dart';
 import 'package:CP_App/Screens/Display%20Screens/Homepage.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:CP_App/Screens/Display%20Screens/Splash.dart';
+import 'Screens/Detail Screen/ShowFundamental.dart';
+import 'Screens/Detail Screen/ShowMaths.dart';
 import 'Screens/Display Screens/preq_Screen.dart';
 import 'Screens/Display Screens/Algorithm_Screen.dart';
 import 'Screens/Detail Screen/Chosing_language.dart';
 import 'Screens/Display Screens/Doubts.dart';
 import 'Screens/Display Screens/Problem_List_Screen.dart';
 import 'Screens/Display Screens/Topic_Screen.dart';
-import 'Problems/ListOfFundamentalP.dart';
-
+import 'Screens/Detail Screen/ShowArray.dart';
 import 'Providers/Fundamental_Problems_list.dart';
+import 'Providers/ArrayProblemList.dart';
 
 void main() {
   runApp(MyApp());
 }
+// modified by Gayatri!!
 
 class MyApp extends StatelessWidget {
   @override
@@ -34,6 +37,9 @@ class MyApp extends StatelessWidget {
         ),
         ChangeNotifierProvider(
           create: (context) => TrendingProblems(),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => ArrayProblems(),
         ),
       ],
       child: MaterialApp(
@@ -52,6 +58,7 @@ class MyApp extends StatelessWidget {
           Home.routename: (context) => Home(),
           FundamentalProblems.routeName: (context) => FundamentalProblems(),
           ShowMathsProblem.routeName: (context) => ShowMathsProblem(),
+          ShowArrayProblems.routeName: (context) => ShowArrayProblems(),
         },
       ),
     );
