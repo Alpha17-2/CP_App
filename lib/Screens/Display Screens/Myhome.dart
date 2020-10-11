@@ -3,7 +3,7 @@ import 'package:CP_App/Providers/TrendingProblems.dart';
 import 'package:flutter/material.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
 import 'package:provider/provider.dart';
-import 'package:CP_App/Helpers/Contest_Grid_build.dart';
+import 'package:CP_App/Helpers/CotestCard.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:CP_App/Helpers/TrendingProblemCard.dart';
 import 'Homepage.dart';
@@ -58,19 +58,18 @@ class _MyhomeState extends State<Myhome> {
               ),
             ),
             Container(
-              width: displayWidth(context) * 1,
+              width: displayWidth(context) * 0.95,
               height: displayHeight(context) * 0.39,
               padding: const EdgeInsets.all(10),
-              child: GridView.builder(
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 1,
-                    mainAxisSpacing: 1,
-                    crossAxisSpacing: 12),
-                scrollDirection: Axis.horizontal,
+              child: Swiper(
+                pagination: SwiperPagination(),
+                index: 0,
+                scale: 0.4,
                 itemCount: ConList.length,
+                scrollDirection: Axis.horizontal,
                 itemBuilder: (context, index) => ChangeNotifierProvider.value(
                   value: ConList[index],
-                  child: Contest_grid_build(),
+                  child: ContestCard(),
                 ),
               ),
             ),

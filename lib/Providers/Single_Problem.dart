@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class SingleProblem extends ChangeNotifier {
   final String title;
   String id;
+  final String inputFormat;
   final String constraints;
   final String description;
   final String difficulty;
@@ -16,6 +17,7 @@ class SingleProblem extends ChangeNotifier {
 
   SingleProblem({
     this.title,
+    this.inputFormat,
     this.constraints,
     this.tags,
     this.inputExplain,

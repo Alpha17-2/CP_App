@@ -34,15 +34,6 @@ class Contest_grid_build extends StatelessWidget {
     else
       platImage = 'images/google.jpg';
 
-    List<Color> ListOFColors = [];
-
-    if (platform == 'Codechef') {
-      ListOFColors = [Colors.black, Colors.white, Colors.pink];
-    } else if (platform == 'Codeforces') {
-      ListOFColors = [Colors.white, Colors.blue, Colors.green];
-    } else {
-      ListOFColors = [Colors.yellow, Colors.blue];
-    }
     Future<void> _launched;
     Future<void> _launchinBrowser(String url) async {
       if (await canLaunch(url)) {
@@ -75,153 +66,158 @@ class Contest_grid_build extends StatelessWidget {
                   Colors.black.withOpacity(0.5), BlendMode.dstATop),
             ),
           ),
-          child: Padding(
-            padding: const EdgeInsets.only(top: 8.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(left: 8.0, right: 8.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      CircleAvatar(
-                        backgroundImage: AssetImage(platImage),
+          child: Card(
+            child: Container(
+              child: Padding(
+                padding: const EdgeInsets.only(top: 1.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(left: 1.0, right: 1.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          CircleAvatar(
+                            backgroundImage: AssetImage(platImage),
+                          ),
+                          Flexible(
+                            child: Text(
+                              "   " + title,
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.red,
+                                fontSize: displayWidth(context) * 0.035,
+                                fontFamily: 'Fredoka One',
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
-                      Flexible(
-                        child: Text(
-                          "   " + title,
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Colors.red,
-                            fontSize: displayWidth(context) * 0.035,
-                            fontFamily: 'Fredoka One',
+                    ),
+
+                    Opacity(
+                      opacity: 0.0,
+                      child: Divider(
+                        height: dividerlength,
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 6),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 4),
+                            child: Text(
+                              'Start Date : ' + SDate,
+                              style: TextStyle(
+                                  fontFamily: 'Fredoka One',
+                                  fontSize: textsize),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Opacity(
+                        opacity: 0.0,
+                        child: Divider(
+                          height: dividerlength,
+                        )),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 4),
+                          child: Text(
+                            'End Date : ' + EDate,
+                            style: TextStyle(
+                                fontFamily: 'Fredoka One', fontSize: textsize),
                           ),
                         ),
-                      ),
-                    ],
-                  ),
-                ),
-
-                Opacity(
-                  opacity: 0.0,
-                  child: Divider(
-                    height: dividerlength,
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 6),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(left: 4),
-                        child: Text(
-                          'Start Date : ' + SDate,
-                          style: TextStyle(
-                              fontFamily: 'Fredoka One', fontSize: textsize),
+                      ],
+                    ),
+                    Opacity(
+                        opacity: 0.0,
+                        child: Divider(
+                          height: dividerlength,
+                        )),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 4),
+                          child: Text(
+                            'Start Time : ' + StartTime,
+                            style: TextStyle(
+                                fontFamily: 'Fredoka One', fontSize: textsize),
+                          ),
                         ),
-                      ),
-                    ],
-                  ),
-                ),
-                Opacity(
-                    opacity: 0.0,
-                    child: Divider(
-                      height: dividerlength,
-                    )),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 4),
-                      child: Text(
-                        'End Date : ' + EDate,
-                        style: TextStyle(
-                            fontFamily: 'Fredoka One', fontSize: textsize),
-                      ),
+                      ],
                     ),
-                  ],
-                ),
-                Opacity(
-                    opacity: 0.0,
-                    child: Divider(
-                      height: dividerlength,
-                    )),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 4),
-                      child: Text(
-                        'Start Time : ' + StartTime,
-                        style: TextStyle(
-                            fontFamily: 'Fredoka One', fontSize: textsize),
-                      ),
+                    Opacity(
+                        opacity: 0.0,
+                        child: Divider(
+                          height: dividerlength,
+                        )),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 4),
+                          child: Text(
+                            'End Time : ' + EndTime,
+                            style: TextStyle(
+                                fontFamily: 'Fredoka One', fontSize: textsize),
+                          ),
+                        ),
+                      ],
                     ),
-                  ],
-                ),
-                Opacity(
-                    opacity: 0.0,
-                    child: Divider(
-                      height: dividerlength,
-                    )),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 4),
-                      child: Text(
-                        'End Time : ' + EndTime,
-                        style: TextStyle(
-                            fontFamily: 'Fredoka One', fontSize: textsize),
-                      ),
+                    Opacity(
+                        opacity: 0.0,
+                        child: Divider(
+                          height: dividerlength,
+                        )),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 4),
+                          child: Text(
+                            'Platform : ' + platform,
+                            style: TextStyle(
+                                fontFamily: 'Fredoka One', fontSize: textsize),
+                          ),
+                        ),
+                      ],
                     ),
-                  ],
-                ),
-                Opacity(
-                    opacity: 0.0,
-                    child: Divider(
-                      height: dividerlength,
-                    )),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 4),
-                      child: Text(
-                        'Platform : ' + platform,
-                        style: TextStyle(
-                            fontFamily: 'Fredoka One', fontSize: textsize),
-                      ),
+                    Opacity(
+                        opacity: 0.0,
+                        child: Divider(
+                          height: dividerlength,
+                        )),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        RaisedButton(
+                          onPressed: () {
+                            _launchinBrowser(url);
+                          },
+                          child: Text(
+                            'LINK',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: displayWidth(context) * 0.038),
+                          ),
+                          color: Colors.black54,
+                        )
+                      ],
                     ),
-                  ],
-                ),
-                Opacity(
-                    opacity: 0.0,
-                    child: Divider(
-                      height: dividerlength,
-                    )),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    RaisedButton(
-                      onPressed: () {
-                        _launchinBrowser(url);
-                      },
-                      child: Text(
-                        'LINK',
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: displayWidth(context) * 0.038),
-                      ),
-                      color: Colors.black54,
-                    )
-                  ],
-                ),
 
-                // Pending Work : Adding a button to redirect the user to the contest page.
-              ],
+                    // Pending Work : Adding a button to redirect the user to the contest page.
+                  ],
+                ),
+              ),
             ),
           ),
         ),
