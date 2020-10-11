@@ -10,10 +10,12 @@ class ProbandSol extends StatefulWidget {
       output,
       difficulty,
       prereq,
+      inputformat,
       explanation;
   ProbandSol(
       {this.input,
       this.title,
+      this.inputformat,
       this.inputExplanation,
       this.explanation,
       this.description,
@@ -70,6 +72,29 @@ class _ProbandSolState extends State<ProbandSol> {
                   style: TextStyle(fontSize: textsize),
                   softWrap: true,
                   textAlign: TextAlign.left,
+                ),
+              ),
+              Opacity(opacity: 0.0, child: Divider()),
+              Padding(
+                padding: const EdgeInsets.only(left: 12.0, right: 12.0),
+                child: Text(
+                  'Input Format :-',
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold, fontSize: headingsize),
+                  softWrap: true,
+                  textAlign: TextAlign.left,
+                ),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(height: displayHeight(context) * 0.008),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 12, right: 12.0),
+                child: Text(
+                  widget.inputformat,
+                  style: TextStyle(fontSize: textsize),
+                  textAlign: TextAlign.start,
                 ),
               ),
               Opacity(opacity: 0.0, child: Divider()),

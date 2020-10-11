@@ -55,6 +55,7 @@ class DisplayProblems extends StatelessWidget {
                   prereq: singleProblemName.prereq,
                   explanation: singleProblemName.explaination,
                   title: singleProblemName.title,
+                  inputformat: singleProblemName.inputFormat,
                 ),
               ));
         });
