@@ -17,7 +17,7 @@ class ArrayProblems extends ChangeNotifier {
      prereq:"Sorting and Searching",
      explaination:"1. Initialise a variable named cnt with 1\n2. Perform sorting over the array\n3. Now apply brute force method to check the  absolute difference between consecutive elements\n4. In case the difference is less than or equal to 1 then add ito cnt\n5. The max value of cnt will be the answer ",
      code:"null" ,
-     inputFormat:"the first line contains an integer n. while the second line contains integers a1,a2...an",
+     inputFormat:"The first line contains an integer n.\nThe second line contains integers a1,a2...an",
 
   ),
 
@@ -33,7 +33,7 @@ class ArrayProblems extends ChangeNotifier {
     tags:"null",
     explaination:"1. Initialise a variable named cnt with 0.\n2. perform sorting over the given weights.\n3. Our array now becomes 2 3 7 9.\n4. Now we will start traversing this from start and end. Our First Pointer now lies on 2 and second Pointer lies on 9.\n5.now we will perform addition on the elements to which pointer is pointing\n6. If after addition their sum is <=W then we will require one gandola for both of them and now we will increment i and cnt and decrement j in this case.\n7. But if it is greater than W then we will only increment cnt and decrement j\n8. This process will continue till i<j.",
     code:"null",
-    inputFormat:"First line contains integer N and W.While the second line contains weights w1,w2...wn "
+    inputFormat:"First line contains two space separated integers N and W respectively\nThe second line contains N weights w1,w2...wn "
 
 ),
   SingleProblem(
@@ -48,7 +48,7 @@ class ArrayProblems extends ChangeNotifier {
      tags:"null",
      explaination:"1. Initialise variable named sum with 0 and mx with INT_MIN.\n2. Now traverse the array from beginning and add the current value of that position to sum\n3. If after adding (sum < A[i]) then we will intialise sum with A[i]\n3. mx variable will store the max(mx,sum)\n4. Atlast print the value of mx",
      code:"null",
-     inputFormat:" Here the first line contains an integer n. while the second line contains x1,x2...xn ",
+     inputFormat:"The first line contains an integer n.\nThe second line contains n integers x1,x2...xn ",
 
 
   ),
@@ -64,7 +64,7 @@ class ArrayProblems extends ChangeNotifier {
     tags:"null",
     explaination:"1. Create an unordered map where the given elements are the keys and their indices are the values.\n2.while inserting the elemnt in the map check whether the difference of target sum and given element exists or not.\n3. This can be done using find function of map.If it exits then print the index of the present element and the index of the difference of target sum and present element",
     code:"null",
-    inputFormat: "The first line contains integer n ans sum while second line contains a1,a2....an",
+    inputFormat: "The first line contains two space separated integers n and sum respectively\nThe second line contains n integers a1,a2....an",
 
   ),
   
