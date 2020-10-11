@@ -58,13 +58,159 @@ class _ContestCardState extends State<ContestCard> {
             decoration: BoxDecoration(
                 image: DecorationImage(
                     image: AssetImage(platImage),
-                    fit: BoxFit.fill,
+                    fit: BoxFit.scaleDown,
                     colorFilter: ColorFilter.mode(
-                        Colors.black.withOpacity(0.5), BlendMode.dstATop))),
+                        Colors.black.withOpacity(0.15), BlendMode.dstATop))),
           ),
-          Padding(
-            padding: EdgeInsets.all(8.0),
-            child: Column(),
+          Center(
+            child: Card(
+              color: Colors.white38,
+              child: Container(
+                height: displayHeight(context) * 0.3,
+                width: displayWidth(context) * 0.8,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        CircleAvatar(
+                          backgroundImage: AssetImage(platImage),
+                        ),
+                        Flexible(
+                          child: Text(
+                            "   " + title,
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.red,
+                              fontSize: displayWidth(context) * 0.035,
+                              fontFamily: 'Fredoka One',
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    Opacity(
+                      opacity: 0.0,
+                      child: Divider(
+                        height: dividerlength,
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 6),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 4),
+                            child: Text(
+                              'Start Date : ' + SDate,
+                              style: TextStyle(
+                                  fontFamily: 'Fredoka One',
+                                  fontSize: textsize),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Opacity(
+                        opacity: 0.0,
+                        child: Divider(
+                          height: dividerlength,
+                        )),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 4),
+                          child: Text(
+                            'End Date : ' + EDate,
+                            style: TextStyle(
+                                fontFamily: 'Fredoka One', fontSize: textsize),
+                          ),
+                        ),
+                      ],
+                    ),
+                    Opacity(
+                        opacity: 0.0,
+                        child: Divider(
+                          height: dividerlength,
+                        )),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 4),
+                          child: Text(
+                            'Start Time : ' + StartTime,
+                            style: TextStyle(
+                                fontFamily: 'Fredoka One', fontSize: textsize),
+                          ),
+                        ),
+                      ],
+                    ),
+                    Opacity(
+                        opacity: 0.0,
+                        child: Divider(
+                          height: dividerlength,
+                        )),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 4),
+                          child: Text(
+                            'End Time : ' + EndTime,
+                            style: TextStyle(
+                                fontFamily: 'Fredoka One', fontSize: textsize),
+                          ),
+                        ),
+                      ],
+                    ),
+                    Opacity(
+                        opacity: 0.0,
+                        child: Divider(
+                          height: dividerlength,
+                        )),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 4),
+                          child: Text(
+                            'Platform : ' + platform,
+                            style: TextStyle(
+                                fontFamily: 'Fredoka One', fontSize: textsize),
+                          ),
+                        ),
+                      ],
+                    ),
+                    Opacity(
+                        opacity: 0.0,
+                        child: Divider(
+                          height: dividerlength,
+                        )),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        RaisedButton(
+                          onPressed: () {
+                            _launchinBrowser(url);
+                          },
+                          child: Text(
+                            'LINK',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: displayWidth(context) * 0.038),
+                          ),
+                          color: Colors.black54,
+                        )
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ),
           )
         ],
       ),
