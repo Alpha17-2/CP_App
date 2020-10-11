@@ -5,6 +5,7 @@ class MathsProblem extends ChangeNotifier {
   List<SingleProblem> MathsProb = [
     SingleProblem(
       title: "Floor number",
+      constraints: 'null',
       difficulty: 'Easy',
       tags: 'null',
       description:
