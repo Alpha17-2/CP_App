@@ -16,7 +16,11 @@ class FundamentalProblem extends ChangeNotifier {
             "First we need to intialise a variable named \'reverse\' with 0.\nThen we find the remainder of the given number using the modulo operator.\nMultiply the variable named reverse by 10 and add the remainder into it.\nDivide the number by 10 repeat the above step till the number becomes 0 ",
         code: "images/reverse.jpg",
         tags: 'null',
-        inputExplain: 'Reverse of the number 167895 is 598761.'),
+        inputExplain: 'Reverse of the number 167895 is 598761.',
+        constraints: "1≤|s|≤10^5",
+        inputFormat: "First line contains a string s",
+        
+        ),
     SingleProblem(
       title: "Cats and a Mouse",
       description:
@@ -29,6 +33,9 @@ class FundamentalProblem extends ChangeNotifier {
       inputExplain: 'null',
       code: "images/reverse.jpg",
       tags: 'null',
+      constraints: "1≤x,y,z≤100",
+      inputFormat: "The First line contains three space-separated integers describing the respective values of  (cat A's location),  (cat B's location), and  (mouse C's location).",
+
     ),
     SingleProblem(
       title: "Perfect Number",
@@ -42,6 +49,8 @@ class FundamentalProblem extends ChangeNotifier {
       explaination: "null",
       inputExplain: 'null',
       code: "images/reverse.jpg",
+      constraints:"1≤N≤2.10^5",
+      inputFormat: "The first line contains an integer N",
     ),
     SingleProblem(
       title: "Grading Students",
@@ -55,6 +64,8 @@ class FundamentalProblem extends ChangeNotifier {
       inputExplain: 'null',
       explaination: "null",
       code: "image/reverse.jpg",
+      constraints: "1≤N100",
+      inputFormat: "First line contains an integer N",
     ),
     SingleProblem(
       title: "Leap Year or Not",
@@ -67,6 +78,8 @@ class FundamentalProblem extends ChangeNotifier {
       explaination: "null",
       inputExplain: 'null',
       code: "images/reverse.jpg",
+      constraints: "1000≤N≤2020",
+      inputFormat: "First line contains an integer N",
     ),
     SingleProblem(
         title: "Square Integer",
@@ -79,12 +92,15 @@ class FundamentalProblem extends ChangeNotifier {
         tags: 'null',
         explaination: "NULL",
         code: "NULL",
-        inputExplain: 'null'),
+        inputExplain: 'null',
+        constraints: "1≤N,M≤2.10^5",
+        inputFormat: "First line contains two space separated integres N and M",
+        ),
     SingleProblem(
       title: "Toppers",
       description:
           "There are 3 numbers let a,b & c. N numbers are arranged in row where a,b,c are the first 3 numbers .The other such numbers are formed by adding its previous 3 numbers. Code to find all other numbers.",
-      input: "1 2 3 5",
+      input: "5\n1 2 3",
       output: "1 2 3 6 11",
       prereq: "NULL",
       difficulty: "Medium",
@@ -92,6 +108,8 @@ class FundamentalProblem extends ChangeNotifier {
       explaination: "NULL",
       code: "NULL",
       inputExplain: 'null',
+      constraints: "3≤N≤20",
+      inputFormat: " First line contains an integer n.\nSecond line contains three space separated integers a,b and c",
     ),
     SingleProblem(
         title: "Counting Valleys",
@@ -105,7 +123,10 @@ class FundamentalProblem extends ChangeNotifier {
             "Here we need to initialise a variable named cnt with 0. We will start traversing this string then add 1 to it everytime we come across U and subtract 1 when we encounter D. We will store the present value of cnt in a variable named prev. If value of cnt becomes 0 and prev becomes -1 that means we have competed a valley and we will increment the value of a variable named ans which is going to count the number of valleys across this string.",
         code: "null",
         inputExplain: 'null',
-        prereq: 'null'),
+        prereq: 'null',
+        constraints: "1≤|s|10^5",
+        inputFormat:"First line contains a string s",
+         ),
     SingleProblem(
         title: 'Divisibility by 7',
         description:
@@ -118,7 +139,9 @@ class FundamentalProblem extends ChangeNotifier {
         code: "null",
         inputExplain: 'null',
         tags: 'null',
-        prereq: 'null'),
+        prereq: 'null',
+        constraints:"1≤N,k≤2.10^5",
+        inputFormat: "1. First line contains two space separated integers N and K respectively.\n2. Second line contains n space separated integers",
     SingleProblem(
         title: 'Count Digits',
         difficulty: 'Hard',
@@ -131,7 +154,10 @@ class FundamentalProblem extends ChangeNotifier {
             'Fon N=12, [1,2,3,4,5,6,7,8,9,10,11,12] , Total digits=15',
         prereq: 'Basic Maths',
         code: 'null',
-        explaination: 'null'),
+        explaination: 'null',
+        constraints:"1≤N≤1000",
+        inputFormat: "First line contains an integer N",
+        ),
   ];
   List<SingleProblem> get ProblemList {
     return [...FundProb];
