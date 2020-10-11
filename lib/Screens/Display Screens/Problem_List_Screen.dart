@@ -12,85 +12,80 @@ class Problems extends StatelessWidget {
   Widget build(BuildContext context) {
     final divheight = displayHeight(context) * 0.0002;
     return Scaffold(
+        appBar: AppBar(
+          title: Text('Problems'),
+          backgroundColor: Colors.blue[200],
+        ),
         body: Container(
-      constraints: BoxConstraints.expand(),
-      decoration: BoxDecoration(
-        image: DecorationImage(
-          image: AssetImage('images/Main_prob.jpg'),
-          colorFilter: ColorFilter.mode(
-              Colors.black.withOpacity(0.91), BlendMode.dstATop),
-          fit: BoxFit.cover,
-        ),
-      ),
-      child: SingleChildScrollView(
-        child: Column(
-          children: [
-            Padding(padding: EdgeInsets.only(top: 35)),
-            ListTile(
-              title: Text(
-                'Fundamentals',
-                style: TextStyle(
-                  fontFamily: 'Quattrocento',
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontSize: displayWidth(context) * 0.065,
+          constraints: BoxConstraints.expand(),
+          color: Colors.white,
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                Padding(padding: EdgeInsets.only(top: 15)),
+                ListTile(
+                  isThreeLine: false,
+                  title: Text(
+                    'Fundamentals',
+                    style: TextStyle(
+                      fontFamily: 'Quattrocento',
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                      fontSize: displayWidth(context) * 0.045,
+                    ),
+                  ),
+                  onTap: () {
+                    Navigator.of(context)
+                        .pushNamed(FundamentalProblems.routeName);
+                  },
                 ),
-              ),
-              onTap: () {
-                Navigator.of(context).pushNamed(FundamentalProblems.routeName);
-              },
-            ),
-            Opacity(
-              opacity: 0.0,
-              child: Divider(
-                height: divheight,
-              ),
-            ),
-            ListTile(
-              title: Text(
-                'Mathematics',
-                style: TextStyle(
-                  fontFamily: 'Quattrocento',
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontSize: displayWidth(context) * 0.065,
+                ListTile(
+                  title: Text(
+                    'Mathematics',
+                    style: TextStyle(
+                      fontFamily: 'Quattrocento',
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                      fontSize: displayWidth(context) * 0.045,
+                    ),
+                  ),
+                  onTap: () {
+                    Navigator.of(context).pushNamed(ShowMathsProblem.routeName);
+                  },
                 ),
-              ),
-              onTap: () {
-                Navigator.of(context).pushNamed(ShowMathsProblem.routeName);
-              },
-            ),
-            ListTile(
-              title: Text(
-                'Arrays',
-                style: TextStyle(
-                  fontFamily: 'Quattrocento',
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontSize: displayWidth(context) * 0.065,
+                ListTile(
+                  title: Text(
+                    'Arrays',
+                    style: TextStyle(
+                      fontFamily: 'Quattrocento',
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                      fontSize: displayWidth(context) * 0.045,
+                    ),
+                  ),
+                  onTap: () {
+                    Navigator.of(context)
+                        .pushNamed(ShowArrayProblems.routeName);
+                  },
                 ),
-              ),
-              onTap: () {
-                Navigator.of(context).pushNamed(ShowArrayProblems.routeName);
-              },
-            ),
-            ListTile(
-              title: Text(
-                'Strings',
-                style: TextStyle(
-                  fontFamily: 'Quattrocento',
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontSize: displayWidth(context) * 0.065,
+                ListTile(
+                  title: Text(
+                    'Strings',
+                    style: TextStyle(
+                      fontFamily: 'Quattrocento',
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                      fontSize: displayWidth(context) * 0.045,
+                    ),
+                  ),
+                  onTap: () {
+                    Navigator.of(context)
+                        .pushNamed(ShowStringProblem.routeName);
+                  },
                 ),
-              ),
-              onTap: () {
-                Navigator.of(context).pushNamed(ShowStringProblem.routeName);
-              },
+              ],
             ),
-          ],
-        ),
-      ),
-    ));
+          ),
+        ));
   }
 }
