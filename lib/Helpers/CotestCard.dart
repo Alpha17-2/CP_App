@@ -64,6 +64,9 @@ class _ContestCardState extends State<ContestCard> {
           ),
           Center(
             child: Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(4.0),
+              ),
               color: Colors.white38,
               child: Container(
                 height: displayHeight(context) * 0.3,
