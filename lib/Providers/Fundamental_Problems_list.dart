@@ -15,12 +15,7 @@ class FundamentalProblem extends ChangeNotifier {
         explaination:
             "First we need to intialise a variable named \'reverse\' with 0.\nThen we find the remainder of the given number using the modulo operator.\nMultiply the variable named reverse by 10 and add the remainder into it.\nDivide the number by 10 repeat the above step till the number becomes 0 ",
         code: "images/reverse.jpg",
-        tags: 'null',
-        inputExplain: 'Reverse of the number 167895 is 598761.',
-        constraints: "1≤|s|≤10^5",
-        inputFormat: "First line contains a string s",
-        
-        ),
+        inputExplain: 'Reverse of the number 167895 is 598761.'),
     SingleProblem(
       title: "Cats and a Mouse",
       description:
@@ -32,10 +27,6 @@ class FundamentalProblem extends ChangeNotifier {
       explaination: "null",
       inputExplain: 'null',
       code: "images/reverse.jpg",
-      tags: 'null',
-      constraints: "1≤x,y,z≤100",
-      inputFormat: "The First line contains three space-separated integers describing the respective values of  (cat A's location),  (cat B's location), and  (mouse C's location).",
-
     ),
     SingleProblem(
       title: "Perfect Number",
@@ -43,14 +34,11 @@ class FundamentalProblem extends ChangeNotifier {
           "Write a program to check if the given integer is a Perfect Number or not. Perfect number is a number that is equal to the sum of all its divisors except itself.",
       input: "28\n96",
       output: "true\nfalse",
-      tags: 'null',
       prereq: "Basic knowledge of loop",
       difficulty: "Easy",
       explaination: "null",
       inputExplain: 'null',
       code: "images/reverse.jpg",
-      constraints:"1≤N≤2.10^5",
-      inputFormat: "The first line contains an integer N",
     ),
     SingleProblem(
       title: "Grading Students",
@@ -60,12 +48,9 @@ class FundamentalProblem extends ChangeNotifier {
       output: "75,40,33,67",
       prereq: "null",
       difficulty: "Easy",
-      tags: 'null',
       inputExplain: 'null',
       explaination: "null",
       code: "image/reverse.jpg",
-      constraints: "1≤N100",
-      inputFormat: "First line contains an integer N",
     ),
     SingleProblem(
       title: "Leap Year or Not",
@@ -74,12 +59,23 @@ class FundamentalProblem extends ChangeNotifier {
       output: "No\nYes",
       prereq: "null",
       difficulty: "Easy",
-      tags: 'null',
       explaination: "null",
       inputExplain: 'null',
       code: "images/reverse.jpg",
-      constraints: "1000≤N≤2020",
-      inputFormat: "First line contains an integer N",
+    ),
+    SingleProblem(
+      title: "Missing Number",
+      description: "You are provided with all numbers between 1,2,...,n except one.You have to design your code to find the missing number.",
+      input: "5 \n 2 3 1 5",
+      output: "4",
+      prereq: "null",
+      difficulty: "Easy",
+      explaination: "null",
+      inputExplain: 'The first line contains an integer n.\n The second line contains n-1 numbers.Each number is unique and lies between 1 an n.',
+      code: "null",
+      constraints: "null",
+      inputFormat: "null",
+      tags: "null",
     ),
     SingleProblem(
         title: "Square Integer",
@@ -89,27 +85,20 @@ class FundamentalProblem extends ChangeNotifier {
         output: "2",
         prereq: "NULL",
         difficulty: "Medium",
-        tags: 'null',
         explaination: "NULL",
         code: "NULL",
-        inputExplain: 'null',
-        constraints: "1≤N,M≤2.10^5",
-        inputFormat: "First line contains two space separated integres N and M",
-        ),
+        inputExplain: 'null'),
     SingleProblem(
       title: "Toppers",
       description:
           "There are 3 numbers let a,b & c. N numbers are arranged in row where a,b,c are the first 3 numbers .The other such numbers are formed by adding its previous 3 numbers. Code to find all other numbers.",
-      input: "5\n1 2 3",
+      input: "1 2 3 5",
       output: "1 2 3 6 11",
       prereq: "NULL",
       difficulty: "Medium",
-      tags: 'null',
       explaination: "NULL",
       code: "NULL",
       inputExplain: 'null',
-      constraints: "3≤N≤20",
-      inputFormat: " First line contains an integer n.\nSecond line contains three space separated integers a,b and c",
     ),
     SingleProblem(
         title: "Counting Valleys",
@@ -118,15 +107,11 @@ class FundamentalProblem extends ChangeNotifier {
         input: "DDUUUUDD\nUDDDUDUU",
         output: "1\n1",
         difficulty: "Medium",
-        tags: 'null',
         explaination:
             "Here we need to initialise a variable named cnt with 0. We will start traversing this string then add 1 to it everytime we come across U and subtract 1 when we encounter D. We will store the present value of cnt in a variable named prev. If value of cnt becomes 0 and prev becomes -1 that means we have competed a valley and we will increment the value of a variable named ans which is going to count the number of valleys across this string.",
         code: "null",
         inputExplain: 'null',
-        prereq: 'null',
-        constraints: "1≤|s|10^5",
-        inputFormat:"First line contains a string s",
-         ),
+        prereq: 'null'),
     SingleProblem(
         title: 'Divisibility by 7',
         description:
@@ -138,10 +123,7 @@ class FundamentalProblem extends ChangeNotifier {
             "Initialise a counter variable named cnt with 0 and then add k to an array of integers and if it is found to be multiple of k then we will increment cnt",
         code: "null",
         inputExplain: 'null',
-        tags: 'null',
-        prereq: 'null',
-        constraints:"1≤N,k≤2.10^5",
-        inputFormat: "1. First line contains two space separated integers N and K respectively.\n2. Second line contains n space separated integers",
+        prereq: 'null'),
     SingleProblem(
         title: 'Count Digits',
         difficulty: 'Hard',
@@ -149,15 +131,35 @@ class FundamentalProblem extends ChangeNotifier {
             'Given a number N , print the number of digits you have to write between 1 to N.',
         input: '12\n10',
         output: '15\n11',
-        tags: 'null',
         inputExplain:
             'Fon N=12, [1,2,3,4,5,6,7,8,9,10,11,12] , Total digits=15',
         prereq: 'Basic Maths',
         code: 'null',
-        explaination: 'null',
-        constraints:"1≤N≤1000",
-        inputFormat: "First line contains an integer N",
-        ),
+        explaination: 'null'),
+        SingleProblem(
+        title: 'Minimum Distances',
+        difficulty: 'Medium',
+        description:
+            'Given an array a , find the minimum distance between any pair of equal elements in the array. We define the distnace betwwn two array values as the number of indices betwwn the two values.',
+        input: '7 1 3 4 1 7',
+        output: '3',
+        inputExplain:
+            'null',
+        prereq: 'Basic Maths',
+        code: 'null',
+        explaination: 'null'),
+        SingleProblem(
+        title: 'Minimum Distances',
+        difficulty: 'Medium',
+        description:
+            'Given an array a , find the minimum distance between any pair of equal elements in the array. We define the distnace betwwn two array values as the number of indices betwwn the two values.',
+        input: '7 1 3 4 1 7',
+        output: '3',
+        inputExplain:
+            'null',
+        prereq: 'Basic Maths',
+        code: 'null',
+        explaination: 'null'),
   ];
   List<SingleProblem> get ProblemList {
     return [...FundProb];
