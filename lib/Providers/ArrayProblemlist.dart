@@ -4,6 +4,38 @@ import 'package:flutter/material.dart';
 class ArrayProblems extends ChangeNotifier {
   List<SingleProblem> ArrayProb = [
     SingleProblem(
+      title: "Increasing Array",
+      difficulty: "Easy",
+      input: "3 2 5 1 7",
+      output: "5",
+      description:
+          "you are given an array of n integers.you have to alter the array so that it is increasing i.e.,every element is atleast as large as the previous element.\nOn each turn, you may increase the value of any element by one.Design a code to print the minimum number of turns required.",
+      inputExplain:
+          "The first input line contain an integer n i.e the size of an array.Then in second line there will be n integers x1,x2,x3...xn : the contents of the array.",
+      constraints: "1≤n≤2⋅10^5\n 1≤xi≤10^9",
+      prereq: "null",
+      tags: "null",
+      explaination: "null",
+      code: "null",
+      inputFormat: "null",
+    ),
+    SingleProblem(
+      title: "Missing Number",
+      description:
+          "You are provided with all numbers between 1,2,...,n except one.You have to design your code to find the missing number.",
+      input: "5 \n 2 3 1 5",
+      output: "4",
+      prereq: "null",
+      difficulty: "Easy",
+      explaination: "null",
+      inputExplain:
+          'The first line contains an integer n.\n The second line contains n-1 numbers.Each number is unique and lies between 1 an n.',
+      code: "null",
+      constraints: "null",
+      inputFormat: "null",
+      tags: "null",
+    ),
+    SingleProblem(
       title: "Finding numbers",
       difficulty: "Easy",
       input: "6\n4 6 5 3 3 1",
@@ -12,7 +44,7 @@ class ArrayProblems extends ChangeNotifier {
           "Given an array of integers.find the subarray of maximum length where the absolute difference between consecutive elements is atmost 1.",
       inputExplain:
           "After sorting, the array becomes 1 3 3 4 5 6. here the largest subarray where absolute difference between consecutive element is less tha or equal to 1 is( 4 5 6).The length of this subarray is 3",
-      constraints: "2<n<100\n0<a[i]<100",
+      constraints: "2 < n < 100\n0<a[i] < 100",
       tags: "null",
       prereq: "Sorting and Searching",
       explaination:
@@ -30,7 +62,7 @@ class ArrayProblems extends ChangeNotifier {
         output: "3",
         inputExplain:
             "Here sum of 2 and 7 will be less than 10.That means,we have to assign one gandola to them.Now the remaining gandolas are 3 and 9 and therir sum exceed 10 i.e. why we can't assign one gandola to them.we have to assign them two different gandolas.so here we require total 3 gandolas.",
-        constraints: "1≤N≤2⋅10^5\n1≤W≤10^9\n1≤wi≤x",
+        constraints: "1 ≤ N ≤ 2⋅10^5\n1 ≤ W ≤ 10^9\n1 ≤ w[i] ≤ 10^6",
         prereq: "Sorting and Two pointer approach",
         tags: "null",
         explaination:

@@ -47,6 +47,7 @@ class DisplayProblems extends StatelessWidget {
               context,
               MaterialPageRoute(
                 builder: (context) => ProbandSol(
+                  constraints: singleProblemName.constraints,
                   inputExplanation: singleProblemName.inputExplain,
                   input: singleProblemName.input,
                   description: singleProblemName.description,

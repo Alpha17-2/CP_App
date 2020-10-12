@@ -11,9 +11,11 @@ class ProbandSol extends StatefulWidget {
       difficulty,
       prereq,
       inputformat,
-      explanation;
+      explanation,
+      constraints;
   ProbandSol(
       {this.input,
+      this.constraints,
       this.title,
       this.inputformat,
       this.inputExplanation,
@@ -63,7 +65,7 @@ class _ProbandSolState extends State<ProbandSol> {
               ),
               Opacity(
                 opacity: 0.0,
-                child: Divider(),
+                child: Divider(height: displayHeight(context) * 0.008),
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 12.0, right: 12.0),
@@ -93,6 +95,29 @@ class _ProbandSolState extends State<ProbandSol> {
                 padding: const EdgeInsets.only(left: 12, right: 12.0),
                 child: Text(
                   widget.inputformat,
+                  style: TextStyle(fontSize: textsize),
+                  textAlign: TextAlign.start,
+                ),
+              ),
+              Opacity(opacity: 0.0, child: Divider()),
+              Padding(
+                padding: const EdgeInsets.only(left: 12.0, right: 12.0),
+                child: Text(
+                  'Constraints :-',
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold, fontSize: headingsize),
+                  softWrap: true,
+                  textAlign: TextAlign.left,
+                ),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(height: displayHeight(context) * 0.008),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 12, right: 12.0),
+                child: Text(
+                  widget.constraints,
                   style: TextStyle(fontSize: textsize),
                   textAlign: TextAlign.start,
                 ),
@@ -175,15 +200,57 @@ class _ProbandSolState extends State<ProbandSol> {
         // Index 1 container , the editorial statement lies here.
         height: displayHeight(context) * 1.0,
         width: displayWidth(context) * 1.0,
-        color: Colors.green,
-        child: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Center(
-            child: Text(
-              "Team Alpha is the ",
-              style: TextStyle(
-                  fontFamily: 'Acme', fontSize: 35, color: Colors.white),
-            ),
+
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Opacity(opacity: 0.0, child: Divider()),
+              Padding(
+                padding: const EdgeInsets.only(left: 12.0),
+                child: Text(
+                  'Prerequisites :-',
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold, fontSize: headingsize),
+                ),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(height: displayHeight(context) * 0.008),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 12.0, right: 12.0),
+                child: Text(
+                  widget.prereq,
+                  style: TextStyle(fontSize: textsize),
+                  softWrap: true,
+                  textAlign: TextAlign.left,
+                ),
+              ),
+              Opacity(opacity: 0.0, child: Divider()),
+              Padding(
+                padding: const EdgeInsets.only(left: 12.0),
+                child: Text(
+                  'Editorial :-',
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold, fontSize: headingsize),
+                ),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(height: displayHeight(context) * 0.008),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 12.0, right: 12.0),
+                child: Text(
+                  widget.explanation,
+                  style: TextStyle(fontSize: textsize),
+                  softWrap: true,
+                  textAlign: TextAlign.left,
+                ),
+              ),
+            ],
           ),
         ),
       ),
