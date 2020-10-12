@@ -17,7 +17,7 @@ class FundamentalProblem extends ChangeNotifier {
         code: "images/reverse.jpg",
         tags: 'null',
         inputExplain: 'Reverse of the number 167895 is 598761.',
-        constraints: "1≤|s|≤10^5",
+        constraints: "1≤|s|≤10^9",
         inputFormat: "First line contains a string s",
         
         ),
@@ -64,7 +64,7 @@ class FundamentalProblem extends ChangeNotifier {
       inputExplain: 'null',
       explaination: "null",
       code: "image/reverse.jpg",
-      constraints: "1≤N100",
+      constraints: "1≤N≤100",
       inputFormat: "First line contains an integer N",
     ),
     SingleProblem(
@@ -142,6 +142,7 @@ class FundamentalProblem extends ChangeNotifier {
         prereq: 'null',
         constraints:"1≤N,k≤2.10^5",
         inputFormat: "1. First line contains two space separated integers N and K respectively.\n2. Second line contains n space separated integers",
+    ),
     SingleProblem(
         title: 'Count Digits',
         difficulty: 'Hard',
