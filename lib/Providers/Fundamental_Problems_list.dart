@@ -81,6 +81,20 @@ class FundamentalProblem extends ChangeNotifier {
       inputFormat: "First line contains an integer N",
     ),
     SingleProblem(
+      title: "Missing Number",
+      description: "You are provided with all numbers between 1,2,...,n except one.You have to design your code to find the missing number.",
+      input: "5 \n 2 3 1 5",
+      output: "4",
+      prereq: "null",
+      difficulty: "Easy",
+      explaination: "null",
+      inputExplain: 'The first line contains an integer n.\n The second line contains n-1 numbers.Each number is unique and lies between 1 an n.',
+      code: "null",
+      constraints: "null",
+      inputFormat: "null",
+      tags: "null",
+    ),
+    SingleProblem(
       title: "Square Integer",
       description:
           "You are given with two range of numbers. Design a code that should return an integer representing the number of square integer in the inclusive range provided to you.",
