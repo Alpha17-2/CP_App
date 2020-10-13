@@ -205,6 +205,20 @@ class FundamentalProblem extends ChangeNotifier {
       constraints: "1=x,y,z=10^9",
       inputFormat: "The only line contains three integers x, y, and z.",
     ),
+    SingleProblem(
+      title:"Next Round",
+      difficulty: " Easy",
+      description: "In a contest only n participants took part. Only the participants scoring greater than or equal to kth participant's score and having a +ve score (i.e.score>0) will qualify to next round.Find the number of participants who can qualify to next round.",
+      input: "8 5\n10 9 8 7 7 7 5 5\n4 2\n0 0 0 0";
+      output: "6\n0",
+      constraints: "1 ≤ k ≤ n ≤ 50 \n0 ≤ ai ≤ 100",
+      inputFormat: "The first line of the input contains two space separated integers n and k.\nThesecond line contains n space-separated integers a1, a2, ..., an where ai is the score earned by the participant who got the i-th place. The given sequence is in non-increasing order i.e.(a1>a2 for all i). ",
+      inputExplain: " In first test case, the values which are greater than or equal to 7 are 10 9 8 7 7 7.That means there are total 6 participants who scored >=5th(kth) partcipant's score ",
+      prereq: "null",
+      tags: "null",
+      explaination: "1.Initialise a counter variable cnt with 0.\n2. Traverse the loop from starting and compare each value with kth's participant score.\n3. If the value is >= Kth's particpant score and not equal to 0 then increment cnt.\n4. Otherwise break the loop.\n5. Print the value of cnt. ",
+      code: "null",
+    ),
   ];
   List<SingleProblem> get ProblemList {
     return [...FundProb];

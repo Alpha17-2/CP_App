@@ -141,6 +141,21 @@ class ArrayProblems extends ChangeNotifier {
       inputFormat:
           "The first line contains two space separated integers n and sum respectively\nThe second line contains n integers a1,a2....an.",
     ),
+    SingleProblem(
+      title: "Swap the  Arrays",
+      difficulty: "Medium",
+      description: " Given two arrays A and B containing positive integers.Your task is to maximum the sum of Array A.To do so you can choose any two indices i and j (1 ≤ i ,j ≤ n) and swap ai and bj but in not more than k swaps.",
+      input: "2 1\n1 2\n3 4",
+      prereq: "Sorting ",
+      output: "6",
+      constraints: "1 ≤ n ≤ 30\n0 ≤ k ≤ n\n1 ≤ ai ≤ 30\n1 ≤ bi ≤ 30 ",
+      inputFormat: " The first line contains two space separated integers n and k where n is the number of elements in A and B and k is the maximum number of moves you can do.\nThe second line of the test case contains n integers a1,a2,…,an, where ai is the i-th element of A.\nThe third line of the test case contains n integers b1,b2,…,bn (1≤bi≤30), where bi is the i-th element of B.",
+      explaination: "1. sort array A in increasing and B in decreasing order.\n2. Now traverse the elements from the beginning and compare them.\n3. if ai<bi swap them otherwise break the loop.\n4. Atlast find the sum of all the elements of array A.",
+      inputExplain: " In the first test case,we will swap 1 of array A with 2 of array B and now if we find the sum of all elements of array A it will be 4. "
+      code: "null",
+      tags: "null",
+
+    )
   ];
 
   List<SingleProblem> get ProblemList {

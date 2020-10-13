@@ -174,6 +174,21 @@ class StringProblems extends ChangeNotifier {
       code: "null",
       inputFormat: "The input line contains a string s for characters",
     ),
+    SingleProblem(
+      title: "Change the name",
+      difficulty: "Medium",
+      input: "intellect\ntell\ngoogle\napple",
+      output:"1\n0",
+      description: "Compare both the strings if string 2 is a substring of string 1 then replace the minimum number of characters in string 1 with # in such a way that s1 doesn't contains s2 as substring now.",
+      constraints: "1 <= |s1| <= 100 000\n1 <= |s1| <= 30";
+      inputFormat: " The first line of the input contains a non empty string s1.\nSecond line also contains a non empty string s2.",
+      inputExplain:"In first test case, we will replace e of tell with '#' in string s1\nIn second test case we won't replace anything as apple is not a substring of google ",
+      prereq: "null",
+      tags: "null",
+      code: "null",
+      explaination: "1. We have to just count the number of occurences of s2 in s1.\n2. Initialise variables l1 and l2 with the length of strings s1 and s2 and a counter variable cnt with 0.\n3. Traverse the string s1 from index 0 and check whether the substring of s1 from index i to i+l2 is equal to s2 or not\n4. If they are equal then increment cnt and increment i by l2.\n5. If they are not equal then increment i by just 1\n6. Atlast print the value of cnt",
+
+    )
   ];
   List<SingleProblem> get ProblemList {
     return [...StringProb];
