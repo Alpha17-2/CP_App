@@ -71,6 +71,24 @@ class ArrayProblems extends ChangeNotifier {
           "The first line contains an integer n.\nThe second line contains integers a1,a2...an",
     ),
     SingleProblem(
+      title: "Increasing Array",
+      difficulty: "Easy",
+      input: "3 2 5 1 7",
+      output: "5",
+      description:
+          "you are given an array of n integers.you have to alter the array so that it is increasing i.e.,every element is atleast as large as the previous element.\nOn each turn, you may increase the value of any element by one.Design a code to print the minimum number of turns required.",
+      inputExplain:
+          "The first input line contain an integer n i.e the size of an array.Then in second line there will be n integers x1,x2,x3...xn : the contents of the array.",
+      constraints: "1≤n≤2⋅10^5\n 1≤xi≤10^9",
+      prereq: "null",
+      tags: "null",
+      explaination:
+          "null",
+      code: "null",
+      inputFormat:
+          "null",
+    ),
+    SingleProblem(
         title: "Minimum Gandolas",
         difficulty: "Medium",
         description:
