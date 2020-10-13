@@ -20,6 +20,23 @@ class ArrayProblems extends ChangeNotifier {
       inputFormat: "null",
     ),
     SingleProblem(
+      title: "Distinct Numbers",
+      difficulty: "Easy",
+      input: "5\n2 3 2 2 3",
+      output: "2",
+      description:
+          "You are given an array of 'n' integers, find the total numbers of distinct integers in the list.",
+      inputExplain:
+          "In the given input, first line contains the size of the array, here, 5. the next line contains 5 integers: '2', '3', '2', '2' and '3'. In this array, 2 numbers, i.e., 2 and 3 are the distinct integers. Therefore, we print the output: 2.",
+      constraints: "1=n=2.10^5\n1=x=10^9",
+      prereq: "null",
+      tags: "null",
+      explaination: "null",
+      code: "null",
+      inputFormat:
+          "The first line contains an integer n:the size of the list.\n\nThe second line contains n integers.",
+    ),
+    SingleProblem(
       title: "Missing Number",
       description:
           "You are provided with all numbers between 1,2,...,n except one.You have to design your code to find the missing number.",
