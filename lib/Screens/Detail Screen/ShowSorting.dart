@@ -2,13 +2,13 @@ import 'package:CP_App/Helpers/DeviceSize.dart';
 import 'package:CP_App/Helpers/display_problems.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:CP_App/Providers/ProblemSection/MathsProblemList.dart';
+import 'package:CP_App/Providers/ProblemSection/SortingProblemsList.dart';
 
-class ShowMathsProblem extends StatelessWidget {
-  static const routeName = '/MathsProblems';
+class ShowSortingProblems extends StatelessWidget {
+  static const routeName = '/SortingProbs';
   @override
   Widget build(BuildContext context) {
-    final list = Provider.of<MathsProblem>(context).ProblemList;
+    final list = Provider.of<SortingProblems>(context).ProblemList;
     final double myRadius = displayWidth(context) * 0.06;
     final double myText = displayWidth(context) * 0.045;
     return Scaffold(
@@ -31,7 +31,7 @@ class ShowMathsProblem extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(left: 10.0),
                     child: Text(
-                      'Mathematics',
+                      'Sorting',
                       style: TextStyle(
                         fontFamily: 'Acme',
                         fontSize: displayWidth(context) * 0.08,

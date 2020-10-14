@@ -2,9 +2,9 @@ import 'package:CP_App/Helpers/DeviceSize.dart';
 import 'package:CP_App/Helpers/display_problems.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:CP_App/Providers/Fundamental_Problems_list.dart';
+import 'package:CP_App/Providers/ProblemSection/Fundamental_Problems_list.dart';
 
-class FundamentalProblems extends StatelessWidget {
+class ShowFundamentalProblems extends StatelessWidget {
   static const routeName = '/FundamentalProblems';
   @override
   Widget build(BuildContext context) {

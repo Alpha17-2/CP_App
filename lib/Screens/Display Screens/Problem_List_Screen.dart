@@ -3,6 +3,7 @@ import 'package:CP_App/Screens/Detail Screen/ShowArray.dart';
 import 'package:CP_App/Screens/Detail Screen/ShowMaths.dart';
 import 'package:CP_App/Screens/Detail Screen/ShowFundamental.dart';
 import 'package:CP_App/Screens/Detail Screen/ShowString.dart';
+import 'package:CP_App/Screens/Detail Screen/ShowSorting.dart';
 import 'package:flutter/material.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
 
@@ -35,8 +36,11 @@ class Problems extends StatelessWidget {
                     ),
                   ),
                   onTap: () {
-                    Navigator.of(context)
-                        .pushNamed(FundamentalProblems.routeName);
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ShowFundamentalProblems(),
+                        ));
                   },
                 ),
                 ListTile(
@@ -50,7 +54,11 @@ class Problems extends StatelessWidget {
                     ),
                   ),
                   onTap: () {
-                    Navigator.of(context).pushNamed(ShowMathsProblem.routeName);
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ShowMathsProblem(),
+                        ));
                   },
                 ),
                 ListTile(
@@ -64,8 +72,11 @@ class Problems extends StatelessWidget {
                     ),
                   ),
                   onTap: () {
-                    Navigator.of(context)
-                        .pushNamed(ShowArrayProblems.routeName);
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ShowArrayProblems(),
+                        ));
                   },
                 ),
                 ListTile(
@@ -79,8 +90,29 @@ class Problems extends StatelessWidget {
                     ),
                   ),
                   onTap: () {
-                    Navigator.of(context)
-                        .pushNamed(ShowStringProblem.routeName);
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ShowStringProblem(),
+                        ));
+                  },
+                ),
+                ListTile(
+                  title: Text(
+                    'Sorting',
+                    style: TextStyle(
+                      fontFamily: 'Quattrocento',
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                      fontSize: displayWidth(context) * 0.045,
+                    ),
+                  ),
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ShowSortingProblems(),
+                        ));
                   },
                 ),
               ],

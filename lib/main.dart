@@ -1,24 +1,21 @@
 import 'package:CP_App/Providers/Contest_List.dart';
-import 'Providers/MathsProblemList.dart';
+import 'package:CP_App/Providers/ProblemSection/SortingProblemsList.dart';
+import 'Providers/ProblemSection/MathsProblemList.dart';
 import 'Providers/TrendingProblems.dart';
-import 'Providers/StringProblemlist.dart';
-import 'Screens/Detail Screen/ShowString.dart';
+import 'Providers/ProblemSection/ArrayProblemlist.dart';
+import 'Providers/ProblemSection/StringProblemlist.dart';
 import 'package:CP_App/Providers/topic_list.dart';
 import 'package:CP_App/Screens/Display%20Screens/Homepage.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:CP_App/Screens/Display%20Screens/Splash.dart';
-import 'Screens/Detail Screen/ShowFundamental.dart';
-import 'Screens/Detail Screen/ShowMaths.dart';
+import 'Providers/ProblemSection/Fundamental_Problems_list.dart';
 import 'Screens/Display Screens/preq_Screen.dart';
 import 'Screens/Display Screens/Algorithm_Screen.dart';
 import 'Screens/Detail Screen/Chosing_language.dart';
 import 'Screens/Display Screens/Doubts.dart';
 import 'Screens/Display Screens/Problem_List_Screen.dart';
 import 'Screens/Display Screens/Topic_Screen.dart';
-import 'Screens/Detail Screen/ShowArray.dart';
-import 'Providers/Fundamental_Problems_list.dart';
-import 'Providers/ArrayProblemList.dart';
 
 void main() {
   runApp(MyApp());
@@ -33,6 +30,9 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (context) => TopicList()),
         ChangeNotifierProvider(create: (context) => ContestList()),
         ChangeNotifierProvider(create: (context) => FundamentalProblem()),
+        ChangeNotifierProvider(
+          create: (context) => SortingProblems(),
+        ),
         ChangeNotifierProvider(
           create: (context) => MathsProblem(),
         ),
@@ -60,10 +60,6 @@ class MyApp extends StatelessWidget {
           Doubts.routeName: (context) => Doubts(),
           Chose_Languge.routeName: (context) => Chose_Languge(),
           Home.routename: (context) => Home(),
-          FundamentalProblems.routeName: (context) => FundamentalProblems(),
-          ShowMathsProblem.routeName: (context) => ShowMathsProblem(),
-          ShowArrayProblems.routeName: (context) => ShowArrayProblems(),
-          ShowStringProblem.routeName: (context) => ShowStringProblem(),
         },
       ),
     );

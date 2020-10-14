@@ -1,4 +1,4 @@
-import 'package:CP_App/Providers/Single_Problem.dart';
+import 'package:CP_App/Providers/ProblemSection/Single_Problem.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'DeviceSize.dart';
