@@ -21,6 +21,40 @@ class SortingProblems extends ChangeNotifier {
           "The first line contains one integer n- the number of elements of array A.\nThe second line contains n integers a1, a2,...,an- the number of elements of A.\nThe third line contains one integer m- the number of elements of B.\nThe fourth line contains m different integers b1,b2,...,bm- the elements of array of B",
     ),
     SingleProblem(
+      title: "Array's Leaders",
+      difficulty: "Easy",
+      input: "5\n7 4 5 7 3",
+      output: "7 7 3",
+      description:
+          "All elements on the right of 7(at index 0)are smaller than or equal to 7.Also, all the elements of right side od 7(at index 3) are smaller than 7.And the last element 3 is itself a leader since no element are on its right.",
+      inputExplain:
+          "In the first example, we can choose 20 from array [20] and 20 from array [10,20]. Number 40=20+20 doesnt belong to any of those arrays. However, it is possible to choose 10 from the second array too.\n\nIn the second example, we can choose 3 from array [3,2,2] and 1 from array [1,5,7,7,9]. Number 4=3+1 doesnt belong to any of those arrays\n\n",
+      constraints: "1<=N<=10^7\n0<=Ai<=10^7",
+      tags: "null",
+      prereq: "null",
+      explaination: "null",
+      code: "null",
+      inputFormat:
+          "The first line of input will contain a single integer N denoting the size of array.\nSecond line contains N space-seperated integers A1,A2,....AN denoting the elements of the array.",
+    ),
+    SingleProblem(
+      title: "Smallest Removal",
+      difficulty: "Medium",
+      input: "3\n1 2 2\n4\n5 5 5 5",
+      output: "10 20\n\n3 1",
+      description:
+          "Given an array a consisting of n positive integers.In one move,you can choose two indices i and j such that the absolute difference between ai and aj is no more than one and remove the smallest of these two elements.If two elements are equal, you can remove any ofthem(but exactlyone)\nYour job is to find if it is possible to obtain the array consisting of only one element using several such moves or not. ",
+      inputExplain:
+          "null",
+      constraints: "1<=n<=50\n1<=ai<=100",
+      tags: "null",
+      prereq: "null",
+      explaination: "null",
+      code: "null",
+      inputFormat:
+          "The first line contains one integer n -the lenght of a.The second line contains n integers a1,a2,..an, where ai is the i-th elements of a.",
+    ),
+    SingleProblem(
       title: "Twins",
       difficulty: "Medium",
       input: "2\n3 3\n\n3\n2 1 2",
