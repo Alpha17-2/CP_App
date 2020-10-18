@@ -72,6 +72,39 @@ class SortingProblems extends ChangeNotifier {
           "The first line cointains integer n- the number of coins.\nThe second line contains a1, a2,...an-the value of the coins.",
     ),
     SingleProblem(
+      title:"Mark and Toys",
+      difficulty: "Medium",
+      input:"7 50 /n 1 12 5 111 200 1000 10",
+      output: "4",
+      description:
+         "Imagine Mark and Jane have a son who loves toys, so Mark wants to bug some. There are a number of different toys lying in front of him, tagged with their prices.Mark has only a certain amount to spend, and he wants maximize the number of toys he bugs with this money.  Givena list of prices and amount to spend, for example, if \n Prices = [1,2,3,4] and Mark has k=7 to spend, he can bug items[1,2,3] for 6, or[3,4] for 7 unit of currency. He would choose the first group of 3 items.",     
+      inputExplain:
+         "In the given sample list you will take price as Prices = [1,2,3,4] and amount as k=7 which Mark has to spend , he can bug items[1,2,3] for 6, or[3,4] for 7 unit of currency. But he  choose the first group of 3 items because it has maximize amount of toys.",   
+      constraints: "1≤n≤10^5/n 1≤k≤10^9/n 1≤prices[i]≤10^9",
+      tags:"null",
+      prereq: "null",
+      explaination: "null",
+      code: "null",
+      inputFormat: "The first line containts two integers: n- the number of priced toys and k- the amount Mark has to spend./n The second line contains n space-separated integers prices[i].",
+    ),
+    SingleProblem(
+      title: "Closest Number",
+      difficulty: "Medium",
+      input: "4/n 5,4,3,2",
+      output:"2,3,3,4,4,5",
+      description: 
+         "Sorting is useful as the first step in many different tasks. The most common task is to make finding things easier, but there are other uses as well. In this case, it will make it easier to determine which pair or pairs of elements have the smallest absolute difference between them.You have to find the pair of elements that have the smallest absolute diffrence beteen them. If there are multiple pairs, find them all.",
+      inputExplain:  
+         "In the given input list[5,2,3,4,1] are the element of array which you have to sort it as[1,2,3,4,5] to see the several pairs have minimum diffrence of 1:[(1,2),(2,3),(3,4)(4,5)]. So the value return array would be[1,2,2,3,3,4,4,5].",
+      constraints: "2≤n≤200000/n -10^7≤arr[i]≤10^7/n All a[i] are unique in arr.",
+      tags:"null",
+      prereq: "null",
+      explaination: "null",
+      code:"null",
+      inputFormat: "The first line contains a single integer n, the lenght of arr./n The second line contains n space-seprated integer,arr[i].",          
+
+    ),
+    SingleProblem(
       title: "Sum Query",
       difficulty: "Hard",
       input: "5\n5 8 3 15 12\n2\n5 12\n4 8",
