@@ -6,7 +6,6 @@ import 'package:provider/provider.dart';
 import 'package:CP_App/Helpers/CotestCard.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:CP_App/Helpers/TrendingProblemCard.dart';
-import 'Homepage.dart';
 
 class Myhome extends StatefulWidget {
   @override
