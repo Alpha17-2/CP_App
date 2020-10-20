@@ -67,25 +67,32 @@ class STLHOME extends StatelessWidget {
               child: GestureDetector(
                 onTap: () => print('null'),
                 child: Card(
+                  elevation: 25.0,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(16.0),
                   ),
                   child: ClipPath(
                     child: Container(
                       decoration: BoxDecoration(
-                          gradient: LinearGradient(
-                              colors: [Colors.blue[900], Colors.purple])),
+                        gradient: LinearGradient(
+                          colors: [
+                            Colors.purple[200],
+                            Colors.pink[200],
+                            Colors.orange[200],
+                          ],
+                        ),
+                      ),
                       height: displayHeight(context) * 0.1,
                       width: displayWidth(context) * 0.8,
                       child: Center(
                         child: Text(
                           "ALGORITHMS",
                           style: TextStyle(
-                              color: Colors.black,
+                              color: Colors.white,
                               shadows: <Shadow>[
                                 Shadow(
                                     blurRadius: 18.0,
-                                    color: Colors.white,
+                                    color: Colors.black54,
                                     offset: Offset.fromDirection(1, 1))
                               ],
                               fontWeight: FontWeight.bold,
@@ -110,25 +117,30 @@ class STLHOME extends StatelessWidget {
               child: GestureDetector(
                 onTap: () => print('null'),
                 child: Card(
+                  elevation: 25.0,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(16.0),
                   ),
                   child: ClipPath(
                     child: Container(
                       decoration: BoxDecoration(
-                          gradient: LinearGradient(
-                              colors: [Colors.blue[900], Colors.purple])),
+                        gradient: LinearGradient(colors: [
+                          Colors.purple[200],
+                          Colors.pink[200],
+                          Colors.orange[200],
+                        ]),
+                      ),
                       height: displayHeight(context) * 0.1,
                       width: displayWidth(context) * 0.8,
                       child: Center(
                         child: Text(
                           "CONTAINERS",
                           style: TextStyle(
-                              color: Colors.black,
+                              color: Colors.white,
                               shadows: <Shadow>[
                                 Shadow(
                                     blurRadius: 18.0,
-                                    color: Colors.white,
+                                    color: Colors.black54,
                                     offset: Offset.fromDirection(1, 1))
                               ],
                               fontWeight: FontWeight.bold,
@@ -153,25 +165,29 @@ class STLHOME extends StatelessWidget {
               child: GestureDetector(
                 onTap: () => print('null'),
                 child: Card(
+                  elevation: 25.0,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(16.0),
                   ),
                   child: ClipPath(
                     child: Container(
                       decoration: BoxDecoration(
-                          gradient: LinearGradient(
-                              colors: [Colors.blue[900], Colors.purple])),
+                          gradient: LinearGradient(colors: [
+                        Colors.purple[200],
+                        Colors.pink[200],
+                        Colors.orange[200],
+                      ])),
                       height: displayHeight(context) * 0.1,
                       width: displayWidth(context) * 0.8,
                       child: Center(
                         child: Text(
                           "ITERATORS",
                           style: TextStyle(
-                              color: Colors.black,
+                              color: Colors.white,
                               shadows: <Shadow>[
                                 Shadow(
                                     blurRadius: 18.0,
-                                    color: Colors.white,
+                                    color: Colors.black54,
                                     offset: Offset.fromDirection(1, 1))
                               ],
                               fontWeight: FontWeight.bold,
@@ -196,25 +212,29 @@ class STLHOME extends StatelessWidget {
               child: GestureDetector(
                 onTap: () => print('null'),
                 child: Card(
+                  elevation: 25.0,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(16.0),
                   ),
                   child: ClipPath(
                     child: Container(
                       decoration: BoxDecoration(
-                          gradient: LinearGradient(
-                              colors: [Colors.blue[900], Colors.purple])),
+                          gradient: LinearGradient(colors: [
+                        Colors.purple[200],
+                        Colors.pink[200],
+                        Colors.orange[200],
+                      ])),
                       height: displayHeight(context) * 0.1,
                       width: displayWidth(context) * 0.8,
                       child: Center(
                         child: Text(
                           "FUNCTIONS",
                           style: TextStyle(
-                              color: Colors.black,
+                              color: Colors.white,
                               shadows: <Shadow>[
                                 Shadow(
                                     blurRadius: 18.0,
-                                    color: Colors.white,
+                                    color: Colors.black54,
                                     offset: Offset.fromDirection(1, 1))
                               ],
                               fontWeight: FontWeight.bold,
