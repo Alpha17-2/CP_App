@@ -11,14 +11,14 @@ class SortingProblems extends ChangeNotifier {
       description:
           "Given an array A, consisting of n positive integers and an array B, consisting of m positive integers. You have to choose 'a' elements from array A and 'b' elements from array B such that a+b does not belong to either array A or array B. If there are multiple answers, choose and print any set of two numbers.",
       inputExplain:
-          "In the first example, we can choose 20 from array [20] and 20 from array [10,20]. Number 40=20+20 doesnt belong to any of those arrays. However, it is possible to choose 10 from the second array too.\n\nIn the second example, we can choose 3 from array [3,2,2] and 1 from array [1,5,7,7,9]. Number 4=3+1 doesnt belong to any of those arrays\n\n",
+          "In the first example, we can choose 20 from array [20] and 20 from array [10,20]. Number 40=20+20 doesnt belong to any of those arrays. However, it is possible to choose 10 from the second array too.\n\nIn the second example, we can choose 3 from array [3,2,2] and 1 from array [1,5,7,7,9]. Number 4=3+1 doesnt belong to any of those arrays\n",
       constraints: "1 <= n <= 100\n1 <= a <= 200\n1 <= m <= 100\n1 <= b <= 200",
       tags: "null",
       prereq: "null",
       explaination: "null",
       code: "null",
       inputFormat:
-          "The first line contains one integer n- the number of elements of array A.\nThe second line contains n integers a1, a2,...,an- the number of elements of A.\nThe third line contains one integer m- the number of elements of B.\nThe fourth line contains m different integers b1,b2,...,bm- the elements of array of B",
+          "The first line contains one integer n- the number of elements of array A.\nThe second line contains n integers a[1], a[2],...,a[n]. \nThe third line contains one integer m- the number of elements of B.\nThe fourth line contains m different integers b[1],b[2],...,b[m]- the elements of array of B",
     ),
     SingleProblem(
       title: "Smallest Removal",
@@ -80,13 +80,14 @@ class SortingProblems extends ChangeNotifier {
           "Given an array A which contains N elements, you are also provided two numbers X and Y (it may or may not be present in the array). You have to perform these tasks:\n 1.Sort the array.\n 2.Print the sum of all the numbers that are less than X and greater than Y (X and Y are excluded).\n 3.Perform the second step Q times, here Q is the number of queries.",
       inputExplain:
           "In the given input, '5, 8, 3, 15, 12' are the elements of array. According to the question, first step is to sort the array. After sorting we will get the array as: '3, 5, 8, 12, 15'.\n\nFor the 1st query: X=5 and Y=12\nThe numbers smaller than X is '3' and numbers greater than Y is 15. So, for this input the required output will be: 3+15=18.\n\nFor the 2nd query: X=4 and Y=8\nThe numbers less than X are '3' and the numbers greater than Y are '12' and '15'. So, for this query we print the output as: 3+12+15=30.\n\n",
-      constraints: "1=N=10^5\n1=Ai=10^5\n1=Q=10^5\n1=X=Y=10^5",
+      constraints:
+          "1 <= N <= 10^5\n1 <= A[i] <= 10^5\n1 <= Q <= 10^5\n1 <= X,Y <= 10^5",
       tags: "null",
       prereq: "null",
       explaination: "null",
       code: "null",
       inputFormat:
-          "The first line contains  an integer N denoting the size of array.\nThe second line contains N integers A1,A2,A3,...,An.\nThe third line contains an integer Q denoting the number of queries.\nNext, Q lines contain two integres X and Y.",
+          "The first line contains  an integer N denoting the size of array.\nThe second line contains N integers A[1],A[2],A[3],...,A[n].\nThe third line contains an integer Q denoting the number of queries.\nNext, Q lines contain two integres X and Y.",
     ),
   ];
   List<SingleProblem> get ProblemList {

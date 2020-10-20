@@ -9,10 +9,10 @@ class ArrayProblems extends ChangeNotifier {
       input: "3 2 5 1 7",
       output: "5",
       description:
-          "you are given an array of n integers.you have to alter the array so that it is increasing i.e.,every element is atleast as large as the previous element.\nOn each turn, you may increase the value of any element by one.Design a code to print the minimum number of turns required.",
+          "You are given an array of n integers. You have to alter the array so that it is increasing i.e.,every element is atleast as large as the previous element.\nOn each turn, you may increase the value of any element by one. Design a code to print the minimum number of turns required.",
       inputExplain:
           "The first input line contain an integer n i.e the size of an array.Then in second line there will be n integers x1,x2,x3...xn : the contents of the array.",
-      constraints: "1≤n≤2⋅10^5\n 1≤xi≤10^9",
+      constraints: "1 ≤ n ≤ 2⋅10^5\n1 ≤ x[i] ≤ 10^9",
       prereq: "null",
       tags: "null",
       explaination: "null",
@@ -28,13 +28,13 @@ class ArrayProblems extends ChangeNotifier {
           "You are given an array of 'n' integers, find the total numbers of distinct integers in the list.",
       inputExplain:
           "In the given input, first line contains the size of the array, here, 5. the next line contains 5 integers: '2', '3', '2', '2' and '3'. In this array, 2 numbers, i.e., 2 and 3 are the distinct integers. Therefore, we print the output: 2.",
-      constraints: "1=n=2.10^5\n1=x=10^9",
+      constraints: "1 <= n <= 2.10^5\n1 <= x <= 10^9",
       prereq: "null",
       tags: "null",
       explaination: "null",
       code: "null",
       inputFormat:
-          "The first line contains an integer n:the size of the list.\n\nThe second line contains n integers.",
+          "The first line contains an integer n: the size of the list.\nThe second line contains n integers.",
     ),
     SingleProblem(
       title: "Missing Number",
@@ -46,7 +46,7 @@ class ArrayProblems extends ChangeNotifier {
       difficulty: "Easy",
       explaination: "null",
       inputExplain:
-          'The first line contains an integer n.\n The second line contains n-1 numbers.Each number is unique and lies between 1 an n.',
+          'The first line contains an integer n.\nThe second line contains n-1 numbers. Each number is unique and lies between 1 and n.',
       code: "null",
       constraints: "null",
       inputFormat: "null",
@@ -60,8 +60,8 @@ class ArrayProblems extends ChangeNotifier {
       description:
           "Given an array of integers.find the subarray of maximum length where the absolute difference between consecutive elements is atmost 1.",
       inputExplain:
-          "After sorting, the array becomes 1 3 3 4 5 6. here the largest subarray where absolute difference between consecutive element is less tha or equal to 1 is( 4 5 6).The length of this subarray is 3",
-      constraints: "2 < n < 100\n0<a[i] < 100",
+          "After sorting, the array becomes 1 3 3 4 5 6. Here the largest subarray where absolute difference between consecutive element is less tha or equal to 1 is( 4 5 6).The length of this subarray is 3",
+      constraints: "2 < n < 100\n0 < a[i] < 100",
       tags: "null",
       prereq: "Sorting and Searching",
       explaination:
@@ -79,7 +79,7 @@ class ArrayProblems extends ChangeNotifier {
           "you are given an array of n integers.you have to alter the array so that it is increasing i.e.,every element is atleast as large as the previous element.\nOn each turn, you may increase the value of any element by one.Design a code to print the minimum number of turns required.",
       inputExplain:
           "The first input line contain an integer n i.e the size of an array.Then in second line there will be n integers x1,x2,x3...xn : the contents of the array.",
-      constraints: "1≤n≤2⋅10^5\n 1≤xi≤10^9",
+      constraints: "1 ≤ n ≤ 2⋅10^5\n 1 ≤ x[i] ≤ 10^9",
       prereq: "null",
       tags: "null",
       explaination: "null",
@@ -112,7 +112,7 @@ class ArrayProblems extends ChangeNotifier {
       output: "9",
       inputExplain:
           "Here we have taken subarray from index 1 to index 4 i.e.(3 -2 5 3) this is the subarray which contains the largest sum i.e. 9.",
-      constraints: "1≤n≤2⋅10^5\n−10^9≤xi≤10^9",
+      constraints: "1 ≤ n ≤ 2⋅10^5\n−10^9 ≤ xi ≤ 10^9",
       prereq: "Kadane's algorithm",
       tags: "null",
       explaination:
@@ -130,7 +130,7 @@ class ArrayProblems extends ChangeNotifier {
           "We can add 7 and 1 to get sum 8 in this case .The index of 7 and 1 is 2 and 4 respectively.",
       inputExplain:
           "First line contains two integers n and sum.Second line contains n integers a1,a2,..an find the position of two integers whose sum is equal to given sum.If not possible then print IMPOSSIBLE",
-      constraints: "1≤n≤2⋅10^5\n1≤sum,ai≤10^9",
+      constraints: "1 ≤ n ≤ 2⋅10^5\n1 ≤ sum,a[i] ≤ 10^9",
       prereq: "Searhing",
       tags: "null",
       explaination:
