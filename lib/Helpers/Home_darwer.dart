@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
 import 'package:CP_App/Screens/Display%20Screens/preq_Screen.dart';
-import 'package:CP_App/Screens/Display%20Screens/Algorithm_Screen.dart';
-import 'package:CP_App/Screens/Display%20Screens/Doubts.dart';
+import 'package:CP_App/Screens/Detail Screen/STL_PAGE/stl_home.dart';
 import 'package:CP_App/Screens/Display%20Screens/Problem_List_Screen.dart';
 import 'package:CP_App/Screens/Display%20Screens/Topic_Screen.dart';
 
@@ -110,6 +109,13 @@ class Mydrawer extends StatelessWidget {
                       ),
                       Opacity(opacity: 0.0, child: Divider()),
                       ListTile(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => STLHOME(),
+                              ));
+                        },
                         leading: CircleAvatar(
                           backgroundImage: AssetImage('images/stl.jpg'),
                           radius: imageSize,
