@@ -45,9 +45,12 @@ class Stl_Algo extends StatelessWidget {
           new TextSpan(
               text:
                   "This function accepts two arguments i.e. starting and end address of the container in which sorting is performed if sorting is to be preformed in increasing order.But one more parameter is added to it if sorting is to be performed in decreasing order.\n\n"),
-          new TextSpan(text: "Syntax : \n"),
           new TextSpan(
-            text: "Sort(",
+              text: "Syntax : \n\n",
+              style: TextStyle(
+                  fontWeight: FontWeight.bold, color: Colors.black54)),
+          new TextSpan(
+            text: "Sort (",
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
           new TextSpan(
@@ -55,9 +58,45 @@ class Stl_Algo extends StatelessWidget {
             style: TextStyle(fontWeight: FontWeight.bold, color: Colors.teal),
           ),
           new TextSpan(
-            text: ")",
+            text: ") - Increasing Order.\n",
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
+          new TextSpan(
+            text: "Sort (",
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
+          new TextSpan(
+            text: " First , Last , greater<int>() ",
+            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.teal),
+          ),
+          new TextSpan(
+            text: ") - Decreasing Order.\n\n",
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
+          new TextSpan(
+            text: "Here ",
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
+          new TextSpan(
+            text: "First ",
+            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.teal),
+          ),
+          new TextSpan(
+            text: "is the address of the first element and ",
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
+          new TextSpan(
+            text: "Second ",
+            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.teal),
+          ),
+          new TextSpan(
+            text: "is the address of the second element.",
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
+          new TextSpan(
+              text: "\n\nSorting for various data structures:- \n",
+              style: TextStyle(
+                  fontWeight: FontWeight.bold, color: Colors.black54)),
         ],
       ),
     );
@@ -130,6 +169,108 @@ class Stl_Algo extends StatelessWidget {
                 ),
               ),
               Sortingdetailtext,
+              Text(
+                "1. Arrays :- ",
+                style:
+                    TextStyle(fontSize: fontSize, fontWeight: FontWeight.bold),
+              ),
+              Text(
+                "Suppose an array A containing n Integers. Then sorting can be performed in the following ways ",
+                style: normalTextStyle,
+              ),
+              Text(
+                "• Increasing Order : ",
+                style:
+                    TextStyle(fontSize: fontSize, fontWeight: FontWeight.bold),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.001,
+                ),
+              ),
+              Text(
+                "   sort(A,A+n)",
+                style: TextStyle(
+                    color: Colors.red,
+                    fontSize: displayWidth(context) * 0.045,
+                    fontWeight: FontWeight.bold),
+              ),
+              Text(
+                "• Decreasing Order : ",
+                style:
+                    TextStyle(fontSize: fontSize, fontWeight: FontWeight.bold),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.001,
+                ),
+              ),
+              Text(
+                "   sort(A,A+n,greater<int>())",
+                style: TextStyle(
+                    color: Colors.red,
+                    fontSize: displayWidth(context) * 0.045,
+                    fontWeight: FontWeight.bold),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: smallDivider,
+                ),
+              ),
+              Text(
+                "2. Vector :- ",
+                style:
+                    TextStyle(fontSize: fontSize, fontWeight: FontWeight.bold),
+              ),
+              Text(
+                "Suppose a vector A containing n Integers. Then sorting can be performed in the following ways ",
+                style: normalTextStyle,
+              ),
+              Text(
+                "• Increasing Order : ",
+                style:
+                    TextStyle(fontSize: fontSize, fontWeight: FontWeight.bold),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.001,
+                ),
+              ),
+              Text(
+                "   sort(A.begin(),A.end())",
+                style: TextStyle(
+                    color: Colors.red,
+                    fontSize: displayWidth(context) * 0.045,
+                    fontWeight: FontWeight.bold),
+              ),
+              Text(
+                "• Decreasing Order : ",
+                style:
+                    TextStyle(fontSize: fontSize, fontWeight: FontWeight.bold),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.001,
+                ),
+              ),
+              Text(
+                "   sort(A.begin(),A.end(),greater<int>())",
+                style: TextStyle(
+                    color: Colors.red,
+                    fontSize: displayWidth(context) * 0.045,
+                    fontWeight: FontWeight.bold),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: smallDivider,
+                ),
+              ),
             ],
           ),
         ),
