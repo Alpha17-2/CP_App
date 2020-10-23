@@ -8,6 +8,10 @@ class Stl_Algo extends StatelessWidget {
         color: Colors.purple[800],
         fontSize: displayWidth(context) * 0.06,
         fontWeight: FontWeight.bold);
+    final subheadingstyle = TextStyle(
+        color: Colors.orange[800],
+        fontSize: displayWidth(context) * 0.05,
+        fontWeight: FontWeight.bold);
     final normalTextStyle = TextStyle(
       color: Colors.black,
       fontSize: displayWidth(context) * 0.045,
@@ -21,6 +25,44 @@ class Stl_Algo extends StatelessWidget {
     var introText4 = "We can use ";
     var introText5 = "#include<bits/stdc++.h>";
     var introText6 = " for all types of algorithms and data structures.";
+
+    final SearchingDetails = new RichText(
+      text: TextSpan(
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: fontSize,
+          ),
+          children: <TextSpan>[
+            new TextSpan(text: "Searching refers to the process of finding "),
+            new TextSpan(
+                text: "address",
+                style:
+                    TextStyle(color: Colors.red, fontWeight: FontWeight.bold)),
+            new TextSpan(text: " of an element in any data structure if it"),
+            new TextSpan(
+                text: " exists.",
+                style:
+                    TextStyle(fontWeight: FontWeight.bold, color: Colors.red)),
+          ]),
+    );
+    final NoteForSorting = RichText(
+      text: TextSpan(
+        style: TextStyle(fontSize: fontSize, color: Colors.black),
+        children: <TextSpan>[
+          new TextSpan(
+              text: "NOTE : ", style: TextStyle(fontWeight: FontWeight.bold)),
+          new TextSpan(
+            text:
+                "Time Complexity to sort any vector , array or string using sort() method is ",
+          ),
+          new TextSpan(
+              text: "O(N log N)",
+              style:
+                  TextStyle(color: Colors.teal, fontWeight: FontWeight.bold)),
+          new TextSpan(text: " where N is the size of data structure.")
+        ],
+      ),
+    );
     final Sortingdetailtext = RichText(
       text: TextSpan(
         style: TextStyle(fontSize: fontSize, color: Colors.black),
@@ -271,6 +313,113 @@ class Stl_Algo extends StatelessWidget {
                   height: smallDivider,
                 ),
               ),
+              Text(
+                "3. Strings :- ",
+                style:
+                    TextStyle(fontSize: fontSize, fontWeight: FontWeight.bold),
+              ),
+              Text(
+                "Suppose a string A consisting of n characters. Then sorting can be performed in the following ways ",
+                style: normalTextStyle,
+              ),
+              Text(
+                "• Increasing Order : ",
+                style:
+                    TextStyle(fontSize: fontSize, fontWeight: FontWeight.bold),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.001,
+                ),
+              ),
+              Text(
+                "   sort(A.begin(),A.end())",
+                style: TextStyle(
+                    color: Colors.red,
+                    fontSize: displayWidth(context) * 0.045,
+                    fontWeight: FontWeight.bold),
+              ),
+              Text(
+                "• Decreasing Order : ",
+                style:
+                    TextStyle(fontSize: fontSize, fontWeight: FontWeight.bold),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.001,
+                ),
+              ),
+              Text(
+                "   sort(A.begin(),A.end(),greater<int>())",
+                style: TextStyle(
+                    color: Colors.red,
+                    fontSize: displayWidth(context) * 0.045,
+                    fontWeight: FontWeight.bold),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.007,
+                ),
+              ),
+              NoteForSorting,
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: smallDivider,
+                ),
+              ),
+              Text(
+                '• Searching :-',
+                style: headingStyle,
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: smallDivider,
+                ),
+              ),
+              SearchingDetails,
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: smallDivider,
+                ),
+              ),
+              Text(
+                "Searching can be performed in two ways :",
+                style: TextStyle(
+                    fontSize: fontSize,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black54),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: smallDivider,
+                ),
+              ),
+              Text(
+                "• Linear Search ",
+                style: subheadingstyle,
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.003,
+                ),
+              ),
+              Text(
+                "To traverse the loop from start till end and compare it with each element.",
+                style: TextStyle(fontSize: fontSize),
+              ),
+              Text(
+                "Time complexity in this case will be O(N).",
+                style:
+                    TextStyle(fontSize: fontSize, fontWeight: FontWeight.bold),
+              )
             ],
           ),
         ),
