@@ -25,7 +25,42 @@ class Stl_Algo extends StatelessWidget {
     var introText4 = "We can use ";
     var introText5 = "#include<bits/stdc++.h>";
     var introText6 = " for all types of algorithms and data structures.";
-
+    final SearchNote = new RichText(
+        text: TextSpan(
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: fontSize,
+            ),
+            children: <TextSpan>[
+          new TextSpan(
+            text: "Here ",
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
+          new TextSpan(
+            text: "First ",
+            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.teal),
+          ),
+          new TextSpan(
+            text: "is the address of the first element and ",
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
+          new TextSpan(
+            text: "Second ",
+            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.teal),
+          ),
+          new TextSpan(
+            text: "is the address of the second element and ",
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
+          new TextSpan(
+            text: "value",
+            style: TextStyle(color: Colors.teal, fontWeight: FontWeight.bold),
+          ),
+          new TextSpan(
+            text: "is the element which is to be searched.",
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
+        ]));
     final SearchingDetails = new RichText(
       text: TextSpan(
           style: TextStyle(
@@ -92,27 +127,19 @@ class Stl_Algo extends StatelessWidget {
               style: TextStyle(
                   fontWeight: FontWeight.bold, color: Colors.black54)),
           new TextSpan(
-            text: "Sort (",
-            style: TextStyle(fontWeight: FontWeight.bold),
-          ),
-          new TextSpan(
-            text: " First , Last ",
+            text: " sort(first , last)",
             style: TextStyle(fontWeight: FontWeight.bold, color: Colors.teal),
           ),
           new TextSpan(
-            text: ") - Increasing Order.\n",
+            text: " - Increasing Order.\n",
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
           new TextSpan(
-            text: "Sort (",
-            style: TextStyle(fontWeight: FontWeight.bold),
-          ),
-          new TextSpan(
-            text: " First , Last , greater<int>() ",
+            text: " sort(first , last , greater<int>()) ",
             style: TextStyle(fontWeight: FontWeight.bold, color: Colors.teal),
           ),
           new TextSpan(
-            text: ") - Decreasing Order.\n\n",
+            text: "- Decreasing Order.\n\n",
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
           new TextSpan(
@@ -419,7 +446,60 @@ class Stl_Algo extends StatelessWidget {
                 "Time complexity in this case will be O(N).",
                 style:
                     TextStyle(fontSize: fontSize, fontWeight: FontWeight.bold),
-              )
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: smallDivider,
+                ),
+              ),
+              Text(
+                "• Binary Search ",
+                style: subheadingstyle,
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.003,
+                ),
+              ),
+              Text(
+                "It follows divide and conquer technique. Perform sorting using sort Function. Then compare - the middle element of the array with the element to be searched . STL provides a binary search inbuilt function which accepts three arguments .i.e. start_address , end_address and the element to be searched.",
+                style: TextStyle(fontSize: fontSize),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: smallDivider,
+                ),
+              ),
+              Text(
+                "Syntax :",
+                style: TextStyle(
+                    fontSize: fontSize,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black54),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.0045,
+                ),
+              ),
+              Text(
+                "binary_search (start , end , value);",
+                style: TextStyle(
+                    fontSize: fontSize,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.teal),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.007,
+                ),
+              ),
+              SearchNote
             ],
           ),
         ),
