@@ -650,20 +650,17 @@ class Stl_Algo extends StatelessWidget {
               ),
               Text(
                 "Let there be a map named mp and we need to search for a particular key Then searching can be done in the following way:-",
-                style: TextStyle(
-                  fontSize: fontSize, 
-                  color: Colors.black
-                  ),
+                style: TextStyle(fontSize: fontSize, color: Colors.black),
               ),
-               Opacity(
+              Opacity(
                 opacity: 0.0,
                 child: Divider(
                   height: displayHeight(context) * 0.0045,
                 ),
               ),
               Text(
-                "auto it=mp.find(key)",
-                 style: TextStyle(
+                "auto it = mp.find(key) ;",
+                style: TextStyle(
                     fontSize: fontSize,
                     fontWeight: FontWeight.bold,
                     color: Colors.red),
@@ -684,10 +681,10 @@ class Stl_Algo extends StatelessWidget {
               Opacity(
                 opacity: 0.0,
                 child: Divider(
-                  height: smallDivider,
+                  height: displayHeight(context) * 0.0045,
                 ),
               ),
-               Text(
+              Text(
                 "1.If the key is not present in the map then it will return mp.end() else we can find key -value pair by it->first and it-> second respectively.",
                 style: TextStyle(
                   fontSize: fontSize,
@@ -710,9 +707,10 @@ class Stl_Algo extends StatelessWidget {
               Text(
                 "unordered maps:-\n",
                 style: TextStyle(
-                  fontSize: fontSize, fontWeight: FontWeight.bold,
-                  ),
+                  fontSize: fontSize,
+                  fontWeight: FontWeight.bold,
                 ),
+              ),
               Text(
                 "O(1)\n",
                 style: TextStyle(
@@ -723,23 +721,24 @@ class Stl_Algo extends StatelessWidget {
               Text(
                 "ordered maps:-\n",
                 style: TextStyle(
-                  fontSize: fontSize, fontWeight: FontWeight.bold,
-                  ),
+                  fontSize: fontSize,
+                  fontWeight: FontWeight.bold,
                 ),
-                Text(
+              ),
+              Text(
                 " O(logN)",
                 style: TextStyle(
                   fontSize: fontSize,
                   //fontWeight: FontWeight.w500,
                 ),
               ),
-               Opacity(
+              Opacity(
                 opacity: 0.0,
                 child: Divider(
                   height: smallDivider,
                 ),
               ),
-               Text(
+              Text(
                 "3. Sets :- ",
                 style:
                     TextStyle(fontSize: fontSize, fontWeight: FontWeight.bold),
@@ -756,14 +755,11 @@ class Stl_Algo extends StatelessWidget {
                   fontSize: fontSize,
                 ),
               ),
-               Text(
+              Text(
                 "Let there be a set named S . Then searching can be done in the following way:-",
-                style: TextStyle(
-                  fontSize: fontSize, 
-                  color: Colors.black
-                  ),
+                style: TextStyle(fontSize: fontSize, color: Colors.black),
               ),
-               Opacity(
+              Opacity(
                 opacity: 0.0,
                 child: Divider(
                   height: displayHeight(context) * 0.0045,
@@ -771,12 +767,11 @@ class Stl_Algo extends StatelessWidget {
               ),
               Text(
                 "auto it=S.find(value)",
-                 style: TextStyle(
+                style: TextStyle(
                     fontSize: fontSize,
                     fontWeight: FontWeight.bold,
                     color: Colors.red),
               ),
-              
               Opacity(
                 opacity: 0.0,
                 child: Divider(
@@ -796,7 +791,7 @@ class Stl_Algo extends StatelessWidget {
                   height: smallDivider,
                 ),
               ),
-               Text(
+              Text(
                 "1.If the value is not present in the set  then it will return S.end() else it is present.",
                 style: TextStyle(
                   fontSize: fontSize,
@@ -816,7 +811,7 @@ class Stl_Algo extends StatelessWidget {
                   //fontWeight: FontWeight.w500,
                 ),
               ),
-               Opacity(
+              Opacity(
                 opacity: 0.0,
                 child: Divider(
                   height: displayHeight(context) * 0.0065,
@@ -829,13 +824,13 @@ class Stl_Algo extends StatelessWidget {
                   //fontWeight: FontWeight.w500,
                 ),
               ),
-             Opacity(
+              Opacity(
                 opacity: 0.0,
                 child: Divider(
                   height: displayHeight(context) * 0.0065,
                 ),
               ),
-             Text(
+              Text(
                 "2.Time complexity of count() :- O(N)",
                 style: TextStyle(
                   fontSize: fontSize,
@@ -867,40 +862,32 @@ class Stl_Algo extends StatelessWidget {
               ),
               Text(
                 "suppose we created a string named str and the substring to be searched is s1 . Then searching can be done in the following way:-\nIf searching is to be performed from starting position as by default starting position is 0:-\n",
-               style: TextStyle(
-                  fontSize: fontSize, 
-                  color: Colors.black
-                  ),
+                style: TextStyle(fontSize: fontSize, color: Colors.black),
               ),
-              
               Text(
                 "int pos=str.find(s1)\n",
-                 style: TextStyle(
+                style: TextStyle(
                     fontSize: fontSize,
                     fontWeight: FontWeight.bold,
                     color: Colors.red),
               ),
               Text(
                 "If searching is to be performed from any another index instead of 0:-\n",
-                 style: TextStyle(
-                    fontSize: fontSize,
-                    color: Colors.black),
+                style: TextStyle(fontSize: fontSize, color: Colors.black),
               ),
-
-               Text(
+              Text(
                 "int pos=str.find(s1)\n",
-                 style: TextStyle(
+                style: TextStyle(
                     fontSize: fontSize,
                     fontWeight: FontWeight.bold,
                     color: Colors.red),
               ),
-               Opacity(
+              Opacity(
                 opacity: 0.0,
                 child: Divider(
                   height: smallDivider,
                 ),
               ),
-
               Text(
                 "NOTE : ",
                 style: TextStyle(
@@ -914,7 +901,7 @@ class Stl_Algo extends StatelessWidget {
                   height: smallDivider,
                 ),
               ),
-               Text(
+              Text(
                 "1.If the substring  is not present in the string  then it will return string::npos else it is present and will return an index.",
                 style: TextStyle(
                   fontSize: fontSize,
@@ -934,14 +921,6 @@ class Stl_Algo extends StatelessWidget {
                   //fontWeight: FontWeight.w500,
                 ),
               ),
-               
-
-
-
-
-
-
-              
             ],
           ),
         ),
