@@ -6,7 +6,7 @@ class Stl_Algo extends StatelessWidget {
   Widget build(BuildContext context) {
     final headingStyle = TextStyle(
         color: Colors.purple[800],
-        fontSize: displayWidth(context) * 0.06,
+        fontSize: displayWidth(context) * 0.07,
         fontWeight: FontWeight.bold);
     final subheadingstyle = TextStyle(
         color: Colors.orange[800],
@@ -25,6 +25,25 @@ class Stl_Algo extends StatelessWidget {
     var introText4 = "We can use ";
     var introText5 = "#include<bits/stdc++.h>";
     var introText6 = " for all types of algorithms and data structures.";
+    final vectorsearch = new RichText(
+        text: TextSpan(
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: fontSize,
+            ),
+            children: <TextSpan>[
+          new TextSpan(
+            text:
+                "A particular element can be searched in a vector with the help of ",
+          ),
+          new TextSpan(
+            text: "find()",
+            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.red),
+          ),
+          new TextSpan(
+              text:
+                  " function. This takes three arguments start address , end address and the value to be searched. It returns an iterator pointing to the value which is being searched.")
+        ]));
     final SearchNote = new RichText(
         text: TextSpan(
             style: TextStyle(
@@ -37,7 +56,7 @@ class Stl_Algo extends StatelessWidget {
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
           new TextSpan(
-            text: "First ",
+            text: "start ",
             style: TextStyle(fontWeight: FontWeight.bold, color: Colors.teal),
           ),
           new TextSpan(
@@ -45,15 +64,15 @@ class Stl_Algo extends StatelessWidget {
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
           new TextSpan(
-            text: "Second ",
+            text: "end ",
             style: TextStyle(fontWeight: FontWeight.bold, color: Colors.teal),
           ),
           new TextSpan(
-            text: "is the address of the second element and ",
+            text: " is the address of the second element and ",
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
           new TextSpan(
-            text: "value",
+            text: "value ",
             style: TextStyle(color: Colors.teal, fontWeight: FontWeight.bold),
           ),
           new TextSpan(
@@ -464,7 +483,7 @@ class Stl_Algo extends StatelessWidget {
                 ),
               ),
               Text(
-                "It follows divide and conquer technique. Perform sorting using sort Function. Then compare - the middle element of the array with the element to be searched . STL provides a binary search inbuilt function which accepts three arguments .i.e. start_address , end_address and the element to be searched.",
+                "We can  apply binary searching over any data structure only if it is sorted . It follows divide and conquer technique which works by recursively breaking an array into two halves until we get the target value ,or all the values are exhausted. At each step we will compare the target value with the middle value. If the middle element is equal to the target element that means the element is present in the array and we have completed our search. Else we have to continue our search and compare the middle element with our target element. If it is smaller than the target element (A[mid]<target value) then we will check it in right subarray else(A[mid]>target value) we will check it in left subarray until all the elements are checked or until we get the desired value.\nThe return type of this function is bool i.e. it returns either true or false.",
                 style: TextStyle(fontSize: fontSize),
               ),
               Opacity(
@@ -499,7 +518,142 @@ class Stl_Algo extends StatelessWidget {
                   height: displayHeight(context) * 0.007,
                 ),
               ),
-              SearchNote
+              SearchNote,
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: smallDivider,
+                ),
+              ),
+              Text(
+                "Searching on differen data structures",
+                style: TextStyle(
+                    color: Colors.black54,
+                    fontSize: fontSize,
+                    fontWeight: FontWeight.bold),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.007,
+                ),
+              ),
+              Text(
+                "1. Vectors :- ",
+                style:
+                    TextStyle(fontSize: fontSize, fontWeight: FontWeight.bold),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.0045,
+                ),
+              ),
+              vectorsearch,
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.0045,
+                ),
+              ),
+              Text(
+                "Syntax :",
+                style: TextStyle(
+                    fontSize: fontSize,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black54),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.0045,
+                ),
+              ),
+              Text(
+                "Let there be a vector named A and we need to search for an element say 'val'",
+                style: TextStyle(fontSize: fontSize, color: Colors.black),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.0045,
+                ),
+              ),
+              Text(
+                "auto it = find(A.begin(), A.end(), val) ;",
+                style: TextStyle(
+                    fontSize: fontSize,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.red),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: smallDivider,
+                ),
+              ),
+              Text(
+                "NOTE : ",
+                style: TextStyle(
+                    fontSize: fontSize,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.blue[800]),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: smallDivider,
+                ),
+              ),
+              Text(
+                "1. If the element is not present in the vector then it will return A.end() else we can find it's position by it-A.begin().",
+                style: TextStyle(
+                  fontSize: fontSize,
+                  // fontWeight: FontWeight.w500,
+                ),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.0065,
+                ),
+              ),
+              Text(
+                "2. Time complexity of find() in vector is O(N).",
+                style: TextStyle(
+                  fontSize: fontSize,
+                  //fontWeight: FontWeight.w500,
+                ),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: smallDivider,
+                ),
+              ),
+              Text(
+                "2. Maps :- ",
+                style:
+                    TextStyle(fontSize: fontSize, fontWeight: FontWeight.bold),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.0045,
+                ),
+              ),
+              Text(
+                "A particular element can be searched in a map with the help of find() function. This takes only one argument and i.e. the key to be searched in map.\nIt returns an iterator pointing to the key which is being searched.",
+                style: TextStyle(
+                  fontSize: fontSize,
+                ),
+              ),
+              Text(
+                "Let there be a map named mp and we need to search an element say 'val'",
+                style: TextStyle(
+                  fontSize: fontSize,
+                ),
+              ),
             ],
           ),
         ),
