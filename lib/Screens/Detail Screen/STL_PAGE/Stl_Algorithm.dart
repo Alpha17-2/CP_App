@@ -526,7 +526,7 @@ class Stl_Algo extends StatelessWidget {
                 ),
               ),
               Text(
-                "Searching on differen data structures",
+                "Searching on different data structures",
                 style: TextStyle(
                     color: Colors.black54,
                     fontSize: fontSize,
@@ -649,11 +649,299 @@ class Stl_Algo extends StatelessWidget {
                 ),
               ),
               Text(
-                "Let there be a map named mp and we need to search an element say 'val'",
+                "Let there be a map named mp and we need to search for a particular key Then searching can be done in the following way:-",
+                style: TextStyle(
+                  fontSize: fontSize, 
+                  color: Colors.black
+                  ),
+              ),
+               Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.0045,
+                ),
+              ),
+              Text(
+                "auto it=mp.find(key)",
+                 style: TextStyle(
+                    fontSize: fontSize,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.red),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: smallDivider,
+                ),
+              ),
+              Text(
+                "NOTE : ",
+                style: TextStyle(
+                    fontSize: fontSize,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.blue[800]),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: smallDivider,
+                ),
+              ),
+               Text(
+                "1.If the key is not present in the map then it will return mp.end() else we can find key -value pair by it->first and it-> second respectively.",
+                style: TextStyle(
+                  fontSize: fontSize,
+                  // fontWeight: FontWeight.w500,
+                ),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.0065,
+                ),
+              ),
+              Text(
+                "2. Time complexity of find() in :",
+                style: TextStyle(
+                  fontSize: fontSize,
+                  //fontWeight: FontWeight.w500,
+                ),
+              ),
+              Text(
+                "unordered maps:-\n",
+                style: TextStyle(
+                  fontSize: fontSize, fontWeight: FontWeight.bold,
+                  ),
+                ),
+              Text(
+                "O(1)\n",
+                style: TextStyle(
+                  fontSize: fontSize,
+                  //fontWeight: FontWeight.w500,
+                ),
+              ),
+              Text(
+                "ordered maps:-\n",
+                style: TextStyle(
+                  fontSize: fontSize, fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Text(
+                " O(logN)",
+                style: TextStyle(
+                  fontSize: fontSize,
+                  //fontWeight: FontWeight.w500,
+                ),
+              ),
+               Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: smallDivider,
+                ),
+              ),
+               Text(
+                "3. Sets :- ",
+                style:
+                    TextStyle(fontSize: fontSize, fontWeight: FontWeight.bold),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.0045,
+                ),
+              ),
+              Text(
+                "A particular element can be searched in a set with the help of find() function.This takes only one argument and i.e. the element to be searched in set.\nIt returns an iterator pointing to the element which is being searched.",
                 style: TextStyle(
                   fontSize: fontSize,
                 ),
               ),
+               Text(
+                "Let there be a set named S . Then searching can be done in the following way:-",
+                style: TextStyle(
+                  fontSize: fontSize, 
+                  color: Colors.black
+                  ),
+              ),
+               Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.0045,
+                ),
+              ),
+              Text(
+                "auto it=S.find(value)",
+                 style: TextStyle(
+                    fontSize: fontSize,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.red),
+              ),
+              
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: smallDivider,
+                ),
+              ),
+              Text(
+                "NOTE : ",
+                style: TextStyle(
+                    fontSize: fontSize,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.blue[800]),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: smallDivider,
+                ),
+              ),
+               Text(
+                "1.If the value is not present in the set  then it will return S.end() else it is present.",
+                style: TextStyle(
+                  fontSize: fontSize,
+                  // fontWeight: FontWeight.w500,
+                ),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.0065,
+                ),
+              ),
+              Text(
+                "2.Time complexity of find():-O(N)",
+                style: TextStyle(
+                  fontSize: fontSize,
+                  //fontWeight: FontWeight.w500,
+                ),
+              ),
+               Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.0065,
+                ),
+              ),
+              Text(
+                "we can also use count() function. As we are aware of the fact that set only contains unique values that means each element is only present once in the map.so If count returns 1 then the element is present else not present.\nif(S.count(value))==1, then element is present else not.",
+                style: TextStyle(
+                  fontSize: fontSize,
+                  //fontWeight: FontWeight.w500,
+                ),
+              ),
+             Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.0065,
+                ),
+              ),
+             Text(
+                "2.Time complexity of count() :- O(N)",
+                style: TextStyle(
+                  fontSize: fontSize,
+                  //fontWeight: FontWeight.w500,
+                ),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: smallDivider,
+                ),
+              ),
+              Text(
+                "4. Strings :- ",
+                style:
+                    TextStyle(fontSize: fontSize, fontWeight: FontWeight.bold),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.0045,
+                ),
+              ),
+              Text(
+                "The first occurence of a substring in a string can be found out with the help of find() function.\nIt returns the index of first character of that substring .It takes two arguments the substring to be searched and the index from which you want searching to start.",
+                style: TextStyle(
+                  fontSize: fontSize,
+                ),
+              ),
+              Text(
+                "suppose we created a string named str and the substring to be searched is s1 . Then searching can be done in the following way:-\nIf searching is to be performed from starting position as by default starting position is 0:-\n",
+               style: TextStyle(
+                  fontSize: fontSize, 
+                  color: Colors.black
+                  ),
+              ),
+              
+              Text(
+                "int pos=str.find(s1)\n",
+                 style: TextStyle(
+                    fontSize: fontSize,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.red),
+              ),
+              Text(
+                "If searching is to be performed from any another index instead of 0:-\n",
+                 style: TextStyle(
+                    fontSize: fontSize,
+                    color: Colors.black),
+              ),
+
+               Text(
+                "int pos=str.find(s1)\n",
+                 style: TextStyle(
+                    fontSize: fontSize,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.red),
+              ),
+               Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: smallDivider,
+                ),
+              ),
+
+              Text(
+                "NOTE : ",
+                style: TextStyle(
+                    fontSize: fontSize,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.blue[800]),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: smallDivider,
+                ),
+              ),
+               Text(
+                "1.If the substring  is not present in the string  then it will return string::npos else it is present and will return an index.",
+                style: TextStyle(
+                  fontSize: fontSize,
+                  // fontWeight: FontWeight.w500,
+                ),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.0065,
+                ),
+              ),
+              Text(
+                "2.Time complexity of find():-O(N)",
+                style: TextStyle(
+                  fontSize: fontSize,
+                  //fontWeight: FontWeight.w500,
+                ),
+              ),
+               
+
+
+
+
+
+
+              
             ],
           ),
         ),
