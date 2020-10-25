@@ -72,6 +72,56 @@ class SortingProblems extends ChangeNotifier {
           "The first line contains a single integer n, the lenght of arr./n The second line contains n space-seprated integer,arr[i].",
     ),
     SingleProblem(
+      title: "Playlist",
+      difficulty: "Medium",
+      input: "8\n1 2 1 3 2 7 4 2",
+      output: "5",
+      description:
+          "You are provided a playlist of radio station with a total of n songs. You have to find the longest sequence of sequence of successive songs where each song is unique.",
+      inputExplain:
+          "In the given input '1 2 1 3 2 7 4 2' are the id numbers. Here, the longest series of unique songs include the id numbers '1 3 2 7 4'. So the output will be 5.\n\n ",
+      constraints: "1=n=2.10^5\n1=k=10^9",
+      tags: "null",
+      prereq: "null",
+      explaination: "null",
+      code: "null",
+      inputFormat:
+          "The first line of input contains an integer n: the number of songs.\nThe next line has n integers k1, k2, k3,...,kn: the id number of each song.",
+    ),
+    SingleProblem(
+      title: "Stick Lengths",
+      difficulty: "Medium",
+      input: "5\n2 3 1 5 2",
+      output: "5",
+      description:
+          "You are give n sticks of some lengths. You have to modify these sticks such that each stick has the same length. You can either lengthen or shorten each stick. Both the operations cost x units, where x is the difference between the new and original lengths. Find the minimum total cost.",
+      inputExplain:
+          "In the given 5 sticks the length of each stick is provided. To make all the sticks to equal length with minimal cost, we will convert all sticks to length 2, as any other applied combination will not get the cost minimum. The remaining sticks to shorten or lengthen are '3', '1', '5'. First we will shorten the stick with length '3', 3-1=2, so the cost to shorten the stick will be 1. Next we will lengthen the stick of length 1, 1+1=2, so the cost to lengthen the stick will be 1. Now the last stick of length 5 will be shortened which will give the cost as, 5-3=2, that is 3. So the minimum cost to make all sticks to equal length will be 1+1+3=5. The output will be given as: 5.\n\n ",
+      constraints: "1=n=2.10^5\n1=p=10^9",
+      tags: "null",
+      prereq: "null",
+      explaination: "null",
+      code: "null",
+      inputFormat:
+          "The first input line contains an integer n: the number of sticks.\nThe second line contains n integers, p1,p2,p3...pn: the lengths of the sticks.",
+    ),
+    SingleProblem(
+      title: "Towers",
+      difficulty: "Medium",
+      input: "5\n3 8 2 1 5",
+      output: "2",
+      description:
+          "There are n cubes in a certain order,and you have to build a tower using them. You can always either place the cubes on top of an existing tower ,or begin a new tower. Whenever you place a cube on top of the other, the upper cube must always be smaller than the lower cube. You have to process the cubes in the same given order. Find the minimun number of possible towers.",
+      inputExplain: "null",
+      constraints: "1=n=2.10^5\n1=k=10^9",
+      tags: "null",
+      prereq: "null",
+      explaination: "null",
+      code: "null",
+      inputFormat:
+          "The first input line contains an integer n: the number of cubes.\nThe second line contains n integers, k1,k2,k3...kn: the sizes of the cubes.",
+    ),
+    SingleProblem(
       title: "Sum Query",
       difficulty: "Hard",
       input: "5\n5 8 3 15 12\n2\n5 12\n4 8",

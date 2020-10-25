@@ -224,6 +224,23 @@ class FundamentalProblem extends ChangeNotifier {
           "1.Initialise a counter variable cnt with 0.\n2. Traverse the loop from starting and compare each value with kth's participant score.\n3. If the value is >= Kth's particpant score and not equal to 0 then increment cnt.\n4. Otherwise break the loop.\n5. Print the value of cnt. ",
       code: "null",
     ),
+    SingleProblem(
+      title: "Apple Division",
+      difficulty: "Hard",
+      input: "5\n3 2 7 4 1",
+      output: "1",
+      description:
+          "You are given n apples with known weights. Divide the apples into two groups so that the difference between the weights is minimal.",
+      inputExplain:
+          "In the given input '3 2 7 4 1' are the given weights of 5 apple. To divide these apples in two groups such that the differennce between the weigts of the groups become minimum we put '7,2' in one group which sum up to give 9 and in the second group we put '3,4,1' which sums up to give 8 or '7,1' in one group that gives the sum as 8 and '3,4,2' in the other group, that adds up to give 9 . In both the cases, the difference of weight between the groups is minimal, i.e., 8-9=1. Therefore the output will be 1.\n\n",
+      constraints: "1=n=20\n1=p=10^9",
+      tags: "null",
+      prereq: "null",
+      explaination: "null",
+      code: "null",
+      inputFormat:
+          "The first input line contains an integer n: the number of apples.\nThe second line contains n integers, p1,p2,p3...pn: the weight of each apple.",
+    ),
   ];
   List<SingleProblem> get ProblemList {
     return [...FundProb];
