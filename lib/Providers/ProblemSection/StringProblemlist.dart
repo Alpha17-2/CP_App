@@ -148,6 +148,23 @@ class StringProblems extends ChangeNotifier {
       inputFormat: "The input line contains a string of n characters.",
     ),
     SingleProblem(
+      title: "Problem Reorder",
+      difficulty: "Medium",
+      input: "AAAACACBA\nBBACDD",
+      output: "AACABACAA\nNO SOLUTION",
+      description:
+          "Given a string, your task is to rearrange the letters in such a way that it becomes a palindrome. If there are more than one solution you may print any valid solution. If there are no solution ,print 'NO SOLUTION'.",
+      inputExplain:
+          "In the first case, 'AAAACACBA' is the given input. We have to check if the given string can be converted into a palindrome or not. Here, the string can be converted into palindrome like 'AACABACAA', 'AAACBCAAA', 'CAAABAAAC'or 'ACAABAACA'. The provided string has various outputs so we can print any.\nIn the second case, 'BBACDD' is the input string. We cannot convert this string into a palindrome with any combination of the given alphabets. So we print the output as 'NO SOLUTION'.\n\n",
+      constraints: "1=n=10^6",
+      tags: "null",
+      prereq: "null",
+      explaination: "null",
+      code: "null",
+      inputFormat:
+          "The only input line contains a string of length n, consisting of characters A-Z.",
+    ),
+    SingleProblem(
       title: "Minus Minus is Plus",
       difficulty: "Medium",
       input: "4\n-+--+\n-+++\n--------\n-+--+-\n--\n---\n+++\n+++",
