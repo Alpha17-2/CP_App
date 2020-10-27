@@ -84,7 +84,7 @@ class Stl_Contain extends StatelessWidget {
                               builder: (context) => Vector_Container()));
                     },
                     child: Card(
-                      elevation: 25.0,
+                      elevation: 20.0,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(16.0),
                       ),
@@ -95,7 +95,7 @@ class Stl_Contain extends StatelessWidget {
                               colors: [
                                 Colors.red[200],
                                 Colors.redAccent[100],
-                                Colors.red,
+                                Colors.red[400],
                               ],
                             ),
                           ),
