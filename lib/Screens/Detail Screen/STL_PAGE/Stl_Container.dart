@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
+import 'package:CP_App/Screens/Detail Screen/STL_PAGE/vect_cont.dart';
 
 class Stl_Contain extends StatelessWidget {
   @override
@@ -61,7 +62,7 @@ class Stl_Contain extends StatelessWidget {
                 ),
               ),
               Text(
-                "Various containers along with their functions.",
+                "Commonly used containers along with their functions.",
                 style: TextStyle(
                     fontSize: displayWidth(context) * 0.045,
                     fontWeight: FontWeight.bold),
@@ -75,43 +76,51 @@ class Stl_Contain extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Card(
-                    elevation: 25.0,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(16.0),
-                    ),
-                    child: ClipPath(
-                      child: Container(
-                        decoration: BoxDecoration(
-                          gradient: LinearGradient(
-                            colors: [
-                              Colors.red[200],
-                              Colors.redAccent[100],
-                              Colors.red,
-                            ],
-                          ),
-                        ),
-                        height: displayHeight(context) * 0.1,
-                        width: displayWidth(context) * 0.4,
-                        child: Center(
-                          child: Text(
-                            "VECTOR",
-                            style: TextStyle(
-                                color: Colors.white,
-                                shadows: <Shadow>[
-                                  Shadow(
-                                      blurRadius: 18.0,
-                                      color: Colors.black54,
-                                      offset: Offset.fromDirection(1, 1))
-                                ],
-                                fontWeight: FontWeight.bold,
-                                fontSize: displayWidth(context) * 0.055),
-                          ),
-                        ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Vector_Container()));
+                    },
+                    child: Card(
+                      elevation: 25.0,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(16.0),
                       ),
-                      clipper: ShapeBorderClipper(
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(8.0))),
+                      child: ClipPath(
+                        child: Container(
+                          decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                              colors: [
+                                Colors.red[200],
+                                Colors.redAccent[100],
+                                Colors.red,
+                              ],
+                            ),
+                          ),
+                          height: displayHeight(context) * 0.1,
+                          width: displayWidth(context) * 0.4,
+                          child: Center(
+                            child: Text(
+                              "VECTOR",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  shadows: <Shadow>[
+                                    Shadow(
+                                        blurRadius: 18.0,
+                                        color: Colors.black54,
+                                        offset: Offset.fromDirection(1, 1))
+                                  ],
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: displayWidth(context) * 0.055),
+                            ),
+                          ),
+                        ),
+                        clipper: ShapeBorderClipper(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8.0))),
+                      ),
                     ),
                   ),
                   Card(
