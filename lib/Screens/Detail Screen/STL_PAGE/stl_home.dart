@@ -1,3 +1,4 @@
+import 'package:CP_App/Screens/Detail%20Screen/STL_PAGE/Stl_Container.dart';
 import 'package:flutter/material.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
 import 'package:CP_App/Screens/Detail Screen/STL_PAGE/Stl_Algorithm.dart';
@@ -119,7 +120,10 @@ class STLHOME extends StatelessWidget {
             ),
             Center(
               child: GestureDetector(
-                onTap: () => print('null'),
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Stl_Contain()));
+                },
                 child: Card(
                   elevation: 25.0,
                   shape: RoundedRectangleBorder(
