@@ -123,7 +123,7 @@ class FundamentalProblem extends ChangeNotifier {
       code: "null",
       inputExplain:
           "In the first input of integers n=7, the integers can be divided into two sets of equal sums by creating two sets of size 4 and 3. The first set consisting of numbers: 1, 2, 4, 7 which gives a sum of 14. And the second set consisting of numbers 3, 5, 6 which also gives a sum of 14. So we print the output in the required manner.\n\nIn the second input, there is no possibility of division of sets with equal sums so, we print 'NO' in the output.\n\n",
-      constraints: "1=n=10^6",
+      constraints: "1 ≤ n ≤ 10^6",
       inputFormat: "The input line contains of an integer 'n'.",
     ),
     SingleProblem(
@@ -203,7 +203,7 @@ class FundamentalProblem extends ChangeNotifier {
           "Suppose x=y=z. If y?z then the answer is -1, because z is the overall maximum among all three integers a, b and c and it appears in two pairs (so it should appear at most twice among x, y and z). Otherwise, the answer exists and it can be x, x and z (it is easy to see that this triple fits well).",
       code: "null",
       inputExplain: 'null',
-      constraints: "1=x,y,z=10^9",
+      constraints: "1 ≤ x,y,z ≤ 10^9",
       inputFormat: "The only line contains three integers x, y, and z.",
     ),
     SingleProblem(
@@ -233,7 +233,7 @@ class FundamentalProblem extends ChangeNotifier {
           "You are given n apples with known weights. Divide the apples into two groups so that the difference between the weights is minimal.",
       inputExplain:
           "In the given input '3 2 7 4 1' are the given weights of 5 apple. To divide these apples in two groups such that the differennce between the weigts of the groups become minimum we put '7,2' in one group which sum up to give 9 and in the second group we put '3,4,1' which sums up to give 8 or '7,1' in one group that gives the sum as 8 and '3,4,2' in the other group, that adds up to give 9 . In both the cases, the difference of weight between the groups is minimal, i.e., 8-9=1. Therefore the output will be 1.\n\n",
-      constraints: "1=n=20\n1=p=10^9",
+      constraints: "1 ≤ n ≤20\n1 ≤ p ≤ 10^9",
       tags: "null",
       prereq: "null",
       explaination: "null",
