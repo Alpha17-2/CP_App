@@ -40,9 +40,9 @@ class Vector_Container extends StatelessWidget {
                   fontSize: fontsize),
             ),
             new TextSpan(
-                text: "vector <data_type> name_of_vector ;",
-                style:
-                    TextStyle(color: Colors.red, fontWeight: FontWeight.bold)),
+              text: "vector <data_type> name ;",
+              style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold),
+            ),
           ]),
     );
     return Scaffold(
@@ -57,14 +57,15 @@ class Vector_Container extends StatelessWidget {
           backgroundColor: Colors.blue[200],
         ),
         body: Padding(
-          padding: EdgeInsets.all(8.0),
+          padding:
+              EdgeInsets.only(top: 16.0, right: 8.0, left: 8.0, bottom: 10.0),
           child: SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "Vectors also known as sequence containers , are actually dynamic arrays as they can change their size when operations such as insertion or deletion takes place unlike static arrays, but as they are arrays they store their elements in contiguous locations which can be accessed through iterators. ",
+                  "Vectors also known as sequence containers , are actually dynamic arrays as they can change their size when operations such as insertion or deletion takes place unlike static arrays, but like arrays they store their elements in contiguous locations which can be accessed through iterators. ",
                   style: TextStyle(
                       fontSize: displayWidth(context) * 0.045,
                       fontWeight: FontWeight.bold),
@@ -116,12 +117,35 @@ class Vector_Container extends StatelessWidget {
                 Opacity(
                   opacity: 0.0,
                   child: Divider(
-                    height: displayHeight(context) * 0.003,
+                    height: displayHeight(context) * 0.008,
                   ),
                 ),
                 Text(
                   "It is used to insert element at the end of the vector. It accepts one argument i.e. the value to be inserted in the vector.",
                   style: TextStyle(fontSize: fontsize),
+                ),
+                Opacity(
+                  opacity: 0.0,
+                  child: Divider(
+                    height: displayHeight(context) * 0.01,
+                  ),
+                ),
+                Text(
+                  "Syntax : ",
+                  style: TextStyle(
+                      fontSize: fontsize,
+                      color: Colors.orange[800],
+                      fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  "vector_name.push_back(value);",
+                  style: TextStyle(
+                      fontSize: fontsize, fontWeight: FontWeight.bold),
+                ),
+                Divider(
+                  height: verysmallDivider,
+                  color: Colors.black,
+                  thickness: 1.0,
                 ),
                 Opacity(
                   opacity: 0.0,
@@ -139,12 +163,35 @@ class Vector_Container extends StatelessWidget {
                 Opacity(
                   opacity: 0.0,
                   child: Divider(
-                    height: displayHeight(context) * 0.003,
+                    height: displayHeight(context) * 0.008,
                   ),
                 ),
                 Text(
                   "It is used to delete the last element.",
                   style: TextStyle(fontSize: fontsize),
+                ),
+                Opacity(
+                  opacity: 0.0,
+                  child: Divider(
+                    height: verysmallDivider,
+                  ),
+                ),
+                Text(
+                  "Syntax : ",
+                  style: TextStyle(
+                      fontSize: fontsize,
+                      color: Colors.orange[800],
+                      fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  "vector_name.pop_back();",
+                  style: TextStyle(
+                      fontSize: fontsize, fontWeight: FontWeight.bold),
+                ),
+                Divider(
+                  height: verysmallDivider,
+                  color: Colors.black,
+                  thickness: 1.0,
                 ),
                 Opacity(
                   opacity: 0.0,
@@ -162,7 +209,7 @@ class Vector_Container extends StatelessWidget {
                 Opacity(
                   opacity: 0.0,
                   child: Divider(
-                    height: displayHeight(context) * 0.003,
+                    height: displayHeight(context) * 0.008,
                   ),
                 ),
                 Text(
@@ -174,6 +221,285 @@ class Vector_Container extends StatelessWidget {
                   child: Divider(
                     height: verysmallDivider,
                   ),
+                ),
+                Text(
+                  "Syntax : ",
+                  style: TextStyle(
+                      fontSize: fontsize,
+                      color: Colors.orange[800],
+                      fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  "auto it = lower_bound(start_add, end_add, value);",
+                  style: TextStyle(
+                      fontSize: displayWidth(context) * 0.042,
+                      fontWeight: FontWeight.bold),
+                ),
+                Divider(
+                  height: verysmallDivider,
+                  color: Colors.black,
+                  thickness: 1.0,
+                ),
+                Opacity(
+                  opacity: 0.0,
+                  child: Divider(
+                    height: verysmallDivider,
+                  ),
+                ),
+                Text(
+                  "4. upper_bound(start_add , end_add , val) :",
+                  style: TextStyle(
+                      fontSize: functionfontsize,
+                      color: Colors.red,
+                      fontWeight: FontWeight.bold),
+                ),
+                Opacity(
+                  opacity: 0.0,
+                  child: Divider(
+                    height: displayHeight(context) * 0.008,
+                  ),
+                ),
+                Text(
+                  "It returns an iterator pointing to the element which is just greater than than val. If it doesn't exits then, it returns v.end().",
+                  style: TextStyle(fontSize: fontsize),
+                ),
+                Opacity(
+                  opacity: 0.0,
+                  child: Divider(
+                    height: verysmallDivider,
+                  ),
+                ),
+                Text(
+                  "Syntax : ",
+                  style: TextStyle(
+                      fontSize: fontsize,
+                      color: Colors.orange[800],
+                      fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  "auto it = upper_bound(start_add, end_add, value);",
+                  style: TextStyle(
+                      fontSize: displayWidth(context) * 0.042,
+                      fontWeight: FontWeight.bold),
+                ),
+                Divider(
+                  height: verysmallDivider,
+                  color: Colors.black,
+                  thickness: 1.0,
+                ),
+                Opacity(
+                  opacity: 0.0,
+                  child: Divider(
+                    height: verysmallDivider,
+                  ),
+                ),
+                Text(
+                  "5. size() :",
+                  style: TextStyle(
+                      fontSize: functionfontsize,
+                      color: Colors.red,
+                      fontWeight: FontWeight.bold),
+                ),
+                Opacity(
+                  opacity: 0.0,
+                  child: Divider(
+                    height: displayHeight(context) * 0.008,
+                  ),
+                ),
+                Text(
+                  "It returns the size of vector",
+                  style: TextStyle(fontSize: fontsize),
+                ),
+                Opacity(
+                  opacity: 0.0,
+                  child: Divider(
+                    height: verysmallDivider,
+                  ),
+                ),
+                Text(
+                  "Syntax : ",
+                  style: TextStyle(
+                      fontSize: fontsize,
+                      color: Colors.orange[800],
+                      fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  "int n = vector_name.size() ;",
+                  style: TextStyle(
+                      fontSize: fontsize, fontWeight: FontWeight.bold),
+                ),
+                Divider(
+                  height: verysmallDivider,
+                  color: Colors.black,
+                  thickness: 1.0,
+                ),
+                Opacity(
+                  opacity: 0.0,
+                  child: Divider(
+                    height: verysmallDivider,
+                  ),
+                ),
+                Text(
+                  "6. empty() :",
+                  style: TextStyle(
+                      fontSize: functionfontsize,
+                      color: Colors.red,
+                      fontWeight: FontWeight.bold),
+                ),
+                Opacity(
+                  opacity: 0.0,
+                  child: Divider(
+                    height: displayHeight(context) * 0.008,
+                  ),
+                ),
+                Text(
+                  "The return type of this function is bool , it will return true if the vector is empty otherwise false .",
+                  style: TextStyle(fontSize: fontsize),
+                ),
+                Opacity(
+                  opacity: 0.0,
+                  child: Divider(
+                    height: verysmallDivider,
+                  ),
+                ),
+                Text(
+                  "Syntax : ",
+                  style: TextStyle(
+                      fontSize: fontsize,
+                      color: Colors.orange[800],
+                      fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  "bool isEmpty = vector_name.empty() ;",
+                  style: TextStyle(
+                      fontSize: fontsize, fontWeight: FontWeight.bold),
+                ),
+                Divider(
+                  height: verysmallDivider,
+                  color: Colors.black,
+                  thickness: 1.0,
+                ),
+                Opacity(
+                  opacity: 0.0,
+                  child: Divider(
+                    height: verysmallDivider,
+                  ),
+                ),
+                Text(
+                  "7. clear() :",
+                  style: TextStyle(
+                      fontSize: functionfontsize,
+                      color: Colors.red,
+                      fontWeight: FontWeight.bold),
+                ),
+                Opacity(
+                  opacity: 0.0,
+                  child: Divider(
+                    height: displayHeight(context) * 0.008,
+                  ),
+                ),
+                Text(
+                  "It is used to remove all elements from the vector.",
+                  style: TextStyle(fontSize: fontsize),
+                ),
+                Opacity(
+                  opacity: 0.0,
+                  child: Divider(
+                    height: verysmallDivider,
+                  ),
+                ),
+                Text(
+                  "Syntax : ",
+                  style: TextStyle(
+                      fontSize: fontsize,
+                      color: Colors.orange[800],
+                      fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  "vector_name.clear() ;",
+                  style: TextStyle(
+                      fontSize: fontsize, fontWeight: FontWeight.bold),
+                ),
+                Divider(
+                  height: verysmallDivider,
+                  color: Colors.black,
+                  thickness: 1.0,
+                ),
+                Opacity(
+                  opacity: 0.0,
+                  child: Divider(
+                    height: verysmallDivider,
+                  ),
+                ),
+                Text(
+                  "8. erase() :",
+                  style: TextStyle(
+                      fontSize: functionfontsize,
+                      color: Colors.red,
+                      fontWeight: FontWeight.bold),
+                ),
+                Opacity(
+                  opacity: 0.0,
+                  child: Divider(
+                    height: displayHeight(context) * 0.008,
+                  ),
+                ),
+                Text(
+                  "It is used to remove either a single element or a range of elements from a vector.",
+                  style: TextStyle(fontSize: fontsize),
+                ),
+                Opacity(
+                  opacity: 0.0,
+                  child: Divider(
+                    height: verysmallDivider,
+                  ),
+                ),
+                Text(
+                  "Syntax : ",
+                  style: TextStyle(
+                      fontSize: fontsize,
+                      color: Colors.orange[800],
+                      fontWeight: FontWeight.bold),
+                ),
+                Text("Let there be a vector V, such that V = { 1,2,3,4,5 }",
+                    style: TextStyle(
+                        color: Colors.blue[900],
+                        fontSize: displayWidth(context) * 0.042,
+                        fontWeight: FontWeight.bold)),
+                Opacity(
+                  opacity: 0.0,
+                  child: Divider(
+                    height: displayHeight(context) * 0.009,
+                  ),
+                ),
+                Text(
+                  "• If we want to erase or remove an element from a particular position then use :",
+                  style: TextStyle(fontSize: fontsize),
+                ),
+                Text(
+                  "vector_name.erase (position) ;",
+                  style: TextStyle(
+                      fontSize: fontsize, fontWeight: FontWeight.bold),
+                ),
+                Opacity(
+                  opacity: 0.0,
+                  child: Divider(
+                    height: displayHeight(context) * 0.009,
+                  ),
+                ),
+                Text(
+                  "• If we want to remove a desired range of elements from a vector then use :",
+                  style: TextStyle(fontSize: fontsize),
+                ),
+                Text(
+                  "vector_name.erase (start_add , end_add) ;",
+                  style: TextStyle(
+                      fontSize: fontsize, fontWeight: FontWeight.bold),
+                ),
+                Divider(
+                  height: verysmallDivider,
+                  color: Colors.black,
+                  thickness: 1.0,
                 ),
               ],
             ),
