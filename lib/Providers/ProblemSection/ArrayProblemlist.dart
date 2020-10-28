@@ -53,6 +53,23 @@ class ArrayProblems extends ChangeNotifier {
       tags: "null",
     ),
     SingleProblem(
+      title: "Diagonal Difference",
+      difficulty: "Easy",
+      input: "3\n11 2 4\n 4 5 6\n10 8 -12",
+      output: "15",
+      description:
+          "Given a square matrix, your task is to calculate the absolute difference between the sums of its diagonals.For example,\n-1 2 3\n4 5 6\n-7 8 9\nThe left diagonal= (-1)+5+9= 13, and right diagonal= 3+5+(-7)= 1. So, the absolute difference is |13-1|=12.",
+      inputExplain:
+          "The left diagonal includes '11,5,-12' and the sum will be 11+5+(-12)=4. The right diagonal includes '4,5,10' and the sum will be 4+5+10=19. Their absolute difference is |4-19|=15.\n\n ",
+      constraints: "-100=arr[i][j]=100",
+      tags: "null",
+      prereq: "null",
+      explaination: "null",
+      code: "null",
+      inputFormat:
+          "The first line contains a single integer, n, the number of rows and columns in the square matrix arr.\nEach of the next n lines describes a row, arr[i], and consists of n space-separated integers arr[i][j]. ",
+    ),
+    SingleProblem(
       title: "Finding numbers",
       difficulty: "Easy",
       input: "6\n4 6 5 3 3 1",
@@ -156,7 +173,41 @@ class ArrayProblems extends ChangeNotifier {
           " In the first test case,we will swap 1 of array A with 2 of array B and now if we find the sum of all elements of array A it will be 4. ",
       code: "null",
       tags: "null",
-    )
+    ),
+    SingleProblem(
+      title: "Halloween Sale",
+      difficulty: "Medium",
+      input: "Sample input 1:\n20 3 6 80\n\nSample input 2:\n20 3 6 85",
+      output: "Sample output 1:\n6\n\nSample output 2:\n7",
+      description:
+          "You wish to buy a video game which is of price p dollars. However, in the seasonal Halloween Sale next month you can buy it at a cheaper price. Specifically, the first game you buy will be of p dollars, but every subsequent game you buy will be sold exactly d dollars less than the cost of previous game you bought. This continues until the cost becomes less than or equal to m dollars, after which every game you buy will be of m dollars each. For example, if p=20, d=3, and m=6, then the costs of first 11 games will be:\n20, 17, 14, 11, 8, 6, 6, 6, 6, 6, 6\nYou have s dollars with you. How many games can you buy during The Halloween Sale?",
+      inputExplain:
+          "In the first input, you have s= 80 dollars with you. The price of the game is given, p= 20 dollars, d= 3 dollars and m= 6 dollars. Since you have 80 dollars, you can buy 20+17+14+11+8+6= 76, i.e., 6 games. Since the next game you buy will also cost 6 dollars as m=6, so 76+6=82 which is out of your budget. Thus, the output will be 6.\n\nThe second input is also same as the first one, except you have s= 85 dollars. Therefore this time, the number of games you can buy is 20+17+14+11+8+6+6= 82, i.e., 7. You don't have enough money to buy the 8th game. Thus, the output is 7.\n\n",
+      constraints: "1=m=p=100\n1=d=100\n1=s=10^4",
+      tags: "null",
+      prereq: "null",
+      explaination: "null",
+      code: "null",
+      inputFormat:
+          "The only line of input contains four integers p, d, m and s.",
+    ),
+    SingleProblem(
+      title: "Left Rotation",
+      difficulty: "Hard",
+      input: "5 4\n1 2 3 4 5",
+      output: "5 1 2 3 4",
+      description:
+          "Given an array A of N integers, you have to perform D number of left rotations on the array. A left rotation operation on an array shifts each of the array's elements 1 unit to the left. Say, if 3 left rotations are performed on the array[1,2,3,4,5], then the array would become [4,5,1,2,3].",
+      inputExplain:
+          "Given an array [1,2,3,4,5], we have to perform D=4 left rotations on this array, then the array will be changed in the following sequence:\n[1,2,3,4,5]-->[2,3,4,5,1]-->[3,4,5,1,2]-->[4,5,1,2,3]--> [5,1,2,3,4]\n\n",
+      constraints: "1=N=10^5\n1=D=N\n1=A[i]=10^6",
+      tags: "null",
+      prereq: "null",
+      explaination: "null",
+      code: "null",
+      inputFormat:
+          "The first line of the input contains two space-separated integers N: the size of the array A and D: the number of left rotations to be performed.\nThe second line contains N space-separated integers A[i].",
+    ),
   ];
 
   List<SingleProblem> get ProblemList {
