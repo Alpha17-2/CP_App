@@ -65,22 +65,6 @@ class StringProblems extends ChangeNotifier {
       inputFormat: "The input line contains a string of n characters.",
     ),
     SingleProblem(
-      title: "Anagram",
-      difficulty: "Medium",
-      input: "aaabbb \nxaxbbbxx",
-      output: "3\n1",
-      description:
-          "Two words are said to be anagrams of one another if their letters can be rearranged to form the other word.\nHere, you are provided with a string.You must split it into two contiguous substring, then determine the minimum number of characters to change to make the two substrings into anagrams ofone another.",
-      inputExplain:
-          "In the first input statement we split s into two strings s1='aaa' and s2='bbb'.We have replace all three characters from the first string with 'b' to make the strings anagrams.\nIn the second input s1='xaxb' and s2='bbxx'. you must replace 'a' from s1 with 'b' so that s1='xbxb'.",
-      constraints: "1≤q≤100 \n 1≤|s|≤10^4",
-      tags: "null",
-      prereq: "null",
-      explaination: "null",
-      code: "null",
-      inputFormat: "The input line contains a string of n characters.",
-    ),
-    SingleProblem(
       title: "Erasing Zeroes",
       difficulty: "Easy",
       input: "010011\n1111000",
@@ -134,6 +118,22 @@ class StringProblems extends ChangeNotifier {
     SingleProblem(
       title: "Anagram",
       difficulty: "Medium",
+      input: "aaabbb \nxaxbbbxx",
+      output: "3\n1",
+      description:
+          "Two words are said to be anagrams of one another if their letters can be rearranged to form the other word.\nHere, you are provided with a string.You must split it into two contiguous substring, then determine the minimum number of characters to change to make the two substrings into anagrams ofone another.",
+      inputExplain:
+          "In the first input statement we split s into two strings s1='aaa' and s2='bbb'.We have replace all three characters from the first string with 'b' to make the strings anagrams.\nIn the second input s1='xaxb' and s2='bbxx'. you must replace 'a' from s1 with 'b' so that s1='xbxb'.",
+      constraints: "1≤q≤100 \n 1≤|s|≤10^4",
+      tags: "null",
+      prereq: "null",
+      explaination: "null",
+      code: "null",
+      inputFormat: "The input line contains a string of n characters.",
+    ),
+    SingleProblem(
+      title: "Anagram",
+      difficulty: "Medium",
       input: "aaabbb\nxaxbbbxx",
       output: "3\n1",
       description:
@@ -156,7 +156,7 @@ class StringProblems extends ChangeNotifier {
           "Given a string, your task is to rearrange the letters in such a way that it becomes a palindrome. If there are more than one solution you may print any valid solution. If there are no solution ,print 'NO SOLUTION'.",
       inputExplain:
           "In the first case, 'AAAACACBA' is the given input. We have to check if the given string can be converted into a palindrome or not. Here, the string can be converted into palindrome like 'AACABACAA', 'AAACBCAAA', 'CAAABAAAC'or 'ACAABAACA'. The provided string has various outputs so we can print any.\nIn the second case, 'BBACDD' is the input string. We cannot convert this string into a palindrome with any combination of the given alphabets. So we print the output as 'NO SOLUTION'.\n\n",
-      constraints: "1=n=10^6",
+      constraints: "1 ≤ n ≤ 10^6",
       tags: "null",
       prereq: "null",
       explaination: "null",
@@ -183,22 +183,6 @@ class StringProblems extends ChangeNotifier {
           "The first line contains an integer T, denoting the number of test cases.\nEach test case consists of two lines.\nFirst-line contains string1.\nSecond line contains string2.",
     ),
     SingleProblem(
-      title: "Speical Distance",
-      difficulty: "Hard",
-      input: "022/n0022",
-      output: "4",
-      description:
-          "You have to find a special type of formula with the help of which, one can able to find the distance between two strings. The Special Distance (S.D.) between two strings S1 and S2 of the same lenght is defined as: S.D.= sum^|S1|i=0|S1[i]-S2[i]|.Where S1[i] is the i-th character of S1,S2[i] is the i-th character of S2 and |S1| is the length of string S1.So find out the sum of Special Distances between S1 and all contiguous sub-string of S2 of lenght|S1|.",
-      inputExplain:
-          "In above line there three contiguous Sub-Strings of S2 of length|S1|:002,022,and222./nThe distance between 022,and 002 is |0-0|+|2-0|+|2-2|=2./n The distancce between 022 and 022 is|0-2|+|2-2|+|2-2|=0./n The distance between 022 and 222 is |0-2|+|2-2|+|2-2|=2./n The sum of these edit distance is 2+0+2=4.",
-      constraints: "1<=|S1|<=10^5/n|S1|<=|S2|<=10^5",
-      tags: "null",
-      prereq: "null",
-      explaination: "null",
-      code: "null",
-      inputFormat: "The input line contains a string s for characters",
-    ),
-    SingleProblem(
       title: "Change the name",
       difficulty: "Medium",
       input: "intellect\ntell\ngoogle\napple",
@@ -215,7 +199,23 @@ class StringProblems extends ChangeNotifier {
       code: "null",
       explaination:
           "1. We have to just count the number of occurences of s2 in s1.\n2. Initialise variables l1 and l2 with the length of strings s1 and s2 and a counter variable cnt with 0.\n3. Traverse the string s1 from index 0 and check whether the substring of s1 from index i to i+l2 is equal to s2 or not\n4. If they are equal then increment cnt and increment i by l2.\n5. If they are not equal then increment i by just 1\n6. Atlast print the value of cnt",
-    )
+    ),
+    SingleProblem(
+      title: "Special Distance",
+      difficulty: "Hard",
+      input: "022/n0022",
+      output: "4",
+      description:
+          "You have to find a special type of formula with the help of which, one can able to find the distance between two strings. The Special Distance (S.D.) between two strings S1 and S2 of the same lenght is defined as: S.D.= sum^|S1|i=0|S1[i]-S2[i]|.Where S1[i] is the i-th character of S1,S2[i] is the i-th character of S2 and |S1| is the length of string S1.So find out the sum of Special Distances between S1 and all contiguous sub-string of S2 of lenght|S1|.",
+      inputExplain:
+          "In above line there three contiguous Sub-Strings of S2 of length|S1|:002,022,and222./nThe distance between 022,and 002 is |0-0|+|2-0|+|2-2|=2./n The distancce between 022 and 022 is|0-2|+|2-2|+|2-2|=0./n The distance between 022 and 222 is |0-2|+|2-2|+|2-2|=2./n The sum of these edit distance is 2+0+2=4.",
+      constraints: "1<=|S1|<=10^5/n|S1|<=|S2|<=10^5",
+      tags: "null",
+      prereq: "null",
+      explaination: "null",
+      code: "null",
+      inputFormat: "The input line contains a string s for characters",
+    ),
   ];
   List<SingleProblem> get ProblemList {
     return [...StringProb];
