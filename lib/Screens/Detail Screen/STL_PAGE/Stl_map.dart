@@ -207,51 +207,24 @@ class Stl_Map extends StatelessWidget {
                 style:
                     TextStyle(fontSize: fontsize, fontWeight: FontWeight.bold),
               ),
-              Divider(
-                height: smallDivider,
-                color: Colors.black,
-                thickness: 1.0,
-              ),
               Opacity(
                 opacity: 0.0,
                 child: Divider(
-                  height: verysmallDivider,
+                  height: displayHeight(context) * 0.01,
                 ),
               ),
-              Text(
-                "2. pop_back() :",
-                style: TextStyle(
-                    fontSize: functionfontsize,
-                    color: Colors.red,
-                    fontWeight: FontWeight.bold),
-              ),
-              Opacity(
-                opacity: 0.0,
-                child: Divider(
-                  height: displayHeight(context) * 0.008,
-                ),
-              ),
-              Text(
-                "It is used to delete the last element.",
-                style: TextStyle(fontSize: fontsize),
-              ),
-              Opacity(
-                opacity: 0.0,
-                child: Divider(
-                  height: verysmallDivider,
-                ),
-              ),
-              Text(
-                "Syntax : ",
-                style: TextStyle(
+              Text("Example: ",
+                  style: TextStyle(
                     fontSize: fontsize,
                     color: Colors.orange[800],
-                    fontWeight: FontWeight.bold),
-              ),
+                    fontWeight: FontWeight.bold,
+                  )),
               Text(
-                "vector_name.pop_back();",
-                style:
-                    TextStyle(fontSize: fontsize, fontWeight: FontWeight.bold),
+                "m.insert({\"Name\",45});",
+                style: TextStyle(
+                    letterSpacing: 0.8,
+                    fontSize: fontsize,
+                    fontWeight: FontWeight.bold),
               ),
               Divider(
                 height: smallDivider,
@@ -265,7 +238,7 @@ class Stl_Map extends StatelessWidget {
                 ),
               ),
               Text(
-                "3. lower_bound(start , end , val) :",
+                "2. size() :",
                 style: TextStyle(
                     fontSize: functionfontsize,
                     color: Colors.red,
@@ -278,13 +251,13 @@ class Stl_Map extends StatelessWidget {
                 ),
               ),
               Text(
-                "It returns an iterator pointing to the element which is just greater than or equal to val. If it doesn't exits then, it returns v.end().",
+                "This returns the number of elements stored in a map.",
                 style: TextStyle(fontSize: fontsize),
               ),
               Opacity(
                 opacity: 0.0,
                 child: Divider(
-                  height: verysmallDivider,
+                  height: displayHeight(context) * 0.01,
                 ),
               ),
               Text(
@@ -295,106 +268,31 @@ class Stl_Map extends StatelessWidget {
                     fontWeight: FontWeight.bold),
               ),
               Text(
-                "auto it = lower_bound(start_add, end_add, value);",
-                style: TextStyle(
-                    fontSize: displayWidth(context) * 0.042,
-                    fontWeight: FontWeight.bold),
-              ),
-              Divider(
-                height: verysmallDivider,
-                color: Colors.black,
-                thickness: 1.0,
-              ),
-              Opacity(
-                opacity: 0.0,
-                child: Divider(
-                  height: verysmallDivider,
-                ),
-              ),
-              Text(
-                "4. upper_bound(start_add , end_add , val) :",
-                style: TextStyle(
-                    fontSize: functionfontsize,
-                    color: Colors.red,
-                    fontWeight: FontWeight.bold),
-              ),
-              Opacity(
-                opacity: 0.0,
-                child: Divider(
-                  height: displayHeight(context) * 0.008,
-                ),
-              ),
-              Text(
-                "It returns an iterator pointing to the element which is just greater than than val. If it doesn't exits then, it returns v.end().",
-                style: TextStyle(fontSize: fontsize),
-              ),
-              Opacity(
-                opacity: 0.0,
-                child: Divider(
-                  height: verysmallDivider,
-                ),
-              ),
-              Text(
-                "Syntax : ",
-                style: TextStyle(
-                    fontSize: fontsize,
-                    color: Colors.orange[800],
-                    fontWeight: FontWeight.bold),
-              ),
-              Text(
-                "auto it = upper_bound(start_add, end_add, value);",
-                style: TextStyle(
-                    fontSize: displayWidth(context) * 0.042,
-                    fontWeight: FontWeight.bold),
-              ),
-              Divider(
-                height: verysmallDivider,
-                color: Colors.black,
-                thickness: 1.0,
-              ),
-              Opacity(
-                opacity: 0.0,
-                child: Divider(
-                  height: verysmallDivider,
-                ),
-              ),
-              Text(
-                "5. size() :",
-                style: TextStyle(
-                    fontSize: functionfontsize,
-                    color: Colors.red,
-                    fontWeight: FontWeight.bold),
-              ),
-              Opacity(
-                opacity: 0.0,
-                child: Divider(
-                  height: displayHeight(context) * 0.008,
-                ),
-              ),
-              Text(
-                "It returns the size of vector",
-                style: TextStyle(fontSize: fontsize),
-              ),
-              Opacity(
-                opacity: 0.0,
-                child: Divider(
-                  height: verysmallDivider,
-                ),
-              ),
-              Text(
-                "Syntax : ",
-                style: TextStyle(
-                    fontSize: fontsize,
-                    color: Colors.orange[800],
-                    fontWeight: FontWeight.bold),
-              ),
-              Text(
-                "int n = vector_name.size() ;",
+                "map_name.size();",
                 style:
                     TextStyle(fontSize: fontsize, fontWeight: FontWeight.bold),
               ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.01,
+                ),
+              ),
+              Text("Example: ",
+                  style: TextStyle(
+                    fontSize: fontsize,
+                    color: Colors.orange[800],
+                    fontWeight: FontWeight.bold,
+                  )),
+              Text(
+                "int N = mp.size()",
+                style: TextStyle(
+                    letterSpacing: 0.8,
+                    fontSize: fontsize,
+                    fontWeight: FontWeight.bold),
+              ),
               Divider(
-                height: verysmallDivider,
+                height: smallDivider,
                 color: Colors.black,
                 thickness: 1.0,
               ),
@@ -405,7 +303,7 @@ class Stl_Map extends StatelessWidget {
                 ),
               ),
               Text(
-                "6. empty() :",
+                "3. empty() :",
                 style: TextStyle(
                     fontSize: functionfontsize,
                     color: Colors.red,
@@ -418,13 +316,13 @@ class Stl_Map extends StatelessWidget {
                 ),
               ),
               Text(
-                "The return type of this function is bool , it will return true if the vector is empty otherwise false .",
+                "It will return true if map is empty otherwise false.",
                 style: TextStyle(fontSize: fontsize),
               ),
               Opacity(
                 opacity: 0.0,
                 child: Divider(
-                  height: verysmallDivider,
+                  height: displayHeight(context) * 0.01,
                 ),
               ),
               Text(
@@ -435,12 +333,31 @@ class Stl_Map extends StatelessWidget {
                     fontWeight: FontWeight.bold),
               ),
               Text(
-                "bool isEmpty = vector_name.empty() ;",
+                "map_name.empty();",
                 style:
                     TextStyle(fontSize: fontsize, fontWeight: FontWeight.bold),
               ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.01,
+                ),
+              ),
+              Text("Example: ",
+                  style: TextStyle(
+                    fontSize: fontsize,
+                    color: Colors.orange[800],
+                    fontWeight: FontWeight.bold,
+                  )),
+              Text(
+                "bool isEmpty = mp.empty();",
+                style: TextStyle(
+                    letterSpacing: 0.8,
+                    fontSize: fontsize,
+                    fontWeight: FontWeight.bold),
+              ),
               Divider(
-                height: verysmallDivider,
+                height: smallDivider,
                 color: Colors.black,
                 thickness: 1.0,
               ),
@@ -451,7 +368,7 @@ class Stl_Map extends StatelessWidget {
                 ),
               ),
               Text(
-                "7. clear() :",
+                "4. clear() :",
                 style: TextStyle(
                     fontSize: functionfontsize,
                     color: Colors.red,
@@ -464,13 +381,13 @@ class Stl_Map extends StatelessWidget {
                 ),
               ),
               Text(
-                "It is used to remove all elements from the vector.",
+                "It clears all the elements from map.",
                 style: TextStyle(fontSize: fontsize),
               ),
               Opacity(
                 opacity: 0.0,
                 child: Divider(
-                  height: verysmallDivider,
+                  height: displayHeight(context) * 0.01,
                 ),
               ),
               Text(
@@ -481,12 +398,370 @@ class Stl_Map extends StatelessWidget {
                     fontWeight: FontWeight.bold),
               ),
               Text(
-                "vector_name.clear() ;",
+                "map_name.clear();",
                 style:
                     TextStyle(fontSize: fontsize, fontWeight: FontWeight.bold),
               ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.01,
+                ),
+              ),
+              Text("Example: ",
+                  style: TextStyle(
+                    fontSize: fontsize,
+                    color: Colors.orange[800],
+                    fontWeight: FontWeight.bold,
+                  )),
+              Text(
+                "mp.clear();",
+                style: TextStyle(
+                    letterSpacing: 0.8,
+                    fontSize: fontsize,
+                    fontWeight: FontWeight.bold),
+              ),
               Divider(
-                height: verysmallDivider,
+                height: smallDivider,
+                color: Colors.black,
+                thickness: 1.0,
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: verysmallDivider,
+                ),
+              ),
+              Text(
+                "5. find(key) :",
+                style: TextStyle(
+                    fontSize: functionfontsize,
+                    color: Colors.red,
+                    fontWeight: FontWeight.bold),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.008,
+                ),
+              ),
+              Text(
+                "This function returns an iterator pointing to a particular key in the map. If the key is not present in map then it returns an iterator pointing to map.end().",
+                style: TextStyle(fontSize: fontsize),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.01,
+                ),
+              ),
+              Text(
+                "Syntax : ",
+                style: TextStyle(
+                    fontSize: fontsize,
+                    color: Colors.orange[800],
+                    fontWeight: FontWeight.bold),
+              ),
+              Text(
+                "map_name.find(key);",
+                style:
+                    TextStyle(fontSize: fontsize, fontWeight: FontWeight.bold),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.01,
+                ),
+              ),
+              Text("Example: ",
+                  style: TextStyle(
+                    fontSize: fontsize,
+                    color: Colors.orange[800],
+                    fontWeight: FontWeight.bold,
+                  )),
+              Text(
+                "auto it = mp.find(\"Welcome\");",
+                style: TextStyle(
+                    letterSpacing: 0.8,
+                    fontSize: fontsize,
+                    fontWeight: FontWeight.bold),
+              ),
+              Text(
+                "auto it = mp.find(50);",
+                style: TextStyle(
+                    letterSpacing: 0.8,
+                    fontSize: fontsize,
+                    fontWeight: FontWeight.bold),
+              ),
+              Divider(
+                height: smallDivider,
+                color: Colors.black,
+                thickness: 1.0,
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: verysmallDivider,
+                ),
+              ),
+              Text(
+                "6. erase(key) :",
+                style: TextStyle(
+                    fontSize: functionfontsize,
+                    color: Colors.red,
+                    fontWeight: FontWeight.bold),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.008,
+                ),
+              ),
+              Text(
+                "It is used to erase a particular key in a map.",
+                style: TextStyle(fontSize: fontsize),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.01,
+                ),
+              ),
+              Text(
+                "Syntax : ",
+                style: TextStyle(
+                    fontSize: fontsize,
+                    color: Colors.orange[800],
+                    fontWeight: FontWeight.bold),
+              ),
+              Text(
+                "map_name.erase(key);",
+                style:
+                    TextStyle(fontSize: fontsize, fontWeight: FontWeight.bold),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.01,
+                ),
+              ),
+              Text("Example: ",
+                  style: TextStyle(
+                    fontSize: fontsize,
+                    color: Colors.orange[800],
+                    fontWeight: FontWeight.bold,
+                  )),
+              Text(
+                "mp.erase(\"Bye\");",
+                style: TextStyle(
+                    letterSpacing: 0.8,
+                    fontSize: fontsize,
+                    fontWeight: FontWeight.bold),
+              ),
+              Text(
+                "mp.erase(45);",
+                style: TextStyle(
+                    letterSpacing: 0.8,
+                    fontSize: fontsize,
+                    fontWeight: FontWeight.bold),
+              ),
+              Divider(
+                height: smallDivider,
+                color: Colors.black,
+                thickness: 1.0,
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: verysmallDivider,
+                ),
+              ),
+              Text(
+                "7. lower_bound(key) :",
+                style: TextStyle(
+                    fontSize: functionfontsize,
+                    color: Colors.red,
+                    fontWeight: FontWeight.bold),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.008,
+                ),
+              ),
+              Text(
+                "It returns an iterator pointing to a key which is either greater than or equivalent to the passed key.",
+                style: TextStyle(fontSize: fontsize),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.01,
+                ),
+              ),
+              Text(
+                "Syntax : ",
+                style: TextStyle(
+                    fontSize: fontsize,
+                    color: Colors.orange[800],
+                    fontWeight: FontWeight.bold),
+              ),
+              Text(
+                "map_name.lower_bound(key);",
+                style:
+                    TextStyle(fontSize: fontsize, fontWeight: FontWeight.bold),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.01,
+                ),
+              ),
+              Text("Example: ",
+                  style: TextStyle(
+                    fontSize: fontsize,
+                    color: Colors.orange[800],
+                    fontWeight: FontWeight.bold,
+                  )),
+              Text(
+                "auto it = m.lower_bound(5);",
+                style: TextStyle(
+                    letterSpacing: 0.8,
+                    fontSize: fontsize,
+                    fontWeight: FontWeight.bold),
+              ),
+              Divider(
+                height: smallDivider,
+                color: Colors.black,
+                thickness: 1.0,
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: verysmallDivider,
+                ),
+              ),
+              Text(
+                "8. upper_bound(key) :",
+                style: TextStyle(
+                    fontSize: functionfontsize,
+                    color: Colors.red,
+                    fontWeight: FontWeight.bold),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.008,
+                ),
+              ),
+              Text(
+                "It returns an iterator pointing to a key which is greater than the passed key.",
+                style: TextStyle(fontSize: fontsize),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.01,
+                ),
+              ),
+              Text(
+                "Syntax : ",
+                style: TextStyle(
+                    fontSize: fontsize,
+                    color: Colors.orange[800],
+                    fontWeight: FontWeight.bold),
+              ),
+              Text(
+                "map_name.upper_bound(key);",
+                style:
+                    TextStyle(fontSize: fontsize, fontWeight: FontWeight.bold),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.01,
+                ),
+              ),
+              Text("Example: ",
+                  style: TextStyle(
+                    fontSize: fontsize,
+                    color: Colors.orange[800],
+                    fontWeight: FontWeight.bold,
+                  )),
+              Text(
+                "auto it = m.upper_bound(50);",
+                style: TextStyle(
+                    letterSpacing: 0.8,
+                    fontSize: fontsize,
+                    fontWeight: FontWeight.bold),
+              ),
+              Divider(
+                height: smallDivider,
+                color: Colors.black,
+                thickness: 1.0,
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: verysmallDivider,
+                ),
+              ),
+              Text(
+                "9. at(key) :",
+                style: TextStyle(
+                    fontSize: functionfontsize,
+                    color: Colors.red,
+                    fontWeight: FontWeight.bold),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.008,
+                ),
+              ),
+              Text(
+                "It is used to access value associated with a particular key.",
+                style: TextStyle(fontSize: fontsize),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.01,
+                ),
+              ),
+              Text(
+                "Syntax : ",
+                style: TextStyle(
+                    fontSize: fontsize,
+                    color: Colors.orange[800],
+                    fontWeight: FontWeight.bold),
+              ),
+              Text(
+                "map_name.at(key);",
+                style:
+                    TextStyle(fontSize: fontsize, fontWeight: FontWeight.bold),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.01,
+                ),
+              ),
+              Text("Example: ",
+                  style: TextStyle(
+                    fontSize: fontsize,
+                    color: Colors.orange[800],
+                    fontWeight: FontWeight.bold,
+                  )),
+              Text(
+                "m.at(45);",
+                style: TextStyle(
+                    letterSpacing: 0.8,
+                    fontSize: fontsize,
+                    fontWeight: FontWeight.bold),
+              ),
+              Divider(
+                height: smallDivider,
                 color: Colors.black,
                 thickness: 1.0,
               ),
