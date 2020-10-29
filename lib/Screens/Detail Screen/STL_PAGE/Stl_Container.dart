@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
-import 'vect_cont.dart';
+import 'package:CP_App/Helpers/PageAnimation.dart';
+import 'Stl_vector.dart';
 import 'Stl_map.dart';
 import 'Stl_set.dart';
 import 'Stl_stack.dart';
@@ -82,9 +83,7 @@ class Stl_Contain extends StatelessWidget {
                   GestureDetector(
                     onTap: () {
                       Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => Vector_Container()));
+                          context, MyPageAnimation(w: Vector_Container()));
                     },
                     child: Card(
                       elevation: 20.0,
@@ -128,8 +127,7 @@ class Stl_Contain extends StatelessWidget {
                   ),
                   GestureDetector(
                     onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Stl_Map()));
+                      Navigator.push(context, MyPageAnimation(w: Stl_Map()));
                     },
                     child: Card(
                       elevation: 25.0,
@@ -184,8 +182,7 @@ class Stl_Contain extends StatelessWidget {
                 children: [
                   GestureDetector(
                     onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Stl_Set()));
+                      Navigator.push(context, MyPageAnimation(w: Stl_Set()));
                     },
                     child: Card(
                       elevation: 25.0,
@@ -229,8 +226,7 @@ class Stl_Contain extends StatelessWidget {
                   ),
                   GestureDetector(
                     onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Stl_Stack()));
+                      Navigator.push(context, MyPageAnimation(w: Stl_Stack()));
                     },
                     child: Card(
                       elevation: 25.0,
