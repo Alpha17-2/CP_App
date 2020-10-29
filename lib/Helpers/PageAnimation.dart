@@ -5,11 +5,11 @@ class MyPageAnimation extends PageRouteBuilder {
   final Widget w;
   MyPageAnimation({this.w})
       : super(
-            transitionDuration: Duration(milliseconds: 650),
+            transitionDuration: Duration(milliseconds: 700),
             transitionsBuilder: (BuildContext, Animation<double> animation,
                 Animation<double> secAnimation, Widget child) {
-              animation =
-                  CurvedAnimation(parent: animation, curve: Curves.easeInOut);
+              animation = CurvedAnimation(
+                  parent: animation, curve: Curves.elasticInOut);
               return ScaleTransition(
                 scale: animation,
                 alignment: Alignment.center,
