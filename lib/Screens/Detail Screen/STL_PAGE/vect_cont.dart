@@ -7,8 +7,8 @@ class Vector_Container extends StatelessWidget {
     double smallDivider = displayHeight(context) * 0.028;
     double verysmallDivider = displayHeight(context) * 0.01;
     double fontsize = displayWidth(context) * 0.045;
-    double headingfontsize = displayWidth(context) * 0.055;
-    double functionfontsize = displayWidth(context) * 0.05;
+    double headingfontsize = displayWidth(context) * 0.062;
+    double functionfontsize = displayWidth(context) * 0.055;
     final text1 = new RichText(
       text: TextSpan(
           style: TextStyle(
@@ -143,7 +143,7 @@ class Vector_Container extends StatelessWidget {
                       fontSize: fontsize, fontWeight: FontWeight.bold),
                 ),
                 Divider(
-                  height: verysmallDivider,
+                  height: smallDivider,
                   color: Colors.black,
                   thickness: 1.0,
                 ),
@@ -189,7 +189,7 @@ class Vector_Container extends StatelessWidget {
                       fontSize: fontsize, fontWeight: FontWeight.bold),
                 ),
                 Divider(
-                  height: verysmallDivider,
+                  height: smallDivider,
                   color: Colors.black,
                   thickness: 1.0,
                 ),
@@ -236,7 +236,7 @@ class Vector_Container extends StatelessWidget {
                       fontWeight: FontWeight.bold),
                 ),
                 Divider(
-                  height: verysmallDivider,
+                  height: smallDivider,
                   color: Colors.black,
                   thickness: 1.0,
                 ),
@@ -283,7 +283,7 @@ class Vector_Container extends StatelessWidget {
                       fontWeight: FontWeight.bold),
                 ),
                 Divider(
-                  height: verysmallDivider,
+                  height: smallDivider,
                   color: Colors.black,
                   thickness: 1.0,
                 ),
@@ -329,7 +329,7 @@ class Vector_Container extends StatelessWidget {
                       fontSize: fontsize, fontWeight: FontWeight.bold),
                 ),
                 Divider(
-                  height: verysmallDivider,
+                  height: smallDivider,
                   color: Colors.black,
                   thickness: 1.0,
                 ),
@@ -375,7 +375,7 @@ class Vector_Container extends StatelessWidget {
                       fontSize: fontsize, fontWeight: FontWeight.bold),
                 ),
                 Divider(
-                  height: verysmallDivider,
+                  height: smallDivider,
                   color: Colors.black,
                   thickness: 1.0,
                 ),
@@ -421,7 +421,7 @@ class Vector_Container extends StatelessWidget {
                       fontSize: fontsize, fontWeight: FontWeight.bold),
                 ),
                 Divider(
-                  height: verysmallDivider,
+                  height: smallDivider,
                   color: Colors.black,
                   thickness: 1.0,
                 ),
@@ -497,7 +497,7 @@ class Vector_Container extends StatelessWidget {
                       fontSize: fontsize, fontWeight: FontWeight.bold),
                 ),
                 Divider(
-                  height: verysmallDivider,
+                  height: smallDivider,
                   color: Colors.black,
                   thickness: 1.0,
                 ),
