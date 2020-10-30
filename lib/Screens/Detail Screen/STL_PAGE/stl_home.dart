@@ -1,7 +1,8 @@
-import 'package:CP_App/Screens/Detail%20Screen/STL_PAGE/Stl_Container.dart';
 import 'package:flutter/material.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
+import 'package:CP_App/Helpers/PageAnimation.dart';
 import 'package:CP_App/Screens/Detail Screen/STL_PAGE/Stl_Algorithm.dart';
+import 'Stl_Container.dart';
 
 class STLHOME extends StatelessWidget {
   @override
@@ -68,8 +69,7 @@ class STLHOME extends StatelessWidget {
             Center(
               child: GestureDetector(
                 onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Stl_Algo()));
+                  Navigator.push(context, MyPageAnimation(w: Stl_Algo()));
                 },
                 child: Card(
                   elevation: 25.0,
@@ -88,7 +88,7 @@ class STLHOME extends StatelessWidget {
                         ),
                       ),
                       height: displayHeight(context) * 0.1,
-                      width: displayWidth(context) * 0.8,
+                      width: displayWidth(context) * 0.5,
                       child: Center(
                         child: Text(
                           "ALGORITHMS",
@@ -123,8 +123,7 @@ class STLHOME extends StatelessWidget {
             Center(
               child: GestureDetector(
                 onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Stl_Contain()));
+                  Navigator.push(context, MyPageAnimation(w: Stl_Contain()));
                 },
                 child: Card(
                   elevation: 25.0,
@@ -141,7 +140,7 @@ class STLHOME extends StatelessWidget {
                         ]),
                       ),
                       height: displayHeight(context) * 0.1,
-                      width: displayWidth(context) * 0.8,
+                      width: displayWidth(context) * 0.5,
                       child: Center(
                         child: Text(
                           "CONTAINERS",
@@ -188,7 +187,7 @@ class STLHOME extends StatelessWidget {
                         Colors.orange[200],
                       ])),
                       height: displayHeight(context) * 0.1,
-                      width: displayWidth(context) * 0.8,
+                      width: displayWidth(context) * 0.5,
                       child: Center(
                         child: Text(
                           "ITERATORS",
@@ -235,7 +234,7 @@ class STLHOME extends StatelessWidget {
                         Colors.orange[200],
                       ])),
                       height: displayHeight(context) * 0.1,
-                      width: displayWidth(context) * 0.8,
+                      width: displayWidth(context) * 0.5,
                       child: Center(
                         child: Text(
                           "FUNCTIONS",
