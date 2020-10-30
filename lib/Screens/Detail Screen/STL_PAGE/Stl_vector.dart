@@ -432,7 +432,7 @@ class Vector_Container extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  "8. erase() :",
+                  "8. erase(pos)/erase(start,last) :",
                   style: TextStyle(
                       fontSize: functionfontsize,
                       color: Colors.red,

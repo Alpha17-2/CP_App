@@ -35,7 +35,7 @@ class Stl_Map extends StatelessWidget {
                 text:
                     "that returns an iterator pointing to the first and past last element respectively.\n\n"),
             new TextSpan(
-              text: "To use vector :- \n",
+              text: "To use map :- \n",
               style: TextStyle(
                   color: Colors.black54,
                   fontWeight: FontWeight.bold,

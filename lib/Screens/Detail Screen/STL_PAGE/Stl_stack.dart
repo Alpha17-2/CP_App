@@ -26,8 +26,55 @@ class Stl_Stack extends StatelessWidget {
               style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold)),
           new TextSpan(
               text:
-                  "principle . Here insertion and deletion takes place only from one end i.e. top . This is also dynamic i.e. it can automatically resize itself."),
-        ]));
+                  "principle . Here insertion and deletion takes place only from one end i.e. top . This is also dynamic i.e. it can automatically resize itself.\n\n"),
+          new TextSpan(
+              text: "To use stack :- \n",
+              style: TextStyle(
+                  color: Colors.black54,
+                  fontWeight: FontWeight.bold,
+                  fontSize: displayWidth(context) * 0.048),
+            ),
+            new TextSpan(
+                text: "#include<stack> ",
+                style: TextStyle(
+                    letterSpacing: 0.8,
+                    color: Colors.red,
+                    fontWeight: FontWeight.bold,
+                    fontSize: displayWidth(context) * 0.042)),
+            new TextSpan(
+                text: "or ",
+                style: TextStyle(fontSize: displayWidth(context) * 0.042)),
+            new TextSpan(
+                text: "#include<bits/stdc++.h>\n\n",
+                style: TextStyle(
+                    letterSpacing: 0.8,
+                    fontSize: displayWidth(context) * 0.042,
+                    color: Colors.red,
+                    fontWeight: FontWeight.bold)),
+            new TextSpan(
+              text: "Syntax : \n",
+              style: TextStyle(
+                  color: Colors.black54,
+                  fontWeight: FontWeight.bold,
+                  fontSize: displayWidth(context) * 0.048),
+            ),
+            new TextSpan(
+              text: "stack<data_type>stack_name;\n\n",
+              style: TextStyle(
+                  color: Colors.red,
+                  fontWeight: FontWeight.bold,
+                  fontSize: displayWidth(context) * 0.042),
+            ),
+            new TextSpan(
+              text: "Example : ",
+              style: TextStyle(
+                  color: Colors.black54,
+                  fontWeight: FontWeight.bold,
+                  fontSize: displayWidth(context) * 0.048),
+            ),
+            ]),
+    );        
+    
     return Scaffold(
       appBar: AppBar(
         title: Text("Stack"),
@@ -42,6 +89,363 @@ class Stl_Stack extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             text1,
+            Opacity(
+                  opacity: 0.0,
+                  child: Divider(
+                    height: verysmallDivider,
+                  )),
+              Text(
+                "stack<int>s ;",
+                style: TextStyle(
+                    letterSpacing: 0.8,
+                    color: Colors.red,
+                    fontWeight: FontWeight.bold,
+                    fontSize: displayWidth(context) * 0.042),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: smallDivider,
+                ),
+              ),
+              Text(
+                "Functions of map :-",
+                style: TextStyle(
+                    color: Colors.blue[700],
+                    fontWeight: FontWeight.bold,
+                    fontSize: headingfontsize),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: smallDivider,
+                ),
+              ),
+              Text(
+                "1. push(value):",
+                style: TextStyle(
+                    fontSize: functionfontsize,
+                    color: Colors.red,
+                    fontWeight: FontWeight.bold),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.008,
+                ),
+              ),
+              Text(
+                "It is used to push a value at the top of the stack.",
+                style: TextStyle(fontSize: fontsize),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.01,
+                ),
+              ),
+              Text(
+                "Syntax : ",
+                style: TextStyle(
+                    fontSize: fontsize,
+                    color: Colors.orange[800],
+                    fontWeight: FontWeight.bold),
+              ),
+              Text(
+                "stack_name.push(value)",
+                style:
+                    TextStyle(fontSize: fontsize, fontWeight: FontWeight.bold),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.01,
+                ),
+              ),
+              Text("Example: ",
+                  style: TextStyle(
+                    fontSize: fontsize,
+                    color: Colors.orange[800],
+                    fontWeight: FontWeight.bold,
+                  )),
+              Text(
+                "s.push(value) :",
+                style: TextStyle(
+                    letterSpacing: 0.8,
+                    fontSize: fontsize,
+                    fontWeight: FontWeight.bold),
+              ),
+              Divider(
+                height: smallDivider,
+                color: Colors.black,
+                thickness: 1.0,
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: verysmallDivider,
+                ),
+              ),
+              Text(
+                "2. pop() :",
+                style: TextStyle(
+                    fontSize: functionfontsize,
+                    color: Colors.red,
+                    fontWeight: FontWeight.bold),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.008,
+                ),
+              ),
+              Text(
+                "It is used to pop or remove the top most element from the stack.",
+                style: TextStyle(fontSize: fontsize),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.01,
+                ),
+              ),
+              Text(
+                "Syntax : ",
+                style: TextStyle(
+                    fontSize: fontsize,
+                    color: Colors.orange[800],
+                    fontWeight: FontWeight.bold),
+              ),
+              Text(
+                "stack_name.pop();",
+                style:
+                    TextStyle(fontSize: fontsize, fontWeight: FontWeight.bold),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.01,
+                ),
+              ),
+              Text("Example: ",
+                  style: TextStyle(
+                    fontSize: fontsize,
+                    color: Colors.orange[800],
+                    fontWeight: FontWeight.bold,
+                  )),
+              Text(
+                "s.pop();",
+                style: TextStyle(
+                    letterSpacing: 0.8,
+                    fontSize: fontsize,
+                    fontWeight: FontWeight.bold),
+              ),
+              Divider(
+                height: smallDivider,
+                color: Colors.black,
+                thickness: 1.0,
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: verysmallDivider,
+                ),
+              ),
+              Text(
+                "3. top() :",
+                style: TextStyle(
+                    fontSize: functionfontsize,
+                    color: Colors.red,
+                    fontWeight: FontWeight.bold),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.008,
+                ),
+              ),
+              Text(
+                "It is used to access the element which is present at the top of the stack.",
+                style: TextStyle(fontSize: fontsize),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.01,
+                ),
+              ),
+              Text(
+                "Syntax : ",
+                style: TextStyle(
+                    fontSize: fontsize,
+                    color: Colors.orange[800],
+                    fontWeight: FontWeight.bold),
+              ),
+              Text(
+                "stack_name.top()",
+                style:
+                    TextStyle(fontSize: fontsize, fontWeight: FontWeight.bold),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.01,
+                ),
+              ),
+              Text("Example: ",
+                  style: TextStyle(
+                    fontSize: fontsize,
+                    color: Colors.orange[800],
+                    fontWeight: FontWeight.bold,
+                  )),
+              Text(
+                "int val= s.top();",
+                style: TextStyle(
+                    letterSpacing: 0.8,
+                    fontSize: fontsize,
+                    fontWeight: FontWeight.bold),
+              ),
+              Divider(
+                height: smallDivider,
+                color: Colors.black,
+                thickness: 1.0,
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: verysmallDivider,
+                ),
+              ),
+              Text(
+                "4. size() :",
+                style: TextStyle(
+                    fontSize: functionfontsize,
+                    color: Colors.red,
+                    fontWeight: FontWeight.bold),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.008,
+                ),
+              ),
+              Text(
+                "It returns the size of the stack.",
+                style: TextStyle(fontSize: fontsize),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.01,
+                ),
+              ),
+              Text(
+                "Syntax : ",
+                style: TextStyle(
+                    fontSize: fontsize,
+                    color: Colors.orange[800],
+                    fontWeight: FontWeight.bold),
+              ),
+              Text(
+                "stack_name.size();",
+                style:
+                    TextStyle(fontSize: fontsize, fontWeight: FontWeight.bold),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.01,
+                ),
+              ),
+              Text("Example: ",
+                  style: TextStyle(
+                    fontSize: fontsize,
+                    color: Colors.orange[800],
+                    fontWeight: FontWeight.bold,
+                  )),
+              Text(
+                "int N= s.size();",
+                style: TextStyle(
+                    letterSpacing: 0.8,
+                    fontSize: fontsize,
+                    fontWeight: FontWeight.bold),
+              ),
+              Divider(
+                height: smallDivider,
+                color: Colors.black,
+                thickness: 1.0,
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: verysmallDivider,
+                ),
+              ),
+              Text(
+                "5. empty() :",
+                style: TextStyle(
+                    fontSize: functionfontsize,
+                    color: Colors.red,
+                    fontWeight: FontWeight.bold),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.008,
+                ),
+              ),
+              Text(
+                "It returns true when the stack is empty else it returns false.",
+                style: TextStyle(fontSize: fontsize),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.01,
+                ),
+              ),
+              Text(
+                "Syntax : ",
+                style: TextStyle(
+                    fontSize: fontsize,
+                    color: Colors.orange[800],
+                    fontWeight: FontWeight.bold),
+              ),
+              Text(
+                "stack_name.empty();",
+                style:
+                    TextStyle(fontSize: fontsize, fontWeight: FontWeight.bold),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.01,
+                ),
+              ),
+              Text("Example: ",
+                  style: TextStyle(
+                    fontSize: fontsize,
+                    color: Colors.orange[800],
+                    fontWeight: FontWeight.bold,
+                  )),
+              Text(
+                "bool isempty = s.empty();",
+                style: TextStyle(
+                    letterSpacing: 0.8,
+                    fontSize: fontsize,
+                    fontWeight: FontWeight.bold),
+              ),
+              Divider(
+                height: smallDivider,
+                color: Colors.black,
+                thickness: 1.0,
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: verysmallDivider,
+                ),
+              ),
           ],
         ),
       ),
