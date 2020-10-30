@@ -1,3 +1,4 @@
+import 'package:CP_App/Screens/Detail%20Screen/STL_PAGE/stl_queue.dart';
 import 'package:flutter/material.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
 import 'package:CP_App/Helpers/PageAnimation.dart';
@@ -5,6 +6,8 @@ import 'Stl_vector.dart';
 import 'Stl_map.dart';
 import 'Stl_set.dart';
 import 'Stl_stack.dart';
+import  'Stl_queue.dart';
+import   'Stl_Priorityqueue.dart';
 
 class Stl_Contain extends StatelessWidget {
   @override
@@ -38,7 +41,9 @@ class Stl_Contain extends StatelessWidget {
           ),
           new TextSpan(
               text: " because they are implemented as class templates.")
-        ]));
+        ]
+        )
+        );
 
     return Scaffold(
       appBar: AppBar(
@@ -125,6 +130,7 @@ class Stl_Contain extends StatelessWidget {
                       ),
                     ),
                   ),
+                
                   GestureDetector(
                     onTap: () {
                       Navigator.push(context, MyPageAnimation(w: Stl_Map()));
@@ -171,6 +177,7 @@ class Stl_Contain extends StatelessWidget {
                   ),
                 ],
               ),
+                
               Opacity(
                 opacity: 0.0,
                 child: Divider(
@@ -224,7 +231,8 @@ class Stl_Contain extends StatelessWidget {
                       ),
                     ),
                   ),
-                  GestureDetector(
+                
+                GestureDetector(
                     onTap: () {
                       Navigator.push(context, MyPageAnimation(w: Stl_Stack()));
                     },
@@ -279,7 +287,12 @@ class Stl_Contain extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Card(
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context, MyPageAnimation(w: Stl_queue()));
+                    },
+                child:Card(
                     elevation: 25.0,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(16.0),
@@ -318,7 +331,14 @@ class Stl_Contain extends StatelessWidget {
                               borderRadius: BorderRadius.circular(8.0))),
                     ),
                   ),
-                  Card(
+                  ),
+                  
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context, MyPageAnimation(w: Stl_Priorityqueue()));
+                    },
+                  child: Card(
                     elevation: 25.0,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(16.0),
@@ -358,12 +378,17 @@ class Stl_Contain extends StatelessWidget {
                               borderRadius: BorderRadius.circular(8.0))),
                     ),
                   ),
+                  )
                 ],
               ),
             ],
-          ),
-        ),
-      ),
+          )
+        )
+      )
     );
+      
   }
 }
+
+          
+
