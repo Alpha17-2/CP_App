@@ -9,104 +9,95 @@ class Stl_queue extends StatelessWidget {
     double fontsize = displayWidth(context) * 0.045;
     double headingfontsize = displayWidth(context) * 0.062;
     double functionfontsize = displayWidth(context) * 0.055;
-    final text1= new RichText(
-      text:TextSpan(
-        style:TextStyle(
-          fontSize: fontsize,
+    final text1 = new RichText(
+      text: TextSpan(
+          style: TextStyle(
+              fontSize: fontsize,
               color: Colors.black,
               fontWeight: FontWeight.bold),
-            children: <TextSpan>[
-              new TextSpan(text:"Queue  data structure follows "),
-              new TextSpan(
+          children: <TextSpan>[
+            new TextSpan(text: "Queue  data structure follows "),
+            new TextSpan(
                 style:
                     TextStyle(color: Colors.red, fontWeight: FontWeight.bold),
-                text:" FIFO( first in first out) "
-              ),
-              new TextSpan(
-                text: "principle .Here " ),
-              new TextSpan(
-                style:
-                    TextStyle(color: Colors.red, fontWeight: FontWeight.bold),
-                text:"insertion ",
-              ),
-              new TextSpan(text:"and "),
-              new TextSpan(
-                style:
-                    TextStyle(color: Colors.red, fontWeight: FontWeight.bold),
-                text:"deletion ",
-              ),
-              new TextSpan(text :"takes places from "),
-              new TextSpan(
-                 style:
-                    TextStyle(color: Colors.red, fontWeight: FontWeight.bold),
-                 text:"front ",
-              ),
-              new TextSpan(text:"and "),
-              new TextSpan(
-                 style:
-                    TextStyle(color: Colors.red, fontWeight: FontWeight.bold),
-                 text:"back ",
-              ),
-              new TextSpan(text: "end respectively .This is also dynamic i.e. can automatically resize itself.\n\n"),
-              new TextSpan(
-                  text:"To use queue:-\n",
-                  style: TextStyle(
+                text: " FIFO( first in first out) "),
+            new TextSpan(text: "principle .Here "),
+            new TextSpan(
+              style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold),
+              text: "insertion ",
+            ),
+            new TextSpan(text: "and "),
+            new TextSpan(
+              style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold),
+              text: "deletion ",
+            ),
+            new TextSpan(text: "takes places from "),
+            new TextSpan(
+              style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold),
+              text: "front ",
+            ),
+            new TextSpan(text: "and "),
+            new TextSpan(
+              style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold),
+              text: "back ",
+            ),
+            new TextSpan(
+                text:
+                    "end respectively .This is also dynamic i.e. can automatically resize itself.\n\n"),
+            new TextSpan(
+              text: "To use queue:-\n",
+              style: TextStyle(
                   color: Colors.black54,
                   fontWeight: FontWeight.bold,
                   fontSize: displayWidth(context) * 0.048),
-                  ),
-              new TextSpan(text:"We can either use "),
-              new TextSpan(
-                    text:"#include<queue> ",
-                    style: TextStyle(
+            ),
+            new TextSpan(text: "We can either use "),
+            new TextSpan(
+                text: "#include<queue> ",
+                style: TextStyle(
                     letterSpacing: 0.8,
                     fontSize: displayWidth(context) * 0.042,
                     color: Colors.red,
                     fontWeight: FontWeight.bold)),
-              new TextSpan(text:"or"),
-              new TextSpan(
-                    text:"#include<bits/stdc++.h> ",
-                    style: TextStyle(
+            new TextSpan(text: "or"),
+            new TextSpan(
+                text: "#include<bits/stdc++.h> ",
+                style: TextStyle(
                     letterSpacing: 0.8,
                     fontSize: displayWidth(context) * 0.042,
                     color: Colors.red,
-                    fontWeight: FontWeight.bold)
-              ),
-              new TextSpan(text:"header file\n\n "),
-              new TextSpan(
-                  text:"Syntax \n",
-                  style: TextStyle(
+                    fontWeight: FontWeight.bold)),
+            new TextSpan(text: "header file\n\n "),
+            new TextSpan(
+              text: "Syntax \n",
+              style: TextStyle(
                   color: Colors.black54,
                   fontWeight: FontWeight.bold,
                   fontSize: displayWidth(context) * 0.048),
-                ),
-              new TextSpan(
-                    text:"queue< data_type> queue_name;\n\n",
-                    style: TextStyle(
+            ),
+            new TextSpan(
+                text: "queue< data_type> queue_name;\n\n",
+                style: TextStyle(
                     letterSpacing: 0.8,
                     fontSize: displayWidth(context) * 0.042,
                     color: Colors.red,
-                    fontWeight: FontWeight.bold)
-
-              ),
-              new TextSpan(text:"Example:-",
-                    style: TextStyle(
+                    fontWeight: FontWeight.bold)),
+            new TextSpan(
+                text: "Example:-",
+                style: TextStyle(
                     letterSpacing: 0.8,
                     fontSize: displayWidth(context) * 0.042,
                     color: Colors.red,
-                    fontWeight: FontWeight.bold)
-           ),
+                    fontWeight: FontWeight.bold)),
           ]),
     );
 
-
-
     return Scaffold(
-      appBar:AppBar(
-        title :Text('queue'),
+      appBar: AppBar(
+        title: Text('Queue'),
         backgroundColor: Colors.blue[200],
         centerTitle: true,
-        ),
+      ),
       body: Padding(
         padding:
             EdgeInsets.only(top: 16.0, bottom: 12.0, left: 8.0, right: 8.0),
@@ -408,7 +399,6 @@ class Stl_queue extends StatelessWidget {
                   height: verysmallDivider,
                 ),
               ),
-              
               Text(
                 "5. size() :",
                 style: TextStyle(

@@ -8,8 +8,8 @@ class MyPageAnimation extends PageRouteBuilder {
             transitionDuration: Duration(seconds: 1),
             transitionsBuilder: (BuildContext, Animation<double> animation,
                 Animation<double> secAnimation, Widget child) {
-              animation = CurvedAnimation(
-                  parent: animation, curve: Curves.elasticInOut);
+              animation =
+                  CurvedAnimation(parent: animation, curve: Curves.elasticOut);
               return ScaleTransition(
                 scale: animation,
                 alignment: Alignment.center,

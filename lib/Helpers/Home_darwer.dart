@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
 import 'package:CP_App/Screens/Display%20Screens/preq_Screen.dart';
-import 'package:CP_App/Screens/Detail Screen/STL_PAGE/stl_home.dart';
+import 'package:CP_App/Screens/Detail%20Screen/STL_PAGE/Stl_home.dart';
 import 'package:CP_App/Screens/Display%20Screens/Problem_List_Screen.dart';
 import 'package:CP_App/Screens/Display%20Screens/Topic_Screen.dart';
 

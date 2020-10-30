@@ -1,4 +1,4 @@
-import 'package:CP_App/Screens/Detail%20Screen/STL_PAGE/stl_queue.dart';
+import 'package:CP_App/Screens/Detail%20Screen/STL_PAGE/Stl_queue.dart';
 import 'package:flutter/material.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
 import 'package:CP_App/Helpers/PageAnimation.dart';
@@ -6,8 +6,8 @@ import 'Stl_vector.dart';
 import 'Stl_map.dart';
 import 'Stl_set.dart';
 import 'Stl_stack.dart';
-import  'Stl_queue.dart';
-import   'Stl_Priorityqueue.dart';
+import 'Stl_priorityqueue.dart';
+import 'Stl_queue.dart';
 
 class Stl_Contain extends StatelessWidget {
   @override
@@ -41,354 +41,342 @@ class Stl_Contain extends StatelessWidget {
           ),
           new TextSpan(
               text: " because they are implemented as class templates.")
-        ]
-        )
-        );
+        ]));
 
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blue[200],
-        title: Text(
-          "Containers",
-          style: TextStyle(
-            fontSize: displayWidth(context) * 0.045,
+        appBar: AppBar(
+          backgroundColor: Colors.blue[200],
+          title: Text(
+            "Containers",
+            style: TextStyle(
+              fontSize: displayWidth(context) * 0.045,
+            ),
           ),
+          centerTitle: true,
         ),
-        centerTitle: true,
-      ),
-      body: Padding(
-        padding: EdgeInsets.all(12.0),
-        child: SingleChildScrollView(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              introText,
-              Opacity(
-                opacity: 0.0,
-                child: Divider(
-                  height: displayHeight(context) * 0.03,
-                ),
-              ),
-              Text(
-                "Commonly used containers along with their functions.",
-                style: TextStyle(
-                    fontSize: displayWidth(context) * 0.045,
-                    fontWeight: FontWeight.bold),
-              ),
-              Opacity(
-                opacity: 0.0,
-                child: Divider(
-                  height: displayHeight(context) * 0.03,
-                ),
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                          context, MyPageAnimation(w: Vector_Container()));
-                    },
-                    child: Card(
-                      elevation: 20.0,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(16.0),
-                      ),
-                      child: ClipPath(
-                        child: Container(
-                          decoration: BoxDecoration(
-                            gradient: LinearGradient(
-                              colors: [
-                                Colors.red[200],
-                                Colors.redAccent[100],
-                                Colors.red[400],
-                              ],
-                            ),
-                          ),
-                          height: displayHeight(context) * 0.1,
-                          width: displayWidth(context) * 0.4,
-                          child: Center(
-                            child: Text(
-                              "VECTOR",
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  shadows: <Shadow>[
-                                    Shadow(
-                                        blurRadius: 18.0,
-                                        color: Colors.black54,
-                                        offset: Offset.fromDirection(1, 1))
-                                  ],
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: displayWidth(context) * 0.055),
-                            ),
-                          ),
-                        ),
-                        clipper: ShapeBorderClipper(
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(8.0))),
-                      ),
-                    ),
+        body: Padding(
+            padding: EdgeInsets.all(12.0),
+            child: SingleChildScrollView(
+                child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                introText,
+                Opacity(
+                  opacity: 0.0,
+                  child: Divider(
+                    height: displayHeight(context) * 0.03,
                   ),
-                
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(context, MyPageAnimation(w: Stl_Map()));
-                    },
-                    child: Card(
-                      elevation: 25.0,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(16.0),
-                      ),
-                      child: ClipPath(
-                        child: Container(
-                          decoration: BoxDecoration(
-                            gradient: LinearGradient(
-                              colors: [
-                                Colors.red[200],
-                                Colors.redAccent[100],
-                                Colors.red,
-                              ],
-                            ),
-                          ),
-                          height: displayHeight(context) * 0.1,
-                          width: displayWidth(context) * 0.4,
-                          child: Center(
-                            child: Text(
-                              "MAP",
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  shadows: <Shadow>[
-                                    Shadow(
-                                        blurRadius: 18.0,
-                                        color: Colors.black54,
-                                        offset: Offset.fromDirection(1, 1))
-                                  ],
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: displayWidth(context) * 0.055),
-                            ),
-                          ),
-                        ),
-                        clipper: ShapeBorderClipper(
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(8.0))),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-                
-              Opacity(
-                opacity: 0.0,
-                child: Divider(
-                  height: displayHeight(context) * 0.03,
                 ),
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(context, MyPageAnimation(w: Stl_Set()));
-                    },
-                    child: Card(
-                      elevation: 25.0,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(16.0),
-                      ),
-                      child: ClipPath(
-                        child: Container(
-                          decoration: BoxDecoration(
-                            gradient: LinearGradient(
-                              colors: [
-                                Colors.red[200],
-                                Colors.redAccent[100],
-                                Colors.red,
-                              ],
-                            ),
-                          ),
-                          height: displayHeight(context) * 0.1,
-                          width: displayWidth(context) * 0.4,
-                          child: Center(
-                            child: Text(
-                              "SET",
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  shadows: <Shadow>[
-                                    Shadow(
-                                        blurRadius: 18.0,
-                                        color: Colors.black54,
-                                        offset: Offset.fromDirection(1, 1))
-                                  ],
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: displayWidth(context) * 0.055),
-                            ),
-                          ),
-                        ),
-                        clipper: ShapeBorderClipper(
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(8.0))),
-                      ),
-                    ),
-                  ),
-                
-                GestureDetector(
-                    onTap: () {
-                      Navigator.push(context, MyPageAnimation(w: Stl_Stack()));
-                    },
-                    child: Card(
-                      elevation: 25.0,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(16.0),
-                      ),
-                      child: ClipPath(
-                        child: Container(
-                          decoration: BoxDecoration(
-                            gradient: LinearGradient(
-                              colors: [
-                                Colors.red[200],
-                                Colors.redAccent[100],
-                                Colors.red,
-                              ],
-                            ),
-                          ),
-                          height: displayHeight(context) * 0.1,
-                          width: displayWidth(context) * 0.4,
-                          child: Center(
-                            child: Text(
-                              "STACK",
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  shadows: <Shadow>[
-                                    Shadow(
-                                        blurRadius: 18.0,
-                                        color: Colors.black54,
-                                        offset: Offset.fromDirection(1, 1))
-                                  ],
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: displayWidth(context) * 0.055),
-                            ),
-                          ),
-                        ),
-                        clipper: ShapeBorderClipper(
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(8.0))),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              Opacity(
-                opacity: 0.0,
-                child: Divider(
-                  height: displayHeight(context) * 0.03,
+                Text(
+                  "Commonly used containers along with their functions.",
+                  style: TextStyle(
+                      fontSize: displayWidth(context) * 0.045,
+                      fontWeight: FontWeight.bold),
                 ),
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                          context, MyPageAnimation(w: Stl_queue()));
-                    },
-                child:Card(
-                    elevation: 25.0,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(16.0),
-                    ),
-                    child: ClipPath(
-                      child: Container(
-                        decoration: BoxDecoration(
-                          gradient: LinearGradient(
-                            colors: [
-                              Colors.red[200],
-                              Colors.redAccent[100],
-                              Colors.red,
-                            ],
-                          ),
+                Opacity(
+                  opacity: 0.0,
+                  child: Divider(
+                    height: displayHeight(context) * 0.03,
+                  ),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context, MyPageAnimation(w: Vector_Container()));
+                      },
+                      child: Card(
+                        elevation: 20.0,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(16.0),
                         ),
-                        height: displayHeight(context) * 0.1,
-                        width: displayWidth(context) * 0.4,
-                        child: Center(
-                          child: Text(
-                            "QUEUE",
-                            style: TextStyle(
-                                color: Colors.white,
-                                shadows: <Shadow>[
-                                  Shadow(
-                                      blurRadius: 18.0,
-                                      color: Colors.black54,
-                                      offset: Offset.fromDirection(1, 1))
+                        child: ClipPath(
+                          child: Container(
+                            decoration: BoxDecoration(
+                              gradient: LinearGradient(
+                                colors: [
+                                  Colors.red[200],
+                                  Colors.redAccent[100],
+                                  Colors.red[400],
                                 ],
-                                fontWeight: FontWeight.bold,
-                                fontSize: displayWidth(context) * 0.055),
+                              ),
+                            ),
+                            height: displayHeight(context) * 0.1,
+                            width: displayWidth(context) * 0.4,
+                            child: Center(
+                              child: Text(
+                                "VECTOR",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    shadows: <Shadow>[
+                                      Shadow(
+                                          blurRadius: 18.0,
+                                          color: Colors.black54,
+                                          offset: Offset.fromDirection(1, 1))
+                                    ],
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: displayWidth(context) * 0.055),
+                              ),
+                            ),
                           ),
+                          clipper: ShapeBorderClipper(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(8.0))),
                         ),
                       ),
-                      clipper: ShapeBorderClipper(
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(8.0))),
                     ),
-                  ),
-                  ),
-                  
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                          context, MyPageAnimation(w: Stl_Priorityqueue()));
-                    },
-                  child: Card(
-                    elevation: 25.0,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(16.0),
-                    ),
-                    child: ClipPath(
-                      child: Container(
-                        decoration: BoxDecoration(
-                          gradient: LinearGradient(
-                            colors: [
-                              Colors.red[200],
-                              Colors.redAccent[100],
-                              Colors.red,
-                            ],
-                          ),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(context, MyPageAnimation(w: Stl_Map()));
+                      },
+                      child: Card(
+                        elevation: 25.0,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(16.0),
                         ),
-                        height: displayHeight(context) * 0.1,
-                        width: displayWidth(context) * 0.4,
-                        child: Center(
-                          child: Text(
-                            "PRIORITY QUEUE",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                color: Colors.white,
-                                shadows: <Shadow>[
-                                  Shadow(
-                                      blurRadius: 18.0,
-                                      color: Colors.black54,
-                                      offset: Offset.fromDirection(1, 1))
+                        child: ClipPath(
+                          child: Container(
+                            decoration: BoxDecoration(
+                              gradient: LinearGradient(
+                                colors: [
+                                  Colors.red[200],
+                                  Colors.redAccent[100],
+                                  Colors.red,
                                 ],
-                                fontWeight: FontWeight.bold,
-                                fontSize: displayWidth(context) * 0.055),
+                              ),
+                            ),
+                            height: displayHeight(context) * 0.1,
+                            width: displayWidth(context) * 0.4,
+                            child: Center(
+                              child: Text(
+                                "MAP",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    shadows: <Shadow>[
+                                      Shadow(
+                                          blurRadius: 18.0,
+                                          color: Colors.black54,
+                                          offset: Offset.fromDirection(1, 1))
+                                    ],
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: displayWidth(context) * 0.055),
+                              ),
+                            ),
                           ),
+                          clipper: ShapeBorderClipper(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(8.0))),
                         ),
                       ),
-                      clipper: ShapeBorderClipper(
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(8.0))),
                     ),
+                  ],
+                ),
+                Opacity(
+                  opacity: 0.0,
+                  child: Divider(
+                    height: displayHeight(context) * 0.03,
                   ),
-                  )
-                ],
-              ),
-            ],
-          )
-        )
-      )
-    );
-      
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(context, MyPageAnimation(w: Stl_Set()));
+                      },
+                      child: Card(
+                        elevation: 25.0,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(16.0),
+                        ),
+                        child: ClipPath(
+                          child: Container(
+                            decoration: BoxDecoration(
+                              gradient: LinearGradient(
+                                colors: [
+                                  Colors.red[200],
+                                  Colors.redAccent[100],
+                                  Colors.red,
+                                ],
+                              ),
+                            ),
+                            height: displayHeight(context) * 0.1,
+                            width: displayWidth(context) * 0.4,
+                            child: Center(
+                              child: Text(
+                                "SET",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    shadows: <Shadow>[
+                                      Shadow(
+                                          blurRadius: 18.0,
+                                          color: Colors.black54,
+                                          offset: Offset.fromDirection(1, 1))
+                                    ],
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: displayWidth(context) * 0.055),
+                              ),
+                            ),
+                          ),
+                          clipper: ShapeBorderClipper(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(8.0))),
+                        ),
+                      ),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context, MyPageAnimation(w: Stl_Stack()));
+                      },
+                      child: Card(
+                        elevation: 25.0,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(16.0),
+                        ),
+                        child: ClipPath(
+                          child: Container(
+                            decoration: BoxDecoration(
+                              gradient: LinearGradient(
+                                colors: [
+                                  Colors.red[200],
+                                  Colors.redAccent[100],
+                                  Colors.red,
+                                ],
+                              ),
+                            ),
+                            height: displayHeight(context) * 0.1,
+                            width: displayWidth(context) * 0.4,
+                            child: Center(
+                              child: Text(
+                                "STACK",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    shadows: <Shadow>[
+                                      Shadow(
+                                          blurRadius: 18.0,
+                                          color: Colors.black54,
+                                          offset: Offset.fromDirection(1, 1))
+                                    ],
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: displayWidth(context) * 0.055),
+                              ),
+                            ),
+                          ),
+                          clipper: ShapeBorderClipper(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(8.0))),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                Opacity(
+                  opacity: 0.0,
+                  child: Divider(
+                    height: displayHeight(context) * 0.03,
+                  ),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context, MyPageAnimation(w: Stl_queue()));
+                      },
+                      child: Card(
+                        elevation: 25.0,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(16.0),
+                        ),
+                        child: ClipPath(
+                          child: Container(
+                            decoration: BoxDecoration(
+                              gradient: LinearGradient(
+                                colors: [
+                                  Colors.red[200],
+                                  Colors.redAccent[100],
+                                  Colors.red,
+                                ],
+                              ),
+                            ),
+                            height: displayHeight(context) * 0.1,
+                            width: displayWidth(context) * 0.4,
+                            child: Center(
+                              child: Text(
+                                "QUEUE",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    shadows: <Shadow>[
+                                      Shadow(
+                                          blurRadius: 18.0,
+                                          color: Colors.black54,
+                                          offset: Offset.fromDirection(1, 1))
+                                    ],
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: displayWidth(context) * 0.055),
+                              ),
+                            ),
+                          ),
+                          clipper: ShapeBorderClipper(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(8.0))),
+                        ),
+                      ),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context, MyPageAnimation(w: Stl_Priorityqueue()));
+                      },
+                      child: Card(
+                        elevation: 25.0,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(16.0),
+                        ),
+                        child: ClipPath(
+                          child: Container(
+                            decoration: BoxDecoration(
+                              gradient: LinearGradient(
+                                colors: [
+                                  Colors.red[200],
+                                  Colors.redAccent[100],
+                                  Colors.red,
+                                ],
+                              ),
+                            ),
+                            height: displayHeight(context) * 0.1,
+                            width: displayWidth(context) * 0.4,
+                            child: Center(
+                              child: Text(
+                                "PRIORITY QUEUE",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    shadows: <Shadow>[
+                                      Shadow(
+                                          blurRadius: 18.0,
+                                          color: Colors.black54,
+                                          offset: Offset.fromDirection(1, 1))
+                                    ],
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: displayWidth(context) * 0.055),
+                              ),
+                            ),
+                          ),
+                          clipper: ShapeBorderClipper(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(8.0))),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ],
+            ))));
   }
 }
-
-          
-
