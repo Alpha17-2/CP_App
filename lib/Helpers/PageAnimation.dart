@@ -5,7 +5,7 @@ class MyPageAnimation extends PageRouteBuilder {
   final Widget w;
   MyPageAnimation({this.w})
       : super(
-            transitionDuration: Duration(milliseconds: 650),
+            transitionDuration: Duration(seconds: 1),
             transitionsBuilder: (BuildContext, Animation<double> animation,
                 Animation<double> secAnimation, Widget child) {
               animation = CurvedAnimation(
