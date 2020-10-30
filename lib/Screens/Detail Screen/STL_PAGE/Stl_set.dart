@@ -2,43 +2,50 @@ import 'package:flutter/material.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
 
 class Stl_Set extends StatelessWidget {
- @override
+  @override
   Widget build(BuildContext context) {
-   double smallDivider = displayHeight(context) * 0.028;
+    double smallDivider = displayHeight(context) * 0.028;
     double verysmallDivider = displayHeight(context) * 0.01;
     double fontsize = displayWidth(context) * 0.045;
     double headingfontsize = displayWidth(context) * 0.062;
     double functionfontsize = displayWidth(context) * 0.055;
     final text1 = new RichText(
-        text: TextSpan(
-            style: TextStyle(
-                fontSize: fontsize,
-                color: Colors.black,
-                fontWeight: FontWeight.bold),
-            children: <TextSpan>[
-               new TextSpan(text: "sets are associative containers that are used to store only sets are associative containers that are used to store only "),
-                new TextSpan(
-              text: "unique or distinct ",
-              style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold)),
-              new TextSpan( text: "elements in any specific order i.e. either "),
-              new TextSpan(
-              text: "increasing or decreasing ",
-              style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold)),
-              new TextSpan(text:"By default all the elements in the set get sorted in "),
-              new TextSpan(
-              text: "increasing ",
-              style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold)),
-              new TextSpan(
-                text:"but if we want to insert it in "),
-              new TextSpan(
-              text: "non increasing ",
-              style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold)),
-              new TextSpan(text: "order,then one more parameter named "),
-              new TextSpan(
-              text: "greater<int> ",
-              style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold)),
-              new TextSpan(text:"(comparison operator) should be included."),
-              new TextSpan(
+      text: TextSpan(
+          style: TextStyle(
+              fontSize: fontsize,
+              color: Colors.black,
+              fontWeight: FontWeight.bold),
+          children: <TextSpan>[
+            new TextSpan(
+                text:
+                    "Sets are associative containers that are used to store "),
+            new TextSpan(
+                text: "unique or distinct ",
+                style:
+                    TextStyle(color: Colors.red, fontWeight: FontWeight.bold)),
+            new TextSpan(text: "elements in any specific order i.e. either "),
+            new TextSpan(
+                text: "increasing or decreasing ",
+                style:
+                    TextStyle(color: Colors.red, fontWeight: FontWeight.bold)),
+            new TextSpan(
+                text: "By default all the elements in the set get sorted in "),
+            new TextSpan(
+                text: "increasing ",
+                style:
+                    TextStyle(color: Colors.red, fontWeight: FontWeight.bold)),
+            new TextSpan(text: "order but if we want to insert it in "),
+            new TextSpan(
+                text: "non increasing ",
+                style:
+                    TextStyle(color: Colors.red, fontWeight: FontWeight.bold)),
+            new TextSpan(text: "order, then one more parameter named "),
+            new TextSpan(
+                text: "greater<int> ",
+                style:
+                    TextStyle(color: Colors.red, fontWeight: FontWeight.bold)),
+            new TextSpan(text: "(comparison operator) should be included.\n\n"),
+            new TextSpan(
               text: "To use set :- \n",
               style: TextStyle(
                   color: Colors.black54,
@@ -70,21 +77,30 @@ class Stl_Set extends StatelessWidget {
                   fontSize: displayWidth(context) * 0.048),
             ),
             new TextSpan(
-              text: "set<data_type>name;;\n\n",
+              text: "set<data_type>name;\n\n",
               style: TextStyle(
+                  letterSpacing: 0.8,
                   color: Colors.red,
                   fontWeight: FontWeight.bold,
                   fontSize: displayWidth(context) * 0.042),
             ),
             new TextSpan(
-              text: "Example : ",
+              text: "Example : \n",
               style: TextStyle(
                   color: Colors.black54,
                   fontWeight: FontWeight.bold,
                   fontSize: displayWidth(context) * 0.048),
             ),
-            ]),
-    );        
+            new TextSpan(
+              text: "set<int>s;",
+              style: TextStyle(
+                  letterSpacing: 0.8,
+                  color: Colors.red,
+                  fontWeight: FontWeight.bold,
+                  fontSize: displayWidth(context) * 0.042),
+            ),
+          ]),
+    );
     return Scaffold(
       appBar: AppBar(
         title: Text("Set"),
@@ -93,25 +109,13 @@ class Stl_Set extends StatelessWidget {
       ),
       body: Padding(
         padding:
-            EdgeInsets.only(top: 16.0, bottom: 12.0, left: 8.0, right: 8.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            text1,
-            Opacity(
-                  opacity: 0.0,
-                  child: Divider(
-                    height: verysmallDivider,
-                  )),
-              Text(
-                "set<int>s ;",
-                style: TextStyle(
-                    letterSpacing: 0.8,
-                    color: Colors.red,
-                    fontWeight: FontWeight.bold,
-                    fontSize: displayWidth(context) * 0.042),
-              ),
+            EdgeInsets.only(top: 16.0, bottom: 10.0, left: 8.0, right: 8.0),
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              text1,
               Opacity(
                 opacity: 0.0,
                 child: Divider(
@@ -261,7 +265,6 @@ class Stl_Set extends StatelessWidget {
                   height: verysmallDivider,
                 ),
               ),
-              
               Text(
                 "3. begin() :",
                 style: TextStyle(
@@ -327,7 +330,7 @@ class Stl_Set extends StatelessWidget {
                   height: verysmallDivider,
                 ),
               ),
-               Text(
+              Text(
                 "4. end() :",
                 style: TextStyle(
                     fontSize: functionfontsize,
@@ -457,7 +460,6 @@ class Stl_Set extends StatelessWidget {
                   height: verysmallDivider,
                 ),
               ),
-              
               Text(
                 "6. empty() :",
                 style: TextStyle(
@@ -588,7 +590,7 @@ class Stl_Set extends StatelessWidget {
                   height: verysmallDivider,
                 ),
               ),
-               Text(
+              Text(
                 "8. lower_bound() :",
                 style: TextStyle(
                     fontSize: functionfontsize,
@@ -654,7 +656,7 @@ class Stl_Set extends StatelessWidget {
                 ),
               ),
               Text(
-                "8. upper_bound() :",
+                "9. upper_bound() :",
                 style: TextStyle(
                     fontSize: functionfontsize,
                     color: Colors.red,
@@ -719,127 +721,194 @@ class Stl_Set extends StatelessWidget {
                 ),
               ),
               Text(
-                  "10. erase(pos)/erase(start,last) :",
-                  style: TextStyle(
-                      fontSize: functionfontsize,
-                      color: Colors.red,
-                      fontWeight: FontWeight.bold),
+                "10. erase() :",
+                style: TextStyle(
+                    fontSize: functionfontsize,
+                    color: Colors.red,
+                    fontWeight: FontWeight.bold),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.008,
                 ),
-                Opacity(
-                  opacity: 0.0,
-                  child: Divider(
-                    height: displayHeight(context) * 0.008,
-                  ),
+              ),
+              Text(
+                "It is used to remove either a single element or a range of elements from a vector.",
+                style: TextStyle(fontSize: fontsize),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: verysmallDivider,
                 ),
-                Text(
-                  "It is used to remove either a single element or a range of elements from a vector.",
-                  style: TextStyle(fontSize: fontsize),
+              ),
+              Text(
+                "Syntax 1 : ",
+                style: TextStyle(
+                    fontSize: fontsize,
+                    color: Colors.orange[800],
+                    fontWeight: FontWeight.bold),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.009,
                 ),
-                Opacity(
-                  opacity: 0.0,
-                  child: Divider(
-                    height: verysmallDivider,
-                  ),
-                ),
-                Text(
-                  "Syntax : ",
-                  style: TextStyle(
-                      fontSize: fontsize,
-                      color: Colors.orange[800],
-                      fontWeight: FontWeight.bold),
-                ),
-                Text("Let there be a set s, such that s = { 1,2,3,4,5 }",
-                    style: TextStyle(
-                        color: Colors.blue[900],
-                        fontSize: displayWidth(context) * 0.042,
-                        fontWeight: FontWeight.bold)),
-                Opacity(
-                  opacity: 0.0,
-                  child: Divider(
-                    height: displayHeight(context) * 0.009,
-                  ),
-                ),
-                Text(
-                  "• If we want to erase or remove an element from a particular position then use :",
-                  style: TextStyle(fontSize: fontsize),
-                ),
-                Text(
-                  "set_name.erase (position) ;",
-                  style: TextStyle(
-                      fontSize: fontsize, fontWeight: FontWeight.bold),
-                ),
-                Opacity(
+              ),
+              Text(
+                "• If we want to erase or remove an element from a particular position then use :",
+                style: TextStyle(fontSize: fontsize),
+              ),
+              Text(
+                "set_name.erase (position) ;",
+                style:
+                    TextStyle(fontSize: fontsize, fontWeight: FontWeight.bold),
+              ),
+              Opacity(
                 opacity: 0.0,
                 child: Divider(
                   height: displayHeight(context) * 0.01,
                 ),
               ),
-              Text("Example: ",
+              Text("Example 1 : ",
                   style: TextStyle(
                     fontSize: fontsize,
                     color: Colors.orange[800],
                     fontWeight: FontWeight.bold,
                   )),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.009,
+                ),
+              ),
+              Text("Let there be a set S, such that S = { 1,2,3,4,5 }",
+                  style: TextStyle(
+                      color: Colors.blue[900],
+                      fontSize: displayWidth(context) * 0.042,
+                      fontWeight: FontWeight.bold)),
               Text(
-                "s.erase(3);\n",
+                "s.erase(3);",
+                style: TextStyle(
+                    letterSpacing: 0.8,
+                    fontSize: fontsize,
+                    fontWeight: FontWeight.bold),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.005,
+                ),
+              ),
+              Text(
+                "This will remove element from 3rd position and now our set becomes 1 2 3 5.",
+                style: TextStyle(fontSize: fontsize),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.009,
+                ),
+              ),
+              Text(
+                "Syntax 2 : ",
+                style: TextStyle(
+                    fontSize: fontsize,
+                    color: Colors.orange[800],
+                    fontWeight: FontWeight.bold),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.009,
+                ),
+              ),
+              Text(
+                "• If we want to remove a desired range of elements from a vector then use :",
+                style: TextStyle(fontSize: fontsize),
+              ),
+              Text(
+                "set_name.erase (start_add , end_add) ;",
+                style:
+                    TextStyle(fontSize: fontsize, fontWeight: FontWeight.bold),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.01,
+                ),
+              ),
+              Text("Example 2 : ",
+                  style: TextStyle(
+                    fontSize: fontsize,
+                    color: Colors.orange[800],
+                    fontWeight: FontWeight.bold,
+                  )),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.009,
+                ),
+              ),
+              Text("Let there be a set S, such that S = { 1,2,3,4,5 }",
+                  style: TextStyle(
+                      color: Colors.blue[900],
+                      fontSize: displayWidth(context) * 0.042,
+                      fontWeight: FontWeight.bold)),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.006,
+                ),
+              ),
+              Text(
+                "auto it1 = S.begin();",
                 style: TextStyle(
                     letterSpacing: 0.8,
                     fontSize: fontsize,
                     fontWeight: FontWeight.bold),
               ),
               Text(
-                "This will remove element from 3rd position and now our set becomes 1 2 3 5."
-              ),
-                Opacity(
-                  opacity: 0.0,
-                  child: Divider(
-                    height: displayHeight(context) * 0.009,
-                  ),
-                ),
-                Text(
-                  "• If we want to remove a desired range of elements from a vector then use :",
-                  style: TextStyle(fontSize: fontsize),
-                ),
-                Text(
-                  "set_name.erase (start_add , end_add) ;",
-                  style: TextStyle(
-                      fontSize: fontsize, fontWeight: FontWeight.bold),
-                ),
-                Opacity(
-                opacity: 0.0,
-                child: Divider(
-                  height: displayHeight(context) * 0.01,
-                ),
-              ),
-              Text("Example: ",
-                  style: TextStyle(
-                    fontSize: fontsize,
-                    color: Colors.orange[800],
-                    fontWeight: FontWeight.bold,
-                  )),
-              Text(
-                "s.erase(1,2);\n",
+                "auto it2 = S.end();",
                 style: TextStyle(
                     letterSpacing: 0.8,
                     fontSize: fontsize,
                     fontWeight: FontWeight.bold),
               ),
               Text(
-                "This will remove elementsranging from 1st to 2nd position.Now our set becomes 1 5."
+                "++it1;\n--it2;",
+                style: TextStyle(
+                    letterSpacing: 0.8,
+                    fontSize: fontsize,
+                    fontWeight: FontWeight.bold),
               ),
-
-                Divider(
-                  height: smallDivider,
-                  color: Colors.black,
-                  thickness: 1.0,
+              Text(
+                "s.erase( it1 , it2 );",
+                style: TextStyle(
+                    letterSpacing: 0.8,
+                    fontSize: fontsize,
+                    fontWeight: FontWeight.bold),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.005,
                 ),
-              ],
-            ),
-              
-
-              
-         ),
+              ),
+              Text(
+                "This will remove elements ranging from 1st to 3rd position. Now our set becomes { 1 , 5 }.",
+                style: TextStyle(fontSize: fontsize),
+              ),
+              Divider(
+                height: smallDivider,
+                color: Colors.black,
+                thickness: 1.0,
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
-

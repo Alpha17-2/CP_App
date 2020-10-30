@@ -10,24 +10,26 @@ class Stl_Stack extends StatelessWidget {
     double headingfontsize = displayWidth(context) * 0.062;
     double functionfontsize = displayWidth(context) * 0.055;
     final text1 = new RichText(
-        text: TextSpan(
-            style: TextStyle(
-                fontSize: fontsize,
-                color: Colors.black,
-                fontWeight: FontWeight.bold),
-            children: <TextSpan>[
-          new TextSpan(text: "Stack is a data structure that follows "),
-          new TextSpan(
-              text: "LIFO (Last In First Out) ",
-              style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold)),
-          new TextSpan(text: "or "),
-          new TextSpan(
-              text: "FILO (First In Last Out) ",
-              style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold)),
-          new TextSpan(
-              text:
-                  "principle . Here insertion and deletion takes place only from one end i.e. top . This is also dynamic i.e. it can automatically resize itself.\n\n"),
-          new TextSpan(
+      text: TextSpan(
+          style: TextStyle(
+              fontSize: fontsize,
+              color: Colors.black,
+              fontWeight: FontWeight.bold),
+          children: <TextSpan>[
+            new TextSpan(text: "Stack is a data structure that follows "),
+            new TextSpan(
+                text: "LIFO (Last In First Out) ",
+                style:
+                    TextStyle(color: Colors.red, fontWeight: FontWeight.bold)),
+            new TextSpan(text: "or "),
+            new TextSpan(
+                text: "FILO (First In Last Out) ",
+                style:
+                    TextStyle(color: Colors.red, fontWeight: FontWeight.bold)),
+            new TextSpan(
+                text:
+                    "principle . Here insertion and deletion takes place only from one end i.e. top . This is also dynamic i.e. it can automatically resize itself.\n\n"),
+            new TextSpan(
               text: "To use stack :- \n",
               style: TextStyle(
                   color: Colors.black54,
@@ -72,9 +74,9 @@ class Stl_Stack extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                   fontSize: displayWidth(context) * 0.048),
             ),
-            ]),
-    );        
-    
+          ]),
+    );
+
     return Scaffold(
       appBar: AppBar(
         title: Text("Stack"),
@@ -84,12 +86,13 @@ class Stl_Stack extends StatelessWidget {
       body: Padding(
         padding:
             EdgeInsets.only(top: 16.0, bottom: 12.0, left: 8.0, right: 8.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            text1,
-            Opacity(
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              text1,
+              Opacity(
                   opacity: 0.0,
                   child: Divider(
                     height: verysmallDivider,
@@ -109,7 +112,7 @@ class Stl_Stack extends StatelessWidget {
                 ),
               ),
               Text(
-                "Functions of map :-",
+                "Functions of stack :-",
                 style: TextStyle(
                     color: Colors.blue[700],
                     fontWeight: FontWeight.bold,
@@ -446,7 +449,8 @@ class Stl_Stack extends StatelessWidget {
                   height: verysmallDivider,
                 ),
               ),
-          ],
+            ],
+          ),
         ),
       ),
     );
