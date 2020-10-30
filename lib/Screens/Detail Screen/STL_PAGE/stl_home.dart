@@ -66,52 +66,102 @@ class STLHOME extends StatelessWidget {
                 height: smallDivider,
               ),
             ),
-            Center(
-              child: GestureDetector(
-                onTap: () {
-                  Navigator.push(context, MyPageAnimation(w: Stl_Algo()));
-                },
-                child: Card(
-                  elevation: 25.0,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(16.0),
-                  ),
-                  child: ClipPath(
-                    child: Container(
-                      decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                          colors: [
-                            Colors.purple[200],
-                            Colors.pink[200],
-                            Colors.orange[200],
-                          ],
-                        ),
-                      ),
-                      height: displayHeight(context) * 0.1,
-                      width: displayWidth(context) * 0.5,
-                      child: Center(
-                        child: Text(
-                          "ALGORITHMS",
-                          style: TextStyle(
-                              color: Colors.white,
-                              shadows: <Shadow>[
-                                Shadow(
-                                    blurRadius: 18.0,
-                                    color: Colors.black54,
-                                    offset: Offset.fromDirection(1, 1))
-                              ],
-                              fontWeight: FontWeight.bold,
-                              fontSize: displayWidth(context) * 0.055),
-                        ),
-                      ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(context, MyPageAnimation(w: Stl_Algo()));
+                  },
+                  child: Card(
+                    elevation: 25.0,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(16.0),
                     ),
-                    clipper: ShapeBorderClipper(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(8.0),
+                    child: ClipPath(
+                      child: Container(
+                        decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: [
+                              Colors.black,
+                              Colors.black,
+                            ],
+                          ),
+                        ),
+                        height: displayHeight(context) * 0.1,
+                        width: displayWidth(context) * 0.4,
+                        child: Center(
+                          child: Text(
+                            "ALGORITHMS",
+                            style: TextStyle(
+                                color: Colors.white,
+                                shadows: <Shadow>[
+                                  Shadow(
+                                      blurRadius: 18.0,
+                                      color: Colors.black54,
+                                      offset: Offset.fromDirection(1, 1))
+                                ],
+                                fontWeight: FontWeight.bold,
+                                fontSize: displayWidth(context) * 0.052),
+                          ),
+                        ),
+                      ),
+                      clipper: ShapeBorderClipper(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8.0),
+                        ),
                       ),
                     ),
                   ),
                 ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(context, MyPageAnimation(w: Stl_Contain()));
+                  },
+                  child: Card(
+                    elevation: 25.0,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(16.0),
+                    ),
+                    child: ClipPath(
+                      child: Container(
+                        decoration: BoxDecoration(
+                          gradient: LinearGradient(colors: [
+                            Colors.teal[200],
+                            Colors.tealAccent[400],
+                            Colors.teal,
+                          ]),
+                        ),
+                        height: displayHeight(context) * 0.1,
+                        width: displayWidth(context) * 0.4,
+                        child: Center(
+                          child: Text(
+                            "CONTAINERS",
+                            style: TextStyle(
+                                color: Colors.white,
+                                shadows: <Shadow>[
+                                  Shadow(
+                                      blurRadius: 18.0,
+                                      color: Colors.black54,
+                                      offset: Offset.fromDirection(1, 1))
+                                ],
+                                fontWeight: FontWeight.bold,
+                                fontSize: displayWidth(context) * 0.052),
+                          ),
+                        ),
+                      ),
+                      clipper: ShapeBorderClipper(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8.0))),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            Opacity(
+              opacity: 0.0,
+              child: Divider(
+                height: smallDivider,
               ),
             ),
             Opacity(
@@ -120,142 +170,93 @@ class STLHOME extends StatelessWidget {
                 height: smallDivider,
               ),
             ),
-            Center(
-              child: GestureDetector(
-                onTap: () {
-                  Navigator.push(context, MyPageAnimation(w: Stl_Contain()));
-                },
-                child: Card(
-                  elevation: 25.0,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(16.0),
-                  ),
-                  child: ClipPath(
-                    child: Container(
-                      decoration: BoxDecoration(
-                        gradient: LinearGradient(colors: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                GestureDetector(
+                  onTap: () => print('null'),
+                  child: Card(
+                    elevation: 25.0,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(16.0),
+                    ),
+                    child: ClipPath(
+                      child: Container(
+                        decoration: BoxDecoration(
+                            gradient: LinearGradient(colors: [
                           Colors.purple[200],
                           Colors.pink[200],
                           Colors.orange[200],
-                        ]),
-                      ),
-                      height: displayHeight(context) * 0.1,
-                      width: displayWidth(context) * 0.5,
-                      child: Center(
-                        child: Text(
-                          "CONTAINERS",
-                          style: TextStyle(
-                              color: Colors.white,
-                              shadows: <Shadow>[
-                                Shadow(
-                                    blurRadius: 18.0,
-                                    color: Colors.black54,
-                                    offset: Offset.fromDirection(1, 1))
-                              ],
-                              fontWeight: FontWeight.bold,
-                              fontSize: displayWidth(context) * 0.055),
+                        ])),
+                        height: displayHeight(context) * 0.1,
+                        width: displayWidth(context) * 0.4,
+                        child: Center(
+                          child: Text(
+                            "ITERATORS",
+                            style: TextStyle(
+                                color: Colors.white,
+                                shadows: <Shadow>[
+                                  Shadow(
+                                      blurRadius: 18.0,
+                                      color: Colors.black54,
+                                      offset: Offset.fromDirection(1, 1))
+                                ],
+                                fontWeight: FontWeight.bold,
+                                fontSize: displayWidth(context) * 0.055),
+                          ),
                         ),
                       ),
+                      clipper: ShapeBorderClipper(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8.0))),
                     ),
-                    clipper: ShapeBorderClipper(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(8.0))),
                   ),
                 ),
-              ),
+                GestureDetector(
+                  onTap: () => print('null'),
+                  child: Card(
+                    elevation: 25.0,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(16.0),
+                    ),
+                    child: ClipPath(
+                      child: Container(
+                        decoration: BoxDecoration(
+                            gradient: LinearGradient(colors: [
+                          Colors.purple[200],
+                          Colors.pink[200],
+                          Colors.orange[200],
+                        ])),
+                        height: displayHeight(context) * 0.1,
+                        width: displayWidth(context) * 0.4,
+                        child: Center(
+                          child: Text(
+                            "FUNCTIONS",
+                            style: TextStyle(
+                                color: Colors.white,
+                                shadows: <Shadow>[
+                                  Shadow(
+                                      blurRadius: 18.0,
+                                      color: Colors.black54,
+                                      offset: Offset.fromDirection(1, 1))
+                                ],
+                                fontWeight: FontWeight.bold,
+                                fontSize: displayWidth(context) * 0.055),
+                          ),
+                        ),
+                      ),
+                      clipper: ShapeBorderClipper(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8.0))),
+                    ),
+                  ),
+                ),
+              ],
             ),
             Opacity(
               opacity: 0.0,
               child: Divider(
                 height: smallDivider,
-              ),
-            ),
-            Center(
-              child: GestureDetector(
-                onTap: () => print('null'),
-                child: Card(
-                  elevation: 25.0,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(16.0),
-                  ),
-                  child: ClipPath(
-                    child: Container(
-                      decoration: BoxDecoration(
-                          gradient: LinearGradient(colors: [
-                        Colors.purple[200],
-                        Colors.pink[200],
-                        Colors.orange[200],
-                      ])),
-                      height: displayHeight(context) * 0.1,
-                      width: displayWidth(context) * 0.5,
-                      child: Center(
-                        child: Text(
-                          "ITERATORS",
-                          style: TextStyle(
-                              color: Colors.white,
-                              shadows: <Shadow>[
-                                Shadow(
-                                    blurRadius: 18.0,
-                                    color: Colors.black54,
-                                    offset: Offset.fromDirection(1, 1))
-                              ],
-                              fontWeight: FontWeight.bold,
-                              fontSize: displayWidth(context) * 0.055),
-                        ),
-                      ),
-                    ),
-                    clipper: ShapeBorderClipper(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(8.0))),
-                  ),
-                ),
-              ),
-            ),
-            Opacity(
-              opacity: 0.0,
-              child: Divider(
-                height: smallDivider,
-              ),
-            ),
-            Center(
-              child: GestureDetector(
-                onTap: () => print('null'),
-                child: Card(
-                  elevation: 25.0,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(16.0),
-                  ),
-                  child: ClipPath(
-                    child: Container(
-                      decoration: BoxDecoration(
-                          gradient: LinearGradient(colors: [
-                        Colors.purple[200],
-                        Colors.pink[200],
-                        Colors.orange[200],
-                      ])),
-                      height: displayHeight(context) * 0.1,
-                      width: displayWidth(context) * 0.5,
-                      child: Center(
-                        child: Text(
-                          "FUNCTIONS",
-                          style: TextStyle(
-                              color: Colors.white,
-                              shadows: <Shadow>[
-                                Shadow(
-                                    blurRadius: 18.0,
-                                    color: Colors.black54,
-                                    offset: Offset.fromDirection(1, 1))
-                              ],
-                              fontWeight: FontWeight.bold,
-                              fontSize: displayWidth(context) * 0.055),
-                        ),
-                      ),
-                    ),
-                    clipper: ShapeBorderClipper(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(8.0))),
-                  ),
-                ),
               ),
             ),
           ],
