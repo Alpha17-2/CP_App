@@ -19,22 +19,15 @@ class _QuizHomePageState extends State<QuizHomePage> {
                 color: Colors.black, fontSize: displayWidth(context) * 0.048),
           ),
           centerTitle: true,
-          backgroundColor: Colors.yellow[600],
+          backgroundColor: Colors.green[300],
         ),
         body: Container(
           constraints: BoxConstraints.expand(
               height: displayHeight(context) * 1,
               width: displayWidth(context) * 1.0),
           decoration: BoxDecoration(
-            gradient: LinearGradient(
-                end: Alignment.topLeft,
-                begin: Alignment.bottomLeft,
-                colors: [
-                  Colors.yellow[200],
-                  Colors.yellow[300],
-                  Colors.orange[300],
-                ]),
-          ),
+              image: DecorationImage(
+                  image: AssetImage("images/black.jpg"), fit: BoxFit.fill)),
           child: Padding(
             padding: EdgeInsets.only(
                 top: 20.0, left: 10.0, right: 10.0, bottom: 20.0),
@@ -48,11 +41,11 @@ class _QuizHomePageState extends State<QuizHomePage> {
                       "PROGRAMMING  LANGUAGE",
                       style: TextStyle(
                           letterSpacing: 1.4,
-                          color: Colors.blue[900],
+                          color: Colors.yellow,
                           shadows: <Shadow>[
                             Shadow(
                                 blurRadius: 15,
-                                color: Colors.white,
+                                color: Colors.black,
                                 offset: Offset.fromDirection(2, 10))
                           ],
                           fontFamily: 'Ranchers',
@@ -78,7 +71,7 @@ class _QuizHomePageState extends State<QuizHomePage> {
                           color: Colors.white54,
                           child: ClipPath(
                             child: Container(
-                              height: displayHeight(context) * 0.20,
+                              height: displayHeight(context) * 0.21,
                               width: displayWidth(context) * 0.38,
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.start,
@@ -97,13 +90,12 @@ class _QuizHomePageState extends State<QuizHomePage> {
                                       decoration: BoxDecoration(
                                         border: Border.all(
                                           color: Colors.black,
-                                          width: 2.0,
+                                          width: 1.0,
                                         ),
                                         gradient: LinearGradient(
                                           colors: [
-                                            Colors.blue[600],
-                                            Colors.blue[700],
-                                            Colors.blue[800],
+                                            Colors.orange[300],
+                                            Colors.orange[800],
                                           ],
                                         ),
                                       ),
@@ -125,7 +117,7 @@ class _QuizHomePageState extends State<QuizHomePage> {
                           color: Colors.white54,
                           child: ClipPath(
                             child: Container(
-                              height: displayHeight(context) * 0.20,
+                              height: displayHeight(context) * 0.21,
                               width: displayWidth(context) * 0.38,
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.start,
@@ -138,14 +130,17 @@ class _QuizHomePageState extends State<QuizHomePage> {
                                     fit: BoxFit.fill,
                                   ),
                                   Card(
-                                    color: Colors.green,
                                     child: Container(
                                       height: displayHeight(context) * 0.04,
                                       width: displayWidth(context) * 0.38,
                                       decoration: BoxDecoration(
+                                        gradient: LinearGradient(colors: [
+                                          Colors.orange[300],
+                                          Colors.orange[800],
+                                        ]),
                                         border: Border.all(
                                           color: Colors.black,
-                                          width: 2.0,
+                                          width: 1.5,
                                         ),
                                       ),
                                     ),
@@ -181,14 +176,14 @@ class _QuizHomePageState extends State<QuizHomePage> {
                           color: Colors.white54,
                           child: ClipPath(
                             child: Container(
-                              height: displayHeight(context) * 0.20,
+                              height: displayHeight(context) * 0.21,
                               width: displayWidth(context) * 0.38,
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Image.asset(
-                                    "images/C.jpg",
+                                    "images/java.png",
                                     height: displayHeight(context) * 0.15,
                                     width: displayWidth(context) * 0.38,
                                     fit: BoxFit.fill,
@@ -200,13 +195,12 @@ class _QuizHomePageState extends State<QuizHomePage> {
                                       decoration: BoxDecoration(
                                         border: Border.all(
                                           color: Colors.black,
-                                          width: 2.0,
+                                          width: 1.5,
                                         ),
                                         gradient: LinearGradient(
                                           colors: [
-                                            Colors.blue[600],
-                                            Colors.blue[700],
-                                            Colors.blue[800],
+                                            Colors.orange[300],
+                                            Colors.orange[800],
                                           ],
                                         ),
                                       ),
@@ -228,14 +222,14 @@ class _QuizHomePageState extends State<QuizHomePage> {
                           color: Colors.white54,
                           child: ClipPath(
                             child: Container(
-                              height: displayHeight(context) * 0.20,
+                              height: displayHeight(context) * 0.21,
                               width: displayWidth(context) * 0.38,
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Image.asset(
-                                    "images/C++.jpg",
+                                    "images/Python.jpg",
                                     height: displayHeight(context) * 0.15,
                                     width: displayWidth(context) * 0.38,
                                     fit: BoxFit.fill,
@@ -246,9 +240,13 @@ class _QuizHomePageState extends State<QuizHomePage> {
                                       height: displayHeight(context) * 0.04,
                                       width: displayWidth(context) * 0.38,
                                       decoration: BoxDecoration(
+                                        gradient: LinearGradient(colors: [
+                                          Colors.orange[300],
+                                          Colors.orange[800],
+                                        ]),
                                         border: Border.all(
                                           color: Colors.black,
-                                          width: 2.0,
+                                          width: 1.5,
                                         ),
                                       ),
                                     ),
