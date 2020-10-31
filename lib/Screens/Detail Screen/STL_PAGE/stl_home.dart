@@ -66,8 +66,14 @@ class STLHOME extends StatelessWidget {
                 height: smallDivider,
               ),
             ),
+            Opacity(
+              opacity: 0.0,
+              child: Divider(
+                height: smallDivider,
+              ),
+            ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 GestureDetector(
                   onTap: () {
@@ -172,7 +178,7 @@ class STLHOME extends StatelessWidget {
               ),
             ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 GestureDetector(
                   onTap: () => print('null'),

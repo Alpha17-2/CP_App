@@ -22,7 +22,7 @@ class Stl_Contain extends StatelessWidget {
             children: <TextSpan>[
           new TextSpan(
               text:
-                  "As it name suggests, it is used to hold objects and data. They are used when we have to allocate the space "),
+                  "As the name suggests, it is used to hold objects and data. They are used when we have to allocate the space "),
           new TextSpan(
               text: "dynamically ",
               style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold)),
@@ -55,7 +55,7 @@ class Stl_Contain extends StatelessWidget {
           centerTitle: true,
         ),
         body: Padding(
-            padding: EdgeInsets.all(12.0),
+            padding: EdgeInsets.only(top: 16.0, right: 12.0, left: 12.0),
             child: SingleChildScrollView(
                 child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
