@@ -83,12 +83,13 @@ class STLHOME extends StatelessWidget {
                         decoration: BoxDecoration(
                           gradient: LinearGradient(
                             colors: [
-                              Colors.black,
-                              Colors.black,
+                              Colors.indigo,
+                              Colors.indigo[600],
+                              Colors.indigo[700],
                             ],
                           ),
                         ),
-                        height: displayHeight(context) * 0.1,
+                        height: displayHeight(context) * 0.2,
                         width: displayWidth(context) * 0.4,
                         child: Center(
                           child: Text(
@@ -132,7 +133,7 @@ class STLHOME extends StatelessWidget {
                             Colors.teal,
                           ]),
                         ),
-                        height: displayHeight(context) * 0.1,
+                        height: displayHeight(context) * 0.2,
                         width: displayWidth(context) * 0.4,
                         child: Center(
                           child: Text(
@@ -184,11 +185,12 @@ class STLHOME extends StatelessWidget {
                       child: Container(
                         decoration: BoxDecoration(
                             gradient: LinearGradient(colors: [
-                          Colors.purple[200],
-                          Colors.pink[200],
-                          Colors.orange[200],
+                          Colors.blue[200],
+                          Colors.blue[300],
+                          Colors.lightBlue[400],
+                          Colors.blue,
                         ])),
-                        height: displayHeight(context) * 0.1,
+                        height: displayHeight(context) * 0.2,
                         width: displayWidth(context) * 0.4,
                         child: Center(
                           child: Text(
@@ -224,10 +226,11 @@ class STLHOME extends StatelessWidget {
                         decoration: BoxDecoration(
                             gradient: LinearGradient(colors: [
                           Colors.purple[200],
-                          Colors.pink[200],
-                          Colors.orange[200],
+                          Colors.purple[400],
+                          Colors.purple,
+                          Colors.deepPurple[400],
                         ])),
-                        height: displayHeight(context) * 0.1,
+                        height: displayHeight(context) * 0.2,
                         width: displayWidth(context) * 0.4,
                         child: Center(
                           child: Text(

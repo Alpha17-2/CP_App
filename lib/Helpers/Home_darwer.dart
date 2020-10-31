@@ -4,6 +4,7 @@ import 'package:CP_App/Screens/Display%20Screens/preq_Screen.dart';
 import 'package:CP_App/Screens/Detail%20Screen/STL_PAGE/Stl_home.dart';
 import 'package:CP_App/Screens/Display%20Screens/Problem_List_Screen.dart';
 import 'package:CP_App/Screens/Display%20Screens/Topic_Screen.dart';
+import 'package:CP_App/Screens/Detail Screen/Quiz_PAGE/Quiz_Home.dart';
 
 class Mydrawer extends StatelessWidget {
   final Function closeDrawer;
@@ -77,6 +78,12 @@ class Mydrawer extends StatelessWidget {
                       ),
                       Opacity(opacity: 0.0, child: Divider()),
                       ListTile(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => QuizHomePage()));
+                        },
                         leading: CircleAvatar(
                           backgroundImage: AssetImage('images/quiz.jpg'),
                           radius: imageSize,
