@@ -19,7 +19,7 @@ class _QuizHomePageState extends State<QuizHomePage> {
                 color: Colors.black, fontSize: displayWidth(context) * 0.048),
           ),
           centerTitle: true,
-          backgroundColor: Colors.green[300],
+          backgroundColor: Colors.teal[300],
         ),
         body: Container(
           constraints: BoxConstraints.expand(
