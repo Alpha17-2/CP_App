@@ -16,6 +16,8 @@ import 'Screens/Detail Screen/Chosing_language.dart';
 import 'Screens/Display Screens/Doubts.dart';
 import 'Screens/Display Screens/Problem_List_Screen.dart';
 import 'Screens/Display Screens/Topic_Screen.dart';
+import 'package:CP_App/Providers/Quiz/SingleQuestion.dart';
+import 'Providers/Quiz/CQuizList.dart';
 
 void main() {
   runApp(MyApp());
@@ -27,6 +29,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
+        ChangeNotifierProvider(
+          create: (context) => CquizList(),
+        ),
         ChangeNotifierProvider(create: (context) => TopicList()),
         ChangeNotifierProvider(create: (context) => ContestList()),
         ChangeNotifierProvider(create: (context) => FundamentalProblem()),
