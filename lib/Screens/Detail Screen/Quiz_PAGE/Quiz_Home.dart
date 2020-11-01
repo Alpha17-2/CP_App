@@ -4,6 +4,10 @@ import 'C_quiz.dart';
 import 'C++_quiz.dart';
 import 'Java_quiz.dart';
 import 'Python_Quiz.dart';
+import 'Array_quiz.dart';
+import 'Linkedlist_quiz.dart';
+import 'Queue_quiz.dart';
+import 'Stack_quiz.dart';
 
 class QuizHomePage extends StatefulWidget {
   @override
@@ -386,7 +390,317 @@ class _QuizHomePageState extends State<QuizHomePage> {
                           fontWeight: FontWeight.bold,
                           fontSize: headingfont),
                     ),
-                  )
+                  ),
+                  Opacity(
+                    opacity: 0.0,
+                    child: Divider(
+                      height: smalldivider,
+                    ),
+                  ),
+
+                  //****  Data Structure *****/////
+
+                  Padding(
+                    padding: const EdgeInsets.only(left: 8.0, right: 8.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Hero(
+                          tag: "Arrayquiz",
+                          child: GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Array_Quiz()));
+                            },
+                            child: Card(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(12.0)),
+                              color: Colors.white54,
+                              child: ClipPath(
+                                child: Container(
+                                  height: displayHeight(context) * 0.19,
+                                  width: displayWidth(context) * 0.38,
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Image.asset(
+                                        "images/array.jpg",
+                                        height: displayHeight(context) * 0.14,
+                                        width: displayWidth(context) * 0.38,
+                                        fit: BoxFit.fill,
+                                      ),
+                                      Card(
+                                        child: Container(
+                                          child: Center(
+                                            child: Text(
+                                              "ARRAY",
+                                              style: TextStyle(
+                                                  color: Colors.black,
+                                                  fontSize:
+                                                      displayWidth(context) *
+                                                          0.045,
+                                                  fontWeight: FontWeight.bold),
+                                            ),
+                                          ),
+                                          height:
+                                              displayHeight(context) * 0.036,
+                                          width: displayWidth(context) * 0.38,
+                                          decoration: BoxDecoration(
+                                            border: Border.all(
+                                              color: Colors.black,
+                                              width: 1.0,
+                                            ),
+                                            gradient: LinearGradient(
+                                              colors: [
+                                                Colors.orange[300],
+                                                Colors.orange[800],
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                clipper: ShapeBorderClipper(
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(12.0),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        Hero(
+                          tag: "Stackquiz",
+                          child: GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Stack_Quiz()));
+                            },
+                            child: Card(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(12.0)),
+                              color: Colors.white54,
+                              child: ClipPath(
+                                child: Container(
+                                  height: displayHeight(context) * 0.19,
+                                  width: displayWidth(context) * 0.38,
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Image.asset(
+                                        "images/stack.png",
+                                        height: displayHeight(context) * 0.14,
+                                        width: displayWidth(context) * 0.38,
+                                        fit: BoxFit.fill,
+                                      ),
+                                      Card(
+                                        child: Container(
+                                          child: Center(
+                                            child: Text(
+                                              "STACK",
+                                              style: TextStyle(
+                                                  color: Colors.black,
+                                                  fontSize:
+                                                      displayWidth(context) *
+                                                          0.045,
+                                                  fontWeight: FontWeight.bold),
+                                            ),
+                                          ),
+                                          height:
+                                              displayHeight(context) * 0.036,
+                                          width: displayWidth(context) * 0.38,
+                                          decoration: BoxDecoration(
+                                            gradient: LinearGradient(colors: [
+                                              Colors.orange[300],
+                                              Colors.orange[800],
+                                            ]),
+                                            border: Border.all(
+                                              color: Colors.black,
+                                              width: 1.5,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                clipper: ShapeBorderClipper(
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(12.0),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Opacity(
+                    opacity: 0.0,
+                    child: Divider(
+                      height: smalldivider,
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 8.0, right: 8.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Hero(
+                          tag: "Queuequiz",
+                          child: GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Queue_Quiz()));
+                            },
+                            child: Card(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(12.0)),
+                              color: Colors.white54,
+                              child: ClipPath(
+                                child: Container(
+                                  height: displayHeight(context) * 0.19,
+                                  width: displayWidth(context) * 0.38,
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Image.asset(
+                                        "images/queue.jpg",
+                                        height: displayHeight(context) * 0.14,
+                                        width: displayWidth(context) * 0.38,
+                                        fit: BoxFit.fill,
+                                      ),
+                                      Card(
+                                        child: Container(
+                                          child: Center(
+                                            child: Text(
+                                              "QUEUE",
+                                              style: TextStyle(
+                                                  color: Colors.black,
+                                                  fontSize:
+                                                      displayWidth(context) *
+                                                          0.045,
+                                                  fontWeight: FontWeight.bold),
+                                            ),
+                                          ),
+                                          height:
+                                              displayHeight(context) * 0.036,
+                                          width: displayWidth(context) * 0.38,
+                                          decoration: BoxDecoration(
+                                            border: Border.all(
+                                              color: Colors.black,
+                                              width: 1.5,
+                                            ),
+                                            gradient: LinearGradient(
+                                              colors: [
+                                                Colors.orange[300],
+                                                Colors.orange[800],
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                clipper: ShapeBorderClipper(
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(12.0),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        Hero(
+                          tag: "Linkedlistquiz",
+                          child: GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Linkedlist_Quiz()));
+                            },
+                            child: Card(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(12.0)),
+                              color: Colors.white54,
+                              child: ClipPath(
+                                child: Container(
+                                  height: displayHeight(context) * 0.19,
+                                  width: displayWidth(context) * 0.38,
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Image.asset(
+                                        "images/Python.jpg",
+                                        height: displayHeight(context) * 0.14,
+                                        width: displayWidth(context) * 0.38,
+                                        fit: BoxFit.fill,
+                                      ),
+                                      Card(
+                                        color: Colors.green,
+                                        child: Container(
+                                          child: Center(
+                                            child: Text(
+                                              "LINKED-LIST",
+                                              style: TextStyle(
+                                                  color: Colors.black,
+                                                  fontSize:
+                                                      displayWidth(context) *
+                                                          0.045,
+                                                  fontWeight: FontWeight.bold),
+                                            ),
+                                          ),
+                                          height:
+                                              displayHeight(context) * 0.036,
+                                          width: displayWidth(context) * 0.38,
+                                          decoration: BoxDecoration(
+                                            gradient: LinearGradient(colors: [
+                                              Colors.orange[300],
+                                              Colors.orange[800],
+                                            ]),
+                                            border: Border.all(
+                                              color: Colors.black,
+                                              width: 1.5,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                clipper: ShapeBorderClipper(
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(12.0),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
                 ],
               ),
             ),

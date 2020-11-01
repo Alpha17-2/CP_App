@@ -56,6 +56,9 @@ flutter:
   assets:
       
       - images/C.jpg
+      - images/linkedlist.png
+      - images/stack.png
+      - images/queue.jpg
       - images/C++.jpg
       - images/Python.jpg
       - images/Main_prob.jpg
