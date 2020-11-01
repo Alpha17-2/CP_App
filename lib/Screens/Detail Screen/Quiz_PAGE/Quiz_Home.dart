@@ -8,6 +8,8 @@ import 'Array_quiz.dart';
 import 'Linkedlist_quiz.dart';
 import 'Queue_quiz.dart';
 import 'Stack_quiz.dart';
+import 'Graph_quiz.dart';
+import 'BinaryTree_Quiz.dart';
 
 class QuizHomePage extends StatefulWidget {
   @override
@@ -663,6 +665,161 @@ class _QuizHomePageState extends State<QuizHomePage> {
                                           child: Center(
                                             child: Text(
                                               "LINKED-LIST",
+                                              style: TextStyle(
+                                                  color: Colors.black,
+                                                  fontSize:
+                                                      displayWidth(context) *
+                                                          0.045,
+                                                  fontWeight: FontWeight.bold),
+                                            ),
+                                          ),
+                                          height:
+                                              displayHeight(context) * 0.036,
+                                          width: displayWidth(context) * 0.38,
+                                          decoration: BoxDecoration(
+                                            gradient: LinearGradient(colors: [
+                                              Colors.orange[300],
+                                              Colors.orange[800],
+                                            ]),
+                                            border: Border.all(
+                                              color: Colors.black,
+                                              width: 1.5,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                clipper: ShapeBorderClipper(
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(12.0),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Opacity(
+                    opacity: 0.0,
+                    child: Divider(
+                      height: smalldivider,
+                    ),
+                  ),
+
+                  Padding(
+                    padding: const EdgeInsets.only(left: 8.0, right: 8.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Hero(
+                          tag: "Binarytreequiz",
+                          child: GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => BinaryTree_quiz()));
+                            },
+                            child: Card(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(12.0)),
+                              color: Colors.white54,
+                              child: ClipPath(
+                                child: Container(
+                                  height: displayHeight(context) * 0.19,
+                                  width: displayWidth(context) * 0.38,
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Image.asset(
+                                        "images/binarytree.png",
+                                        height: displayHeight(context) * 0.14,
+                                        width: displayWidth(context) * 0.38,
+                                        fit: BoxFit.fill,
+                                      ),
+                                      Card(
+                                        child: Container(
+                                          child: Center(
+                                            child: Text(
+                                              "BINARY TREE",
+                                              style: TextStyle(
+                                                  color: Colors.black,
+                                                  fontSize:
+                                                      displayWidth(context) *
+                                                          0.045,
+                                                  fontWeight: FontWeight.bold),
+                                            ),
+                                          ),
+                                          height:
+                                              displayHeight(context) * 0.036,
+                                          width: displayWidth(context) * 0.38,
+                                          decoration: BoxDecoration(
+                                            border: Border.all(
+                                              color: Colors.black,
+                                              width: 1.5,
+                                            ),
+                                            gradient: LinearGradient(
+                                              colors: [
+                                                Colors.orange[300],
+                                                Colors.orange[800],
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                clipper: ShapeBorderClipper(
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(12.0),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        Hero(
+                          tag: "graphquiz",
+                          child: GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Graph_Quiz()));
+                            },
+                            child: Card(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(12.0)),
+                              color: Colors.white54,
+                              child: ClipPath(
+                                child: Container(
+                                  height: displayHeight(context) * 0.19,
+                                  width: displayWidth(context) * 0.38,
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Image.asset(
+                                        "images/graph.png",
+                                        height: displayHeight(context) * 0.14,
+                                        width: displayWidth(context) * 0.38,
+                                        fit: BoxFit.fill,
+                                      ),
+                                      Card(
+                                        color: Colors.green,
+                                        child: Container(
+                                          child: Center(
+                                            child: Text(
+                                              "GRAPH",
                                               style: TextStyle(
                                                   color: Colors.black,
                                                   fontSize:

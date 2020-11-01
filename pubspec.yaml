@@ -57,6 +57,8 @@ flutter:
       
       - images/C.jpg
       - images/linkedlist.png
+      - images/graph.png
+      - images/binarytree.png
       - images/stack.png
       - images/queue.jpg
       - images/C++.jpg
