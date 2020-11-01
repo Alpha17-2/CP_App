@@ -652,7 +652,7 @@ class _QuizHomePageState extends State<QuizHomePage> {
                                         CrossAxisAlignment.start,
                                     children: [
                                       Image.asset(
-                                        "images/Python.jpg",
+                                        "images/linkedlist.png",
                                         height: displayHeight(context) * 0.14,
                                         width: displayWidth(context) * 0.38,
                                         fit: BoxFit.fill,
