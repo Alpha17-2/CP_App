@@ -10,14 +10,46 @@ class C_Quiz extends StatefulWidget {
 
 class _C_QuizState extends State<C_Quiz> {
   @override
+  int i = 0;
+  Color o = Colors.transparent;
+  Color c = Colors.green;
+  Color w = Colors.red;
+  Color currentColor = Colors.transparent;
   Widget build(BuildContext context) {
+    // Color currentColor = Colors.transparent;
     final mylist = Provider.of<CquizList>(context).ListOfCquestions;
-    int i = 0;
+    void _correctAnswerBottomSheet(context) {
+      showModalBottomSheet(
+          context: context,
+          builder: (BuildContext b) {
+            return Container(
+              height: displayHeight(context) * 0.3,
+              child: Center(
+                child: Text("Hello"),
+              ),
+            );
+          });
+    }
+
+    void _wrongAnswerBottomSheet(context) {
+      showModalBottomSheet(
+          context: context,
+          builder: (BuildContext b) {
+            return Container(
+              height: displayHeight(context) * 0.3,
+              child: Center(
+                child: Text("wrong"),
+              ),
+            );
+          });
+    }
+
     String problem = mylist[i].question;
     String option1 = mylist[i].option1;
     String option2 = mylist[i].option2;
     String option3 = mylist[i].option3;
     String option4 = mylist[i].option4;
+    String correct = mylist[i].correct;
     return Hero(
       tag: "Cquiz",
       child: Scaffold(
@@ -50,10 +82,135 @@ class _C_QuizState extends State<C_Quiz> {
                       Opacity(
                         opacity: 0.0,
                         child: Divider(
-                          height: displayHeight(context) * 0.35,
+                          height: displayHeight(context) * 0.3,
                         ),
                       ),
-                      Text("hwlllo")
+                      GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            if (correct == option1) {
+                              _correctAnswerBottomSheet(context);
+                              ++i;
+                            } else {
+                              _wrongAnswerBottomSheet(context);
+                            }
+                          });
+                        },
+                        child: Card(
+                          color: Colors.blue[300],
+                          child: Container(
+                            height: displayHeight(context) * 0.07,
+                            width: displayWidth(context) * 0.75,
+                            child: Center(
+                              child: Text(
+                                option1,
+                                style: TextStyle(
+                                    fontSize: displayWidth(context) * 0.05,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Opacity(
+                        opacity: 0.0,
+                        child: Divider(
+                          height: displayHeight(context) * 0.02,
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            if (correct == option2) {
+                              _correctAnswerBottomSheet(context);
+                              ++i;
+                            } else {
+                              _wrongAnswerBottomSheet(context);
+                            }
+                          });
+                        },
+                        child: Card(
+                          color: Colors.blue[300],
+                          child: Container(
+                            height: displayHeight(context) * 0.07,
+                            width: displayWidth(context) * 0.75,
+                            child: Center(
+                              child: Text(
+                                option2,
+                                style: TextStyle(
+                                    fontSize: displayWidth(context) * 0.05,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Opacity(
+                        opacity: 0.0,
+                        child: Divider(
+                          height: displayHeight(context) * 0.02,
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            if (correct == option3) {
+                              _correctAnswerBottomSheet(context);
+                              ++i;
+                            } else {
+                              _wrongAnswerBottomSheet(context);
+                            }
+                          });
+                        },
+                        child: Card(
+                          color: Colors.blue[300],
+                          child: Container(
+                            height: displayHeight(context) * 0.07,
+                            width: displayWidth(context) * 0.75,
+                            child: Center(
+                              child: Text(
+                                option3,
+                                style: TextStyle(
+                                    fontSize: displayWidth(context) * 0.05,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Opacity(
+                        opacity: 0.0,
+                        child: Divider(
+                          height: displayHeight(context) * 0.02,
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            if (correct == option4) {
+                              _correctAnswerBottomSheet(context);
+                              ++i;
+                            } else {
+                              _wrongAnswerBottomSheet(context);
+                            }
+                          });
+                        },
+                        child: Card(
+                          color: Colors.blue[300],
+                          child: Container(
+                            height: displayHeight(context) * 0.07,
+                            width: displayWidth(context) * 0.75,
+                            child: Center(
+                              child: Text(
+                                option4,
+                                style: TextStyle(
+                                    fontSize: displayWidth(context) * 0.05,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 ),
