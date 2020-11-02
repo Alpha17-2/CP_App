@@ -48,21 +48,55 @@ class _C_QuizState extends State<C_Quiz> {
           context: context,
           builder: (BuildContext b) {
             return Container(
+              color: Colors.blue[200],
               height: displayHeight(context) * 0.3,
-              child: Card(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30.0)),
-                color: Colors.green,
-                child: Container(
-                  child: Center(
-                    child: Text(
-                      "Wrong",
+              child: Padding(
+                padding: const EdgeInsets.only(
+                    top: 16.0, left: 8.0, right: 8.0, bottom: 8.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Oops !! Wrong Answer ",
                       style: TextStyle(
-                          color: Colors.red,
+                          color: Colors.black,
                           fontWeight: FontWeight.bold,
-                          fontSize: displayWidth(context) * 0.04),
+                          fontSize: displayWidth(context) * 0.05),
                     ),
-                  ),
+                    Opacity(
+                      opacity: 0.0,
+                      child: Divider(
+                        height: displayHeight(context) * 0.04,
+                      ),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Image.asset(
+                          "images/wronganswer.jpg",
+                          height: displayHeight(context) * 0.15,
+                        ),
+                        FlatButton(
+                          onPressed: () {
+                            setState(() {
+                              currentColor1 = Colors.white;
+                              currentColor2 = Colors.white;
+                              currentColor3 = Colors.white;
+                              currentColor4 = Colors.white;
+                              Navigator.of(context).pop();
+                            });
+                          },
+                          child: Text(
+                            "Try Again",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: displayWidth(context) * 0.045),
+                          ),
+                          color: Colors.red,
+                        )
+                      ],
+                    )
+                  ],
                 ),
               ),
             );
@@ -165,7 +199,7 @@ class _C_QuizState extends State<C_Quiz> {
                         });
                       } else {
                         setState(() {
-                          currentColor2 = Colors.red;
+                          currentColor2 = Colors.red[400];
                         });
                       }
                     },
@@ -200,7 +234,7 @@ class _C_QuizState extends State<C_Quiz> {
                       }
                     },
                     child: Card(
-                      color: Colors.white,
+                      color: currentColor3,
                       child: Container(
                         child: Center(
                             child: Text(
@@ -230,7 +264,7 @@ class _C_QuizState extends State<C_Quiz> {
                       }
                     },
                     child: Card(
-                      color: Colors.white,
+                      color: currentColor4,
                       child: Container(
                         child: Center(
                             child: Text(
