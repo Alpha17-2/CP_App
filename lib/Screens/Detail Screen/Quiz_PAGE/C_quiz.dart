@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
@@ -14,7 +16,11 @@ class _C_QuizState extends State<C_Quiz> {
   Color o = Colors.transparent;
   Color c = Colors.green;
   Color w = Colors.red;
-  Color currentColor = Colors.transparent;
+  Color currentColor1 = Colors.white;
+  Color currentColor2 = Colors.white;
+  Color currentColor3 = Colors.white;
+  Color currentColor4 = Colors.white;
+
   Widget build(BuildContext context) {
     // Color currentColor = Colors.transparent;
     final mylist = Provider.of<CquizList>(context).ListOfCquestions;
@@ -25,7 +31,13 @@ class _C_QuizState extends State<C_Quiz> {
             return Container(
               height: displayHeight(context) * 0.3,
               child: Center(
-                child: Text("Hello"),
+                child: Text(
+                  "Correct",
+                  style: TextStyle(
+                      color: Colors.green,
+                      fontWeight: FontWeight.bold,
+                      fontSize: displayWidth(context) * 0.04),
+                ),
               ),
             );
           });
@@ -37,8 +49,21 @@ class _C_QuizState extends State<C_Quiz> {
           builder: (BuildContext b) {
             return Container(
               height: displayHeight(context) * 0.3,
-              child: Center(
-                child: Text("wrong"),
+              child: Card(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30.0)),
+                color: Colors.green,
+                child: Container(
+                  child: Center(
+                    child: Text(
+                      "Wrong",
+                      style: TextStyle(
+                          color: Colors.red,
+                          fontWeight: FontWeight.bold,
+                          fontSize: displayWidth(context) * 0.04),
+                    ),
+                  ),
+                ),
               ),
             );
           });
@@ -53,191 +78,179 @@ class _C_QuizState extends State<C_Quiz> {
     return Hero(
       tag: "Cquiz",
       child: Scaffold(
-          appBar: AppBar(
-            elevation: 0.0,
-            backgroundColor: const Color(0xffea5d49),
+        appBar: AppBar(
+          title: Text(
+            "C Quiz",
+            style: TextStyle(color: Colors.white),
           ),
-          body: Container(
-            child: CustomPaint(
-              child: Container(
-                child: SingleChildScrollView(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(
-                            top: 50.0, left: 8.0, right: 8.0),
-                        child: Center(
-                          child: Text(
-                            problem,
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                color: Colors.black,
-                                fontSize: displayWidth(context) * 0.06,
-                                fontWeight: FontWeight.bold),
-                          ),
-                        ),
-                      ),
-                      Opacity(
-                        opacity: 0.0,
-                        child: Divider(
-                          height: displayHeight(context) * 0.3,
-                        ),
-                      ),
-                      GestureDetector(
-                        onTap: () {
-                          setState(() {
-                            if (correct == option1) {
-                              _correctAnswerBottomSheet(context);
-                              ++i;
-                            } else {
-                              _wrongAnswerBottomSheet(context);
-                            }
-                          });
-                        },
-                        child: Card(
-                          color: Colors.blue[300],
-                          child: Container(
-                            height: displayHeight(context) * 0.07,
-                            width: displayWidth(context) * 0.75,
-                            child: Center(
-                              child: Text(
-                                option1,
-                                style: TextStyle(
-                                    fontSize: displayWidth(context) * 0.05,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                      Opacity(
-                        opacity: 0.0,
-                        child: Divider(
-                          height: displayHeight(context) * 0.02,
-                        ),
-                      ),
-                      GestureDetector(
-                        onTap: () {
-                          setState(() {
-                            if (correct == option2) {
-                              _correctAnswerBottomSheet(context);
-                              ++i;
-                            } else {
-                              _wrongAnswerBottomSheet(context);
-                            }
-                          });
-                        },
-                        child: Card(
-                          color: Colors.blue[300],
-                          child: Container(
-                            height: displayHeight(context) * 0.07,
-                            width: displayWidth(context) * 0.75,
-                            child: Center(
-                              child: Text(
-                                option2,
-                                style: TextStyle(
-                                    fontSize: displayWidth(context) * 0.05,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                      Opacity(
-                        opacity: 0.0,
-                        child: Divider(
-                          height: displayHeight(context) * 0.02,
-                        ),
-                      ),
-                      GestureDetector(
-                        onTap: () {
-                          setState(() {
-                            if (correct == option3) {
-                              _correctAnswerBottomSheet(context);
-                              ++i;
-                            } else {
-                              _wrongAnswerBottomSheet(context);
-                            }
-                          });
-                        },
-                        child: Card(
-                          color: Colors.blue[300],
-                          child: Container(
-                            height: displayHeight(context) * 0.07,
-                            width: displayWidth(context) * 0.75,
-                            child: Center(
-                              child: Text(
-                                option3,
-                                style: TextStyle(
-                                    fontSize: displayWidth(context) * 0.05,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                      Opacity(
-                        opacity: 0.0,
-                        child: Divider(
-                          height: displayHeight(context) * 0.02,
-                        ),
-                      ),
-                      GestureDetector(
-                        onTap: () {
-                          setState(() {
-                            if (correct == option4) {
-                              _correctAnswerBottomSheet(context);
-                              ++i;
-                            } else {
-                              _wrongAnswerBottomSheet(context);
-                            }
-                          });
-                        },
-                        child: Card(
-                          color: Colors.blue[300],
-                          child: Container(
-                            height: displayHeight(context) * 0.07,
-                            width: displayWidth(context) * 0.75,
-                            child: Center(
-                              child: Text(
-                                option4,
-                                style: TextStyle(
-                                    fontSize: displayWidth(context) * 0.05,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height,
-              ),
-              painter: HeaderCurvedContainer(),
+          backgroundColor: Colors.indigo,
+        ),
+        body: Container(
+          constraints: BoxConstraints.expand(
+              height: displayHeight(context) * 1.0,
+              width: displayWidth(context) * 1.0),
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.centerLeft,
+              colors: [
+                Colors.indigo,
+                Colors.indigo[600],
+                Colors.indigo[800],
+              ],
             ),
-          )),
+          ),
+          child: Padding(
+            padding: const EdgeInsets.only(top: 75.0, left: 10, right: 10),
+            child: SingleChildScrollView(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Center(
+                      child: Text(
+                    problem,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        fontSize: displayWidth(context) * 0.06,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold),
+                  )),
+                  Opacity(
+                    opacity: 0.0,
+                    child: Divider(
+                      height: displayHeight(context) * 0.1,
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      if (option1 == correct) {
+                        setState(() {
+                          currentColor1 = Colors.green;
+                        });
+                      } else {
+                        setState(() {
+                          currentColor1 = Colors.red;
+                        });
+                      }
+                    },
+                    child: Card(
+                      color: currentColor1,
+                      child: Container(
+                        child: Center(
+                            child: Text(
+                          option1,
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontSize: displayWidth(context) * 0.05,
+                              fontWeight: FontWeight.bold),
+                        )),
+                        height: displayHeight(context) * 0.1,
+                        width: displayWidth(context) * 0.7,
+                      ),
+                    ),
+                  ),
+                  Opacity(
+                    opacity: 0.0,
+                    child: Divider(
+                      height: displayHeight(context) * 0.02,
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      if (option2 == correct) {
+                        setState(() {
+                          currentColor2 = Colors.green;
+                        });
+                        Future.delayed(const Duration(seconds: 1), () {
+                          _correctAnswerBottomSheet(context);
+                        });
+                      } else {
+                        setState(() {
+                          currentColor2 = Colors.red;
+                        });
+                      }
+                    },
+                    child: Card(
+                      color: currentColor2,
+                      child: Container(
+                        child: Center(
+                            child: Text(
+                          option2,
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontSize: displayWidth(context) * 0.05,
+                              fontWeight: FontWeight.bold),
+                        )),
+                        height: displayHeight(context) * 0.1,
+                        width: displayWidth(context) * 0.7,
+                      ),
+                    ),
+                  ),
+                  Opacity(
+                    opacity: 0.0,
+                    child: Divider(
+                      height: displayHeight(context) * 0.02,
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      if (option3 == correct) {
+                        _correctAnswerBottomSheet(context);
+                      } else {
+                        _wrongAnswerBottomSheet(context);
+                      }
+                    },
+                    child: Card(
+                      color: Colors.white,
+                      child: Container(
+                        child: Center(
+                            child: Text(
+                          option3,
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontSize: displayWidth(context) * 0.05,
+                              fontWeight: FontWeight.bold),
+                        )),
+                        height: displayHeight(context) * 0.1,
+                        width: displayWidth(context) * 0.7,
+                      ),
+                    ),
+                  ),
+                  Opacity(
+                    opacity: 0.0,
+                    child: Divider(
+                      height: displayHeight(context) * 0.02,
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      if (option4 == correct) {
+                        _correctAnswerBottomSheet(context);
+                      } else {
+                        _wrongAnswerBottomSheet(context);
+                      }
+                    },
+                    child: Card(
+                      color: Colors.white,
+                      child: Container(
+                        child: Center(
+                            child: Text(
+                          option4,
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontSize: displayWidth(context) * 0.05,
+                              fontWeight: FontWeight.bold),
+                        )),
+                        height: displayHeight(context) * 0.1,
+                        width: displayWidth(context) * 0.7,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
     );
   }
-}
-
-// CustomPainter class to for the header curved-container
-class HeaderCurvedContainer extends CustomPainter {
-  @override
-  void paint(Canvas canvas, Size size) {
-    Paint paint = Paint()..color = const Color(0xffea5d49);
-    Path path = Path()
-      ..relativeLineTo(0, 250)
-      ..quadraticBezierTo(size.width / 2, 400.0, size.width, 245)
-      ..relativeLineTo(0, -250)
-      ..close();
-
-    canvas.drawPath(path, paint);
-  }
-
-  @override
-  bool shouldRepaint(CustomPainter oldDelegate) => false;
 }
