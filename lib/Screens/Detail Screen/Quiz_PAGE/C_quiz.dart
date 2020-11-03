@@ -12,7 +12,7 @@ class C_Quiz extends StatefulWidget {
 
 class _C_QuizState extends State<C_Quiz> {
   @override
-  int i = 2;
+  int i = 0;
   Color o = Colors.transparent;
   Color c = Colors.green;
   Color w = Colors.red;
@@ -64,6 +64,7 @@ class _C_QuizState extends State<C_Quiz> {
                               currentColor2 = Colors.white;
                               currentColor3 = Colors.white;
                               currentColor4 = Colors.white;
+                              ++i;
                               Navigator.of(context).pop();
                             });
                           },
