@@ -56,6 +56,7 @@ flutter:
   assets:
       
       - images/C.jpg
+      - images/correctanswer.jpg
       - images/linkedlist.png
       - images/graph.png
       - images/binarytree.png

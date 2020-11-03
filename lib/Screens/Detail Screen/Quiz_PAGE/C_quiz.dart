@@ -29,14 +29,55 @@ class _C_QuizState extends State<C_Quiz> {
           context: context,
           builder: (BuildContext b) {
             return Container(
+              color: Colors.blue[200],
               height: displayHeight(context) * 0.3,
-              child: Center(
-                child: Text(
-                  "Correct",
-                  style: TextStyle(
-                      color: Colors.green,
-                      fontWeight: FontWeight.bold,
-                      fontSize: displayWidth(context) * 0.04),
+              child: Padding(
+                padding: const EdgeInsets.only(
+                    top: 16.0, left: 8.0, right: 8.0, bottom: 8.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Great !! Correct Answer ",
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                          fontSize: displayWidth(context) * 0.05),
+                    ),
+                    Opacity(
+                      opacity: 0.0,
+                      child: Divider(
+                        height: displayHeight(context) * 0.04,
+                      ),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Image.asset(
+                          "images/correctanswer.jpg",
+                          height: displayHeight(context) * 0.15,
+                        ),
+                        FlatButton(
+                          onPressed: () {
+                            setState(() {
+                              currentColor1 = Colors.white;
+                              currentColor2 = Colors.white;
+                              currentColor3 = Colors.white;
+                              currentColor4 = Colors.white;
+                              Navigator.of(context).pop();
+                            });
+                          },
+                          child: Text(
+                            "Next Question",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: displayWidth(context) * 0.045),
+                          ),
+                          color: Colors.green,
+                        )
+                      ],
+                    )
+                  ],
                 ),
               ),
             );
@@ -160,9 +201,17 @@ class _C_QuizState extends State<C_Quiz> {
                         setState(() {
                           currentColor1 = Colors.green;
                         });
+                        Future.delayed(const Duration(microseconds: 600000),
+                            () {
+                          _correctAnswerBottomSheet(context);
+                        });
                       } else {
                         setState(() {
-                          currentColor1 = Colors.red;
+                          currentColor1 = Colors.red[400];
+                        });
+                        Future.delayed(const Duration(microseconds: 600000),
+                            () {
+                          _wrongAnswerBottomSheet(context);
                         });
                       }
                     },
@@ -194,12 +243,17 @@ class _C_QuizState extends State<C_Quiz> {
                         setState(() {
                           currentColor2 = Colors.green;
                         });
-                        Future.delayed(const Duration(seconds: 1), () {
+                        Future.delayed(const Duration(microseconds: 600000),
+                            () {
                           _correctAnswerBottomSheet(context);
                         });
                       } else {
                         setState(() {
                           currentColor2 = Colors.red[400];
+                        });
+                        Future.delayed(const Duration(microseconds: 600000),
+                            () {
+                          _wrongAnswerBottomSheet(context);
                         });
                       }
                     },
@@ -228,9 +282,21 @@ class _C_QuizState extends State<C_Quiz> {
                   GestureDetector(
                     onTap: () {
                       if (option3 == correct) {
-                        _correctAnswerBottomSheet(context);
+                        setState(() {
+                          currentColor3 = Colors.green;
+                        });
+                        Future.delayed(const Duration(microseconds: 600000),
+                            () {
+                          _correctAnswerBottomSheet(context);
+                        });
                       } else {
-                        _wrongAnswerBottomSheet(context);
+                        setState(() {
+                          currentColor3 = Colors.red[400];
+                        });
+                        Future.delayed(const Duration(microseconds: 600000),
+                            () {
+                          _wrongAnswerBottomSheet(context);
+                        });
                       }
                     },
                     child: Card(
@@ -258,9 +324,21 @@ class _C_QuizState extends State<C_Quiz> {
                   GestureDetector(
                     onTap: () {
                       if (option4 == correct) {
-                        _correctAnswerBottomSheet(context);
+                        setState(() {
+                          currentColor4 = Colors.green;
+                        });
+                        Future.delayed(const Duration(microseconds: 600000),
+                            () {
+                          _correctAnswerBottomSheet(context);
+                        });
                       } else {
-                        _wrongAnswerBottomSheet(context);
+                        setState(() {
+                          currentColor4 = Colors.red[400];
+                        });
+                        Future.delayed(const Duration(microseconds: 600000),
+                            () {
+                          _wrongAnswerBottomSheet(context);
+                        });
                       }
                     },
                     child: Card(
