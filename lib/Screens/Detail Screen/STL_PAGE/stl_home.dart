@@ -3,6 +3,7 @@ import 'package:CP_App/Helpers/DeviceSize.dart';
 import 'package:CP_App/Helpers/PageAnimation.dart';
 import 'package:CP_App/Screens/Detail Screen/STL_PAGE/Stl_Algorithm.dart';
 import 'Stl_Container.dart';
+import 'Stl_iterators.dart';
 
 class STLHOME extends StatelessWidget {
   @override
@@ -44,7 +45,7 @@ class STLHOME extends StatelessWidget {
               ),
             ),
             Text(
-              "STL was implemented so that we don't have to write the same code that is meant to be reused by many programs. We can implement the same piece of code irrespective of it's type.",
+              "STLs shorten our code and make the debugging much easier. It makes our code readable and more efficient as it eliminate our need to write the code manually for performing some basic operations such as sorting and searching and that too within a fraction of seconds which would have otherwise consumed our lot of time. We can implement the same piece of code irrespective of the data type for which it is to be used.",
               style: TextStyle(fontSize: fontSize),
             ),
             Opacity(
@@ -181,7 +182,9 @@ class STLHOME extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 GestureDetector(
-                  onTap: () => print('null'),
+                  onTap: () {
+                    Navigator.push(context, MyPageAnimation(w: Stl_Iterators()));
+                  },
                   child: Card(
                     elevation: 25.0,
                     shape: RoundedRectangleBorder(
