@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
@@ -156,22 +154,7 @@ class _C_QuizState extends State<C_Quiz> {
       correct = mylist[i].correct;
     }
 
-    if (i == mylist.length) {
-      return Container(
-        child: Center(
-          child: FlatButton(
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
-              child: Text(
-                "Quiz Over",
-                style: TextStyle(
-                  color: Colors.red,
-                ),
-              )),
-        ),
-      );
-    } else {
+    Widget MyQuizPage() {
       return Hero(
         tag: "Cquiz",
         child: Scaffold(
@@ -386,6 +369,29 @@ class _C_QuizState extends State<C_Quiz> {
           ),
         ),
       );
+    }
+
+    Widget Lastpage() {
+      return Container(
+        child: Center(
+          child: FlatButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: Text(
+                "Quiz Over",
+                style: TextStyle(
+                  color: Colors.red,
+                ),
+              )),
+        ),
+      );
+    }
+
+    if (i == mylist.length) {
+      return Lastpage();
+    } else {
+      return MyQuizPage();
     }
   }
 }
