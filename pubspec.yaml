@@ -106,9 +106,9 @@ flutter:
       - images/img1.jpg
       - images/AppLogo.jpg
       - images/backimage.jpg
-      - images/Topics.jpg
+     
       - images/Problms.jpg
-      - images/TopicList.jpg
+     
       - images/algorithm.png
       - images/array.jpg
       - images/string.jpg
@@ -120,7 +120,7 @@ flutter:
       - images/pre.jpg
       - images/think.jpg
       - images/home.jpg
-      - images/doubts.jpg
+  
       
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

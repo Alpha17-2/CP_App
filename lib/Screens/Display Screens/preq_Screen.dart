@@ -8,103 +8,27 @@ class Prerequisites extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Container(
-      height: displayHeight(context) * 1.0,
-      width: displayWidth(context) * 1.0,
-      decoration: BoxDecoration(
-        image: DecorationImage(
-            image: AssetImage("images/quizui3.jpg"), fit: BoxFit.fill),
-      ),
-      child: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.only(top: 120.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Card(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(15.0),
-                ),
-                color: Colors.black54,
-                child: Container(
-                    height: displayHeight(context) * 0.210,
-                    width: displayWidth(context) * 0.65,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(top: 20.0),
-                          child: Image.asset(
-                            "images/choice.jpg",
-                            height: displayHeight(context) * 0.08,
-                          ),
-                        ),
-                        Opacity(
-                          opacity: 0.0,
-                          child: Divider(),
-                        ),
-                        Center(
-                          child: Text(
-                            "Choosing a Programming Language",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                                fontSize: displayWidth(context) * 0.042),
-                          ),
-                        )
-                      ],
-                    )),
-              ),
-              Opacity(
+      body: Container(
+        height: displayHeight(context) * 1.0,
+        width: displayWidth(context) * 1.0,
+        decoration: BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage("images/quizui3.jpg"), fit: BoxFit.fill),
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Opacity(
                 opacity: 0.0,
-                child: Divider(),
+                child: Divider(
+                  height: displayHeight(context) * 0.12,
+                )),
+            Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15.0),
               ),
-              Card(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(15.0),
-                ),
-                color: Colors.black54,
-                child: Container(
-                    height: displayHeight(context) * 0.210,
-                    width: displayWidth(context) * 0.65,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(top: 20.0),
-                          child: Image.asset(
-                            "images/choice.jpg",
-                            height: displayHeight(context) * 0.08,
-                          ),
-                        ),
-                        Opacity(
-                          opacity: 0.0,
-                          child: Divider(),
-                        ),
-                        Center(
-                          child: Text(
-                            "Asymptomatic Notation",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                                fontSize: displayWidth(context) * 0.042),
-                          ),
-                        )
-                      ],
-                    )),
-              ),
-              Opacity(
-                opacity: 0.0,
-                child: Divider(),
-              ),
-              Card(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(15.0),
-                ),
-                color: Colors.black54,
-                child: Container(
+              color: Colors.black54,
+              child: Container(
                   height: displayHeight(context) * 0.210,
                   width: displayWidth(context) * 0.65,
                   child: Column(
@@ -123,41 +47,122 @@ class Prerequisites extends StatelessWidget {
                       ),
                       Center(
                         child: Text(
-                          "Data Structures",
+                          "Choosing a Programming Language",
                           textAlign: TextAlign.center,
                           style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
                               fontSize: displayWidth(context) * 0.042),
                         ),
-                      ),
+                      )
                     ],
-                  ),
+                  )),
+            ),
+            Opacity(
+              opacity: 0.0,
+              child: Divider(height: displayHeight(context) * 0.04),
+            ),
+            Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15.0),
+              ),
+              color: Colors.black54,
+              child: Container(
+                  height: displayHeight(context) * 0.210,
+                  width: displayWidth(context) * 0.65,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(top: 20.0),
+                        child: Image.asset(
+                          "images/timespace.png",
+                          height: displayHeight(context) * 0.08,
+                        ),
+                      ),
+                      Opacity(
+                        opacity: 0.0,
+                        child: Divider(),
+                      ),
+                      Center(
+                        child: Text(
+                          "Asymptomatic Notation",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: displayWidth(context) * 0.042),
+                        ),
+                      )
+                    ],
+                  )),
+            ),
+            Opacity(
+              opacity: 0.0,
+              child: Divider(height: displayHeight(context) * 0.04),
+            ),
+            Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15.0),
+              ),
+              color: Colors.black54,
+              child: Container(
+                height: displayHeight(context) * 0.210,
+                width: displayWidth(context) * 0.65,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(top: 20.0),
+                      child: Image.asset(
+                        "images/ds.jpg",
+                        height: displayHeight(context) * 0.08,
+                      ),
+                    ),
+                    Opacity(
+                      opacity: 0.0,
+                      child: Divider(),
+                    ),
+                    Center(
+                      child: Text(
+                        "Data Structures",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: displayWidth(context) * 0.042),
+                      ),
+                    ),
+                  ],
                 ),
               ),
-              Opacity(
-                opacity: 0.0,
-                child: Divider(
-                  height: displayHeight(context) * 0.055,
-                ),
+            ),
+            Opacity(
+              opacity: 0.0,
+              child: Divider(
+                height: displayHeight(context) * 0.025,
               ),
-              FlatButton(
-                onPressed: () {
-                  Navigator.of(context).pop();
-                },
-                child: Text(
-                  "BACK",
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: displayWidth(context) * 0.03,
-                      fontWeight: FontWeight.bold),
-                ),
-                color: Colors.red,
+            ),
+            FlatButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: Text(
+                "BACK",
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: displayWidth(context) * 0.045,
+                    fontWeight: FontWeight.bold),
               ),
-            ],
-          ),
+              color: Colors.red,
+            ),
+            Opacity(
+              opacity: 0.0,
+              child: Divider(),
+            )
+          ],
         ),
       ),
-    ));
+    );
   }
 }
