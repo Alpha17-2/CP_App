@@ -158,17 +158,16 @@ class _C_QuizState extends State<C_Quiz> {
         tag: "Cquiz",
         child: Scaffold(
           appBar: AppBar(
-            title: Text(
-              "C Quiz",
-              style: TextStyle(color: Colors.white),
-            ),
-            backgroundColor: Colors.indigo,
+            title: Text("C QUIZ"),
+            backgroundColor: Colors.black45,
           ),
           body: Container(
             constraints: BoxConstraints.expand(
                 height: displayHeight(context) * 1.0,
                 width: displayWidth(context) * 1.0),
             decoration: BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage("images/quizui5.jpg"), fit: BoxFit.fill),
               gradient: LinearGradient(
                 begin: Alignment.centerLeft,
                 colors: [
@@ -179,7 +178,7 @@ class _C_QuizState extends State<C_Quiz> {
               ),
             ),
             child: Padding(
-              padding: const EdgeInsets.only(top: 75.0, left: 10, right: 10),
+              padding: const EdgeInsets.only(top: 55.0, left: 10, right: 10),
               child: SingleChildScrollView(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -196,7 +195,7 @@ class _C_QuizState extends State<C_Quiz> {
                     Opacity(
                       opacity: 0.0,
                       child: Divider(
-                        height: displayHeight(context) * 0.1,
+                        height: displayHeight(context) * 0.08,
                       ),
                     ),
                     GestureDetector(

@@ -1,3 +1,4 @@
+import 'package:CP_App/Helpers/DeviceSize.dart';
 import 'package:flutter/material.dart';
 import 'package:CP_App/Screens/Display Screens/Homepage.dart';
 import 'package:CP_App/Screens/Detail Screen/Chosing_language.dart';
@@ -7,196 +8,156 @@ class Prerequisites extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-            icon: Icon(Icons.arrow_back_ios),
-            onPressed: () {
-              Navigator.of(context).pushNamed(Home.routename);
-            }),
-        title: Text('Prerequisites'),
-        backgroundColor: Colors.brown[300],
-        centerTitle: true,
+        body: Container(
+      height: displayHeight(context) * 1.0,
+      width: displayWidth(context) * 1.0,
+      decoration: BoxDecoration(
+        image: DecorationImage(
+            image: AssetImage("images/quizui3.jpg"), fit: BoxFit.fill),
       ),
-      body: Stack(
-        children: [
-          Opacity(
-            opacity: 0.6,
-            child: Image.asset(
-              'images/pre.jpg',
-              fit: BoxFit.cover,
-              height: double.infinity,
-              width: double.infinity,
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: SingleChildScrollView(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.of(context).pushNamed(Chose_Languge.routeName);
-                    },
-                    child: Container(
-                      height: 210,
-                      decoration: BoxDecoration(
-                        gradient: LinearGradient(colors: [
-                          Colors.blue,
-                          Colors.lightBlue,
-                          Colors.white
-                        ]),
-                        borderRadius: BorderRadius.all(Radius.circular(20.0)),
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: Card(
-                          color: Colors.white60,
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.only(left: 10.0),
-                                child: ClipRRect(
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(20.0)),
-                                  child: Image.asset(
-                                    'images/choice.jpg',
-                                    height: 90,
-                                    width: 90,
-                                  ),
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.all(10.0),
-                                child: Container(
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Container(
-                                        child: Text(
-                                          '         Choosing a \n Programming Language',
-                                          style: TextStyle(
-                                              fontSize: 14.504,
-                                              fontFamily: 'Grandstander',
-                                              color: Colors.black,
-                                              wordSpacing: 0.1,
-                                              fontWeight: FontWeight.w900),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              )
-                            ],
+      child: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.only(top: 120.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Card(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15.0),
+                ),
+                color: Colors.black54,
+                child: Container(
+                    height: displayHeight(context) * 0.210,
+                    width: displayWidth(context) * 0.65,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(top: 20.0),
+                          child: Image.asset(
+                            "images/choice.jpg",
+                            height: displayHeight(context) * 0.08,
                           ),
                         ),
-                      ),
-                    ),
-                  ),
-                  Divider(),
-                  Divider(),
-                  Container(
-                    height: 210,
-                    decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                          colors: [Colors.teal, Colors.green, Colors.white]),
-                      borderRadius: BorderRadius.all(Radius.circular(20.0)),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: Card(
-                        color: Colors.white60,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.only(
-                                  left: 10.0, right: 20.0),
-                              child: ClipRRect(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(45.0)),
-                                child: Image.asset(
-                                  'images/timespace.png',
-                                  height: 130,
-                                  width: 130,
-                                ),
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(10.0),
-                              child: Text(
-                                'Asymptomatic \n  Notatation',
-                                style: TextStyle(
-                                    fontSize: 16,
-                                    fontFamily: 'Grandstander',
-                                    color: Colors.black,
-                                    wordSpacing: 0.1,
-                                    fontWeight: FontWeight.w900),
-                              ),
-                            ),
-                          ],
+                        Opacity(
+                          opacity: 0.0,
+                          child: Divider(),
                         ),
-                      ),
-                    ),
-                  ),
-                  Divider(),
-                  Divider(),
-                  Container(
-                    height: 210,
-                    decoration: BoxDecoration(
-                      gradient: LinearGradient(colors: [
-                        Colors.purpleAccent[200],
-                        Colors.pink[100],
-                        Colors.orange[100],
-                      ]),
-                      borderRadius: BorderRadius.all(Radius.circular(20.0)),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: Card(
-                        color: Colors.white60,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.only(
-                                  left: 10.0, right: 20.0),
-                              child: ClipRRect(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(40.0)),
-                                child: Image.asset(
-                                  'images/ds.jpg',
-                                  height: 120,
-                                  width: 120,
-                                ),
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 20.0),
-                              child: Text(
-                                'Basic Data \nStructures',
-                                style: TextStyle(
-                                    fontSize: 16,
-                                    fontFamily: 'Grandstander',
-                                    color: Colors.black,
-                                    wordSpacing: 0.1,
-                                    fontWeight: FontWeight.w900),
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                  Divider(),
-                  Divider(),
-                ],
+                        Center(
+                          child: Text(
+                            "Choosing a Programming Language",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontSize: displayWidth(context) * 0.042),
+                          ),
+                        )
+                      ],
+                    )),
               ),
-            ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(),
+              ),
+              Card(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15.0),
+                ),
+                color: Colors.black54,
+                child: Container(
+                    height: displayHeight(context) * 0.210,
+                    width: displayWidth(context) * 0.65,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(top: 20.0),
+                          child: Image.asset(
+                            "images/choice.jpg",
+                            height: displayHeight(context) * 0.08,
+                          ),
+                        ),
+                        Opacity(
+                          opacity: 0.0,
+                          child: Divider(),
+                        ),
+                        Center(
+                          child: Text(
+                            "Asymptomatic Notation",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontSize: displayWidth(context) * 0.042),
+                          ),
+                        )
+                      ],
+                    )),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(),
+              ),
+              Card(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15.0),
+                ),
+                color: Colors.black54,
+                child: Container(
+                  height: displayHeight(context) * 0.210,
+                  width: displayWidth(context) * 0.65,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(top: 20.0),
+                        child: Image.asset(
+                          "images/choice.jpg",
+                          height: displayHeight(context) * 0.08,
+                        ),
+                      ),
+                      Opacity(
+                        opacity: 0.0,
+                        child: Divider(),
+                      ),
+                      Center(
+                        child: Text(
+                          "Data Structures",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: displayWidth(context) * 0.042),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.055,
+                ),
+              ),
+              FlatButton(
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+                child: Text(
+                  "BACK",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: displayWidth(context) * 0.03,
+                      fontWeight: FontWeight.bold),
+                ),
+                color: Colors.red,
+              ),
+            ],
           ),
-        ],
+        ),
       ),
-    );
+    ));
   }
 }

@@ -57,6 +57,11 @@ flutter:
       
       - images/C.jpg
       - images/correctanswer.jpg
+      - images/quizui.jpg
+      - images/quizui2.jpg
+      - images/quizui3.jpg
+      - images/quizui4.jpg
+      - images/quizui5.jpg
       - images/linkedlist.png
       - images/graph.png
       - images/binarytree.png

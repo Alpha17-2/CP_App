@@ -61,20 +61,37 @@ class Mydrawer extends StatelessWidget {
                       Opacity(opacity: 0.0, child: Divider()),
                       ListTile(
                         leading: CircleAvatar(
-                          backgroundImage: AssetImage('images/top_draw.jpg'),
+                          backgroundImage: AssetImage('images/algorithm.png'),
                           radius: imageSize,
                         ),
                         title: Text(
-                          'Topics',
+                          'Algorithms Corner',
                           style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: textSize,
-                            color: Colors.white,
-                          ),
+                              color: Colors.white,
+                              fontSize: textSize,
+                              fontWeight: FontWeight.bold),
                         ),
+                      ),
+                      Opacity(opacity: 0.0, child: Divider()),
+                      ListTile(
                         onTap: () {
-                          Navigator.of(context).pushNamed(Topic.routeName);
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => STLHOME(),
+                              ));
                         },
+                        leading: CircleAvatar(
+                          backgroundImage: AssetImage('images/stl.jpg'),
+                          radius: imageSize,
+                        ),
+                        title: Text(
+                          'C++ STL',
+                          style: TextStyle(
+                              fontSize: textSize,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold),
+                        ),
                       ),
                       Opacity(opacity: 0.0, child: Divider()),
                       ListTile(
@@ -113,41 +130,6 @@ class Mydrawer extends StatelessWidget {
                         onTap: () {
                           Navigator.of(context).pushNamed(Problems.routeName);
                         },
-                      ),
-                      Opacity(opacity: 0.0, child: Divider()),
-                      ListTile(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => STLHOME(),
-                              ));
-                        },
-                        leading: CircleAvatar(
-                          backgroundImage: AssetImage('images/stl.jpg'),
-                          radius: imageSize,
-                        ),
-                        title: Text(
-                          'C++ STL',
-                          style: TextStyle(
-                              fontSize: textSize,
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold),
-                        ),
-                      ),
-                      Opacity(opacity: 0.0, child: Divider()),
-                      ListTile(
-                        leading: CircleAvatar(
-                          backgroundImage: AssetImage('images/algorithm.png'),
-                          radius: imageSize,
-                        ),
-                        title: Text(
-                          'Algorithms Corner',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: textSize,
-                              fontWeight: FontWeight.bold),
-                        ),
                       ),
                       Opacity(opacity: 0.0, child: Divider()),
                     ],
