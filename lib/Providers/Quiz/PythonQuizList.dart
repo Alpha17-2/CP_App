@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'SingleQuestion.dart';
 
-class CquizList extends ChangeNotifier {
-  List<SingleQuizQuestion> Clist = [
+class PythonQuizlist extends ChangeNotifier {
+  List<SingleQuizQuestion> Pythonlist = [
     SingleQuizQuestion(
       question: "Who is the founder of C Programming Language ?",
       option1: "James A Gosling",
@@ -14,13 +14,13 @@ class CquizList extends ChangeNotifier {
     SingleQuizQuestion(
       question: "Which of these is not a valid identifier name ?",
       option1: "a_33",
-      option3: "3_aa",
-      option2: "_a33",
+      option2: "3_aa",
+      option3: "_a33",
       option4: "a33_",
       correct: "3_aa",
     ),
   ];
   List<SingleQuizQuestion> get ListOfCquestions {
-    return [...Clist];
+    return [...Pythonlist];
   }
 }

@@ -16,8 +16,10 @@ import 'Screens/Detail Screen/Chosing_language.dart';
 import 'Screens/Display Screens/Doubts.dart';
 import 'Screens/Display Screens/Problem_List_Screen.dart';
 import 'Screens/Display Screens/Topic_Screen.dart';
-import 'package:CP_App/Providers/Quiz/SingleQuestion.dart';
+import 'Providers/Quiz/C++QuizList.dart';
 import 'Providers/Quiz/CQuizList.dart';
+import 'Providers/Quiz/JavaQuizList.dart';
+import 'Providers/Quiz/PythonQuizList.dart';
 
 void main() {
   runApp(MyApp());
@@ -33,6 +35,16 @@ class MyApp extends StatelessWidget {
           create: (context) => CquizList(),
         ),
         ChangeNotifierProvider(create: (context) => TopicList()),
+        ChangeNotifierProvider(create: (context) => PythonQuizlist()),
+        ChangeNotifierProvider(
+          create: (context) => CquizList(),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => JavaQuizList(),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => CplusQuizlist(),
+        ),
         ChangeNotifierProvider(create: (context) => ContestList()),
         ChangeNotifierProvider(create: (context) => FundamentalProblem()),
         ChangeNotifierProvider(

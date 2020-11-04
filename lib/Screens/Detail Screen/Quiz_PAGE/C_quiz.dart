@@ -20,7 +20,6 @@ class _C_QuizState extends State<C_Quiz> {
   Color currentColor4 = Colors.white;
 
   Widget build(BuildContext context) {
-    // Color currentColor = Colors.transparent;
     final mylist = Provider.of<CquizList>(context).ListOfCquestions;
     void _correctAnswerBottomSheet(context) {
       showModalBottomSheet(
