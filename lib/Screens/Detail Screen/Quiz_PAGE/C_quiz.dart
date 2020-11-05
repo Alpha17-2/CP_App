@@ -1,4 +1,3 @@
-import 'package:CP_App/Screens/Detail%20Screen/Quiz_PAGE/Quiz_Home.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
@@ -246,7 +245,7 @@ class _C_QuizState extends State<C_Quiz> {
                   child: Card(
                     color: Colors.deepPurple,
                     child: Container(
-                      height: displayHeight(context) * 0.445,
+                      height: displayHeight(context) * 0.48,
                       width: displayWidth(context) * 1.0,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
@@ -264,7 +263,7 @@ class _C_QuizState extends State<C_Quiz> {
                                         currentColor1 = Colors.green;
                                       });
                                       Future.delayed(
-                                          const Duration(microseconds: 600000),
+                                          const Duration(microseconds: 35555),
                                           () {
                                         _correctAnswerBottomSheet(context);
                                       });
@@ -273,7 +272,7 @@ class _C_QuizState extends State<C_Quiz> {
                                         currentColor1 = Colors.red[400];
                                       });
                                       Future.delayed(
-                                          const Duration(microseconds: 600000),
+                                          const Duration(microseconds: 35555),
                                           () {
                                         _wrongAnswerBottomSheet(context);
                                       });
@@ -310,7 +309,7 @@ class _C_QuizState extends State<C_Quiz> {
                                         currentColor2 = Colors.green;
                                       });
                                       Future.delayed(
-                                          const Duration(microseconds: 600000),
+                                          const Duration(microseconds: 35555),
                                           () {
                                         _correctAnswerBottomSheet(context);
                                       });
@@ -319,7 +318,7 @@ class _C_QuizState extends State<C_Quiz> {
                                         currentColor2 = Colors.red[400];
                                       });
                                       Future.delayed(
-                                          const Duration(microseconds: 600000),
+                                          const Duration(microseconds: 35555),
                                           () {
                                         _wrongAnswerBottomSheet(context);
                                       });
@@ -361,7 +360,7 @@ class _C_QuizState extends State<C_Quiz> {
                                         currentColor3 = Colors.green;
                                       });
                                       Future.delayed(
-                                          const Duration(microseconds: 600000),
+                                          const Duration(microseconds: 35555),
                                           () {
                                         _correctAnswerBottomSheet(context);
                                       });
@@ -370,7 +369,7 @@ class _C_QuizState extends State<C_Quiz> {
                                         currentColor3 = Colors.red[400];
                                       });
                                       Future.delayed(
-                                          const Duration(microseconds: 600000),
+                                          const Duration(microseconds: 35555),
                                           () {
                                         _wrongAnswerBottomSheet(context);
                                       });
@@ -407,7 +406,7 @@ class _C_QuizState extends State<C_Quiz> {
                                         currentColor4 = Colors.green;
                                       });
                                       Future.delayed(
-                                          const Duration(microseconds: 600000),
+                                          const Duration(microseconds: 35555),
                                           () {
                                         _correctAnswerBottomSheet(context);
                                       });
@@ -416,7 +415,7 @@ class _C_QuizState extends State<C_Quiz> {
                                         currentColor4 = Colors.red[400];
                                       });
                                       Future.delayed(
-                                          const Duration(microseconds: 600000),
+                                          const Duration(microseconds: 35555),
                                           () {
                                         _wrongAnswerBottomSheet(context);
                                       });
@@ -449,7 +448,7 @@ class _C_QuizState extends State<C_Quiz> {
                           Opacity(
                             opacity: 0.0,
                             child: Divider(
-                              height: displayHeight(context) * 0.01,
+                              height: displayHeight(context) * 0.006,
                             ),
                           ),
                           Center(
@@ -466,7 +465,7 @@ class _C_QuizState extends State<C_Quiz> {
                                   "PREVIOUS QUESTION",
                                   style: TextStyle(
                                       color: Colors.black,
-                                      fontSize: displayWidth(context) * 0.04,
+                                      fontSize: displayWidth(context) * 0.025,
                                       fontWeight: FontWeight.bold),
                                 )),
                           )
@@ -474,7 +473,7 @@ class _C_QuizState extends State<C_Quiz> {
                       ),
                     ),
                   ),
-                  top: displayHeight(context) * 0.550,
+                  top: displayHeight(context) * 0.520,
                 ),
               ],
             ),

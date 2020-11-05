@@ -36,7 +36,7 @@ class _Cplus_QuizState extends State<Cplus_Quiz> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Text(
-                      "Great !! Correct Answer ",
+                      "Correct Answer !!",
                       style: TextStyle(
                           color: Colors.black,
                           fontWeight: FontWeight.bold,
@@ -52,7 +52,7 @@ class _Cplus_QuizState extends State<Cplus_Quiz> {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Image.asset(
-                          "images/correctanswer.jpg",
+                          "images/correctanswer.png",
                           height: displayHeight(context) * 0.15,
                         ),
                         FlatButton(
@@ -97,7 +97,7 @@ class _Cplus_QuizState extends State<Cplus_Quiz> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Text(
-                      "Oops !! Wrong Answer ",
+                      "Wrong Answer !! ",
                       style: TextStyle(
                           color: Colors.black,
                           fontWeight: FontWeight.bold,
@@ -113,7 +113,7 @@ class _Cplus_QuizState extends State<Cplus_Quiz> {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Image.asset(
-                          "images/wronganswer.jpg",
+                          "images/wronganswer.png",
                           height: displayHeight(context) * 0.15,
                         ),
                         FlatButton(
@@ -143,234 +143,6 @@ class _Cplus_QuizState extends State<Cplus_Quiz> {
           });
     }
 
-    String problem, option1, option2, option3, option4, correct;
-    problem = option1 = option2 = option3 = option4 = correct = null;
-    if (i < mylist.length) {
-      problem = mylist[i].question;
-      option1 = mylist[i].option1;
-      option2 = mylist[i].option2;
-      option3 = mylist[i].option3;
-      option4 = mylist[i].option4;
-      correct = mylist[i].correct;
-    }
-
-    Widget MyQuizPage() {
-      return Hero(
-        tag: "C++quiz",
-        child: Scaffold(
-          appBar: AppBar(
-            title: Text(
-              "C++ Quiz",
-              style: TextStyle(color: Colors.white),
-            ),
-            backgroundColor: Colors.indigo,
-          ),
-          body: Container(
-            constraints: BoxConstraints.expand(
-                height: displayHeight(context) * 1.0,
-                width: displayWidth(context) * 1.0),
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.centerLeft,
-                colors: [
-                  Colors.indigo,
-                  Colors.indigo[600],
-                  Colors.indigo[800],
-                ],
-              ),
-            ),
-            child: Padding(
-              padding: const EdgeInsets.only(top: 75.0, left: 10, right: 10),
-              child: SingleChildScrollView(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Center(
-                        child: Text(
-                      problem,
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                          fontSize: displayWidth(context) * 0.06,
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold),
-                    )),
-                    Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: displayHeight(context) * 0.1,
-                      ),
-                    ),
-                    GestureDetector(
-                      onTap: () {
-                        if (option1 == correct) {
-                          setState(() {
-                            currentColor1 = Colors.green;
-                          });
-                          Future.delayed(const Duration(microseconds: 600000),
-                              () {
-                            _correctAnswerBottomSheet(context);
-                          });
-                        } else {
-                          setState(() {
-                            currentColor1 = Colors.red[400];
-                          });
-                          Future.delayed(const Duration(microseconds: 600000),
-                              () {
-                            _wrongAnswerBottomSheet(context);
-                          });
-                        }
-                      },
-                      child: Card(
-                        color: currentColor1,
-                        child: Container(
-                          child: Center(
-                              child: Text(
-                            option1,
-                            style: TextStyle(
-                                color: Colors.black,
-                                fontSize: displayWidth(context) * 0.05,
-                                fontWeight: FontWeight.bold),
-                          )),
-                          height: displayHeight(context) * 0.1,
-                          width: displayWidth(context) * 0.7,
-                        ),
-                      ),
-                    ),
-                    Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: displayHeight(context) * 0.02,
-                      ),
-                    ),
-                    GestureDetector(
-                      onTap: () {
-                        if (option2 == correct) {
-                          setState(() {
-                            currentColor2 = Colors.green;
-                          });
-                          Future.delayed(const Duration(microseconds: 600000),
-                              () {
-                            _correctAnswerBottomSheet(context);
-                          });
-                        } else {
-                          setState(() {
-                            currentColor2 = Colors.red[400];
-                          });
-                          Future.delayed(const Duration(microseconds: 600000),
-                              () {
-                            _wrongAnswerBottomSheet(context);
-                          });
-                        }
-                      },
-                      child: Card(
-                        color: currentColor2,
-                        child: Container(
-                          child: Center(
-                              child: Text(
-                            option2,
-                            style: TextStyle(
-                                color: Colors.black,
-                                fontSize: displayWidth(context) * 0.05,
-                                fontWeight: FontWeight.bold),
-                          )),
-                          height: displayHeight(context) * 0.1,
-                          width: displayWidth(context) * 0.7,
-                        ),
-                      ),
-                    ),
-                    Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: displayHeight(context) * 0.02,
-                      ),
-                    ),
-                    GestureDetector(
-                      onTap: () {
-                        if (option3 == correct) {
-                          setState(() {
-                            currentColor3 = Colors.green;
-                          });
-                          Future.delayed(const Duration(microseconds: 600000),
-                              () {
-                            _correctAnswerBottomSheet(context);
-                          });
-                        } else {
-                          setState(() {
-                            currentColor3 = Colors.red[400];
-                          });
-                          Future.delayed(const Duration(microseconds: 600000),
-                              () {
-                            _wrongAnswerBottomSheet(context);
-                          });
-                        }
-                      },
-                      child: Card(
-                        color: currentColor3,
-                        child: Container(
-                          child: Center(
-                              child: Text(
-                            option3,
-                            style: TextStyle(
-                                color: Colors.black,
-                                fontSize: displayWidth(context) * 0.05,
-                                fontWeight: FontWeight.bold),
-                          )),
-                          height: displayHeight(context) * 0.1,
-                          width: displayWidth(context) * 0.7,
-                        ),
-                      ),
-                    ),
-                    Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: displayHeight(context) * 0.02,
-                      ),
-                    ),
-                    GestureDetector(
-                      onTap: () {
-                        if (option4 == correct) {
-                          setState(() {
-                            currentColor4 = Colors.green;
-                          });
-                          Future.delayed(const Duration(microseconds: 600000),
-                              () {
-                            _correctAnswerBottomSheet(context);
-                          });
-                        } else {
-                          setState(() {
-                            currentColor4 = Colors.red[400];
-                          });
-                          Future.delayed(const Duration(microseconds: 600000),
-                              () {
-                            _wrongAnswerBottomSheet(context);
-                          });
-                        }
-                      },
-                      child: Card(
-                        color: currentColor4,
-                        child: Container(
-                          child: Center(
-                              child: Text(
-                            option4,
-                            style: TextStyle(
-                                color: Colors.black,
-                                fontSize: displayWidth(context) * 0.05,
-                                fontWeight: FontWeight.bold),
-                          )),
-                          height: displayHeight(context) * 0.1,
-                          width: displayWidth(context) * 0.7,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ),
-        ),
-      );
-    }
-
     Widget Lastpage() {
       return Container(
         child: Center(
@@ -388,10 +160,329 @@ class _Cplus_QuizState extends State<Cplus_Quiz> {
       );
     }
 
-    if (i == mylist.length) {
-      return Lastpage();
-    } else {
-      return MyQuizPage();
+    String problem, option1, option2, option3, option4, correct;
+    problem = option1 = option2 = option3 = option4 = correct = null;
+    if (i < mylist.length) {
+      problem = mylist[i].question;
+      option1 = mylist[i].option1;
+      option2 = mylist[i].option2;
+      option3 = mylist[i].option3;
+      option4 = mylist[i].option4;
+      correct = mylist[i].correct;
     }
+
+    Widget MyQuizPage() {
+      return Hero(
+          tag: "C++quiz",
+          child: Scaffold(
+            body: Stack(
+              alignment: Alignment.center,
+              children: [
+                Positioned(
+                  top: 0,
+                  child: Container(
+                    color: Colors.deepPurple,
+                    height: displayHeight(context) * 0.35,
+                    width: displayWidth(context) * 1.0,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Padding(
+                              padding:
+                                  const EdgeInsets.only(top: 20.0, left: 8.0),
+                              child: IconButton(
+                                  iconSize: displayHeight(context) * 0.035,
+                                  icon: Icon(Icons.arrow_back),
+                                  onPressed: () {
+                                    Navigator.of(context).pop();
+                                  }),
+                            ),
+                          ],
+                        ),
+                        Center(
+                          child: Text(
+                            "C++ QUIZ",
+                            style: TextStyle(
+                                letterSpacing: 0.95,
+                                fontFamily: "BreeSerif",
+                                fontSize: displayWidth(context) * 0.09,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.yellow),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Positioned(
+                  top: displayHeight(context) * 0.2,
+                  child: Card(
+                    elevation: 16.0,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15.0)),
+                    color: Colors.white,
+                    child: Container(
+                      height: displayHeight(context) * 0.28,
+                      width: displayWidth(context) * 0.85,
+                      child: Center(
+                        child: Text(
+                          problem,
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              fontSize: displayWidth(context) * 0.06,
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Positioned(
+                  child: Card(
+                    color: Colors.deepPurple,
+                    child: Container(
+                      height: displayHeight(context) * 0.48,
+                      width: displayWidth(context) * 1.0,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(top: 8.0),
+                                child: GestureDetector(
+                                  onTap: () {
+                                    if (option1 == correct) {
+                                      setState(() {
+                                        currentColor1 = Colors.green;
+                                      });
+                                      Future.delayed(
+                                          const Duration(microseconds: 35555),
+                                          () {
+                                        _correctAnswerBottomSheet(context);
+                                      });
+                                    } else {
+                                      setState(() {
+                                        currentColor1 = Colors.red[400];
+                                      });
+                                      Future.delayed(
+                                          const Duration(microseconds: 35555),
+                                          () {
+                                        _wrongAnswerBottomSheet(context);
+                                      });
+                                    }
+                                  },
+                                  child: Card(
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(15.0)),
+                                    color: currentColor1,
+                                    child: Container(
+                                      height: displayHeight(context) * 0.16,
+                                      width: displayWidth(context) * 0.475,
+                                      child: Center(
+                                        child: Text(
+                                          option1,
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                              fontSize:
+                                                  displayWidth(context) * 0.04,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 8.0),
+                                child: GestureDetector(
+                                  onTap: () {
+                                    if (option2 == correct) {
+                                      setState(() {
+                                        currentColor2 = Colors.green;
+                                      });
+                                      Future.delayed(
+                                          const Duration(microseconds: 35555),
+                                          () {
+                                        _correctAnswerBottomSheet(context);
+                                      });
+                                    } else {
+                                      setState(() {
+                                        currentColor2 = Colors.red[400];
+                                      });
+                                      Future.delayed(
+                                          const Duration(microseconds: 35555),
+                                          () {
+                                        _wrongAnswerBottomSheet(context);
+                                      });
+                                    }
+                                  },
+                                  child: Card(
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(15.0)),
+                                    color: currentColor2,
+                                    child: Container(
+                                      height: displayHeight(context) * 0.16,
+                                      width: displayWidth(context) * 0.475,
+                                      child: Center(
+                                        child: Text(
+                                          option2,
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                              fontSize:
+                                                  displayWidth(context) * 0.04,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(top: 8.0),
+                                child: GestureDetector(
+                                  onTap: () {
+                                    if (option3 == correct) {
+                                      setState(() {
+                                        currentColor3 = Colors.green;
+                                      });
+                                      Future.delayed(
+                                          const Duration(microseconds: 35555),
+                                          () {
+                                        _correctAnswerBottomSheet(context);
+                                      });
+                                    } else {
+                                      setState(() {
+                                        currentColor3 = Colors.red[400];
+                                      });
+                                      Future.delayed(
+                                          const Duration(microseconds: 35555),
+                                          () {
+                                        _wrongAnswerBottomSheet(context);
+                                      });
+                                    }
+                                  },
+                                  child: Card(
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(15.0)),
+                                    color: currentColor3,
+                                    child: Container(
+                                      height: displayHeight(context) * 0.16,
+                                      width: displayWidth(context) * 0.475,
+                                      child: Center(
+                                        child: Text(
+                                          option3,
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                              fontSize:
+                                                  displayWidth(context) * 0.04,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 8.0),
+                                child: GestureDetector(
+                                  onTap: () {
+                                    if (option4 == correct) {
+                                      setState(() {
+                                        currentColor4 = Colors.green;
+                                      });
+                                      Future.delayed(
+                                          const Duration(microseconds: 35555),
+                                          () {
+                                        _correctAnswerBottomSheet(context);
+                                      });
+                                    } else {
+                                      setState(() {
+                                        currentColor4 = Colors.red[400];
+                                      });
+                                      Future.delayed(
+                                          const Duration(microseconds: 35555),
+                                          () {
+                                        _wrongAnswerBottomSheet(context);
+                                      });
+                                    }
+                                  },
+                                  child: Card(
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(15.0)),
+                                    color: currentColor4,
+                                    child: Container(
+                                      height: displayHeight(context) * 0.16,
+                                      width: displayWidth(context) * 0.475,
+                                      child: Center(
+                                        child: Text(
+                                          option4,
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                              fontSize:
+                                                  displayWidth(context) * 0.04,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Opacity(
+                            opacity: 0.0,
+                            child: Divider(
+                              height: displayHeight(context) * 0.006,
+                            ),
+                          ),
+                          Center(
+                            child: FlatButton(
+                                color: Colors.blue,
+                                onPressed: () {
+                                  if (i != 0) {
+                                    setState(() {
+                                      --i;
+                                    });
+                                  }
+                                },
+                                child: Text(
+                                  "PREVIOUS QUESTION",
+                                  style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: displayWidth(context) * 0.025,
+                                      fontWeight: FontWeight.bold),
+                                )),
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                  top: displayHeight(context) * 0.520,
+                ),
+              ],
+            ),
+          ));
+    }
+
+    if (i < mylist.length)
+      return MyQuizPage();
+    else
+      return Lastpage();
   }
 }
