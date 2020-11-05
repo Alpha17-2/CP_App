@@ -2,7 +2,6 @@ import 'package:CP_App/Helpers/DeviceSize.dart';
 import 'package:flutter/material.dart';
 import 'package:liquid_swipe/liquid_swipe.dart';
 import 'package:liquid_swipe/Helpers/Helpers.dart';
-import 'package:CP_App/Screens/Display Screens/preq_Screen.dart';
 
 class Chose_Languge extends StatelessWidget {
   static const routeName = '/Chose_language';
@@ -12,101 +11,133 @@ class Chose_Languge extends StatelessWidget {
     final headingSize = displayWidth(context) * 0.07;
     final dividerHeight = displayHeight(context) * 0.014;
     final subheadingsize = displayWidth(context) * 0.075;
+    final firstPageDividerheight = displayHeight(context) * 0.016;
     final simpletext = displayWidth(context) * 0.045;
     final pages = [
-      Container(
-        height: displayHeight(context) * 1.0,
-        width: displayWidth(context) * 1.0,
-        decoration: BoxDecoration(
-          gradient: LinearGradient(colors: [
-            Colors.blue[900],
-            Colors.purple[100],
-          ]),
-        ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Opacity(opacity: 0, child: Divider()),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+      Scaffold(
+        body: Container(
+          height: displayHeight(context) * 1.0,
+          width: displayWidth(context) * 1.0,
+          decoration: BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage("images/ui2.jpg"), fit: BoxFit.fill)),
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Center(
-                  child: Text(
-                    'Which is the best\n programming language \nfor competitive programming ??',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        color: Colors.black87,
-                        fontFamily: 'BreeSerif',
-                        fontWeight: FontWeight.bold,
-                        fontSize: displayWidth(context) * 0.06),
+                Padding(
+                  padding: const EdgeInsets.only(top: 65.0),
+                  child: SafeArea(
+                    child: Container(
+                      child: Text(
+                        'Which is the best\n programming language \nfor competitive programming ??',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            color: Colors.orange[200],
+                            fontFamily: 'BreeSerif',
+                            letterSpacing: 0.65,
+                            fontWeight: FontWeight.bold,
+                            fontSize: displayWidth(context) * 0.0545),
+                      ),
+                    ),
                   ),
                 ),
-              ],
-            ),
-            Opacity(opacity: 0, child: Divider()),
-            Padding(
-              padding: EdgeInsets.only(top: 4.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Image.asset(
-                    'images/confused.png',
-                    height: displayHeight(context) * 0.27,
-                  ),
-                  Text(
-                    'Are you still\nconfused ??',
-                    style: TextStyle(
-                      fontFamily: 'Ranchers',
-                      fontSize: displayWidth(context) * 0.09,
-                      color: Colors.yellow[200],
-                      shadows: <Shadow>[
-                        Shadow(
-                            blurRadius: 30,
-                            color: Colors.black,
-                            offset: Offset.fromDirection(120, 12))
+                Opacity(
+                    opacity: 0,
+                    child: Divider(
+                      height: dividerHeight,
+                    )),
+                SafeArea(
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Image.asset(
+                          'images/confused.png',
+                          height: displayHeight(context) * 0.2,
+                        ),
+                        Text(
+                          'Are you \nstill confused ??',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontFamily: 'Ranchers',
+                            fontSize: displayWidth(context) * 0.075,
+                            color: Colors.yellow[200],
+                            shadows: <Shadow>[
+                              Shadow(
+                                  blurRadius: 30,
+                                  color: Colors.black,
+                                  offset: Offset.fromDirection(120, 12))
+                            ],
+                          ),
+                        ),
                       ],
                     ),
                   ),
-                ],
-              ),
-            ),
-            Opacity(
-              opacity: 0,
-              child: Divider(
-                height: dividerHeight,
-              ),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Flexible(
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 10.0, right: 10.0),
-                    child: Text(
-                      'In the next few slides we will let you know about the programming languages that are mostly used in competitive programming along with their respective advantages and disadvantages',
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontFamily: 'ZillaSlab',
-                        fontSize: displayWidth(context) * 0.048,
-                        shadows: <Shadow>[
-                          Shadow(
-                              blurRadius: 30,
+                ),
+                Opacity(
+                  opacity: 0,
+                  child: Divider(
+                    height: firstPageDividerheight,
+                  ),
+                ),
+                Card(
+                  color: Colors.transparent,
+                  child: Container(
+                    height: displayHeight(context) * 0.32,
+                    width: displayWidth(context) * 0.6,
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 8.0, right: 8.0),
+                      child: Center(
+                        child: Text(
+                          'In the next few slides we will let you know about the programming languages that are mostly used in competitive programming along with their respective advantages and disadvantages',
+                          style: TextStyle(
                               color: Colors.white,
-                              offset: Offset.fromDirection(120, 12))
-                        ],
+                              fontFamily: 'ZillaSlab',
+                              fontSize: displayWidth(context) * 0.048,
+                              wordSpacing: 0.2,
+                              letterSpacing: 0.4),
+                          textAlign: TextAlign.left,
+                        ),
                       ),
-                      textAlign: TextAlign.left,
                     ),
                   ),
                 ),
-                Image.asset(
-                  'images/swipe.png',
-                  height: displayHeight(context) * 0.26,
+                Opacity(
+                  opacity: 0,
+                  child: Divider(
+                    height: firstPageDividerheight,
+                  ),
+                ),
+                Opacity(
+                  opacity: 0,
+                  child: Divider(
+                    height: firstPageDividerheight,
+                  ),
+                ),
+                Opacity(
+                  opacity: 0,
+                  child: Divider(
+                    height: firstPageDividerheight,
+                  ),
+                ),
+                FlatButton(
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                  child: Text(
+                    "BACK",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: displayWidth(context) * 0.045,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  color: Colors.red,
                 ),
               ],
             ),
-            Divider(),
-          ],
+          ),
         ),
       ),
 
@@ -1163,11 +1194,14 @@ class Chose_Languge extends StatelessWidget {
     ];
     return MaterialApp(
       home: Scaffold(
-          body: LiquidSwipe(
-        pages: pages,
-        fullTransitionValue: 450,
-        enableSlideIcon: true,
-        waveType: WaveType.liquidReveal,
+          body: Hero(
+        tag: "Chosinglanguage",
+        child: LiquidSwipe(
+          pages: pages,
+          fullTransitionValue: 450,
+          enableSlideIcon: true,
+          waveType: WaveType.liquidReveal,
+        ),
       )),
     );
   }

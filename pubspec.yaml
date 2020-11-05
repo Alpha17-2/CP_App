@@ -106,9 +106,10 @@ flutter:
       - images/img1.jpg
       - images/AppLogo.jpg
       - images/backimage.jpg
-     
+      - images/ui3.jpg
       - images/Problms.jpg
-     
+      - images/ui.jpg
+      - images/ui2.jpg
       - images/algorithm.png
       - images/array.jpg
       - images/string.jpg
