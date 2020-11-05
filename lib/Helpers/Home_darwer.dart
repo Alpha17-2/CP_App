@@ -43,7 +43,7 @@ class Mydrawer extends StatelessWidget {
                       Opacity(opacity: 0.0, child: Divider()),
                       ListTile(
                         leading: CircleAvatar(
-                          backgroundImage: AssetImage('images/think.jpg'),
+                          backgroundImage: AssetImage('images/confused.png'),
                           radius: imageSize,
                         ),
                         title: Text(

@@ -143,18 +143,20 @@ class _Python_quizState extends State<Python_quiz> {
     }
 
     Widget Lastpage() {
-      return Container(
-        child: Center(
-          child: FlatButton(
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
-              child: Text(
-                "Quiz Over",
-                style: TextStyle(
-                  color: Colors.red,
-                ),
-              )),
+      return Scaffold(
+        body: Container(
+          child: Center(
+            child: FlatButton(
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+                child: Text(
+                  "Quiz Over",
+                  style: TextStyle(
+                    color: Colors.red,
+                  ),
+                )),
+          ),
         ),
       );
     }
