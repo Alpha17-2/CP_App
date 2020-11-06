@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "19454645230",
+    "firebase_url": "https://star-coding.firebaseio.com",
+    "project_id": "star-coding",
+    "storage_bucket": "star-coding.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:19454645230:android:9f1de3381770b54a4674ff",
+        "android_client_info": {
+          "package_name": "com.example.StarCoding"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "19454645230-94c1m924id331rgncsm62ri5kea9hv8g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8hxVnytT_3hqsc9uDp5VVEHEBBCzMzoc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "19454645230-94c1m924id331rgncsm62ri5kea9hv8g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
