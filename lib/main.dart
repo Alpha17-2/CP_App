@@ -20,8 +20,11 @@ import 'Providers/Quiz/C++QuizList.dart';
 import 'Providers/Quiz/CQuizList.dart';
 import 'Providers/Quiz/JavaQuizList.dart';
 import 'Providers/Quiz/PythonQuizList.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
 // modified by Gayatri!!
