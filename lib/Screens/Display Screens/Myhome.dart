@@ -30,6 +30,12 @@ class _MyhomeState extends State<Myhome> {
       final textsize = displayWidth(context) * 0.035;
       final dividerlength = displayHeight(context) * 0.0079;
       final String title = doc['title'];
+      final String sdate = DateFormat.yMMMd()
+          .add_jm()
+          .format(DateTime.parse(doc['startdate'].toDate().toString()));
+      final String edate = DateFormat.yMMMd()
+          .add_jm()
+          .format(DateTime.parse(doc['enddate'].toDate().toString()));
 
       final String platform = doc['platform'];
       String url = doc['link'];
@@ -50,154 +56,195 @@ class _MyhomeState extends State<Myhome> {
       else
         platImage = 'images/google.jpg';
       return Card(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(4.0),
-        ),
-        child: Stack(
-          children: [
-            Container(
-              decoration: BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage(platImage),
-                      fit: BoxFit.scaleDown,
-                      colorFilter: ColorFilter.mode(
-                          Colors.black.withOpacity(0.15), BlendMode.dstATop))),
-            ),
-            Center(
-              child: Card(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(4.0),
+          // Root Card
+          child: Padding(
+        padding: const EdgeInsets.all(12.0),
+        child: Card(
+          // First Card
+          color: Colors.white60,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(16.0),
+          ),
+          child: Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage(
+                  platImage,
                 ),
-                color: Colors.white38,
-                child: Container(
-                  height: displayHeight(context) * 0.32,
-                  width: displayWidth(context) * 0.8,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          CircleAvatar(
+                colorFilter: ColorFilter.mode(
+                    Colors.black.withOpacity(0.10), BlendMode.dstATop),
+              ),
+            ),
+            child: Padding(
+              padding: const EdgeInsets.only(top: 8.0, bottom: 8.0),
+              child: SingleChildScrollView(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  //crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 8.0),
+                          child: CircleAvatar(
                             backgroundImage: AssetImage(platImage),
+                            radius: displayHeight(context) * 0.03,
                           ),
-                          Flexible(
-                            child: Text(
-                              "   " + title,
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                color: Colors.red,
-                                fontSize: displayWidth(context) * 0.035,
-                                fontFamily: 'Fredoka One',
+                        ),
+                        Flexible(
+                          child: Padding(
+                            padding:
+                                const EdgeInsets.only(left: 4.0, right: 12.0),
+                            child: Card(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(16.0)),
+                              child: ClipPath(
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                      gradient: LinearGradient(colors: [
+                                    Colors.yellow[200],
+                                    Colors.yellow[200],
+                                    Colors.yellow[300],
+                                    Colors.yellow,
+                                    Colors.yellow,
+                                    Colors.orange[200]
+                                  ])),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Text(
+                                      title,
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                        color: Colors.black,
+                                        fontSize: displayWidth(context) * 0.04,
+                                        fontFamily: 'Fredoka One',
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                clipper: ShapeBorderClipper(
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(12.0),
+                                  ),
+                                ),
                               ),
                             ),
                           ),
-                        ],
+                        )
+                      ],
+                    ),
+                    Opacity(
+                      opacity: 0.0,
+                      child: Divider(
+                        height: displayHeight(context) * 0.01,
                       ),
-                      Opacity(
-                        opacity: 0.0,
-                        child: Divider(
-                          height: dividerlength,
+                    ),
+                    Card(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(6.0)),
+                      color: Colors.red[400],
+                      child: Padding(
+                        padding: const EdgeInsets.all(5.2),
+                        child: Text(
+                          "Start : " + sdate,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontFamily: 'Fredoka One',
+                            fontSize: displayWidth(context) * 0.032,
+                            //fontWeight: FontWeight.bold
+                          ),
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 6),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.only(left: 4),
+                    ),
+                    Card(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(6.0)),
+                      color: Colors.red[400],
+                      child: Padding(
+                        padding: const EdgeInsets.all(5.2),
+                        child: Text(
+                          "End : " + edate,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontFamily: 'Fredoka One',
+                            fontSize: displayWidth(context) * 0.032,
+                            // fontWeight: FontWeight.bold
+                          ),
+                        ),
+                      ),
+                    ),
+                    Card(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(6.0)),
+                      color: Colors.red[400],
+                      child: Padding(
+                        padding: const EdgeInsets.all(5.2),
+                        child: Text(
+                          "Platform : " + platform,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontFamily: 'Fredoka One',
+                            fontSize: displayWidth(context) * 0.032,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Opacity(
+                      opacity: 0.0,
+                      child: Divider(
+                        height: displayHeight(context) * 0.004,
+                      ),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(right: 12.0),
+                          child: Container(
+                            width: displayWidth(context) * 0.2,
+                            height: displayHeight(context) * 0.045,
+                            child: RaisedButton(
+                              elevation: 15.0,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(4.0),
+                              ),
+                              focusColor: Colors.white,
+                              onPressed: () {
+                                _launchinBrowser(url);
+                              },
                               child: Text(
-                                'Start Date : ' +
-                                    DateFormat.yMMMd().add_jm().format(
-                                        DateTime.parse(doc['startdate']
-                                            .toDate()
-                                            .toString())),
+                                'LINK',
                                 style: TextStyle(
-                                    fontFamily: 'Fredoka One',
-                                    fontSize: textsize),
+                                    color: Colors.white,
+                                    fontSize: displayWidth(context) * 0.03),
                               ),
+                              color: Colors.black54,
                             ),
-                          ],
+                          ),
                         ),
-                      ),
-                      Opacity(
-                          opacity: 0.0,
-                          child: Divider(
-                            height: dividerlength,
-                          )),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(left: 4),
-                            child: Text(
-                              'End Date : ' +
-                                  DateFormat.yMMMd().add_jm().format(
-                                      DateTime.parse(
-                                          doc['enddate'].toDate().toString())),
-                              style: TextStyle(
-                                  fontFamily: 'Fredoka One',
-                                  fontSize: textsize),
-                            ),
-                          ),
-                        ],
-                      ),
-                      Opacity(
-                          opacity: 0.0,
-                          child: Divider(
-                            height: dividerlength,
-                          )),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(left: 4),
-                            child: Text(
-                              'Platform : ' + platform,
-                              style: TextStyle(
-                                  fontFamily: 'Fredoka One',
-                                  fontSize: textsize),
-                            ),
-                          ),
-                        ],
-                      ),
-                      Opacity(
-                          opacity: 0.0,
-                          child: Divider(
-                            height: dividerlength,
-                          )),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          RaisedButton(
-                            onPressed: () {
-                              _launchinBrowser(url);
-                            },
-                            child: Text(
-                              'LINK',
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: displayWidth(context) * 0.038),
-                            ),
-                            color: Colors.black54,
-                          )
-                        ],
-                      ),
-                    ],
-                  ),
+                      ],
+                    )
+                  ],
                 ),
               ),
-            )
-          ],
+            ),
+          ),
         ),
-      );
+      ));
     }
 
     // ignore: non_constant_identifier_names
     final TrendingProblemslist =
         Provider.of<TrendingProblems>(context).ProblemList;
+
+    Widget LoaDing() {
+      return Card();
+    }
+
     return Container(
+      height: displayHeight(context) * 1.0,
+      width: displayWidth(context) * 1.0,
       constraints: BoxConstraints.expand(),
       decoration: BoxDecoration(
         image: DecorationImage(
@@ -234,12 +281,12 @@ class _MyhomeState extends State<Myhome> {
               ),
             ),
             Container(
-              width: displayWidth(context) * 0.95,
-              height: displayHeight(context) * 0.39,
+              width: displayWidth(context) * 0.9,
+              height: displayHeight(context) * 0.390,
               padding: const EdgeInsets.all(10),
               child: StreamBuilder(
                 builder: (context, snapshot) {
-                  if (!snapshot.hasData) return Text("jekmds");
+                  if (!snapshot.hasData) return LoaDing();
                   return Swiper(
                     pagination: SwiperPagination(),
                     index: 0,
