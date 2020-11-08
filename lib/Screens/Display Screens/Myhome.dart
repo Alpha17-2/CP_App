@@ -58,7 +58,7 @@ class _MyhomeState extends State<Myhome> {
       return Card(
           // Root Card
           child: Padding(
-        padding: const EdgeInsets.all(12.0),
+        padding: const EdgeInsets.all(9.0),
         child: Card(
           // First Card
           color: Colors.white60,
@@ -147,7 +147,10 @@ class _MyhomeState extends State<Myhome> {
                       child: Padding(
                         padding: const EdgeInsets.all(5.2),
                         child: Text(
-                          "Start : " + sdate,
+                          "Start : " +
+                              sdate.substring(
+                                0,
+                              ),
                           style: TextStyle(
                             color: Colors.white,
                             fontFamily: 'Fredoka One',
