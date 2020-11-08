@@ -7,6 +7,7 @@ import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:CP_App/Helpers/TrendingProblemCard.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:intl/intl.dart';
 
 class Myhome extends StatefulWidget {
   @override
@@ -29,14 +30,10 @@ class _MyhomeState extends State<Myhome> {
       final textsize = displayWidth(context) * 0.035;
       final dividerlength = displayHeight(context) * 0.0079;
       final String title = doc['title'];
-      final String startDate = doc['startdate'].toString();
-      final String enddate = doc['enddate'].toString();
+
       final String platform = doc['platform'];
       String url = doc['link'];
       String platImage;
-      print(title);
-      print(startDate);
-      print(url);
 
       if (platform == 'Codechef')
         platImage = 'images/Codechef.jpeg';
@@ -111,7 +108,11 @@ class _MyhomeState extends State<Myhome> {
                             Padding(
                               padding: const EdgeInsets.only(left: 4),
                               child: Text(
-                                'Start Date : ' + startDate,
+                                'Start Date : ' +
+                                    DateFormat.yMMMd().add_jm().format(
+                                        DateTime.parse(doc['startdate']
+                                            .toDate()
+                                            .toString())),
                                 style: TextStyle(
                                     fontFamily: 'Fredoka One',
                                     fontSize: textsize),
@@ -131,7 +132,10 @@ class _MyhomeState extends State<Myhome> {
                           Padding(
                             padding: const EdgeInsets.only(left: 4),
                             child: Text(
-                              'End Date : ' + enddate,
+                              'End Date : ' +
+                                  DateFormat.yMMMd().add_jm().format(
+                                      DateTime.parse(
+                                          doc['enddate'].toDate().toString())),
                               style: TextStyle(
                                   fontFamily: 'Fredoka One',
                                   fontSize: textsize),
