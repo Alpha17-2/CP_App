@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
 import 'package:CP_App/Helpers/PageAnimation.dart';
 import 'package:CP_App/Screens/Detail Screen/STL_PAGE/Stl_Algorithm.dart';
+import '../../../Helpers/PageAnimation.dart';
 import 'Stl_Container.dart';
 import 'Stl_iterators.dart';
+import 'Stl_functors.dart';
 
 class STLHOME extends StatelessWidget {
   @override
@@ -227,7 +229,10 @@ class STLHOME extends StatelessWidget {
                     ),
                   ),
                   GestureDetector(
-                    onTap: () => print('null'),
+                    onTap: () {
+                      Navigator.push(
+                          context, MyPageAnimation(w: Stl_Functors()));
+                    },
                     child: Card(
                       elevation: 25.0,
                       shape: RoundedRectangleBorder(
@@ -246,7 +251,7 @@ class STLHOME extends StatelessWidget {
                           width: displayWidth(context) * 0.4,
                           child: Center(
                             child: Text(
-                              "FUNCTIONS",
+                              "FUNCTORS",
                               style: TextStyle(
                                   color: Colors.white,
                                   shadows: <Shadow>[
