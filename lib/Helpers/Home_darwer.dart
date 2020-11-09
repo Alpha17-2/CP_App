@@ -1,10 +1,8 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
 import 'package:CP_App/Screens/Display%20Screens/preq_Screen.dart';
 import 'package:CP_App/Screens/Detail%20Screen/STL_PAGE/Stl_home.dart';
 import 'package:CP_App/Screens/Display%20Screens/Problem_List_Screen.dart';
-import 'package:CP_App/Screens/Display%20Screens/Topic_Screen.dart';
 import 'package:CP_App/Screens/Detail Screen/Quiz_PAGE/Quiz_Home.dart';
 
 class Mydrawer extends StatelessWidget {
@@ -30,6 +28,10 @@ class Mydrawer extends StatelessWidget {
                 width: double.infinity,
                 height: displayHeight(context) * 0.2,
                 color: Colors.white,
+                child: Image.asset(
+                  "images/logo.jpeg",
+                  fit: BoxFit.fill,
+                ),
               ),
               Container(
                 width: double.infinity,
