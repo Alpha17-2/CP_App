@@ -64,6 +64,8 @@ flutter:
       - images/linkedlist.png
       - images/graph.png
       - images/binarytree.png
+      - images/mylogo.jpg
+      - images/mylogo2.jpg
       - images/stack.png
       - images/queue.jpg
       - images/C++.jpg

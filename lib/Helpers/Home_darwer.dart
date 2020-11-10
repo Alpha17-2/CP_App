@@ -30,10 +30,10 @@ class Mydrawer extends StatelessWidget {
         children: <Widget>[
           Container(
             width: double.infinity,
-            height: 200,
+            height: 150,
             color: Colors.white,
             child: Image.asset(
-              "images/logo.jpeg",
+              "images/mylogo2.jpg",
               fit: BoxFit.fill,
             ),
           ),
