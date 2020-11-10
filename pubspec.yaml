@@ -59,9 +59,8 @@ flutter:
       
       - images/C.jpg
       - images/correctanswer.png
-     
       - images/quizui3.jpg
-     
+      - images/logo.jpeg
       - images/linkedlist.png
       - images/graph.png
       - images/binarytree.png
@@ -77,7 +76,7 @@ flutter:
       - images/Cardback.jpg
       - images/lastchoice.jpg
       - images/black.jpg
-     
+      - images/ui6.jpg
       - images/drawerwall.jpg
       - images/drawerwall2.jpg
       - images/java.png
