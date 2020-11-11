@@ -88,7 +88,7 @@ flutter:
       - images/swipeatproblem.png
       - images/swipe.png
       - images/back.jpg
-      
+      - images/logo2.png
       - images/confused.png
       - images/atcoder.png
       - images/codeforces.jpg
@@ -153,6 +153,11 @@ flutter:
       fonts:
         - asset: fonts/ZillaSlab-BoldItalic.ttf
     
+    - family: Goldman
+      fonts:
+        - asset: fonts/Goldman-Bold.ttf
+
+
     - family: HammersmithOne
       fonts:
         - asset: fonts/HammersmithOne-Regular.ttf

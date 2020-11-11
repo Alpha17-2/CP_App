@@ -1,3 +1,4 @@
+import 'package:CP_App/Helpers/DeviceSize.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:shimmer/shimmer.dart';
@@ -19,7 +20,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   Future<bool> _mockCheckForSession() async {
-    await Future.delayed(Duration(milliseconds: 3500), () {});
+    await Future.delayed(Duration(milliseconds: 1200), () {});
 
     return true;
   }
@@ -33,39 +34,38 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        child: Stack(
-          alignment: Alignment.center,
-          children: <Widget>[
-            Container(
-                child: Opacity(
-                    opacity: 0.5,
-                    child: Image.asset(
-                      'images/backimage.jpg',
-                      height: double.infinity,
-                      width: double.infinity,
-                      fit: BoxFit.cover,
-                    ))),
-            Shimmer.fromColors(
-              period: Duration(milliseconds: 1500),
-              baseColor: Colors.black,
-              highlightColor: Colors.white,
-              child: Container(
-                padding: EdgeInsets.all(16.0),
-                child: Text(
-                  "Competitive Programming",
-                  style: TextStyle(
-                      fontSize: 30.0,
-                      fontFamily: 'Pacifico',
-                      shadows: <Shadow>[
-                        Shadow(
-                            blurRadius: 18.0,
-                            color: Colors.black87,
-                            offset: Offset.fromDirection(120, 12))
-                      ]),
+        color: Colors.blue[800],
+        constraints: BoxConstraints.expand(),
+        height: displayHeight(context) * 1.0,
+        width: displayWidth(context) * 1.0,
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset(
+                "images/logo2.png",
+                height: displayHeight(context) * 0.18,
+              ),
+              Opacity(
+                  opacity: 0.0,
+                  child: Divider(
+                    height: displayHeight(context) * 0.015,
+                  )),
+              Text(
+                " Star Coding",
+                style: TextStyle(
+                  fontSize: displayWidth(context) * 0.095,
+                  fontFamily: "Goldman",
+                  shadows: <Shadow>[
+                    Shadow(
+                        blurRadius: 18.0,
+                        color: Colors.white,
+                        offset: Offset.fromDirection(3, 3)),
+                  ],
                 ),
               ),
-            )
-          ],
+            ],
+          ),
         ),
       ),
     );
