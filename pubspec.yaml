@@ -105,9 +105,11 @@ flutter:
       - images/problems.jpg
       - images/top_draw.jpg
       - images/img1.jpg
-     
+      - images/a1.png
+      - images/s1.png
+      - images/fund1.png
       - images/backimage.jpg
-     
+      - images/m1.png
       - images/ui2.jpg
       - images/algorithm.png
       - images/array.jpg
