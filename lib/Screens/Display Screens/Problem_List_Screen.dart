@@ -56,10 +56,11 @@ class Problems extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.start,
                               children: [
                                 Padding(
-                                  padding: EdgeInsets.all(5),
+                                  padding: EdgeInsets.only(
+                                      top: 5.0, bottom: 5.0, left: 15.0),
                                   child: Container(
                                     height: displayHeight(context) * 0.15,
                                     width: displayWidth(context) * 0.2,
@@ -69,7 +70,11 @@ class Problems extends StatelessWidget {
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsets.all(5.0),
+                                  padding: EdgeInsets.only(
+                                      top: 5.0,
+                                      left: 30.0,
+                                      right: 1.0,
+                                      bottom: 5.0),
                                   child: Text(
                                     "FUNDAMENTAL",
                                     style: TextStyle(
@@ -188,22 +193,27 @@ class Problems extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.start,
                               children: [
                                 Padding(
-                                  padding: EdgeInsets.all(5),
+                                  padding: EdgeInsets.only(
+                                      top: 5.0, bottom: 5.0, left: 15.0),
                                   child: Container(
                                     height: displayHeight(context) * 0.15,
                                     width: displayWidth(context) * 0.2,
                                     child: Image.asset(
-                                      "images/m1.png",
+                                      "images/m2.png",
                                       height: displayHeight(context) * 0.15,
                                       width: displayWidth(context) * 0.2,
                                     ),
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsets.all(5.0),
+                                  padding: EdgeInsets.only(
+                                      top: 5.0,
+                                      left: 30.0,
+                                      right: 1.0,
+                                      bottom: 5.0),
                                   child: Text(
                                     "MATHEMATICS",
                                     style: TextStyle(
@@ -313,10 +323,11 @@ class Problems extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             Padding(
-                              padding: EdgeInsets.all(5),
+                              padding: EdgeInsets.only(
+                                  top: 5.0, bottom: 5.0, left: 15.0),
                               child: Container(
                                 height: displayHeight(context) * 0.15,
                                 width: displayWidth(context) * 0.2,
@@ -328,7 +339,11 @@ class Problems extends StatelessWidget {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsets.all(5.0),
+                              padding: EdgeInsets.only(
+                                  top: 5.0,
+                                  left: 30.0,
+                                  right: 1.0,
+                                  bottom: 5.0),
                               child: Text(
                                 "ARRAY",
                                 style: TextStyle(
@@ -421,10 +436,11 @@ class Problems extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             Padding(
-                              padding: EdgeInsets.all(5),
+                              padding: EdgeInsets.only(
+                                  top: 5.0, bottom: 5.0, left: 15.0),
                               child: Container(
                                 height: displayHeight(context) * 0.15,
                                 width: displayWidth(context) * 0.255,
@@ -436,7 +452,11 @@ class Problems extends StatelessWidget {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsets.all(5.0),
+                              padding: EdgeInsets.only(
+                                  top: 5.0,
+                                  left: 30.0,
+                                  right: 1.0,
+                                  bottom: 5.0),
                               child: Text(
                                 "STRING",
                                 style: TextStyle(
