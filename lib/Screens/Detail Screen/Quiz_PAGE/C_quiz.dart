@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
 import 'package:CP_App/Providers/Quiz/CQuizList.dart';
+import 'package:CP_App/Providers/Quiz/SingleQuestion.dart';
 
 class C_Quiz extends StatefulWidget {
   @override
@@ -11,6 +12,7 @@ class C_Quiz extends StatefulWidget {
 class _C_QuizState extends State<C_Quiz> {
   @override
   int i = 0;
+  int correctanswer = 0;
   Color o = Colors.transparent;
   Color c = Colors.green;
   Color w = Colors.red;
@@ -20,7 +22,9 @@ class _C_QuizState extends State<C_Quiz> {
   Color currentColor4 = Colors.white;
 
   Widget build(BuildContext context) {
-    final mylist = Provider.of<CquizList>(context).ListOfCquestions;
+    final mylist =
+        Provider.of<CquizList>(context, listen: true).ListOfCquestions;
+    final myObject = Provider.of<SingleQuizQuestion>(context);
 
     void _correctAnswerBottomSheet(context) {
       showModalBottomSheet(
@@ -151,9 +155,10 @@ class _C_QuizState extends State<C_Quiz> {
                 Navigator.of(context).pop();
               },
               child: Text(
-                "Quiz Over",
+                "Correct Answer = " + correctanswer.toString(),
                 style: TextStyle(
                   color: Colors.red,
+                  fontSize: displayWidth(context) * 0.045,
                 ),
               )),
         ),
@@ -260,8 +265,13 @@ class _C_QuizState extends State<C_Quiz> {
                                   onTap: () {
                                     if (option1 == correct) {
                                       setState(() {
+                                        if (mylist[i].isFirstAttemp) {
+                                          mylist[i].UpdateFirstAttempt();
+                                          ++correctanswer;
+                                        }
                                         currentColor1 = Colors.green;
                                       });
+
                                       Future.delayed(
                                           const Duration(microseconds: 35555),
                                           () {
@@ -269,6 +279,9 @@ class _C_QuizState extends State<C_Quiz> {
                                       });
                                     } else {
                                       setState(() {
+                                        if (mylist[i].isFirstAttemp) {
+                                          mylist[i].UpdateFirstAttempt();
+                                        }
                                         currentColor1 = Colors.red[400];
                                       });
                                       Future.delayed(
@@ -307,7 +320,13 @@ class _C_QuizState extends State<C_Quiz> {
                                     if (option2 == correct) {
                                       setState(() {
                                         currentColor2 = Colors.green;
+
+                                        if (mylist[i].isFirstAttemp) {
+                                          mylist[i].UpdateFirstAttempt();
+                                          correctanswer++;
+                                        }
                                       });
+
                                       Future.delayed(
                                           const Duration(microseconds: 35555),
                                           () {
@@ -315,6 +334,9 @@ class _C_QuizState extends State<C_Quiz> {
                                       });
                                     } else {
                                       setState(() {
+                                        if (mylist[i].isFirstAttemp) {
+                                          mylist[i].UpdateFirstAttempt();
+                                        }
                                         currentColor2 = Colors.red[400];
                                       });
                                       Future.delayed(
@@ -357,8 +379,14 @@ class _C_QuizState extends State<C_Quiz> {
                                   onTap: () {
                                     if (option3 == correct) {
                                       setState(() {
+                                        if (mylist[i].isFirstAttemp) {
+                                          mylist[i].UpdateFirstAttempt();
+                                          correctanswer++;
+                                        }
+
                                         currentColor3 = Colors.green;
                                       });
+
                                       Future.delayed(
                                           const Duration(microseconds: 35555),
                                           () {
@@ -366,6 +394,9 @@ class _C_QuizState extends State<C_Quiz> {
                                       });
                                     } else {
                                       setState(() {
+                                        if (mylist[i].isFirstAttemp) {
+                                          mylist[i].UpdateFirstAttempt();
+                                        }
                                         currentColor3 = Colors.red[400];
                                       });
                                       Future.delayed(
@@ -403,8 +434,14 @@ class _C_QuizState extends State<C_Quiz> {
                                   onTap: () {
                                     if (option4 == correct) {
                                       setState(() {
+                                        if (mylist[i].isFirstAttemp) {
+                                          mylist[i].UpdateFirstAttempt();
+                                          correctanswer++;
+                                        }
+
                                         currentColor4 = Colors.green;
                                       });
+
                                       Future.delayed(
                                           const Duration(microseconds: 35555),
                                           () {
@@ -413,7 +450,11 @@ class _C_QuizState extends State<C_Quiz> {
                                     } else {
                                       setState(() {
                                         currentColor4 = Colors.red[400];
+                                        if (mylist[i].isFirstAttemp) {
+                                          mylist[i].UpdateFirstAttempt();
+                                        }
                                       });
+
                                       Future.delayed(
                                           const Duration(microseconds: 35555),
                                           () {

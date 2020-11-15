@@ -10,6 +10,7 @@ class CquizList extends ChangeNotifier {
       option3: "Bjarne Stroustrup",
       option4: "Guido van Rossum",
       correct: "Dennis Ritchie",
+      isFirstAttemp: true,
     ),
     SingleQuizQuestion(
       question: "Which of these is not a valid identifier name ?",
@@ -18,6 +19,7 @@ class CquizList extends ChangeNotifier {
       option2: "_a33",
       option4: "a33_",
       correct: "3_aa",
+      isFirstAttemp: true,
     ),
     SingleQuizQuestion(
       question: "C language was invented to develop which operating System.?",
@@ -26,6 +28,7 @@ class CquizList extends ChangeNotifier {
       option2: "Ubuntu",
       option4: "Unix",
       correct: "Unix",
+      isFirstAttemp: true,
     ),
     SingleQuizQuestion(
       question: "How many bytes does 'int = D' use.?",
@@ -34,6 +37,7 @@ class CquizList extends ChangeNotifier {
       option2: "2 or 4",
       option4: "10",
       correct: "2 or 4",
+      isFirstAttemp: true,
     ),
     SingleQuizQuestion(
       question: "In C language, the constant is defined____.?",
@@ -42,6 +46,7 @@ class CquizList extends ChangeNotifier {
       option2: "Anywhere,but starting on a new line.",
       option4: "None of these",
       correct: "Anywhere,but starting on a new line.",
+      isFirstAttemp: true,
     ),
     SingleQuizQuestion(
       question: "What does this decleration mean, int x : 4.?",
@@ -50,21 +55,26 @@ class CquizList extends ChangeNotifier {
       option2: "x is a four-bit integer.",
       option4: "None of these",
       correct: "x is a four-bit integer.",
+      isFirstAttemp: true,
     ),
     SingleQuizQuestion(
-      question: "If ASCII value of 'x' is 120,then what is the value of the H, if H=('x'-'w')/3.?",
+      question:
+          "If ASCII value of 'x' is 120,then what is the value of the H, if H=('x'-'w')/3.?",
       option1: "0",
       option3: "1",
       option2: "2 ",
       option4: "4",
+      isFirstAttemp: true,
       correct: "0",
     ),
     SingleQuizQuestion(
-      question: "If x is an array of integer,then the value of &x[i] is same as.?",
+      question:
+          "If x is an array of integer,then the value of &x[i] is same as.?",
       option1: "x + sizeof(int) * i",
       option3: "&x[i-1] + sizeof(int)",
       option2: "x + i",
       option4: "None of these",
+      isFirstAttemp: true,
       correct: "&x[i-1] + sizeof(int)",
     ),
     SingleQuizQuestion(
@@ -73,22 +83,27 @@ class CquizList extends ChangeNotifier {
       option3: "Representation of void pointer",
       option2: "Error",
       option4: "None of these",
+      isFirstAttemp: true,
       correct: "Representation of NULL pointer",
     ),
     SingleQuizQuestion(
-      question: "In C, if you pass an array as an argument to a function,what actually gets passed.?",
+      question:
+          "In C, if you pass an array as an argument to a function,what actually gets passed.?",
       option1: "Value of elements in array",
       option3: "First element of the array",
       option2: "Base address of the array",
       option4: "Address of the last element of array",
       correct: "Base address of the array",
+      isFirstAttemp: true,
     ),
     SingleQuizQuestion(
-      question: "Which of the following function sets first n characters to a given character?",
+      question:
+          "Which of the following function sets first n characters to a given character?",
       option1: "strinit()",
       option3: "strnset()",
       option2: "strset()",
       option4: "strcset()",
+      isFirstAttemp: true,
       correct: "strnset()",
     ),
     SingleQuizQuestion(
@@ -98,6 +113,7 @@ class CquizList extends ChangeNotifier {
       option2: "int my num=1000;",
       option4: "int my num == 10000;",
       correct: "int my_num=100000;",
+      isFirstAttemp: true,
     ),
     SingleQuizQuestion(
       question: "What is a lint?",
@@ -106,6 +122,7 @@ class CquizList extends ChangeNotifier {
       option3: "Analyzing tool",
       option4: "C interpreter",
       correct: "Analyzing tool",
+      isFirstAttemp: true,
     ),
     SingleQuizQuestion(
       question: "Which is the only function all C programs must contain ?",
@@ -113,14 +130,17 @@ class CquizList extends ChangeNotifier {
       option2: "system()",
       option3: "main()",
       option4: "printf()",
+      isFirstAttemp: true,
       correct: "main()",
     ),
     SingleQuizQuestion(
-      question: "If integer needs two bytes of storage,then maximum value of an unsigned integer is ?",
+      question:
+          "If integer needs two bytes of storage,then maximum value of an unsigned integer is ?",
       option1: "2^16 - 1",
       option2: "2^15 - 1",
       option3: "2^16",
       option4: "None of these",
+      isFirstAttemp: true,
       correct: "2^16 - 1",
     ),
     SingleQuizQuestion(
@@ -129,6 +149,7 @@ class CquizList extends ChangeNotifier {
       option2: "case",
       option3: "main",
       option4: "default",
+      isFirstAttemp: true,
       correct: "main",
     ),
     SingleQuizQuestion(
@@ -138,6 +159,7 @@ class CquizList extends ChangeNotifier {
       option3: "Assembly code",
       option4: "None of these",
       correct: "Object code",
+      isFirstAttemp: true,
     ),
     SingleQuizQuestion(
       question: "Why to use fflush() library function ?",
@@ -145,21 +167,25 @@ class CquizList extends ChangeNotifier {
       option2: "To flush only specified stream",
       option3: "To flush input/output buffer",
       option4: "Invalid library function",
+      isFirstAttemp: true,
       correct: "To flush all streams and specified streams",
     ),
-     SingleQuizQuestion(
+    SingleQuizQuestion(
       question: "Why is a macro used in place of a function ?",
       option1: "It reduces execution time",
       option2: "It reduces code size",
       option3: "It increases execution time",
+      isFirstAttemp: true,
       option4: "It increases code size",
       correct: "It reduces code size",
     ),
     SingleQuizQuestion(
-      question: "Which one of the following is a loop construct that will always be executed once ?",
+      question:
+          "Which one of the following is a loop construct that will always be executed once ?",
       option1: "for",
       option2: "while",
       option3: "do-while",
+      isFirstAttemp: true,
       option4: "switch",
       correct: "do-while",
     ),

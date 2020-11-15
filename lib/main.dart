@@ -2,6 +2,7 @@ import 'package:CP_App/Providers/Contest_List.dart';
 import 'package:CP_App/Providers/ProblemSection/SortingProblemsList.dart';
 import 'Providers/ProblemSection/MathsProblemList.dart';
 import 'Providers/TrendingProblems.dart';
+import 'Providers/Quiz/SingleQuestion.dart';
 import 'Providers/ProblemSection/ArrayProblemlist.dart';
 import 'Providers/ProblemSection/StringProblemlist.dart';
 import 'package:CP_App/Providers/topic_list.dart';
@@ -34,6 +35,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
+        ChangeNotifierProvider(
+          create: (context) => SingleQuizQuestion(),
+        ),
         ChangeNotifierProvider(
           create: (context) => CquizList(),
         ),
