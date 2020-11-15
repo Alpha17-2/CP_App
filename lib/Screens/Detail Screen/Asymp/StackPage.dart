@@ -73,6 +73,30 @@ class StackPage extends StatelessWidget {
             ),
           ]),
     );
+    final text2 = new RichText(
+      text: TextSpan(
+          style: TextStyle(
+              fontSize: fontsize,
+              color: Colors.black,
+              fontWeight: FontWeight.bold),
+          children: <TextSpan>[
+            new TextSpan(
+                text: "Data - ",
+                style:
+                    TextStyle(color: Colors.red, fontWeight: FontWeight.bold)),
+            new TextSpan(
+              text:
+                  "This stores the value that is to be inserted into stack.\n",
+            ),
+            new TextSpan(
+                text: "Pointer - ",
+                style:
+                    TextStyle(color: Colors.red, fontWeight: FontWeight.bold)),
+            new TextSpan(
+              text: "This stores the address of the successive node.",
+            ),
+          ]),
+    );
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -276,7 +300,7 @@ class StackPage extends StatelessWidget {
                 style: TextStyle(
                     color: Colors.blue,
                     fontFamily: "CreteRound",
-                    fontSize: displayWidth(context) * 0.06,
+                    fontSize: displayWidth(context) * 0.0625,
                     fontWeight: FontWeight.bold),
               ),
               Opacity(
@@ -298,7 +322,7 @@ class StackPage extends StatelessWidget {
                 child: Divider(height: verysmallDivider),
               ),
               Text(
-                "Push operation can be performed using array in the following way :-",
+                "Push operation can be performed using array in the following ways :-",
                 style: TextStyle(
                   fontSize: fontsize,
                   fontWeight: FontWeight.bold,
@@ -309,8 +333,178 @@ class StackPage extends StatelessWidget {
                 child: Divider(height: verysmallDivider),
               ),
               Text(
-                "• In push operation element is always inserted on the top of the stack.\n• So we declare a variable top and increment it by 1 so that it can refer to next memory location every time the new element is inserted into it.\n• After incrementing top, we will now add the element at this incremented position of top.\n• Continue this process until the stack is not full.\n• When Top becomes N ,stack is said to be overflowed or full.\n• Now we can’t apply push operation on it.",
+                "• In push operation element is always inserted on the top of the stack.\n• So we declare a variable top and increment it by 1 so that it can refer to next memory location every time the new element is inserted into it.\n• After incrementing top, we will now add the element at this incremented position of top.\n• Continue this process until the stack is not full.\n• When Top becomes N ,stack is said to be overflowed or full.\n• Further push operation on stack will result Stack Overflow.",
                 style: TextStyle(fontSize: displayWidth(context) * 0.0415),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(height: verysmallDivider),
+              ),
+              Text(
+                "Illustration :- ",
+                style: TextStyle(
+                    color: Colors.orange,
+                    fontSize: displayWidth(context) * 0.062,
+                    fontWeight: FontWeight.bold),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(
+                    top: 8.0, left: 3.0, right: 3.0, bottom: 8.0),
+                child: Container(
+                  height: displayHeight(context) * 0.3,
+                  width: displayWidth(context) * 0.95,
+                  child: Image(
+                      image: AssetImage(
+                        "images/st5.png",
+                      ),
+                      fit: BoxFit.fill),
+                ),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(height: verysmallDivider),
+              ),
+              Text(
+                "Pop operation can be performed using array in the following ways :-",
+                style: TextStyle(
+                  fontSize: fontsize,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(height: verysmallDivider),
+              ),
+              Text(
+                "• Pop operation is always performed on TOP of the stack.\n• In order to remove the element present on TOP of stack, we just need to decrease TOP by 1.\n• Continue this process until our stack becomes empty i.e TOP = -1 .\n• Further popping operation on stack will result Stack Underflow.",
+                style: TextStyle(fontSize: displayWidth(context) * 0.0415),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(height: verysmallDivider),
+              ),
+              Text(
+                "Illustration :- ",
+                style: TextStyle(
+                    color: Colors.orange,
+                    fontSize: displayWidth(context) * 0.062,
+                    fontWeight: FontWeight.bold),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(
+                    top: 8.0, left: 3.0, right: 3.0, bottom: 8.0),
+                child: Container(
+                  height: displayHeight(context) * 0.28,
+                  width: displayWidth(context) * 0.95,
+                  child: Image(
+                      image: AssetImage(
+                        "images/st4.png",
+                      ),
+                      fit: BoxFit.fill),
+                ),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(height: smallDivider),
+              ),
+              Text(
+                "2. Linked List :-",
+                style: TextStyle(
+                    color: Colors.deepPurple,
+                    fontFamily: "PatuaOne",
+                    fontSize: displayWidth(context) * 0.065,
+                    fontWeight: FontWeight.bold),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(height: verysmallDivider),
+              ),
+              Text(
+                "Linked list is a dynamic data structure, in which memory is not allocated contiguously. We need to define a structure that will contain two parts -",
+                style: TextStyle(
+                  fontSize: fontsize,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(height: verysmallDivider),
+              ),
+              text2,
+              Opacity(
+                opacity: 0.0,
+                child: Divider(height: verysmallDivider),
+              ),
+              Text(
+                "• In push operation element is always inserted on the top of the stack.\n• So we declare a variable top and increment it by 1 so that it can refer to next memory location every time the new element is inserted into it.\n• After incrementing top, we will now add the element at this incremented position of top.\n• Continue this process until the stack is not full.\n• When Top becomes N ,stack is said to be overflowed or full.\n• Further push operation on stack will result Stack Overflow.",
+                style: TextStyle(fontSize: displayWidth(context) * 0.0415),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(height: verysmallDivider),
+              ),
+              Text(
+                "Illustration :- ",
+                style: TextStyle(
+                    color: Colors.orange,
+                    fontSize: displayWidth(context) * 0.062,
+                    fontWeight: FontWeight.bold),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(
+                    top: 8.0, left: 3.0, right: 3.0, bottom: 8.0),
+                child: Container(
+                  height: displayHeight(context) * 0.3,
+                  width: displayWidth(context) * 0.95,
+                  child: Image(
+                      image: AssetImage(
+                        "images/st5.png",
+                      ),
+                      fit: BoxFit.fill),
+                ),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(height: verysmallDivider),
+              ),
+              Text(
+                "Pop operation can be performed using array in the following ways :-",
+                style: TextStyle(
+                  fontSize: fontsize,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(height: verysmallDivider),
+              ),
+              Text(
+                "• Pop operation is always performed on TOP of the stack.\n• In order to remove the element present on TOP of stack, we just need to decrease TOP by 1.\n• Continue this process until our stack becomes empty i.e TOP = -1 .\n• Further popping operation on stack will result Stack Underflow.",
+                style: TextStyle(fontSize: displayWidth(context) * 0.0415),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(height: verysmallDivider),
+              ),
+              Text(
+                "Illustration :- ",
+                style: TextStyle(
+                    color: Colors.orange,
+                    fontSize: displayWidth(context) * 0.062,
+                    fontWeight: FontWeight.bold),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(
+                    top: 8.0, left: 3.0, right: 3.0, bottom: 8.0),
+                child: Container(
+                  height: displayHeight(context) * 0.28,
+                  width: displayWidth(context) * 0.95,
+                  child: Image(
+                      image: AssetImage(
+                        "images/st4.png",
+                      ),
+                      fit: BoxFit.fill),
+                ),
               ),
             ],
           ),

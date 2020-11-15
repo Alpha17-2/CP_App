@@ -62,6 +62,8 @@ flutter:
       - images/st1.jpg
       - images/st2.jpg
       - images/st3.jpg
+      - images/st4.png
+      - images/st5.png
       - images/correctanswer.png
       - images/quizui3.jpg
       - images/logo.jpeg
