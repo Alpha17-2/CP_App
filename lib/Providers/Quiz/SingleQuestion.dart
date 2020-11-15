@@ -17,6 +17,7 @@ class SingleQuizQuestion extends ChangeNotifier {
       this.option2,
       this.option3,
       this.option4});
+
   void UpdateFirstAttempt() {
     isFirstAttemp = !isFirstAttemp;
     ChangeNotifier();

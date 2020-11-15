@@ -24,7 +24,7 @@ class _C_QuizState extends State<C_Quiz> {
   Widget build(BuildContext context) {
     final mylist =
         Provider.of<CquizList>(context, listen: true).ListOfCquestions;
-    final myObject = Provider.of<SingleQuizQuestion>(context);
+    // final myObject = Provider.of<SingleQuizQuestion>(context);
 
     void _correctAnswerBottomSheet(context) {
       showModalBottomSheet(
@@ -148,6 +148,9 @@ class _C_QuizState extends State<C_Quiz> {
     }
 
     Widget Lastpage() {
+      for (int i = 0; i < mylist.length; ++i) {
+        mylist[i].UpdateFirstAttempt();
+      }
       return Container(
         child: Center(
           child: FlatButton(
@@ -279,7 +282,7 @@ class _C_QuizState extends State<C_Quiz> {
                                       });
                                     } else {
                                       setState(() {
-                                        if (mylist[i].isFirstAttemp) {
+                                        if (mylist[i].isFirstAttemp == true) {
                                           mylist[i].UpdateFirstAttempt();
                                         }
                                         currentColor1 = Colors.red[400];

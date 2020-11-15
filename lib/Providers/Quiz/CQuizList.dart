@@ -48,7 +48,7 @@ class CquizList extends ChangeNotifier {
       correct: "Anywhere,but starting on a new line.",
       isFirstAttemp: true,
     ),
-    SingleQuizQuestion(
+    /* SingleQuizQuestion(
       question: "What does this decleration mean, int x : 4.?",
       option1: "x is a four-digit integer.",
       option3: "x cannot be greater than a four-digit integer. ",
@@ -188,7 +188,7 @@ class CquizList extends ChangeNotifier {
       isFirstAttemp: true,
       option4: "switch",
       correct: "do-while",
-    ),
+    ),*/
   ];
   List<SingleQuizQuestion> get ListOfCquestions {
     return [...Clist];
