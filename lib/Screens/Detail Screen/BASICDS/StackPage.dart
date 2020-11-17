@@ -856,85 +856,75 @@ class StackPage extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20.0)),
                   color: Colors.yellow,
-                  child: ClipPath(
-                    child: Container(
-                      height: displayHeight(context) * 0.58,
-                      width: displayWidth(context) * 0.9,
-                      child: Padding(
-                        padding: const EdgeInsets.all(12.0),
-                        child: SingleChildScrollView(
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.only(top: 8.0),
-                                child: Center(
-                                  child: Text(
-                                    "KEYWORDS",
-                                    style: TextStyle(
-                                        shadows: <Shadow>[
-                                          Shadow(
-                                              blurRadius: 5,
-                                              color: Colors.white,
-                                              offset:
-                                                  Offset.fromDirection(5, 4))
-                                        ],
-                                        color: Colors.red,
-                                        fontFamily: "Ranchers",
-                                        letterSpacing: 0.8,
-                                        fontWeight: FontWeight.bold,
-                                        fontSize:
-                                            displayWidth(context) * 0.065),
-                                  ),
-                                ),
-                              ),
-                              Opacity(
-                                opacity: 0.0,
-                                child: Divider(
-                                  thickness: 2.0,
-                                  indent: 1.0,
-                                ),
-                              ),
-                              lifo,
-                              Divider(
-                                thickness: 0.8, color: Colors.black,
-                                //indent: 1.0,
-                              ),
-                              filo,
-                              Divider(
-                                thickness: 0.8, color: Colors.black,
-                                //indent: 1.0,
-                              ),
-                              top,
-                              Divider(
-                                thickness: 0.8, color: Colors.black,
-                                //indent: 1.0,
-                              ),
-                              push,
-                              Divider(
-                                thickness: 0.8, color: Colors.black,
-                                //indent: 1.0,
-                              ),
-                              pop,
-                              Divider(
-                                thickness: 0.8, color: Colors.black,
-                                //indent: 1.0,
-                              ),
-                              of,
-                              Divider(
-                                thickness: 0.8, color: Colors.black,
-                                //indent: 1.0,
-                              ),
-                              uf,
-                            ],
+                  child: Padding(
+                    padding: const EdgeInsets.all(12.0),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(top: 8.0),
+                          child: Center(
+                            child: Text(
+                              "KEYWORDS",
+                              style: TextStyle(
+                                  shadows: <Shadow>[
+                                    Shadow(
+                                        blurRadius: 5,
+                                        color: Colors.white,
+                                        offset: Offset.fromDirection(5, 4))
+                                  ],
+                                  color: Colors.red,
+                                  fontFamily: "Ranchers",
+                                  letterSpacing: 0.8,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: displayWidth(context) * 0.065),
+                            ),
                           ),
                         ),
-                      ),
+                        Opacity(
+                          opacity: 0.0,
+                          child: Divider(
+                            thickness: 2.0,
+                            indent: 1.0,
+                          ),
+                        ),
+                        lifo,
+                        Divider(
+                          thickness: 0.8, color: Colors.black,
+                          //indent: 1.0,
+                        ),
+                        filo,
+                        Divider(
+                          thickness: 0.8, color: Colors.black,
+                          //indent: 1.0,
+                        ),
+                        top,
+                        Divider(
+                          thickness: 0.8, color: Colors.black,
+                          //indent: 1.0,
+                        ),
+                        push,
+                        Divider(
+                          thickness: 0.8, color: Colors.black,
+                          //indent: 1.0,
+                        ),
+                        pop,
+                        Divider(
+                          thickness: 0.8, color: Colors.black,
+                          //indent: 1.0,
+                        ),
+                        of,
+                        Divider(
+                          thickness: 0.8, color: Colors.black,
+                          //indent: 1.0,
+                        ),
+                        uf,
+                      ],
                     ),
                   ),
                 ),
-              )
+              ),
             ],
           ),
         ),

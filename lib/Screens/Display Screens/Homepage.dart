@@ -32,14 +32,14 @@ class _HomeState extends State<Home> {
               });
             }),
         title: Text(
-          'Competitive Programming',
+          'Star Coding',
           style: TextStyle(
-            fontSize: displayWidth(context) * 0.045,
+            fontSize: displayWidth(context) * 0.048,
             fontWeight: FontWeight.bold,
             color: Colors.black,
           ),
         ),
-        //centerTitle: true,
+        // centerTitle: true,
         backgroundColor: Colors.orange[100],
         actions: [
           // Anything we wannna show after the title , we put it under actions

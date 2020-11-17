@@ -1,7 +1,7 @@
 import 'package:CP_App/Helpers/DeviceSize.dart';
-import 'package:CP_App/Screens/Detail%20Screen/Asymp/Asymptomatic.dart';
+import 'package:CP_App/Screens/Detail%20Screen/Asymp/Computational.dart';
 import 'package:flutter/material.dart';
-import 'package:CP_App/Screens/Detail%20Screen/Asymp/BasicDS.dart';
+import 'package:CP_App/Screens/Detail%20Screen/BASICDS/BasicDS.dart';
 import 'package:CP_App/Screens/Detail Screen/Chosing_language.dart';
 
 class Prerequisites extends StatelessWidget {
@@ -103,7 +103,7 @@ class Prerequisites extends StatelessWidget {
                           ),
                           Center(
                             child: Text(
-                              "Asymptomatic Notation",
+                              "Computational Complexity",
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                   color: Colors.white,
