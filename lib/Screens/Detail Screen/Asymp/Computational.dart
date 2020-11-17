@@ -57,6 +57,64 @@ class Asymptomatic extends StatelessWidget {
             ),
           ]),
     );
+    final t5 = new RichText(
+        text: TextSpan(
+            style: TextStyle(
+                fontSize: fontsize,
+                color: Colors.black,
+                fontWeight: FontWeight.bold),
+            children: <TextSpan>[
+          new TextSpan(
+            text: "Example : ",
+            style: TextStyle(
+                letterSpacing: 0.8,
+                fontFamily: "BreeSerif",
+                color: Colors.orange,
+                fontWeight: FontWeight.w400,
+                fontSize: displayWidth(context) * 0.062),
+          ),
+          new TextSpan(
+            text:
+                "Let’s suppose an array is already sorted, and we apply selection sort on it ,then the time taken by the algorithm is linear i.e. ",
+            style: TextStyle(fontSize: fontsize, fontWeight: FontWeight.w500),
+          ),
+          new TextSpan(
+            text: "best case. ",
+            style: TextStyle(
+                fontSize: fontsize,
+                color: Colors.red,
+                fontWeight: FontWeight.w500),
+          ),
+          new TextSpan(
+            text:
+                "But, when the array is in reverse order, the algorithm takes the maximum time to sort the elements i.e. ",
+            style: TextStyle(fontSize: fontsize, fontWeight: FontWeight.w500),
+          ),
+          new TextSpan(
+            text: "worst case. ",
+            style: TextStyle(
+                fontSize: fontsize,
+                color: Colors.red,
+                fontWeight: FontWeight.w500),
+          ),
+          new TextSpan(
+            text:
+                "When the given array is not sorted in any particular order ( increasing or decreasing ) , it takes ",
+            style: TextStyle(fontSize: fontsize, fontWeight: FontWeight.w500),
+          ),
+          new TextSpan(
+            text: "average time. ",
+            style: TextStyle(
+                fontSize: fontsize,
+                color: Colors.red,
+                fontWeight: FontWeight.w500),
+          ),
+          new TextSpan(
+            text: "These durations are denoted using asymptotic notations.",
+            style: TextStyle(fontSize: fontsize, fontWeight: FontWeight.w500),
+          ),
+        ]));
+
     final t3 = new RichText(
       text: TextSpan(
           style: TextStyle(
@@ -76,7 +134,7 @@ class Asymptomatic extends StatelessWidget {
             new TextSpan(
               text:
                   " Let’s suppose an algorithm contains a nested loop and a single loop, nested loop will run N*N times ,i.e N^2, while the other loop runs only N times . Now the total time of both the loops will be N^2 + N and its Big-O complexity will be O (N^2) because between N^2 and N, N^2 is a ",
-              style: TextStyle(fontSize: fontsize, fontWeight: FontWeight.w400),
+              style: TextStyle(fontSize: fontsize, fontWeight: FontWeight.w500),
             ),
             new TextSpan(
               text: "DOMINANT TERM.",
@@ -255,6 +313,19 @@ class Asymptomatic extends StatelessWidget {
                 ),
                 mydiv2,
                 t4,
+                mydiv,
+                t5,
+                Center(
+                  child: Text(
+                    "Types",
+                    style: TextStyle(
+                        letterSpacing: 0.8,
+                        fontFamily: "PatuaOne",
+                        color: Colors.blue[800],
+                        fontWeight: FontWeight.bold,
+                        fontSize: displayWidth(context) * 0.06),
+                  ),
+                ),
               ],
             ),
           ),
