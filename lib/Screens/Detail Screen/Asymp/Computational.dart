@@ -6,7 +6,7 @@ class Asymptomatic extends StatelessWidget {
   Widget build(BuildContext context) {
     double smallDivider = displayHeight(context) * 0.028;
     double verysmallDivider = displayHeight(context) * 0.01;
-    double fontsize = displayWidth(context) * 0.0445;
+    double fontsize = displayWidth(context) * 0.045;
     double keywordsize = displayWidth(context) * 0.048;
     double headingfontsize = displayWidth(context) * 0.062;
     double functionfontsize = displayWidth(context) * 0.055;
@@ -27,7 +27,7 @@ class Asymptomatic extends StatelessWidget {
           style: TextStyle(
               fontSize: fontsize,
               color: Colors.black,
-              fontWeight: FontWeight.bold),
+              fontWeight: FontWeight.w400),
           children: <TextSpan>[
             new TextSpan(
               text: "Definition : ",
@@ -45,7 +45,10 @@ class Asymptomatic extends StatelessWidget {
             ),
             new TextSpan(
               text: "“ Complexity ” ",
-              style: TextStyle(color: Colors.red, fontSize: fontsize),
+              style: TextStyle(
+                  color: Colors.red,
+                  fontWeight: FontWeight.w500,
+                  fontSize: fontsize),
             ),
             new TextSpan(
               text:
@@ -67,13 +70,13 @@ class Asymptomatic extends StatelessWidget {
                   letterSpacing: 0.8,
                   fontFamily: "BreeSerif",
                   color: Colors.orange,
-                  fontWeight: FontWeight.w500,
+                  fontWeight: FontWeight.w400,
                   fontSize: displayWidth(context) * 0.062),
             ),
             new TextSpan(
               text:
                   " Let’s suppose an algorithm contains a nested loop and a single loop, nested loop will run N*N times ,i.e N^2, while the other loop runs only N times . Now the total time of both the loops will be N^2 + N and its Big-O complexity will be O (N^2) because between N^2 and N, N^2 is a ",
-              style: TextStyle(fontSize: fontsize, fontWeight: FontWeight.w500),
+              style: TextStyle(fontSize: fontsize, fontWeight: FontWeight.w400),
             ),
             new TextSpan(
               text: "DOMINANT TERM.",
@@ -112,7 +115,7 @@ class Asymptomatic extends StatelessWidget {
           style: TextStyle(
               fontSize: fontsize,
               color: Colors.black,
-              fontWeight: FontWeight.bold),
+              fontWeight: FontWeight.w500),
           children: <TextSpan>[
             new TextSpan(
               text: "Definition : ",
@@ -120,7 +123,7 @@ class Asymptomatic extends StatelessWidget {
                   letterSpacing: 0.8,
                   fontFamily: "BreeSerif",
                   color: Colors.deepPurple,
-                  fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.w600,
                   fontSize: displayWidth(context) * 0.055),
             ),
             new TextSpan(
@@ -137,10 +140,11 @@ class Asymptomatic extends StatelessWidget {
           title: Text(
             "Computational Complexity",
             style: TextStyle(
+              color: Colors.white,
               fontSize: displayWidth(context) * 0.045,
             ),
           ),
-          backgroundColor: Colors.blue[200],
+          backgroundColor: Colors.blue,
         ),
         body: Padding(
           padding: EdgeInsets.all(12.0),
@@ -149,11 +153,25 @@ class Asymptomatic extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  "For any defined problem, there can be N number of solutions. This is true in general. If I have a problem and I discuss it with all my friends, they will all suggest different solutions. And I am the one who has to decide which solution would be best based on the circumstances. Similarly, for any problem which must be solved using a program, there can be an infinite number of solutions. The algorithm that is optimized in such a way that it gives result without much delay for any input is most suited for the problem, or we can say the measurement of an algorithm in terms of the time taken and space occupied by it. This is known as computational complexity.",
-                  textAlign: TextAlign.start,
-                  style: TextStyle(
-                      fontSize: fontsize, fontWeight: FontWeight.bold),
+                Center(
+                  child: Card(
+                    elevation: 10.0,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(16.0),
+                    ),
+                    color: Colors.yellow[100],
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Text(
+                        "For any defined problem, there can be N number of solutions. This is true in general. If I have a problem and I discuss it with all my friends, they will all suggest different solutions. And I am the one who has to decide which solution would be best based on the circumstances. Similarly, for any problem which must be solved using a program, there can be an infinite number of solutions. The algorithm that is optimized in such a way that it gives result without much delay for any input is most suited for the problem, or we can say the measurement of an algorithm in terms of the time taken and space occupied by it. This is known as computational complexity.",
+                        textAlign: TextAlign.start,
+                        style: TextStyle(
+                            wordSpacing: 1.0,
+                            fontSize: fontsize,
+                            fontWeight: FontWeight.w500),
+                      ),
+                    ),
+                  ),
                 ),
                 mydiv,
                 t1,
@@ -161,7 +179,9 @@ class Asymptomatic extends StatelessWidget {
                 Text(
                   "The following factors are :",
                   style: TextStyle(
-                      fontSize: fontsize, fontWeight: FontWeight.bold),
+                      fontSize: fontsize,
+                      //color: Colors.blueAccent,
+                      fontWeight: FontWeight.bold),
                 ),
                 Opacity(
                   opacity: 0.0,
@@ -191,7 +211,7 @@ class Asymptomatic extends StatelessWidget {
                       fontWeight: FontWeight.w500,
                       fontSize: displayWidth(context) * 0.05),
                 ),
-                mydiv,
+                mydiv2,
                 Center(
                   child: Text(
                     "Time complexity",
@@ -203,18 +223,13 @@ class Asymptomatic extends StatelessWidget {
                         fontSize: displayWidth(context) * 0.07),
                   ),
                 ),
-                Opacity(
-                  opacity: 0.0,
-                  child: Divider(
-                    height: displayHeight(context) * 0.001,
-                  ),
-                ),
+                mydiv,
                 t2,
                 mydiv,
                 Text(
                   "Using time complexity it becomes easy to estimate the running time of a program . Performing an accurate calculation of a program’s operation time is a very labor-intensive process (it depends on the compiler and the type of computer or speed of the processor). Therefore, we will not make an accurate measurement,  rather just a measurement of certain order of magnitude. Complexity can be viewed as the maximum number of primitive operations that a program may execute. We may leave regular operations like single addition, multiplication, assignment etc.  and concentrate on those that are performed the largest number of times. Such operations are referred to as \"dominant.\"",
                   style: TextStyle(
-                      fontSize: fontsize, fontWeight: FontWeight.w600),
+                      fontSize: fontsize, fontWeight: FontWeight.w400),
                 ),
                 mydiv,
                 t3,
@@ -238,7 +253,7 @@ class Asymptomatic extends StatelessWidget {
                     fontWeight: FontWeight.w600,
                   ),
                 ),
-                mydiv,
+                mydiv2,
                 t4,
               ],
             ),
