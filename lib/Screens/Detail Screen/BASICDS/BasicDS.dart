@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
 import 'StackPage.dart';
+import 'Tree.dart';
 
 class Basicds extends StatelessWidget {
   @override
@@ -34,6 +35,18 @@ class Basicds extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: Text("Stack"),
+                    ),
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => TreePage()));
+                  },
+                  child: Card(
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Text("Tree"),
                     ),
                   ),
                 )
