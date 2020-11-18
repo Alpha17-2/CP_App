@@ -10,6 +10,7 @@ class Asymptomatic extends StatelessWidget {
     double keywordsize = displayWidth(context) * 0.048;
     double headingfontsize = displayWidth(context) * 0.062;
     double functionfontsize = displayWidth(context) * 0.055;
+
     final mydiv = Opacity(
       opacity: 0.0,
       child: Divider(
@@ -21,6 +22,52 @@ class Asymptomatic extends StatelessWidget {
       child: Divider(
         height: smallDivider,
       ),
+    );
+    final t7 = new RichText(
+      text: TextSpan(
+          style: TextStyle(
+              fontSize: fontsize,
+              color: Colors.black,
+              fontWeight: FontWeight.w400),
+          children: <TextSpan>[
+            new TextSpan(
+              text: "Definition : ",
+              style: TextStyle(
+                  letterSpacing: 0.8,
+                  fontFamily: "BreeSerif",
+                  color: Colors.blue[800],
+                  fontWeight: FontWeight.bold,
+                  fontSize: displayWidth(context) * 0.045),
+            ),
+            new TextSpan(
+              text:
+                  " It is the one that encloses the function from above and below. Since it represents the upper and the lower bound of the running time of an algorithm, it is used for analyzing the average case complexity of an algorithm. ",
+              style: TextStyle(fontSize: displayWidth(context) * 0.04),
+            ),
+          ]),
+    );
+    final t6 = new RichText(
+      text: TextSpan(
+          style: TextStyle(
+              fontSize: fontsize,
+              color: Colors.black,
+              fontWeight: FontWeight.w400),
+          children: <TextSpan>[
+            new TextSpan(
+              text: "Definition : ",
+              style: TextStyle(
+                  letterSpacing: 0.8,
+                  fontFamily: "BreeSerif",
+                  color: Colors.blue[800],
+                  fontWeight: FontWeight.bold,
+                  fontSize: displayWidth(context) * 0.045),
+            ),
+            new TextSpan(
+              text:
+                  " Big-O notation (Upper Bounds) represents the upper bound of the running time of an algorithm. Thus, it gives the worst-case complexity of an algorithm. It tells us that a certain function will never exceed a specified time for any value of input n.",
+              style: TextStyle(fontSize: displayWidth(context) * 0.04),
+            ),
+          ]),
     );
     final t1 = new RichText(
       text: TextSpan(
@@ -213,7 +260,8 @@ class Asymptomatic extends StatelessWidget {
               children: [
                 Center(
                   child: Card(
-                    elevation: 10.0,
+                    elevation: 15.0,
+                    shadowColor: Colors.red[200],
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(16.0),
                     ),
@@ -315,6 +363,7 @@ class Asymptomatic extends StatelessWidget {
                 t4,
                 mydiv,
                 t5,
+                mydiv,
                 Center(
                   child: Text(
                     "Types",
@@ -323,9 +372,146 @@ class Asymptomatic extends StatelessWidget {
                         fontFamily: "PatuaOne",
                         color: Colors.blue[800],
                         fontWeight: FontWeight.bold,
-                        fontSize: displayWidth(context) * 0.06),
+                        fontSize: displayWidth(context) * 0.07),
                   ),
                 ),
+                mydiv2,
+                Card(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(16.0)),
+                  elevation: 15,
+                  shadowColor: Colors.red,
+                  child: ClipPath(
+                    child: Container(
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          begin: Alignment.bottomCenter,
+                          colors: [
+                            Colors.blue[100],
+                            Colors.blue[200],
+                            Colors.blue[300],
+                          ],
+                        ),
+                      ),
+                      height: displayHeight(context) * 0.6,
+                      width: displayWidth(context) * 1.0,
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: ListWheelScrollView(
+                          magnification: 2.5,
+                          // useMagnifier: true,
+                          offAxisFraction: 0.2,
+                          itemExtent: displayHeight(context) * 0.26,
+                          diameterRatio: 1.5,
+                          children: [
+                            Card(
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(16.0)),
+                                elevation: 15.0,
+                                color: Colors.yellow[300],
+                                child: Padding(
+                                  padding: EdgeInsets.all(10.0),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Padding(
+                                        padding:
+                                            const EdgeInsets.only(top: 4.0),
+                                        child: Center(
+                                          child: Text(
+                                            "Theta Notation",
+                                            style: TextStyle(
+                                                color: Colors.purple,
+                                                fontFamily: "Fredoka One",
+                                                fontWeight: FontWeight.w500,
+                                                fontSize:
+                                                    displayWidth(context) *
+                                                        0.045),
+                                          ),
+                                        ),
+                                      ),
+                                      t7,
+                                    ],
+                                  ),
+                                )),
+                            Card(
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(16.0)),
+                                elevation: 15.0,
+                                color: Colors.yellow[300],
+                                child: Padding(
+                                  padding: EdgeInsets.all(10.0),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Padding(
+                                        padding:
+                                            const EdgeInsets.only(top: 4.0),
+                                        child: Center(
+                                          child: Text(
+                                            "Big-O Notation",
+                                            style: TextStyle(
+                                                color: Colors.purple,
+                                                fontFamily: "Fredoka One",
+                                                fontWeight: FontWeight.w500,
+                                                fontSize:
+                                                    displayWidth(context) *
+                                                        0.045),
+                                          ),
+                                        ),
+                                      ),
+                                      t6,
+                                      mydiv,
+                                    ],
+                                  ),
+                                )),
+                            Card(
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(16.0)),
+                                elevation: 15.0,
+                                color: Colors.yellow[300],
+                                child: Padding(
+                                  padding: EdgeInsets.all(10.0),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Padding(
+                                        padding:
+                                            const EdgeInsets.only(top: 4.0),
+                                        child: Center(
+                                          child: Text(
+                                            "Omega Notation",
+                                            style: TextStyle(
+                                                color: Colors.purple,
+                                                fontFamily: "Fredoka One",
+                                                fontWeight: FontWeight.w500,
+                                                fontSize:
+                                                    displayWidth(context) *
+                                                        0.045),
+                                          ),
+                                        ),
+                                      ),
+                                      t6,
+                                      mydiv,
+                                    ],
+                                  ),
+                                )),
+                          ],
+                        ),
+                      ),
+                    ),
+                    clipper: ShapeBorderClipper(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(16.0))),
+                  ),
+                ),
+                mydiv2,
               ],
             ),
           ),

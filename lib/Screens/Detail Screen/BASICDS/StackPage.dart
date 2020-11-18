@@ -174,28 +174,30 @@ class StackPage extends StatelessWidget {
           style: TextStyle(
               fontSize: fontsize,
               color: Colors.black,
-              fontWeight: FontWeight.bold),
+              fontWeight: FontWeight.w500),
           children: <TextSpan>[
             new TextSpan(
                 text:
                     "Stack is a linear and dynamic data structure which follows "),
             new TextSpan(
-                text: "LIFO(Last In First Out) ",
-                style:
-                    TextStyle(color: Colors.red, fontWeight: FontWeight.bold)),
+                text: "LIFO (Last In First Out) ",
+                style: TextStyle(
+                    color: Colors.redAccent, fontWeight: FontWeight.bold)),
             new TextSpan(text: "or "),
             new TextSpan(
-                text: "FILO(First In Last Out) ",
-                style:
-                    TextStyle(color: Colors.red, fontWeight: FontWeight.bold)),
+                text: "FILO (First In Last Out) ",
+                style: TextStyle(
+                    color: Colors.redAccent, fontWeight: FontWeight.bold)),
             new TextSpan(
                 text:
                     "principle which states that the last item to be inserted into the stack is the first one to be deleted from it or the first item which was inserted into the stack will be deleted at last  from the stack.\n"),
             new TextSpan(
-                text: "The operations such as ",
-                style: TextStyle(fontWeight: FontWeight.bold)),
+              text: "\nThe operations such as ",
+            ),
             new TextSpan(
-                text: "Insertion(push) ", style: TextStyle(color: Colors.red)),
+                text: "Insertion (push) ",
+                style:
+                    TextStyle(fontWeight: FontWeight.w700, color: Colors.red)),
             new TextSpan(
               text: "and ",
               style: TextStyle(
@@ -203,10 +205,10 @@ class StackPage extends StatelessWidget {
               ),
             ),
             new TextSpan(
-                text: "deletion(pop) ",
+                text: "deletion (pop) ",
                 style: TextStyle(
                   color: Colors.red,
-                  fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.w700,
                 )),
             new TextSpan(
               text: "takes place from the common end known as ",
@@ -217,9 +219,6 @@ class StackPage extends StatelessWidget {
                     TextStyle(color: Colors.red, fontWeight: FontWeight.bold)),
             new TextSpan(
               text: "of the stack.",
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-              ),
             ),
             new TextSpan(
               text: "",
@@ -272,7 +271,18 @@ class StackPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              text1,
+              Center(
+                child: Card(
+                    elevation: 15.0,
+                    shadowColor: Colors.red[300],
+                    color: Colors.yellow[100],
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12.0)),
+                    child: Padding(
+                      padding: const EdgeInsets.all(12.0),
+                      child: text1,
+                    )),
+              ),
               Opacity(
                 opacity: 0.0,
                 child: Divider(
@@ -855,7 +865,7 @@ class StackPage extends StatelessWidget {
                   elevation: 12.0,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20.0)),
-                  color: Colors.yellow,
+                  color: Colors.yellow[400],
                   child: Padding(
                     padding: const EdgeInsets.all(12.0),
                     child: Column(
@@ -925,6 +935,12 @@ class StackPage extends StatelessWidget {
                   ),
                 ),
               ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: smallDivider,
+                ),
+              )
             ],
           ),
         ),
