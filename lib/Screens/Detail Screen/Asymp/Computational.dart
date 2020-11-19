@@ -23,6 +23,7 @@ class Asymptomatic extends StatelessWidget {
         height: smallDivider,
       ),
     );
+
     final t7 = new RichText(
       text: TextSpan(
           style: TextStyle(
@@ -46,6 +47,29 @@ class Asymptomatic extends StatelessWidget {
             ),
           ]),
     );
+    final t8 = new RichText(
+      text: TextSpan(
+          style: TextStyle(
+              fontSize: fontsize,
+              color: Colors.black,
+              fontWeight: FontWeight.w400),
+          children: <TextSpan>[
+            new TextSpan(
+              text: "Definition : ",
+              style: TextStyle(
+                  letterSpacing: 0.8,
+                  fontFamily: "BreeSerif",
+                  color: Colors.blue[800],
+                  fontWeight: FontWeight.bold,
+                  fontSize: displayWidth(context) * 0.045),
+            ),
+            new TextSpan(
+              text:
+                  " Omega notation represents the lower bound of the running time of an algorithm. Thus, it provides the best case complexity of an algorithm. It simply means that the algorithm will take at least this much time to complete its execution. It can definitely take more time than this too.",
+              style: TextStyle(fontSize: displayWidth(context) * 0.04),
+            ),
+          ]),
+    );
     final t6 = new RichText(
       text: TextSpan(
           style: TextStyle(
@@ -64,7 +88,7 @@ class Asymptomatic extends StatelessWidget {
             ),
             new TextSpan(
               text:
-                  " Big-O notation (Upper Bounds) represents the upper bound of the running time of an algorithm. Thus, it gives the worst-case complexity of an algorithm. It tells us that a certain function will never exceed a specified time for any value of input n.",
+                  "Big-O notation represents the upper bound of the running time of an algorithm. Thus, it gives the worst-case complexity of an algorithm. It tells us that a certain function will never exceed a specified time for any value of input n. ",
               style: TextStyle(fontSize: displayWidth(context) * 0.04),
             ),
           ]),
@@ -123,7 +147,7 @@ class Asymptomatic extends StatelessWidget {
           new TextSpan(
             text:
                 "Let’s suppose an array is already sorted, and we apply selection sort on it ,then the time taken by the algorithm is linear i.e. ",
-            style: TextStyle(fontSize: fontsize, fontWeight: FontWeight.w500),
+            style: TextStyle(fontSize: fontsize, fontWeight: FontWeight.w400),
           ),
           new TextSpan(
             text: "best case. ",
@@ -135,7 +159,7 @@ class Asymptomatic extends StatelessWidget {
           new TextSpan(
             text:
                 "But, when the array is in reverse order, the algorithm takes the maximum time to sort the elements i.e. ",
-            style: TextStyle(fontSize: fontsize, fontWeight: FontWeight.w500),
+            style: TextStyle(fontSize: fontsize, fontWeight: FontWeight.w400),
           ),
           new TextSpan(
             text: "worst case. ",
@@ -147,7 +171,7 @@ class Asymptomatic extends StatelessWidget {
           new TextSpan(
             text:
                 "When the given array is not sorted in any particular order ( increasing or decreasing ) , it takes ",
-            style: TextStyle(fontSize: fontsize, fontWeight: FontWeight.w500),
+            style: TextStyle(fontSize: fontsize, fontWeight: FontWeight.w400),
           ),
           new TextSpan(
             text: "average time. ",
@@ -158,7 +182,7 @@ class Asymptomatic extends StatelessWidget {
           ),
           new TextSpan(
             text: "These durations are denoted using asymptotic notations.",
-            style: TextStyle(fontSize: fontsize, fontWeight: FontWeight.w500),
+            style: TextStyle(fontSize: fontsize, fontWeight: FontWeight.w400),
           ),
         ]));
 
@@ -181,14 +205,17 @@ class Asymptomatic extends StatelessWidget {
             new TextSpan(
               text:
                   " Let’s suppose an algorithm contains a nested loop and a single loop, nested loop will run N*N times ,i.e N^2, while the other loop runs only N times . Now the total time of both the loops will be N^2 + N and its Big-O complexity will be O (N^2) because between N^2 and N, N^2 is a ",
-              style: TextStyle(fontSize: fontsize, fontWeight: FontWeight.w500),
+              style: TextStyle(
+                  wordSpacing: -0.2,
+                  fontSize: fontsize,
+                  fontWeight: FontWeight.w400),
             ),
             new TextSpan(
               text: "DOMINANT TERM.",
               style: TextStyle(
                   fontSize: fontsize,
                   color: Colors.red,
-                  fontWeight: FontWeight.w700),
+                  fontWeight: FontWeight.w600),
             ),
           ]),
     );
@@ -197,7 +224,7 @@ class Asymptomatic extends StatelessWidget {
           style: TextStyle(
               fontSize: fontsize,
               color: Colors.black,
-              fontWeight: FontWeight.bold),
+              fontWeight: FontWeight.w500),
           children: <TextSpan>[
             new TextSpan(
               text: "Definition : ",
@@ -234,7 +261,7 @@ class Asymptomatic extends StatelessWidget {
             new TextSpan(
               text:
                   "Asymptotic notations are the mathematical notations used to describe the running time of an algorithm when the input tends towards a particular value or a limiting value.",
-              style: TextStyle(fontSize: fontsize),
+              style: TextStyle(fontSize: fontsize, fontWeight: FontWeight.w400),
             ),
           ]),
     );
@@ -258,23 +285,26 @@ class Asymptomatic extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Center(
-                  child: Card(
-                    elevation: 15.0,
-                    shadowColor: Colors.red[200],
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(16.0),
-                    ),
-                    color: Colors.yellow[100],
-                    child: Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: Text(
-                        "For any defined problem, there can be N number of solutions. This is true in general. If I have a problem and I discuss it with all my friends, they will all suggest different solutions. And I am the one who has to decide which solution would be best based on the circumstances. Similarly, for any problem which must be solved using a program, there can be an infinite number of solutions. The algorithm that is optimized in such a way that it gives result without much delay for any input is most suited for the problem, or we can say the measurement of an algorithm in terms of the time taken and space occupied by it. This is known as computational complexity.",
-                        textAlign: TextAlign.start,
-                        style: TextStyle(
-                            wordSpacing: 1.0,
-                            fontSize: fontsize,
-                            fontWeight: FontWeight.w500),
+                Padding(
+                  padding: const EdgeInsets.only(top: 6.0),
+                  child: Center(
+                    child: Card(
+                      elevation: 15.0,
+                      shadowColor: Colors.red[200],
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(16.0),
+                      ),
+                      color: Colors.yellow[100],
+                      child: Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Text(
+                          "For any defined problem, there can be N number of solutions. This is true in general. If I have a problem and I discuss it with all my friends, they will all suggest different solutions. And I am the one who has to decide which solution would be best based on the circumstances. Similarly, for any problem which must be solved using a program, there can be an infinite number of solutions. The algorithm that is optimized in such a way that it gives result without much delay for any input is most suited for the problem, or we can say the measurement of an algorithm in terms of the time taken and space occupied by it. This is known as computational complexity.",
+                          textAlign: TextAlign.start,
+                          style: TextStyle(
+                              wordSpacing: 1.0,
+                              fontSize: fontsize,
+                              fontWeight: FontWeight.w500),
+                        ),
                       ),
                     ),
                   ),
@@ -393,7 +423,7 @@ class Asymptomatic extends StatelessWidget {
                           ],
                         ),
                       ),
-                      height: displayHeight(context) * 0.6,
+                      height: displayHeight(context) * 0.65,
                       width: displayWidth(context) * 1.0,
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
@@ -401,7 +431,7 @@ class Asymptomatic extends StatelessWidget {
                           magnification: 2.5,
                           // useMagnifier: true,
                           offAxisFraction: 0.2,
-                          itemExtent: displayHeight(context) * 0.26,
+                          itemExtent: displayHeight(context) * 0.28,
                           diameterRatio: 1.5,
                           children: [
                             Card(
@@ -497,7 +527,7 @@ class Asymptomatic extends StatelessWidget {
                                           ),
                                         ),
                                       ),
-                                      t6,
+                                      t8,
                                       mydiv,
                                     ],
                                   ),
@@ -512,6 +542,240 @@ class Asymptomatic extends StatelessWidget {
                   ),
                 ),
                 mydiv2,
+                Center(
+                  child: Text(
+                    "Complexity cases :",
+                    style: TextStyle(
+                        fontSize: displayWidth(context) * 0.06,
+                        color: Colors.deepOrange,
+                        fontFamily: "PatuaOne"),
+                  ),
+                ),
+                mydiv,
+                Text(
+                  "The algorithm efficiency is measured by the time taken by an algorithm to generate the required output. As the minimum number of steps an algorithm takes, is considered the best algorithm, that is, the efficiency is measured on minimum CPU usages. Algorithm efficiency is often calculated for the following three broad cases of input:",
+                  style: TextStyle(
+                      fontSize: fontsize, fontWeight: FontWeight.w400),
+                ),
+                mydiv,
+                Card(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(16.0)),
+                  child: ClipPath(
+                    child: Container(
+                      decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                        begin: Alignment.bottomLeft,
+                        colors: [
+                          Colors.blue[200],
+                          Colors.blue[200],
+                          Colors.blue[300]
+                        ],
+                      )),
+                      child: SafeArea(
+                        bottom: true,
+                        left: true,
+                        right: true,
+                        top: true,
+                        child: Padding(
+                          padding: const EdgeInsets.all(12.0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Center(
+                                child: Text(
+                                  "Best Case Complexity",
+                                  style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: displayWidth(context) * 0.05,
+                                      fontFamily: "HammersmithOne",
+                                      fontWeight: FontWeight.w500),
+                                ),
+                              ),
+                              mydiv,
+                              Text(
+                                "The best case complexity of an algorithm is the function defined by the minimum time or number of steps taken by the CPU to generate the output on the basis of input size .",
+                                style: TextStyle(
+                                    fontSize: fontsize,
+                                    fontWeight: FontWeight.w400),
+                              ),
+                              mydiv,
+                              Center(
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(16.0),
+                                  child: Image(
+                                    image: AssetImage("images/c1.jpg"),
+                                    fit: BoxFit.fill,
+                                    height: displayHeight(context) * 0.25,
+                                    width: displayWidth(context) * 0.55,
+                                  ),
+                                ),
+                              ),
+                              mydiv2,
+                              Text(
+                                "In the above code the value of num=4 is found at step 4 ( when i = 4 ) i.e , the loop runs only 4 times to get num=4 instead of executing up to 20 steps. Thus, it is the best-case complexity means use of minimum CPU time.",
+                                style: TextStyle(
+                                    wordSpacing: -0.3,
+                                    fontSize: fontsize,
+                                    fontWeight: FontWeight.w500),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    clipper: ShapeBorderClipper(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(16.0))),
+                  ),
+                ),
+                mydiv2,
+                Card(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(16.0)),
+                  child: ClipPath(
+                    child: Container(
+                      decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                        begin: Alignment.bottomLeft,
+                        colors: [
+                          Colors.blue[200],
+                          Colors.blue[200],
+                          Colors.blue[300]
+                        ],
+                      )),
+                      child: SafeArea(
+                        bottom: true,
+                        left: true,
+                        right: true,
+                        top: true,
+                        child: Padding(
+                          padding: const EdgeInsets.all(12.0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Center(
+                                child: Text(
+                                  "Worst Case Complexity",
+                                  style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: displayWidth(context) * 0.05,
+                                      fontFamily: "HammersmithOne",
+                                      fontWeight: FontWeight.w500),
+                                ),
+                              ),
+                              mydiv,
+                              Text(
+                                "The worst case complexity of an algorithm is the function defined by the maximum time or maximum number of steps taken by the CPU to generate the output on the basis of input size N.",
+                                style: TextStyle(
+                                    fontSize: fontsize,
+                                    fontWeight: FontWeight.w400),
+                              ),
+                              mydiv2,
+                              Center(
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(16.0),
+                                  child: Image(
+                                    image: AssetImage("images/c2.jpg"),
+                                    fit: BoxFit.fill,
+                                    height: displayHeight(context) * 0.25,
+                                    width: displayWidth(context) * 0.55,
+                                  ),
+                                ),
+                              ),
+                              mydiv,
+                              Text(
+                                "In the above code the value of num=100 is found at step 100 (last step) i.e., the loop runs 100 times to get num=100. Thus, it is the worst-case complexity , means use of maximum CPU time.",
+                                style: TextStyle(
+                                    wordSpacing: -0.3,
+                                    fontSize: fontsize,
+                                    fontWeight: FontWeight.w500),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    clipper: ShapeBorderClipper(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(16.0))),
+                  ),
+                ),
+                mydiv2,
+                Card(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(16.0)),
+                  child: ClipPath(
+                    child: Container(
+                      decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                        begin: Alignment.bottomLeft,
+                        colors: [
+                          Colors.blue[200],
+                          Colors.blue[200],
+                          Colors.blue[300]
+                        ],
+                      )),
+                      child: SafeArea(
+                        bottom: true,
+                        left: true,
+                        right: true,
+                        top: true,
+                        child: Padding(
+                          padding: const EdgeInsets.all(12.0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Center(
+                                child: Text(
+                                  "Average Case Complexity",
+                                  style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: displayWidth(context) * 0.05,
+                                      fontFamily: "HammersmithOne",
+                                      fontWeight: FontWeight.w500),
+                                ),
+                              ),
+                              mydiv,
+                              Text(
+                                "The average case complexity of an algorithm is the function defined by the average time or number of steps taken by the CPU to generate the output on the basis of input size N.",
+                                style: TextStyle(
+                                    fontSize: fontsize,
+                                    fontWeight: FontWeight.w400),
+                              ),
+                              mydiv2,
+                              Center(
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(16.0),
+                                  child: Image(
+                                    image: AssetImage("images/c3.jpg"),
+                                    fit: BoxFit.fill,
+                                    height: displayHeight(context) * 0.28,
+                                    width: displayWidth(context) * 0.6,
+                                  ),
+                                ),
+                              ),
+                              mydiv,
+                              Text(
+                                "In the above code we are performing selection sort on an unsorted array and we can see that this algorithm uses a nested loop to sort any array irrespective of the input array. It means that this algorithm will take O(n^2) time , even if the input array is already sorted .Therefore we say that the average case complexity of selection sort is O(n^2). ",
+                                style: TextStyle(
+                                    wordSpacing: -0.3,
+                                    fontSize: fontsize,
+                                    fontWeight: FontWeight.w500),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    clipper: ShapeBorderClipper(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(16.0))),
+                  ),
+                ),
               ],
             ),
           ),
