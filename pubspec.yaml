@@ -60,6 +60,8 @@ flutter:
   assets:
       
       - images/c1.jpg
+      - images/d1.png
+      - images/d2.png
       - images/c3.jpg
       - images/c2.jpg
       - images/C.jpg
