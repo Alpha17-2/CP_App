@@ -11,7 +11,18 @@ class Linkedlist extends StatelessWidget {
     double headingfontsize = displayWidth(context) * 0.062;
     double subheadingfontsize = displayWidth(context) * 0.053;
     double keywordfontsize = displayWidth(context) * 0.048;
-
+    final mydiv = Opacity(
+      opacity: 0.0,
+      child: Divider(
+        height: verysmallDivider,
+      ),
+    );
+    final mydiv2 = Opacity(
+      opacity: 0.0,
+      child: Divider(
+        height: smallDivider,
+      ),
+    );
     final text1 = new RichText(
       text: TextSpan(
           style: TextStyle(
@@ -21,7 +32,7 @@ class Linkedlist extends StatelessWidget {
           children: <TextSpan>[
             new TextSpan(
                 text:
-                    "A linked list is a linear data structure, in which the elements are not stored at contiguous memory locations. The elements in a linked list are linked using pointers. Each node of a list contains two fields - the  "),
+                    "A linked list is a linear and dynamic data structure, in which the elements are not stored at contiguous memory locations. The elements in a linked list are linked using pointers. Each node of a list contains two fields - the  "),
             new TextSpan(
                 text: "data ",
                 style: TextStyle(
@@ -33,7 +44,7 @@ class Linkedlist extends StatelessWidget {
                     color: Colors.redAccent, fontWeight: FontWeight.bold)),
             new TextSpan(
                 text:
-                    "to the next node. The last node has a reference to null. The entry point into a linked list is called head of the list.\n\nLinked lists are among the simplest and most common data structures.Linked list are dynamic, so the length of list can increase or decrease as necessary. Each node does not necessarily follow the previous one physically in the memory.\n\nThey can be used to implement several other common abstract data types, including "),
+                    "to the next node. The last node has a reference to null. The entry point into a linked list is called head of the list.\n\nThey can be used to implement several other common abstract data types, including "),
             new TextSpan(
                 text: "lists, stacks, queues, trees ,graphs ",
                 style:
@@ -53,7 +64,7 @@ class Linkedlist extends StatelessWidget {
           ),
           children: <TextSpan>[
             new TextSpan(
-                text: "•	Insertion :-",
+                text: "• Insertion :- ",
                 style: (TextStyle(
                   fontSize: displayWidth(context) * 0.052,
                   fontWeight: FontWeight.bold,
@@ -61,9 +72,9 @@ class Linkedlist extends StatelessWidget {
                   fontFamily: "PatuaOne",
                 ))),
             new TextSpan(
-                text: "Adds an element at the beginning of the list.\n"),
+                text: " Adds an element at the beginning of the list.\n"),
             new TextSpan(
-                text: "•	Deletion :-",
+                text: "• Deletion :- ",
                 style: (TextStyle(
                   fontSize: displayWidth(context) * 0.052,
                   fontWeight: FontWeight.bold,
@@ -71,25 +82,25 @@ class Linkedlist extends StatelessWidget {
                   fontFamily: "PatuaOne",
                 ))),
             new TextSpan(
-                text: "Deletes an element at the beginning of the list.\n"),
+                text: " Deletes an element from the beginning of the list.\n"),
             new TextSpan(
-                text: "•	Display :-",
+                text: "• Display :- ",
                 style: (TextStyle(
                   fontSize: displayWidth(context) * 0.052,
                   fontWeight: FontWeight.bold,
                   color: Colors.deepPurple,
                   fontFamily: "PatuaOne",
                 ))),
-            new TextSpan(text: "Displays the complete list.\n"),
+            new TextSpan(text: " Displays the complete list.\n"),
             new TextSpan(
-                text: "•	Search :-",
+                text: "• Search :-",
                 style: (TextStyle(
                   fontSize: displayWidth(context) * 0.052,
                   fontWeight: FontWeight.bold,
                   color: Colors.deepPurple,
                   fontFamily: "PatuaOne",
                 ))),
-            new TextSpan(text: "Searches an element using the given key."),
+            new TextSpan(text: " Searches an element using the given key."),
           ]),
     );
 
@@ -135,29 +146,31 @@ class Linkedlist extends StatelessWidget {
                       style: (TextStyle(
                         color: Colors.red,
                         fontSize: headingfontsize,
-                        fontWeight: FontWeight.bold,
+                        // fontWeight: FontWeight.bold,
                         fontFamily: "Ranchers",
                         letterSpacing: 0.9,
                       )),
                     ),
                   ),
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: verysmallDivider,
-                      )),
+                  mydiv,
                   Text(
-                      "Linked list can be visualized as a chain of nodes, where every node points to the next node.",
-                      style: TextStyle(fontWeight: FontWeight.bold)),
+                    "Linked list can be visualized as a chain of nodes, where every node points to the next node.",
+                    style: TextStyle(
+                        fontSize: fontsize, fontWeight: FontWeight.bold),
+                  ),
+                  mydiv,
                   Padding(
                     padding: const EdgeInsets.only(left: 17.0),
                     child: Text(
-                        "•	head points to the first node of the linked list"),
+                      "• head points to the first node of the linked list",
+                      style: TextStyle(fontSize: fontsize),
+                    ),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(left: 17.0),
                     child: Text(
-                        "•	next pointer of the last node is null, so if the next of the current node is null, we have reached the end of the linked list."),
+                        "• next pointer of the last node is null, so if the next of the current node is null, we have reached the end of the linked list.",
+                        style: TextStyle(fontSize: fontsize)),
                   ),
                   Opacity(
                       opacity: 0.0,
@@ -170,7 +183,7 @@ class Linkedlist extends StatelessWidget {
                       style: (TextStyle(
                         color: Colors.red,
                         fontSize: headingfontsize,
-                        fontWeight: FontWeight.bold,
+                        // fontWeight: FontWeight.bold,
                         fontFamily: "Ranchers",
                         letterSpacing: 0.9,
                       )),
@@ -193,9 +206,9 @@ class Linkedlist extends StatelessWidget {
                       style: (TextStyle(
                         color: Colors.red,
                         fontSize: headingfontsize,
-                        fontWeight: FontWeight.bold,
+                        // fontWeight: FontWeight.bold,
                         fontFamily: "Ranchers",
-                        letterSpacing: 0.9,
+                        letterSpacing: 0.8,
                       )),
                     ),
                   ),
@@ -205,7 +218,7 @@ class Linkedlist extends StatelessWidget {
                         height: smallDivider,
                       )),
                   Text(
-                    "•	Singly Linked List :- ",
+                    "• Singly Linked List :- ",
                     style: (TextStyle(
                       color: Colors.blue[800],
                       fontSize: subheadingfontsize,
@@ -220,14 +233,22 @@ class Linkedlist extends StatelessWidget {
                         height: verysmallDivider,
                       )),
                   Text(
-                      "A Singly-linked list is a collection of nodes linked together in a sequential way where each node of the singly linked list contains a data field and an address field .",
-                      style: (TextStyle(
-                        fontWeight: FontWeight.bold,
-                      ))),
+                    "A Singly-linked list is a collection of nodes linked together in a sequential way where each node of the singly linked list contains a data field and an address field .",
+                    style: (TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: fontsize,
+                    )),
+                  ),
+                  mydiv,
                   Padding(
                     padding: const EdgeInsets.only(left: 17.0),
                     child: Text(
-                        "•	Data part of the node stores actual information that is to be represented by the node .\n•	The link part of the node stores the address of its immediate successor."),
+                        "• Data part of the node stores actual information that is to be represented by the node .\n•	The link part of the node stores the address of its immediate successor."),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 17.0),
+                    child: Text(
+                        "• Data part of the node stores actual information that is to be represented by the node .\n•	The link part of the node stores the address of its immediate successor."),
                   ),
                   Opacity(
                       opacity: 0.0,
