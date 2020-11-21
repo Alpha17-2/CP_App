@@ -1,8 +1,10 @@
+import 'package:CP_App/Helpers/PageAnimation.dart';
 import 'package:flutter/material.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'StackPage.dart';
 import 'Tree.dart';
+import 'LinkedList.dart';
 
 class Basicds extends StatefulWidget {
   @override
@@ -570,6 +572,70 @@ class _BasicdsState extends State<Basicds> {
               ),
             ),
           )),
+      Container(
+          //data structures !!
+          constraints: BoxConstraints.expand(),
+          child: Padding(
+              padding: EdgeInsets.all(12.0),
+              child: SingleChildScrollView(
+                  child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                                context, MyPageAnimation(w: Linkedlist()));
+                          },
+                          child: Card(
+                            elevation: 20.0,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(16.0),
+                            ),
+                            child: ClipPath(
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  gradient: LinearGradient(
+                                    colors: [
+                                      Colors.red[200],
+                                      Colors.redAccent[100],
+                                      Colors.red[400],
+                                    ],
+                                  ),
+                                ),
+                                height: displayHeight(context) * 0.1,
+                                width: displayWidth(context) * 0.6,
+                                child: Center(
+                                  child: Text(
+                                    "Linked List",
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        shadows: <Shadow>[
+                                          Shadow(
+                                              blurRadius: 18.0,
+                                              color: Colors.black54,
+                                              offset:
+                                                  Offset.fromDirection(1, 1))
+                                        ],
+                                        fontWeight: FontWeight.bold,
+                                        fontSize:
+                                            displayWidth(context) * 0.055),
+                                  ),
+                                ),
+                              ),
+                              clipper: ShapeBorderClipper(
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius:
+                                          BorderRadius.circular(8.0))),
+                            ),
+                          ),
+                        ),
+                      ],
+                    )
+                  ]))))
     ];
 
     return Hero(
