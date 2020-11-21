@@ -7,9 +7,10 @@ class Linkedlist extends StatelessWidget {
     double smallDivider = displayHeight(context) * 0.028;
     double verysmallDivider = displayHeight(context) * 0.01;
     double fontsize = displayWidth(context) * 0.043;
-    double keywordsize = displayWidth(context) * 0.048;
+    double keywordsize = displayWidth(context) * 0.050;
     double headingfontsize = displayWidth(context) * 0.062;
-    double functionfontsize = displayWidth(context) * 0.055;
+    double subheadingfontsize = displayWidth(context) * 0.053;
+    double keywordfontsize = displayWidth(context) * 0.048;
 
     final text1 = new RichText(
       text: TextSpan(
@@ -46,40 +47,49 @@ class Linkedlist extends StatelessWidget {
     final text2 = new RichText(
       text: TextSpan(
           style: TextStyle(
-              fontSize: fontsize,
-              color: Colors.black,
-              fontWeight: FontWeight.w500),
+            fontSize: fontsize,
+            color: Colors.black,
+            //fontWeight: FontWeight.w500
+          ),
           children: <TextSpan>[
             new TextSpan(
                 text: "•	Insertion :-",
                 style: (TextStyle(
-                    fontSize: displayWidth(context) * 0.052,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.purple))),
+                  fontSize: displayWidth(context) * 0.052,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.deepPurple,
+                  fontFamily: "PatuaOne",
+                ))),
             new TextSpan(
                 text: "Adds an element at the beginning of the list.\n"),
             new TextSpan(
                 text: "•	Deletion :-",
                 style: (TextStyle(
-                    fontSize: displayWidth(context) * 0.052,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.purple))),
+                  fontSize: displayWidth(context) * 0.052,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.deepPurple,
+                  fontFamily: "PatuaOne",
+                ))),
             new TextSpan(
                 text: "Deletes an element at the beginning of the list.\n"),
             new TextSpan(
                 text: "•	Display :-",
                 style: (TextStyle(
-                    fontSize: displayWidth(context) * 0.052,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.purple))),
+                  fontSize: displayWidth(context) * 0.052,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.deepPurple,
+                  fontFamily: "PatuaOne",
+                ))),
             new TextSpan(text: "Displays the complete list.\n"),
             new TextSpan(
                 text: "•	Search :-",
                 style: (TextStyle(
-                    fontSize: displayWidth(context) * 0.052,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.purple))),
-            new TextSpan(text: "Searches an element using the given key.\n\n"),
+                  fontSize: displayWidth(context) * 0.052,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.deepPurple,
+                  fontFamily: "PatuaOne",
+                ))),
+            new TextSpan(text: "Searches an element using the given key."),
           ]),
     );
 
@@ -172,6 +182,231 @@ class Linkedlist extends StatelessWidget {
                         height: verysmallDivider,
                       )),
                   text2,
+                  Opacity(
+                      opacity: 0.0,
+                      child: Divider(
+                        height: verysmallDivider,
+                      )),
+                  Center(
+                    child: Text(
+                      "TYPES:- ",
+                      style: (TextStyle(
+                        color: Colors.red,
+                        fontSize: headingfontsize,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: "Ranchers",
+                        letterSpacing: 0.9,
+                      )),
+                    ),
+                  ),
+                  Opacity(
+                      opacity: 0.0,
+                      child: Divider(
+                        height: smallDivider,
+                      )),
+                  Text(
+                    "•	Singly Linked List :- ",
+                    style: (TextStyle(
+                      color: Colors.blue[800],
+                      fontSize: subheadingfontsize,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: "Breeserif",
+                      letterSpacing: 0.8,
+                    )),
+                  ),
+                  Opacity(
+                      opacity: 0.0,
+                      child: Divider(
+                        height: verysmallDivider,
+                      )),
+                  Text(
+                      "A Singly-linked list is a collection of nodes linked together in a sequential way where each node of the singly linked list contains a data field and an address field .",
+                      style: (TextStyle(
+                        fontWeight: FontWeight.bold,
+                      ))),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 17.0),
+                    child: Text(
+                        "•	Data part of the node stores actual information that is to be represented by the node .\n•	The link part of the node stores the address of its immediate successor."),
+                  ),
+                  Opacity(
+                      opacity: 0.0,
+                      child: Divider(
+                        height: verysmallDivider,
+                      )),
+                  Text(
+                      "One way chain or singly linked list can be traversed only in one direction. In other words, we can say that each node contains only next pointer, therefore we can not traverse the list in the reverse direction."),
+                  Opacity(
+                      opacity: 0.0,
+                      child: Divider(
+                        height: verysmallDivider,
+                      )),
+                  Text("The structure of the node in the Singly Linked List is",
+                      style: TextStyle(fontWeight: FontWeight.bold)),
+                  Opacity(
+                      opacity: 0.0,
+                      child: Divider(
+                        height: smallDivider,
+                      )),
+                  Text("Operations :-",
+                      style: TextStyle(
+                        fontFamily: "ConcertOne",
+                        fontWeight: FontWeight.bold,
+                        fontSize: subheadingfontsize,
+                        color: Colors.green,
+                      )),
+                  Opacity(
+                      opacity: 0.0,
+                      child: Divider(
+                        height: smallDivider,
+                      )),
+                  Text("1. Node Creation :-",
+                      style: TextStyle(
+                        fontFamily: "PatuaOne",
+                        fontWeight: FontWeight.bold,
+                        fontSize: keywordsize,
+                        color: Colors.deepPurple,
+                      )),
+                  Opacity(
+                      opacity: 0.0,
+                      child: Divider(
+                        height: smallDivider,
+                      )),
+                  Text("2. Insertion at beginning :-",
+                      style: TextStyle(
+                        fontFamily: "PatuaOne",
+                        fontWeight: FontWeight.bold,
+                        fontSize: keywordsize,
+                        color: Colors.deepPurple,
+                      )),
+                  Opacity(
+                      opacity: 0.0,
+                      child: Divider(
+                        height: verysmallDivider,
+                      )),
+                  Text(
+                      "• Allocate the space for the new node and store data into the data part of the node. This will be done by the following statements."),
+                  Opacity(
+                      opacity: 0.0,
+                      child: Divider(
+                        height: verysmallDivider,
+                      )),
+                  Text(
+                      "• Make the link part of the new node pointing to the existing first node of the list. This will be done by using the following statement."),
+                  Opacity(
+                      opacity: 0.0,
+                      child: Divider(
+                        height: verysmallDivider,
+                      )),
+                  Text(
+                      "• 3.	At the last, we need to make the new node as the first node of the list this will be done by using the following statement"),
+                  Opacity(
+                      opacity: 0.0,
+                      child: Divider(
+                        height: smallDivider,
+                      )),
+                  Text("2. Insertion at end :-",
+                      style: TextStyle(
+                        fontFamily: "PatuaOne",
+                        fontWeight: FontWeight.bold,
+                        fontSize: keywordsize,
+                        color: Colors.deepPurple,
+                      )),
+                  Opacity(
+                      opacity: 0.0,
+                      child: Divider(
+                        height: verysmallDivider,
+                      )),
+                  Text("1. When the node is being added to an empty list:-",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.red,
+                      )),
+                  Opacity(
+                      opacity: 0.0,
+                      child: Divider(
+                        height: verysmallDivider,
+                      )),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 30.0),
+                    child: Text(
+                        "• The condition (head == NULL) gets satisfied. Hence, we just need to allocate the space for the node by using malloc statement in C. Data and the link part of the node are set up by using the following statements"),
+                  ),
+                  Opacity(
+                      opacity: 0.0,
+                      child: Divider(
+                        height: verysmallDivider,
+                      )),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 30.0),
+                    child: Text(
+                        "• Since, ptr is the only node that will be inserted in the list hence, we need to make this node pointed by the head pointer of the list. This will be done by using the following Statements"),
+                  ),
+                  Opacity(
+                      opacity: 0.0,
+                      child: Divider(
+                        height: verysmallDivider,
+                      )),
+                  Opacity(
+                      opacity: 0.0,
+                      child: Divider(
+                        height: verysmallDivider,
+                      )),
+                  Text("2. When node is being added to the end of the list:-",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.red,
+                      )),
+                  Opacity(
+                      opacity: 0.0,
+                      child: Divider(
+                        height: verysmallDivider,
+                      )),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 30.0),
+                    child: Text(
+                        "•	The condition Head = NULL would fail, since Head is not null. Now, we need to declare a temporary pointer temp in order to traverse through the list. temp is made to point the first node of the list."),
+                  ),
+                  Opacity(
+                      opacity: 0.0,
+                      child: Divider(
+                        height: verysmallDivider,
+                      )),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 30.0),
+                    child: Text(
+                        "• Then, traverse through the entire linked list using the statements:"),
+                  ),
+                  Opacity(
+                      opacity: 0.0,
+                      child: Divider(
+                        height: verysmallDivider,
+                      )),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 30.0),
+                    child: Text(
+                        "• At the end of the loop, the temp will be pointing to the last node of the list. Now, allocate the space for the new node, and assign the item to its data part."),
+                  ),
+                  Opacity(
+                      opacity: 0.0,
+                      child: Divider(
+                        height: verysmallDivider,
+                      )),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 30.0),
+                    child: Text(
+                        "• Since the new node is going to be the last node of the list hence, the next part of this node needs to be pointing to the null."),
+                  ),
+                  Opacity(
+                      opacity: 0.0,
+                      child: Divider(
+                        height: verysmallDivider,
+                      )),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 30.0),
+                    child: Text(
+                        "• We need to make the next part of the temp node (which is currently the last node of the list) point to the new node (ptr) ."),
+                  ),
                 ]))));
   }
 }
