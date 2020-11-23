@@ -30,10 +30,10 @@ class Mydrawer extends StatelessWidget {
         children: <Widget>[
           Container(
             width: double.infinity,
-            height: 150,
+            height: displayHeight(context) * 0.2,
             color: Colors.white,
             child: Image.asset(
-              "images/mylogo2.jpg",
+              "images/drawerlogo.jpeg",
               fit: BoxFit.fill,
             ),
           ),
@@ -55,20 +55,6 @@ class Mydrawer extends StatelessWidget {
             onTap: () {
               Navigator.of(context).pushNamed(Prerequisites.routeName);
             },
-          ),
-          Opacity(opacity: 0.0, child: Divider()),
-          ListTile(
-            leading: CircleAvatar(
-              backgroundImage: AssetImage('images/algorithm.png'),
-              radius: imageSize,
-            ),
-            title: Text(
-              'Algorithms Corner',
-              style: TextStyle(
-                  color: Colors.black,
-                  fontSize: textSize,
-                  fontWeight: FontWeight.bold),
-            ),
           ),
           Opacity(opacity: 0.0, child: Divider()),
           ListTile(

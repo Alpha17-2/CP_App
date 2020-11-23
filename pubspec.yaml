@@ -76,12 +76,9 @@ flutter:
       - images/st10.png
       - images/correctanswer.png
       - images/quizui3.jpg
-      - images/logo.jpeg
       - images/linkedlist.png
       - images/graph.png
       - images/binarytree.png
-      - images/mylogo.jpg
-      - images/mylogo2.jpg
       - images/stack.png
       - images/queue.jpg
       - images/C++.jpg
@@ -104,7 +101,6 @@ flutter:
       - images/swipeatproblem.png
       - images/swipe.png
       - images/back.jpg
-      - images/logo2.png
       - images/confused.png
       - images/atcoder.png
       - images/codeforces.jpg
@@ -136,6 +132,19 @@ flutter:
       - images/hashmap.jpg
       - images/sorting.png
       - images/wronganswer.png 
+      - images/tree1.png
+      - images/tree1.jpeg
+      - images/tree2.png
+      - images/tree3.png
+      - images/tree4.png
+      - images/tree5.png
+      - images/inorder1.jpg
+      - images/preorder.jpg
+      - images/postorder.jpg
+      - images/crop.jpg
+      - images/applogo.png
+      - images/drawerlogo.jpeg
+
     
   
       

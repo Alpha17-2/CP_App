@@ -243,12 +243,21 @@ class Linkedlist extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(left: 17.0),
                     child: Text(
-                        "• Data part of the node stores actual information that is to be represented by the node .\n•	The link part of the node stores the address of its immediate successor."),
+                      "• Data part of the node stores actual information that is to be represented by the node .",
+                      style: TextStyle(
+                        fontSize: fontsize,
+                      ),
+                    ),
                   ),
+                  mydiv,
                   Padding(
                     padding: const EdgeInsets.only(left: 17.0),
                     child: Text(
-                        "• Data part of the node stores actual information that is to be represented by the node .\n•	The link part of the node stores the address of its immediate successor."),
+                      "• The link part of the node stores the address of its immediate successor.",
+                      style: TextStyle(
+                        fontSize: fontsize,
+                      ),
+                    ),
                   ),
                   Opacity(
                       opacity: 0.0,
