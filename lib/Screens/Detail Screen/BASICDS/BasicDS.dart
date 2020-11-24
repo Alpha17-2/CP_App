@@ -578,109 +578,125 @@ class _BasicdsState extends State<Basicds> {
             ),
           )),
       Container(
-        // 3rd Container = Implementation of codes !!
-        constraints: BoxConstraints.expand(),
-        child: Padding(
-          padding: EdgeInsets.all(12.0),
-          child: SingleChildScrollView(
+          // 3rd Container = Implementation of codes !!
+          constraints: BoxConstraints.expand(),
+          decoration: BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage("images/black.jpg"), fit: BoxFit.fill)),
+          child: Padding(
+            padding: const EdgeInsets.only(top: 20.0, left: 8.0, right: 8.0),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                GestureDetector(
-                  onTap: () {
-                    Navigator.push(context, MyPageAnimation(w: Linkedlist()));
-                  },
-                  child: Card(
-                    elevation: 20.0,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(16.0),
-                    ),
-                    child: ClipPath(
-                      child: Container(
-                        decoration: BoxDecoration(
-                          gradient: LinearGradient(
-                            colors: [
-                              Colors.red[200],
-                              Colors.redAccent[100],
-                              Colors.red[400],
-                            ],
-                          ),
-                        ),
-                        height: displayHeight(context) * 0.1,
-                        width: displayWidth(context) * 0.6,
-                        child: Center(
-                          child: Text(
-                            "Linked List",
-                            style: TextStyle(
-                                color: Colors.white,
-                                shadows: <Shadow>[
-                                  Shadow(
-                                      blurRadius: 18.0,
-                                      color: Colors.black54,
-                                      offset: Offset.fromDirection(1, 1))
-                                ],
-                                fontWeight: FontWeight.bold,
-                                fontSize: displayWidth(context) * 0.055),
-                          ),
-                        ),
-                      ),
-                      clipper: ShapeBorderClipper(
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(8.0))),
-                    ),
+                Center(
+                  child: Text(
+                    "Non Primitive",
+                    style: TextStyle(
+                        fontSize: displayWidth(context) * 0.058,
+                        color: Colors.yellow,
+                        fontFamily: "ConcertOne"),
                   ),
                 ),
-                FlatButton(
-                    onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => StackPage()));
-                    },
-                    child: Padding(
-                      padding: EdgeInsets.all(12.0),
-                      child: Text("Stack"),
-                    )),
-                FlatButton(
-                    onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Graphpage()));
-                    },
-                    child: Padding(
-                      padding: EdgeInsets.all(12.0),
-                      child: Text("Graph"),
-                    )),
+                mydiv,
+                Center(
+                  child: Container(
+                      height: displayHeight(context) * 0.04,
+                      child: VerticalDivider(
+                        color: Colors.white,
+                        thickness: displayWidth(context) * 0.0065,
+                      )),
+                ),
+                Center(
+                  child: Divider(
+                    color: Colors.white,
+                    indent: displayWidth(context) * 0.38,
+                    endIndent: displayWidth(context) * 0.38,
+                    thickness: displayWidth(context) * 0.0065,
+                  ),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(left: 80.0),
+                      child: Container(
+                          height: displayHeight(context) * 0.04,
+                          child: VerticalDivider(
+                            color: Colors.white,
+                            thickness: displayWidth(context) * 0.0065,
+                          )),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 80.0),
+                      child: Container(
+                        height: displayHeight(context) * 0.04,
+                        child: VerticalDivider(
+                          color: Colors.white,
+                          thickness: displayWidth(context) * 0.0065,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(left: 80.0),
+                      child: Text(
+                        "Linear",
+                        style: TextStyle(
+                            fontSize: displayWidth(context) * 0.05,
+                            color: Colors.yellow,
+                            fontFamily: "ConcertOne"),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 80.0),
+                      child: Text(
+                        "Non Linear",
+                        style: TextStyle(
+                            fontSize: displayWidth(context) * 0.05,
+                            color: Colors.yellow,
+                            fontFamily: "ConcertOne"),
+                      ),
+                    )
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(left: 0.0),
+                      child: Container(
+                          height: displayHeight(context) * 0.04,
+                          child: VerticalDivider(
+                            color: Colors.white,
+                            thickness: displayWidth(context) * 0.0065,
+                          )),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 0.0),
+                      child: Container(
+                        height: displayHeight(context) * 0.04,
+                        child: VerticalDivider(
+                          color: Colors.white,
+                          thickness: displayWidth(context) * 0.0065,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
                 FlatButton(
                     onPressed: () {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) => TreePage()));
                     },
-                    child: Padding(
-                      padding: EdgeInsets.all(12.0),
-                      child: Text("Tree"),
-                    )),
-                FlatButton(
-                    onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => ArrayPage()));
-                    },
-                    child: Padding(
-                      padding: EdgeInsets.all(12.0),
-                      child: Text("Array"),
-                    )),
-                FlatButton(
-                    onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Queuepage()));
-                    },
-                    child: Padding(
-                      padding: EdgeInsets.all(12.0),
-                      child: Text("Queue"),
-                    )),
+                    child: Text("tree"))
               ],
             ),
-          ),
-        ),
-      )
+          ))
     ];
 
     return Hero(

@@ -29,14 +29,13 @@ class Mydrawer extends StatelessWidget {
       child: Column(
         children: <Widget>[
           Container(
-            width: double.infinity,
-            height: displayHeight(context) * 0.2,
-            color: Colors.white,
-            child: Image.asset(
-              "images/drawerlogo.jpeg",
-              fit: BoxFit.fill,
-            ),
-          ),
+              width: double.infinity,
+              height: displayHeight(context) * 0.2,
+              color: Colors.white,
+              child: Image(
+                image: AssetImage("images/finallogo.jpg"),
+                fit: BoxFit.fill,
+              )),
           Opacity(
               opacity: 0.0,
               child: Divider(height: displayHeight(context) * 0.025)),

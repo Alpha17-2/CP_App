@@ -82,7 +82,23 @@ class _TreePageState extends State<TreePage> {
             ),
           ]),
     );
-
+    final code1 = new RichText(
+      text: TextSpan(
+          style: TextStyle(
+            fontSize: fontsize,
+            color: Colors.black,
+            //fontWeight: FontWeight.w500
+          ),
+          children: <TextSpan>[
+            new TextSpan(
+                text:
+                    'void insert(int item)  \n{  \nstruct node *ptr, *parentptr , *nodeptr;  \nptr = (struct node *) malloc(sizeof (struct node));  \nif(ptr == NULL)  \n{  \nprintf("cannot insert");  \n}  \nelse   \n{  \nptr -> data = item;  \nptr -> left = NULL;  \nptr -> right = NULL;   \nif(root == NULL)  \n{  \nroot = ptr;  \nroot -> left = NULL;  \nroot -> right = NULL;  \n}  \nelse   \n{  \nparentptr = NULL;\nnodeptr=root;   \nwhile(nodeptr != NULL)  \n{  \nparentptr = nodeptr;   \nif(item < nodeptr->data)  \n{  \nnodeptr = nodeptr -> left;   \n}   \nelse   \n{  \nnodeptr = nodeptr -> right;  \n}  \n}  \nif(item < parentptr -> data)  \n{  \nparentptr -> left = ptr;   \n}  \nelse   \n{  \nparentptr -> right =ptr;   \n}\n}\nprintf("Node Inserted");\n}\n}\n',
+                style: (TextStyle(
+                  fontSize: fontsize,
+                  fontWeight: FontWeight.w500,
+                ))),
+          ]),
+    );
     final ListOfContainers = [
       Container(
         child: Padding(
@@ -572,6 +588,8 @@ class _TreePageState extends State<TreePage> {
       // End of 1st Container
 
       Container(
+        //  2nd container
+
         child: Padding(
           padding: const EdgeInsets.only(
               top: 12.0, left: 10, right: 10, bottom: 8.0),
@@ -777,6 +795,497 @@ class _TreePageState extends State<TreePage> {
                 ),
                 mydiv2,
                 mydiv,
+              ],
+            ),
+          ),
+        ),
+      ),
+      // End of 2nd Container
+      Container(
+        child: Padding(
+          padding: EdgeInsets.only(left: 10.0, right: 10.0, top: 12.0),
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Center(
+                  child: Text(
+                    "Types of Trees :-",
+                    style: TextStyle(
+                        color: Colors.red,
+                        fontFamily: "CreteRound",
+                        fontSize: displayWidth(context) * 0.065,
+                        fontWeight: FontWeight.w500),
+                  ),
+                ),
+                Opacity(
+                  opacity: 0.0,
+                  child: Divider(
+                    height: smallDivider,
+                  ),
+                ),
+                Text(
+                  "1. General Tree :-",
+                  style: TextStyle(
+                      color: Colors.blue,
+                      fontFamily: "PatuaOne",
+                      fontSize: headingsize,
+                      fontWeight: FontWeight.w500),
+                ),
+                mydiv,
+                Text(
+                  "If no constraint is placed on the hierarchy of the tree, a tree is called a general tree. Every node may have infinite numbers of children in General Tree. The tree is the super-set of all other trees. ",
+                  style: TextStyle(
+                    fontSize: fontsize,
+                  ),
+                ),
+                Opacity(
+                  opacity: 0.0,
+                  child: Divider(
+                    height: verysmallDivider,
+                  ),
+                ),
+                Text(
+                  "2. Binary Tree :-",
+                  style: TextStyle(
+                      color: Colors.blue,
+                      fontFamily: "PatuaOne",
+                      fontSize: headingsize,
+                      fontWeight: FontWeight.w500),
+                ),
+                Opacity(
+                  opacity: 0.0,
+                  child: Divider(
+                    height: verysmallDivider,
+                  ),
+                ),
+                Text(
+                  "A binary tree is a hierarchical data structure in which each node has at most two children generally referred as left child and right child.\nEach node contains three components:\n•	 Pointer to left subtree\n•	 Pointer to right subtree\n•	Data element\nThe topmost node in the tree is called the root. An empty tree is represented by ",
+                  style: TextStyle(
+                    fontSize: fontsize,
+                  ),
+                ),
+                Text(
+                  "NULL pointer.",
+                  style: TextStyle(
+                    fontSize: fontsize,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                Text(
+                  "When certain constraints and characteristics are applied in a Binary tree, a number of others such as AVL tree, BST (Binary Search Tree), RBT tree, etc. are also used.",
+                  style: TextStyle(
+                    fontSize: fontsize,
+                  ),
+                ),
+                Opacity(
+                  opacity: 0.0,
+                  child: Divider(
+                    height: verysmallDivider,
+                  ),
+                ),
+                Text(
+                  "Insertion in Binary Tree ",
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: displayWidth(context) * 0.062,
+                      fontWeight: FontWeight.w600),
+                ),
+                Opacity(
+                  opacity: 0.0,
+                  child: Divider(
+                    height: verysmallDivider,
+                  ),
+                ),
+
+                Card(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12.0)),
+                  color: Colors.yellow[100],
+                  child: Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Text(
+                      "• To insert a new node in a binary tree, traverse the whole tree.\n• If we find a node whose left child is empty, we make new key as left child of the node.\n• Else if we find a node whose right child is empty, we make the new key as right child.\n• keep traversing the tree until we find a node whose either left or right is empty.",
+                      style: TextStyle(
+                        fontSize: fontsize,
+                      ),
+                    ),
+                  ),
+                ),
+                Opacity(
+                  opacity: 0.0,
+                  child: Divider(
+                    height: verysmallDivider,
+                  ),
+                ),
+                //insert image
+                Text(
+                  "Deletion in Binary Tree ",
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: displayWidth(context) * 0.062,
+                      fontWeight: FontWeight.w600),
+                ),
+
+                // Make Card Here
+                Text(
+                  "1. Starting at root, find the deepest and rightmost node in binary tree and node which we want to delete. \n2. Replace the deepest rightmost node’s data with node to be deleted. \n3. Then delete the deepest rightmost node",
+                  style: TextStyle(
+                    fontSize: fontsize,
+                  ),
+                ),
+                Opacity(
+                  opacity: 0.0,
+                  child: Divider(
+                    height: verysmallDivider,
+                  ),
+                ),
+                //insert image
+                Text(
+                  "3. Binary Search Tree :-",
+                  style: TextStyle(
+                      color: Colors.blue,
+                      fontFamily: "PatuaOne",
+                      fontSize: headingsize,
+                      fontWeight: FontWeight.w500),
+                ),
+                Opacity(
+                  opacity: 0.0,
+                  child: Divider(
+                    height: verysmallDivider,
+                  ),
+                ),
+                Text(
+                  "A Binary Search Tree (BST) is a tree in which all the nodes follow the below-mentioned properties −\n•	The value of the key of the left sub-tree is less than the value of its parent (root) node's key.\n•	The value of the key of the right sub-tree is greater than or equal to the value of its parent (root) node's key.\n\nThus, BST divides all its sub-trees into two segments; the left sub-tree and the right sub-tree and can be defined as:\n",
+                  style: TextStyle(
+                    fontSize: fontsize,
+                  ),
+                ),
+                Opacity(
+                  opacity: 0.0,
+                  child: Divider(
+                    height: verysmallDivider,
+                  ),
+                ),
+                Center(
+                  child: Card(
+                    elevation: 12.0,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20.0)),
+                    color: Colors.yellow[200],
+                    child: Padding(
+                      padding: const EdgeInsets.all(12.0),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(top: 8.0),
+                            child: Center(
+                              child: Text(
+                                "left_subtree (keys) < node (key) ≤ right_subtree (keys)",
+                                style: TextStyle(
+                                    color: Colors.red,
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: displayWidth(context) * 0.04),
+                              ),
+                            ),
+                          ),
+                          Opacity(
+                            opacity: 0.0,
+                            child: Divider(
+                              thickness: 2.0,
+                              indent: 1.0,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                Opacity(
+                  opacity: 0.0,
+                  child: Divider(
+                    height: verysmallDivider,
+                  ),
+                ),
+                Text(
+                  "Insertion in Binary Search Tree ",
+                  style: TextStyle(
+                      color: Colors.orange,
+                      fontSize: displayWidth(context) * 0.062,
+                      fontWeight: FontWeight.w500),
+                ),
+                Opacity(
+                  opacity: 0.0,
+                  child: Divider(
+                    height: verysmallDivider,
+                  ),
+                ),
+                Card(
+                  color: Colors.yellow[100],
+                  child: Padding(
+                    padding: const EdgeInsets.all(12.0),
+                    child: Text(
+                      "Insert (TREE, ITEM)\nStep 1: IF TREE = NULL\n  Allocate memory for TREE\n  SET TREE -> DATA = ITEM\n  SET TREE -> LEFT = TREE -> RIGHT = NULL\n  ELSE\n   IF ITEM < TREE -> DATA\n  Insert(TREE -> LEFT, ITEM)\n  ELSE\n  Insert(TREE -> RIGHT, ITEM)\n [END OF IF]\n [END OF IF]\nStep 2: END",
+                      style: TextStyle(
+                          fontSize: fontsize, fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                ),
+                Opacity(
+                  opacity: 0.0,
+                  child: Divider(
+                    height: verysmallDivider,
+                  ),
+                ),
+                //insert algorithm image
+                //insert image
+                Text(
+                  "\nDeletion in Binary Search Tree ",
+                  style: TextStyle(
+                      color: Colors.orange,
+                      fontSize: displayWidth(context) * 0.062,
+                      fontWeight: FontWeight.w500),
+                ),
+                Opacity(
+                  opacity: 0.0,
+                  child: Divider(
+                    height: verysmallDivider,
+                  ),
+                ),
+                Text(
+                  "Deletion",
+                  style: TextStyle(
+                      color: Colors.red,
+                      fontSize: displayWidth(context) * 0.05,
+                      fontWeight: FontWeight.w500),
+                ),
+                Opacity(
+                  opacity: 0.0,
+                  child: Divider(
+                    height: verysmallDivider,
+                  ),
+                ),
+                Text(
+                  "Delete function is used to delete the specified node from a binary search tree. However, we must delete a node from a binary search tree in such a way, that the property of binary search tree doesn't violate. There are three situations of deleting a node from binary search tree.",
+                  style: TextStyle(
+                    fontSize: fontsize,
+                  ),
+                ),
+                Opacity(
+                  opacity: 0.0,
+                  child: Divider(
+                    height: verysmallDivider,
+                  ),
+                ),
+
+                //insert image
+                //insert algorithm
+                Text(
+                  "AVL Trees :-",
+                  style: TextStyle(
+                      color: Colors.blue,
+                      fontFamily: "PatuaOne",
+                      fontSize: headingsize,
+                      fontWeight: FontWeight.w500),
+                ),
+                Opacity(
+                  opacity: 0.0,
+                  child: Divider(
+                    height: verysmallDivider,
+                  ),
+                ),
+                Text(
+                  "AVL  tree is an acronym for Adelson-Velsky and Landis tree. It is a self balancing binary search tree in which the difference of heights of left and right subtrees of any node is less than or equal to one.\n\nLet T be a non-empty binary tree with TL and TR as its left and right subtrees. The tree is height balanced if:\n\n•	TL and TR are height balanced\n•   Balance factor should be in the range [-1,1] ,where balance factor is the difference between the heights of the left and right subtrees of that node ( hL - hR <= 1, where hL - hR are the heights of TL and TR )Representation of bin",
+                  style: TextStyle(
+                    fontSize: fontsize,
+                  ),
+                ),
+                Opacity(
+                  opacity: 0.0,
+                  child: Divider(
+                    height: verysmallDivider,
+                  ),
+                ),
+                //insert code
+                Text(
+                  "\nInsertion in AVL Trees ",
+                  style: TextStyle(
+                      color: Colors.orange,
+                      fontSize: displayWidth(context) * 0.062,
+                      fontWeight: FontWeight.w500),
+                ),
+                Opacity(
+                  opacity: 0.0,
+                  child: Divider(
+                    height: verysmallDivider,
+                  ),
+                ),
+                Text(
+                  "•	Create a new node, and initialise the ‘data’ with the value to be inserted into the tree and pointer with NULL initially.\n•	The new node is inserted into AVL tree as leaf node(external node) .   \n•	After inserting new node, if the tree becomes unbalanced, then apply rotations on it to make it a balanced binary search tree(AVL tree). ",
+                  style: TextStyle(
+                    fontSize: fontsize,
+                  ),
+                ),
+                Text(
+                  "\nDepending upon the type of insertion, the Rotations are categorized into four categories: \n",
+                  style: TextStyle(
+                      fontSize: fontsize, fontWeight: FontWeight.w500),
+                ),
+                //insert table
+                Text(
+                  "Illustration :- ",
+                  style: TextStyle(
+                      color: Colors.orange,
+                      fontSize: displayWidth(context) * 0.062,
+                      fontWeight: FontWeight.w500),
+                ),
+
+                Text(
+                  "\nDeletion in AVL Trees ",
+                  style: TextStyle(
+                      color: Colors.orange,
+                      fontSize: displayWidth(context) * 0.062,
+                      fontWeight: FontWeight.w500),
+                ),
+                Opacity(
+                  opacity: 0.0,
+                  child: Divider(
+                    height: verysmallDivider,
+                  ),
+                ),
+                Text(
+                  "Find the element that is to be deleted from the tree.\nDelete the node containing that element.\nAfter deleting a element, if the tree becomes unbalanced then apply rotation to rebalance it.",
+                  style: TextStyle(fontSize: fontsize),
+                ),
+                Opacity(
+                  opacity: 0.0,
+                  child: Divider(
+                    height: verysmallDivider,
+                  ),
+                ),
+                Text(
+                  "L Rotation:-",
+                  style: TextStyle(
+                      fontWeight: FontWeight.w500,
+                      fontSize: displayWidth(context) * 0.045,
+                      color: Colors.red),
+                ),
+                Opacity(
+                  opacity: 0.0,
+                  child: Divider(
+                    height: verysmallDivider,
+                  ),
+                ),
+                Text(
+                  "If the node which is to be deleted is present in the left sub-tree of the critical node, then L rotation needs to be applied.\n•	If Node B has 0 balance factor and is present in the right subtree of the critical node then L0 rotation will be applied.\n•	If Node B has 1 balance factor and is present in the right subtree of the critical node then L1 rotation will be applied.\n•	If Node B has -1 balance factor and is present in the right subtree of the critical node then L-1 rotation will be applied.",
+                  style: TextStyle(fontSize: fontsize),
+                ),
+                Opacity(
+                  opacity: 0.0,
+                  child: Divider(
+                    height: verysmallDivider,
+                  ),
+                ),
+                Text(
+                  "R Rotation:-",
+                  style: TextStyle(
+                      fontWeight: FontWeight.w500,
+                      fontSize: displayWidth(context) * 0.045,
+                      color: Colors.red),
+                ),
+                Opacity(
+                  opacity: 0.0,
+                  child: Divider(
+                    height: verysmallDivider,
+                  ),
+                ),
+                Text(
+                  " If, the node which is to be deleted is present in the right sub-tree of the critical node, the R rotation will be applied.\n•	If Node B has 0 balance factor and is present in the left subtree of the critical node then L0 rotation will be applied.\n•	If Node B has 1 balance factor and is present in the left subtree of the critical node then L1 rotation will be applied.\n•	If Node B has -1 balance factor and is present in the left subtree of the critical node then L-1 rotation will be applied.",
+                  style: TextStyle(fontSize: fontsize),
+                ),
+                Opacity(
+                  opacity: 0.0,
+                  child: Divider(
+                    height: verysmallDivider,
+                  ),
+                ),
+                Text(
+                  "R0 Rotation (Node B has balance factor 0 & the node to be deleted is present in the right subtree) :-",
+                  style: TextStyle(
+                      fontWeight: FontWeight.w500,
+                      fontSize: displayWidth(context) * 0.045,
+                      color: Colors.red),
+                ),
+                Opacity(
+                  opacity: 0.0,
+                  child: Divider(
+                    height: verysmallDivider,
+                  ),
+                ),
+                Text(
+                  "If the node B has 0 balance factor and is present in the left subtree of the critical node, and the balance factor of node A disturbed upon deleting the node X, then the tree will be rebalanced by rotating tree using R0 rotation.\n\nThe critical node A is moved to its right and the node B becomes the root of the tree with T1 as its left sub-tree. The sub-trees T2 and T3 becomes the left and right sub-tree of the node A. the process involved in R0 rotation is shown in the following image. ",
+                  style: TextStyle(fontSize: fontsize),
+                ),
+                Opacity(
+                  opacity: 0.0,
+                  child: Divider(
+                    height: verysmallDivider,
+                  ),
+                ),
+                //insert image
+                Text(
+                  "R1 Rotation (Node B has balance factor 1& the node to be deleted is present in the right subtree) :-",
+                  style: TextStyle(
+                      fontWeight: FontWeight.w500,
+                      fontSize: displayWidth(context) * 0.045,
+                      color: Colors.red),
+                ),
+                Opacity(
+                  opacity: 0.0,
+                  child: Divider(
+                    height: verysmallDivider,
+                  ),
+                ),
+                Text(
+                  "R1 Rotation is to be performed if the balance factor of Node B is 1. In R1 rotation, the critical node A is moved to its right having sub-trees T2 and T3 as its left and right child respectively. T1 is to be placed as the left sub-tree of the node B.\n\nThe process involved in R1 rotation is shown in the following image. ",
+                  style: TextStyle(fontSize: fontsize),
+                ),
+                Opacity(
+                  opacity: 0.0,
+                  child: Divider(
+                    height: verysmallDivider,
+                  ),
+                ),
+                //insert image
+                Text(
+                  "R-1 Rotation (Node B has balance factor -1 & the node to be deleted is present in the right subtree) :-",
+                  style: TextStyle(
+                      fontWeight: FontWeight.w500,
+                      fontSize: displayWidth(context) * 0.045,
+                      color: Colors.red),
+                ),
+                Opacity(
+                  opacity: 0.0,
+                  child: Divider(
+                    height: verysmallDivider,
+                  ),
+                ),
+                Text(
+                  "R-1 rotation is to be performed if the node B has balance factor -1. This case is treated in the same way as LR rotation. In this case, the node C, which is the right child of node B, becomes the root node of the tree with B and A as its left and right children respectively.\n\nThe sub-trees T1, T2 becomes the left and right sub-trees of B whereas, T3, T4 become the left and right sub-trees of A.\n\nThe process involved in R-1 rotation is shown in the following image. ",
+                  style: TextStyle(fontSize: fontsize),
+                ),
+                Opacity(
+                  opacity: 0.0,
+                  child: Divider(
+                    height: verysmallDivider,
+                  ),
+                ),
+                //insert image
+
+                //insert image
               ],
             ),
           ),
