@@ -1,8 +1,17 @@
+import 'package:CP_App/Screens/Detail%20Screen/BASICDS/SinglyLinkedList.dart';
 import 'package:flutter/material.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
+import 'package:bottom_navy_bar/bottom_navy_bar.dart';
+import 'SinglyLinkedList.dart';
 
-class Linkedlist extends StatelessWidget {
+class Linkedlist extends StatefulWidget {
   @override
+  _Linkedlist createState() => _Linkedlist();
+}
+
+class _Linkedlist extends State<Linkedlist> {
+  @override
+  int curIndex = 0;
   Widget build(BuildContext context) {
     double smallDivider = displayHeight(context) * 0.028;
     double verysmallDivider = displayHeight(context) * 0.01;
@@ -36,15 +45,15 @@ class Linkedlist extends StatelessWidget {
             new TextSpan(
                 text: "data ",
                 style: TextStyle(
-                    color: Colors.redAccent, fontWeight: FontWeight.bold)),
+                    color: Colors.redAccent, fontWeight: FontWeight.w500)),
             new TextSpan(text: "and a "),
             new TextSpan(
                 text: "reference ",
                 style: TextStyle(
-                    color: Colors.redAccent, fontWeight: FontWeight.bold)),
+                    color: Colors.redAccent, fontWeight: FontWeight.w500)),
             new TextSpan(
                 text:
-                    "to the next node. The last node has a reference to null. The entry point into a linked list is called head of the list.\n\nThey can be used to implement several other common abstract data types, including "),
+                    "to the next node.\n\nThe last node has a reference to null. The entry point into a linked list is called head of the list.They can be used to implement several other common abstract data types, including "),
             new TextSpan(
                 text: "lists, stacks, queues, trees ,graphs ",
                 style:
@@ -55,7 +64,7 @@ class Linkedlist extends StatelessWidget {
           ]),
     );
 
-    final text2 = new RichText(
+    final t2 = new RichText(
       text: TextSpan(
           style: TextStyle(
             fontSize: fontsize,
@@ -64,45 +73,514 @@ class Linkedlist extends StatelessWidget {
           ),
           children: <TextSpan>[
             new TextSpan(
-                text: "• Insertion :- ",
+                text: "temp = head;\n",
                 style: (TextStyle(
-                  fontSize: displayWidth(context) * 0.052,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.deepPurple,
-                  fontFamily: "PatuaOne",
+                  fontSize: fontsize,
+                  //fontWeight: FontWeight.,
+                  //color: Colors.deepPurple,
+                  //fontFamily: "PatuaOne",
                 ))),
             new TextSpan(
-                text: " Adds an element at the beginning of the list.\n"),
-            new TextSpan(
-                text: "• Deletion :- ",
+                text: "for( i = 0 ; i < loc ; i++ )\n",
                 style: (TextStyle(
-                  fontSize: displayWidth(context) * 0.052,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.deepPurple,
-                  fontFamily: "PatuaOne",
+                  fontSize: fontsize,
+                  //fontWeight: FontWeight.,
+                  //color: Colors.deepPurple,
+                  //fontFamily: "PatuaOne",
                 ))),
             new TextSpan(
-                text: " Deletes an element from the beginning of the list.\n"),
-            new TextSpan(
-                text: "• Display :- ",
+                text: " {\n",
                 style: (TextStyle(
-                  fontSize: displayWidth(context) * 0.052,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.deepPurple,
-                  fontFamily: "PatuaOne",
+                  fontSize: fontsize,
+                  //fontWeight: FontWeight.,
+                  //color: Colors.deepPurple,
+                  //fontFamily: "PatuaOne",
                 ))),
-            new TextSpan(text: " Displays the complete list.\n"),
             new TextSpan(
-                text: "• Search :-",
+                text: "   temp = temp → next;\n",
                 style: (TextStyle(
-                  fontSize: displayWidth(context) * 0.052,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.deepPurple,
-                  fontFamily: "PatuaOne",
+                  fontSize: fontsize,
+                  //fontWeight: FontWeight.,
+                  //color: Colors.deepPurple,
+                  //fontFamily: "PatuaOne",
                 ))),
-            new TextSpan(text: " Searches an element using the given key."),
+            new TextSpan(
+                text: "   if(temp == NULL)\n",
+                style: (TextStyle(
+                  fontSize: fontsize,
+                  // fontWeight: FontWeight.,
+                  //color: Colors.deepPurple,
+                  //fontFamily: "PatuaOne",
+                ))),
+            new TextSpan(
+                text: "   return;\n",
+                style: (TextStyle(
+                  fontSize: fontsize,
+                  // fontWeight: FontWeight.,
+                  //color: Colors.deepPurple,
+                  //fontFamily: "PatuaOne",
+                ))),
+            new TextSpan(
+                text: " }",
+                style: (TextStyle(
+                  fontSize: fontsize,
+                  //fontWeight: FontWeight.,
+                  //color: Colors.deepPurple,
+                  //fontFamily: "PatuaOne",
+                ))),
           ]),
     );
+    final t3 = new RichText(
+      text: TextSpan(
+          style: TextStyle(
+            fontSize: fontsize,
+            color: Colors.black,
+            //fontWeight: FontWeight.w500
+          ),
+          children: <TextSpan>[
+            new TextSpan(
+                text: "ptr = head;\n",
+                style: (TextStyle(
+                  fontSize: fontsize,
+                  //fontWeight: FontWeight.,
+                  //color: Colors.deepPurple,
+                  //fontFamily: "PatuaOne",
+                ))),
+            new TextSpan(
+                text: "while( ptr → next != NULL)  \n",
+                style: (TextStyle(
+                  fontSize: fontsize,
+                  //fontWeight: FontWeight.,
+                  //color: Colors.deepPurple,
+                  //fontFamily: "PatuaOne",
+                ))),
+            new TextSpan(
+                text: " {\n",
+                style: (TextStyle(
+                  fontSize: fontsize,
+                  //fontWeight: FontWeight.,
+                  //color: Colors.deepPurple,
+                  //fontFamily: "PatuaOne",
+                ))),
+            new TextSpan(
+                text: "   ptr1 = ptr;\n",
+                style: (TextStyle(
+                  fontSize: fontsize,
+                  //fontWeight: FontWeight.,
+                  //color: Colors.deepPurple,
+                  //fontFamily: "PatuaOne",
+                ))),
+            new TextSpan(
+                text: "   ptr = ptr → next;\n",
+                style: (TextStyle(
+                  fontSize: fontsize,
+                  // fontWeight: FontWeight.,
+                  //color: Colors.deepPurple,
+                  //fontFamily: "PatuaOne",
+                ))),
+            new TextSpan(
+                text: " }",
+                style: (TextStyle(
+                  fontSize: fontsize,
+                  //fontWeight: FontWeight.,
+                  //color: Colors.deepPurple,
+                  //fontFamily: "PatuaOne",
+                ))),
+          ]),
+    );
+    final t4 = new RichText(
+      text: TextSpan(
+          style: TextStyle(
+            fontSize: fontsize,
+            color: Colors.black,
+            //fontWeight: FontWeight.w500
+          ),
+          children: <TextSpan>[
+            new TextSpan(
+                text: "ptr = head;\n",
+                style: (TextStyle(
+                  fontSize: fontsize,
+                  //fontWeight: FontWeight.,
+                  //color: Colors.deepPurple,
+                  //fontFamily: "PatuaOne",
+                ))),
+            new TextSpan(
+                text: "for ( i = 0 ; i < loc ; i++ )  \n",
+                style: (TextStyle(
+                  fontSize: fontsize,
+                  //fontWeight: FontWeight.,
+                  //color: Colors.deepPurple,
+                  //fontFamily: "PatuaOne",
+                ))),
+            new TextSpan(
+                text: " {\n",
+                style: (TextStyle(
+                  fontSize: fontsize,
+                  //fontWeight: FontWeight.,
+                  //color: Colors.deepPurple,
+                  //fontFamily: "PatuaOne",
+                ))),
+            new TextSpan(
+                text: "   ptr1 = ptr;\n",
+                style: (TextStyle(
+                  fontSize: fontsize,
+                  //fontWeight: FontWeight.,
+                  //color: Colors.deepPurple,
+                  //fontFamily: "PatuaOne",
+                ))),
+            new TextSpan(
+                text: "   ptr = ptr → next;\n",
+                style: (TextStyle(
+                  fontSize: fontsize,
+                  // fontWeight: FontWeight.,
+                  //color: Colors.deepPurple,
+                  //fontFamily: "PatuaOne",
+                ))),
+            new TextSpan(
+                text: "   if( ptr == NULL );\n",
+                style: (TextStyle(
+                  fontSize: fontsize,
+                  // fontWeight: FontWeight.,
+                  //color: Colors.deepPurple,
+                  //fontFamily: "PatuaOne",
+                ))),
+            new TextSpan(
+                text: "    {\n",
+                style: (TextStyle(
+                  fontSize: fontsize,
+                  // fontWeight: FontWeight.,
+                  //color: Colors.deepPurple,
+                  //fontFamily: "PatuaOne",
+                ))),
+            new TextSpan(
+                text:
+                    '      printf("There are less than %d elements in the list.", &loc);\n',
+                style: (TextStyle(
+                  fontSize: fontsize,
+                  // fontWeight: FontWeight.,
+                  //color: Colors.deepPurple,
+                  //fontFamily: "PatuaOne",
+                ))),
+            new TextSpan(
+                text: '        return;\n',
+                style: (TextStyle(
+                  fontSize: fontsize,
+                  // fontWeight: FontWeight.,
+                  //color: Colors.deepPurple,
+                  //fontFamily: "PatuaOne",
+                ))),
+            new TextSpan(
+                text: '    }\n',
+                style: (TextStyle(
+                  fontSize: fontsize,
+                  // fontWeight: FontWeight.,
+                  //color: Colors.deepPurple,
+                  //fontFamily: "PatuaOne",
+                ))),
+            new TextSpan(
+                text: " }",
+                style: (TextStyle(
+                  fontSize: fontsize,
+                  //fontWeight: FontWeight.,
+                  //color: Colors.deepPurple,
+                  //fontFamily: "PatuaOne",
+                ))),
+          ]),
+    );
+
+    final t6 = new RichText(
+      text: TextSpan(
+          style: TextStyle(
+            fontSize: fontsize,
+            color: Colors.black,
+            //fontWeight: FontWeight.w500
+          ),
+          children: <TextSpan>[
+            new TextSpan(
+                text:
+                    'void insert(int item)  \n{  \nstruct node *ptr, *parentptr , *nodeptr;  \nptr = (struct node *) malloc(sizeof (struct node));  \nif(ptr == NULL)  \n{  \nprintf("cannot insert");  \n}  \nelse   \n{  \nptr -> data = item;  \nptr -> left = NULL;  \nptr -> right = NULL;   \nif(root == NULL)  \n{  \nroot = ptr;  \nroot -> left = NULL;  \nroot -> right = NULL;  \n}  \nelse   \n{  \nparentptr = NULL;\nnodeptr=root;   \nwhile(nodeptr != NULL)  \n{  \nparentptr = nodeptr;   \nif(item < nodeptr->data)  \n{  \nnodeptr = nodeptr -> left;   \n}   \nelse   \n{  \nnodeptr = nodeptr -> right;  \n}  \n}  \nif(item < parentptr -> data)  \n{  \nparentptr -> left = ptr;   \n}  \nelse   \n{  \nparentptr -> right =ptr;   \n}\n}\nprintf("Node Inserted");\n}\n}\n',
+                style: (TextStyle(
+                  fontSize: fontsize,
+                  fontWeight: FontWeight.w500,
+                ))),
+          ]),
+    );
+
+    final ListOfContainers = [
+      Container(
+          //   Intro and Operations page!!
+          constraints: BoxConstraints.expand(),
+          child: Padding(
+              padding: EdgeInsets.only(
+                  top: 16.0, bottom: 16.0, left: 12.0, right: 12.0),
+              child: SingleChildScrollView(
+                  child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                    Center(
+                      child: Card(
+                          elevation: 15.0,
+                          shadowColor: Colors.red[300],
+                          color: Colors.yellow[100],
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(12.0)),
+                          child: Padding(
+                            padding: const EdgeInsets.all(12.0),
+                            child: text1,
+                          )),
+                    ),
+                    Opacity(
+                        opacity: 0.0,
+                        child: Divider(
+                          height: smallDivider,
+                        )),
+                    Text(
+                      "Representation :- ",
+                      style: TextStyle(
+                        fontSize: headingfontsize,
+                        color: Colors.deepPurple,
+                        fontFamily: "PatuaOne",
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                    Opacity(
+                        opacity: 0.0,
+                        child: Divider(
+                          height: verysmallDivider,
+                        )),
+                    Text(
+                      "Linked list can be visualized as a chain of nodes, where every node points to the next node.",
+                      style: TextStyle(
+                        fontSize: fontsize,
+                      ),
+                    ),
+                    mydiv,
+                    Padding(
+                      padding: const EdgeInsets.only(left: 17.0),
+                      child: Text(
+                        "• head points to the first node of the linked list",
+                        style: TextStyle(fontSize: fontsize),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 17.0),
+                      child: Text(
+                          "• next pointer of the last node is null, so if the next of the current node is null, we have reached the end of the linked list.",
+                          style: TextStyle(fontSize: fontsize)),
+                    ),
+                    Opacity(
+                        opacity: 0.0,
+                        child: Divider(
+                          height: smallDivider,
+                        )),
+                    Text(
+                      "Illustration :- ",
+                      style: TextStyle(
+                        fontSize: subheadingfontsize,
+                        color: Colors.red,
+                        fontFamily: "Breeserif",
+                        fontWeight: FontWeight.w500,
+                        letterSpacing: 0.5,
+                      ),
+                    ),
+                    Opacity(
+                        opacity: 0.0,
+                        child: Divider(
+                          height: smallDivider,
+                        )),
+                    Text(
+                      "Operations :- ",
+                      style: TextStyle(
+                        fontSize: headingfontsize,
+                        color: Colors.teal,
+                        fontFamily: "Acme",
+                        letterSpacing: 0.6,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                    Opacity(
+                        opacity: 0.0,
+                        child: Divider(
+                          height: verysmallDivider,
+                        )),
+                    Text(
+                      "• Insertion :- ",
+                      style: TextStyle(
+                        fontSize: subheadingfontsize,
+                        color: Colors.blue[600],
+                        fontFamily: "Breeserif",
+                        fontWeight: FontWeight.w500,
+                        letterSpacing: 0.5,
+                      ),
+                    ),
+                    Opacity(
+                        opacity: 0.0,
+                        child: Divider(
+                          height: verysmallDivider,
+                        )),
+                    Text("Adds an element at the beginning of the list.",
+                        style: TextStyle(fontSize: fontsize)),
+                    Opacity(
+                        opacity: 0.0,
+                        child: Divider(
+                          height: verysmallDivider,
+                        )),
+                    Text(
+                      "• Deletion :- ",
+                      style: TextStyle(
+                        fontSize: subheadingfontsize,
+                        color: Colors.blue[600],
+                        fontFamily: "Breeserif",
+                        fontWeight: FontWeight.w500,
+                        letterSpacing: 0.5,
+                      ),
+                    ),
+                    Opacity(
+                        opacity: 0.0,
+                        child: Divider(
+                          height: verysmallDivider,
+                        )),
+                    Text("Deletes an element from the beginning of the list.",
+                        style: TextStyle(fontSize: fontsize)),
+                    Opacity(
+                        opacity: 0.0,
+                        child: Divider(
+                          height: verysmallDivider,
+                        )),
+                    Text(
+                      "• Display :- ",
+                      style: TextStyle(
+                        fontSize: subheadingfontsize,
+                        color: Colors.blue[600],
+                        fontFamily: "Breeserif",
+                        fontWeight: FontWeight.w500,
+                        letterSpacing: 0.5,
+                      ),
+                    ),
+                    Opacity(
+                        opacity: 0.0,
+                        child: Divider(
+                          height: verysmallDivider,
+                        )),
+                    Text("Displays the complete list.",
+                        style: TextStyle(fontSize: fontsize)),
+                    Opacity(
+                        opacity: 0.0,
+                        child: Divider(
+                          height: verysmallDivider,
+                        )),
+                    Text(
+                      "• Search :- ",
+                      style: TextStyle(
+                        fontSize: subheadingfontsize,
+                        color: Colors.blue[600],
+                        fontFamily: "Breeserif",
+                        fontWeight: FontWeight.w500,
+                        letterSpacing: 0.5,
+                      ),
+                    ),
+                    Opacity(
+                        opacity: 0.0,
+                        child: Divider(
+                          height: verysmallDivider,
+                        )),
+                    Text("Searches an element using the given key.",
+                        style: TextStyle(fontSize: fontsize)),
+                    Opacity(
+                        opacity: 0.0,
+                        child: Divider(
+                          height: verysmallDivider,
+                        )),
+                    Text(
+                      "• Delete :- ",
+                      style: TextStyle(
+                        fontSize: subheadingfontsize,
+                        color: Colors.blue[600],
+                        fontFamily: "Breeserif",
+                        fontWeight: FontWeight.w500,
+                        letterSpacing: 0.5,
+                      ),
+                    ),
+                    Opacity(
+                        opacity: 0.0,
+                        child: Divider(
+                          height: verysmallDivider,
+                        )),
+                    Text("Deletes an element using the given key.",
+                        style: TextStyle(fontSize: fontsize)),
+                    Opacity(
+                        opacity: 0.0,
+                        child: Divider(
+                          height: verysmallDivider,
+                        )),
+                    Opacity(
+                        opacity: 0.0,
+                        child: Divider(
+                          height: smallDivider,
+                        )),
+                  ])))),
+      Container(
+          constraints: BoxConstraints.expand(),
+          child: Padding(
+              padding: EdgeInsets.only(
+                  top: 16.0, bottom: 16.0, left: 12.0, right: 12.0),
+              child: SingleChildScrollView(
+                  child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                    FlatButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => (Singlylinkedlist())));
+                        },
+                        child: Padding(
+                          padding: EdgeInsets.all(12.0),
+                          child: Text("Singly Linked List"),
+                        )),
+                    FlatButton(
+                        onPressed: () {
+                          /*Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Doublylinkedlist()));*/
+                          null;
+                        },
+                        child: Padding(
+                          padding: EdgeInsets.all(12.0),
+                          child: Text("Doubly Linked List"),
+                        )),
+                    FlatButton(
+                        onPressed: () {
+                          /*Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      Circularsinglylinkedlist()));*/
+                          null;
+                        },
+                        child: Padding(
+                          padding: EdgeInsets.all(12.0),
+                          child: Text("Circular Singly Linked list"),
+                        )),
+                    FlatButton(
+                        onPressed: () {
+                          /*Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      Circulardoublylinkedlist()));*/
+                          null;
+                        },
+                        child: Padding(
+                          padding: EdgeInsets.all(12.0),
+                          child: Text("Circular Doubly Linked List"),
+                        )),
+                  ]))))
+    ];
 
     return Scaffold(
         appBar: AppBar(
@@ -115,328 +593,34 @@ class Linkedlist extends StatelessWidget {
           backgroundColor: Colors.blue[200],
           centerTitle: true,
         ),
-        body: Padding(
-            padding: EdgeInsets.only(
-                top: 16.0, bottom: 16.0, left: 12.0, right: 12.0),
-            child: SingleChildScrollView(
-                child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                  Center(
-                    child: Card(
-                        elevation: 15.0,
-                        shadowColor: Colors.red[300],
-                        color: Colors.yellow[100],
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(12.0)),
-                        child: Padding(
-                          padding: const EdgeInsets.all(12.0),
-                          child: text1,
-                        )),
+        body: ListOfContainers[curIndex],
+        bottomNavigationBar: BottomNavyBar(
+            iconSize: displayHeight(context) * 0.0355,
+            containerHeight: displayHeight(context) * 0.08,
+            selectedIndex: curIndex,
+            onItemSelected: (value) {
+              setState(() {
+                curIndex = value;
+              });
+            },
+            items: [
+              BottomNavyBarItem(
+                  inactiveColor: Colors.purple,
+                  activeColor: Colors.lightBlue,
+                  icon: Icon(
+                    Icons.assessment,
                   ),
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: smallDivider,
-                      )),
-                  Center(
-                    child: Text(
-                      "Representation :- ",
-                      style: (TextStyle(
-                        color: Colors.red,
-                        fontSize: headingfontsize,
-                        // fontWeight: FontWeight.bold,
-                        fontFamily: "Ranchers",
-                        letterSpacing: 0.9,
-                      )),
-                    ),
-                  ),
-                  mydiv,
-                  Text(
-                    "Linked list can be visualized as a chain of nodes, where every node points to the next node.",
-                    style: TextStyle(
-                        fontSize: fontsize, fontWeight: FontWeight.bold),
-                  ),
-                  mydiv,
-                  Padding(
-                    padding: const EdgeInsets.only(left: 17.0),
-                    child: Text(
-                      "• head points to the first node of the linked list",
-                      style: TextStyle(fontSize: fontsize),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 17.0),
-                    child: Text(
-                        "• next pointer of the last node is null, so if the next of the current node is null, we have reached the end of the linked list.",
-                        style: TextStyle(fontSize: fontsize)),
-                  ),
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: smallDivider,
-                      )),
-                  Center(
-                    child: Text(
-                      "Operations :- ",
-                      style: (TextStyle(
-                        color: Colors.red,
-                        fontSize: headingfontsize,
-                        // fontWeight: FontWeight.bold,
-                        fontFamily: "Ranchers",
-                        letterSpacing: 0.9,
-                      )),
-                    ),
-                  ),
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: verysmallDivider,
-                      )),
-                  text2,
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: verysmallDivider,
-                      )),
-                  Center(
-                    child: Text(
-                      "TYPES:- ",
-                      style: (TextStyle(
-                        color: Colors.red,
-                        fontSize: headingfontsize,
-                        // fontWeight: FontWeight.bold,
-                        fontFamily: "Ranchers",
-                        letterSpacing: 0.8,
-                      )),
-                    ),
-                  ),
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: smallDivider,
-                      )),
-                  Text(
-                    "• Singly Linked List :- ",
-                    style: (TextStyle(
-                      color: Colors.blue[800],
-                      fontSize: subheadingfontsize,
-                      fontWeight: FontWeight.bold,
-                      fontFamily: "Breeserif",
-                      letterSpacing: 0.8,
-                    )),
-                  ),
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: verysmallDivider,
-                      )),
-                  Text(
-                    "A Singly-linked list is a collection of nodes linked together in a sequential way where each node of the singly linked list contains a data field and an address field .",
-                    style: (TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: fontsize,
-                    )),
-                  ),
-                  mydiv,
-                  Padding(
-                    padding: const EdgeInsets.only(left: 17.0),
-                    child: Text(
-                      "• Data part of the node stores actual information that is to be represented by the node .",
-                      style: TextStyle(
-                        fontSize: fontsize,
-                      ),
-                    ),
-                  ),
-                  mydiv,
-                  Padding(
-                    padding: const EdgeInsets.only(left: 17.0),
-                    child: Text(
-                      "• The link part of the node stores the address of its immediate successor.",
-                      style: TextStyle(
-                        fontSize: fontsize,
-                      ),
-                    ),
-                  ),
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: verysmallDivider,
-                      )),
-                  Text(
-                      "One way chain or singly linked list can be traversed only in one direction. In other words, we can say that each node contains only next pointer, therefore we can not traverse the list in the reverse direction."),
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: verysmallDivider,
-                      )),
-                  Text("The structure of the node in the Singly Linked List is",
-                      style: TextStyle(fontWeight: FontWeight.bold)),
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: smallDivider,
-                      )),
-                  Text("Operations :-",
-                      style: TextStyle(
-                        fontFamily: "ConcertOne",
-                        fontWeight: FontWeight.bold,
-                        fontSize: subheadingfontsize,
-                        color: Colors.green,
-                      )),
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: smallDivider,
-                      )),
-                  Text("1. Node Creation :-",
-                      style: TextStyle(
-                        fontFamily: "PatuaOne",
-                        fontWeight: FontWeight.bold,
-                        fontSize: keywordsize,
-                        color: Colors.deepPurple,
-                      )),
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: smallDivider,
-                      )),
-                  Text("2. Insertion at beginning :-",
-                      style: TextStyle(
-                        fontFamily: "PatuaOne",
-                        fontWeight: FontWeight.bold,
-                        fontSize: keywordsize,
-                        color: Colors.deepPurple,
-                      )),
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: verysmallDivider,
-                      )),
-                  Text(
-                      "• Allocate the space for the new node and store data into the data part of the node. This will be done by the following statements."),
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: verysmallDivider,
-                      )),
-                  Text(
-                      "• Make the link part of the new node pointing to the existing first node of the list. This will be done by using the following statement."),
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: verysmallDivider,
-                      )),
-                  Text(
-                      "• 3.	At the last, we need to make the new node as the first node of the list this will be done by using the following statement"),
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: smallDivider,
-                      )),
-                  Text("2. Insertion at end :-",
-                      style: TextStyle(
-                        fontFamily: "PatuaOne",
-                        fontWeight: FontWeight.bold,
-                        fontSize: keywordsize,
-                        color: Colors.deepPurple,
-                      )),
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: verysmallDivider,
-                      )),
-                  Text("1. When the node is being added to an empty list:-",
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Colors.red,
-                      )),
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: verysmallDivider,
-                      )),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 30.0),
-                    child: Text(
-                        "• The condition (head == NULL) gets satisfied. Hence, we just need to allocate the space for the node by using malloc statement in C. Data and the link part of the node are set up by using the following statements"),
-                  ),
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: verysmallDivider,
-                      )),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 30.0),
-                    child: Text(
-                        "• Since, ptr is the only node that will be inserted in the list hence, we need to make this node pointed by the head pointer of the list. This will be done by using the following Statements"),
-                  ),
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: verysmallDivider,
-                      )),
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: verysmallDivider,
-                      )),
-                  Text("2. When node is being added to the end of the list:-",
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Colors.red,
-                      )),
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: verysmallDivider,
-                      )),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 30.0),
-                    child: Text(
-                        "•	The condition Head = NULL would fail, since Head is not null. Now, we need to declare a temporary pointer temp in order to traverse through the list. temp is made to point the first node of the list."),
-                  ),
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: verysmallDivider,
-                      )),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 30.0),
-                    child: Text(
-                        "• Then, traverse through the entire linked list using the statements:"),
-                  ),
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: verysmallDivider,
-                      )),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 30.0),
-                    child: Text(
-                        "• At the end of the loop, the temp will be pointing to the last node of the list. Now, allocate the space for the new node, and assign the item to its data part."),
-                  ),
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: verysmallDivider,
-                      )),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 30.0),
-                    child: Text(
-                        "• Since the new node is going to be the last node of the list hence, the next part of this node needs to be pointing to the null."),
-                  ),
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: verysmallDivider,
-                      )),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 30.0),
-                    child: Text(
-                        "• We need to make the next part of the temp node (which is currently the last node of the list) point to the new node (ptr) ."),
-                  ),
-                ]))));
+                  title: Text(
+                    'Operations',
+                    style: TextStyle(fontSize: displayWidth(context) * 0.03),
+                  )),
+              BottomNavyBarItem(
+                inactiveColor: Colors.purple,
+                activeColor: Colors.lightBlue,
+                icon: Icon(Icons.edit),
+                title: Text('Types',
+                    style: TextStyle(fontSize: displayWidth(context) * 0.03)),
+              ),
+            ]));
   }
 }

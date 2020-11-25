@@ -1030,20 +1030,21 @@ class _TreePageState extends State<TreePage> {
                     child: Text(
                       "Insert (TREE, ITEM)\nStep 1: IF TREE = NULL\n  Allocate memory for TREE\n  SET TREE -> DATA = ITEM\n  SET TREE -> LEFT = TREE -> RIGHT = NULL\n  ELSE\n   IF ITEM < TREE -> DATA\n  Insert(TREE -> LEFT, ITEM)\n  ELSE\n  Insert(TREE -> RIGHT, ITEM)\n [END OF IF]\n [END OF IF]\nStep 2: END",
                       style: TextStyle(
-                          fontSize: fontsize, fontWeight: FontWeight.w500),
+                          fontSize: displayWidth(context) * 0.04,
+                          fontWeight: FontWeight.w500),
                     ),
                   ),
                 ),
                 Opacity(
                   opacity: 0.0,
                   child: Divider(
-                    height: verysmallDivider,
+                    height: smallDivider,
                   ),
                 ),
                 //insert algorithm image
                 //insert image
                 Text(
-                  "\nDeletion in Binary Search Tree ",
+                  "Deletion in Binary Search Tree ",
                   style: TextStyle(
                       color: Colors.orange,
                       fontSize: displayWidth(context) * 0.062,
@@ -1080,9 +1081,49 @@ class _TreePageState extends State<TreePage> {
                     height: verysmallDivider,
                   ),
                 ),
-
+                Card(
+                  color: Colors.yellow[100],
+                  child: Padding(
+                    padding: const EdgeInsets.all(12.0),
+                    child: Text(
+                      "Delete (TREE, ITEM)\n Step 1: IF TREE = NULL \n Write \"item not found in the tree\" ELSE IF ITEM < TREE -> DATA \n Delete(TREE->LEFT, ITEM)  \n ELSE IF ITEM > TREE -> DATA \n Delete(TREE -> RIGHT, ITEM) \n ELSE IF TREE -> LEFT AND TREE -> RIGHT \n SET TEMP = findLargestNode(TREE -> LEFT) \n SET TREE -> DATA = TEMP -> DATA \n Delete(TREE -> LEFT, TEMP -> DATA) \n ELSE \n SET TEMP = TREE  \n IF TREE -> LEFT = NULL AND TREE -> RIGHT = NULL \n SET TREE = NULL \n ELSE IF TREE -> LEFT != NULL  \n SET TREE = TREE -> LEFT \n ELSE \n SET TREE = TREE -> RIGHT \n [END OF IF] \n FREE TEMP \n [END OF IF] \n Step 2: END",
+                      style: TextStyle(
+                          fontSize: displayWidth(context) * 0.04,
+                          fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                ),
                 //insert image
                 //insert algorithm
+                mydiv2,
+                Text(
+                  "Searching",
+                  style: TextStyle(
+                      color: Colors.red,
+                      fontSize: displayWidth(context) * 0.05,
+                      fontWeight: FontWeight.w500),
+                ),
+                mydiv,
+                Text(
+                  "Searching means finding or locating some specific element or node. Searching for some specific node in binary search tree is pretty easy due to the fact that elements in BST are stored in a particular order.",
+                  style: TextStyle(
+                    fontSize: fontsize,
+                  ),
+                ),
+                mydiv,
+                Card(
+                  color: Colors.yellow[100],
+                  child: Padding(
+                    padding: const EdgeInsets.all(12.0),
+                    child: Text(
+                      "Search (ROOT, ITEM) \n Step 1: IF ROOT -> DATA = ITEM OR ROOT = NULL \n Return ROOT \n ELSE \n IF ROOT < ROOT -> DATA \n Return search(ROOT -> LEFT, ITEM) \n ELSE  \n Return search(ROOT -> RIGHT,ITEM) \n [END OF IF] \n [END OF IF] \n Step 2: END",
+                      style: TextStyle(
+                          fontSize: displayWidth(context) * 0.04,
+                          fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                ),
+                mydiv,
                 Text(
                   "AVL Trees :-",
                   style: TextStyle(
@@ -1098,7 +1139,7 @@ class _TreePageState extends State<TreePage> {
                   ),
                 ),
                 Text(
-                  "AVL  tree is an acronym for Adelson-Velsky and Landis tree. It is a self balancing binary search tree in which the difference of heights of left and right subtrees of any node is less than or equal to one.\n\nLet T be a non-empty binary tree with TL and TR as its left and right subtrees. The tree is height balanced if:\n\n•	TL and TR are height balanced\n•   Balance factor should be in the range [-1,1] ,where balance factor is the difference between the heights of the left and right subtrees of that node ( hL - hR <= 1, where hL - hR are the heights of TL and TR )Representation of bin",
+                  "AVL  tree is an acronym for Adelson-Velsky and Landis tree. It is a self balancing binary search tree in which the difference of heights of left and right subtrees of any node is less than or equal to one.",
                   style: TextStyle(
                     fontSize: fontsize,
                   ),
@@ -1111,7 +1152,7 @@ class _TreePageState extends State<TreePage> {
                 ),
                 //insert code
                 Text(
-                  "\nInsertion in AVL Trees ",
+                  "Insertion in AVL Trees ",
                   style: TextStyle(
                       color: Colors.orange,
                       fontSize: displayWidth(context) * 0.062,
@@ -1123,28 +1164,31 @@ class _TreePageState extends State<TreePage> {
                     height: verysmallDivider,
                   ),
                 ),
-                Text(
-                  "•	Create a new node, and initialise the ‘data’ with the value to be inserted into the tree and pointer with NULL initially.\n•	The new node is inserted into AVL tree as leaf node(external node) .   \n•	After inserting new node, if the tree becomes unbalanced, then apply rotations on it to make it a balanced binary search tree(AVL tree). ",
-                  style: TextStyle(
-                    fontSize: fontsize,
+                Card(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(16.0)),
+                  color: Colors.yellow[100],
+                  child: Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Text(
+                      "• Create a new node, and initialise the ‘data’ with the value to be inserted into the tree and pointer with NULL initially.\n• The new node is inserted into AVL tree as leaf node(external node) .\n•	After inserting new node, if the tree becomes unbalanced, then apply rotations on it to make it a balanced binary search tree(AVL tree). ",
+                      style: TextStyle(
+                        fontSize: fontsize,
+                      ),
+                    ),
                   ),
                 ),
+                mydiv,
                 Text(
-                  "\nDepending upon the type of insertion, the Rotations are categorized into four categories: \n",
+                  "Depending upon the type of insertion, the Rotations are categorized into four categories:",
                   style: TextStyle(
                       fontSize: fontsize, fontWeight: FontWeight.w500),
                 ),
                 //insert table
-                Text(
-                  "Illustration :- ",
-                  style: TextStyle(
-                      color: Colors.orange,
-                      fontSize: displayWidth(context) * 0.062,
-                      fontWeight: FontWeight.w500),
-                ),
+                mydiv,
 
                 Text(
-                  "\nDeletion in AVL Trees ",
+                  "Deletion in AVL Trees ",
                   style: TextStyle(
                       color: Colors.orange,
                       fontSize: displayWidth(context) * 0.062,
@@ -1170,7 +1214,7 @@ class _TreePageState extends State<TreePage> {
                   "L Rotation:-",
                   style: TextStyle(
                       fontWeight: FontWeight.w500,
-                      fontSize: displayWidth(context) * 0.045,
+                      fontSize: displayWidth(context) * 0.05,
                       color: Colors.red),
                 ),
                 Opacity(
@@ -1179,9 +1223,17 @@ class _TreePageState extends State<TreePage> {
                     height: verysmallDivider,
                   ),
                 ),
-                Text(
-                  "If the node which is to be deleted is present in the left sub-tree of the critical node, then L rotation needs to be applied.\n•	If Node B has 0 balance factor and is present in the right subtree of the critical node then L0 rotation will be applied.\n•	If Node B has 1 balance factor and is present in the right subtree of the critical node then L1 rotation will be applied.\n•	If Node B has -1 balance factor and is present in the right subtree of the critical node then L-1 rotation will be applied.",
-                  style: TextStyle(fontSize: fontsize),
+                Card(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(16.0)),
+                  color: Colors.yellow[100],
+                  child: Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Text(
+                      "If the node which is to be deleted is present in the left sub-tree of the critical node, then L rotation needs to be applied.\n•	If Node B has 0 balance factor and is present in the right subtree of the critical node then L0 rotation will be applied.\n•	If Node B has 1 balance factor and is present in the right subtree of the critical node then L1 rotation will be applied.\n•	If Node B has -1 balance factor and is present in the right subtree of the critical node then L-1 rotation will be applied.",
+                      style: TextStyle(fontSize: fontsize),
+                    ),
+                  ),
                 ),
                 Opacity(
                   opacity: 0.0,
@@ -1193,7 +1245,7 @@ class _TreePageState extends State<TreePage> {
                   "R Rotation:-",
                   style: TextStyle(
                       fontWeight: FontWeight.w500,
-                      fontSize: displayWidth(context) * 0.045,
+                      fontSize: displayWidth(context) * 0.05,
                       color: Colors.red),
                 ),
                 Opacity(
@@ -1202,10 +1254,19 @@ class _TreePageState extends State<TreePage> {
                     height: verysmallDivider,
                   ),
                 ),
-                Text(
-                  " If, the node which is to be deleted is present in the right sub-tree of the critical node, the R rotation will be applied.\n•	If Node B has 0 balance factor and is present in the left subtree of the critical node then L0 rotation will be applied.\n•	If Node B has 1 balance factor and is present in the left subtree of the critical node then L1 rotation will be applied.\n•	If Node B has -1 balance factor and is present in the left subtree of the critical node then L-1 rotation will be applied.",
-                  style: TextStyle(fontSize: fontsize),
+                Card(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(16.0)),
+                  color: Colors.yellow[100],
+                  child: Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Text(
+                      " If, the node which is to be deleted is present in the right sub-tree of the critical node, the R rotation will be applied.\n•	If Node B has 0 balance factor and is present in the left subtree of the critical node then L0 rotation will be applied.\n•	If Node B has 1 balance factor and is present in the left subtree of the critical node then L1 rotation will be applied.\n•	If Node B has -1 balance factor and is present in the left subtree of the critical node then L-1 rotation will be applied.",
+                      style: TextStyle(fontSize: fontsize),
+                    ),
+                  ),
                 ),
+
                 Opacity(
                   opacity: 0.0,
                   child: Divider(

@@ -589,111 +589,488 @@ class _BasicdsState extends State<Basicds> {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                mydiv2,
                 Center(
                   child: Text(
-                    "Non Primitive",
+                    "Non Primitive Data Structure",
                     style: TextStyle(
-                        fontSize: displayWidth(context) * 0.058,
+                        fontSize: displayWidth(context) * 0.065,
                         color: Colors.yellow,
                         fontFamily: "ConcertOne"),
                   ),
                 ),
-                mydiv,
-                Center(
-                  child: Container(
-                      height: displayHeight(context) * 0.04,
-                      child: VerticalDivider(
-                        color: Colors.white,
-                        thickness: displayWidth(context) * 0.0065,
-                      )),
-                ),
-                Center(
-                  child: Divider(
-                    color: Colors.white,
-                    indent: displayWidth(context) * 0.38,
-                    endIndent: displayWidth(context) * 0.38,
-                    thickness: displayWidth(context) * 0.0065,
+                mydiv2,
+                mydiv2,
+                Padding(
+                  padding: const EdgeInsets.only(left: 15.0, right: 15.0),
+                  child: Card(
+                    // Linear root Card
+                    elevation: 5.0,
+                    shadowColor: Colors.white,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(16)),
+                    child: ClipPath(
+                      child: Container(
+                        decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                          colors: [Colors.blue[100], Colors.blue[200]],
+                        )),
+                        child: Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Center(
+                                child: Text(
+                                  "Linear",
+                                  style: TextStyle(
+                                      fontSize: displayWidth(context) * 0.085,
+                                      color: Colors.red,
+                                      fontFamily: "ConcertOne"),
+                                ),
+                              ),
+                              mydiv2,
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                    left: 16.0, right: 80.0),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text("Static",
+                                        style: TextStyle(
+                                          fontSize:
+                                              displayWidth(context) * 0.06,
+                                          fontFamily: "ConcertOne",
+                                        )),
+                                    Text("Dynamic",
+                                        style: TextStyle(
+                                          fontSize:
+                                              displayWidth(context) * 0.06,
+                                          fontFamily: "ConcertOne",
+                                        )),
+                                  ],
+                                ),
+                              ),
+                              mydiv,
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                    left: 10.0, right: 10.0),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    GestureDetector(
+                                      onTap: () {
+                                        Navigator.push(context,
+                                            MyPageAnimation(w: ArrayPage()));
+                                      },
+                                      child: Card(
+                                        shape: RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(10),
+                                        ),
+                                        child: ClipPath(
+                                          child: Container(
+                                            decoration: BoxDecoration(
+                                              gradient: LinearGradient(colors: [
+                                                Colors.white60,
+                                                Colors.yellow[100],
+                                                Colors.yellow[100],
+                                                Colors.yellow[200],
+                                                Colors.yellow[300],
+                                              ], begin: Alignment.bottomLeft),
+                                            ),
+                                            child: Padding(
+                                              padding: const EdgeInsets.only(
+                                                  left: 12.0,
+                                                  right: 12.0,
+                                                  top: 8.0,
+                                                  bottom: 8.0),
+                                              child: Column(
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.start,
+                                                children: [
+                                                  Text(
+                                                    "Array",
+                                                    style: TextStyle(
+                                                        fontSize: fontsize,
+                                                        fontFamily:
+                                                            "ConcertOne"),
+                                                  ),
+                                                  Icon(
+                                                    Icons.touch_app,
+                                                    color: Colors.black,
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ),
+                                          clipper: ShapeBorderClipper(
+                                              shape: RoundedRectangleBorder(
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          8))),
+                                        ),
+                                      ),
+                                    ),
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceEvenly,
+                                      children: [
+                                        GestureDetector(
+                                          onTap: () {
+                                            Navigator.push(
+                                                context,
+                                                MyPageAnimation(
+                                                    w: StackPage()));
+                                          },
+                                          child: Card(
+                                            shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                            ),
+                                            child: ClipPath(
+                                              child: Container(
+                                                decoration: BoxDecoration(
+                                                  gradient: LinearGradient(
+                                                      colors: [
+                                                        Colors.white60,
+                                                        Colors.yellow[100],
+                                                        Colors.yellow[100],
+                                                        Colors.yellow[200],
+                                                        Colors.yellow[300],
+                                                      ],
+                                                      begin:
+                                                          Alignment.bottomLeft),
+                                                ),
+                                                child: Padding(
+                                                  padding:
+                                                      const EdgeInsets.only(
+                                                          left: 12.0,
+                                                          right: 12.0,
+                                                          top: 8.0,
+                                                          bottom: 8.0),
+                                                  child: Column(
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment.start,
+                                                    children: [
+                                                      Text(
+                                                        "Stack",
+                                                        style: TextStyle(
+                                                            fontSize: fontsize,
+                                                            fontFamily:
+                                                                "ConcertOne"),
+                                                      ),
+                                                      Icon(
+                                                        Icons.touch_app,
+                                                        color: Colors.black,
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ),
+                                              ),
+                                              clipper: ShapeBorderClipper(
+                                                  shape: RoundedRectangleBorder(
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              8))),
+                                            ),
+                                          ),
+                                        ),
+                                        GestureDetector(
+                                          onTap: () {
+                                            Navigator.push(
+                                                context,
+                                                MyPageAnimation(
+                                                    w: Queuepage()));
+                                          },
+                                          child: Card(
+                                            shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                            ),
+                                            child: ClipPath(
+                                              child: Container(
+                                                decoration: BoxDecoration(
+                                                  gradient: LinearGradient(
+                                                      colors: [
+                                                        Colors.white60,
+                                                        Colors.yellow[100],
+                                                        Colors.yellow[100],
+                                                        Colors.yellow[200],
+                                                        Colors.yellow[300],
+                                                      ],
+                                                      begin:
+                                                          Alignment.bottomLeft),
+                                                ),
+                                                child: Padding(
+                                                  padding:
+                                                      const EdgeInsets.only(
+                                                          left: 12.0,
+                                                          right: 12.0,
+                                                          top: 8.0,
+                                                          bottom: 8.0),
+                                                  child: Column(
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment.start,
+                                                    children: [
+                                                      Text(
+                                                        "Queue",
+                                                        style: TextStyle(
+                                                            fontSize: fontsize,
+                                                            fontFamily:
+                                                                "ConcertOne"),
+                                                      ),
+                                                      Icon(
+                                                        Icons.touch_app,
+                                                        color: Colors.black,
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ),
+                                              ),
+                                              clipper: ShapeBorderClipper(
+                                                  shape: RoundedRectangleBorder(
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              8))),
+                                            ),
+                                          ),
+                                        ),
+                                        GestureDetector(
+                                          onTap: () {
+                                            Navigator.push(
+                                                context,
+                                                MyPageAnimation(
+                                                    w: Linkedlist()));
+                                          },
+                                          child: Card(
+                                            shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                            ),
+                                            child: ClipPath(
+                                              child: Container(
+                                                decoration: BoxDecoration(
+                                                  gradient: LinearGradient(
+                                                      colors: [
+                                                        Colors.white60,
+                                                        Colors.yellow[100],
+                                                        Colors.yellow[100],
+                                                        Colors.yellow[200],
+                                                        Colors.yellow[300],
+                                                      ],
+                                                      begin:
+                                                          Alignment.bottomLeft),
+                                                ),
+                                                child: Padding(
+                                                  padding:
+                                                      const EdgeInsets.only(
+                                                          left: 12.0,
+                                                          right: 12.0,
+                                                          top: 8.0,
+                                                          bottom: 8.0),
+                                                  child: Column(
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment.start,
+                                                    children: [
+                                                      Text(
+                                                        "Linked\n List",
+                                                        style: TextStyle(
+                                                            fontSize:
+                                                                displayWidth(
+                                                                        context) *
+                                                                    0.04,
+                                                            fontFamily:
+                                                                "ConcertOne"),
+                                                      ),
+                                                      Icon(
+                                                        Icons.touch_app,
+                                                        color: Colors.black,
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ),
+                                              ),
+                                              clipper: ShapeBorderClipper(
+                                                  shape: RoundedRectangleBorder(
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              8))),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    )
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      clipper: ShapeBorderClipper(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(16))),
+                    ),
                   ),
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 80.0),
+                mydiv2,
+                mydiv2,
+                Padding(
+                  padding: const EdgeInsets.only(left: 15.0, right: 15.0),
+                  child: Card(
+                    // Linear root Card
+                    elevation: 5.0,
+                    shadowColor: Colors.white,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(16)),
+                    child: ClipPath(
                       child: Container(
-                          height: displayHeight(context) * 0.04,
-                          child: VerticalDivider(
-                            color: Colors.white,
-                            thickness: displayWidth(context) * 0.0065,
-                          )),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(right: 80.0),
-                      child: Container(
-                        height: displayHeight(context) * 0.04,
-                        child: VerticalDivider(
-                          color: Colors.white,
-                          thickness: displayWidth(context) * 0.0065,
+                        decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                          colors: [Colors.blue[100], Colors.blue[200]],
+                        )),
+                        child: Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Center(
+                                child: Text(
+                                  "Non Linear",
+                                  style: TextStyle(
+                                      fontSize: displayWidth(context) * 0.085,
+                                      color: Colors.red,
+                                      fontFamily: "ConcertOne"),
+                                ),
+                              ),
+                              mydiv2,
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
+                                children: [
+                                  GestureDetector(
+                                    onTap: () {
+                                      Navigator.push(context,
+                                          MyPageAnimation(w: TreePage()));
+                                    },
+                                    child: Card(
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(10),
+                                      ),
+                                      child: ClipPath(
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                            gradient: LinearGradient(colors: [
+                                              Colors.white60,
+                                              Colors.yellow[100],
+                                              Colors.yellow[100],
+                                              Colors.yellow[200],
+                                              Colors.yellow[300],
+                                            ], begin: Alignment.bottomLeft),
+                                          ),
+                                          child: Padding(
+                                            padding: const EdgeInsets.only(
+                                                left: 12.0,
+                                                right: 12.0,
+                                                top: 8.0,
+                                                bottom: 8.0),
+                                            child: Column(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.start,
+                                              children: [
+                                                Text(
+                                                  " Tree ",
+                                                  style: TextStyle(
+                                                      fontSize: displayWidth(
+                                                              context) *
+                                                          0.055,
+                                                      fontFamily: "ConcertOne"),
+                                                ),
+                                                Icon(
+                                                  Icons.touch_app,
+                                                  color: Colors.black,
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                        clipper: ShapeBorderClipper(
+                                            shape: RoundedRectangleBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(8))),
+                                      ),
+                                    ),
+                                  ),
+                                  GestureDetector(
+                                    onTap: () {
+                                      Navigator.push(context,
+                                          MyPageAnimation(w: Graphpage()));
+                                    },
+                                    child: Card(
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(10),
+                                      ),
+                                      child: ClipPath(
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                            gradient: LinearGradient(colors: [
+                                              Colors.white60,
+                                              Colors.yellow[100],
+                                              Colors.yellow[100],
+                                              Colors.yellow[200],
+                                              Colors.yellow[300],
+                                            ], begin: Alignment.bottomLeft),
+                                          ),
+                                          child: Padding(
+                                            padding: const EdgeInsets.only(
+                                                left: 12.0,
+                                                right: 12.0,
+                                                top: 8.0,
+                                                bottom: 8.0),
+                                            child: Column(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.start,
+                                              children: [
+                                                Text(
+                                                  "Graph",
+                                                  style: TextStyle(
+                                                      fontSize: displayWidth(
+                                                              context) *
+                                                          0.055,
+                                                      fontFamily: "ConcertOne"),
+                                                ),
+                                                Icon(
+                                                  Icons.touch_app,
+                                                  color: Colors.black,
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                        clipper: ShapeBorderClipper(
+                                            shape: RoundedRectangleBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(8))),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              )
+                            ],
+                          ),
                         ),
                       ),
+                      clipper: ShapeBorderClipper(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(16))),
                     ),
-                  ],
+                  ),
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 80.0),
-                      child: Text(
-                        "Linear",
-                        style: TextStyle(
-                            fontSize: displayWidth(context) * 0.05,
-                            color: Colors.yellow,
-                            fontFamily: "ConcertOne"),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(right: 80.0),
-                      child: Text(
-                        "Non Linear",
-                        style: TextStyle(
-                            fontSize: displayWidth(context) * 0.05,
-                            color: Colors.yellow,
-                            fontFamily: "ConcertOne"),
-                      ),
-                    )
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 0.0),
-                      child: Container(
-                          height: displayHeight(context) * 0.04,
-                          child: VerticalDivider(
-                            color: Colors.white,
-                            thickness: displayWidth(context) * 0.0065,
-                          )),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(right: 0.0),
-                      child: Container(
-                        height: displayHeight(context) * 0.04,
-                        child: VerticalDivider(
-                          color: Colors.white,
-                          thickness: displayWidth(context) * 0.0065,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                FlatButton(
-                    onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => TreePage()));
-                    },
-                    child: Text("tree"))
               ],
             ),
           ))
