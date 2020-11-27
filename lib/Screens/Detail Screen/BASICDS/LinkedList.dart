@@ -371,25 +371,23 @@ class _Linkedlist extends State<Linkedlist> {
                           "• next pointer of the last node is null, so if the next of the current node is null, we have reached the end of the linked list.",
                           style: TextStyle(fontSize: fontsize)),
                     ),
-                    Opacity(
-                        opacity: 0.0,
-                        child: Divider(
-                          height: smallDivider,
-                        )),
-                    Text(
-                      "Illustration :- ",
-                      style: TextStyle(
-                        fontSize: subheadingfontsize,
-                        color: Colors.red,
-                        fontFamily: "Breeserif",
-                        fontWeight: FontWeight.w500,
-                        letterSpacing: 0.5,
+                    Padding(
+                      padding: const EdgeInsets.only(
+                          top: 4.0, left: 3.0, right: 3.0, bottom: 2.0),
+                      child: Container(
+                        height: displayHeight(context) * 0.15,
+                        width: displayWidth(context) * 0.95,
+                        child: Image(
+                            image: AssetImage(
+                              "images/L1.png",
+                            ),
+                            fit: BoxFit.fitWidth),
                       ),
                     ),
                     Opacity(
                         opacity: 0.0,
                         child: Divider(
-                          height: smallDivider,
+                          height: verysmallDivider,
                         )),
                     Text(
                       "Operations :- ",

@@ -7,7 +7,7 @@ class Singlylinkedlist extends StatelessWidget {
   Widget build(BuildContext context) {
     double smallDivider = displayHeight(context) * 0.028;
     double verysmallDivider = displayHeight(context) * 0.01;
-    double fontsize = displayWidth(context) * 0.043;
+    double fontsize = displayWidth(context) * 0.0415;
     double keywordsize = displayWidth(context) * 0.050;
     double headingfontsize = displayWidth(context) * 0.062;
     double subheadingfontsize = displayWidth(context) * 0.053;
@@ -160,11 +160,20 @@ class Singlylinkedlist extends StatelessWidget {
                     child: Divider(
                       height: verysmallDivider,
                     )),
-                Opacity(
-                    opacity: 0.0,
-                    child: Divider(
-                      height: smallDivider,
-                    )),
+
+                Padding(
+                  padding: const EdgeInsets.only(
+                      top: 4.0, left: 3.0, right: 3.0, bottom: 2.0),
+                  child: Container(
+                    height: displayHeight(context) * 0.15,
+                    width: displayWidth(context) * 0.95,
+                    child: Image(
+                        image: AssetImage(
+                          "images/L2.png",
+                        ),
+                        fit: BoxFit.fitWidth),
+                  ),
+                ),
                 Text(
                   "Operations :- ",
                   style: TextStyle(
@@ -317,12 +326,20 @@ class Singlylinkedlist extends StatelessWidget {
                       height: verysmallDivider,
                     )),
 
-                Opacity(
-                    opacity: 0.0,
-                    child: Divider(
-                      height: verysmallDivider,
-                    )),
-
+                Padding(
+                  padding: const EdgeInsets.only(
+                      top: 4.0, left: 3.0, right: 3.0, bottom: 2.0),
+                  child: Container(
+                    height: displayHeight(context) * 0.25,
+                    width: displayWidth(context) * 0.95,
+                    child: Image(
+                        image: AssetImage(
+                          "images/L3.png",
+                        ),
+                        fit: BoxFit.fitWidth),
+                  ),
+                ),
+                mydiv,
                 Text("2. At end :- ",
                     style: TextStyle(
                       fontSize: subheadingfontsize,
@@ -443,11 +460,19 @@ class Singlylinkedlist extends StatelessWidget {
                   ),
                 ),
 
-                Opacity(
-                    opacity: 0.0,
-                    child: Divider(
-                      height: verysmallDivider,
-                    )),
+                Padding(
+                  padding: const EdgeInsets.only(
+                      top: 4.0, left: 3.0, right: 3.0, bottom: 2.0),
+                  child: Container(
+                    height: displayHeight(context) * 0.3,
+                    width: displayWidth(context) * 0.95,
+                    child: Image(
+                        image: AssetImage(
+                          "images/L4.png",
+                        ),
+                        fit: BoxFit.fitWidth),
+                  ),
+                ),
                 Text("3. After a specific node :- ",
                     style: TextStyle(
                       fontSize: subheadingfontsize,
@@ -541,12 +566,20 @@ class Singlylinkedlist extends StatelessWidget {
                     style: TextStyle(
                         fontSize: fontsize, fontWeight: FontWeight.w500)),
 
-                Opacity(
-                    opacity: 0.0,
-                    child: Divider(
-                      height: smallDivider,
-                    )),
-
+                Padding(
+                  padding:
+                      const EdgeInsets.only(left: 3.0, right: 3.0, bottom: 2.0),
+                  child: Container(
+                    height: displayHeight(context) * 0.25,
+                    width: displayWidth(context) * 0.95,
+                    child: Image(
+                        image: AssetImage(
+                          "images/L5.png",
+                        ),
+                        fit: BoxFit.fitWidth),
+                  ),
+                ),
+                mydiv,
                 Text(
                   "• Deletion :- ",
                   style: TextStyle(
@@ -615,17 +648,21 @@ class Singlylinkedlist extends StatelessWidget {
                 Text("• free(ptr);",
                     style: TextStyle(
                         fontSize: fontsize, fontWeight: FontWeight.w500)),
-                Opacity(
-                    opacity: 0.0,
-                    child: Divider(
-                      height: verysmallDivider,
-                    )),
 
-                Opacity(
-                    opacity: 0.0,
-                    child: Divider(
-                      height: verysmallDivider,
-                    )),
+                Padding(
+                  padding: const EdgeInsets.only(
+                      top: 6.0, left: 3.0, right: 3.0, bottom: 2.0),
+                  child: Container(
+                    height: displayHeight(context) * 0.25,
+                    width: displayWidth(context) * 0.95,
+                    child: Image(
+                        image: AssetImage(
+                          "images/L6.png",
+                        ),
+                        fit: BoxFit.fitWidth),
+                  ),
+                ),
+                mydiv,
                 Text("2. At end :- ",
                     style: TextStyle(
                       fontSize: subheadingfontsize,
@@ -745,17 +782,19 @@ class Singlylinkedlist extends StatelessWidget {
                 Text("• free(ptr)",
                     style: TextStyle(
                         fontSize: fontsize, fontWeight: FontWeight.w500)),
-                Opacity(
-                    opacity: 0.0,
-                    child: Divider(
-                      height: verysmallDivider,
-                    )),
-
-                Opacity(
-                    opacity: 0.0,
-                    child: Divider(
-                      height: verysmallDivider,
-                    )),
+                Padding(
+                  padding: const EdgeInsets.only(
+                      top: 8.0, left: 3.0, right: 3.0, bottom: 2.0),
+                  child: Container(
+                    height: displayHeight(context) * 0.25,
+                    width: displayWidth(context) * 0.95,
+                    child: Image(
+                        image: AssetImage(
+                          "images/L7.png",
+                        ),
+                        fit: BoxFit.fitWidth),
+                  ),
+                ),
                 Text("3. After a specific node :- ",
                     style: TextStyle(
                       fontSize: subheadingfontsize,
@@ -822,12 +861,19 @@ class Singlylinkedlist extends StatelessWidget {
                 Text("• free(ptr);",
                     style: TextStyle(
                         fontSize: fontsize, fontWeight: FontWeight.w500)),
-                Opacity(
-                    opacity: 0.0,
-                    child: Divider(
-                      height: verysmallDivider,
-                    )),
-
+                Padding(
+                  padding: const EdgeInsets.only(
+                      top: 10.0, left: 3.0, right: 3.0, bottom: 2.0),
+                  child: Container(
+                    height: displayHeight(context) * 0.25,
+                    width: displayWidth(context) * 0.95,
+                    child: Image(
+                        image: AssetImage(
+                          "images/L8.png",
+                        ),
+                        fit: BoxFit.fitWidth),
+                  ),
+                ),
                 Text(
                   "• Traversing :- ",
                   style: TextStyle(
@@ -901,21 +947,19 @@ class Singlylinkedlist extends StatelessWidget {
                     child: Divider(
                       height: verysmallDivider,
                     )),
-                Text(
-                  "Illustration :- ",
-                  style: TextStyle(
-                    fontSize: subheadingfontsize,
-                    color: Colors.red,
-                    fontFamily: "Breeserif",
-                    fontWeight: FontWeight.w500,
-                    letterSpacing: 0.5,
+                Card(
+                  color: Colors.yellow[100],
+                  child: Padding(
+                    padding: const EdgeInsets.all(12.0),
+                    child: Text(
+                      'void search()  \n{  \n    struct node *ptr;  \n    int item,i=0;\n    bool isFound=false;  \n     ptr = head;   \n     printf("Enter item which you want to search?");   \n     scanf("%d",&item);  \n     while (ptr!=NULL)  \n     {  \n          if(ptr->data == item)  \n          {\n                isFound=true;\n                break;\n          }   \n          i++;  \n          ptr = ptr -> next;  \n     }  \n     if( isFound )  \n     {  \n           printf(" Item found at %d ",(i+1));  \n     }  \n     else\n     {  \n           printf(" Item not found ");  \n     }\n }',
+                      style: TextStyle(
+                        fontSize: displayWidth(context) * 0.035,
+                      ),
+                    ),
                   ),
                 ),
-                Opacity(
-                    opacity: 0.0,
-                    child: Divider(
-                      height: verysmallDivider,
-                    )),
+                mydiv,
               ],
             ))));
   }

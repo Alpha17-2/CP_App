@@ -6,7 +6,7 @@ class Doublylinkedlist extends StatelessWidget {
   Widget build(BuildContext context) {
     double smallDivider = displayHeight(context) * 0.028;
     double verysmallDivider = displayHeight(context) * 0.01;
-    double fontsize = displayWidth(context) * 0.043;
+    double fontsize = displayWidth(context) * 0.041;
     double keywordsize = displayWidth(context) * 0.050;
     double headingfontsize = displayWidth(context) * 0.062;
     double subheadingfontsize = displayWidth(context) * 0.053;
@@ -94,7 +94,19 @@ class Doublylinkedlist extends StatelessWidget {
                     child: Divider(
                       height: smallDivider,
                     )),
-
+                Padding(
+                  padding: const EdgeInsets.only(
+                      top: 2.0, left: 3.0, right: 3.0, bottom: 2.0),
+                  child: Container(
+                    height: displayHeight(context) * 0.3,
+                    width: displayWidth(context) * 0.95,
+                    child: Image(
+                        image: AssetImage(
+                          "images/L9.png",
+                        ),
+                        fit: BoxFit.fill),
+                  ),
+                ),
                 Text(
                   "Operations :- ",
                   style: TextStyle(
@@ -141,23 +153,7 @@ class Doublylinkedlist extends StatelessWidget {
                         ),
                       ),
                     )),
-
-                Text(
-                  "Illustration :- ",
-                  style: TextStyle(
-                    fontSize: subheadingfontsize,
-                    color: Colors.red,
-                    fontFamily: "Breeserif",
-                    fontWeight: FontWeight.w500,
-                    letterSpacing: 0.5,
-                  ),
-                ),
-                //Insert Image !!
-                Opacity(
-                    opacity: 0.0,
-                    child: Divider(
-                      height: smallDivider,
-                    )),
+                mydiv,
                 Text(
                   "• Insertion :- ",
                   style: TextStyle(
@@ -316,22 +312,19 @@ class Doublylinkedlist extends StatelessWidget {
                       height: verysmallDivider,
                     )),
 
-                Opacity(
-                    opacity: 0.0,
-                    child: Divider(
-                      height: verysmallDivider,
-                    )),
-                Text(
-                  "Illustration :- ",
-                  style: TextStyle(
-                    fontSize: subheadingfontsize,
-                    color: Colors.red,
-                    fontFamily: "Breeserif",
-                    fontWeight: FontWeight.w500,
-                    letterSpacing: 0.5,
+                Padding(
+                  padding:
+                      const EdgeInsets.only(left: 3.0, right: 3.0, bottom: 2.0),
+                  child: Container(
+                    height: displayHeight(context) * 0.3,
+                    width: displayWidth(context) * 0.95,
+                    child: Image(
+                        image: AssetImage(
+                          "images/L11.png",
+                        ),
+                        fit: BoxFit.fitWidth),
                   ),
                 ),
-                //Insert Image !!
                 Opacity(
                     opacity: 0.0,
                     child: Divider(
@@ -1219,27 +1212,19 @@ class Doublylinkedlist extends StatelessWidget {
                     style: TextStyle(
                       fontSize: fontsize,
                     )),
-                Opacity(
-                    opacity: 0.0,
-                    child: Divider(
-                      height: verysmallDivider,
-                    )),
-                Text(
-                  "Illustration :- ",
-                  style: TextStyle(
-                    fontSize: subheadingfontsize,
-                    color: Colors.red,
-                    fontFamily: "Breeserif",
-                    fontWeight: FontWeight.w500,
-                    letterSpacing: 0.5,
+                Card(
+                  color: Colors.yellow[100],
+                  child: Padding(
+                    padding: const EdgeInsets.all(12.0),
+                    child: Text(
+                      'void search()  \n{  \n    struct node *ptr;  \n    int item,i=0;\n    bool isFound=false;  \n     ptr = head;   \n     printf("Enter item which you want to search?");   \n     scanf("%d",&item);  \n     while (ptr!=NULL)  \n     {  \n          if(ptr->data == item)  \n          {\n                isFound=true;\n                break;\n          }   \n          i++;  \n          ptr = ptr -> next;  \n     }  \n     if( isFound )  \n     {  \n           printf(" Item found at %d ",(i+1));  \n     }  \n     else\n     {  \n           printf(" Item not found ");  \n     }\n }',
+                      style: TextStyle(
+                        fontSize: displayWidth(context) * 0.035,
+                      ),
+                    ),
                   ),
                 ),
-                //Insert image !!
-                Opacity(
-                    opacity: 0.0,
-                    child: Divider(
-                      height: verysmallDivider,
-                    )),
+                mydiv,
               ],
             ))));
   }
