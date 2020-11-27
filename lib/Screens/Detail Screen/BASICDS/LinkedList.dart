@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'SinglyLinkedList.dart';
+import 'DoublyLinkedList.dart';
+import 'CircularSL.dart';
 
 class Linkedlist extends StatefulWidget {
   @override
@@ -543,11 +545,10 @@ class _Linkedlist extends State<Linkedlist> {
                         )),
                     FlatButton(
                         onPressed: () {
-                          /*Navigator.push(
+                          Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => Doublylinkedlist()));*/
-                          null;
+                                  builder: (context) => Doublylinkedlist()));
                         },
                         child: Padding(
                           padding: EdgeInsets.all(12.0),
@@ -555,29 +556,15 @@ class _Linkedlist extends State<Linkedlist> {
                         )),
                     FlatButton(
                         onPressed: () {
-                          /*Navigator.push(
+                          Navigator.push(
                               context,
                               MaterialPageRoute(
                                   builder: (context) =>
-                                      Circularsinglylinkedlist()));*/
-                          null;
+                                      Circularsinglylinkedlist()));
                         },
                         child: Padding(
                           padding: EdgeInsets.all(12.0),
-                          child: Text("Circular Singly Linked list"),
-                        )),
-                    FlatButton(
-                        onPressed: () {
-                          /*Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>
-                                      Circulardoublylinkedlist()));*/
-                          null;
-                        },
-                        child: Padding(
-                          padding: EdgeInsets.all(12.0),
-                          child: Text("Circular Doubly Linked List"),
+                          child: Text("Circular Linked list"),
                         )),
                   ]))))
     ];

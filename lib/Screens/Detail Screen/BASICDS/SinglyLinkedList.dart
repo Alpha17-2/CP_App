@@ -316,17 +316,7 @@ class Singlylinkedlist extends StatelessWidget {
                     child: Divider(
                       height: verysmallDivider,
                     )),
-                Text(
-                  "Illustration :- ",
-                  style: TextStyle(
-                    fontSize: subheadingfontsize,
-                    color: Colors.red,
-                    fontFamily: "Breeserif",
-                    fontWeight: FontWeight.w500,
-                    letterSpacing: 0.5,
-                  ),
-                ),
-                //Insert image !!
+
                 Opacity(
                     opacity: 0.0,
                     child: Divider(
@@ -452,17 +442,7 @@ class Singlylinkedlist extends StatelessWidget {
                         style: TextStyle(fontSize: fontsize)),
                   ),
                 ),
-                Text(
-                  "Illustration :- ",
-                  style: TextStyle(
-                    fontSize: subheadingfontsize,
-                    color: Colors.red,
-                    fontFamily: "Breeserif",
-                    fontWeight: FontWeight.w500,
-                    letterSpacing: 0.5,
-                  ),
-                ),
-                //Insert Image !!
+
                 Opacity(
                     opacity: 0.0,
                     child: Divider(
@@ -560,32 +540,13 @@ class Singlylinkedlist extends StatelessWidget {
                 Text("• temp → next = ptr;",
                     style: TextStyle(
                         fontSize: fontsize, fontWeight: FontWeight.w500)),
+
                 Opacity(
                     opacity: 0.0,
                     child: Divider(
                       height: smallDivider,
                     )),
-                Text(
-                  "Illustration :- ",
-                  style: TextStyle(
-                    fontSize: subheadingfontsize,
-                    color: Colors.red,
-                    fontFamily: "Breeserif",
-                    fontWeight: FontWeight.w500,
-                    letterSpacing: 0.5,
-                  ),
-                ),
-                //Insert Image !!
-                Opacity(
-                    opacity: 0.0,
-                    child: Divider(
-                      height: verysmallDivider,
-                    )),
-                Opacity(
-                    opacity: 0.0,
-                    child: Divider(
-                      height: smallDivider,
-                    )),
+
                 Text(
                   "• Deletion :- ",
                   style: TextStyle(
@@ -659,17 +620,7 @@ class Singlylinkedlist extends StatelessWidget {
                     child: Divider(
                       height: verysmallDivider,
                     )),
-                Text(
-                  "Illustration :- ",
-                  style: TextStyle(
-                    fontSize: subheadingfontsize,
-                    color: Colors.red,
-                    fontFamily: "Breeserif",
-                    fontWeight: FontWeight.w500,
-                    letterSpacing: 0.5,
-                  ),
-                ),
-                //Insert image !!
+
                 Opacity(
                     opacity: 0.0,
                     child: Divider(
@@ -799,17 +750,7 @@ class Singlylinkedlist extends StatelessWidget {
                     child: Divider(
                       height: verysmallDivider,
                     )),
-                Text(
-                  "Illustration :- ",
-                  style: TextStyle(
-                    fontSize: subheadingfontsize,
-                    color: Colors.red,
-                    fontFamily: "Breeserif",
-                    fontWeight: FontWeight.w500,
-                    letterSpacing: 0.5,
-                  ),
-                ),
-                //Insert Image !!
+
                 Opacity(
                     opacity: 0.0,
                     child: Divider(
@@ -886,27 +827,7 @@ class Singlylinkedlist extends StatelessWidget {
                     child: Divider(
                       height: verysmallDivider,
                     )),
-                Text(
-                  "Illustration :- ",
-                  style: TextStyle(
-                    fontSize: subheadingfontsize,
-                    color: Colors.red,
-                    fontFamily: "Breeserif",
-                    fontWeight: FontWeight.w500,
-                    letterSpacing: 0.5,
-                  ),
-                ),
-                //Insert Image !!
-                Opacity(
-                    opacity: 0.0,
-                    child: Divider(
-                      height: verysmallDivider,
-                    )),
-                Opacity(
-                    opacity: 0.0,
-                    child: Divider(
-                      height: smallDivider,
-                    )),
+
                 Text(
                   "• Traversing :- ",
                   style: TextStyle(
@@ -948,27 +869,13 @@ class Singlylinkedlist extends StatelessWidget {
                     child: Divider(
                       height: verysmallDivider,
                     )),
-                Text(
-                  "Illustration :- ",
-                  style: TextStyle(
-                    fontSize: subheadingfontsize,
-                    color: Colors.red,
-                    fontFamily: "Breeserif",
-                    fontWeight: FontWeight.w500,
-                    letterSpacing: 0.5,
-                  ),
-                ),
-                //Insert Image!!
+
                 Opacity(
                     opacity: 0.0,
                     child: Divider(
                       height: verysmallDivider,
                     )),
-                Opacity(
-                    opacity: 0.0,
-                    child: Divider(
-                      height: smallDivider,
-                    )),
+
                 Text(
                   "• Searching :- ",
                   style: TextStyle(

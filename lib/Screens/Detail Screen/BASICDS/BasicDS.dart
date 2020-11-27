@@ -695,7 +695,9 @@ class _BasicdsState extends State<Basicds> {
                                                   Text(
                                                     "Array",
                                                     style: TextStyle(
-                                                        fontSize: fontsize,
+                                                        fontSize: displayWidth(
+                                                                context) *
+                                                            0.03,
                                                         fontFamily:
                                                             "ConcertOne"),
                                                   ),
@@ -759,7 +761,10 @@ class _BasicdsState extends State<Basicds> {
                                                       Text(
                                                         "Stack",
                                                         style: TextStyle(
-                                                            fontSize: fontsize,
+                                                            fontSize:
+                                                                displayWidth(
+                                                                        context) *
+                                                                    0.03,
                                                             fontFamily:
                                                                 "ConcertOne"),
                                                       ),
@@ -819,7 +824,10 @@ class _BasicdsState extends State<Basicds> {
                                                       Text(
                                                         "Queue",
                                                         style: TextStyle(
-                                                            fontSize: fontsize,
+                                                            fontSize:
+                                                                displayWidth(
+                                                                        context) *
+                                                                    0.03,
                                                             fontFamily:
                                                                 "ConcertOne"),
                                                       ),
@@ -882,7 +890,7 @@ class _BasicdsState extends State<Basicds> {
                                                             fontSize:
                                                                 displayWidth(
                                                                         context) *
-                                                                    0.04,
+                                                                    0.03,
                                                             fontFamily:
                                                                 "ConcertOne"),
                                                       ),
@@ -988,7 +996,7 @@ class _BasicdsState extends State<Basicds> {
                                                   style: TextStyle(
                                                       fontSize: displayWidth(
                                                               context) *
-                                                          0.055,
+                                                          0.03,
                                                       fontFamily: "ConcertOne"),
                                                 ),
                                                 Icon(
@@ -1041,7 +1049,7 @@ class _BasicdsState extends State<Basicds> {
                                                   style: TextStyle(
                                                       fontSize: displayWidth(
                                                               context) *
-                                                          0.055,
+                                                          0.03,
                                                       fontFamily: "ConcertOne"),
                                                 ),
                                                 Icon(

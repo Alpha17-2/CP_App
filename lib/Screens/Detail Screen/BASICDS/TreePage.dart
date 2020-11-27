@@ -861,24 +861,12 @@ class _TreePageState extends State<TreePage> {
                   ),
                 ),
                 Text(
-                  "A binary tree is a hierarchical data structure in which each node has at most two children generally referred as left child and right child.\nEach node contains three components:\n•	 Pointer to left subtree\n•	 Pointer to right subtree\n•	Data element\nThe topmost node in the tree is called the root. An empty tree is represented by ",
+                  "A binary tree is a hierarchical data structure in which each node has at most two children generally referred as left child and right child.\nEach node contains three components:\n• Pointer to left subtree\n• Pointer to right subtree\n• Data element",
                   style: TextStyle(
                     fontSize: fontsize,
                   ),
                 ),
-                Text(
-                  "NULL pointer.",
-                  style: TextStyle(
-                    fontSize: fontsize,
-                    fontWeight: FontWeight.w500,
-                  ),
-                ),
-                Text(
-                  "When certain constraints and characteristics are applied in a Binary tree, a number of others such as AVL tree, BST (Binary Search Tree), RBT tree, etc. are also used.",
-                  style: TextStyle(
-                    fontSize: fontsize,
-                  ),
-                ),
+
                 Opacity(
                   opacity: 0.0,
                   child: Divider(
@@ -888,7 +876,7 @@ class _TreePageState extends State<TreePage> {
                 Text(
                   "Insertion in Binary Tree ",
                   style: TextStyle(
-                      color: Colors.black,
+                      color: Colors.red,
                       fontSize: displayWidth(context) * 0.062,
                       fontWeight: FontWeight.w600),
                 ),
@@ -923,18 +911,26 @@ class _TreePageState extends State<TreePage> {
                 Text(
                   "Deletion in Binary Tree ",
                   style: TextStyle(
-                      color: Colors.black,
+                      color: Colors.red,
                       fontSize: displayWidth(context) * 0.062,
                       fontWeight: FontWeight.w600),
                 ),
-
-                // Make Card Here
-                Text(
-                  "1. Starting at root, find the deepest and rightmost node in binary tree and node which we want to delete. \n2. Replace the deepest rightmost node’s data with node to be deleted. \n3. Then delete the deepest rightmost node",
-                  style: TextStyle(
-                    fontSize: fontsize,
+                Card(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12.0)),
+                  color: Colors.yellow[100],
+                  child: Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Text(
+                      "1. Starting at root, find the deepest and rightmost node in binary tree and node which we want to delete. \n2. Replace the deepest rightmost node’s data with node to be deleted. \n3. Then delete the deepest rightmost node",
+                      style: TextStyle(
+                        fontSize: fontsize,
+                      ),
+                    ),
                   ),
                 ),
+                // Make Card Here
+
                 Opacity(
                   opacity: 0.0,
                   child: Divider(
@@ -957,7 +953,7 @@ class _TreePageState extends State<TreePage> {
                   ),
                 ),
                 Text(
-                  "A Binary Search Tree (BST) is a tree in which all the nodes follow the below-mentioned properties −\n•	The value of the key of the left sub-tree is less than the value of its parent (root) node's key.\n•	The value of the key of the right sub-tree is greater than or equal to the value of its parent (root) node's key.\n\nThus, BST divides all its sub-trees into two segments; the left sub-tree and the right sub-tree and can be defined as:\n",
+                  "A Binary Search Tree (BST) is a tree in which all the nodes follow the below-mentioned properties −\n•	The value of the key of the left sub-tree is less than the value of its parent (root) node's key.\n\n•	The value of the key of the right sub-tree is greater than or equal to the value of its parent (root) node's key.\n\nThus, BST divides all its sub-trees into two segments; the left sub-tree and the right sub-tree and can be defined as:\n",
                   style: TextStyle(
                     fontSize: fontsize,
                   ),
@@ -973,7 +969,7 @@ class _TreePageState extends State<TreePage> {
                     elevation: 12.0,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20.0)),
-                    color: Colors.yellow[200],
+                    color: Colors.yellow[100],
                     child: Padding(
                       padding: const EdgeInsets.all(12.0),
                       child: Column(
@@ -986,7 +982,7 @@ class _TreePageState extends State<TreePage> {
                               child: Text(
                                 "left_subtree (keys) < node (key) ≤ right_subtree (keys)",
                                 style: TextStyle(
-                                    color: Colors.red,
+                                    color: Colors.black,
                                     fontWeight: FontWeight.w500,
                                     fontSize: displayWidth(context) * 0.04),
                               ),
@@ -1030,8 +1026,9 @@ class _TreePageState extends State<TreePage> {
                     child: Text(
                       "Insert (TREE, ITEM)\nStep 1: IF TREE = NULL\n  Allocate memory for TREE\n  SET TREE -> DATA = ITEM\n  SET TREE -> LEFT = TREE -> RIGHT = NULL\n  ELSE\n   IF ITEM < TREE -> DATA\n  Insert(TREE -> LEFT, ITEM)\n  ELSE\n  Insert(TREE -> RIGHT, ITEM)\n [END OF IF]\n [END OF IF]\nStep 2: END",
                       style: TextStyle(
-                          fontSize: displayWidth(context) * 0.04,
-                          fontWeight: FontWeight.w500),
+                        fontSize: displayWidth(context) * 0.04,
+                        //fontWeight: FontWeight.w500),
+                      ),
                     ),
                   ),
                 ),
@@ -1088,8 +1085,9 @@ class _TreePageState extends State<TreePage> {
                     child: Text(
                       "Delete (TREE, ITEM)\n Step 1: IF TREE = NULL \n Write \"item not found in the tree\" ELSE IF ITEM < TREE -> DATA \n Delete(TREE->LEFT, ITEM)  \n ELSE IF ITEM > TREE -> DATA \n Delete(TREE -> RIGHT, ITEM) \n ELSE IF TREE -> LEFT AND TREE -> RIGHT \n SET TEMP = findLargestNode(TREE -> LEFT) \n SET TREE -> DATA = TEMP -> DATA \n Delete(TREE -> LEFT, TEMP -> DATA) \n ELSE \n SET TEMP = TREE  \n IF TREE -> LEFT = NULL AND TREE -> RIGHT = NULL \n SET TREE = NULL \n ELSE IF TREE -> LEFT != NULL  \n SET TREE = TREE -> LEFT \n ELSE \n SET TREE = TREE -> RIGHT \n [END OF IF] \n FREE TEMP \n [END OF IF] \n Step 2: END",
                       style: TextStyle(
-                          fontSize: displayWidth(context) * 0.04,
-                          fontWeight: FontWeight.w500),
+                        fontSize: displayWidth(context) * 0.04,
+                        // fontWeight: FontWeight.w500
+                      ),
                     ),
                   ),
                 ),
@@ -1118,8 +1116,8 @@ class _TreePageState extends State<TreePage> {
                     child: Text(
                       "Search (ROOT, ITEM) \n Step 1: IF ROOT -> DATA = ITEM OR ROOT = NULL \n Return ROOT \n ELSE \n IF ROOT < ROOT -> DATA \n Return search(ROOT -> LEFT, ITEM) \n ELSE  \n Return search(ROOT -> RIGHT,ITEM) \n [END OF IF] \n [END OF IF] \n Step 2: END",
                       style: TextStyle(
-                          fontSize: displayWidth(context) * 0.04,
-                          fontWeight: FontWeight.w500),
+                        fontSize: displayWidth(context) * 0.04,
+                      ),
                     ),
                   ),
                 ),
@@ -1180,11 +1178,18 @@ class _TreePageState extends State<TreePage> {
                 ),
                 mydiv,
                 Text(
-                  "Depending upon the type of insertion, the Rotations are categorized into four categories:",
+                  "Depending upon the type of insertion, rotations are categorized into four categories:",
                   style: TextStyle(
-                      fontSize: fontsize, fontWeight: FontWeight.w500),
+                      //color: Colors.deepPurple,
+                      fontSize: displayWidth(context) * 0.05,
+                      fontWeight: FontWeight.w500),
                 ),
-                //insert table
+                mydiv,
+                Text(
+                    "1. If there is an imbalance in left child of right subtree, then you perform a left-right rotation.\n2. If there is an imbalance in left child of left subtree, then you perform a right rotation.\n3. If there is an imbalance in right child of right subtree, then you perform a left rotation.\n4. If there is an imbalance in right child of left subtree, then you perform a right-left rotation.",
+                    style: TextStyle(
+                      fontSize: fontsize,
+                    )),
                 mydiv,
 
                 Text(
@@ -1230,7 +1235,7 @@ class _TreePageState extends State<TreePage> {
                   child: Padding(
                     padding: const EdgeInsets.all(10.0),
                     child: Text(
-                      "If the node which is to be deleted is present in the left sub-tree of the critical node, then L rotation needs to be applied.\n•	If Node B has 0 balance factor and is present in the right subtree of the critical node then L0 rotation will be applied.\n•	If Node B has 1 balance factor and is present in the right subtree of the critical node then L1 rotation will be applied.\n•	If Node B has -1 balance factor and is present in the right subtree of the critical node then L-1 rotation will be applied.",
+                      "If the node which is to be deleted is present in the left sub-tree of the critical node, then L rotation needs to be applied.\n•	If Node B has 0 balance factor and the node to be deleted is present in the left subtree of the critical node then L0 rotation will be applied.\n• If Node B has 1 balance factor and the node to be deleted is present in the left subtree of the critical node then L1 rotation will be applied.\n•	If Node B has -1 balance factor and the node to be deleted is present in the left subtree of the critical node then L-1 rotation will be applied.",
                       style: TextStyle(fontSize: fontsize),
                     ),
                   ),
@@ -1261,92 +1266,11 @@ class _TreePageState extends State<TreePage> {
                   child: Padding(
                     padding: const EdgeInsets.all(10.0),
                     child: Text(
-                      " If, the node which is to be deleted is present in the right sub-tree of the critical node, the R rotation will be applied.\n•	If Node B has 0 balance factor and is present in the left subtree of the critical node then L0 rotation will be applied.\n•	If Node B has 1 balance factor and is present in the left subtree of the critical node then L1 rotation will be applied.\n•	If Node B has -1 balance factor and is present in the left subtree of the critical node then L-1 rotation will be applied.",
+                      " If, the node which is to be deleted is present in the right sub-tree of the critical node, the R rotation will be applied.\n•	If Node B has 0 balance factor and the node to be deleted is present in the right subtree of the critical node then R0 rotation will be applied.\n•	If Node B has 1 balance factor and the node to be deleted is present in the right subtree of the critical node then R1 rotation will be applied.\n•	If Node B has -1 balance factor and the node to be deleted is present in the right subtree of the critical node then R-1 rotation will be applied.",
                       style: TextStyle(fontSize: fontsize),
                     ),
                   ),
                 ),
-
-                Opacity(
-                  opacity: 0.0,
-                  child: Divider(
-                    height: verysmallDivider,
-                  ),
-                ),
-                Text(
-                  "R0 Rotation (Node B has balance factor 0 & the node to be deleted is present in the right subtree) :-",
-                  style: TextStyle(
-                      fontWeight: FontWeight.w500,
-                      fontSize: displayWidth(context) * 0.045,
-                      color: Colors.red),
-                ),
-                Opacity(
-                  opacity: 0.0,
-                  child: Divider(
-                    height: verysmallDivider,
-                  ),
-                ),
-                Text(
-                  "If the node B has 0 balance factor and is present in the left subtree of the critical node, and the balance factor of node A disturbed upon deleting the node X, then the tree will be rebalanced by rotating tree using R0 rotation.\n\nThe critical node A is moved to its right and the node B becomes the root of the tree with T1 as its left sub-tree. The sub-trees T2 and T3 becomes the left and right sub-tree of the node A. the process involved in R0 rotation is shown in the following image. ",
-                  style: TextStyle(fontSize: fontsize),
-                ),
-                Opacity(
-                  opacity: 0.0,
-                  child: Divider(
-                    height: verysmallDivider,
-                  ),
-                ),
-                //insert image
-                Text(
-                  "R1 Rotation (Node B has balance factor 1& the node to be deleted is present in the right subtree) :-",
-                  style: TextStyle(
-                      fontWeight: FontWeight.w500,
-                      fontSize: displayWidth(context) * 0.045,
-                      color: Colors.red),
-                ),
-                Opacity(
-                  opacity: 0.0,
-                  child: Divider(
-                    height: verysmallDivider,
-                  ),
-                ),
-                Text(
-                  "R1 Rotation is to be performed if the balance factor of Node B is 1. In R1 rotation, the critical node A is moved to its right having sub-trees T2 and T3 as its left and right child respectively. T1 is to be placed as the left sub-tree of the node B.\n\nThe process involved in R1 rotation is shown in the following image. ",
-                  style: TextStyle(fontSize: fontsize),
-                ),
-                Opacity(
-                  opacity: 0.0,
-                  child: Divider(
-                    height: verysmallDivider,
-                  ),
-                ),
-                //insert image
-                Text(
-                  "R-1 Rotation (Node B has balance factor -1 & the node to be deleted is present in the right subtree) :-",
-                  style: TextStyle(
-                      fontWeight: FontWeight.w500,
-                      fontSize: displayWidth(context) * 0.045,
-                      color: Colors.red),
-                ),
-                Opacity(
-                  opacity: 0.0,
-                  child: Divider(
-                    height: verysmallDivider,
-                  ),
-                ),
-                Text(
-                  "R-1 rotation is to be performed if the node B has balance factor -1. This case is treated in the same way as LR rotation. In this case, the node C, which is the right child of node B, becomes the root node of the tree with B and A as its left and right children respectively.\n\nThe sub-trees T1, T2 becomes the left and right sub-trees of B whereas, T3, T4 become the left and right sub-trees of A.\n\nThe process involved in R-1 rotation is shown in the following image. ",
-                  style: TextStyle(fontSize: fontsize),
-                ),
-                Opacity(
-                  opacity: 0.0,
-                  child: Divider(
-                    height: verysmallDivider,
-                  ),
-                ),
-                //insert image
-
-                //insert image
               ],
             ),
           ),
