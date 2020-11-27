@@ -4,6 +4,7 @@ import 'package:CP_App/Screens/Display%20Screens/preq_Screen.dart';
 import 'package:CP_App/Screens/Detail%20Screen/STL_PAGE/Stl_home.dart';
 import 'package:CP_App/Screens/Display%20Screens/Problem_List_Screen.dart';
 import 'package:CP_App/Screens/Detail Screen/Quiz_PAGE/Quiz_Home.dart';
+import 'package:CP_App/Screens/Display Screens/CodingPlatform.dart';
 
 class Mydrawer extends StatelessWidget {
   final Function closeDrawer;
@@ -110,6 +111,24 @@ class Mydrawer extends StatelessWidget {
             ),
             onTap: () {
               Navigator.of(context).pushNamed(Problems.routeName);
+            },
+          ),
+          Opacity(opacity: 0.0, child: Divider()),
+          ListTile(
+            leading: CircleAvatar(
+              backgroundImage: AssetImage('images/codingplatform.png'),
+              radius: imageSize,
+            ),
+            title: Text(
+              'Coding Platforms',
+              style: TextStyle(
+                  fontSize: textSize,
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold),
+            ),
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => CodingPlatform()));
             },
           ),
           Opacity(opacity: 0.0, child: Divider()),

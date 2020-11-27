@@ -109,6 +109,19 @@ class Queuepage extends StatelessWidget {
                       child: Divider(
                         height: smallDivider,
                       )),
+                  Padding(
+                    padding: const EdgeInsets.only(
+                        top: 4.0, left: 3.0, right: 3.0, bottom: 2.0),
+                    child: Container(
+                      height: displayHeight(context) * 0.3,
+                      width: displayWidth(context) * 0.95,
+                      child: Image(
+                          image: AssetImage(
+                            "images/q9.png",
+                          ),
+                          fit: BoxFit.fill),
+                    ),
+                  ),
                   Text(
                     "Implementation :- ",
                     style: TextStyle(
@@ -198,25 +211,43 @@ class Queuepage extends StatelessWidget {
                       child: Divider(
                         height: smallDivider,
                       )),
+                  Padding(
+                    padding: const EdgeInsets.only(
+                        top: 4.0, left: 3.0, right: 3.0, bottom: 2.0),
+                    child: Container(
+                      height: displayHeight(context) * 0.45,
+                      width: displayWidth(context) * 0.95,
+                      child: Image(
+                          image: AssetImage(
+                            "images/q10.png",
+                          ),
+                          fit: BoxFit.fill),
+                    ),
+                  ),
                   Text(
                     "Illustration :- ",
                     style: TextStyle(
-                      fontSize: keywordfontsize,
+                      fontSize: displayWidth(context) * 0.065,
                       color: Colors.red,
                       fontFamily: "PatuaOne",
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: smallDivider,
-                      )),
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: smallDivider,
-                      )),
+                  mydiv,
+                  Padding(
+                    padding: const EdgeInsets.only(
+                        top: 4.0, left: 3.0, right: 3.0, bottom: 2.0),
+                    child: Container(
+                      height: displayHeight(context) * 0.4,
+                      width: displayWidth(context) * 0.95,
+                      child: Image(
+                          image: AssetImage(
+                            "images/q1.png",
+                          ),
+                          fit: BoxFit.fill),
+                    ),
+                  ),
+                  mydiv,
                   Text(
                     "2. Dequeue : - ",
                     style: TextStyle(
@@ -263,11 +294,20 @@ class Queuepage extends StatelessWidget {
                     "Deletion operation can’t be applied  when queue is empty (i.e. front =-1) or when front > rear.",
                     style: TextStyle(fontSize: fontsize),
                   ),
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: verysmallDivider,
-                      )),
+                  mydiv,
+                  Padding(
+                    padding: const EdgeInsets.only(
+                        top: 4.0, left: 3.0, right: 3.0, bottom: 2.0),
+                    child: Container(
+                      height: displayHeight(context) * 0.25,
+                      width: displayWidth(context) * 0.95,
+                      child: Image(
+                          image: AssetImage(
+                            "images/q12.jpg",
+                          ),
+                          fit: BoxFit.fitWidth),
+                    ),
+                  ),
                   Text(
                     "Illustration :- ",
                     style: TextStyle(
@@ -277,11 +317,20 @@ class Queuepage extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: smallDivider,
-                      )),
+                  Padding(
+                    padding: const EdgeInsets.only(
+                        top: 2.0, left: 3.0, right: 3.0, bottom: 2.0),
+                    child: Container(
+                      height: displayHeight(context) * 0.25,
+                      width: displayWidth(context) * 0.95,
+                      child: Image(
+                          image: AssetImage(
+                            "images/q2.png",
+                          ),
+                          fit: BoxFit.fitWidth),
+                    ),
+                  ),
+                  mydiv,
                   Text(
                     "• Linked List :- ",
                     style: TextStyle(
@@ -295,7 +344,7 @@ class Queuepage extends StatelessWidget {
                   Opacity(
                       opacity: 0.0,
                       child: Divider(
-                        height: smallDivider,
+                        height: verysmallDivider,
                       )),
                   Text(
                     "1. Enqueue : - ",
@@ -357,6 +406,19 @@ class Queuepage extends StatelessWidget {
                       child: Divider(
                         height: smallDivider,
                       )),
+                  Padding(
+                    padding: const EdgeInsets.only(
+                        top: 4.0, left: 3.0, right: 3.0, bottom: 2.0),
+                    child: Container(
+                      height: displayHeight(context) * 0.25,
+                      width: displayWidth(context) * 0.95,
+                      child: Image(
+                          image: AssetImage(
+                            "images/q11.png",
+                          ),
+                          fit: BoxFit.fitWidth),
+                    ),
+                  ),
                   Text(
                     "Illustration :- ",
                     style: TextStyle(
@@ -366,16 +428,19 @@ class Queuepage extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: smallDivider,
-                      )),
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: smallDivider,
-                      )),
+                  Padding(
+                    padding: const EdgeInsets.only(
+                        top: 2.0, left: 3.0, right: 3.0, bottom: 2.0),
+                    child: Container(
+                      height: displayHeight(context) * 0.4,
+                      width: displayWidth(context) * 0.95,
+                      child: Image(
+                          image: AssetImage(
+                            "images/q3.png",
+                          ),
+                          fit: BoxFit.fill),
+                    ),
+                  ),
                   Text(
                     "2. Dequeue : - ",
                     style: TextStyle(
@@ -436,6 +501,19 @@ class Queuepage extends StatelessWidget {
                       child: Divider(
                         height: verysmallDivider,
                       )),
+                  Padding(
+                    padding: const EdgeInsets.only(
+                        top: 4.0, left: 3.0, right: 3.0, bottom: 2.0),
+                    child: Container(
+                      height: displayHeight(context) * 0.25,
+                      width: displayWidth(context) * 0.95,
+                      child: Image(
+                          image: AssetImage(
+                            "images/q13.png",
+                          ),
+                          fit: BoxFit.fitWidth),
+                    ),
+                  ),
                   Text(
                     "Illustration :- ",
                     style: TextStyle(
@@ -445,16 +523,20 @@ class Queuepage extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: smallDivider,
-                      )),
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: smallDivider,
-                      )),
+                  Padding(
+                    padding: const EdgeInsets.only(
+                        top: 2.0, left: 3.0, right: 3.0, bottom: 2.0),
+                    child: Container(
+                      height: displayHeight(context) * 0.4,
+                      width: displayWidth(context) * 0.95,
+                      child: Image(
+                          image: AssetImage(
+                            "images/q4.png",
+                          ),
+                          fit: BoxFit.fill),
+                    ),
+                  ),
+                  mydiv,
                   Text(
                     "• Stack : - ",
                     style: TextStyle(
@@ -465,19 +547,11 @@ class Queuepage extends StatelessWidget {
                       letterSpacing: 0.5,
                     ),
                   ),
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: smallDivider,
-                      )),
+                  mydiv,
                   Text(
-                    "A stack can be implemented using two queues. Let stack to be implemented be ‘s’ and queues used to implement be ‘q1’ and ‘q2’. Stack ‘s’ can be implemented in two ways:- ",
+                    "A queue can be implemented using two stacks. Let queue to be implemented be q and stacks used to implement q be stack1 and stack2. q can be implemented in two ways:",
                     style: TextStyle(
                       fontSize: fontsize,
-                      //color: Colors.teal,
-                      //fontFamily: "Acme",
-                      //fontWeight: FontWeight.bold,
-                      //letterSpacing: 0.7,
                     ),
                   ),
                   Opacity(
@@ -511,33 +585,27 @@ class Queuepage extends StatelessWidget {
                         height: verysmallDivider,
                       )),
                   Text(
-                    "•	Enqueue x to q2.",
+                    "• While stack1 is not empty, push everything from stack1 to stack2.\n• Push x to stack1.\n• Push everything back to stack1.",
                     style: TextStyle(fontSize: fontsize),
+                  ),
+                  Opacity(
+                      opacity: 0.0,
+                      child: Divider(
+                        height: displayHeight(context) * 0.007,
+                      )),
+                  Text(
+                    "Here time complexity will be O(N).",
+                    style: TextStyle(
+                        fontSize: displayWidth(context) * 0.05,
+                        fontWeight: FontWeight.w600),
                   ),
                   Opacity(
                       opacity: 0.0,
                       child: Divider(
                         height: verysmallDivider,
                       )),
+                  mydiv,
                   Text(
-                    "•	One by one dequeue everything from q1 and enqueue to q2.",
-                    style: TextStyle(fontSize: fontsize),
-                  ),
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: verysmallDivider,
-                      )),
-                  Text(
-                    "•	Swap the names of q1 and q2.",
-                    style: TextStyle(fontSize: fontsize),
-                  ),
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: smallDivider,
-                      )),
-                  /*Text(
                     "Illustration :- ",
                     style: TextStyle(
                       fontSize: keywordfontsize,
@@ -545,12 +613,20 @@ class Queuepage extends StatelessWidget {
                       fontFamily: "PatuaOne",
                       fontWeight: FontWeight.bold,
                     ),
-                  ),*/
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: smallDivider,
-                      )),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(
+                        top: 2.0, left: 3.0, right: 3.0, bottom: 2.0),
+                    child: Container(
+                      height: displayHeight(context) * 0.35,
+                      width: displayWidth(context) * 0.95,
+                      child: Image(
+                          image: AssetImage(
+                            "images/q5.png",
+                          ),
+                          fit: BoxFit.fitWidth),
+                    ),
+                  ),
                   Text("2. Dequeue : - ",
                       style: TextStyle(
                         fontSize: subheadingfontsize,
@@ -565,14 +641,21 @@ class Queuepage extends StatelessWidget {
                         height: verysmallDivider,
                       )),
                   Text(
-                    "•	Dequeue an item from q1 and return it.",
+                    "• If stack1 is empty then error Pop an item from stack1 and return it",
                     style: TextStyle(fontSize: fontsize),
                   ),
                   Opacity(
                       opacity: 0.0,
                       child: Divider(
-                        height: verysmallDivider,
+                        height: displayHeight(context) * 0.007,
                       )),
+                  Text(
+                    "Here time complexity will be O(1).",
+                    style: TextStyle(
+                        fontSize: displayWidth(context) * 0.05,
+                        fontWeight: FontWeight.w600),
+                  ),
+                  mydiv2,
                   Text(
                     "Illustration :- ",
                     style: TextStyle(
@@ -582,11 +665,19 @@ class Queuepage extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: smallDivider,
-                      )),
+                  Padding(
+                    padding: const EdgeInsets.only(
+                        left: 3.0, right: 3.0, bottom: 2.0),
+                    child: Container(
+                      height: displayHeight(context) * 0.3,
+                      width: displayWidth(context) * 0.95,
+                      child: Image(
+                          image: AssetImage(
+                            "images/q6.png",
+                          ),
+                          fit: BoxFit.fitWidth),
+                    ),
+                  ),
                   Text(
                     "• By making dequeue operation costly : ",
                     style: TextStyle(
@@ -613,15 +704,22 @@ class Queuepage extends StatelessWidget {
                         height: verysmallDivider,
                       )),
                   Text(
-                    "•	Enqueue x to q1.",
+                    "• Push x to stack1 (assuming size of stacks is unlimited).",
                     style: TextStyle(fontSize: fontsize),
                   ),
                   Opacity(
                       opacity: 0.0,
                       child: Divider(
-                        height: verysmallDivider,
+                        height: displayHeight(context) * 0.007,
                       )),
-                  /*Text(
+                  Text(
+                    "Here time complexity will be O(1).",
+                    style: TextStyle(
+                        fontSize: displayWidth(context) * 0.05,
+                        fontWeight: FontWeight.w600),
+                  ),
+                  mydiv2,
+                  Text(
                     "Illustration :- ",
                     style: TextStyle(
                       fontSize: keywordfontsize,
@@ -630,11 +728,19 @@ class Queuepage extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: smallDivider,
-                      )),*/
+                  Padding(
+                    padding: const EdgeInsets.only(
+                        left: 3.0, right: 3.0, bottom: 2.0),
+                    child: Container(
+                      height: displayHeight(context) * 0.2,
+                      width: displayWidth(context) * 0.95,
+                      child: Image(
+                          image: AssetImage(
+                            "images/q7.png",
+                          ),
+                          fit: BoxFit.fitWidth),
+                    ),
+                  ),
                   Text("2. Dequeue : - ",
                       style: TextStyle(
                         fontSize: subheadingfontsize,
@@ -649,41 +755,21 @@ class Queuepage extends StatelessWidget {
                         height: verysmallDivider,
                       )),
                   Text(
-                    "•	One by one dequeue everything except the last element from q1 and enqueue to q2.",
+                    "• If both stacks are empty then error.\n• If stack2 is empty and stack1 is not empty, push everything from stack1 to stack2 until stack1 becomes empty.\n• Pop the element from stack2 and return it.",
                     style: TextStyle(fontSize: fontsize),
                   ),
                   Opacity(
                       opacity: 0.0,
                       child: Divider(
-                        height: verysmallDivider,
+                        height: displayHeight(context) * 0.007,
                       )),
                   Text(
-                    "•	Dequeue the last item of q1, the dequeued item is result, store it.",
-                    style: TextStyle(fontSize: fontsize),
+                    "Here time complexity will be O(N).",
+                    style: TextStyle(
+                        fontSize: displayWidth(context) * 0.05,
+                        fontWeight: FontWeight.w600),
                   ),
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: verysmallDivider,
-                      )),
-                  Text(
-                    "•	Swap the names of q1 and q2.",
-                    style: TextStyle(fontSize: fontsize),
-                  ),
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: verysmallDivider,
-                      )),
-                  Text(
-                    "•	Return the item stored in step 2.",
-                    style: TextStyle(fontSize: fontsize),
-                  ),
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: verysmallDivider,
-                      )),
+                  mydiv2,
                   Text(
                     "Illustration :- ",
                     style: TextStyle(
@@ -693,43 +779,19 @@ class Queuepage extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  /* Text(
-                    "•	One by one dequeue everything from q1 and enqueue to q2.",
-                    style: TextStyle(fontSize: fontsize),
-                  ),
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: verysmallDivider,
-                      )),
-                  Text(
-                    "•	Swap the names of q1 and q2.",
-                    style: TextStyle(fontSize: fontsize),
-                  ),
-                   Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: smallDivider,
-                      )),
-                  Text(
-                    "Illustration :- ",
-                    style: TextStyle(
-                      fontSize: keywordfontsize,
-                      color: Colors.red,
-                      fontFamily: "PatuaOne",
-                      fontWeight: FontWeight.bold,
+                  Padding(
+                    padding: const EdgeInsets.only(
+                        left: 3.0, right: 3.0, bottom: 2.0),
+                    child: Container(
+                      height: displayHeight(context) * 0.4,
+                      width: displayWidth(context) * 0.95,
+                      child: Image(
+                          image: AssetImage(
+                            "images/q8.png",
+                          ),
+                          fit: BoxFit.fitWidth),
                     ),
                   ),
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: smallDivider,
-                      )),
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: smallDivider,
-                      )),*/
                 ]))));
   }
 }
