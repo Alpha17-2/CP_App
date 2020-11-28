@@ -22,7 +22,7 @@ class _BasicdsState extends State<Basicds> {
   Widget build(BuildContext context) {
     double smallDivider = displayHeight(context) * 0.028;
     double verysmallDivider = displayHeight(context) * 0.01;
-    double fontsize = displayWidth(context) * 0.045;
+    double fontsize = displayWidth(context) * 0.04;
 
     final mystyleforheading = TextStyle(
       fontSize: displayWidth(context) * 0.055,

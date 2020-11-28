@@ -7,11 +7,11 @@ class Singlylinkedlist extends StatelessWidget {
   Widget build(BuildContext context) {
     double smallDivider = displayHeight(context) * 0.028;
     double verysmallDivider = displayHeight(context) * 0.01;
-    double fontsize = displayWidth(context) * 0.0415;
-    double keywordsize = displayWidth(context) * 0.050;
+    double fontsize = displayWidth(context) * 0.04;
+
     double headingfontsize = displayWidth(context) * 0.062;
     double subheadingfontsize = displayWidth(context) * 0.053;
-    double keywordfontsize = displayWidth(context) * 0.048;
+
     final mydiv = Opacity(
       opacity: 0.0,
       child: Divider(

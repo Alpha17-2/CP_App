@@ -22,6 +22,8 @@ import 'Providers/Quiz/CQuizList.dart';
 import 'Providers/Quiz/JavaQuizList.dart';
 import 'Providers/Quiz/PythonQuizList.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'Providers/Quiz/ArrayQuizList.dart';
+import 'Providers/Quiz/StackQuizList.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -51,6 +53,12 @@ class MyApp extends StatelessWidget {
         ),
         ChangeNotifierProvider(
           create: (context) => CplusQuizlist(),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => ArrayQuizlist(),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => StackQuizlist(),
         ),
         ChangeNotifierProvider(create: (context) => ContestList()),
         ChangeNotifierProvider(create: (context) => FundamentalProblem()),

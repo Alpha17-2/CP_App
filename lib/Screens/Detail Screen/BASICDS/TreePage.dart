@@ -13,11 +13,9 @@ class _TreePageState extends State<TreePage> {
   Widget build(BuildContext context) {
     double smallDivider = displayHeight(context) * 0.028;
     double verysmallDivider = displayHeight(context) * 0.01;
-    double fontsize = displayWidth(context) * 0.043;
-    double keywordsize = displayWidth(context) * 0.048;
-    double headingfontsize = displayWidth(context) * 0.062;
+    double fontsize = displayWidth(context) * 0.04;
     double headingsize = displayWidth(context) * 0.055;
-    double functionfontsize = displayWidth(context) * 0.055;
+
     final mydiv = Opacity(
       opacity: 0.0,
       child: Divider(

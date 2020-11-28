@@ -249,6 +249,7 @@ class _MyhomeState extends State<Myhome> {
       height: displayHeight(context) * 1.0,
       width: displayWidth(context) * 1.0,
       constraints: BoxConstraints.expand(),
+      //color: Colors.blue,
       decoration: BoxDecoration(
         image: DecorationImage(
           image: AssetImage('images/lastchoice.jpg'),
