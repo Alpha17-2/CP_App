@@ -5,50 +5,41 @@ class CodingPlatform extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        children: [
-          Positioned(
-            top: 20,
-            bottom: 150,
-            child: AppBar(
-              shape: CustomShapeBorder(),
-              leading: IconButton(
-                  icon: Icon(
-                    Icons.arrow_back,
-                    size: displayWidth(context) * 0.085,
-                  ),
-                  onPressed: () {
-                    Navigator.pop(context);
-                  }),
+        body: Stack(
+      children: [
+        Container(
+          color: Colors.green[200],
+          constraints: BoxConstraints.expand(),
+        ),
+        /*Container(
+          width: displayWidth(context) * 1.0,
+          height: displayHeight(context) * 0.36,
+          decoration: BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage("images/bg3.jpeg"), fit: BoxFit.fill)),
+        ),*/
+        Positioned(
+          top: displayHeight(context) * 0.32,
+          child: Container(
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.only(topLeft: Radius.circular(100.0)),
             ),
-          )
-        ],
-      ),
-    );
-  }
-}
-
-class CustomShapeBorder extends ContinuousRectangleBorder {
-  @override
-  Path getOuterPath(Rect rect, {TextDirection textDirection}) {
-    final double innerCircleRadius = 150.0;
-
-    Path path = Path();
-    path.lineTo(0, rect.height);
-    path.quadraticBezierTo(rect.width / 2 - (innerCircleRadius / 2) - 30,
-        rect.height + 15, rect.width / 2 - 75, rect.height + 50);
-    path.cubicTo(
-        rect.width / 2 - 40,
-        rect.height + innerCircleRadius - 40,
-        rect.width / 2 + 40,
-        rect.height + innerCircleRadius - 40,
-        rect.width / 2 + 75,
-        rect.height + 50);
-    path.quadraticBezierTo(rect.width / 2 + (innerCircleRadius / 2) + 30,
-        rect.height + 15, rect.width, rect.height);
-    path.lineTo(rect.width, 0.0);
-    path.close();
-
-    return path;
+            height: displayHeight(context) * 1.0,
+            width: displayWidth(context) * 1.0,
+            child: Padding(
+              padding: const EdgeInsets.only(top: 40, left: 80.0),
+              child: SingleChildScrollView(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [],
+                ),
+              ),
+            ),
+          ),
+        ),
+      ],
+    ));
   }
 }
