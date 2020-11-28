@@ -508,28 +508,20 @@ class Doublylinkedlist extends StatelessWidget {
               Text("• ptr  → next = NULL;  ",
                   style: TextStyle(
                       fontSize: fontsize, fontWeight: FontWeight.w500)),
-              Opacity(
-                  opacity: 0.0,
-                  child: Divider(
-                    height: verysmallDivider,
-                  )),
 
-              Text(
-                "Illustration :- ",
-                style: TextStyle(
-                  fontSize: subheadingfontsize,
-                  color: Colors.red,
-                  fontFamily: "Breeserif",
-                  fontWeight: FontWeight.w500,
-                  letterSpacing: 0.5,
+              Padding(
+                padding:
+                    const EdgeInsets.only(left: 3.0, right: 3.0, bottom: 2.0),
+                child: Container(
+                  height: displayHeight(context) * 0.25,
+                  width: displayWidth(context) * 0.95,
+                  child: Image(
+                      image: AssetImage(
+                        "images/L12.png",
+                      ),
+                      fit: BoxFit.fitWidth),
                 ),
               ),
-              // Insert Image !!
-              Opacity(
-                  opacity: 0.0,
-                  child: Divider(
-                    height: verysmallDivider,
-                  )),
 
               Text("3. After a specific node :- ",
                   style: TextStyle(
@@ -677,28 +669,21 @@ class Doublylinkedlist extends StatelessWidget {
                   fontWeight: FontWeight.w500,
                 ),
               ),
-              Opacity(
-                  opacity: 0.0,
-                  child: Divider(
-                    height: smallDivider,
-                  )),
 
-              Text(
-                "Illustration :- ",
-                style: TextStyle(
-                  fontSize: subheadingfontsize,
-                  color: Colors.red,
-                  fontFamily: "Breeserif",
-                  fontWeight: FontWeight.w500,
-                  letterSpacing: 0.5,
+              Padding(
+                padding: const EdgeInsets.only(
+                    top: 10.0, left: 3.0, right: 3.0, bottom: 2.0),
+                child: Container(
+                  height: displayHeight(context) * 0.2,
+                  width: displayWidth(context) * 0.95,
+                  child: Image(
+                      image: AssetImage(
+                        "images/L13.png",
+                      ),
+                      fit: BoxFit.fitWidth),
                 ),
               ),
-              //Insert Image !!
-              Opacity(
-                  opacity: 0.0,
-                  child: Divider(
-                    height: smallDivider,
-                  )),
+              mydiv,
               Text(
                 "• Deletion :- ",
                 style: TextStyle(
@@ -742,11 +727,7 @@ class Doublylinkedlist extends StatelessWidget {
                     fontSize: fontsize,
                     fontWeight: FontWeight.w500,
                   )),
-              Opacity(
-                  opacity: 0.0,
-                  child: Divider(
-                    height: verysmallDivider,
-                  )),
+
               Text("• head = head → next;",
                   style: TextStyle(
                     fontSize: fontsize,
@@ -755,7 +736,7 @@ class Doublylinkedlist extends StatelessWidget {
               Opacity(
                   opacity: 0.0,
                   child: Divider(
-                    height: smallDivider,
+                    height: verysmallDivider,
                   )),
               Text("2. Now make the prev of this new head node point to NULL. ",
                   style: TextStyle(
@@ -764,7 +745,7 @@ class Doublylinkedlist extends StatelessWidget {
               Opacity(
                   opacity: 0.0,
                   child: Divider(
-                    height: smallDivider,
+                    height: verysmallDivider,
                   )),
               Text("• head → prev = NULL;",
                   style: TextStyle(
@@ -774,7 +755,7 @@ class Doublylinkedlist extends StatelessWidget {
               Opacity(
                   opacity: 0.0,
                   child: Divider(
-                    height: smallDivider,
+                    height: verysmallDivider,
                   )),
               Text(
                 "3. Now free the pointer ptr by using the free function.",
@@ -792,27 +773,20 @@ class Doublylinkedlist extends StatelessWidget {
                     fontSize: fontsize,
                     fontWeight: FontWeight.w500,
                   )),
-              Opacity(
-                  opacity: 0.0,
-                  child: Divider(
-                    height: verysmallDivider,
-                  )),
-              Text(
-                "Illustration :- ",
-                style: TextStyle(
-                  fontSize: subheadingfontsize,
-                  color: Colors.red,
-                  fontFamily: "Breeserif",
-                  fontWeight: FontWeight.w500,
-                  letterSpacing: 0.5,
+
+              Padding(
+                padding:
+                    const EdgeInsets.only(left: 3.0, right: 3.0, bottom: 2.0),
+                child: Container(
+                  height: displayHeight(context) * 0.3,
+                  width: displayWidth(context) * 0.95,
+                  child: Image(
+                      image: AssetImage(
+                        "images/L14.png",
+                      ),
+                      fit: BoxFit.fitWidth),
                 ),
               ),
-              // Insert Image !!
-              Opacity(
-                  opacity: 0.0,
-                  child: Divider(
-                    height: verysmallDivider,
-                  )),
               Text("2. At end :- ",
                   style: TextStyle(
                     fontSize: subheadingfontsize,
@@ -848,20 +822,12 @@ class Doublylinkedlist extends StatelessWidget {
               Text("• head → next == NULL",
                   style: TextStyle(
                       fontSize: fontsize, fontWeight: FontWeight.w500)),
-              Opacity(
-                  opacity: 0.0,
-                  child: Divider(
-                    height: verysmallDivider,
-                  )),
+
               Text("• free(ptr)",
                   style: TextStyle(
                       fontSize: fontsize, fontWeight: FontWeight.w500)),
 
-              Opacity(
-                  opacity: 0.0,
-                  child: Divider(
-                    height: smallDivider,
-                  )),
+              mydiv,
               Text("2. More than one node is present :-",
                   style: TextStyle(
                       fontSize: fontsize,
@@ -930,27 +896,19 @@ class Doublylinkedlist extends StatelessWidget {
                     fontSize: fontsize,
                     fontWeight: FontWeight.w500,
                   )),
-              Opacity(
-                  opacity: 0.0,
-                  child: Divider(
-                    height: verysmallDivider,
-                  )),
-              Text(
-                "Illustration :- ",
-                style: TextStyle(
-                  fontSize: subheadingfontsize,
-                  color: Colors.red,
-                  fontFamily: "Breeserif",
-                  fontWeight: FontWeight.w500,
-                  letterSpacing: 0.5,
+              Padding(
+                padding: const EdgeInsets.only(
+                    top: 10.0, left: 3.0, right: 3.0, bottom: 2.0),
+                child: Container(
+                  height: displayHeight(context) * 0.26,
+                  width: displayWidth(context) * 0.95,
+                  child: Image(
+                      image: AssetImage(
+                        "images/L15.png",
+                      ),
+                      fit: BoxFit.fitWidth),
                 ),
               ),
-              // Insert Image !!
-              Opacity(
-                  opacity: 0.0,
-                  child: Divider(
-                    height: verysmallDivider,
-                  )),
               Text("3. After a specific node :- ",
                   style: TextStyle(
                     fontSize: subheadingfontsize,
@@ -1107,27 +1065,20 @@ class Doublylinkedlist extends StatelessWidget {
                   fontWeight: FontWeight.w500,
                 ),
               ),
-              Opacity(
-                  opacity: 0.0,
-                  child: Divider(
-                    height: verysmallDivider,
-                  )),
-              Text(
-                "Illustration :- ",
-                style: TextStyle(
-                  fontSize: subheadingfontsize,
-                  color: Colors.red,
-                  fontFamily: "Breeserif",
-                  fontWeight: FontWeight.w500,
-                  letterSpacing: 0.5,
+
+              Padding(
+                padding: const EdgeInsets.only(
+                    top: 10.0, left: 3.0, right: 3.0, bottom: 2.0),
+                child: Container(
+                  height: displayHeight(context) * 0.2,
+                  width: displayWidth(context) * 0.95,
+                  child: Image(
+                      image: AssetImage(
+                        "images/L16.png",
+                      ),
+                      fit: BoxFit.fitWidth),
                 ),
               ),
-              // Insert Image !!
-              Opacity(
-                  opacity: 0.0,
-                  child: Divider(
-                    height: verysmallDivider,
-                  )),
               Text(
                 "• Traversing :- ",
                 style: TextStyle(
@@ -1163,32 +1114,7 @@ class Doublylinkedlist extends StatelessWidget {
                           fontSize: fontsize,
                         )),
                   )),
-              Opacity(
-                  opacity: 0.0,
-                  child: Divider(
-                    height: verysmallDivider,
-                  )),
-              Text(
-                "Illustration :- ",
-                style: TextStyle(
-                  fontSize: subheadingfontsize,
-                  color: Colors.red,
-                  fontFamily: "Breeserif",
-                  fontWeight: FontWeight.w500,
-                  letterSpacing: 0.5,
-                ),
-              ),
-              //Insert Image!!
-              Opacity(
-                  opacity: 0.0,
-                  child: Divider(
-                    height: verysmallDivider,
-                  )),
-              Opacity(
-                  opacity: 0.0,
-                  child: Divider(
-                    height: smallDivider,
-                  )),
+
               Text(
                 "• Searching :- ",
                 style: TextStyle(
@@ -1209,6 +1135,7 @@ class Doublylinkedlist extends StatelessWidget {
                   style: TextStyle(
                     fontSize: fontsize,
                   )),
+              mydiv,
               Card(
                 color: Colors.yellow[100],
                 child: Padding(

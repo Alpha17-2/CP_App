@@ -6,11 +6,11 @@ class Circularsinglylinkedlist extends StatelessWidget {
   Widget build(BuildContext context) {
     double smallDivider = displayHeight(context) * 0.028;
     double verysmallDivider = displayHeight(context) * 0.01;
-    double fontsize = displayWidth(context) * 0.043;
-    double keywordsize = displayWidth(context) * 0.050;
+    double fontsize = displayWidth(context) * 0.038;
+
     double headingfontsize = displayWidth(context) * 0.062;
     double subheadingfontsize = displayWidth(context) * 0.053;
-    double keywordfontsize = displayWidth(context) * 0.048;
+
     final mydiv = Opacity(
       opacity: 0.0,
       child: Divider(
@@ -77,12 +77,21 @@ class Circularsinglylinkedlist extends StatelessWidget {
                       style: TextStyle(
                         fontSize: fontsize,
                       )),
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: smallDivider,
-                      )),
+
                   //Insert Image !!
+                  Padding(
+                    padding: const EdgeInsets.only(
+                        top: 6.0, left: 3.0, right: 3.0, bottom: 6.0),
+                    child: Container(
+                      height: displayHeight(context) * 0.2,
+                      width: displayWidth(context) * 0.95,
+                      child: Image(
+                          image: AssetImage(
+                            "images/L17.png",
+                          ),
+                          fit: BoxFit.fitWidth),
+                    ),
+                  ),
                   Text(
                       "A represents head and node D represents tail. So, in this list, A is pointing to B, B is pointing to C and C is pointing to D but what makes it circular is that node D is pointing back to node A.",
                       style: TextStyle(
@@ -295,22 +304,19 @@ class Circularsinglylinkedlist extends StatelessWidget {
                         fontSize: fontsize,
                         fontWeight: FontWeight.w500,
                       )),
-                  Text(
-                    "Illustration :- ",
-                    style: TextStyle(
-                      fontSize: subheadingfontsize,
-                      color: Colors.red,
-                      fontFamily: "Breeserif",
-                      fontWeight: FontWeight.w500,
-                      letterSpacing: 0.5,
+                  Padding(
+                    padding: const EdgeInsets.only(
+                        top: 2.0, left: 3.0, right: 3.0, bottom: 2.0),
+                    child: Container(
+                      height: displayHeight(context) * 0.32,
+                      width: displayWidth(context) * 0.95,
+                      child: Image(
+                          image: AssetImage(
+                            "images/L19.png",
+                          ),
+                          fit: BoxFit.fitWidth),
                     ),
                   ),
-                  //Insert image !!
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: verysmallDivider,
-                      )),
 
                   Text("2. At end :- ",
                       style: TextStyle(
@@ -473,33 +479,19 @@ class Circularsinglylinkedlist extends StatelessWidget {
                         fontSize: fontsize,
                         fontWeight: FontWeight.w500,
                       )),
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: smallDivider,
-                      )),
-
-                  Text(
-                    "Illustration :- ",
-                    style: TextStyle(
-                      fontSize: subheadingfontsize,
-                      color: Colors.red,
-                      fontFamily: "Breeserif",
-                      fontWeight: FontWeight.w500,
-                      letterSpacing: 0.5,
+                  Padding(
+                    padding: const EdgeInsets.only(
+                        top: 2.0, left: 3.0, right: 3.0, bottom: 2.0),
+                    child: Container(
+                      height: displayHeight(context) * 0.32,
+                      width: displayWidth(context) * 0.95,
+                      child: Image(
+                          image: AssetImage(
+                            "images/L20.png",
+                          ),
+                          fit: BoxFit.fitWidth),
                     ),
                   ),
-                  //Insert image !!
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: verysmallDivider,
-                      )),
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: verysmallDivider,
-                      )),
                   Text(
                     "• Deletion :- ",
                     style: TextStyle(
@@ -675,32 +667,20 @@ class Circularsinglylinkedlist extends StatelessWidget {
                         fontSize: fontsize,
                         fontWeight: FontWeight.w500,
                       )),
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: smallDivider,
-                      )),
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: verysmallDivider,
-                      )),
-                  Text(
-                    "Illustration :- ",
-                    style: TextStyle(
-                      fontSize: subheadingfontsize,
-                      color: Colors.red,
-                      fontFamily: "Breeserif",
-                      fontWeight: FontWeight.w500,
-                      letterSpacing: 0.5,
+
+                  Padding(
+                    padding: const EdgeInsets.only(
+                        top: 2.0, left: 3.0, right: 3.0, bottom: 2.0),
+                    child: Container(
+                      height: displayHeight(context) * 0.32,
+                      width: displayWidth(context) * 0.95,
+                      child: Image(
+                          image: AssetImage(
+                            "images/L21.png",
+                          ),
+                          fit: BoxFit.fitWidth),
                     ),
                   ),
-                  //Insert image !!
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: verysmallDivider,
-                      )),
                   Text("2. At end :- ",
                       style: TextStyle(
                         fontSize: subheadingfontsize,
@@ -842,32 +822,19 @@ class Circularsinglylinkedlist extends StatelessWidget {
                         fontSize: fontsize,
                         fontWeight: FontWeight.w500,
                       )),
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: verysmallDivider,
-                      )),
-                  Text(
-                    "Illustration :- ",
-                    style: TextStyle(
-                      fontSize: subheadingfontsize,
-                      color: Colors.red,
-                      fontFamily: "Breeserif",
-                      fontWeight: FontWeight.w500,
-                      letterSpacing: 0.5,
+                  Padding(
+                    padding: const EdgeInsets.only(
+                        top: 2.0, left: 3.0, right: 3.0, bottom: 2.0),
+                    child: Container(
+                      height: displayHeight(context) * 0.32,
+                      width: displayWidth(context) * 0.95,
+                      child: Image(
+                          image: AssetImage(
+                            "images/L22.png",
+                          ),
+                          fit: BoxFit.fitWidth),
                     ),
                   ),
-                  //Insert image !!
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: verysmallDivider,
-                      )),
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: smallDivider,
-                      )),
                   Text(
                     "• Traversing :- ",
                     style: TextStyle(
@@ -903,32 +870,7 @@ class Circularsinglylinkedlist extends StatelessWidget {
                               fontSize: fontsize,
                             )),
                       )),
-
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: verysmallDivider,
-                      )),
-                  Text(
-                    "Illustration :- ",
-                    style: TextStyle(
-                      fontSize: subheadingfontsize,
-                      color: Colors.red,
-                      fontFamily: "Breeserif",
-                      fontWeight: FontWeight.w500,
-                      letterSpacing: 0.5,
-                    ),
-                  ),
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: verysmallDivider,
-                      )),
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: smallDivider,
-                      )),
+                  mydiv,
                   Text(
                     "• Searching :- ",
                     style: TextStyle(
@@ -954,21 +896,19 @@ class Circularsinglylinkedlist extends StatelessWidget {
                       child: Divider(
                         height: verysmallDivider,
                       )),
-                  Text(
-                    "Illustration :- ",
-                    style: TextStyle(
-                      fontSize: subheadingfontsize,
-                      color: Colors.red,
-                      fontFamily: "Breeserif",
-                      fontWeight: FontWeight.w500,
-                      letterSpacing: 0.5,
+                  Card(
+                    color: Colors.yellow[100],
+                    child: Padding(
+                      padding: const EdgeInsets.all(12.0),
+                      child: Text(
+                        'void search()\n{\n    struct node *ptr;\n    int item,i=0,ans=0;\n    bool isFound=false;\n    ptr = head;\n\n    printf(" Enter the item to be searched ");\n    scanf(" %d ",&item);\n\n    if(head ->data == item)\n    {\n    ans=i+1;\n    isFound=true;\n    }\n    else\n    {\n        while (ptr->next != head)\n        {\n            if(ptr->data == item)\n            {\n              ans=i+1;\n              isFound=true;\n              break;\n            }\n            i++;\n            ptr = ptr -> next;\n        }\n    }\n    if(isFound)\n        printf("Item found at %d",ans);\n    else\n        printf("Item not found");\n}',
+                        style: TextStyle(
+                          fontSize: displayWidth(context) * 0.035,
+                        ),
+                      ),
                     ),
                   ),
-                  Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: verysmallDivider,
-                      )),
+                  mydiv,
                 ],
               ),
             )));

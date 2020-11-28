@@ -1,3 +1,4 @@
+import 'package:CP_App/Helpers/PageAnimation.dart';
 import 'package:CP_App/Screens/Detail%20Screen/BASICDS/SinglyLinkedList.dart';
 import 'package:flutter/material.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
@@ -17,7 +18,7 @@ class _Linkedlist extends State<Linkedlist> {
   Widget build(BuildContext context) {
     double smallDivider = displayHeight(context) * 0.028;
     double verysmallDivider = displayHeight(context) * 0.01;
-    double fontsize = displayWidth(context) * 0.04;
+    double fontsize = displayWidth(context) * 0.035;
     double headingfontsize = displayWidth(context) * 0.062;
     double subheadingfontsize = displayWidth(context) * 0.053;
 
@@ -307,13 +308,22 @@ class _Linkedlist extends State<Linkedlist> {
           ]),
     );
 
-    final ListOfContainers = [
-      Container(
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          "Linked List",
+          style: TextStyle(
+            fontSize: displayWidth(context) * 0.042,
+          ),
+        ),
+        backgroundColor: Colors.blue[200],
+        centerTitle: true,
+      ),
+      body: Container(
           //   Intro and Operations page!!
           constraints: BoxConstraints.expand(),
           child: Padding(
-              padding: EdgeInsets.only(
-                  top: 16.0, bottom: 16.0, left: 12.0, right: 12.0),
+              padding: EdgeInsets.only(top: 16.0, left: 12.0, right: 12.0),
               child: SingleChildScrollView(
                   child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
@@ -508,103 +518,167 @@ class _Linkedlist extends State<Linkedlist> {
                         )),
                     Text("Deletes an element using the given key.",
                         style: TextStyle(fontSize: fontsize)),
-                    Opacity(
-                        opacity: 0.0,
-                        child: Divider(
-                          height: verysmallDivider,
-                        )),
-                    Opacity(
-                        opacity: 0.0,
-                        child: Divider(
-                          height: smallDivider,
-                        )),
+                    mydiv2,
+                    Text("Types :",
+                        style: TextStyle(
+                            fontSize: displayWidth(context) * 0.075,
+                            fontFamily: "ConcertOne",
+                            color: Colors.red)),
+                    mydiv2,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context, MyPageAnimation(w: Singlylinkedlist()));
+                      },
+                      child: Card(
+                        elevation: 12.0,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12.0)),
+                        child: ClipPath(
+                          child: Container(
+                            decoration: BoxDecoration(
+                                gradient: LinearGradient(
+                              colors: [
+                                Colors.indigo[200],
+                                Colors.indigo[300],
+                                Colors.indigo[400],
+                              ],
+                              begin: Alignment.bottomLeft,
+                            )),
+                            child: Padding(
+                              padding: const EdgeInsets.all(16.0),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    "Singly Linked List",
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: displayWidth(context) * 0.04,
+                                    ),
+                                  ),
+                                  Icon(
+                                    Icons.touch_app,
+                                    color: Colors.white,
+                                  )
+                                ],
+                              ),
+                            ),
+                          ),
+                          clipper: ShapeBorderClipper(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(12.0)),
+                          ),
+                        ),
+                      ),
+                    ),
+                    mydiv,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context, MyPageAnimation(w: Doublylinkedlist()));
+                      },
+                      child: Card(
+                        elevation: 12.0,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12.0)),
+                        child: ClipPath(
+                          child: Container(
+                            decoration: BoxDecoration(
+                                gradient: LinearGradient(
+                              colors: [
+                                Colors.indigo[200],
+                                Colors.indigo[300],
+                                Colors.indigo[400],
+                              ],
+                              begin: Alignment.bottomLeft,
+                            )),
+                            child: Padding(
+                              padding: const EdgeInsets.all(16.0),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    "Doubly Linked List",
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w500,
+                                      fontSize:
+                                          displayWidth(context) * 0.038595,
+                                    ),
+                                  ),
+                                  Icon(
+                                    Icons.touch_app,
+                                    color: Colors.white,
+                                  )
+                                ],
+                              ),
+                            ),
+                          ),
+                          clipper: ShapeBorderClipper(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(12.0)),
+                          ),
+                        ),
+                      ),
+                    ),
+                    mydiv,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(context,
+                            MyPageAnimation(w: Circularsinglylinkedlist()));
+                      },
+                      child: Card(
+                        elevation: 12.0,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12.0)),
+                        child: ClipPath(
+                          child: Container(
+                            decoration: BoxDecoration(
+                                gradient: LinearGradient(
+                              colors: [
+                                Colors.indigo[200],
+                                Colors.indigo[300],
+                                Colors.indigo[400],
+                              ],
+                              begin: Alignment.bottomLeft,
+                            )),
+                            child: Padding(
+                              padding: const EdgeInsets.all(16.0),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    "Circular Linked List",
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w500,
+                                      fontSize:
+                                          displayWidth(context) * 0.036595,
+                                    ),
+                                  ),
+                                  Icon(
+                                    Icons.touch_app,
+                                    color: Colors.white,
+                                  )
+                                ],
+                              ),
+                            ),
+                          ),
+                          clipper: ShapeBorderClipper(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(12.0)),
+                          ),
+                        ),
+                      ),
+                    ),
+                    mydiv2,
+                    mydiv,
                   ])))),
-      Container(
-          constraints: BoxConstraints.expand(),
-          child: Padding(
-              padding: EdgeInsets.only(
-                  top: 16.0, bottom: 16.0, left: 12.0, right: 12.0),
-              child: SingleChildScrollView(
-                  child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                    FlatButton(
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => (Singlylinkedlist())));
-                        },
-                        child: Padding(
-                          padding: EdgeInsets.all(12.0),
-                          child: Text("Singly Linked List"),
-                        )),
-                    FlatButton(
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => Doublylinkedlist()));
-                        },
-                        child: Padding(
-                          padding: EdgeInsets.all(12.0),
-                          child: Text("Doubly Linked List"),
-                        )),
-                    FlatButton(
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>
-                                      Circularsinglylinkedlist()));
-                        },
-                        child: Padding(
-                          padding: EdgeInsets.all(12.0),
-                          child: Text("Circular Linked list"),
-                        )),
-                  ]))))
-    ];
-
-    return Scaffold(
-        appBar: AppBar(
-          title: Text(
-            "Linked List",
-            style: TextStyle(
-              fontSize: displayWidth(context) * 0.042,
-            ),
-          ),
-          backgroundColor: Colors.blue[200],
-          centerTitle: true,
-        ),
-        body: ListOfContainers[curIndex],
-        bottomNavigationBar: BottomNavyBar(
-            iconSize: displayHeight(context) * 0.0355,
-            containerHeight: displayHeight(context) * 0.08,
-            selectedIndex: curIndex,
-            onItemSelected: (value) {
-              setState(() {
-                curIndex = value;
-              });
-            },
-            items: [
-              BottomNavyBarItem(
-                  inactiveColor: Colors.purple,
-                  activeColor: Colors.lightBlue,
-                  icon: Icon(
-                    Icons.assessment,
-                  ),
-                  title: Text(
-                    'Operations',
-                    style: TextStyle(fontSize: displayWidth(context) * 0.03),
-                  )),
-              BottomNavyBarItem(
-                inactiveColor: Colors.purple,
-                activeColor: Colors.lightBlue,
-                icon: Icon(Icons.edit),
-                title: Text('Types',
-                    style: TextStyle(fontSize: displayWidth(context) * 0.03)),
-              ),
-            ]));
+    );
   }
 }
