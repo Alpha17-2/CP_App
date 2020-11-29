@@ -107,6 +107,7 @@ flutter:
       - images/codeforces.jpg
       - images/Codechef.jpeg
       - images/hackerrank.png
+      - images/helogo.jpg
       - images/hackerearth.png
       - images/leetcode.jpeg
       - images/google.jpg
@@ -236,6 +237,9 @@ flutter:
       fonts:
         - asset: fonts/HammersmithOne-Regular.ttf
 
+    - family: AlfaSlabOne
+      fonts:
+        - asset: fonts/AlfaSlabOne-Regular.ttf
 
     - family: BreeSerif
       fonts:

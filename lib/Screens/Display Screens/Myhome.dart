@@ -147,10 +147,7 @@ class _MyhomeState extends State<Myhome> {
                       child: Padding(
                         padding: const EdgeInsets.all(5.2),
                         child: Text(
-                          "Start : " +
-                              sdate.substring(
-                                0,
-                              ),
+                          "Start : " + sdate,
                           style: TextStyle(
                             color: Colors.white,
                             fontFamily: 'Fredoka One',
