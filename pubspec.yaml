@@ -58,7 +58,9 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
+      - images/cboy.png
       - images/bg2.jpeg
+      - images/hrbottom.png
       - images/bg3.jpeg
       - images/c1.jpg
       - images/d1.png
@@ -93,16 +95,14 @@ flutter:
       - images/lastchoice.jpg
       - images/black.jpg
       - images/ui6.jpg
-      - images/drawerwall.jpg
-      - images/drawerwall2.jpg
+      - images/cofused.png
       - images/java.png
       - images/choice.jpg
-      - images/Solution.png
-      - images/editorial.png
+      
       - images/swipeatproblem.png
       - images/swipe.png
-      - images/back.jpg
-      - images/confused.png
+      
+      
       - images/atcoder.png
       - images/codeforces.jpg
       - images/Codechef.jpeg
@@ -112,7 +112,7 @@ flutter:
       - images/leetcode.jpeg
       - images/google.jpg
       - images/ds.jpg
-      - images/algo.png
+     
       - images/timespace.png
       - images/quiz.jpg
       - images/stl.jpg
@@ -123,10 +123,10 @@ flutter:
       - images/s1.png
       - images/m2.png
       - images/fund1.png
-      - images/backimage.jpg
-      - images/m1.png
+     
+      
       - images/ui2.jpg
-      - images/algorithm.png
+     
       - images/array.jpg
       - images/string.jpg
       - images/search.png
@@ -145,7 +145,7 @@ flutter:
       - images/postorder.jpg
       - images/crop.jpg
       - images/applogo.png
-      - images/drawerlogo.jpeg
+     
       - images/finallogo.jpg
       - images/codingplatform.png
       - images/q1.png
@@ -191,6 +191,16 @@ flutter:
       - images/L20.png
       - images/L21.png
       - images/L22.png
+      - images/halogo.png
+      - images/cclogo.png
+      - images/spojlogo.png
+      - images/cwlogo.png
+      - images/lclogo.png
+      - images/cflogo.png
+      - images/tclogo.jpeg
+      - images/aclogo.png
+      
+      - images/CSES2.jpg
 
     
   
