@@ -1,6 +1,9 @@
 import 'package:CP_App/Providers/Contest_List.dart';
 import 'package:CP_App/Providers/ProblemSection/SortingProblemsList.dart';
+import 'package:CP_App/Providers/Quiz/BinaryTreeQuizList.dart';
+import 'package:CP_App/Providers/Quiz/GraphQuizList.dart';
 import 'Providers/ProblemSection/MathsProblemList.dart';
+import 'Providers/Quiz/LinkedListQuizList.dart';
 import 'Providers/TrendingProblems.dart';
 import 'Providers/Quiz/SingleQuestion.dart';
 import 'Providers/ProblemSection/ArrayProblemlist.dart';
@@ -24,6 +27,11 @@ import 'Providers/Quiz/PythonQuizList.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'Providers/Quiz/ArrayQuizList.dart';
 import 'Providers/Quiz/StackQuizList.dart';
+import 'Providers/Quiz/LinkedListQuizList.dart';
+import 'Providers/Quiz/QueueQuizList.dart';
+import 'Providers/Quiz/BinaryTreeQuizList.dart';
+import 'Providers/Quiz/GraphQuizList.dart';
+import 'Providers/Quiz/SearchingQuizList.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -59,6 +67,21 @@ class MyApp extends StatelessWidget {
         ),
         ChangeNotifierProvider(
           create: (context) => StackQuizlist(),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => LinkedListQuizlist(),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => QueueQuizlist(),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => BinaryTreeQuizlist(),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => GraphQuizlist(),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => SearchingQuizlist(),
         ),
         ChangeNotifierProvider(create: (context) => ContestList()),
         ChangeNotifierProvider(create: (context) => FundamentalProblem()),
@@ -97,3 +120,5 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+class SortingQuizlist {}

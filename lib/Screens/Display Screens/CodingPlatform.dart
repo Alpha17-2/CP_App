@@ -13,10 +13,18 @@ class _CodingPlatformState extends State<CodingPlatform> {
     final mydiv = Opacity(
       opacity: 0.0,
       child: Divider(
-        height: displayHeight(context) * 0.016,
+        height: displayHeight(context) * 0.012,
       ),
     );
     void _HackerRankDetail(context) {
+      Future<void> _linkopen(String url) async {
+        if (await canLaunch(url)) {
+          await launch(url, forceWebView: false, forceSafariVC: false);
+        } else {
+          throw 'Could not launch';
+        }
+      }
+
       showModalBottomSheet(
           context: context,
           builder: (builder) {
@@ -24,6 +32,8 @@ class _CodingPlatformState extends State<CodingPlatform> {
               height: displayHeight(context) * 0.55,
               decoration: BoxDecoration(
                 gradient: LinearGradient(
+                  begin: Alignment.bottomLeft,
+                  end: Alignment.topRight,
                   colors: [
                     Colors.green[100],
                     Colors.green[200],
@@ -53,61 +63,662 @@ class _CodingPlatformState extends State<CodingPlatform> {
                   ),
                   mydiv,
                   Padding(
-                    padding: const EdgeInsets.only(left: 10.0),
+                    padding: const EdgeInsets.only(left: 60, right: 60),
+                    child: Center(
+                      child: Card(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12)),
+                        color: Colors.white,
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Text(
+                                "Common Contests",
+                                style: TextStyle(
+                                  color: Colors.deepOrangeAccent,
+                                  fontFamily: "Fredoka One",
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: displayWidth(context) * 0.04,
+                                ),
+                              ),
+                              Divider(
+                                color: Colors.black,
+                                thickness: 1,
+                              ),
+                              Text(
+                                "ProjectEuler+",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: displayWidth(context) * 0.035,
+                                ),
+                              ),
+                              Text(
+                                "Hack The Interview (Asia Pacific)",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: displayWidth(context) * 0.035,
+                                ),
+                              ),
+                              Text(
+                                "Hack The Interview (U.S)",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: displayWidth(context) * 0.035,
+                                ),
+                              ),
+                              Text(
+                                "Hack The Interview (Global)",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: displayWidth(context) * 0.035,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  mydiv,
+                  Padding(
+                    padding: const EdgeInsets.only(left: 60, right: 60),
+                    child: Center(
+                      child: Card(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12)),
+                        color: Colors.white,
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Text(
+                                "Divisions",
+                                style: TextStyle(
+                                  color: Colors.deepOrangeAccent,
+                                  fontFamily: "Fredoka One",
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: displayWidth(context) * 0.04,
+                                ),
+                              ),
+                              Divider(
+                                color: Colors.black,
+                                thickness: 1,
+                              ),
+                              Text(
+                                "Open for all",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: displayWidth(context) * 0.035,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 16.0, bottom: 10.0),
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        Card(
-                          color: Colors.white,
-                          child: Padding(
-                            padding: const EdgeInsets.all(12.0),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "Common Contests",
-                                  style: TextStyle(
-                                    color: Colors.deepOrangeAccent,
-                                    fontFamily: "Fredoka One",
-                                    fontWeight: FontWeight.w500,
-                                    fontSize: displayWidth(context) * 0.04,
-                                  ),
+                        GestureDetector(
+                          onTap: () {
+                            _linkopen("https://www.hackerrank.com");
+                          },
+                          child: Card(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(6.0)),
+                            elevation: 12.0,
+                            color: Colors.indigo,
+                            child: Padding(
+                              padding: const EdgeInsets.all(10.0),
+                              child: Text(
+                                "LINK",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.white,
+                                  fontSize: displayWidth(context) * 0.04,
                                 ),
-                                Divider(),
-                                Text(
-                                  "ProjectEuler+",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.w500,
-                                    fontSize: displayWidth(context) * 0.035,
-                                  ),
-                                ),
-                                Text(
-                                  "Hack The Interview (Asia Pacific)",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.w500,
-                                    fontSize: displayWidth(context) * 0.035,
-                                  ),
-                                ),
-                                Text(
-                                  "Hack The Interview (U.S)",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.w500,
-                                    fontSize: displayWidth(context) * 0.035,
-                                  ),
-                                ),
-                                Text(
-                                  "Hack The Interview (Global)",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.w500,
-                                    fontSize: displayWidth(context) * 0.035,
-                                  ),
-                                ),
-                              ],
+                              ),
                             ),
                           ),
                         ),
-                        Card(),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            );
+          });
+    }
+
+    void _HackerearthDetail(context) {
+      Future<void> _linkopen(String url) async {
+        if (await canLaunch(url)) {
+          await launch(url, forceWebView: false, forceSafariVC: false);
+        } else {
+          throw 'Could not launch';
+        }
+      }
+
+      showModalBottomSheet(
+          context: context,
+          builder: (builder) {
+            return new Container(
+              height: displayHeight(context) * 0.55,
+              decoration: BoxDecoration(
+                color: Color(0xbb2E1A47),
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Center(
+                      child: Icon(
+                    Icons.arrow_drop_down,
+                    size: displayWidth(context) * 0.08,
+                  )),
+                  Center(
+                    child: Image(
+                      image: AssetImage("images/x1.png"),
+                      width: displayWidth(context) * 0.4,
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 60, right: 60),
+                    child: Center(
+                      child: Card(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12)),
+                        color: Colors.white,
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Text(
+                                "Common Contests",
+                                style: TextStyle(
+                                  color: Colors.deepOrangeAccent,
+                                  fontFamily: "Fredoka One",
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: displayWidth(context) * 0.04,
+                                ),
+                              ),
+                              Divider(
+                                color: Colors.black,
+                                thickness: 1,
+                              ),
+                              Text(
+                                "Rated Contests (3)",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: displayWidth(context) * 0.035,
+                                ),
+                              ),
+                              Text(
+                                "Hackathons",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: displayWidth(context) * 0.035,
+                                ),
+                              ),
+                              Text(
+                                "Hiring Contests",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: displayWidth(context) * 0.035,
+                                ),
+                              ),
+                              Text(
+                                "University Challenges",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: displayWidth(context) * 0.035,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  mydiv,
+                  Padding(
+                    padding: const EdgeInsets.only(left: 60, right: 60),
+                    child: Center(
+                      child: Card(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12)),
+                        color: Colors.white,
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Text(
+                                "Divisions",
+                                style: TextStyle(
+                                  color: Colors.deepOrangeAccent,
+                                  fontFamily: "Fredoka One",
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: displayWidth(context) * 0.04,
+                                ),
+                              ),
+                              Divider(
+                                color: Colors.black,
+                                thickness: 1,
+                              ),
+                              Text(
+                                "Open for all",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: displayWidth(context) * 0.035,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 16.0, bottom: 10.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        GestureDetector(
+                          onTap: () {
+                            _linkopen("https://www.hackerearth.com");
+                          },
+                          child: Card(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(6.0)),
+                            elevation: 12.0,
+                            color: Colors.indigo,
+                            child: Padding(
+                              padding: const EdgeInsets.all(10.0),
+                              child: Text(
+                                "LINK",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.white,
+                                  fontSize: displayWidth(context) * 0.04,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            );
+          });
+    }
+
+    void _LeetCode(context) {
+      Future<void> _linkopen(String url) async {
+        if (await canLaunch(url)) {
+          await launch(url, forceWebView: false, forceSafariVC: false);
+        } else {
+          throw 'Could not launch';
+        }
+      }
+
+      showModalBottomSheet(
+          context: context,
+          builder: (builder) {
+            return new Container(
+              height: displayHeight(context) * 0.55,
+              decoration: BoxDecoration(
+                color: Color(0xbb2E1A47),
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Center(
+                      child: Icon(
+                    Icons.arrow_drop_down,
+                    size: displayWidth(context) * 0.08,
+                  )),
+                  Center(
+                    child: ClipPath(
+                      child: Image(
+                        image: AssetImage("images/hackerearth.png"),
+                        width: displayWidth(context) * 0.4,
+                      ),
+                      clipper: ShapeBorderClipper(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10.0))),
+                    ),
+                  ),
+                  mydiv,
+                  Padding(
+                    padding: const EdgeInsets.only(left: 60, right: 60),
+                    child: Center(
+                      child: Card(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12)),
+                        color: Colors.white,
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Text(
+                                "Common Contests",
+                                style: TextStyle(
+                                  color: Colors.deepOrangeAccent,
+                                  fontFamily: "Fredoka One",
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: displayWidth(context) * 0.04,
+                                ),
+                              ),
+                              Divider(
+                                color: Colors.black,
+                                thickness: 1,
+                              ),
+                              Text(
+                                "Rated Contests (3)",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: displayWidth(context) * 0.035,
+                                ),
+                              ),
+                              Text(
+                                "Hackathons",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: displayWidth(context) * 0.035,
+                                ),
+                              ),
+                              Text(
+                                "Hiring Contests",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: displayWidth(context) * 0.035,
+                                ),
+                              ),
+                              Text(
+                                "University Challenges",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: displayWidth(context) * 0.035,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  mydiv,
+                  Padding(
+                    padding: const EdgeInsets.only(left: 60, right: 60),
+                    child: Center(
+                      child: Card(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12)),
+                        color: Colors.white,
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Text(
+                                "Divisions",
+                                style: TextStyle(
+                                  color: Colors.deepOrangeAccent,
+                                  fontFamily: "Fredoka One",
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: displayWidth(context) * 0.04,
+                                ),
+                              ),
+                              Divider(
+                                color: Colors.black,
+                                thickness: 1,
+                              ),
+                              Text(
+                                "Open for all",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: displayWidth(context) * 0.035,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 16.0, bottom: 10.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        GestureDetector(
+                          onTap: () {
+                            _linkopen("https://www.hackerearth.com");
+                          },
+                          child: Card(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(6.0)),
+                            elevation: 12.0,
+                            color: Colors.indigo,
+                            child: Padding(
+                              padding: const EdgeInsets.all(10.0),
+                              child: Text(
+                                "LINK",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.white,
+                                  fontSize: displayWidth(context) * 0.04,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            );
+          });
+    }
+
+    void _CodechefDetail(context) {
+      Future<void> _linkopen(String url) async {
+        if (await canLaunch(url)) {
+          await launch(url, forceWebView: false, forceSafariVC: false);
+        } else {
+          throw 'Could not launch';
+        }
+      }
+
+      showModalBottomSheet(
+          context: context,
+          builder: (builder) {
+            return new Container(
+              height: displayHeight(context) * 0.55,
+              decoration: BoxDecoration(
+                color: Color(0xbb2E1A47),
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Center(
+                      child: Icon(
+                    Icons.arrow_drop_down,
+                    size: displayWidth(context) * 0.08,
+                  )),
+                  Center(
+                    child: ClipPath(
+                      child: Image(
+                        image: AssetImage("images/hackerearth.png"),
+                        width: displayWidth(context) * 0.4,
+                      ),
+                      clipper: ShapeBorderClipper(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10.0))),
+                    ),
+                  ),
+                  mydiv,
+                  Padding(
+                    padding: const EdgeInsets.only(left: 60, right: 60),
+                    child: Center(
+                      child: Card(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12)),
+                        color: Colors.white,
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Text(
+                                "Rated Contests",
+                                style: TextStyle(
+                                  color: Colors.deepOrangeAccent,
+                                  fontFamily: "Fredoka One",
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: displayWidth(context) * 0.04,
+                                ),
+                              ),
+                              Divider(
+                                color: Colors.black,
+                                thickness: 1,
+                              ),
+                              Text(
+                                "Long Challenge",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: displayWidth(context) * 0.035,
+                                ),
+                              ),
+                              Text(
+                                "Cook off",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: displayWidth(context) * 0.035,
+                                ),
+                              ),
+                              Text(
+                                "Lunchtime",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: displayWidth(context) * 0.035,
+                                ),
+                              ),
+                              Text(
+                                "College Conests",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: displayWidth(context) * 0.035,
+                                ),
+                              ),
+                              Text(
+                                "External Rated Conests",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: displayWidth(context) * 0.035,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  mydiv,
+                  Padding(
+                    padding: const EdgeInsets.only(left: 60, right: 60),
+                    child: Center(
+                      child: Card(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12)),
+                        color: Colors.white,
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Text(
+                                "Divisions",
+                                style: TextStyle(
+                                  color: Colors.deepOrangeAccent,
+                                  fontFamily: "Fredoka One",
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: displayWidth(context) * 0.04,
+                                ),
+                              ),
+                              Divider(
+                                color: Colors.black,
+                                thickness: 1,
+                              ),
+                              Text(
+                                "Division 1",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: displayWidth(context) * 0.035,
+                                ),
+                              ),
+                              Text(
+                                "Division 2",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: displayWidth(context) * 0.035,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 16.0, bottom: 10.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        GestureDetector(
+                          onTap: () {
+                            _linkopen("https://www.codechef.com");
+                          },
+                          child: Card(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(6.0)),
+                            elevation: 12.0,
+                            color: Colors.indigo,
+                            child: Padding(
+                              padding: const EdgeInsets.all(10.0),
+                              child: Text(
+                                "LINK",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.white,
+                                  fontSize: displayWidth(context) * 0.04,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
                       ],
                     ),
                   )
@@ -188,7 +799,9 @@ class _CodingPlatformState extends State<CodingPlatform> {
                     onTap: () => _HackerRankDetail(context),
                   ),
                   mydiv,
-                  _HackerearthCard(context),
+                  GestureDetector(
+                      onTap: () => _HackerearthDetail(context),
+                      child: _HackerearthCard(context)),
                   mydiv,
                   _CodechefCard(context),
                   mydiv,
@@ -196,7 +809,7 @@ class _CodingPlatformState extends State<CodingPlatform> {
                   mydiv,
                   _CoddeWarCard(context),
                   mydiv,
-                  _LeetCodeCard(context),
+                  GestureDetector(child: _LeetCodeCard(context)),
                   mydiv,
                   _CodeForcesCard(context),
                   mydiv,
@@ -231,7 +844,7 @@ Widget _HackerearthCard(context) {
     child: Container(
       width: displayWidth(context) * 0.8,
       child: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(8.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -289,7 +902,7 @@ Widget _HackerrankCard(context) {
     child: Container(
       width: displayWidth(context) * 0.8,
       child: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(8.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -346,7 +959,7 @@ Widget _CodechefCard(context) {
     child: Container(
       width: displayWidth(context) * 0.8,
       child: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(8.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -404,7 +1017,7 @@ Widget _SpojCard(context) {
     child: Container(
       width: displayWidth(context) * 0.8,
       child: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(8.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -462,7 +1075,7 @@ Widget _CoddeWarCard(context) {
     child: Container(
       width: displayWidth(context) * 0.8,
       child: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(8.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -520,7 +1133,7 @@ Widget _LeetCodeCard(context) {
     child: Container(
       width: displayWidth(context) * 0.8,
       child: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(8.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -578,7 +1191,7 @@ Widget _CodeForcesCard(context) {
     child: Container(
       width: displayWidth(context) * 0.8,
       child: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(8.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -636,7 +1249,7 @@ Widget _TopCoderCard(context) {
     child: Container(
       width: displayWidth(context) * 0.8,
       child: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(8.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -694,7 +1307,7 @@ Widget _AtCoderCard(context) {
     child: Container(
       width: displayWidth(context) * 0.8,
       child: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(8.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -752,7 +1365,7 @@ Widget _CSESCard(context) {
     child: Container(
       width: displayWidth(context) * 0.8,
       child: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(8.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [

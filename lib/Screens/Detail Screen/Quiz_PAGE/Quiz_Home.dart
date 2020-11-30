@@ -1,3 +1,5 @@
+import 'package:CP_App/Providers/Quiz/SearchingQuizList.dart';
+import 'package:CP_App/main.dart';
 import 'package:flutter/material.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
 import 'C_quiz.dart';
@@ -7,9 +9,11 @@ import 'Python_Quiz.dart';
 import 'Array_quiz.dart';
 import 'Linkedlist_quiz.dart';
 import 'Queue_quiz.dart';
+import 'Sorting_quiz.dart';
 import 'Stack_quiz.dart';
 import 'Graph_quiz.dart';
 import 'BinaryTree_Quiz.dart';
+import 'Searching_Quiz.dart';
 
 class QuizHomePage extends StatefulWidget {
   @override
@@ -632,7 +636,7 @@ class _QuizHomePageState extends State<QuizHomePage> {
                           ),
                         ),
                         Hero(
-                          tag: "Linkedlistquiz",
+                          tag: "LinkedListquiz",
                           child: GestureDetector(
                             onTap: () {
                               Navigator.push(
@@ -896,13 +900,14 @@ class _QuizHomePageState extends State<QuizHomePage> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Hero(
-                          tag: "Binarytrehjequiz",
+                          tag: "Sortingquiz",
                           child: GestureDetector(
                             onTap: () {
-                              Navigator.push(
+                              /*Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => BinaryTree_quiz()));
+                                      builder: (context) => Sorting_Quiz()));*/
+                              null;
                             },
                             child: Card(
                               shape: RoundedRectangleBorder(
@@ -966,13 +971,13 @@ class _QuizHomePageState extends State<QuizHomePage> {
                           ),
                         ),
                         Hero(
-                          tag: "g",
+                          tag: "Searchingquiz",
                           child: GestureDetector(
                             onTap: () {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => Graph_Quiz()));
+                                      builder: (context) => Searching_Quiz()));
                             },
                             child: Card(
                               shape: RoundedRectangleBorder(
