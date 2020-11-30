@@ -29,172 +29,180 @@ class _CodingPlatformState extends State<CodingPlatform> {
           context: context,
           builder: (builder) {
             return new Container(
-              height: displayHeight(context) * 0.55,
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  begin: Alignment.bottomLeft,
-                  end: Alignment.topRight,
-                  colors: [
-                    Colors.green[100],
-                    Colors.green[200],
-                    Colors.green[300]
-                  ],
+                height: displayHeight(context) * 0.48,
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.bottomLeft,
+                    end: Alignment.topRight,
+                    colors: [
+                      Colors.green[100],
+                      Colors.green[200],
+                      Colors.green[300]
+                    ],
+                  ),
                 ),
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Center(
-                      child: Icon(
-                    Icons.arrow_drop_down,
-                    size: displayWidth(context) * 0.08,
-                  )),
-                  Center(
-                    child: ClipPath(
+                child: Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    Positioned(
+                        top: 0.0,
+                        child: Icon(
+                          Icons.arrow_drop_down,
+                          size: displayWidth(context) * 0.08,
+                        )),
+                    Positioned(
+                      top: displayHeight(context) * 0.045,
                       child: Image(
-                        image: AssetImage("images/hrbottom.png"),
+                        image: AssetImage("images/x3.png"),
                         width: displayWidth(context) * 0.4,
                       ),
-                      clipper: ShapeBorderClipper(
+                    ),
+                    Positioned(
+                      top: displayHeight(context) * 0.045,
+                      right: displayWidth(context) * 0.03,
+                      child: GestureDetector(
+                        onTap: () {
+                          _linkopen("https://www.hackerrank.com");
+                        },
+                        child: Card(
                           shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10.0))),
-                    ),
-                  ),
-                  mydiv,
-                  Padding(
-                    padding: const EdgeInsets.only(left: 60, right: 60),
-                    child: Center(
-                      child: Card(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(12)),
-                        color: Colors.white,
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Text(
-                                "Common Contests",
-                                style: TextStyle(
-                                  color: Colors.deepOrangeAccent,
-                                  fontFamily: "Fredoka One",
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: displayWidth(context) * 0.04,
-                                ),
-                              ),
-                              Divider(
-                                color: Colors.black,
-                                thickness: 1,
-                              ),
-                              Text(
-                                "ProjectEuler+",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: displayWidth(context) * 0.035,
-                                ),
-                              ),
-                              Text(
-                                "Hack The Interview (Asia Pacific)",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: displayWidth(context) * 0.035,
-                                ),
-                              ),
-                              Text(
-                                "Hack The Interview (U.S)",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: displayWidth(context) * 0.035,
-                                ),
-                              ),
-                              Text(
-                                "Hack The Interview (Global)",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: displayWidth(context) * 0.035,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  mydiv,
-                  Padding(
-                    padding: const EdgeInsets.only(left: 60, right: 60),
-                    child: Center(
-                      child: Card(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(12)),
-                        color: Colors.white,
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Text(
-                                "Divisions",
-                                style: TextStyle(
-                                  color: Colors.deepOrangeAccent,
-                                  fontFamily: "Fredoka One",
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: displayWidth(context) * 0.04,
-                                ),
-                              ),
-                              Divider(
-                                color: Colors.black,
-                                thickness: 1,
-                              ),
-                              Text(
-                                "Open for all",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: displayWidth(context) * 0.035,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(right: 16.0, bottom: 10.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        GestureDetector(
-                          onTap: () {
-                            _linkopen("https://www.hackerrank.com");
-                          },
-                          child: Card(
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(6.0)),
-                            elevation: 12.0,
-                            color: Colors.indigo,
-                            child: Padding(
-                              padding: const EdgeInsets.all(10.0),
-                              child: Text(
-                                "LINK",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w500,
-                                  color: Colors.white,
-                                  fontSize: displayWidth(context) * 0.04,
-                                ),
+                              borderRadius: BorderRadius.circular(6.0)),
+                          elevation: 12.0,
+                          color: Colors.indigo,
+                          child: Padding(
+                            padding: const EdgeInsets.all(10.0),
+                            child: Text(
+                              "LINK",
+                              style: TextStyle(
+                                fontWeight: FontWeight.w500,
+                                color: Colors.white,
+                                fontSize: displayWidth(context) * 0.035,
                               ),
                             ),
                           ),
                         ),
-                      ],
+                      ),
                     ),
-                  )
-                ],
-              ),
-            );
+                    Positioned(
+                      top: displayHeight(context) * 0.125,
+                      child: SingleChildScrollView(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Card(
+                              elevation: 15.0,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(12)),
+                              color: Colors.white,
+                              child: Container(
+                                width: displayWidth(context) * 0.6,
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        "Common Contests",
+                                        style: TextStyle(
+                                          color: Colors.deepOrangeAccent,
+                                          fontFamily: "Fredoka One",
+                                          fontWeight: FontWeight.w500,
+                                          fontSize:
+                                              displayWidth(context) * 0.04,
+                                        ),
+                                      ),
+                                      Divider(
+                                        color: Colors.black,
+                                        thickness: 1,
+                                      ),
+                                      Text(
+                                        "ProjectEuler+",
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w500,
+                                          fontSize:
+                                              displayWidth(context) * 0.035,
+                                        ),
+                                      ),
+                                      Text(
+                                        "Hack The Interview (Asia Pacific)",
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w500,
+                                          fontSize:
+                                              displayWidth(context) * 0.035,
+                                        ),
+                                      ),
+                                      Text(
+                                        "Hack The Interview (U.S)",
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w500,
+                                          fontSize:
+                                              displayWidth(context) * 0.035,
+                                        ),
+                                      ),
+                                      Text(
+                                        "Hack The Interview (Global)",
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w500,
+                                          fontSize:
+                                              displayWidth(context) * 0.035,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                            mydiv,
+                            Card(
+                              elevation: 15.0,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(12)),
+                              color: Colors.white,
+                              child: Container(
+                                width: displayWidth(context) * 0.6,
+                                child: Padding(
+                                  padding: const EdgeInsets.all(10.0),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        "Divisions",
+                                        style: TextStyle(
+                                          color: Colors.deepOrangeAccent,
+                                          fontFamily: "Fredoka One",
+                                          fontWeight: FontWeight.w500,
+                                          fontSize:
+                                              displayWidth(context) * 0.04,
+                                        ),
+                                      ),
+                                      Divider(
+                                        color: Colors.black,
+                                        thickness: 1,
+                                      ),
+                                      Text(
+                                        "Open for all",
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w500,
+                                          fontSize:
+                                              displayWidth(context) * 0.035,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ));
           });
     }
 
@@ -211,158 +219,172 @@ class _CodingPlatformState extends State<CodingPlatform> {
           context: context,
           builder: (builder) {
             return new Container(
-              height: displayHeight(context) * 0.55,
-              decoration: BoxDecoration(
-                color: Color(0xbb2E1A47),
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Center(
-                      child: Icon(
-                    Icons.arrow_drop_down,
-                    size: displayWidth(context) * 0.08,
-                  )),
-                  Center(
-                    child: Image(
-                      image: AssetImage("images/x1.png"),
-                      width: displayWidth(context) * 0.4,
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 60, right: 60),
-                    child: Center(
-                      child: Card(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(12)),
-                        color: Colors.white,
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Text(
-                                "Common Contests",
-                                style: TextStyle(
-                                  color: Colors.deepOrangeAccent,
-                                  fontFamily: "Fredoka One",
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: displayWidth(context) * 0.04,
-                                ),
-                              ),
-                              Divider(
-                                color: Colors.black,
-                                thickness: 1,
-                              ),
-                              Text(
-                                "Rated Contests (3)",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: displayWidth(context) * 0.035,
-                                ),
-                              ),
-                              Text(
-                                "Hackathons",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: displayWidth(context) * 0.035,
-                                ),
-                              ),
-                              Text(
-                                "Hiring Contests",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: displayWidth(context) * 0.035,
-                                ),
-                              ),
-                              Text(
-                                "University Challenges",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: displayWidth(context) * 0.035,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
+                height: displayHeight(context) * 0.48,
+                decoration: BoxDecoration(
+                  color: Color(0xbbfaf6f3),
+                ),
+                child: Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    Positioned(
+                        top: 0.0,
+                        child: Icon(
+                          Icons.arrow_drop_down,
+                          size: displayWidth(context) * 0.08,
+                        )),
+                    Positioned(
+                      top: displayHeight(context) * 0.043,
+                      child: Image(
+                        image: AssetImage("images/x1.png"),
+                        width: displayWidth(context) * 0.4,
                       ),
                     ),
-                  ),
-                  mydiv,
-                  Padding(
-                    padding: const EdgeInsets.only(left: 60, right: 60),
-                    child: Center(
-                      child: Card(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(12)),
-                        color: Colors.white,
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Text(
-                                "Divisions",
-                                style: TextStyle(
-                                  color: Colors.deepOrangeAccent,
-                                  fontFamily: "Fredoka One",
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: displayWidth(context) * 0.04,
-                                ),
-                              ),
-                              Divider(
-                                color: Colors.black,
-                                thickness: 1,
-                              ),
-                              Text(
-                                "Open for all",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: displayWidth(context) * 0.035,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(right: 16.0, bottom: 10.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        GestureDetector(
-                          onTap: () {
-                            _linkopen("https://www.hackerearth.com");
-                          },
-                          child: Card(
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(6.0)),
-                            elevation: 12.0,
-                            color: Colors.indigo,
-                            child: Padding(
-                              padding: const EdgeInsets.all(10.0),
-                              child: Text(
-                                "LINK",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w500,
-                                  color: Colors.white,
-                                  fontSize: displayWidth(context) * 0.04,
-                                ),
+                    Positioned(
+                      top: displayHeight(context) * 0.045,
+                      right: displayWidth(context) * 0.03,
+                      child: GestureDetector(
+                        onTap: () {
+                          _linkopen("https://www.hackerearth.com");
+                        },
+                        child: Card(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(6.0)),
+                          elevation: 12.0,
+                          color: Colors.indigo,
+                          child: Padding(
+                            padding: const EdgeInsets.all(10.0),
+                            child: Text(
+                              "LINK",
+                              style: TextStyle(
+                                fontWeight: FontWeight.w500,
+                                color: Colors.white,
+                                fontSize: displayWidth(context) * 0.035,
                               ),
                             ),
                           ),
                         ),
-                      ],
+                      ),
                     ),
-                  )
-                ],
-              ),
-            );
+                    Positioned(
+                      top: displayHeight(context) * 0.135,
+                      child: SingleChildScrollView(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Card(
+                              elevation: 15.0,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(12)),
+                              color: Colors.white,
+                              child: Container(
+                                width: displayWidth(context) * 0.6,
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        "Common Contests",
+                                        style: TextStyle(
+                                          color: Colors.deepOrangeAccent,
+                                          fontFamily: "Fredoka One",
+                                          fontWeight: FontWeight.w500,
+                                          fontSize:
+                                              displayWidth(context) * 0.04,
+                                        ),
+                                      ),
+                                      Divider(
+                                        color: Colors.black,
+                                        thickness: 1,
+                                      ),
+                                      Text(
+                                        "Rated Contests (3)",
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w500,
+                                          fontSize:
+                                              displayWidth(context) * 0.035,
+                                        ),
+                                      ),
+                                      Text(
+                                        "Hackathons",
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w500,
+                                          fontSize:
+                                              displayWidth(context) * 0.035,
+                                        ),
+                                      ),
+                                      Text(
+                                        "Hiring Contests",
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w500,
+                                          fontSize:
+                                              displayWidth(context) * 0.035,
+                                        ),
+                                      ),
+                                      Text(
+                                        "University Challenges",
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w500,
+                                          fontSize:
+                                              displayWidth(context) * 0.035,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                            mydiv,
+                            Card(
+                              elevation: 15.0,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(12)),
+                              color: Colors.white,
+                              child: Container(
+                                width: displayWidth(context) * 0.6,
+                                child: Padding(
+                                  padding: const EdgeInsets.all(10.0),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        "Divisions",
+                                        style: TextStyle(
+                                          color: Colors.deepOrangeAccent,
+                                          fontFamily: "Fredoka One",
+                                          fontWeight: FontWeight.w500,
+                                          fontSize:
+                                              displayWidth(context) * 0.04,
+                                        ),
+                                      ),
+                                      Divider(
+                                        color: Colors.black,
+                                        thickness: 1,
+                                      ),
+                                      Text(
+                                        "Open for all",
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w500,
+                                          fontSize:
+                                              displayWidth(context) * 0.035,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ));
           });
     }
 
@@ -405,7 +427,7 @@ class _CodingPlatformState extends State<CodingPlatform> {
                   ),
                   mydiv,
                   Padding(
-                    padding: const EdgeInsets.only(left: 60, right: 60),
+                    padding: const EdgeInsets.only(left: 70, right: 70),
                     child: Center(
                       child: Card(
                         shape: RoundedRectangleBorder(
@@ -466,7 +488,7 @@ class _CodingPlatformState extends State<CodingPlatform> {
                   ),
                   mydiv,
                   Padding(
-                    padding: const EdgeInsets.only(left: 60, right: 60),
+                    padding: const EdgeInsets.only(left: 70, right: 70),
                     child: Center(
                       child: Card(
                         shape: RoundedRectangleBorder(
@@ -553,178 +575,740 @@ class _CodingPlatformState extends State<CodingPlatform> {
           context: context,
           builder: (builder) {
             return new Container(
-              height: displayHeight(context) * 0.55,
-              decoration: BoxDecoration(
-                color: Color(0xbb2E1A47),
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Center(
-                      child: Icon(
-                    Icons.arrow_drop_down,
-                    size: displayWidth(context) * 0.08,
-                  )),
-                  Center(
-                    child: ClipPath(
+                height: displayHeight(context) * 0.48,
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.bottomLeft,
+                    end: Alignment.topRight,
+                    colors: [
+                      Colors.green[100],
+                      Colors.green[200],
+                      Colors.green[300]
+                    ],
+                  ),
+                ),
+                child: Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    Positioned(
+                        top: 0.0,
+                        child: Icon(
+                          Icons.arrow_drop_down,
+                          size: displayWidth(context) * 0.08,
+                        )),
+                    Positioned(
+                      top: displayHeight(context) * 0.045,
                       child: Image(
-                        image: AssetImage("images/hackerearth.png"),
+                        image: AssetImage("images/cc.jpg"),
                         width: displayWidth(context) * 0.4,
                       ),
-                      clipper: ShapeBorderClipper(
+                    ),
+                    Positioned(
+                      top: displayHeight(context) * 0.045,
+                      right: displayWidth(context) * 0.03,
+                      child: GestureDetector(
+                        onTap: () {
+                          _linkopen("https://www.codechef.com");
+                        },
+                        child: Card(
                           shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10.0))),
-                    ),
-                  ),
-                  mydiv,
-                  Padding(
-                    padding: const EdgeInsets.only(left: 60, right: 60),
-                    child: Center(
-                      child: Card(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(12)),
-                        color: Colors.white,
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Text(
-                                "Rated Contests",
-                                style: TextStyle(
-                                  color: Colors.deepOrangeAccent,
-                                  fontFamily: "Fredoka One",
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: displayWidth(context) * 0.04,
-                                ),
-                              ),
-                              Divider(
-                                color: Colors.black,
-                                thickness: 1,
-                              ),
-                              Text(
-                                "Long Challenge",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: displayWidth(context) * 0.035,
-                                ),
-                              ),
-                              Text(
-                                "Cook off",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: displayWidth(context) * 0.035,
-                                ),
-                              ),
-                              Text(
-                                "Lunchtime",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: displayWidth(context) * 0.035,
-                                ),
-                              ),
-                              Text(
-                                "College Conests",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: displayWidth(context) * 0.035,
-                                ),
-                              ),
-                              Text(
-                                "External Rated Conests",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: displayWidth(context) * 0.035,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  mydiv,
-                  Padding(
-                    padding: const EdgeInsets.only(left: 60, right: 60),
-                    child: Center(
-                      child: Card(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(12)),
-                        color: Colors.white,
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Text(
-                                "Divisions",
-                                style: TextStyle(
-                                  color: Colors.deepOrangeAccent,
-                                  fontFamily: "Fredoka One",
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: displayWidth(context) * 0.04,
-                                ),
-                              ),
-                              Divider(
-                                color: Colors.black,
-                                thickness: 1,
-                              ),
-                              Text(
-                                "Division 1",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: displayWidth(context) * 0.035,
-                                ),
-                              ),
-                              Text(
-                                "Division 2",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: displayWidth(context) * 0.035,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(right: 16.0, bottom: 10.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        GestureDetector(
-                          onTap: () {
-                            _linkopen("https://www.codechef.com");
-                          },
-                          child: Card(
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(6.0)),
-                            elevation: 12.0,
-                            color: Colors.indigo,
-                            child: Padding(
-                              padding: const EdgeInsets.all(10.0),
-                              child: Text(
-                                "LINK",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w500,
-                                  color: Colors.white,
-                                  fontSize: displayWidth(context) * 0.04,
-                                ),
+                              borderRadius: BorderRadius.circular(6.0)),
+                          elevation: 12.0,
+                          color: Colors.indigo,
+                          child: Padding(
+                            padding: const EdgeInsets.all(10.0),
+                            child: Text(
+                              "LINK",
+                              style: TextStyle(
+                                fontWeight: FontWeight.w500,
+                                color: Colors.white,
+                                fontSize: displayWidth(context) * 0.035,
                               ),
                             ),
                           ),
                         ),
-                      ],
+                      ),
                     ),
-                  )
+                    Positioned(
+                      top: displayHeight(context) * 0.125,
+                      child: SingleChildScrollView(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Card(
+                              elevation: 15.0,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(12)),
+                              color: Colors.white,
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      "Common Contests",
+                                      style: TextStyle(
+                                        color: Colors.deepOrangeAccent,
+                                        fontFamily: "Fredoka One",
+                                        fontWeight: FontWeight.w500,
+                                        fontSize: displayWidth(context) * 0.04,
+                                      ),
+                                    ),
+                                    Divider(
+                                      color: Colors.black,
+                                      thickness: 1,
+                                    ),
+                                    Text(
+                                      "Long Challenge",
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.w500,
+                                        fontSize: displayWidth(context) * 0.035,
+                                      ),
+                                    ),
+                                    Text(
+                                      "Cook off",
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.w500,
+                                        fontSize: displayWidth(context) * 0.035,
+                                      ),
+                                    ),
+                                    Text(
+                                      "Lunchtime",
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.w500,
+                                        fontSize: displayWidth(context) * 0.035,
+                                      ),
+                                    ),
+                                    Text(
+                                      "External Rated Contest",
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.w500,
+                                        fontSize: displayWidth(context) * 0.035,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            mydiv,
+                            Card(
+                              elevation: 15.0,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(12)),
+                              color: Colors.white,
+                              child: Padding(
+                                padding: const EdgeInsets.only(
+                                    left: 80.0,
+                                    right: 80,
+                                    top: 10.0,
+                                    bottom: 10.0),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      "Divisions",
+                                      style: TextStyle(
+                                        color: Colors.deepOrangeAccent,
+                                        fontFamily: "Fredoka One",
+                                        fontWeight: FontWeight.w500,
+                                        fontSize: displayWidth(context) * 0.04,
+                                      ),
+                                    ),
+                                    Divider(
+                                      color: Colors.black,
+                                      thickness: 1,
+                                    ),
+                                    Text(
+                                      "Div1, Div2",
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.w500,
+                                        fontSize: displayWidth(context) * 0.035,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            mydiv,
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ));
+          });
+    }
+
+    void _CodeforcesDetail(context) {
+      Future<void> _linkopen(String url) async {
+        if (await canLaunch(url)) {
+          await launch(url, forceWebView: false, forceSafariVC: false);
+        } else {
+          throw 'Could not launch';
+        }
+      }
+
+      showModalBottomSheet(
+          context: context,
+          builder: (builder) {
+            return new Container(
+              height: displayHeight(context) * 0.55,
+              decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                colors: [
+                  Color(0xbb58cced),
+                  Color(0xbb3895d3),
+                  Color(0xbb1261a0),
                 ],
+                begin: Alignment.topRight,
+                end: Alignment.bottomLeft,
+              )),
+              child: SingleChildScrollView(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Center(
+                        child: Icon(
+                      Icons.arrow_drop_down,
+                      size: displayWidth(context) * 0.08,
+                    )),
+                    Center(
+                      child: ClipPath(
+                        child: Image(
+                          image: AssetImage("images/cf1.png"),
+                          width: displayWidth(context) * 0.4,
+                        ),
+                        clipper: ShapeBorderClipper(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10.0))),
+                      ),
+                    ),
+                    mydiv,
+                    mydiv,
+                    Padding(
+                      padding: const EdgeInsets.only(left: 70, right: 70),
+                      child: Center(
+                        child: Card(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(12)),
+                          color: Colors.white,
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Text(
+                                  "Common Contests",
+                                  style: TextStyle(
+                                    color: Colors.deepOrangeAccent,
+                                    fontFamily: "Fredoka One",
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: displayWidth(context) * 0.04,
+                                  ),
+                                ),
+                                Divider(
+                                  color: Colors.black,
+                                  thickness: 1,
+                                ),
+                                Text(
+                                  "Codeforces Round",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: displayWidth(context) * 0.035,
+                                  ),
+                                ),
+                                Text(
+                                  "Educational codeforces round",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: displayWidth(context) * 0.035,
+                                  ),
+                                ),
+                                Text(
+                                  "Technocup round",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: displayWidth(context) * 0.035,
+                                  ),
+                                ),
+                                Text(
+                                  "VK Cup round",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: displayWidth(context) * 0.035,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    mydiv,
+                    Padding(
+                      padding: const EdgeInsets.only(left: 70, right: 70),
+                      child: Center(
+                        child: Card(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(12)),
+                          color: Colors.white,
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Text(
+                                  "Divisions",
+                                  style: TextStyle(
+                                    color: Colors.deepOrangeAccent,
+                                    fontFamily: "Fredoka One",
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: displayWidth(context) * 0.04,
+                                  ),
+                                ),
+                                Divider(
+                                  color: Colors.black,
+                                  thickness: 1,
+                                ),
+                                Text(
+                                  "Div1",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: displayWidth(context) * 0.035,
+                                  ),
+                                ),
+                                Text(
+                                  "Div2",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: displayWidth(context) * 0.035,
+                                  ),
+                                ),
+                                Text(
+                                  "Div3",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: displayWidth(context) * 0.035,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 16.0, bottom: 10.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          GestureDetector(
+                            onTap: () {
+                              _linkopen("https://codeforces.com");
+                            },
+                            child: Card(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(6.0)),
+                              elevation: 12.0,
+                              color: Colors.indigo,
+                              child: Padding(
+                                padding: const EdgeInsets.all(10.0),
+                                child: Text(
+                                  "LINK",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.white,
+                                    fontSize: displayWidth(context) * 0.04,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    )
+                  ],
+                ),
               ),
             );
+          });
+    }
+
+    void _AtcoderDetail(context) {
+      Future<void> _linkopen(String url) async {
+        if (await canLaunch(url)) {
+          await launch(url, forceWebView: false, forceSafariVC: false);
+        } else {
+          throw 'Could not launch';
+        }
+      }
+
+      showModalBottomSheet(
+          context: context,
+          builder: (builder) {
+            return new Container(
+                height: displayHeight(context) * 0.48,
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.bottomLeft,
+                    end: Alignment.topRight,
+                    colors: [
+                      Colors.green[100],
+                      Colors.green[200],
+                      Colors.green[300]
+                    ],
+                  ),
+                ),
+                child: Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    Positioned(
+                        top: 0.0,
+                        child: Icon(
+                          Icons.arrow_drop_down,
+                          size: displayWidth(context) * 0.08,
+                        )),
+                    Positioned(
+                      top: displayHeight(context) * 0.045,
+                      child: Image(
+                        image: AssetImage("images/ac1.png"),
+                        width: displayWidth(context) * 0.4,
+                      ),
+                    ),
+                    Positioned(
+                      top: displayHeight(context) * 0.045,
+                      right: displayWidth(context) * 0.03,
+                      child: GestureDetector(
+                        onTap: () {
+                          _linkopen("https://atcoder.jp");
+                        },
+                        child: Card(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(6.0)),
+                          elevation: 12.0,
+                          color: Colors.indigo,
+                          child: Padding(
+                            padding: const EdgeInsets.all(10.0),
+                            child: Text(
+                              "LINK",
+                              style: TextStyle(
+                                fontWeight: FontWeight.w500,
+                                color: Colors.white,
+                                fontSize: displayWidth(context) * 0.035,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      top: displayHeight(context) * 0.125,
+                      child: SingleChildScrollView(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Card(
+                              elevation: 15.0,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(12)),
+                              color: Colors.white,
+                              child: Container(
+                                width: displayWidth(context) * 0.6,
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        "Common Contests",
+                                        style: TextStyle(
+                                          color: Colors.deepOrangeAccent,
+                                          fontFamily: "Fredoka One",
+                                          fontWeight: FontWeight.w500,
+                                          fontSize:
+                                              displayWidth(context) * 0.04,
+                                        ),
+                                      ),
+                                      Divider(
+                                        color: Colors.black,
+                                        thickness: 1,
+                                      ),
+                                      Text(
+                                        "Atcoder Beginner Contest",
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w500,
+                                          fontSize:
+                                              displayWidth(context) * 0.035,
+                                        ),
+                                      ),
+                                      Text(
+                                        "Atcoder Regular Contest",
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w500,
+                                          fontSize:
+                                              displayWidth(context) * 0.035,
+                                        ),
+                                      ),
+                                      Text(
+                                        "AtCoder Grand Contest",
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w500,
+                                          fontSize:
+                                              displayWidth(context) * 0.035,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                            mydiv,
+                            Card(
+                              elevation: 15.0,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(12)),
+                              color: Colors.white,
+                              child: Container(
+                                width: displayWidth(context) * 0.6,
+                                child: Padding(
+                                  padding: const EdgeInsets.all(10.0),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        "Divisions",
+                                        style: TextStyle(
+                                          color: Colors.deepOrangeAccent,
+                                          fontFamily: "Fredoka One",
+                                          fontWeight: FontWeight.w500,
+                                          fontSize:
+                                              displayWidth(context) * 0.04,
+                                        ),
+                                      ),
+                                      Divider(
+                                        color: Colors.black,
+                                        thickness: 1,
+                                      ),
+                                      Text(
+                                        "Open for all",
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w500,
+                                          fontSize:
+                                              displayWidth(context) * 0.035,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ));
+          });
+    }
+
+    void _SPOJDetail(context) {
+      Future<void> _linkopen(String url) async {
+        if (await canLaunch(url)) {
+          await launch(url, forceWebView: false, forceSafariVC: false);
+        } else {
+          throw 'Could not launch';
+        }
+      }
+
+      showModalBottomSheet(
+          context: context,
+          builder: (builder) {
+            return new Container(
+                height: displayHeight(context) * 0.48,
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.bottomLeft,
+                    end: Alignment.topRight,
+                    colors: [
+                      Colors.green[100],
+                      Colors.green[200],
+                      Colors.green[300]
+                    ],
+                  ),
+                ),
+                child: Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    Positioned(
+                        top: 0.0,
+                        child: Icon(
+                          Icons.arrow_drop_down,
+                          size: displayWidth(context) * 0.08,
+                        )),
+                    Positioned(
+                      top: displayHeight(context) * 0.045,
+                      child: Image(
+                        image: AssetImage("images/sp1.png"),
+                        width: displayWidth(context) * 0.4,
+                      ),
+                    ),
+                    Positioned(
+                      top: displayHeight(context) * 0.045,
+                      right: displayWidth(context) * 0.03,
+                      child: GestureDetector(
+                        onTap: () {
+                          _linkopen("https://www.spoj.com");
+                        },
+                        child: Card(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(6.0)),
+                          elevation: 12.0,
+                          color: Colors.indigo,
+                          child: Padding(
+                            padding: const EdgeInsets.all(10.0),
+                            child: Text(
+                              "LINK",
+                              style: TextStyle(
+                                fontWeight: FontWeight.w500,
+                                color: Colors.white,
+                                fontSize: displayWidth(context) * 0.035,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      top: displayHeight(context) * 0.125,
+                      child: SingleChildScrollView(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Card(
+                              elevation: 15.0,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(12)),
+                              color: Colors.white,
+                              child: Container(
+                                width: displayWidth(context) * 0.6,
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        "Common Contests",
+                                        style: TextStyle(
+                                          color: Colors.deepOrangeAccent,
+                                          fontFamily: "Fredoka One",
+                                          fontWeight: FontWeight.w500,
+                                          fontSize:
+                                              displayWidth(context) * 0.04,
+                                        ),
+                                      ),
+                                      Divider(
+                                        color: Colors.black,
+                                        thickness: 1,
+                                      ),
+                                      Text(
+                                        "Non Rated Contests",
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w500,
+                                          fontSize:
+                                              displayWidth(context) * 0.035,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                            mydiv,
+                            Card(
+                              elevation: 15.0,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(12)),
+                              color: Colors.white,
+                              child: Container(
+                                width: displayWidth(context) * 0.6,
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        "Problem Categories",
+                                        style: TextStyle(
+                                          color: Colors.deepOrangeAccent,
+                                          fontFamily: "Fredoka One",
+                                          fontWeight: FontWeight.w500,
+                                          fontSize:
+                                              displayWidth(context) * 0.04,
+                                        ),
+                                      ),
+                                      Divider(
+                                        color: Colors.black,
+                                        thickness: 1,
+                                      ),
+                                      Text(
+                                        "Classical",
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w500,
+                                          fontSize:
+                                              displayWidth(context) * 0.035,
+                                        ),
+                                      ),
+                                      Text(
+                                        "Challenge",
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w500,
+                                          fontSize:
+                                              displayWidth(context) * 0.035,
+                                        ),
+                                      ),
+                                      Text(
+                                        "Riddle",
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w500,
+                                          fontSize:
+                                              displayWidth(context) * 0.035,
+                                        ),
+                                      ),
+                                      Text(
+                                        "Basics ...",
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w500,
+                                          fontSize:
+                                              displayWidth(context) * 0.035,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ));
           });
     }
 
@@ -803,19 +1387,28 @@ class _CodingPlatformState extends State<CodingPlatform> {
                       onTap: () => _HackerearthDetail(context),
                       child: _HackerearthCard(context)),
                   mydiv,
-                  _CodechefCard(context),
+                  GestureDetector(
+                    child: _CodechefCard(context),
+                    onTap: () => _CodechefDetail(context),
+                  ),
                   mydiv,
-                  _SpojCard(context),
+                  GestureDetector(
+                      onTap: () => _SPOJDetail(context),
+                      child: _SpojCard(context)),
                   mydiv,
                   _CoddeWarCard(context),
                   mydiv,
                   GestureDetector(child: _LeetCodeCard(context)),
                   mydiv,
-                  _CodeForcesCard(context),
+                  GestureDetector(
+                      onTap: () => _CodeforcesDetail(context),
+                      child: _CodeForcesCard(context)),
                   mydiv,
                   _TopCoderCard(context),
                   mydiv,
-                  _AtCoderCard(context),
+                  GestureDetector(
+                      onTap: () => _AtcoderDetail(context),
+                      child: _AtCoderCard(context)),
                   mydiv,
                   _CSESCard(context),
                   mydiv,

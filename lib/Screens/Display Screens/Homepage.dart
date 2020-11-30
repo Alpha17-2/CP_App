@@ -40,7 +40,7 @@ class _HomeState extends State<Home> {
           ),
         ),
         // centerTitle: true,
-        backgroundColor: Colors.orange[100],
+        backgroundColor: Colors.orange,
         actions: [
           // Anything we wannna show after the title , we put it under actions
           IconButton(

@@ -246,15 +246,15 @@ class _MyhomeState extends State<Myhome> {
       height: displayHeight(context) * 1.0,
       width: displayWidth(context) * 1.0,
       constraints: BoxConstraints.expand(),
-      //color: Colors.blue,
-      decoration: BoxDecoration(
+      color: Colors.white,
+      /*decoration: BoxDecoration(
         image: DecorationImage(
           image: AssetImage('images/lastchoice.jpg'),
           colorFilter:
               ColorFilter.mode(Colors.black.withOpacity(1), BlendMode.dstATop),
           fit: BoxFit.cover,
         ),
-      ),
+      ),*/
       child: SingleChildScrollView(
         child: Column(
           children: [

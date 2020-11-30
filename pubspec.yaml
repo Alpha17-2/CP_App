@@ -67,6 +67,8 @@ flutter:
       - images/d1.png
       - images/d2.png
       - images/c3.jpg
+      - images/ac1.png
+      - images/sp1.png
       - images/c2.jpg
       - images/C.jpg
       - images/st1.jpg
@@ -86,6 +88,7 @@ flutter:
       - images/stack.png
       - images/queue.jpg
       - images/C++.jpg
+      - images/cf1.png
       - images/Python.jpg
       - images/Main_prob.jpg
       - images/prepage1.png
@@ -127,6 +130,8 @@ flutter:
      
       
       - images/ui2.jpg
+      
+      - images/x3.png
      
       - images/array.jpg
       - images/string.jpg
@@ -192,6 +197,7 @@ flutter:
       - images/L20.png
       - images/L21.png
       - images/L22.png
+      - images/cc.jpg
       - images/halogo.png
       - images/cclogo.png
       - images/spojlogo.png
