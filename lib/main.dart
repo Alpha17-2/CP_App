@@ -26,6 +26,7 @@ import 'Providers/Quiz/JavaQuizList.dart';
 import 'Providers/Quiz/PythonQuizList.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'Providers/Quiz/ArrayQuizList.dart';
+import 'Providers/Quiz/SrtQuixlist.dart';
 import 'Providers/Quiz/StackQuizList.dart';
 import 'Providers/Quiz/LinkedListQuizList.dart';
 import 'Providers/Quiz/QueueQuizList.dart';
@@ -45,6 +46,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
+        ChangeNotifierProvider(
+          create: (context) => SortQuizlist(),
+        ),
         ChangeNotifierProvider(
           create: (context) => SingleQuizQuestion(),
         ),

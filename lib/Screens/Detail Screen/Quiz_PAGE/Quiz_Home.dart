@@ -903,11 +903,10 @@ class _QuizHomePageState extends State<QuizHomePage> {
                           tag: "Sortingquiz",
                           child: GestureDetector(
                             onTap: () {
-                              /*Navigator.push(
+                              Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => Sorting_Quiz()));*/
-                              null;
+                                      builder: (context) => Sorting_Quiz()));
                             },
                             child: Card(
                               shape: RoundedRectangleBorder(
