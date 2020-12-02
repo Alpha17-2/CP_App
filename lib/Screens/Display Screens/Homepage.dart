@@ -2,6 +2,7 @@ import 'package:CP_App/Helpers/DeviceSize.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'Page1.dart';
+import 'CodingPlatform.dart';
 
 class Home extends StatefulWidget {
   static const routename = '/Home';
@@ -14,11 +15,7 @@ class _HomeState extends State<Home> {
   int currentIndex = 0;
   final MyPages = [
     Page1(),
-    Container(
-      child: Center(
-        child: Text("Hello guys"),
-      ),
-    ),
+    CodingPlatform(),
     Container(
       child: Center(
         child: Text("Bye guys"),
@@ -30,6 +27,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
       body: MyPages[currentIndex],
       bottomNavigationBar: CurvedNavigationBar(
+        animationCurve: Curves.easeOutQuart,
         animationDuration: Duration(microseconds: 500000),
         backgroundColor: Colors.black,
         color: Colors.white,

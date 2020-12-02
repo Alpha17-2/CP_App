@@ -1675,6 +1675,172 @@ class _CodingPlatformState extends State<CodingPlatform> {
           });
     }
 
+    void _CodewarsDetail(context) {
+      Future<void> _linkopen(String url) async {
+        if (await canLaunch(url)) {
+          await launch(url, forceWebView: false, forceSafariVC: false);
+        } else {
+          throw 'Could not launch';
+        }
+      }
+
+      showModalBottomSheet(
+          context: context,
+          builder: (builder) {
+            return new Container(
+                height: displayHeight(context) * 0.48,
+                decoration: BoxDecoration(
+                  color: Color(0xbbfaf6f3),
+                ),
+                child: Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    Positioned(
+                        top: 0.0,
+                        child: Icon(
+                          Icons.arrow_drop_down,
+                          size: displayWidth(context) * 0.08,
+                        )),
+                    Positioned(
+                      top: displayHeight(context) * 0.04,
+                      child: Image(
+                        image: AssetImage("images/cw25.png"),
+                        width: displayWidth(context) * 0.4,
+                      ),
+                    ),
+                    Positioned(
+                      top: displayHeight(context) * 0.045,
+                      right: displayWidth(context) * 0.03,
+                      child: GestureDetector(
+                        onTap: () {
+                          _linkopen("https://www.codewars.com");
+                        },
+                        child: Card(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(6.0)),
+                          elevation: 12.0,
+                          color: Colors.indigo,
+                          child: Padding(
+                            padding: const EdgeInsets.all(10.0),
+                            child: Text(
+                              "GO",
+                              style: TextStyle(
+                                fontWeight: FontWeight.w500,
+                                color: Colors.white,
+                                fontSize: displayWidth(context) * 0.035,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      top: displayHeight(context) * 0.135,
+                      child: SingleChildScrollView(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Card(
+                              elevation: 15.0,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(12)),
+                              color: Colors.white,
+                              child: Container(
+                                width: displayWidth(context) * 0.6,
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        " Programming Challenges",
+                                        style: TextStyle(
+                                          color: Colors.deepOrangeAccent,
+                                          fontFamily: "Fredoka One",
+                                          fontWeight: FontWeight.w500,
+                                          fontSize:
+                                              displayWidth(context) * 0.04,
+                                        ),
+                                      ),
+                                      Divider(
+                                        color: Colors.black,
+                                        thickness: 1,
+                                      ),
+                                      Text(
+                                        "Best known for learning variety of languages",
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w500,
+                                          fontSize:
+                                              displayWidth(context) * 0.035,
+                                        ),
+                                      ),
+                                      Text(
+                                        "Based on various difficulty levels",
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w500,
+                                          fontSize:
+                                              displayWidth(context) * 0.035,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                            mydiv,
+                            Card(
+                              elevation: 15.0,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(12)),
+                              color: Colors.white,
+                              child: Container(
+                                width: displayWidth(context) * 0.6,
+                                child: Padding(
+                                  padding: const EdgeInsets.all(10.0),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        "Difficulty Levels",
+                                        style: TextStyle(
+                                          color: Colors.deepOrangeAccent,
+                                          fontFamily: "Fredoka One",
+                                          fontWeight: FontWeight.w500,
+                                          fontSize:
+                                              displayWidth(context) * 0.04,
+                                        ),
+                                      ),
+                                      Divider(
+                                        color: Colors.black,
+                                        thickness: 1,
+                                      ),
+                                      Text(
+                                        "Ranges from 1kyu to 8kyu",
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w500,
+                                          fontSize:
+                                              displayWidth(context) * 0.035,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ));
+          });
+    }
+
     return Scaffold(
         body: Stack(
       children: [
@@ -1699,23 +1865,11 @@ class _CodingPlatformState extends State<CodingPlatform> {
               width: displayWidth(context) * 0.3,
             ),
           ),
-          top: displayHeight(context) * 0.125,
+          top: displayHeight(context) * 0.1,
           left: displayWidth(context) * 0.1,
         ),
         Positioned(
-          top: displayHeight(context) * 0.045,
-          left: displayWidth(context) * 0.02,
-          child: IconButton(
-              icon: Icon(
-                Icons.arrow_back,
-                size: displayWidth(context) * 0.065,
-              ),
-              onPressed: () {
-                Navigator.pop(context);
-              }),
-        ),
-        Positioned(
-          top: displayHeight(context) * 0.15,
+          top: displayHeight(context) * 0.12,
           right: displayWidth(context) * 0.06,
           child: Text(
             "Coding\nPlatforms",
@@ -1726,7 +1880,7 @@ class _CodingPlatformState extends State<CodingPlatform> {
           ),
         ),
         Positioned(
-          top: displayHeight(context) * 0.32,
+          top: displayHeight(context) * 0.3,
           child: Container(
             decoration: BoxDecoration(
               color: Colors.white,
@@ -1737,7 +1891,7 @@ class _CodingPlatformState extends State<CodingPlatform> {
           ),
         ),
         Positioned(
-          top: displayHeight(context) * 0.33,
+          top: displayHeight(context) * 0.31,
           left: displayWidth(context) * 0.02,
           bottom: displayHeight(context) * 0.001,
           child: Padding(
@@ -1765,7 +1919,9 @@ class _CodingPlatformState extends State<CodingPlatform> {
                       onTap: () => _SPOJDetail(context),
                       child: _SpojCard(context)),
                   mydiv,
-                  _CoddeWarCard(context),
+                  GestureDetector(
+                      onTap: () => _CodewarsDetail(context),
+                      child: _CoddeWarCard(context)),
                   mydiv,
                   GestureDetector(
                       onTap: () => _LeetcodeDetail(context),

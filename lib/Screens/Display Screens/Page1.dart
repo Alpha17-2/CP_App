@@ -20,6 +20,20 @@ class _Page1State extends State<Page1> {
             constraints: BoxConstraints.expand(),
           ),
           Positioned(
+              top: 0.0,
+              child: Container(
+                height: displayHeight(context) * 0.43,
+                width: displayWidth(context),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(40),
+                        bottomRight: Radius.circular(40)),
+                    gradient: LinearGradient(colors: [
+                      Color(0xfbbf46b45),
+                      Color(0xfbbeea849),
+                    ])),
+              )),
+          Positioned(
             child: CircleAvatar(
               radius: displayWidth(context) * 0.0799,
               backgroundColor: Colors.purple,
@@ -54,7 +68,7 @@ class _Page1State extends State<Page1> {
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         Card(
-                          // Card 1 => What is CP
+                          // Card 1 => Cp
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(20.0)),
                           elevation: 8.0,
@@ -71,31 +85,30 @@ class _Page1State extends State<Page1> {
                                   Color(0xfbb91EAE4),
                                 ],
                               )),
-                              height: displayHeight(context) * 0.17,
-                              width: displayWidth(context) * 0.34,
+                              height: displayHeight(context) * 0.12,
+                              width: displayWidth(context) * 0.235,
                               child: Padding(
-                                padding: const EdgeInsets.all(16.0),
+                                padding: const EdgeInsets.all(8.0),
                                 child: Column(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceEvenly,
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
                                     CircleAvatar(
-                                      backgroundColor: Colors.red[300],
+                                      backgroundColor: Colors.white,
                                       backgroundImage:
                                           AssetImage("images/qmark2.png"),
-                                      radius: displayWidth(context) * 0.05,
+                                      radius: displayWidth(context) * 0.045,
                                     ),
                                     Text(
-                                      "What is\nCP ?",
+                                      "What is CP ?",
                                       textAlign: TextAlign.center,
                                       style: TextStyle(
-                                          color: Colors.black,
-                                          letterSpacing: 0.65,
-                                          fontSize:
-                                              displayWidth(context) * 0.03,
-                                          fontWeight: FontWeight.w600,
-                                          fontFamily: "CreteRound"),
+                                        color: Colors.black,
+                                        letterSpacing: 0.65,
+                                        fontSize: displayWidth(context) * 0.025,
+                                        fontWeight: FontWeight.bold,
+                                      ),
                                     )
                                   ],
                                 ),
@@ -110,7 +123,9 @@ class _Page1State extends State<Page1> {
                         //// End of card 1
                         Opacity(
                           opacity: 0.0,
-                          child: VerticalDivider(),
+                          child: VerticalDivider(
+                            width: displayWidth(context) * 0.0155,
+                          ),
                         ),
 
                         // Start of Card 2
@@ -133,10 +148,10 @@ class _Page1State extends State<Page1> {
                                   Color(0xfbbf7797d),
                                 ],
                               )),
-                              height: displayHeight(context) * 0.17,
-                              width: displayWidth(context) * 0.34,
+                              height: displayHeight(context) * 0.12,
+                              width: displayWidth(context) * 0.235,
                               child: Padding(
-                                padding: const EdgeInsets.all(16.0),
+                                padding: const EdgeInsets.all(8.0),
                                 child: Column(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceEvenly,
@@ -146,24 +161,17 @@ class _Page1State extends State<Page1> {
                                       backgroundColor: Colors.red[300],
                                       backgroundImage:
                                           AssetImage("images/choice.jpg"),
-                                      radius: displayWidth(context) * 0.05,
-                                    ),
-                                    Opacity(
-                                      opacity: 0.0,
-                                      child: Divider(
-                                        height: displayHeight(context) * 0.002,
-                                      ),
+                                      radius: displayWidth(context) * 0.045,
                                     ),
                                     Text(
-                                      "Programming\nLanguages",
+                                      "Languages",
                                       textAlign: TextAlign.center,
                                       style: TextStyle(
-                                          color: Colors.black,
-                                          letterSpacing: 0.65,
-                                          fontSize:
-                                              displayWidth(context) * 0.03,
-                                          fontWeight: FontWeight.w600,
-                                          fontFamily: "CreteRound"),
+                                        color: Colors.black,
+                                        letterSpacing: 0.65,
+                                        fontSize: displayWidth(context) * 0.025,
+                                        fontWeight: FontWeight.bold,
+                                      ),
                                     )
                                   ],
                                 ),
@@ -176,8 +184,11 @@ class _Page1State extends State<Page1> {
                         ),
                         Opacity(
                           opacity: 0.0,
-                          child: VerticalDivider(),
+                          child: VerticalDivider(
+                            width: displayWidth(context) * 0.0155,
+                          ),
                         ),
+
                         // End of card 2
                         Card(
                           // Card 3 => Computational Complexity
@@ -196,10 +207,10 @@ class _Page1State extends State<Page1> {
                                   Color(0xfbbfbc7d4),
                                 ],
                               )),
-                              height: displayHeight(context) * 0.17,
-                              width: displayWidth(context) * 0.34,
+                              height: displayHeight(context) * 0.12,
+                              width: displayWidth(context) * 0.235,
                               child: Padding(
-                                padding: const EdgeInsets.all(16.0),
+                                padding: const EdgeInsets.all(8.0),
                                 child: Column(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceEvenly,
@@ -209,7 +220,7 @@ class _Page1State extends State<Page1> {
                                       backgroundColor: Colors.red[300],
                                       backgroundImage:
                                           AssetImage("images/timespace.png"),
-                                      radius: displayWidth(context) * 0.05,
+                                      radius: displayWidth(context) * 0.045,
                                     ),
                                     Opacity(
                                       opacity: 0.0,
@@ -218,15 +229,14 @@ class _Page1State extends State<Page1> {
                                       ),
                                     ),
                                     Text(
-                                      "Computational\nComplexity",
+                                      "Complexity",
                                       textAlign: TextAlign.center,
                                       style: TextStyle(
-                                          color: Colors.black,
-                                          letterSpacing: 0.65,
-                                          fontSize:
-                                              displayWidth(context) * 0.03,
-                                          fontWeight: FontWeight.w600,
-                                          fontFamily: "CreteRound"),
+                                        color: Colors.black,
+                                        letterSpacing: 0.65,
+                                        fontSize: displayWidth(context) * 0.025,
+                                        fontWeight: FontWeight.bold,
+                                      ),
                                     )
                                   ],
                                 ),
@@ -239,8 +249,11 @@ class _Page1State extends State<Page1> {
                         ),
                         Opacity(
                           opacity: 0.0,
-                          child: VerticalDivider(),
+                          child: VerticalDivider(
+                            width: displayWidth(context) * 0.0155,
+                          ),
                         ),
+
                         Card(
                           // Card 4 => Data Structures
                           shape: RoundedRectangleBorder(
@@ -258,10 +271,10 @@ class _Page1State extends State<Page1> {
                                   Color(0xfbbFFEDBC),
                                 ],
                               )),
-                              height: displayHeight(context) * 0.17,
-                              width: displayWidth(context) * 0.34,
+                              height: displayHeight(context) * 0.12,
+                              width: displayWidth(context) * 0.235,
                               child: Padding(
-                                padding: const EdgeInsets.all(16.0),
+                                padding: const EdgeInsets.all(8.0),
                                 child: Column(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceEvenly,
@@ -271,7 +284,7 @@ class _Page1State extends State<Page1> {
                                       backgroundColor: Colors.red[300],
                                       backgroundImage:
                                           AssetImage("images/ds.jpg"),
-                                      radius: displayWidth(context) * 0.05,
+                                      radius: displayWidth(context) * 0.045,
                                     ),
                                     Opacity(
                                       opacity: 0.0,
@@ -280,15 +293,14 @@ class _Page1State extends State<Page1> {
                                       ),
                                     ),
                                     Text(
-                                      "Data\nStructures",
+                                      "DS",
                                       textAlign: TextAlign.center,
                                       style: TextStyle(
-                                          color: Colors.black,
-                                          letterSpacing: 0.65,
-                                          fontSize:
-                                              displayWidth(context) * 0.03,
-                                          fontWeight: FontWeight.w600,
-                                          fontFamily: "CreteRound"),
+                                        color: Colors.black,
+                                        letterSpacing: 0.65,
+                                        fontSize: displayWidth(context) * 0.025,
+                                        fontWeight: FontWeight.bold,
+                                      ),
                                     )
                                   ],
                                 ),
@@ -301,8 +313,11 @@ class _Page1State extends State<Page1> {
                         ),
                         Opacity(
                           opacity: 0.0,
-                          child: VerticalDivider(),
+                          child: VerticalDivider(
+                            width: displayWidth(context) * 0.0155,
+                          ),
                         ),
+
                         // End of Card 4
 
                         Card(
@@ -322,10 +337,10 @@ class _Page1State extends State<Page1> {
                                   Color(0xfbb78ffd6),
                                 ],
                               )),
-                              height: displayHeight(context) * 0.17,
-                              width: displayWidth(context) * 0.34,
+                              height: displayHeight(context) * 0.12,
+                              width: displayWidth(context) * 0.235,
                               child: Padding(
-                                padding: const EdgeInsets.all(16.0),
+                                padding: const EdgeInsets.all(8.0),
                                 child: Column(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceEvenly,
@@ -334,8 +349,8 @@ class _Page1State extends State<Page1> {
                                     CircleAvatar(
                                       backgroundColor: Colors.red[300],
                                       backgroundImage:
-                                          AssetImage("images/quiz.jpg"),
-                                      radius: displayWidth(context) * 0.05,
+                                          AssetImage("images/stl.jpg"),
+                                      radius: displayWidth(context) * 0.045,
                                     ),
                                     Opacity(
                                       opacity: 0.0,
@@ -344,15 +359,14 @@ class _Page1State extends State<Page1> {
                                       ),
                                     ),
                                     Text(
-                                      "Quiz",
+                                      "C++ STL",
                                       textAlign: TextAlign.center,
                                       style: TextStyle(
-                                          color: Colors.black,
-                                          letterSpacing: 0.65,
-                                          fontSize:
-                                              displayWidth(context) * 0.03,
-                                          fontWeight: FontWeight.w600,
-                                          fontFamily: "CreteRound"),
+                                        color: Colors.black,
+                                        letterSpacing: 0.65,
+                                        fontSize: displayWidth(context) * 0.03,
+                                        fontWeight: FontWeight.bold,
+                                      ),
                                     )
                                   ],
                                 ),
@@ -369,7 +383,7 @@ class _Page1State extends State<Page1> {
                           child: VerticalDivider(),
                         ),
                         Card(
-                          // Card 6 => Coding Platforms
+                          // Card 6 => Algorithms
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(20.0)),
                           elevation: 8.0,
@@ -385,10 +399,10 @@ class _Page1State extends State<Page1> {
                                   Color(0xfbb78ffd6),
                                 ],
                               )),
-                              height: displayHeight(context) * 0.17,
-                              width: displayWidth(context) * 0.34,
+                              height: displayHeight(context) * 0.12,
+                              width: displayWidth(context) * 0.235,
                               child: Padding(
-                                padding: const EdgeInsets.all(16.0),
+                                padding: const EdgeInsets.all(8.0),
                                 child: Column(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceEvenly,
@@ -397,8 +411,8 @@ class _Page1State extends State<Page1> {
                                     CircleAvatar(
                                       backgroundColor: Colors.red[300],
                                       backgroundImage:
-                                          AssetImage("images/quiz.jpg"),
-                                      radius: displayWidth(context) * 0.05,
+                                          AssetImage("images/stl.jpg"),
+                                      radius: displayWidth(context) * 0.045,
                                     ),
                                     Opacity(
                                       opacity: 0.0,
@@ -407,15 +421,14 @@ class _Page1State extends State<Page1> {
                                       ),
                                     ),
                                     Text(
-                                      "Quiz",
+                                      "Algorithms",
                                       textAlign: TextAlign.center,
                                       style: TextStyle(
-                                          color: Colors.black,
-                                          letterSpacing: 0.65,
-                                          fontSize:
-                                              displayWidth(context) * 0.03,
-                                          fontWeight: FontWeight.w600,
-                                          fontFamily: "CreteRound"),
+                                        color: Colors.black,
+                                        letterSpacing: 0.65,
+                                        fontSize: displayWidth(context) * 0.03,
+                                        fontWeight: FontWeight.bold,
+                                      ),
                                     )
                                   ],
                                 ),
