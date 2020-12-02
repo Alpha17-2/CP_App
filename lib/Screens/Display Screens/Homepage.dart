@@ -29,23 +29,23 @@ class _HomeState extends State<Home> {
       bottomNavigationBar: CurvedNavigationBar(
         animationCurve: Curves.easeOutQuart,
         animationDuration: Duration(microseconds: 500000),
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.orangeAccent,
         color: Colors.white,
         items: [
           Icon(
             Icons.home,
-            size: displayWidth(context) * 0.038,
+            size: displayWidth(context) * 0.042,
           ),
           Icon(
-            Icons.agriculture,
-            size: displayWidth(context) * 0.038,
+            Icons.computer,
+            size: displayWidth(context) * 0.042,
           ),
           Icon(
             Icons.store,
-            size: displayWidth(context) * 0.038,
+            size: displayWidth(context) * 0.042,
           ),
         ],
-        height: displayHeight(context) * 0.07,
+        height: displayHeight(context) * 0.068,
         index: 0,
         onTap: (index) {
           setState(() {
