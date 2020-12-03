@@ -40,23 +40,60 @@ class _Page1State extends State<Page1> {
       String url = doc['link'];
       String platImage;
       bool singleday = false;
+      List<Color> finallistofcolor = [];
+      List<Color> hr = [
+        Colors.green[100],
+        Colors.green[200],
+        Colors.green[300]
+      ];
+      List<Color> ac = [Color(0xffbed4264), Color(0xffbffedbc)];
+      List<Color> he = [Color(0xfbb757F9A), Color(0xfbbD7DDE8)];
+      List<Color> cc = [
+        Color(0xfbbc1a5ce),
+        Color(0xfbb847db3),
+        Color(0xfbb585792)
+      ];
 
-      if (platform == 'cc')
+      List<Color> tc = [
+        Color(0xfbbA1FFCE),
+        Color(0xfbbFAFFD1),
+      ];
+      List<Color> cf = [
+        Color(0xbb58cced),
+        Color(0xbb3895d3),
+        Color(0xbb1261a0),
+      ];
+      List<Color> lc = [
+        Color(0xfbb83a4d4),
+        Color(0xfbbb6fbff),
+      ];
+      List<Color> gg = [Color(0xfbbD3CCE3), Color(0xfbbE9E4F0)];
+
+      if (platform == 'cc') {
         platImage = "images/mynewcc.png";
-      else if (platform == 'cf')
+        finallistofcolor = cc;
+      } else if (platform == 'cf') {
         platImage = 'images/mynewcf.png';
-      else if (platform == 'lc')
-        platImage = 'images/leetcode.jpeg';
-      else if (platform == 'hr')
+        finallistofcolor = cf;
+      } else if (platform == 'lc') {
+        platImage = 'images/lc12.png';
+        finallistofcolor = lc;
+      } else if (platform == 'hr') {
+        finallistofcolor = hr;
         platImage = 'images/x3.png';
-      else if (platform == 'ac')
-        platImage = 'images/atcoder.png';
-      else if (platform == 'he')
-        platImage = 'images/hackerearth.png';
-      else if (platform == 'tc')
-        platImage = 'images/TCplat.jpg';
-      else
+      } else if (platform == 'ac') {
+        platImage = 'images/ac1.png';
+        finallistofcolor = ac;
+      } else if (platform == 'he') {
+        platImage = 'images/x1.png';
+        finallistofcolor = he;
+      } else if (platform == 'tc') {
+        platImage = 'images/tc11.png';
+        finallistofcolor = tc;
+      } else {
         platImage = 'images/google.jpg';
+        finallistofcolor = gg;
+      }
 
       if (type == "coding") {
         typeToPrint = "Coding Challenge";
@@ -68,14 +105,15 @@ class _Page1State extends State<Page1> {
 
       return Container(
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(15.0),
-                topRight: Radius.circular(15.0)),
-            gradient: LinearGradient(colors: [
-              Color(0xfbb7F7FD5),
-              Color(0xfbb86A8E7),
-              Color(0xfbb91EAE4)
-            ])),
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(15.0),
+            topRight: Radius.circular(15.0),
+          ),
+          gradient: LinearGradient(
+              colors: finallistofcolor,
+              begin: Alignment.bottomLeft,
+              end: Alignment.topRight),
+        ),
         height: displayHeight(context) * 0.365,
         width: displayWidth(context) * 0.6,
         child: Column(
@@ -253,13 +291,13 @@ class _Page1State extends State<Page1> {
           Container(
             height: displayHeight(context) * 1.0,
             width: displayWidth(context) * 1.0,
-            color: Color(0xfbbFFFFFF),
+            color: Color(0xbbfaf6f3),
             constraints: BoxConstraints.expand(),
           ),
           Positioned(
               top: 0.0,
               child: Container(
-                height: displayHeight(context) * 0.46,
+                height: displayHeight(context) * 0.425,
                 width: displayWidth(context),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.only(
@@ -291,7 +329,7 @@ class _Page1State extends State<Page1> {
             child: Text(
               "Star Coding",
               style: TextStyle(
-                  //color: Colors.white,
+                  color: Colors.black,
                   fontFamily: "Fredoka One",
                   fontSize: displayWidth(context) * 0.045),
             ),
@@ -688,28 +726,28 @@ class _Page1State extends State<Page1> {
             ),
           ),
           Positioned(
-              top: displayHeight(context) * 0.48,
+              top: displayHeight(context) * 0.47,
               child: Container(
-                // color: Colors.blue,
+                //color: Colors.blue,
                 height: displayHeight(context) * 0.4,
                 width: displayWidth(context),
                 // decoration: BoxDecoration(),
               )),
           Positioned(
-              top: displayHeight(context) * 0.5,
+              top: displayHeight(context) * 0.49,
               left: displayWidth(context) * 0.04,
               child: Text(
                 "Upcoming Contests",
                 style: TextStyle(
                   fontFamily: "PatuaOne",
-                  fontSize: displayWidth(context) * 0.0465,
+                  fontSize: displayWidth(context) * 0.047,
                   fontWeight: FontWeight.w500,
                 ),
               )),
           Positioned(
               top: displayHeight(context) * 0.54,
               child: Container(
-                //  color: Colors.yellow,
+                //color: Colors.yellow,
                 height: displayHeight(context) * 0.365,
                 width: displayWidth(context),
                 // decoration: BoxDecoration(),
@@ -721,7 +759,7 @@ class _Page1State extends State<Page1> {
                       child: ListView.builder(
                         itemBuilder: (BuildContext context, int index) {
                           return Padding(
-                            padding: const EdgeInsets.only(right: 14.0),
+                            padding: const EdgeInsets.only(right: 20.0),
                             child: MyContestCard(
                                 context, snapshot.data.documents[index]),
                           );
