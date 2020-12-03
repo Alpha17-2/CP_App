@@ -1848,8 +1848,8 @@ class _CodingPlatformState extends State<CodingPlatform> {
           decoration: BoxDecoration(
             gradient: LinearGradient(
               colors: [
-                Color(0xfbbDAE2F8),
-                Color(0xfbbD6A4A4),
+                Color(0xfbb000046),
+                Color(0xfbb1CB5E0),
               ],
               begin: Alignment.topLeft,
               end: Alignment.topRight,

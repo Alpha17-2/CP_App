@@ -29,7 +29,7 @@ class _HomeState extends State<Home> {
       bottomNavigationBar: CurvedNavigationBar(
         animationCurve: Curves.easeOutQuart,
         animationDuration: Duration(microseconds: 500000),
-        backgroundColor: Colors.orangeAccent,
+        backgroundColor: Colors.blue[700],
         color: Colors.white,
         items: [
           Icon(

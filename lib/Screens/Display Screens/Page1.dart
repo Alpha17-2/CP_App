@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
+
 import 'package:intl/intl.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -13,7 +14,7 @@ class Page1 extends StatefulWidget {
 class _Page1State extends State<Page1> {
   @override
   Widget build(BuildContext context) {
-    Widget ConCard(BuildContext context, DocumentSnapshot doc) {
+    Widget MyContestCard(BuildContext context, DocumentSnapshot doc) {
       Future<void> _launched;
       Future<void> _launchinBrowser(String url) async {
         if (await canLaunch(url)) {
@@ -26,208 +27,223 @@ class _Page1State extends State<Page1> {
       final textsize = displayWidth(context) * 0.035;
       final dividerlength = displayHeight(context) * 0.0079;
       final String title = doc['title'];
+      final type = doc['type'];
+      String typeToPrint = "";
       final String sdate = DateFormat.yMMMd()
           .add_jm()
-          .format(DateTime.parse(doc['startdate'].toDate().toString()));
+          .format(DateTime.parse(doc['start'].toDate().toString()));
       final String edate = DateFormat.yMMMd()
           .add_jm()
-          .format(DateTime.parse(doc['enddate'].toDate().toString()));
+          .format(DateTime.parse(doc['end'].toDate().toString()));
 
       final String platform = doc['platform'];
       String url = doc['link'];
       String platImage;
+      bool singleday = false;
 
-      if (platform == 'Codechef')
-        platImage = 'images/Codechef.jpeg';
-      else if (platform == 'Codeforces')
-        platImage = 'images/codeforces.jpg';
-      else if (platform == 'Leetcode')
+      if (platform == 'cc')
+        platImage = "images/mynewcc.png";
+      else if (platform == 'cf')
+        platImage = 'images/mynewcf.png';
+      else if (platform == 'lc')
         platImage = 'images/leetcode.jpeg';
-      else if (platform == 'Hackerrank')
-        platImage = 'images/hackerrank.png';
-      else if (platform == 'AtCoder')
+      else if (platform == 'hr')
+        platImage = 'images/x3.png';
+      else if (platform == 'ac')
         platImage = 'images/atcoder.png';
-      else if (platform == 'Hackerearth')
+      else if (platform == 'he')
         platImage = 'images/hackerearth.png';
+      else if (platform == 'tc')
+        platImage = 'images/TCplat.jpg';
       else
         platImage = 'images/google.jpg';
-      return Card(
-          // Root Card
-          child: Padding(
-        padding: const EdgeInsets.all(9.0),
-        child: Card(
-          // First Card
-          color: Colors.white60,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(16.0),
-          ),
-          child: Container(
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage(
+
+      if (type == "coding") {
+        typeToPrint = "Coding Challenge";
+      } else if (type == "hackathon") {
+        typeToPrint = "Hackathon";
+      } else {
+        typeToPrint = "Hiring Challenge";
+      }
+
+      return Container(
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(15.0),
+                topRight: Radius.circular(15.0)),
+            gradient: LinearGradient(colors: [
+              Color(0xfbb7F7FD5),
+              Color(0xfbb86A8E7),
+              Color(0xfbb91EAE4)
+            ])),
+        height: displayHeight(context) * 0.365,
+        width: displayWidth(context) * 0.6,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(top: 9.5),
+              child: Center(
+                child: Image.asset(
                   platImage,
+                  height: displayHeight(context) * 0.1,
+                  width: displayWidth(context) * 0.4,
+                  fit: BoxFit.fitWidth,
                 ),
-                colorFilter: ColorFilter.mode(
-                    Colors.black.withOpacity(0.10), BlendMode.dstATop),
               ),
             ),
-            child: Padding(
-              padding: const EdgeInsets.only(top: 8.0, bottom: 8.0),
-              child: SingleChildScrollView(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  //crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(left: 8.0),
-                          child: CircleAvatar(
-                            backgroundImage: AssetImage(platImage),
-                            radius: displayHeight(context) * 0.03,
-                          ),
+            Center(
+              child: Container(
+                height: displayHeight(context) * 0.24,
+                width: displayWidth(context) * 0.55,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(30),
+                    topRight: Radius.circular(30),
+                  ),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 16.0, left: 14.0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        title,
+                        style: TextStyle(
+                            fontSize: displayWidth(context) * 0.038,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      Opacity(
+                        opacity: 0.0,
+                        child: Divider(
+                          height: displayHeight(context) * 0.009,
                         ),
-                        Flexible(
-                          child: Padding(
-                            padding:
-                                const EdgeInsets.only(left: 4.0, right: 12.0),
-                            child: Card(
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(16.0)),
-                              child: ClipPath(
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                      gradient: LinearGradient(colors: [
-                                    Colors.yellow[200],
-                                    Colors.yellow[200],
-                                    Colors.yellow[300],
-                                    Colors.yellow,
-                                    Colors.yellow,
-                                    Colors.orange[200]
-                                  ])),
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Text(
-                                      title,
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                        color: Colors.black,
-                                        fontSize: displayWidth(context) * 0.04,
-                                        fontFamily: 'Fredoka One',
-                                      ),
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Icon(
+                            Icons.alarm_add_sharp,
+                            size: displayWidth(context) * 0.065,
+                            color: Colors.green,
+                          ),
+                          Opacity(
+                            opacity: 0.0,
+                            child: VerticalDivider(
+                              width: displayWidth(context) * 0.015,
+                            ),
+                          ),
+                          Text(
+                            sdate,
+                            style: TextStyle(
+                                fontSize: displayWidth(context) * 0.035,
+                                fontWeight: FontWeight.w600),
+                          ),
+                        ],
+                      ),
+                      Opacity(
+                        opacity: 0.0,
+                        child: Divider(
+                          height: displayHeight(context) * 0.007,
+                        ),
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Icon(
+                            Icons.alarm_off_rounded,
+                            size: displayWidth(context) * 0.065,
+                            color: Colors.red,
+                          ),
+                          Opacity(
+                            opacity: 0.0,
+                            child: VerticalDivider(
+                              width: displayWidth(context) * 0.015,
+                            ),
+                          ),
+                          Text(
+                            edate,
+                            style: TextStyle(
+                                fontSize: displayWidth(context) * 0.035,
+                                fontWeight: FontWeight.w600),
+                          ),
+                        ],
+                      ),
+                      Opacity(
+                        opacity: 0.0,
+                        child: Divider(
+                          height: displayHeight(context) * 0.007,
+                        ),
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Icon(
+                            Icons.computer_outlined,
+                            size: displayWidth(context) * 0.065,
+                            color: Colors.blue[800],
+                          ),
+                          Opacity(
+                            opacity: 0.0,
+                            child: VerticalDivider(
+                              width: displayWidth(context) * 0.015,
+                            ),
+                          ),
+                          Text(
+                            typeToPrint,
+                            style: TextStyle(
+                                fontSize: displayWidth(context) * 0.039,
+                                fontWeight: FontWeight.w600),
+                          ),
+                        ],
+                      ),
+                      Opacity(
+                        opacity: 0.0,
+                        child: Divider(
+                          height: displayHeight(context) * 0.005,
+                        ),
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(right: 10.0),
+                            child: GestureDetector(
+                              onTap: () {
+                                _launchinBrowser(url);
+                              },
+                              child: Card(
+                                color: Colors.purple,
+                                child: Padding(
+                                  padding: const EdgeInsets.only(
+                                      top: 4.0,
+                                      left: 10.0,
+                                      right: 10.0,
+                                      bottom: 4.0),
+                                  child: Text(
+                                    "GO",
+                                    style: TextStyle(
+                                      fontSize: displayWidth(context) * 0.035,
+                                      color: Colors.white,
                                     ),
                                   ),
                                 ),
-                                clipper: ShapeBorderClipper(
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(12.0),
-                                  ),
-                                ),
                               ),
                             ),
                           ),
-                        )
-                      ],
-                    ),
-                    Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: displayHeight(context) * 0.01,
+                        ],
                       ),
-                    ),
-                    Card(
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(6.0)),
-                      color: Colors.red[400],
-                      child: Padding(
-                        padding: const EdgeInsets.all(5.2),
-                        child: Text(
-                          "Start : " + sdate,
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontFamily: 'Fredoka One',
-                            fontSize: displayWidth(context) * 0.032,
-                            //fontWeight: FontWeight.bold
-                          ),
-                        ),
-                      ),
-                    ),
-                    Card(
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(6.0)),
-                      color: Colors.red[400],
-                      child: Padding(
-                        padding: const EdgeInsets.all(5.2),
-                        child: Text(
-                          "End : " + edate,
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontFamily: 'Fredoka One',
-                            fontSize: displayWidth(context) * 0.032,
-                            // fontWeight: FontWeight.bold
-                          ),
-                        ),
-                      ),
-                    ),
-                    Card(
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(6.0)),
-                      color: Colors.red[400],
-                      child: Padding(
-                        padding: const EdgeInsets.all(5.2),
-                        child: Text(
-                          "Platform : " + platform,
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontFamily: 'Fredoka One',
-                            fontSize: displayWidth(context) * 0.032,
-                          ),
-                        ),
-                      ),
-                    ),
-                    Opacity(
-                      opacity: 0.0,
-                      child: Divider(
-                        height: displayHeight(context) * 0.004,
-                      ),
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(right: 12.0),
-                          child: Container(
-                            width: displayWidth(context) * 0.2,
-                            height: displayHeight(context) * 0.045,
-                            child: RaisedButton(
-                              elevation: 15.0,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(4.0),
-                              ),
-                              focusColor: Colors.white,
-                              onPressed: () {
-                                _launchinBrowser(url);
-                              },
-                              child: Text(
-                                'LINK',
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: displayWidth(context) * 0.03),
-                              ),
-                              color: Colors.black54,
-                            ),
-                          ),
-                        ),
-                      ],
-                    )
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ),
-          ),
+          ],
         ),
-      ));
+      );
     }
 
     return Scaffold(
@@ -243,7 +259,7 @@ class _Page1State extends State<Page1> {
           Positioned(
               top: 0.0,
               child: Container(
-                height: displayHeight(context) * 0.43,
+                height: displayHeight(context) * 0.46,
                 width: displayWidth(context),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.only(
@@ -671,6 +687,55 @@ class _Page1State extends State<Page1> {
               ),
             ),
           ),
+          Positioned(
+              top: displayHeight(context) * 0.48,
+              child: Container(
+                // color: Colors.blue,
+                height: displayHeight(context) * 0.4,
+                width: displayWidth(context),
+                // decoration: BoxDecoration(),
+              )),
+          Positioned(
+              top: displayHeight(context) * 0.5,
+              left: displayWidth(context) * 0.04,
+              child: Text(
+                "Upcoming Contests",
+                style: TextStyle(
+                  fontFamily: "PatuaOne",
+                  fontSize: displayWidth(context) * 0.0465,
+                  fontWeight: FontWeight.w500,
+                ),
+              )),
+          Positioned(
+              top: displayHeight(context) * 0.54,
+              child: Container(
+                //  color: Colors.yellow,
+                height: displayHeight(context) * 0.365,
+                width: displayWidth(context),
+                // decoration: BoxDecoration(),
+                child: StreamBuilder(
+                  builder: (context, snapshot) {
+                    if (!snapshot.hasData) return null;
+                    return Padding(
+                      padding: const EdgeInsets.only(left: 12.0),
+                      child: ListView.builder(
+                        itemBuilder: (BuildContext context, int index) {
+                          return Padding(
+                            padding: const EdgeInsets.only(right: 14.0),
+                            child: MyContestCard(
+                                context, snapshot.data.documents[index]),
+                          );
+                        },
+                        itemCount: snapshot.data.documents.length,
+                        scrollDirection: Axis.horizontal,
+                      ),
+                    );
+                  },
+                  stream: FirebaseFirestore.instance
+                      .collection('contestlist')
+                      .snapshots(),
+                ),
+              )),
         ],
       ),
     );
