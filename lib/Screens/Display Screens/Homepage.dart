@@ -2,7 +2,8 @@ import 'package:CP_App/Helpers/DeviceSize.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'Page1.dart';
-import 'CodingPlatform.dart';
+
+import 'Page2.dart';
 
 class Home extends StatefulWidget {
   static const routename = '/Home';
@@ -15,7 +16,7 @@ class _HomeState extends State<Home> {
   int currentIndex = 0;
   final MyPages = [
     Page1(),
-    CodingPlatform(),
+    Page2(),
     Container(
       child: Center(
         child: Text("Bye guys"),

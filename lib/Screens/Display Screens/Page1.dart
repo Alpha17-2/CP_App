@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
-import 'package:flutter_swiper/flutter_swiper.dart';
+import 'package:CP_App/Screens/General Screen/whatiscp.dart';
 
 import 'package:intl/intl.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -347,56 +347,64 @@ class _Page1State extends State<Page1> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      Card(
-                        // Card 1 => Cp
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20.0)),
-                        elevation: 8.0,
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => whatiscp()));
+                        },
+                        child: Card(
+                          // Card 1 => Cp
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20.0)),
+                          elevation: 8.0,
 
-                        child: ClipPath(
-                          child: Container(
-                            decoration: BoxDecoration(
-                                gradient: LinearGradient(
-                              begin: Alignment.bottomLeft,
-                              end: Alignment.topRight,
-                              colors: [
-                                Color(0xfbb7F7FD5),
-                                Color(0xfbb86A8E7),
-                                Color(0xfbb91EAE4),
-                              ],
-                            )),
-                            height: displayHeight(context) * 0.12,
-                            width: displayWidth(context) * 0.235,
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Column(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceEvenly,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  CircleAvatar(
-                                    backgroundColor: Colors.white,
-                                    backgroundImage:
-                                        AssetImage("images/qmark2.png"),
-                                    radius: displayWidth(context) * 0.045,
-                                  ),
-                                  Text(
-                                    "What is CP ?",
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      color: Colors.black,
-                                      letterSpacing: 0.65,
-                                      fontSize: displayWidth(context) * 0.025,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  )
+                          child: ClipPath(
+                            child: Container(
+                              decoration: BoxDecoration(
+                                  gradient: LinearGradient(
+                                begin: Alignment.bottomLeft,
+                                end: Alignment.topRight,
+                                colors: [
+                                  Color(0xfbb7F7FD5),
+                                  Color(0xfbb86A8E7),
+                                  Color(0xfbb91EAE4),
                                 ],
+                              )),
+                              height: displayHeight(context) * 0.12,
+                              width: displayWidth(context) * 0.235,
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    CircleAvatar(
+                                      backgroundColor: Colors.white,
+                                      backgroundImage:
+                                          AssetImage("images/qmark2.png"),
+                                      radius: displayWidth(context) * 0.045,
+                                    ),
+                                    Text(
+                                      "What is CP ?",
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                        color: Colors.black,
+                                        letterSpacing: 0.65,
+                                        fontSize: displayWidth(context) * 0.025,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    )
+                                  ],
+                                ),
                               ),
                             ),
+                            clipper: ShapeBorderClipper(
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(20.0))),
                           ),
-                          clipper: ShapeBorderClipper(
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(20.0))),
                         ),
                       ),
 

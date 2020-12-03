@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class CodingPlatform extends StatefulWidget {
+class Page2 extends StatefulWidget {
   @override
-  _CodingPlatformState createState() => _CodingPlatformState();
+  _Page2State createState() => _Page2State();
 }
 
-class _CodingPlatformState extends State<CodingPlatform> {
+class _Page2State extends State<Page2> {
   @override
   Widget build(BuildContext context) {
     final mydiv = Opacity(

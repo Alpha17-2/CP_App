@@ -1,9 +1,7 @@
-import 'package:CP_App/Screens/Detail%20Screen/ShowFundamental.dart';
-import 'package:CP_App/Screens/Detail Screen/ShowArray.dart';
-import 'package:CP_App/Screens/Detail Screen/ShowMaths.dart';
-import 'package:CP_App/Screens/Detail Screen/ShowFundamental.dart';
-import 'package:CP_App/Screens/Detail Screen/ShowString.dart';
-import 'package:CP_App/Screens/Detail Screen/ShowSorting.dart';
+import 'package:CP_App/Screens/Coding%20Problems/ShowFundamental.dart';
+import 'package:CP_App/Screens/Coding%20Problems/ShowArray.dart';
+import 'package:CP_App/Screens/Coding%20Problems/ShowMaths.dart';
+
 import 'package:flutter/material.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
 
