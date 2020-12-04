@@ -75,6 +75,8 @@ flutter:
       - images/x4.png
       - images/x13.jpeg
       - images/x7.jpg
+      - images/languages.jpg
+      - images/x15.png
       - images/cff1.jpg
       - images/qmark.jpg
       - images/qmark2.png
@@ -120,7 +122,7 @@ flutter:
       
       - images/swipeatproblem.png
       - images/swipe.png
-      
+      - images/java12.jpg
       
       - images/atcoder.png
       - images/codeforces.jpg
@@ -131,7 +133,7 @@ flutter:
       - images/leetcode.jpeg
       - images/google.jpg
       - images/ds.jpg
-     
+      - images/py.png
       - images/timespace.png
       - images/quiz.jpg
       - images/stl.jpg

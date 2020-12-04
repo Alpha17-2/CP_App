@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
+import 'package:CP_App/Screens/General Screen/languages.dart';
 import 'package:CP_App/Screens/General Screen/whatiscp.dart';
 
 import 'package:intl/intl.dart';
@@ -418,56 +419,64 @@ class _Page1State extends State<Page1> {
 
                       // Start of Card 2
 
-                      Card(
-                        // Card 2 => Programming Languages
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20.0)),
-                        elevation: 8.0,
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => languages()));
+                        },
+                        child: Card(
+                          // Card 2 => Programming Languages
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20.0)),
+                          elevation: 8.0,
 
-                        child: ClipPath(
-                          child: Container(
-                            decoration: BoxDecoration(
-                                gradient: LinearGradient(
-                              begin: Alignment.bottomLeft,
-                              end: Alignment.topRight,
-                              colors: [
-                                Color(0xfbbC6FFDD),
-                                Color(0xfbbFBD786),
-                                Color(0xfbbf7797d),
-                              ],
-                            )),
-                            height: displayHeight(context) * 0.12,
-                            width: displayWidth(context) * 0.235,
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Column(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceEvenly,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  CircleAvatar(
-                                    backgroundColor: Colors.red[300],
-                                    backgroundImage:
-                                        AssetImage("images/choice.jpg"),
-                                    radius: displayWidth(context) * 0.045,
-                                  ),
-                                  Text(
-                                    "Languages",
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      color: Colors.black,
-                                      letterSpacing: 0.65,
-                                      fontSize: displayWidth(context) * 0.025,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  )
+                          child: ClipPath(
+                            child: Container(
+                              decoration: BoxDecoration(
+                                  gradient: LinearGradient(
+                                begin: Alignment.bottomLeft,
+                                end: Alignment.topRight,
+                                colors: [
+                                  Color(0xfbbC6FFDD),
+                                  Color(0xfbbFBD786),
+                                  Color(0xfbbf7797d),
                                 ],
+                              )),
+                              height: displayHeight(context) * 0.12,
+                              width: displayWidth(context) * 0.235,
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    CircleAvatar(
+                                      backgroundColor: Colors.red[300],
+                                      backgroundImage:
+                                          AssetImage("images/choice.jpg"),
+                                      radius: displayWidth(context) * 0.045,
+                                    ),
+                                    Text(
+                                      "Languages",
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                        color: Colors.black,
+                                        letterSpacing: 0.65,
+                                        fontSize: displayWidth(context) * 0.025,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    )
+                                  ],
+                                ),
                               ),
                             ),
+                            clipper: ShapeBorderClipper(
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(20.0))),
                           ),
-                          clipper: ShapeBorderClipper(
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(20.0))),
                         ),
                       ),
                       Opacity(
