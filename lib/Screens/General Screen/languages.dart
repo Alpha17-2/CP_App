@@ -76,7 +76,7 @@ class languages extends StatelessWidget {
                       child: Text(
                         "As we know the indespensability of programming languages in competitive programming, one should be aware of the choices they make. As for now, Programming languages such as C++ , Java and Python are prominent of all.",
                         style: TextStyle(
-                          fontSize: displayWidth(context) * 0.042,
+                          fontSize: displayWidth(context) * 0.037,
                           fontWeight: FontWeight.w500,
                         ),
                       ),
