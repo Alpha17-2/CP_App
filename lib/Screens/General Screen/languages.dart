@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
+import 'package:CP_App/Screens/Detail Screen/Languages/C++.dart';
 
 class languages extends StatelessWidget {
   @override
@@ -117,54 +118,60 @@ class languages extends StatelessWidget {
           Positioned(
             bottom: displayHeight(context) * 0.1,
             left: displayWidth(context) * 0.05,
-            child: Card(
-              // Card 1 => C++
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20.0)),
-              elevation: 8.0,
+            child: GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => Cplus()));
+              },
+              child: Card(
+                // Card 1 => C++
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20.0)),
+                elevation: 8.0,
 
-              child: ClipPath(
-                child: Container(
-                  decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                    begin: Alignment.bottomLeft,
-                    end: Alignment.topRight,
-                    colors: [
-                      Color(0xfbb7F7FD5),
-                      Color(0xfbb86A8E7),
-                      Color(0xfbb91EAE4),
-                    ],
-                  )),
-                  height: displayHeight(context) * 0.13,
-                  width: displayWidth(context) * 0.255,
-                  child: Padding(
-                    padding: const EdgeInsets.all(4.0),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        CircleAvatar(
-                          backgroundColor: Colors.white,
-                          backgroundImage: AssetImage("images/stl.jpg"),
-                          radius: displayWidth(context) * 0.049,
-                        ),
-                        Text(
-                          "C++",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Colors.black,
-                            letterSpacing: 0.65,
-                            fontSize: displayWidth(context) * 0.03,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        )
+                child: ClipPath(
+                  child: Container(
+                    decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                      begin: Alignment.bottomLeft,
+                      end: Alignment.topRight,
+                      colors: [
+                        Color(0xfbb7F7FD5),
+                        Color(0xfbb86A8E7),
+                        Color(0xfbb91EAE4),
                       ],
+                    )),
+                    height: displayHeight(context) * 0.13,
+                    width: displayWidth(context) * 0.255,
+                    child: Padding(
+                      padding: const EdgeInsets.all(4.0),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          CircleAvatar(
+                            backgroundColor: Colors.white,
+                            backgroundImage: AssetImage("images/stl.jpg"),
+                            radius: displayWidth(context) * 0.049,
+                          ),
+                          Text(
+                            "C++",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.black,
+                              letterSpacing: 0.65,
+                              fontSize: displayWidth(context) * 0.03,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   ),
+                  clipper: ShapeBorderClipper(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20.0))),
                 ),
-                clipper: ShapeBorderClipper(
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20.0))),
               ),
             ),
           ),
