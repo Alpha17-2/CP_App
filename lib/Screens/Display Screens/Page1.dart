@@ -479,6 +479,7 @@ class _Page1State extends State<Page1> {
                           ),
                         ),
                       ),
+
                       Opacity(
                         opacity: 0.0,
                         child: VerticalDivider(

@@ -34,24 +34,35 @@ class Cplus extends StatelessWidget {
                         bottomRight: Radius.circular(30)),
                   ))),
           Positioned(
-              top: displayHeight(context) * 0.15,
+              left: displayWidth(context) * 0.15,
+              top: displayHeight(context) * 0.1,
+              child: Text(
+                "C++",
+                style: TextStyle(
+                  fontFamily: "PatuaOne",
+                  fontSize: displayWidth(context) * 0.09,
+                ),
+              )),
+          Positioned(
+              top: displayHeight(context) * 0.18,
               child: Container(
-                height: displayHeight(context) * 0.235,
+                height: displayHeight(context) * 0.23,
                 width: displayWidth(context) * 0.8,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.all(Radius.circular(15)),
                   color: Colors.white,
                 ),
                 child: Padding(
-                  padding: const EdgeInsets.all(15.0),
+                  padding:
+                      const EdgeInsets.only(top: 25.0, left: 15, right: 15),
                   child: Text(
                     'The most popular and the most commonly used language among all the languages in the field of competitive programming is C++ basically because of its speed. It is usually faster than Java and python, also it contains some unique features compared to remaining programming languages.',
-                    style: TextStyle(fontSize: displayWidth(context) * 0.035),
+                    style: TextStyle(fontSize: displayWidth(context) * 0.0378),
                   ),
                 ),
               )),
           Positioned(
-            top: displayHeight(context) * 0.089,
+            top: displayHeight(context) * 0.1245,
             right: displayWidth(context) * 0.025,
             child: CircleAvatar(
               radius: displayWidth(context) * 0.085,
