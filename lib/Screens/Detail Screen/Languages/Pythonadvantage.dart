@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
 
-class Cplusdisadv extends StatelessWidget {
+class PythonAdvantage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final k = displayWidth(context) * 0.07;
@@ -67,7 +67,7 @@ class Cplusdisadv extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              '• Complex:',
+                              '• Concise:',
                               style: TextStyle(
                                   fontSize: k,
                                   fontWeight: FontWeight.w500,
@@ -76,7 +76,7 @@ class Cplusdisadv extends StatelessWidget {
                             ),
                             mydiv,
                             Text(
-                              'C++ takes a lot of time to learn, it takes a lot of understanding, the core language is vast and complicated. It is more complex and significantly more difficult to learn than most of its peer.',
+                              'Code typing decreases drastically as compared to C++ and Java, it has short syntax sometimes even one liner answer. This makes it easier to read and understand the code.',
                               style: TextStyle(
                                   fontSize: s, fontWeight: FontWeight.w600),
                             ),
@@ -97,7 +97,7 @@ class Cplusdisadv extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              '• Memory  Management:',
+                              '• Big Integer support:',
                               style: TextStyle(
                                   fontSize: k,
                                   fontWeight: FontWeight.w500,
@@ -105,7 +105,7 @@ class Cplusdisadv extends StatelessWidget {
                                   fontFamily: 'Acme'),
                             ),
                             Text(
-                              'C++ gives control of memory management which is another source of bugs. Debugging memory management issues can be very difficult. Unlike Java, it does not support garbage collection.',
+                              'Big Integers are not a problem. Most common errors in contests are due to integer overflows. It is especially used by most programmers in questions where there is a chance of integer overflow as python allows one to code without any limit on the integer value. C++, and Java have these features also but we have to write lots of code for that.',
                               style: TextStyle(
                                   fontSize: s, fontWeight: FontWeight.w500),
                             ),
@@ -126,7 +126,7 @@ class Cplusdisadv extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              '• Pointers:',
+                              '• Dynamically typed:',
                               style: TextStyle(
                                   fontSize: k,
                                   fontWeight: FontWeight.w500,
@@ -134,7 +134,36 @@ class Cplusdisadv extends StatelessWidget {
                                   fontFamily: 'Acme'),
                             ),
                             Text(
-                              'C++ uses pointers. It is a relatively difficult concept to grasp. It is one of the elements of C++ that make the language difficult to use and has been a source of many bugs.',
+                              'Python doesn’t require us to declare variables and their Data-Types until we run the code. It automatically assigns the data type during execution. This also gives us the flexibility of range, i.e., no need to worry about integer and long integer. Python handles Type conversion with flawless results. So, the programmer does not worry about declaring the data types or variables.',
+                              style: TextStyle(
+                                  fontSize: s, fontWeight: FontWeight.w500),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    mydiv2,
+                    Card(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15.0)),
+                      elevation: 15.0,
+                      // color: Color(0xfbbE6E6FA),
+                      child: Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              '• Extensive library support:',
+                              style: TextStyle(
+                                  fontSize: k,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.blue[900],
+                                  fontFamily: 'Acme'),
+                            ),
+                            Text(
+                              'Just like C++, Python has a vast library support. Python arms its users with a wide variety of functionality, packages and libraries reducing the time of programming. It acts like a supplement to the programmer’s mental ability.',
                               style: TextStyle(
                                   fontSize: s, fontWeight: FontWeight.w500),
                             ),
@@ -166,7 +195,7 @@ class Cplusdisadv extends StatelessWidget {
             top: displayHeight(context) * 0.12,
             child: Center(
               child: Text(
-                "Disadvantages",
+                "Advantages",
                 style: TextStyle(
                   fontFamily: "PatuaOne",
                   fontSize: displayWidth(context) * 0.09,

@@ -59,7 +59,7 @@ class Cplusadv extends StatelessWidget {
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(15.0)),
                       elevation: 15.0,
-                      color: Color(0xfbbE6E6FA),
+                      // color: Color(0xfbbE6E6FA),
                       child: Padding(
                         padding: const EdgeInsets.all(16.0),
                         child: Column(
@@ -89,7 +89,7 @@ class Cplusadv extends StatelessWidget {
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(15.0)),
                       elevation: 15.0,
-                      color: Color(0xfbbE6E6FA),
+                      //color: Color(0xfbbE6E6FA),
                       child: Padding(
                         padding: const EdgeInsets.all(16.0),
                         child: Column(
@@ -118,7 +118,7 @@ class Cplusadv extends StatelessWidget {
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(15.0)),
                       elevation: 15.0,
-                      color: Color(0xfbbE6E6FA),
+                      // color: Color(0xfbbE6E6FA),
                       child: Padding(
                         padding: const EdgeInsets.all(16.0),
                         child: Column(

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
 
-class Cplusdisadv extends StatelessWidget {
+class Pythondisadv extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final k = displayWidth(context) * 0.07;
@@ -67,7 +67,7 @@ class Cplusdisadv extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              '• Complex:',
+                              '• Time limit exceeds: ',
                               style: TextStyle(
                                   fontSize: k,
                                   fontWeight: FontWeight.w500,
@@ -76,7 +76,7 @@ class Cplusdisadv extends StatelessWidget {
                             ),
                             mydiv,
                             Text(
-                              'C++ takes a lot of time to learn, it takes a lot of understanding, the core language is vast and complicated. It is more complex and significantly more difficult to learn than most of its peer.',
+                              'One of the major drawbacks of Python as a programming language in competitive coding is, execution speed is slow compared to a statically typed language. Python executes with the help of an interpreter instead of the compiler, which causes it to slow down. The line by line  execution of code often leads to slow execution. The dynamic nature of Python is also responsible for the slow speed of Python because it has to do the extra work while executing code. So, Python is not used for purposes where speed is an important aspect of the project.',
                               style: TextStyle(
                                   fontSize: s, fontWeight: FontWeight.w600),
                             ),
@@ -97,7 +97,7 @@ class Cplusdisadv extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              '• Memory  Management:',
+                              '•	Memory Intensive : ',
                               style: TextStyle(
                                   fontSize: k,
                                   fontWeight: FontWeight.w500,
@@ -105,7 +105,7 @@ class Cplusdisadv extends StatelessWidget {
                                   fontFamily: 'Acme'),
                             ),
                             Text(
-                              'C++ gives control of memory management which is another source of bugs. Debugging memory management issues can be very difficult. Unlike Java, it does not support garbage collection.',
+                              'The Python programming language uses a large amount of memory. For any memory intensive tasks Python is not a good choice. It’s memory consumption is high, due to the flexibility of the data types.',
                               style: TextStyle(
                                   fontSize: s, fontWeight: FontWeight.w500),
                             ),
@@ -118,7 +118,7 @@ class Cplusdisadv extends StatelessWidget {
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(15.0)),
                       elevation: 15.0,
-                      // color: Color(0xfbbE6E6FA),
+                      //color: Color(0xfbbE6E6FA),
                       child: Padding(
                         padding: const EdgeInsets.all(16.0),
                         child: Column(
@@ -126,7 +126,7 @@ class Cplusdisadv extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              '• Pointers:',
+                              '•	Data-Structures: ',
                               style: TextStyle(
                                   fontSize: k,
                                   fontWeight: FontWeight.w500,
@@ -134,7 +134,7 @@ class Cplusdisadv extends StatelessWidget {
                                   fontFamily: 'Acme'),
                             ),
                             Text(
-                              'C++ uses pointers. It is a relatively difficult concept to grasp. It is one of the elements of C++ that make the language difficult to use and has been a source of many bugs.',
+                              'When you move up in ladder and start solving questions where application of DS increases then complexity in applications of algorithms with python also increases. Application of Hashing, Sorting, Traversal on dynamic programming is not well support in Python as it takes a lot of memory as well as time. Also, debugging is harder and takes longer time compared to a statically typed language.',
                               style: TextStyle(
                                   fontSize: s, fontWeight: FontWeight.w500),
                             ),
@@ -166,7 +166,7 @@ class Cplusdisadv extends StatelessWidget {
             top: displayHeight(context) * 0.12,
             child: Center(
               child: Text(
-                "Disadvantages",
+                "Disdvantages",
                 style: TextStyle(
                   fontFamily: "PatuaOne",
                   fontSize: displayWidth(context) * 0.09,

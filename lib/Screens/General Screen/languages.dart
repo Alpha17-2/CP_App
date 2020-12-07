@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
 import 'package:CP_App/Screens/Detail Screen/Languages/C++.dart';
+import 'package:CP_App/Screens/Detail Screen/Languages/Python.dart';
+import 'package:CP_App/Screens/Detail Screen/Languages/Java.dart';
 
 class languages extends StatelessWidget {
   @override
@@ -51,10 +53,10 @@ class languages extends StatelessWidget {
             top: displayHeight(context) * 0.215,
             right: displayWidth(context) * 0.0315,
             child: CircleAvatar(
-              radius: displayWidth(context) * 0.18,
+              radius: displayWidth(context) * 0.15,
               backgroundColor: Colors.black,
               child: CircleAvatar(
-                radius: displayWidth(context) * 0.17,
+                radius: displayWidth(context) * 0.145,
                 backgroundImage: AssetImage('images/x15.png'),
                 backgroundColor: Colors.yellow[100],
               ),
@@ -177,107 +179,119 @@ class languages extends StatelessWidget {
           ),
           Positioned(
             bottom: displayHeight(context) * 0.1,
-            child: Card(
-              // Card 2 => Java
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20.0)),
-              elevation: 8.0,
+            child: GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => Java()));
+              },
+              child: Card(
+                // Card 2 => Java
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20.0)),
+                elevation: 8.0,
 
-              child: ClipPath(
-                child: Container(
-                  decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                    begin: Alignment.bottomLeft,
-                    end: Alignment.topRight,
-                    colors: [
-                      Color(0xfbbC6FFDD),
-                      Color(0xfbbFBD786),
-                      Color(0xfbbf7797d),
-                    ],
-                  )),
-                  height: displayHeight(context) * 0.13,
-                  width: displayWidth(context) * 0.255,
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        CircleAvatar(
-                          backgroundColor: Colors.white,
-                          backgroundImage: AssetImage("images/java12.jpg"),
-                          radius: displayWidth(context) * 0.049,
-                        ),
-                        Text(
-                          "Java",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Colors.black,
-                            letterSpacing: 0.65,
-                            fontSize: displayWidth(context) * 0.03,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        )
+                child: ClipPath(
+                  child: Container(
+                    decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                      begin: Alignment.bottomLeft,
+                      end: Alignment.topRight,
+                      colors: [
+                        Color(0xfbbC6FFDD),
+                        Color(0xfbbFBD786),
+                        Color(0xfbbf7797d),
                       ],
+                    )),
+                    height: displayHeight(context) * 0.13,
+                    width: displayWidth(context) * 0.255,
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          CircleAvatar(
+                            backgroundColor: Colors.white,
+                            backgroundImage: AssetImage("images/java12.jpg"),
+                            radius: displayWidth(context) * 0.049,
+                          ),
+                          Text(
+                            "Java",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.black,
+                              letterSpacing: 0.65,
+                              fontSize: displayWidth(context) * 0.03,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   ),
+                  clipper: ShapeBorderClipper(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20.0))),
                 ),
-                clipper: ShapeBorderClipper(
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20.0))),
               ),
             ),
           ),
           Positioned(
             bottom: displayHeight(context) * 0.1,
             right: displayWidth(context) * 0.05,
-            child: Card(
-              // Card 2 => Java
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20.0)),
-              elevation: 8.0,
+            child: GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => Python()));
+              },
+              child: Card(
+                // Card 3 => Python
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20.0)),
+                elevation: 8.0,
 
-              child: ClipPath(
-                child: Container(
-                  decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                    begin: Alignment.bottomLeft,
-                    end: Alignment.topRight,
-                    colors: [
-                      Color(0xfbbED4264),
-                      Color(0xfbbFFEDBC),
-                    ],
-                  )),
-                  height: displayHeight(context) * 0.13,
-                  width: displayWidth(context) * 0.255,
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        CircleAvatar(
-                          backgroundColor: Colors.white,
-                          backgroundImage: AssetImage("images/py.png"),
-                          radius: displayWidth(context) * 0.049,
-                        ),
-                        Text(
-                          "Python",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Colors.black,
-                            letterSpacing: 0.65,
-                            fontSize: displayWidth(context) * 0.03,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        )
+                child: ClipPath(
+                  child: Container(
+                    decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                      begin: Alignment.bottomLeft,
+                      end: Alignment.topRight,
+                      colors: [
+                        Color(0xfbbED4264),
+                        Color(0xfbbFFEDBC),
                       ],
+                    )),
+                    height: displayHeight(context) * 0.13,
+                    width: displayWidth(context) * 0.255,
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          CircleAvatar(
+                            backgroundColor: Colors.white,
+                            backgroundImage: AssetImage("images/py.png"),
+                            radius: displayWidth(context) * 0.049,
+                          ),
+                          Text(
+                            "Python",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.black,
+                              letterSpacing: 0.65,
+                              fontSize: displayWidth(context) * 0.03,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   ),
+                  clipper: ShapeBorderClipper(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20.0))),
                 ),
-                clipper: ShapeBorderClipper(
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20.0))),
               ),
             ),
           ),

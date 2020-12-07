@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
 
-class Cplusdisadv extends StatelessWidget {
+class Javadisadv extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final k = displayWidth(context) * 0.07;
@@ -49,7 +49,7 @@ class Cplusdisadv extends StatelessWidget {
               color: Colors.white,
             ),
             child: Padding(
-              padding: const EdgeInsets.only(top: 15, left: 15, right: 15),
+              padding: const EdgeInsets.only(top: 50, left: 15, right: 15),
               child: SingleChildScrollView(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -67,7 +67,7 @@ class Cplusdisadv extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              '• Complex:',
+                              '•	Performance: ',
                               style: TextStyle(
                                   fontSize: k,
                                   fontWeight: FontWeight.w500,
@@ -76,7 +76,7 @@ class Cplusdisadv extends StatelessWidget {
                             ),
                             mydiv,
                             Text(
-                              'C++ takes a lot of time to learn, it takes a lot of understanding, the core language is vast and complicated. It is more complex and significantly more difficult to learn than most of its peer.',
+                              "Java in comparison to other languages like C, C++ takes more memory. Java in comparison to C++ is quite slower.",
                               style: TextStyle(
                                   fontSize: s, fontWeight: FontWeight.w600),
                             ),
@@ -97,7 +97,7 @@ class Cplusdisadv extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              '• Memory  Management:',
+                              '•	Memory Management: ',
                               style: TextStyle(
                                   fontSize: k,
                                   fontWeight: FontWeight.w500,
@@ -105,7 +105,7 @@ class Cplusdisadv extends StatelessWidget {
                                   fontFamily: 'Acme'),
                             ),
                             Text(
-                              'C++ gives control of memory management which is another source of bugs. Debugging memory management issues can be very difficult. Unlike Java, it does not support garbage collection.',
+                              'Java Programs run on top of Java Virtual Machine,this is the reason why it consumes large memory. Secondly the memory in java is managed by garbage collection,so whenever the garbage collector runs, it affects the performance of the application.',
                               style: TextStyle(
                                   fontSize: s, fontWeight: FontWeight.w500),
                             ),
@@ -113,36 +113,6 @@ class Cplusdisadv extends StatelessWidget {
                         ),
                       ),
                     ),
-                    mydiv2,
-                    Card(
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15.0)),
-                      elevation: 15.0,
-                      // color: Color(0xfbbE6E6FA),
-                      child: Padding(
-                        padding: const EdgeInsets.all(16.0),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              '• Pointers:',
-                              style: TextStyle(
-                                  fontSize: k,
-                                  fontWeight: FontWeight.w500,
-                                  color: Colors.blue[900],
-                                  fontFamily: 'Acme'),
-                            ),
-                            Text(
-                              'C++ uses pointers. It is a relatively difficult concept to grasp. It is one of the elements of C++ that make the language difficult to use and has been a source of many bugs.',
-                              style: TextStyle(
-                                  fontSize: s, fontWeight: FontWeight.w500),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    mydiv2,
                   ],
                 ),
               ),

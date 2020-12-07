@@ -581,8 +581,9 @@ class _BasicdsState extends State<Basicds> {
           // 3rd Container = Implementation of codes !!
           constraints: BoxConstraints.expand(),
           decoration: BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage("images/black.jpg"), fit: BoxFit.fill)),
+              // image: DecorationImage(
+              //  image: AssetImage("images/black.jpg"), fit: BoxFit.fill)),
+              ),
           child: Padding(
             padding: const EdgeInsets.only(top: 20.0, left: 8.0, right: 8.0),
             child: Column(
@@ -595,7 +596,7 @@ class _BasicdsState extends State<Basicds> {
                     "Non Primitive Data Structure",
                     style: TextStyle(
                         fontSize: displayWidth(context) * 0.065,
-                        color: Colors.yellow,
+                        color: Colors.black,
                         fontFamily: "ConcertOne"),
                   ),
                 ),

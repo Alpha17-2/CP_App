@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
 import 'package:CP_App/Screens/General Screen/languages.dart';
 import 'package:CP_App/Screens/General Screen/whatiscp.dart';
+import 'package:CP_App/Screens/Detail Screen/BASICDS/BasicDS.dart';
+import 'package:CP_App/Screens/General Screen/Computational.dart';
 
 import 'package:intl/intl.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -488,61 +490,69 @@ class _Page1State extends State<Page1> {
                       ),
 
                       // End of card 2
-                      Card(
-                        // Card 3 => Computational Complexity
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20.0)),
-                        elevation: 8.0,
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Asymptomatic()));
+                        },
+                        child: Card(
+                          // Card 3 => Computational Complexity
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20.0)),
+                          elevation: 8.0,
 
-                        child: ClipPath(
-                          child: Container(
-                            decoration: BoxDecoration(
-                                gradient: LinearGradient(
-                              begin: Alignment.bottomLeft,
-                              end: Alignment.topRight,
-                              colors: [
-                                Color(0xfbb9796f0),
-                                Color(0xfbbfbc7d4),
-                              ],
-                            )),
-                            height: displayHeight(context) * 0.12,
-                            width: displayWidth(context) * 0.235,
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Column(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceEvenly,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  CircleAvatar(
-                                    backgroundColor: Colors.red[300],
-                                    backgroundImage:
-                                        AssetImage("images/timespace.png"),
-                                    radius: displayWidth(context) * 0.045,
-                                  ),
-                                  Opacity(
-                                    opacity: 0.0,
-                                    child: Divider(
-                                      height: displayHeight(context) * 0.002,
-                                    ),
-                                  ),
-                                  Text(
-                                    "Complexity",
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      color: Colors.black,
-                                      letterSpacing: 0.65,
-                                      fontSize: displayWidth(context) * 0.025,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  )
+                          child: ClipPath(
+                            child: Container(
+                              decoration: BoxDecoration(
+                                  gradient: LinearGradient(
+                                begin: Alignment.bottomLeft,
+                                end: Alignment.topRight,
+                                colors: [
+                                  Color(0xfbb9796f0),
+                                  Color(0xfbbfbc7d4),
                                 ],
+                              )),
+                              height: displayHeight(context) * 0.12,
+                              width: displayWidth(context) * 0.235,
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    CircleAvatar(
+                                      backgroundColor: Colors.red[300],
+                                      backgroundImage:
+                                          AssetImage("images/timespace.png"),
+                                      radius: displayWidth(context) * 0.045,
+                                    ),
+                                    Opacity(
+                                      opacity: 0.0,
+                                      child: Divider(
+                                        height: displayHeight(context) * 0.002,
+                                      ),
+                                    ),
+                                    Text(
+                                      "Complexity",
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                        color: Colors.black,
+                                        letterSpacing: 0.65,
+                                        fontSize: displayWidth(context) * 0.025,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    )
+                                  ],
+                                ),
                               ),
                             ),
+                            clipper: ShapeBorderClipper(
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(20.0))),
                           ),
-                          clipper: ShapeBorderClipper(
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(20.0))),
                         ),
                       ),
                       Opacity(
@@ -552,61 +562,69 @@ class _Page1State extends State<Page1> {
                         ),
                       ),
 
-                      Card(
-                        // Card 4 => Data Structures
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20.0)),
-                        elevation: 8.0,
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Basicds()));
+                        },
+                        child: Card(
+                          // Card 4 => Data Structures
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20.0)),
+                          elevation: 8.0,
 
-                        child: ClipPath(
-                          child: Container(
-                            decoration: BoxDecoration(
-                                gradient: LinearGradient(
-                              begin: Alignment.bottomLeft,
-                              end: Alignment.topRight,
-                              colors: [
-                                Color(0xfbbED4264),
-                                Color(0xfbbFFEDBC),
-                              ],
-                            )),
-                            height: displayHeight(context) * 0.12,
-                            width: displayWidth(context) * 0.235,
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Column(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceEvenly,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  CircleAvatar(
-                                    backgroundColor: Colors.red[300],
-                                    backgroundImage:
-                                        AssetImage("images/ds.jpg"),
-                                    radius: displayWidth(context) * 0.045,
-                                  ),
-                                  Opacity(
-                                    opacity: 0.0,
-                                    child: Divider(
-                                      height: displayHeight(context) * 0.002,
-                                    ),
-                                  ),
-                                  Text(
-                                    "DS",
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      color: Colors.black,
-                                      letterSpacing: 0.65,
-                                      fontSize: displayWidth(context) * 0.025,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  )
+                          child: ClipPath(
+                            child: Container(
+                              decoration: BoxDecoration(
+                                  gradient: LinearGradient(
+                                begin: Alignment.bottomLeft,
+                                end: Alignment.topRight,
+                                colors: [
+                                  Color(0xfbbED4264),
+                                  Color(0xfbbFFEDBC),
                                 ],
+                              )),
+                              height: displayHeight(context) * 0.12,
+                              width: displayWidth(context) * 0.235,
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    CircleAvatar(
+                                      backgroundColor: Colors.red[300],
+                                      backgroundImage:
+                                          AssetImage("images/ds.jpg"),
+                                      radius: displayWidth(context) * 0.045,
+                                    ),
+                                    Opacity(
+                                      opacity: 0.0,
+                                      child: Divider(
+                                        height: displayHeight(context) * 0.002,
+                                      ),
+                                    ),
+                                    Text(
+                                      "DS",
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                        color: Colors.black,
+                                        letterSpacing: 0.65,
+                                        fontSize: displayWidth(context) * 0.025,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    )
+                                  ],
+                                ),
                               ),
                             ),
+                            clipper: ShapeBorderClipper(
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(20.0))),
                           ),
-                          clipper: ShapeBorderClipper(
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(20.0))),
                         ),
                       ),
                       Opacity(

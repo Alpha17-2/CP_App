@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
 
-class Cplusdisadv extends StatelessWidget {
+class Javaadv extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final k = displayWidth(context) * 0.07;
@@ -67,7 +67,7 @@ class Cplusdisadv extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              '• Complex:',
+                              '•	Simple to use: ',
                               style: TextStyle(
                                   fontSize: k,
                                   fontWeight: FontWeight.w500,
@@ -76,7 +76,7 @@ class Cplusdisadv extends StatelessWidget {
                             ),
                             mydiv,
                             Text(
-                              'C++ takes a lot of time to learn, it takes a lot of understanding, the core language is vast and complicated. It is more complex and significantly more difficult to learn than most of its peer.',
+                              'Firstly it is straightforward to use, write, compile, debug, and learn than other programming languages. Java is less complicated than C++; as a result, Java uses automatic memory allocation and garbage collection.',
                               style: TextStyle(
                                   fontSize: s, fontWeight: FontWeight.w600),
                             ),
@@ -97,7 +97,7 @@ class Cplusdisadv extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              '• Memory  Management:',
+                              ' •	Platform Independent:',
                               style: TextStyle(
                                   fontSize: k,
                                   fontWeight: FontWeight.w500,
@@ -105,7 +105,7 @@ class Cplusdisadv extends StatelessWidget {
                                   fontFamily: 'Acme'),
                             ),
                             Text(
-                              'C++ gives control of memory management which is another source of bugs. Debugging memory management issues can be very difficult. Unlike Java, it does not support garbage collection.',
+                              'One of the most significant advantages of Java is its ability to move easily from one computer system to another.In other words, you can write your code once and then run it anywhere, on any platform that provides the environment to run it (JVM). it provides the feature of "Write Once Run Anywhere(WORA) feature".',
                               style: TextStyle(
                                   fontSize: s, fontWeight: FontWeight.w500),
                             ),
@@ -126,7 +126,7 @@ class Cplusdisadv extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              '• Pointers:',
+                              '•	Multithread :  ',
                               style: TextStyle(
                                   fontSize: k,
                                   fontWeight: FontWeight.w500,
@@ -134,7 +134,94 @@ class Cplusdisadv extends StatelessWidget {
                                   fontFamily: 'Acme'),
                             ),
                             Text(
-                              'C++ uses pointers. It is a relatively difficult concept to grasp. It is one of the elements of C++ that make the language difficult to use and has been a source of many bugs.',
+                              "Another most important advantage of using java as a competitive programming language is it's feature of multithreading . It is basically the capability for a program to perform several tasks simultaneously within a program.",
+                              style: TextStyle(
+                                  fontSize: s, fontWeight: FontWeight.w500),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    mydiv2,
+                    Card(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15.0)),
+                      elevation: 15.0,
+                      // color: Color(0xfbbE6E6FA),
+                      child: Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              ' •	BigInteger : ',
+                              style: TextStyle(
+                                  fontSize: k,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.blue[900],
+                                  fontFamily: 'Acme'),
+                            ),
+                            Text(
+                              'The another feature that java supports is of BigInteger.BigInteger class is used for mathematical operation which involves very big integer calculation that are outside the limit of all available primitive data types.',
+                              style: TextStyle(
+                                  fontSize: s, fontWeight: FontWeight.w500),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    mydiv2,
+                    Card(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15.0)),
+                      elevation: 15.0,
+                      // color: Color(0xfbbE6E6FA),
+                      child: Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              ' •	Secure : ',
+                              style: TextStyle(
+                                  fontSize: k,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.blue[900],
+                                  fontFamily: 'Acme'),
+                            ),
+                            Text(
+                              "Java is a secure language. It enables to develop tamper-free and virus-free systems. It doesn’t support pointer for the memory. ",
+                              style: TextStyle(
+                                  fontSize: s, fontWeight: FontWeight.w500),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    mydiv2,
+                    Card(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15.0)),
+                      elevation: 15.0,
+                      // color: Color(0xfbbE6E6FA),
+                      child: Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              '•	OOP\'s : ',
+                              style: TextStyle(
+                                  fontSize: k,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.blue[900],
+                                  fontFamily: 'Acme'),
+                            ),
+                            Text(
+                              "Like C++, java too supports OOPs concept which represents an instance of a class like inheritance, abstraction, polymorphism, encapsulation.",
                               style: TextStyle(
                                   fontSize: s, fontWeight: FontWeight.w500),
                             ),
@@ -166,7 +253,7 @@ class Cplusdisadv extends StatelessWidget {
             top: displayHeight(context) * 0.12,
             child: Center(
               child: Text(
-                "Disadvantages",
+                "Advantages",
                 style: TextStyle(
                   fontFamily: "PatuaOne",
                   fontSize: displayWidth(context) * 0.09,
