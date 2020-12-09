@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
 import 'package:provider/provider.dart';
 import 'package:CP_App/Providers/ProblemCards/cardlist.dart';
-import 'package:CP_App/Providers/ProblemSection/fundlist.dart';
 
 class Page3 extends StatefulWidget {
   @override
