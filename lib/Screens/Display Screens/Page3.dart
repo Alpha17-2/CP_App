@@ -56,6 +56,7 @@ class _Page3State extends State<Page3> {
           color: Colors.white,
         ),
         child: Column(
+          //
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
