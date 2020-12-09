@@ -8,7 +8,7 @@ class singleCard extends ChangeNotifier {
   void ontouch() {
     isSelected = !isSelected;
     if (isSelected) {
-      mycolor = Color(0xfbbe4169e1);
+      mycolor = Colors.red[200];
     }
 
     notifyListeners();

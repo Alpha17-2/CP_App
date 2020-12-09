@@ -8,9 +8,10 @@ class fundamental extends ChangeNotifier {
       codelink: "https//:www.google.com",
       input: "1",
       output: "2",
-      problem: "You just need to print 2 if input is 1",
+      problem:
+          "A permutation of integers 1,2,…,n is called beautiful if there are no adjacent elements whose difference is 1. Given n, construct a beautiful permutation if such a permutation exists.",
       constraints: "1 <= n <= 5",
-      difficulty: "Easy",
+      difficulty: "e",
       explaination: "Just print it.",
       prereq: "None",
     ),
@@ -21,7 +22,7 @@ class fundamental extends ChangeNotifier {
       output: "2",
       problem: "You just need to print 2 if input is 1",
       constraints: "1 <= n <= 5",
-      difficulty: "Easy",
+      difficulty: "h",
       explaination: "Just print it.",
       prereq: "None",
     )
