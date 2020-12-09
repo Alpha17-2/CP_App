@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
 import 'package:provider/provider.dart';
 import 'package:CP_App/Providers/ProblemCards/cardlist.dart';
+import 'package:CP_App/Providers/ProblemSection/fundlist.dart';
 
 class Page3 extends StatefulWidget {
   @override
@@ -22,7 +23,16 @@ class _Page3State extends State<Page3> {
       ),
     );
     final plist = Provider.of<cardlist>(context).list;
-
+    final fundamentallist = Provider.of<fundamental>(context).mylist;
+    var listtoshow = fundamentallist;
+    final problemtitlestyle = TextStyle(
+        fontSize: displayWidth(context) * 0.04, fontWeight: FontWeight.w600);
+    final div2 = Opacity(
+      opacity: 0.0,
+      child: Divider(
+        height: displayHeight(context) * 0.02,
+      ),
+    );
     Widget _showCard(int index) {
       return GestureDetector(
         onTap: () {
@@ -57,6 +67,50 @@ class _Page3State extends State<Page3> {
                     style: myStyle,
                   ),
                 ),
+              ),
+            ),
+          ),
+        ),
+      );
+    }
+
+    Widget _showProblem(int index) {
+      return Card(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+        elevation: 15.0,
+        child: Container(
+          height: displayHeight(context) * 0.55,
+          width: displayWidth(context) * 0.9,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(15),
+          ),
+          child: Padding(
+            padding: const EdgeInsets.only(
+                top: 16.0, bottom: 16.0, left: 8.0, right: 8.0),
+            child: SingleChildScrollView(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Center(
+                    child: Text(
+                      listtoshow[index].title,
+                      style: problemtitlestyle,
+                    ),
+                  ),
+                  div2,
+                  Text(
+                    "Problem Statement :",
+                    style: TextStyle(fontSize: displayWidth(context) * 0.038),
+                  ),
+                  div,
+                  Text(
+                    listtoshow[index].problem,
+                    style: TextStyle(
+                        fontSize: displayWidth(context) * 0.035,
+                        fontWeight: FontWeight.w400),
+                  )
+                ],
               ),
             ),
           ),
@@ -105,6 +159,23 @@ class _Page3State extends State<Page3> {
               ),
             ),
           ),
+          Positioned(
+            top: displayHeight(context) * 0.28,
+            //left: displayWidth(context) * 0.04,
+            //right: displayWidth(context) * 0.04,
+            child: Container(
+              height: displayHeight(context) * 0.58,
+              width: displayWidth(context) * 0.92,
+              // color: Colors.red,
+              child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (BuildContext context, int index) {
+                  return _showProblem(index);
+                },
+                itemCount: listtoshow.length,
+              ),
+            ),
+          )
         ],
       ),
     );

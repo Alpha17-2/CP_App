@@ -21,6 +21,7 @@ import 'Providers/Quiz/BinaryTreeQuizList.dart';
 import 'Providers/Quiz/GraphQuizList.dart';
 import 'Providers/Quiz/SearchingQuizList.dart';
 import 'Providers/ProblemCards/cardlist.dart';
+import 'Providers/ProblemSection/fundlist.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -34,6 +35,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
+        ChangeNotifierProvider(
+          create: (context) => fundamental(),
+        ),
         ChangeNotifierProvider(
           create: (context) => cardlist(),
         ),
