@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
 import 'package:provider/provider.dart';
 import 'package:CP_App/Providers/ProblemCards/cardlist.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Page3 extends StatefulWidget {
   @override
@@ -40,6 +41,76 @@ class _Page3State extends State<Page3> {
       ),
     );
     Widget _showProblem(BuildContext context, DocumentSnapshot doc) {
+      Future<void> _linkopen(String url) async {
+        if (await canLaunch(url)) {
+          await launch(url, forceWebView: false, forceSafariVC: false);
+        } else {
+          throw 'Could not launch';
+        }
+      }
+
+      void showInSnackBar(String value) {
+        Scaffold.of(context)
+            .showSnackBar(new SnackBar(content: new Text(value)));
+      }
+
+      void explanationsPopup() {
+        showModalBottomSheet(
+            context: context,
+            builder: (b) {
+              return Container(
+                  height: displayHeight(context) * 0.3,
+                  width: displayWidth(context),
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: [
+                        Color(0xfbb83a4d4),
+                        Color(0xfbbb6fbff),
+                      ],
+                    ),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 12.0),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Text(
+                          "Explanatation",
+                          style: myStyle,
+                        ),
+                        div3,
+                        div3,
+                        Container(
+                          height: displayHeight(context) * 0.22,
+                          width: displayWidth(context) * 0.9,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15),
+                            color: Colors.white,
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: SingleChildScrollView(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(doc['exp'],
+                                      style: TextStyle(
+                                          fontSize:
+                                              displayWidth(context) * 0.035,
+                                          fontWeight: FontWeight.w400)),
+                                ],
+                              ),
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                  ));
+            });
+      }
+
       Color c;
       if (doc['d'] == "e")
         c = Colors.green[800];
@@ -72,7 +143,7 @@ class _Page3State extends State<Page3> {
               ),
             ),
             Container(
-              height: displayHeight(context) * 0.4,
+              height: displayHeight(context) * 0.35,
               width: displayWidth(context),
               child: Padding(
                 padding: const EdgeInsets.only(left: 12.0, right: 12.0),
@@ -156,7 +227,9 @@ class _Page3State extends State<Page3> {
               children: [
                 FlatButton.icon(
                     //color: Colors.blue[300],
-                    onPressed: () {},
+                    onPressed: () {
+                      explanationsPopup();
+                    },
                     icon: Icon(
                       Icons.app_registration,
                       size: 15,
@@ -170,7 +243,9 @@ class _Page3State extends State<Page3> {
                     )),
                 FlatButton.icon(
                     // color: Colors.purple[300],
-                    onPressed: () {},
+                    onPressed: () {
+                      showInSnackBar(doc['pre']);
+                    },
                     icon: Icon(
                       Icons.account_tree,
                       size: 15,
@@ -185,7 +260,7 @@ class _Page3State extends State<Page3> {
 
                     // color: Colors.red[300],
                     onPressed: () {
-                      return null;
+                      return _linkopen(doc['link']);
                     },
                     icon: Icon(
                       Icons.screen_search_desktop,
@@ -298,7 +373,7 @@ class _Page3State extends State<Page3> {
             left: displayWidth(context) * 0.04,
             right: displayWidth(context) * 0.04,
             child: Container(
-              height: displayHeight(context) * 0.6,
+              height: displayHeight(context) * 0.5,
               width: displayWidth(context),
               //color: Colors.red,
               child: StreamBuilder(

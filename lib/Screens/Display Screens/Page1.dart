@@ -789,7 +789,10 @@ class _Page1State extends State<Page1> {
                 // decoration: BoxDecoration(),
                 child: StreamBuilder(
                   builder: (context, snapshot) {
-                    if (!snapshot.hasData) return null;
+                    if (!snapshot.hasData)
+                      return CircularProgressIndicator(
+                        backgroundColor: Colors.blue,
+                      );
                     return Padding(
                       padding: const EdgeInsets.only(left: 12.0),
                       child: ListView.builder(
