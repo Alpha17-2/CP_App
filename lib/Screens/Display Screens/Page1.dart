@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
 import 'package:CP_App/Screens/General Screen/languages.dart';
 import 'package:CP_App/Screens/General Screen/whatiscp.dart';
-import 'package:CP_App/Screens/Detail Screen/BASICDS/BasicDS.dart';
+
 import 'package:CP_App/Screens/General Screen/Computational.dart';
 import 'package:CP_App/Screens/Detail Screen/DS/dshome.dart';
 import 'package:intl/intl.dart';
