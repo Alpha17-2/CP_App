@@ -5,7 +5,7 @@ import 'package:CP_App/Screens/General Screen/languages.dart';
 import 'package:CP_App/Screens/General Screen/whatiscp.dart';
 import 'package:CP_App/Screens/Detail Screen/BASICDS/BasicDS.dart';
 import 'package:CP_App/Screens/General Screen/Computational.dart';
-
+import 'package:CP_App/Screens/Detail Screen/DS/dshome.dart';
 import 'package:intl/intl.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -567,7 +567,7 @@ class _Page1State extends State<Page1> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => Basicds()));
+                                  builder: (context) => dshome()));
                         },
                         child: Card(
                           // Card 4 => Data Structures
