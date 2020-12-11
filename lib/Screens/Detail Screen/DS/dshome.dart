@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
+import 'classific.dart';
+import 'DS_Advantages.dart';
+import 'DS_Operations.dart';
 
 class dshome extends StatelessWidget {
   @override
@@ -21,25 +24,25 @@ class dshome extends StatelessWidget {
             constraints: BoxConstraints.expand(),
           ),
           Positioned(
-            top: displayHeight(context) * 0.4,
+            top: displayHeight(context) * 0.38,
             child: Container(
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.only(topLeft: Radius.circular(40)),
               ),
-              height: displayHeight(context) * 0.6,
+              height: displayHeight(context) * 0.62,
               width: displayWidth(context),
               child: Stack(
                 alignment: Alignment.center,
                 children: [
                   Positioned(
-                    top: displayHeight(context) * 0.05,
-                    left: displayWidth(context) * 0.15,
+                    top: displayHeight(context) * 0.025,
+                    left: displayWidth(context) * 0.04,
                     child: Card(
                       elevation: 10.0,
                       child: Container(
-                        height: displayHeight(context) * 0.11,
-                        width: displayWidth(context) * 0.19,
+                        height: displayHeight(context) * 0.1,
+                        width: displayWidth(context) * 0.16,
                         //color: Colors.white,
                         decoration: BoxDecoration(
                             image: DecorationImage(
@@ -49,35 +52,37 @@ class dshome extends StatelessWidget {
                     ),
                   ),
                   Positioned(
-                    top: displayHeight(context) * 0.086,
-                    left: displayWidth(context) * 0.34,
+                    top: displayHeight(context) * 0.07,
+                    left: displayWidth(context) * 0.2,
                     child: Card(
                       elevation: 3.0,
                       child: Container(
-                          height: displayHeight(context) * 0.07,
-                          width: displayWidth(context) * 0.4,
+                          height: displayHeight(context) * 0.055,
+                          width: displayWidth(context) * 0.35,
                           color: Colors.white,
                           child: Center(
                             child: Text("Advantages",
                                 style: TextStyle(
                                     fontFamily: "PatuaOne",
-                                    fontSize: displayWidth(context) * 0.045)),
+                                    fontSize: displayWidth(context) * 0.04)),
                           )),
                     ),
                   ),
                   Positioned(
-                      top: displayHeight(context) * 0.14235,
-                      left: displayWidth(context) * 0.45,
+                      top: displayHeight(context) * 0.12,
+                      left: displayWidth(context) * 0.31,
                       child: GestureDetector(
                         onTap: () {
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: (context) => null));
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => ds_adv()));
                         },
                         child: Card(
                           elevation: 20.0,
                           child: Container(
-                              height: displayHeight(context) * 0.05,
-                              width: displayWidth(context) * 0.14,
+                              height: displayHeight(context) * 0.0375,
+                              width: displayWidth(context) * 0.125,
                               color: Colors.orange[300],
                               child: Center(
                                   child: Text(">",
@@ -90,15 +95,14 @@ class dshome extends StatelessWidget {
                       )),
 
                   // End of Card 1 ;
-
                   Positioned(
-                    top: displayHeight(context) * 0.21,
-                    left: displayWidth(context) * 0.15,
+                    top: displayHeight(context) * 0.175,
+                    left: displayWidth(context) * 0.45,
                     child: Card(
                       elevation: 10.0,
                       child: Container(
-                        height: displayHeight(context) * 0.11,
-                        width: displayWidth(context) * 0.19,
+                        height: displayHeight(context) * 0.1,
+                        width: displayWidth(context) * 0.16,
                         //color: Colors.white,
                         decoration: BoxDecoration(
                             image: DecorationImage(
@@ -108,55 +112,55 @@ class dshome extends StatelessWidget {
                     ),
                   ),
                   Positioned(
-                    top: displayHeight(context) * 0.248,
-                    left: displayWidth(context) * 0.34,
+                    top: displayHeight(context) * (0.275 - 0.055),
+                    left: displayWidth(context) * 0.61,
                     child: Card(
                       elevation: 3.0,
                       child: Container(
-                          height: displayHeight(context) * 0.07,
-                          width: displayWidth(context) * 0.4,
+                          height: displayHeight(context) * 0.055,
+                          width: displayWidth(context) * 0.35,
                           color: Colors.white,
                           child: Center(
                             child: Text("Operations",
                                 style: TextStyle(
                                     fontFamily: "PatuaOne",
-                                    fontSize: displayWidth(context) * 0.045)),
+                                    fontSize: displayWidth(context) * 0.04)),
                           )),
                     ),
                   ),
                   Positioned(
-                    top: displayHeight(context) * 0.306,
-                    left: displayWidth(context) * 0.45,
-                    child: GestureDetector(
-                      onTap: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => null));
-                      },
-                      child: Card(
-                        elevation: 20.0,
-                        child: Container(
-                            height: displayHeight(context) * 0.05,
-                            width: displayWidth(context) * 0.14,
-                            color: Colors.orange[300],
-                            child: Center(
-                                child: Text(">",
-                                    style: TextStyle(
-                                        //fontWeight: FontWeight.bold,
-                                        color: Colors.white,
-                                        fontSize:
-                                            displayWidth(context) * 0.065)))),
-                      ),
-                    ),
-                  ),
+                      top: displayHeight(context) * 0.271,
+                      left: displayWidth(context) * 0.72,
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => ds_op()));
+                        },
+                        child: Card(
+                          elevation: 20.0,
+                          child: Container(
+                              height: displayHeight(context) * 0.0375,
+                              width: displayWidth(context) * 0.125,
+                              color: Colors.orange[300],
+                              child: Center(
+                                  child: Text(">",
+                                      style: TextStyle(
+                                          //fontWeight: FontWeight.bold,
+                                          color: Colors.white,
+                                          fontSize:
+                                              displayWidth(context) * 0.065)))),
+                        ),
+                      )),
+
                   // End of Card 2;
                   Positioned(
-                    top: displayHeight(context) * 0.37,
-                    left: displayWidth(context) * 0.15,
+                    top: displayHeight(context) * 0.28,
+                    left: displayWidth(context) * 0.04,
                     child: Card(
                       elevation: 10.0,
                       child: Container(
-                        height: displayHeight(context) * 0.11,
-                        width: displayWidth(context) * 0.19,
+                        height: displayHeight(context) * 0.1,
+                        width: displayWidth(context) * 0.16,
                         //color: Colors.white,
                         decoration: BoxDecoration(
                             image: DecorationImage(
@@ -166,25 +170,25 @@ class dshome extends StatelessWidget {
                     ),
                   ),
                   Positioned(
-                    top: displayHeight(context) * 0.41,
-                    left: displayWidth(context) * 0.34,
+                    top: displayHeight(context) * 0.324,
+                    left: displayWidth(context) * 0.2,
                     child: Card(
                       elevation: 3.0,
                       child: Container(
-                          height: displayHeight(context) * 0.07,
-                          width: displayWidth(context) * 0.4,
+                          height: displayHeight(context) * 0.055,
+                          width: displayWidth(context) * 0.35,
                           color: Colors.white,
                           child: Center(
-                            child: Text("Classifications",
+                            child: Text("Classification",
                                 style: TextStyle(
                                     fontFamily: "PatuaOne",
-                                    fontSize: displayWidth(context) * 0.045)),
+                                    fontSize: displayWidth(context) * 0.04)),
                           )),
                     ),
                   ),
                   Positioned(
-                    top: displayHeight(context) * 0.4655,
-                    left: displayWidth(context) * 0.45,
+                    top: displayHeight(context) * 0.37,
+                    left: displayWidth(context) * 0.31,
                     child: GestureDetector(
                       onTap: () {
                         Navigator.push(context,
@@ -193,8 +197,8 @@ class dshome extends StatelessWidget {
                       child: Card(
                         elevation: 20.0,
                         child: Container(
-                            height: displayHeight(context) * 0.05,
-                            width: displayWidth(context) * 0.14,
+                            height: displayHeight(context) * 0.0375,
+                            width: displayWidth(context) * 0.125,
                             color: Colors.orange[300],
                             child: Center(
                                 child: Text(">",
@@ -206,6 +210,65 @@ class dshome extends StatelessWidget {
                       ),
                     ),
                   ),
+                  // End of Card 3
+                  Positioned(
+                    top: displayHeight(context) * 0.435,
+                    left: displayWidth(context) * 0.45,
+                    child: Card(
+                      elevation: 10.0,
+                      child: Container(
+                        height: displayHeight(context) * 0.1,
+                        width: displayWidth(context) * 0.16,
+                        //color: Colors.white,
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("images/op3.jpg"),
+                                fit: BoxFit.fill)),
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    top: displayHeight(context) * 0.48,
+                    left: displayWidth(context) * 0.61,
+                    child: Card(
+                      elevation: 3.0,
+                      child: Container(
+                          height: displayHeight(context) * 0.055,
+                          width: displayWidth(context) * 0.35,
+                          color: Colors.white,
+                          child: Center(
+                            child: Text("Implementation",
+                                style: TextStyle(
+                                    fontFamily: "PatuaOne",
+                                    fontSize: displayWidth(context) * 0.04)),
+                          )),
+                    ),
+                  ),
+                  Positioned(
+                      top: displayHeight(context) * 0.53,
+                      left: displayWidth(context) * 0.72,
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => null),
+                          );
+                        },
+                        child: Card(
+                          elevation: 20.0,
+                          child: Container(
+                              height: displayHeight(context) * 0.0375,
+                              width: displayWidth(context) * 0.125,
+                              color: Colors.orange[300],
+                              child: Center(
+                                  child: Text(">",
+                                      style: TextStyle(
+                                          //fontWeight: FontWeight.bold,
+                                          color: Colors.white,
+                                          fontSize:
+                                              displayWidth(context) * 0.065)))),
+                        ),
+                      )),
                 ],
               ),
             ),
@@ -220,12 +283,12 @@ class dshome extends StatelessWidget {
                 onPressed: () {
                   Navigator.pop(context);
                 }),
-            top: displayHeight(context) * 0.045,
+            top: displayHeight(context) * 0.055,
             left: displayWidth(context) * 0.02,
           ),
           Positioned(
-            left: displayWidth(context) * 0.2,
-            top: displayHeight(context) * 0.06,
+            left: displayWidth(context) * 0.17,
+            top: displayHeight(context) * 0.07,
             child: Text(
               "Data Structures",
               style: TextStyle(
@@ -235,7 +298,7 @@ class dshome extends StatelessWidget {
             ),
           ),
           Positioned(
-              top: displayHeight(context) * 0.135,
+              top: displayHeight(context) * 0.14,
               left: displayWidth(context) * 0.1,
               right: displayWidth(context) * 0.1,
               child: Card(
