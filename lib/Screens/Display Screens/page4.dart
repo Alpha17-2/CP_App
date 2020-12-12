@@ -1,26 +1,32 @@
 import 'package:CP_App/Providers/Quiz/SearchingQuizList.dart';
+import 'package:CP_App/Screens/Detail%20Screen/Quiz_PAGE/Array_quiz.dart';
+import 'package:CP_App/Screens/Detail%20Screen/Quiz_PAGE/BinaryTree_Quiz.dart';
+import 'package:CP_App/Screens/Detail%20Screen/Quiz_PAGE/C++_quiz.dart';
+import 'package:CP_App/Screens/Detail%20Screen/Quiz_PAGE/Cquiz/chome.dart';
+import 'package:CP_App/Screens/Detail%20Screen/Quiz_PAGE/Graph_quiz.dart';
+import 'package:CP_App/Screens/Detail%20Screen/Quiz_PAGE/Java_quiz.dart';
+import 'package:CP_App/Screens/Detail%20Screen/Quiz_PAGE/Linkedlist_quiz.dart';
+import 'package:CP_App/Screens/Detail%20Screen/Quiz_PAGE/Python_Quiz.dart';
+import 'package:CP_App/Screens/Detail%20Screen/Quiz_PAGE/Queue_quiz.dart';
+import 'package:CP_App/Screens/Detail%20Screen/Quiz_PAGE/Searching_Quiz.dart';
+import 'package:CP_App/Screens/Detail%20Screen/Quiz_PAGE/Sorting_quiz.dart';
+import 'package:CP_App/Screens/Detail%20Screen/Quiz_PAGE/Stack_quiz.dart';
 import 'package:CP_App/main.dart';
 import 'package:flutter/material.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
-import 'C_quiz.dart';
-import 'C++_quiz.dart';
-import 'Java_quiz.dart';
-import 'Python_Quiz.dart';
-import 'Array_quiz.dart';
-import 'Linkedlist_quiz.dart';
-import 'Queue_quiz.dart';
-import 'Sorting_quiz.dart';
-import 'Stack_quiz.dart';
-import 'Graph_quiz.dart';
-import 'BinaryTree_Quiz.dart';
-import 'Searching_Quiz.dart';
+import 'package:CP_App/Providers/Quiz/ArrayQuizList.dart';
+import 'package:CP_App/Providers/Quiz/LinkedListQuizList.dart';
+import 'package:CP_App/Providers/Quiz/JavaQuizList.dart';
+import 'package:CP_App/Providers/Quiz/GraphQuizList.dart';
+import 'package:CP_App/Providers/Quiz/C++QuizList.dart';
+import 'package:CP_App/Providers/Quiz/BinaryTreeQuizList.dart';
 
-class QuizHomePage extends StatefulWidget {
+class Page4 extends StatefulWidget {
   @override
-  _QuizHomePageState createState() => _QuizHomePageState();
+  _Page4State createState() => _Page4State();
 }
 
-class _QuizHomePageState extends State<QuizHomePage> {
+class _Page4State extends State<Page4> {
   @override
   Widget build(BuildContext context) {
     final double headingfont = displayWidth(context) * 0.064;
@@ -86,7 +92,7 @@ class _QuizHomePageState extends State<QuizHomePage> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => C_Quiz()));
+                                      builder: (context) => chome()));
                             },
                             child: Card(
                               shape: RoundedRectangleBorder(

@@ -9,7 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:CP_App/Screens/Display%20Screens/Splash.dart';
 import 'Providers/Quiz/C++QuizList.dart';
-import 'Providers/Quiz/CQuizList.dart';
+import 'Providers/Quiz/C/cl1list.dart';
 import 'Providers/Quiz/JavaQuizList.dart';
 import 'Providers/Quiz/PythonQuizList.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -35,57 +35,24 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(
-          create: (context) => fundamental(),
-        ),
-        ChangeNotifierProvider(
-          create: (context) => cardlist(),
-        ),
-        ChangeNotifierProvider(
-          create: (context) => SortQuizlist(),
-        ),
-        ChangeNotifierProvider(
-          create: (context) => SingleQuizQuestion(),
-        ),
-        ChangeNotifierProvider(
-          create: (context) => CquizList(),
-        ),
+        ChangeNotifierProvider(create: (context) => fundamental()),
+        ChangeNotifierProvider(create: (context) => cardlist()),
+        ChangeNotifierProvider(create: (context) => SortQuizlist()),
+        ChangeNotifierProvider(create: (context) => SingleQuizQuestion()),
+        ChangeNotifierProvider(create: (context) => level1()),
         ChangeNotifierProvider(create: (context) => TopicList()),
         ChangeNotifierProvider(create: (context) => PythonQuizlist()),
-        ChangeNotifierProvider(
-          create: (context) => CquizList(),
-        ),
-        ChangeNotifierProvider(
-          create: (context) => JavaQuizList(),
-        ),
-        ChangeNotifierProvider(
-          create: (context) => CplusQuizlist(),
-        ),
-        ChangeNotifierProvider(
-          create: (context) => ArrayQuizlist(),
-        ),
-        ChangeNotifierProvider(
-          create: (context) => StackQuizlist(),
-        ),
-        ChangeNotifierProvider(
-          create: (context) => LinkedListQuizlist(),
-        ),
-        ChangeNotifierProvider(
-          create: (context) => QueueQuizlist(),
-        ),
-        ChangeNotifierProvider(
-          create: (context) => BinaryTreeQuizlist(),
-        ),
-        ChangeNotifierProvider(
-          create: (context) => GraphQuizlist(),
-        ),
-        ChangeNotifierProvider(
-          create: (context) => SearchingQuizlist(),
-        ),
+        ChangeNotifierProvider(create: (context) => JavaQuizList()),
+        ChangeNotifierProvider(create: (context) => CplusQuizlist()),
+        ChangeNotifierProvider(create: (context) => ArrayQuizlist()),
+        ChangeNotifierProvider(create: (context) => StackQuizlist()),
+        ChangeNotifierProvider(create: (context) => LinkedListQuizlist()),
+        ChangeNotifierProvider(create: (context) => QueueQuizlist()),
+        ChangeNotifierProvider(create: (context) => BinaryTreeQuizlist()),
+        ChangeNotifierProvider(create: (context) => GraphQuizlist()),
+        ChangeNotifierProvider(create: (context) => SearchingQuizlist()),
         ChangeNotifierProvider(create: (context) => ContestList()),
-        ChangeNotifierProvider(
-          create: (context) => TrendingProblems(),
-        ),
+        ChangeNotifierProvider(create: (context) => TrendingProblems()),
       ],
       child: MaterialApp(
         theme: ThemeData(

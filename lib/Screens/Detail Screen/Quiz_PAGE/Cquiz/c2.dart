@@ -1,16 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
-import 'package:CP_App/Providers/Quiz/CQuizList.dart';
-import 'package:CP_App/Providers/Quiz/SingleQuestion.dart';
+import 'package:CP_App/Providers/Quiz/C/cl2list.dart';
+import 'package:provider/provider.dart';
 
-class C_Quiz extends StatefulWidget {
+class c2 extends StatefulWidget {
   @override
-  _C_QuizState createState() => _C_QuizState();
+  _c2State createState() => _c2State();
 }
 
-class _C_QuizState extends State<C_Quiz> {
-  @override
+class _c2State extends State<c2> {
   int i = 0;
   int correctanswer = 0;
   Color o = Colors.transparent;
@@ -21,11 +19,9 @@ class _C_QuizState extends State<C_Quiz> {
   Color currentColor3 = Colors.white;
   Color currentColor4 = Colors.white;
 
+  @override
   Widget build(BuildContext context) {
-    final mylist =
-        Provider.of<CquizList>(context, listen: true).ListOfCquestions;
-    // final myObject = Provider.of<SingleQuizQuestion>(context);
-
+    final mylist = Provider.of<level2>(context, listen: true).ListOfCquestions;
     void _correctAnswerBottomSheet(context) {
       showModalBottomSheet(
           context: context,
