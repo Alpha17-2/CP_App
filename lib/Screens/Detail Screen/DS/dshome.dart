@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
 import 'classific.dart';
+import 'DS_Implementation.dart';
 import 'DS_Advantages.dart';
 import 'DS_Operations.dart';
 
@@ -254,19 +255,27 @@ class dshome extends StatelessWidget {
                             MaterialPageRoute(builder: (context) => null),
                           );
                         },
-                        child: Card(
-                          elevation: 20.0,
-                          child: Container(
-                              height: displayHeight(context) * 0.0375,
-                              width: displayWidth(context) * 0.125,
-                              color: Colors.orange[300],
-                              child: Center(
-                                  child: Text(">",
-                                      style: TextStyle(
-                                          //fontWeight: FontWeight.bold,
-                                          color: Colors.white,
-                                          fontSize:
-                                              displayWidth(context) * 0.065)))),
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => ds_impl()));
+                          },
+                          child: Card(
+                            elevation: 20.0,
+                            child: Container(
+                                height: displayHeight(context) * 0.0375,
+                                width: displayWidth(context) * 0.125,
+                                color: Colors.orange[300],
+                                child: Center(
+                                    child: Text(">",
+                                        style: TextStyle(
+                                            //fontWeight: FontWeight.bold,
+                                            color: Colors.white,
+                                            fontSize: displayWidth(context) *
+                                                0.065)))),
+                          ),
                         ),
                       )),
                 ],

@@ -5,6 +5,7 @@ import 'Page1.dart';
 import 'Page2.dart';
 import 'Page3.dart';
 import 'page4.dart';
+import 'Page41.dart';
 
 class Home extends StatefulWidget {
   static const routename = '/Home';
@@ -18,7 +19,7 @@ class _HomeState extends State<Home> {
   final MyPages = [
     Page1(),
     Page2(),
-    Page4(),
+    page41(),
     Page3(),
   ];
   @override
