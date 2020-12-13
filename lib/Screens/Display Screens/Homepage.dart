@@ -4,8 +4,7 @@ import 'package:flutter/material.dart';
 import 'Page1.dart';
 import 'Page2.dart';
 import 'Page3.dart';
-import 'page4.dart';
-import 'Page41.dart';
+import 'Page4.dart';
 
 class Home extends StatefulWidget {
   static const routename = '/Home';
@@ -19,7 +18,7 @@ class _HomeState extends State<Home> {
   final MyPages = [
     Page1(),
     Page2(),
-    page41(),
+    Page4(),
     Page3(),
   ];
   @override

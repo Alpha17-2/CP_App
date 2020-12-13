@@ -150,7 +150,8 @@ flutter:
       - images/op3.jpg
       - images/op6.png
       - images/x3.png
-     
+      - images/sorting.png
+      - images/search.png
       - images/array.jpg
       - images/string.jpg
       - images/search.png
