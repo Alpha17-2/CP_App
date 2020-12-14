@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../SingleQuestion.dart';
 
-class level1 extends ChangeNotifier {
+class cl1list extends ChangeNotifier {
   List<SingleQuizQuestion> l1 = [
     SingleQuizQuestion(
       question: "Who is the founder of C Programming Language ?",

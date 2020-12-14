@@ -1,6 +1,8 @@
+import 'package:CP_App/Screens/Detail%20Screen/Quiz_PAGE/Cquiz/c2.dart';
+import 'package:CP_App/Screens/Detail%20Screen/Quiz_PAGE/Cquiz/c3.dart';
 import 'package:flutter/material.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
-import 'package:CP_App/Screens/Detail Screen/Quiz_PAGE/Cquiz/chome.dart';
+import 'package:CP_App/Screens/Detail Screen/Quiz_PAGE/Cquiz/c1.dart';
 
 class Page4 extends StatelessWidget {
   @override
@@ -17,6 +19,136 @@ class Page4 extends StatelessWidget {
         height: displayHeight(context) * 0.0195,
       ),
     );
+    void ShowPopUp(
+        BuildContext context, Widget easy, Widget medium, Widget hard) {
+      showModalBottomSheet(
+        context: (context),
+        builder: (builder) {
+          return Container(
+            height: displayHeight(context) * 0.25,
+            width: displayWidth(context),
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                colors: [
+                  Color(0xfbbd9a7c7),
+                  Color(0xfbbfffcdc),
+                ],
+                begin: Alignment.bottomLeft,
+                end: Alignment.topRight,
+              ),
+            ),
+            child: Stack(
+              alignment: Alignment.center,
+              children: [
+                Positioned(
+                  top: displayHeight(context) * 0.02,
+                  child: Text(
+                    "Choose Difficulty",
+                    style: TextStyle(
+                      fontSize: displayWidth(context) * 0.05,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ),
+                Positioned(
+                    top: displayHeight(context) * 0.1,
+                    left: displayWidth(context) * 0.08,
+                    child: Card(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8.0)),
+                      elevation: 15.0,
+                      child: Container(
+                        height: displayHeight(context) * 0.05,
+                        width: displayWidth(context) * 0.2,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(8.0),
+                          gradient: LinearGradient(
+                            colors: [
+                              Colors.green[200],
+                              Colors.green[300],
+                              Colors.green[400],
+                            ],
+                          ),
+                        ),
+                        child: Center(
+                          child: Text(
+                            "Easy",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.w600,
+                                fontSize: displayWidth(context) * 0.042),
+                          ),
+                        ),
+                      ),
+                    )),
+                Positioned(
+                    top: displayHeight(context) * 0.1,
+                    child: Card(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8.0)),
+                      elevation: 15.0,
+                      child: Container(
+                        height: displayHeight(context) * 0.05,
+                        width: displayWidth(context) * 0.2,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(8.0),
+                          gradient: LinearGradient(
+                            colors: [
+                              Colors.blue[300],
+                              Colors.blue[400],
+                              Colors.blue[500],
+                            ],
+                          ),
+                        ),
+                        child: Center(
+                          child: Text(
+                            "Medium",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.w600,
+                                fontSize: displayWidth(context) * 0.045),
+                          ),
+                        ),
+                      ),
+                    )),
+                Positioned(
+                    top: displayHeight(context) * 0.1,
+                    right: displayWidth(context) * 0.08,
+                    child: Card(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8.0)),
+                      elevation: 15.0,
+                      child: Container(
+                        height: displayHeight(context) * 0.05,
+                        width: displayWidth(context) * 0.2,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(8.0),
+                          gradient: LinearGradient(
+                            colors: [
+                              Colors.red[200],
+                              Colors.red[300],
+                              Colors.red[400],
+                            ],
+                          ),
+                        ),
+                        child: Center(
+                          child: Text(
+                            "Hard",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.w600,
+                                fontSize: displayWidth(context) * 0.042),
+                          ),
+                        ),
+                      ),
+                    )),
+              ],
+            ),
+          );
+        },
+      );
+    }
+
     return Scaffold(
       body: Stack(
         alignment: Alignment.center,
@@ -113,10 +245,7 @@ class Page4 extends StatelessWidget {
                                 ),
                                 GestureDetector(
                                   onTap: () {
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) => chome()));
+                                    ShowPopUp(context, c1(), c2(), c3());
                                   },
                                   child: Card(
                                     child: Container(

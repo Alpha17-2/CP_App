@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
-import 'package:CP_App/Providers/Quiz/C/cl1list.dart';
+import 'package:provider/provider.dart';
+import 'package:CP_App/Providers/Quiz/tree/t2.dart';
 
-class c1 extends StatefulWidget {
+class mediumbt extends StatefulWidget {
   @override
-  _c1State createState() => _c1State();
+  _mediumbtState createState() => _mediumbtState();
 }
 
-class _c1State extends State<c1> {
+class _mediumbtState extends State<mediumbt> {
   @override
   int i = 0;
   int correctanswer = 0;
@@ -21,9 +21,8 @@ class _c1State extends State<c1> {
   Color currentColor4 = Colors.white;
 
   Widget build(BuildContext context) {
-    final mylist = Provider.of<cl1list>(context, listen: true).ListOfCquestions;
-    // final myObject = Provider.of<SingleQuizQuestion>(context);
-
+    final mylist =
+        Provider.of<t2>(context, listen: true).ListOfBinarytreequestions;
     void _correctAnswerBottomSheet(context) {
       showModalBottomSheet(
           context: context,
@@ -179,7 +178,7 @@ class _c1State extends State<c1> {
 
     Widget MyQuizPage() {
       return Hero(
-          tag: "Cquiz",
+          tag: "Binarytreequiz",
           child: Scaffold(
             body: Stack(
               alignment: Alignment.center,
@@ -211,7 +210,7 @@ class _c1State extends State<c1> {
                         ),
                         Center(
                           child: Text(
-                            "C QUIZ",
+                            "Binarytree QUIZ",
                             style: TextStyle(
                                 letterSpacing: 0.95,
                                 fontFamily: "BreeSerif",

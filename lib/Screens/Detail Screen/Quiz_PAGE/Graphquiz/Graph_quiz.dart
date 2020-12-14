@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
-import 'package:CP_App/Providers/Quiz/C/cl1list.dart';
+import 'package:provider/provider.dart';
 
-class c1 extends StatefulWidget {
+class Graph_Quiz extends StatefulWidget {
   @override
-  _c1State createState() => _c1State();
+  _Graph_QuizState createState() => _Graph_QuizState();
 }
 
-class _c1State extends State<c1> {
+class _Graph_QuizState extends State<Graph_Quiz> {
   @override
   int i = 0;
   int correctanswer = 0;
@@ -21,8 +20,8 @@ class _c1State extends State<c1> {
   Color currentColor4 = Colors.white;
 
   Widget build(BuildContext context) {
-    final mylist = Provider.of<cl1list>(context, listen: true).ListOfCquestions;
-    // final myObject = Provider.of<SingleQuizQuestion>(context);
+    final mylist =
+        Provider.of<GraphQuizlist>(context, listen: true).ListOfGraphquestions;
 
     void _correctAnswerBottomSheet(context) {
       showModalBottomSheet(
@@ -179,7 +178,7 @@ class _c1State extends State<c1> {
 
     Widget MyQuizPage() {
       return Hero(
-          tag: "Cquiz",
+          tag: "graphquiz",
           child: Scaffold(
             body: Stack(
               alignment: Alignment.center,
@@ -211,7 +210,7 @@ class _c1State extends State<c1> {
                         ),
                         Center(
                           child: Text(
-                            "C QUIZ",
+                            "Graph QUIZ",
                             style: TextStyle(
                                 letterSpacing: 0.95,
                                 fontFamily: "BreeSerif",
