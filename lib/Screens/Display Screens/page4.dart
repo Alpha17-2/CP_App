@@ -785,14 +785,20 @@ class Page4 extends StatelessWidget {
                                       fontWeight: FontWeight.w600,
                                       fontSize: displayWidth(context) * 0.05),
                                 ),
-                                Card(
-                                  child: Container(
-                                    height: displayHeight(context) * 0.05,
-                                    width: displayWidth(context) * 0.13,
-                                    child: Center(
-                                      child: Icon(
-                                        Icons.arrow_forward_ios,
-                                        color: Colors.black,
+                                GestureDetector(
+                                  onTap: () {
+                                    ShowPopUp(context, easyll(), mediumll(),
+                                        hardll());
+                                  },
+                                  child: Card(
+                                    child: Container(
+                                      height: displayHeight(context) * 0.05,
+                                      width: displayWidth(context) * 0.13,
+                                      child: Center(
+                                        child: Icon(
+                                          Icons.arrow_forward_ios,
+                                          color: Colors.black,
+                                        ),
                                       ),
                                     ),
                                   ),
@@ -847,14 +853,20 @@ class Page4 extends StatelessWidget {
                                       fontWeight: FontWeight.w600,
                                       fontSize: displayWidth(context) * 0.05),
                                 ),
-                                Card(
-                                  child: Container(
-                                    height: displayHeight(context) * 0.05,
-                                    width: displayWidth(context) * 0.13,
-                                    child: Center(
-                                      child: Icon(
-                                        Icons.arrow_forward_ios,
-                                        color: Colors.black,
+                                GestureDetector(
+                                  onTap: () {
+                                    ShowPopUp(context, easybt(), mediumbt(),
+                                        hardbt());
+                                  },
+                                  child: Card(
+                                    child: Container(
+                                      height: displayHeight(context) * 0.05,
+                                      width: displayWidth(context) * 0.13,
+                                      child: Center(
+                                        child: Icon(
+                                          Icons.arrow_forward_ios,
+                                          color: Colors.black,
+                                        ),
                                       ),
                                     ),
                                   ),
@@ -909,14 +921,20 @@ class Page4 extends StatelessWidget {
                                       fontWeight: FontWeight.w600,
                                       fontSize: displayWidth(context) * 0.05),
                                 ),
-                                Card(
-                                  child: Container(
-                                    height: displayHeight(context) * 0.05,
-                                    width: displayWidth(context) * 0.13,
-                                    child: Center(
-                                      child: Icon(
-                                        Icons.arrow_forward_ios,
-                                        color: Colors.black,
+                                GestureDetector(
+                                  onTap: () {
+                                    ShowPopUp(context, easygraph(),
+                                        mediumgraph(), hardgraph());
+                                  },
+                                  child: Card(
+                                    child: Container(
+                                      height: displayHeight(context) * 0.05,
+                                      width: displayWidth(context) * 0.13,
+                                      child: Center(
+                                        child: Icon(
+                                          Icons.arrow_forward_ios,
+                                          color: Colors.black,
+                                        ),
                                       ),
                                     ),
                                   ),
@@ -986,14 +1004,20 @@ class Page4 extends StatelessWidget {
                                       fontWeight: FontWeight.w600,
                                       fontSize: displayWidth(context) * 0.05),
                                 ),
-                                Card(
-                                  child: Container(
-                                    height: displayHeight(context) * 0.05,
-                                    width: displayWidth(context) * 0.13,
-                                    child: Center(
-                                      child: Icon(
-                                        Icons.arrow_forward_ios,
-                                        color: Colors.black,
+                                GestureDetector(
+                                  onTap: () {
+                                    ShowPopUp(context, easysort(), mediumsort(),
+                                        hardsort());
+                                  },
+                                  child: Card(
+                                    child: Container(
+                                      height: displayHeight(context) * 0.05,
+                                      width: displayWidth(context) * 0.13,
+                                      child: Center(
+                                        child: Icon(
+                                          Icons.arrow_forward_ios,
+                                          color: Colors.black,
+                                        ),
                                       ),
                                     ),
                                   ),
@@ -1048,14 +1072,20 @@ class Page4 extends StatelessWidget {
                                       fontWeight: FontWeight.w600,
                                       fontSize: displayWidth(context) * 0.05),
                                 ),
-                                Card(
-                                  child: Container(
-                                    height: displayHeight(context) * 0.05,
-                                    width: displayWidth(context) * 0.13,
-                                    child: Center(
-                                      child: Icon(
-                                        Icons.arrow_forward_ios,
-                                        color: Colors.black,
+                                GestureDetector(
+                                  onTap: () {
+                                    ShowPopUp(context, easyse(), mediumse(),
+                                        hardse());
+                                  },
+                                  child: Card(
+                                    child: Container(
+                                      height: displayHeight(context) * 0.05,
+                                      width: displayWidth(context) * 0.13,
+                                      child: Center(
+                                        child: Icon(
+                                          Icons.arrow_forward_ios,
+                                          color: Colors.black,
+                                        ),
                                       ),
                                     ),
                                   ),
