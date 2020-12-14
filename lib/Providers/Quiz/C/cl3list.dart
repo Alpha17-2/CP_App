@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import '../SingleQuestion.dart';
 
-class level3 extends ChangeNotifier {
-  List<SingleQuizQuestion> l3 = [
+class c3 extends ChangeNotifier {
+  List<SingleQuizQuestion> cl3 = [
     SingleQuizQuestion(
       question:
           "If integer needs two bytes of storage,then maximum value of an unsigned integer is ?",
@@ -62,6 +62,6 @@ class level3 extends ChangeNotifier {
   ];
 
   List<SingleQuizQuestion> get ListOfCquestions {
-    return [...l3];
+    return [...cl3];
   }
 }

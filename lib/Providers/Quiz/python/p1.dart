@@ -4,7 +4,7 @@ import '../SingleQuestion.dart';
 class p1 extends ChangeNotifier {
   List<SingleQuizQuestion> pl1 = [
     SingleQuizQuestion(
-      question: "Which of the following is not a keyword?",
+      question: "Which of the following is not a keyword ?",
       option1: "eval",
       option2: "assert",
       option3: "pass",
@@ -12,7 +12,7 @@ class p1 extends ChangeNotifier {
       correct: "eval",
     ),
     SingleQuizQuestion(
-      question: "Which is the correct operator for power(XY)?",
+      question: "Which is the correct operator for power(XY) ?",
       option1: "X^Y",
       option2: "X^^Y",
       option3: "X**Y",
@@ -30,7 +30,7 @@ class p1 extends ChangeNotifier {
     ),
     SingleQuizQuestion(
       question:
-          "To concatenate two strings to a third what statements are applicable?",
+          "To concatenate two strings to a third what statements are applicable ?",
       option1: "s3 = s1 . s2",
       option2: "s3 = s1.__add__(s2)",
       option3: "s3 = s1.add(s2)",
@@ -47,7 +47,7 @@ class p1 extends ChangeNotifier {
     ),
     SingleQuizQuestion(
       question:
-          "Suppose t = (1, 2, 4, 3), which of the following is incorrect?",
+          "Suppose t = (1, 2, 4, 3), which of the following is incorrect ?",
       option1: "print(t[3])",
       option2: "t[3] = 45",
       option3: "print(max(t))",

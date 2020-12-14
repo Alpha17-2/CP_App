@@ -1,35 +1,27 @@
 import 'package:flutter/material.dart';
-import 'package:CP_App/Helpers/DeviceSize.dart';
 import 'package:provider/provider.dart';
+import 'package:CP_App/Helpers/DeviceSize.dart';
 import 'package:CP_App/Providers/Quiz/C/cl3list.dart';
 
-class c3 extends StatefulWidget {
+class hardc extends StatefulWidget {
   @override
-  _c3State createState() => _c3State();
+  _hardcState createState() => _hardcState();
 }
 
-class _c3State extends State<c3> {
+class _hardcState extends State<hardc> {
   @override
   int i = 0;
-
   int correctanswer = 0;
-
   Color o = Colors.transparent;
-
   Color c = Colors.green;
-
   Color w = Colors.red;
-
   Color currentColor1 = Colors.white;
-
   Color currentColor2 = Colors.white;
-
   Color currentColor3 = Colors.white;
-
   Color currentColor4 = Colors.white;
 
   Widget build(BuildContext context) {
-    final mylist = Provider.of<level3>(context, listen: true).ListOfCquestions;
+    final mylist = Provider.of<c3>(context, listen: true).ListOfCquestions;
     // final myObject = Provider.of<SingleQuizQuestion>(context);
 
     void _correctAnswerBottomSheet(context) {

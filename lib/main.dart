@@ -1,10 +1,42 @@
-import 'package:CP_App/Providers/Contest_List.dart';
-import 'Providers/TrendingProblems.dart';
-import 'package:CP_App/Providers/topic_list.dart';
+import 'package:CP_App/Providers/Quiz/C++/C++1.dart';
+import 'package:CP_App/Providers/Quiz/C++/C++2.dart';
+import 'package:CP_App/Providers/Quiz/C++/C++3.dart';
+import 'package:CP_App/Providers/Quiz/C/cl1list.dart';
+import 'package:CP_App/Providers/Quiz/C/cl2list.dart';
+import 'package:CP_App/Providers/Quiz/C/cl3list.dart';
+import 'package:CP_App/Providers/Quiz/Graph/gr1.dart';
+import 'package:CP_App/Providers/Quiz/Graph/gr2.dart';
+import 'package:CP_App/Providers/Quiz/Graph/gr3.dart';
+import 'package:CP_App/Providers/Quiz/array/ar1.dart';
+import 'package:CP_App/Providers/Quiz/array/ar2.dart';
+import 'package:CP_App/Providers/Quiz/array/ar3.dart';
+import 'package:CP_App/Providers/Quiz/java/j1.dart';
+import 'package:CP_App/Providers/Quiz/java/j2.dart';
+import 'package:CP_App/Providers/Quiz/java/j3.dart';
+import 'package:CP_App/Providers/Quiz/linkedlist/ll1.dart';
+import 'package:CP_App/Providers/Quiz/linkedlist/ll2.dart';
+import 'package:CP_App/Providers/Quiz/linkedlist/ll3.dart';
+import 'package:CP_App/Providers/Quiz/Queue/q1.dart';
+import 'package:CP_App/Providers/Quiz/Queue/q2.dart';
+import 'package:CP_App/Providers/Quiz/Queue/q3.dart';
+import 'package:CP_App/Providers/Quiz/Searching/se1.dart';
+import 'package:CP_App/Providers/Quiz/Searching/se2.dart';
+import 'package:CP_App/Providers/Quiz/Searching/se3.dart';
+import 'package:CP_App/Providers/Quiz/Sorting/srt1.dart';
+import 'package:CP_App/Providers/Quiz/Sorting/srt2.dart';
+import 'package:CP_App/Providers/Quiz/Sorting/srt3.dart';
+import 'package:CP_App/Providers/Quiz/Stack/st1.dart';
+import 'package:CP_App/Providers/Quiz/Stack/st2.dart';
+import 'package:CP_App/Providers/Quiz/Stack/st3.dart';
+import 'package:CP_App/Providers/Quiz/Tree/t1.dart';
+import 'package:CP_App/Providers/Quiz/Tree/t2.dart';
+import 'package:CP_App/Providers/Quiz/Tree/t3.dart';
+import 'package:CP_App/Providers/Quiz/python/p1.dart';
+import 'package:CP_App/Providers/Quiz/python/p2.dart';
+import 'package:CP_App/Providers/Quiz/python/p3.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:CP_App/Screens/Display%20Screens/Splash.dart';
-import 'Providers/Quiz/C/cl1list.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'Providers/ProblemCards/cardlist.dart';
 import 'Providers/ProblemSection/fundlist.dart';
@@ -23,6 +55,48 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(create: (context) => fundamental()),
         ChangeNotifierProvider(create: (context) => cardlist()),
+        ChangeNotifierProvider(create: (context) => srt1()),
+        ChangeNotifierProvider(create: (context) => srt2()),
+        ChangeNotifierProvider(create: (context) => srt3()),
+        ChangeNotifierProvider(create: (context) => se1()),
+        ChangeNotifierProvider(create: (context) => se2()),
+        ChangeNotifierProvider(create: (context) => se3()),
+        ChangeNotifierProvider(create: (context) => cplus1()),
+        ChangeNotifierProvider(create: (context) => cplus2()),
+        ChangeNotifierProvider(create: (context) => cplus3()),
+        ChangeNotifierProvider(create: (context) => j1()),
+        ChangeNotifierProvider(create: (context) => j2()),
+        ChangeNotifierProvider(create: (context) => j3()),
+        ChangeNotifierProvider(create: (context) => p1()),
+        ChangeNotifierProvider(create: (context) => p2()),
+        ChangeNotifierProvider(create: (context) => p3()),
+        ChangeNotifierProvider(create: (context) => st1()),
+        ChangeNotifierProvider(create: (context) => st2()),
+        ChangeNotifierProvider(create: (context) => st3()),
+        ChangeNotifierProvider(create: (context) => q1()),
+        ChangeNotifierProvider(create: (context) => q2()),
+        ChangeNotifierProvider(create: (context) => q3()),
+        ChangeNotifierProvider(
+          create: (context) => ar1(),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => ar2(),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => ar3(),
+        ),
+        ChangeNotifierProvider(create: (context) => ll1()),
+        ChangeNotifierProvider(create: (context) => ll2()),
+        ChangeNotifierProvider(create: (context) => ll3()),
+        ChangeNotifierProvider(create: (context) => t1()),
+        ChangeNotifierProvider(create: (context) => t2()),
+        ChangeNotifierProvider(create: (context) => t3()),
+        ChangeNotifierProvider(create: (context) => gr1()),
+        ChangeNotifierProvider(create: (context) => gr2()),
+        ChangeNotifierProvider(create: (context) => gr3()),
+        ChangeNotifierProvider(create: (context) => c1()),
+        ChangeNotifierProvider(create: (context) => c2()),
+        ChangeNotifierProvider(create: (context) => c3()),
       ],
       child: MaterialApp(
         theme: ThemeData(

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import '../SingleQuestion.dart';
 
-class cl1list extends ChangeNotifier {
-  List<SingleQuizQuestion> l1 = [
+class c1 extends ChangeNotifier {
+  List<SingleQuizQuestion> cl1 = [
     SingleQuizQuestion(
       question: "Who is the founder of C Programming Language ?",
       option1: "James A Gosling",
@@ -69,6 +69,6 @@ class cl1list extends ChangeNotifier {
     ),
   ];
   List<SingleQuizQuestion> get ListOfCquestions {
-    return [...l1];
+    return [...cl1];
   }
 }

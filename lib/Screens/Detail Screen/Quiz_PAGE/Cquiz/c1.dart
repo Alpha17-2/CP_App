@@ -3,12 +3,12 @@ import 'package:provider/provider.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
 import 'package:CP_App/Providers/Quiz/C/cl1list.dart';
 
-class c1 extends StatefulWidget {
+class easyc extends StatefulWidget {
   @override
-  _c1State createState() => _c1State();
+  _easycState createState() => _easycState();
 }
 
-class _c1State extends State<c1> {
+class _easycState extends State<easyc> {
   @override
   int i = 0;
   int correctanswer = 0;
@@ -21,7 +21,7 @@ class _c1State extends State<c1> {
   Color currentColor4 = Colors.white;
 
   Widget build(BuildContext context) {
-    final mylist = Provider.of<cl1list>(context, listen: true).ListOfCquestions;
+    final mylist = Provider.of<c1>(context, listen: true).ListOfCquestions;
     // final myObject = Provider.of<SingleQuizQuestion>(context);
 
     void _correctAnswerBottomSheet(context) {

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import '../SingleQuestion.dart';
 
-class level2 extends ChangeNotifier {
-  List<SingleQuizQuestion> l2 = [
+class c2 extends ChangeNotifier {
+  List<SingleQuizQuestion> cl2 = [
     SingleQuizQuestion(
       question:
           "If x is an array of integer,then the value of &x[i] is same as.?",
@@ -71,6 +71,6 @@ class level2 extends ChangeNotifier {
     ),
   ];
   List<SingleQuizQuestion> get ListOfCquestions {
-    return [...l2];
+    return [...cl2];
   }
 }
