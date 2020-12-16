@@ -39,7 +39,6 @@ import 'package:provider/provider.dart';
 import 'package:CP_App/Screens/Display%20Screens/Splash.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'Providers/ProblemCards/cardlist.dart';
-import 'Providers/ProblemSection/fundlist.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -53,7 +52,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (context) => fundamental()),
         ChangeNotifierProvider(create: (context) => cardlist()),
         ChangeNotifierProvider(create: (context) => ll1()),
         ChangeNotifierProvider(create: (context) => ll2()),

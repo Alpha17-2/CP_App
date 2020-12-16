@@ -40,7 +40,7 @@ class ds_impl extends StatelessWidget {
               onPressed: () {
                 Navigator.pop(context);
               }),
-          top: displayHeight(context) * 0.02,
+          top: displayHeight(context) * 0.035,
           left: displayWidth(context) * 0.01,
         ),
         /* Positioned(
@@ -62,7 +62,7 @@ class ds_impl extends StatelessWidget {
               color: Colors.red,
             )),*/
         Positioned(
-          top: displayHeight(context) * 0.045,
+          top: displayHeight(context) * 0.05,
           left: displayWidth(context) * 0.2,
           child: Center(
               child: Text("Non Primitive Data Structure",
@@ -179,7 +179,7 @@ class ds_impl extends StatelessWidget {
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(
-                    "images/stack2.png",
+                    "images/stack.png",
                   ),
                   fit: BoxFit.fill,
                 ),

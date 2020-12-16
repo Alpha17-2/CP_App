@@ -54,6 +54,18 @@ class _Page3State extends State<Page3> {
             .showSnackBar(new SnackBar(content: new Text(value)));
       }
 
+      var input = doc['i'];
+      var output = doc['o'];
+      List<String> receiveInput = [];
+      List<String> receiveOutput = [];
+
+      for (int i = 0; i < input.length; ++i) {
+        receiveInput.insert(i, input[i]);
+      }
+
+      for (int i = 0; i < output.length; ++i) {
+        receiveOutput.insert(i, output[i]);
+      }
       void explanationsPopup() {
         showModalBottomSheet(
             context: context,
@@ -88,23 +100,26 @@ class _Page3State extends State<Page3> {
                             borderRadius: BorderRadius.circular(15),
                             color: Colors.white,
                           ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: SingleChildScrollView(
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(doc['exp'],
-                                      style: TextStyle(
-                                          fontSize:
-                                              displayWidth(context) * 0.035,
-                                          fontWeight: FontWeight.w400)),
-                                ],
+                          child: Center(
+                            child: Padding(
+                              padding:
+                                  const EdgeInsets.only(left: 8.0, right: 8.0),
+                              child: SingleChildScrollView(
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(doc['exp'],
+                                        style: TextStyle(
+                                            fontSize:
+                                                displayWidth(context) * 0.038,
+                                            fontWeight: FontWeight.w500)),
+                                  ],
+                                ),
                               ),
                             ),
                           ),
-                        )
+                        ),
                       ],
                     ),
                   ));
@@ -143,7 +158,7 @@ class _Page3State extends State<Page3> {
               ),
             ),
             Container(
-              height: displayHeight(context) * 0.35,
+              height: displayHeight(context) * 0.45,
               width: displayWidth(context),
               child: Padding(
                 padding: const EdgeInsets.only(left: 12.0, right: 12.0),
@@ -170,22 +185,6 @@ class _Page3State extends State<Page3> {
                       ),
                       div2,
                       Text(
-                        "Constraints :",
-                        style: TextStyle(
-                          fontSize: displayWidth(context) * 0.04,
-                          color: Colors.blue[800],
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      div3,
-                      Text(
-                        doc['c'],
-                        style: TextStyle(
-                            fontSize: displayWidth(context) * 0.0365,
-                            fontWeight: FontWeight.w400),
-                      ),
-                      div2,
-                      Text(
                         "Input :",
                         style: TextStyle(
                           fontSize: displayWidth(context) * 0.04,
@@ -194,13 +193,22 @@ class _Page3State extends State<Page3> {
                         ),
                       ),
                       div3,
-                      Text(
-                        doc['i'],
-                        style: TextStyle(
-                            fontSize: displayWidth(context) * 0.0365,
-                            fontWeight: FontWeight.w400),
+                      Container(
+                        height: displayHeight(context) * 0.08,
+                        width: displayWidth(context),
+                        child: ListView.builder(
+                          padding: EdgeInsets.zero,
+                          itemBuilder: (context, index) {
+                            return Text(
+                              receiveInput[index],
+                              style: TextStyle(
+                                  fontSize: displayWidth(context) * 0.0365),
+                            );
+                          },
+                          itemCount: receiveInput.length,
+                        ),
                       ),
-                      div2,
+                      div3,
                       Text(
                         "Output :",
                         style: TextStyle(
@@ -210,11 +218,23 @@ class _Page3State extends State<Page3> {
                         ),
                       ),
                       div3,
-                      Text(
-                        doc['o'],
-                        style: TextStyle(
-                            fontSize: displayWidth(context) * 0.0365,
-                            fontWeight: FontWeight.w400),
+                      Container(
+                        height: displayHeight(context) * 0.1,
+                        width: displayWidth(context),
+                        child: Padding(
+                          padding: const EdgeInsets.only(bottom: 8.0),
+                          child: ListView.builder(
+                            padding: EdgeInsets.zero,
+                            itemBuilder: (context, index) {
+                              return Text(
+                                receiveOutput[index],
+                                style: TextStyle(
+                                    fontSize: displayWidth(context) * 0.0365),
+                              );
+                            },
+                            itemCount: receiveOutput.length,
+                          ),
+                        ),
                       ),
                       div2,
                     ],
@@ -373,7 +393,7 @@ class _Page3State extends State<Page3> {
             left: displayWidth(context) * 0.04,
             right: displayWidth(context) * 0.04,
             child: Container(
-              height: displayHeight(context) * 0.5,
+              height: displayHeight(context) * 0.6,
               width: displayWidth(context),
               //color: Colors.red,
               child: StreamBuilder(

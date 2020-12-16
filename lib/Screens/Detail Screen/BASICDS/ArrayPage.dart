@@ -6,10 +6,8 @@ class ArrayPage extends StatelessWidget {
   Widget build(BuildContext context) {
     double smallDivider = displayHeight(context) * 0.028;
     double verysmallDivider = displayHeight(context) * 0.01;
-    double fontsize = displayWidth(context) * 0.043;
-    double keywordsize = displayWidth(context) * 0.048;
-    double headingfontsize = displayWidth(context) * 0.062;
-    double functionfontsize = displayWidth(context) * 0.055;
+    double fontsize = displayWidth(context) * 0.039;
+
     final text1 = new RichText(
       text: TextSpan(
           style: TextStyle(
@@ -40,24 +38,7 @@ class ArrayPage extends StatelessWidget {
           ),
           children: <TextSpan>[
             new TextSpan(
-                text:
-                    "The length of an array is established when the array is created. After creation, its length is fixed. "),
-            //image
-            new TextSpan(text: "\nEach item in an array is called an"),
-            new TextSpan(
-                text: "element. ",
-                style: TextStyle(
-                    color: Colors.black, fontWeight: FontWeight.bold)),
-            new TextSpan(
-                text: "and each element is accessed by its numerical "),
-            new TextSpan(
-                text: "index. ", style: TextStyle(fontWeight: FontWeight.bold)),
-            new TextSpan(
-                text:
-                    "\nAs shown in the above image. numbering begins with 0. The 9th element, for example, would therefore be accessed at index 8."),
-            //image
-            new TextSpan(
-              text: "\n\nSingle Dimensional Array: \n\n",
+              text: "Single Dimensional Array: \n",
               style: TextStyle(
                   color: Colors.blue,
                   fontFamily: "CreteRound",
@@ -76,7 +57,7 @@ class ArrayPage extends StatelessWidget {
             new TextSpan(
                 text: "linear array",
                 style: TextStyle(fontWeight: FontWeight.bold)),
-            new TextSpan(text: ".Accessing its elements involves a "),
+            new TextSpan(text: ". Accessing its elements involves a "),
             new TextSpan(
                 text: "single subscript ",
                 style: TextStyle(fontWeight: FontWeight.bold)),
@@ -164,12 +145,10 @@ class ArrayPage extends StatelessWidget {
                 Opacity(
                   opacity: 0.0,
                   child: Divider(
-                    height: smallDivider,
+                    height: verysmallDivider,
                   ),
                 ),
-                Center(
-                  child: text2,
-                ),
+                text2,
                 Opacity(
                   opacity: 0.0,
                   child: Divider(
