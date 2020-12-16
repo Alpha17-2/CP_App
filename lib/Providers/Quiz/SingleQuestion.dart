@@ -22,4 +22,8 @@ class SingleQuizQuestion extends ChangeNotifier {
     isFirstAttemp = !isFirstAttemp;
     ChangeNotifier();
   }
+
+  void restoreAll() {
+    isFirstAttemp = true;
+  }
 }

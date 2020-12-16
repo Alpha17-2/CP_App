@@ -34,6 +34,7 @@ import 'package:CP_App/Providers/Quiz/stack/st3.dart';
 import 'package:CP_App/Providers/Quiz/tree/t1.dart';
 import 'package:CP_App/Providers/Quiz/tree/t2.dart';
 import 'package:CP_App/Providers/Quiz/tree/t3.dart';
+import 'package:CP_App/Providers/algocardlist.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:CP_App/Screens/Display%20Screens/Splash.dart';
@@ -53,6 +54,9 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context) => cardlist()),
+        ChangeNotifierProvider(
+          create: (context) => algocardlist(),
+        ),
         ChangeNotifierProvider(create: (context) => ll1()),
         ChangeNotifierProvider(create: (context) => ll2()),
         ChangeNotifierProvider(create: (context) => ll3()),
