@@ -1,4 +1,5 @@
 import 'package:CP_App/Screens/General%20Screen/Algorithm.dart';
+import 'package:CP_App/Screens/General%20Screen/complexity.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
@@ -496,7 +497,7 @@ class _Page1State extends State<Page1> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => Asymptomatic()));
+                                  builder: (context) => complexity()));
                         },
                         child: Card(
                           // Card 3 => Computational Complexity
