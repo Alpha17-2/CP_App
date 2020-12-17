@@ -1,3 +1,8 @@
+import 'package:CP_App/Providers/Algorithms/dplist.dart';
+import 'package:CP_App/Providers/Algorithms/dslist.dart';
+import 'package:CP_App/Providers/Algorithms/graphlist.dart';
+import 'package:CP_App/Providers/Algorithms/mathlist.dart';
+import 'package:CP_App/Providers/Algorithms/sortlist.dart';
 import 'package:CP_App/Providers/Quiz/C++/C++1.dart';
 import 'package:CP_App/Providers/Quiz/C++/C++2.dart';
 import 'package:CP_App/Providers/Quiz/C++/C++3.dart';
@@ -34,7 +39,7 @@ import 'package:CP_App/Providers/Quiz/stack/st3.dart';
 import 'package:CP_App/Providers/Quiz/tree/t1.dart';
 import 'package:CP_App/Providers/Quiz/tree/t2.dart';
 import 'package:CP_App/Providers/Quiz/tree/t3.dart';
-import 'package:CP_App/Providers/algocardlist.dart';
+import 'package:CP_App/Providers/Algorithms/algocardlist.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:CP_App/Screens/Display%20Screens/Splash.dart';
@@ -99,6 +104,11 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (context) => se1()),
         ChangeNotifierProvider(create: (context) => se2()),
         ChangeNotifierProvider(create: (context) => se3()),
+        ChangeNotifierProvider(create: (context) => graphlist()),
+        ChangeNotifierProvider(create: (context) => dslist()),
+        ChangeNotifierProvider(create: (context) => dplist()),
+        ChangeNotifierProvider(create: (context) => mathlist()),
+        ChangeNotifierProvider(create: (context) => sortlist()),
       ],
       child: MaterialApp(
         theme: ThemeData(

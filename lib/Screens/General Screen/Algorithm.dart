@@ -1,7 +1,13 @@
+import 'package:CP_App/Providers/Algorithms/dplist.dart';
+import 'package:CP_App/Providers/Algorithms/dslist.dart';
+import 'package:CP_App/Providers/Algorithms/graphlist.dart';
+import 'package:CP_App/Providers/Algorithms/mathlist.dart';
+import 'package:CP_App/Providers/Algorithms/sortlist.dart';
 import 'package:flutter/material.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
 import 'package:provider/provider.dart';
-import 'package:CP_App/Providers/algocardlist.dart';
+import 'package:CP_App/Providers/Algorithms/algocardlist.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Algo extends StatefulWidget {
   @override
@@ -10,14 +16,24 @@ class Algo extends StatefulWidget {
 
 class Algo_State extends State<Algo> {
   @override
-  var currentProblem = "Fundamental";
+  var currentProblem = "Graph";
+  var listtoshow = [];
 
   Widget build(BuildContext context) {
     final myStyle = TextStyle(
       fontSize: displayWidth(context) * 0.038,
       fontWeight: FontWeight.w600,
     );
+
     final alist = Provider.of<algocardlist>(context).list;
+    final graph = Provider.of<graphlist>(context).list;
+    final dp = Provider.of<dplist>(context).list;
+    final sort = Provider.of<sortlist>(context).list;
+    final maths = Provider.of<mathlist>(context).list;
+    final ds = Provider.of<dslist>(context).list;
+    if (listtoshow.length == 0) {
+      listtoshow = graph;
+    }
 
     final problemtitlestyle = TextStyle(
         fontSize: displayWidth(context) * 0.05, fontWeight: FontWeight.w600);
@@ -33,6 +49,17 @@ class Algo_State extends State<Algo> {
               debugPrint("Clicked on " + alist[index].title);
               alist[index].ontouch();
               currentProblem = alist[index].title;
+              if (currentProblem == "Graph")
+                listtoshow = graph;
+              else if (currentProblem == "DP")
+                listtoshow = dp;
+              else if (currentProblem == "Maths")
+                listtoshow = maths;
+              else if (currentProblem == "DS")
+                listtoshow = ds;
+              else
+                listtoshow = sort;
+
               for (int k = 0; k < alist.length; k++) {
                 if (k != index) alist[k].reverse();
               }
@@ -58,6 +85,63 @@ class Algo_State extends State<Algo> {
                   ),
                 ),
               ),
+            ),
+          ),
+        ),
+      );
+    }
+
+    Widget MyAlgorithms(int index) {
+      Future<void> _linkopen(String url) async {
+        if (await canLaunch(url)) {
+          await launch(url, forceWebView: false, forceSafariVC: false);
+        } else {
+          throw 'Could not launch';
+        }
+      }
+
+      return Card(
+        shape:
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(16.0)),
+        elevation: 12.0,
+        child: Container(
+          width: displayWidth(context) * 0.8,
+          child: Padding(
+            padding: const EdgeInsets.all(4.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 8.0),
+                  child: Text(
+                    listtoshow[index].title,
+                    style: TextStyle(
+                        fontSize: displayWidth(context) * 0.045,
+                        fontFamily: "Fredoka One"),
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    _linkopen(listtoshow[index].link);
+                  },
+                  child: Card(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(6.0)),
+                    elevation: 12.0,
+                    color: Colors.indigo,
+                    child: Padding(
+                      padding: const EdgeInsets.all(5.0),
+                      child: Text(
+                        "View",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: displayWidth(context) * 0.035,
+                        ),
+                      ),
+                    ),
+                  ),
+                )
+              ],
             ),
           ),
         ),
@@ -100,15 +184,16 @@ class Algo_State extends State<Algo> {
           left: displayWidth(context) * 0.015,
         ),
         Positioned(
-            left: displayWidth(context) * 0.25,
-            top: displayHeight(context) * 0.08,
-            child: Text(
-              "Algorithm Corners",
-              style: TextStyle(
-                fontFamily: "PatuaOne",
-                fontSize: displayWidth(context) * 0.065,
-              ),
-            )),
+          left: displayWidth(context) * 0.25,
+          top: displayHeight(context) * 0.08,
+          child: Text(
+            "Algorithm Corners",
+            style: TextStyle(
+              fontFamily: "PatuaOne",
+              fontSize: displayWidth(context) * 0.065,
+            ),
+          ),
+        ),
         Positioned(
           top: displayHeight(context) * 0.15,
           left: displayWidth(context) * 0.04,
@@ -135,6 +220,15 @@ class Algo_State extends State<Algo> {
                 //topRight: Radius.circular(35),
               ),
               color: Colors.white,
+            ),
+            child: Padding(
+              padding:
+                  EdgeInsets.only(top: 30, bottom: 30, left: 30, right: 30),
+              child: ListView.builder(
+                  itemCount: listtoshow.length,
+                  itemBuilder: (context, index) {
+                    return MyAlgorithms(index);
+                  }),
             ),
           ),
         ),

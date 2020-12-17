@@ -147,6 +147,17 @@ class _mediumcplusState extends State<mediumcplus> {
           });
     }
 
+    String problem, option1, option2, option3, option4, correct;
+    problem = option1 = option2 = option3 = option4 = correct = null;
+    if (i < mylist.length) {
+      problem = mylist[i].question;
+      option1 = mylist[i].option1;
+      option2 = mylist[i].option2;
+      option3 = mylist[i].option3;
+      option4 = mylist[i].option4;
+      correct = mylist[i].correct;
+    }
+
     Widget Lastpage() {
       for (int i = 0; i < mylist.length; ++i) {
         mylist[i].restoreAll();
@@ -156,12 +167,13 @@ class _mediumcplusState extends State<mediumcplus> {
           ? "CONGRATULATIONS "
           : "QUIZ OVER";
       String tag = (correctanswer > mylist.length / 2)
-          ? "Medium level cleared !!"
+          ? "Easy level cleared !!"
           : "Better luck next time !";
       if (correctanswer >= mylist.length / 2)
         bgcolor = Colors.tealAccent[400];
       else
         bgcolor = Colors.red[300];
+      debugPrint(correctanswer.toString());
       double percenntage = (correctanswer / mylist.length) * 100;
       return Scaffold(
         body: Stack(
@@ -205,7 +217,7 @@ class _mediumcplusState extends State<mediumcplus> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Text(percenntage.toString().substring(0, 5) + " %",
+                      Text(percenntage.toString().substring(0, 2) + " %",
                           style: TextStyle(
                             fontSize: displayWidth(context) * 0.0475,
                             fontWeight: FontWeight.w600,
@@ -271,17 +283,6 @@ class _mediumcplusState extends State<mediumcplus> {
           ],
         ),
       );
-    }
-
-    String problem, option1, option2, option3, option4, correct;
-    problem = option1 = option2 = option3 = option4 = correct = null;
-    if (i < mylist.length) {
-      problem = mylist[i].question;
-      option1 = mylist[i].option1;
-      option2 = mylist[i].option2;
-      option3 = mylist[i].option3;
-      option4 = mylist[i].option4;
-      correct = mylist[i].correct;
     }
 
     Widget MyQuizPage() {
