@@ -1,8 +1,8 @@
-import 'package:CP_App/Providers/Quiz/C++/C++2.dart';
-import 'package:flutter/material.dart';
-import 'package:CP_App/Helpers/DeviceSize.dart';
-import 'package:provider/provider.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:CP_App/Helpers/DeviceSize.dart';
+import 'package:CP_App/Providers/Quiz/C++/C++2.dart';
 
 class mediumcplus extends StatefulWidget {
   @override
@@ -22,9 +22,10 @@ class _mediumcplusState extends State<mediumcplus> {
   Color currentColor3 = Colors.white;
   Color currentColor4 = Colors.white;
 
-  @override
   Widget build(BuildContext context) {
-    final mylist = Provider.of<cplus2>(context).ListOfCplusquestions;
+    final mylist =
+        Provider.of<cplus2>(context, listen: true).ListOfCplusquestions;
+    // final myObject = Provider.of<SingleQuizQuestion>(context);
 
     void _correctAnswerBottomSheet(context) {
       showModalBottomSheet(
@@ -147,17 +148,6 @@ class _mediumcplusState extends State<mediumcplus> {
           });
     }
 
-    String problem, option1, option2, option3, option4, correct;
-    problem = option1 = option2 = option3 = option4 = correct = null;
-    if (i < mylist.length) {
-      problem = mylist[i].question;
-      option1 = mylist[i].option1;
-      option2 = mylist[i].option2;
-      option3 = mylist[i].option3;
-      option4 = mylist[i].option4;
-      correct = mylist[i].correct;
-    }
-
     Widget Lastpage() {
       for (int i = 0; i < mylist.length; ++i) {
         mylist[i].restoreAll();
@@ -167,13 +157,12 @@ class _mediumcplusState extends State<mediumcplus> {
           ? "CONGRATULATIONS "
           : "QUIZ OVER";
       String tag = (correctanswer > mylist.length / 2)
-          ? "Easy level cleared !!"
+          ? "medium level cleared !!"
           : "Better luck next time !";
       if (correctanswer >= mylist.length / 2)
         bgcolor = Colors.tealAccent[400];
       else
         bgcolor = Colors.red[300];
-      debugPrint(correctanswer.toString());
       double percenntage = (correctanswer / mylist.length) * 100;
       return Scaffold(
         body: Stack(
@@ -217,7 +206,7 @@ class _mediumcplusState extends State<mediumcplus> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Text(percenntage.toString().substring(0, 2) + " %",
+                      Text(percenntage.toString().substring(0, 5) + " %",
                           style: TextStyle(
                             fontSize: displayWidth(context) * 0.0475,
                             fontWeight: FontWeight.w600,
@@ -285,9 +274,20 @@ class _mediumcplusState extends State<mediumcplus> {
       );
     }
 
+    String problem, option1, option2, option3, option4, correct;
+    problem = option1 = option2 = option3 = option4 = correct = null;
+    if (i < mylist.length) {
+      problem = mylist[i].question;
+      option1 = mylist[i].option1;
+      option2 = mylist[i].option2;
+      option3 = mylist[i].option3;
+      option4 = mylist[i].option4;
+      correct = mylist[i].correct;
+    }
+
     Widget MyQuizPage() {
       return Hero(
-          tag: "C++quiz",
+          tag: "Cquiz",
           child: Scaffold(
             body: Stack(
               alignment: Alignment.center,
@@ -319,7 +319,7 @@ class _mediumcplusState extends State<mediumcplus> {
                         ),
                         Center(
                           child: Text(
-                            "C++ QUIZ",
+                            "C QUIZ",
                             style: TextStyle(
                                 letterSpacing: 0.95,
                                 fontFamily: "BreeSerif",
@@ -347,7 +347,7 @@ class _mediumcplusState extends State<mediumcplus> {
                           problem,
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                              fontSize: displayWidth(context) * 0.06,
+                              fontSize: displayWidth(context) * 0.04,
                               color: Colors.black,
                               fontWeight: FontWeight.bold),
                         ),
@@ -372,10 +372,16 @@ class _mediumcplusState extends State<mediumcplus> {
                                 padding: const EdgeInsets.only(top: 8.0),
                                 child: GestureDetector(
                                   onTap: () {
+                                    ++attempts;
                                     if (option1 == correct) {
                                       setState(() {
+                                        if (mylist[i].isFirstAttemp) {
+                                          mylist[i].UpdateFirstAttempt();
+                                          ++correctanswer;
+                                        }
                                         currentColor1 = Colors.green;
                                       });
+
                                       Future.delayed(
                                           const Duration(microseconds: 35555),
                                           () {
@@ -383,6 +389,9 @@ class _mediumcplusState extends State<mediumcplus> {
                                       });
                                     } else {
                                       setState(() {
+                                        if (mylist[i].isFirstAttemp == true) {
+                                          mylist[i].UpdateFirstAttempt();
+                                        }
                                         currentColor1 = Colors.red[400];
                                       });
                                       Future.delayed(
@@ -406,7 +415,7 @@ class _mediumcplusState extends State<mediumcplus> {
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
                                               fontSize:
-                                                  displayWidth(context) * 0.04,
+                                                  displayWidth(context) * 0.035,
                                               fontWeight: FontWeight.bold),
                                         ),
                                       ),
@@ -418,10 +427,17 @@ class _mediumcplusState extends State<mediumcplus> {
                                 padding: const EdgeInsets.only(top: 8.0),
                                 child: GestureDetector(
                                   onTap: () {
+                                    ++attempts;
                                     if (option2 == correct) {
                                       setState(() {
                                         currentColor2 = Colors.green;
+
+                                        if (mylist[i].isFirstAttemp) {
+                                          mylist[i].UpdateFirstAttempt();
+                                          correctanswer++;
+                                        }
                                       });
+
                                       Future.delayed(
                                           const Duration(microseconds: 35555),
                                           () {
@@ -429,6 +445,9 @@ class _mediumcplusState extends State<mediumcplus> {
                                       });
                                     } else {
                                       setState(() {
+                                        if (mylist[i].isFirstAttemp) {
+                                          mylist[i].UpdateFirstAttempt();
+                                        }
                                         currentColor2 = Colors.red[400];
                                       });
                                       Future.delayed(
@@ -452,7 +471,7 @@ class _mediumcplusState extends State<mediumcplus> {
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
                                               fontSize:
-                                                  displayWidth(context) * 0.04,
+                                                  displayWidth(context) * 0.035,
                                               fontWeight: FontWeight.bold),
                                         ),
                                       ),
@@ -469,10 +488,17 @@ class _mediumcplusState extends State<mediumcplus> {
                                 padding: const EdgeInsets.only(top: 8.0),
                                 child: GestureDetector(
                                   onTap: () {
+                                    ++attempts;
                                     if (option3 == correct) {
                                       setState(() {
+                                        if (mylist[i].isFirstAttemp) {
+                                          mylist[i].UpdateFirstAttempt();
+                                          correctanswer++;
+                                        }
+
                                         currentColor3 = Colors.green;
                                       });
+
                                       Future.delayed(
                                           const Duration(microseconds: 35555),
                                           () {
@@ -480,6 +506,9 @@ class _mediumcplusState extends State<mediumcplus> {
                                       });
                                     } else {
                                       setState(() {
+                                        if (mylist[i].isFirstAttemp) {
+                                          mylist[i].UpdateFirstAttempt();
+                                        }
                                         currentColor3 = Colors.red[400];
                                       });
                                       Future.delayed(
@@ -503,7 +532,7 @@ class _mediumcplusState extends State<mediumcplus> {
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
                                               fontSize:
-                                                  displayWidth(context) * 0.04,
+                                                  displayWidth(context) * 0.035,
                                               fontWeight: FontWeight.bold),
                                         ),
                                       ),
@@ -515,10 +544,17 @@ class _mediumcplusState extends State<mediumcplus> {
                                 padding: const EdgeInsets.only(top: 8.0),
                                 child: GestureDetector(
                                   onTap: () {
+                                    ++attempts;
                                     if (option4 == correct) {
                                       setState(() {
+                                        if (mylist[i].isFirstAttemp) {
+                                          mylist[i].UpdateFirstAttempt();
+                                          correctanswer++;
+                                        }
+
                                         currentColor4 = Colors.green;
                                       });
+
                                       Future.delayed(
                                           const Duration(microseconds: 35555),
                                           () {
@@ -527,7 +563,11 @@ class _mediumcplusState extends State<mediumcplus> {
                                     } else {
                                       setState(() {
                                         currentColor4 = Colors.red[400];
+                                        if (mylist[i].isFirstAttemp) {
+                                          mylist[i].UpdateFirstAttempt();
+                                        }
                                       });
+
                                       Future.delayed(
                                           const Duration(microseconds: 35555),
                                           () {
@@ -549,7 +589,7 @@ class _mediumcplusState extends State<mediumcplus> {
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
                                               fontSize:
-                                                  displayWidth(context) * 0.04,
+                                                  displayWidth(context) * 0.035,
                                               fontWeight: FontWeight.bold),
                                         ),
                                       ),

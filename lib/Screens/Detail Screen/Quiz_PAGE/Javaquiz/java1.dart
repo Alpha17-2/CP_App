@@ -1,8 +1,8 @@
+import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
 import 'package:CP_App/Providers/Quiz/java/j1.dart';
-import 'package:percent_indicator/circular_percent_indicator.dart';
 
 class easyjava extends StatefulWidget {
   @override
@@ -10,6 +10,7 @@ class easyjava extends StatefulWidget {
 }
 
 class _easyjavaState extends State<easyjava> {
+  @override
   int i = 0;
   int correctanswer = 0;
   int attempts = 0;
@@ -20,9 +21,11 @@ class _easyjavaState extends State<easyjava> {
   Color currentColor2 = Colors.white;
   Color currentColor3 = Colors.white;
   Color currentColor4 = Colors.white;
-  @override
+
   Widget build(BuildContext context) {
-    final mylist = Provider.of<j1>(context).ListOfJavaquestions;
+    final mylist = Provider.of<j1>(context, listen: true).ListOfJavaquestions;
+    // final myObject = Provider.of<SingleQuizQuestion>(context);
+
     void _correctAnswerBottomSheet(context) {
       showModalBottomSheet(
           context: context,
@@ -283,7 +286,7 @@ class _easyjavaState extends State<easyjava> {
 
     Widget MyQuizPage() {
       return Hero(
-          tag: "Javaquiz",
+          tag: "Cquiz",
           child: Scaffold(
             body: Stack(
               alignment: Alignment.center,
@@ -315,7 +318,7 @@ class _easyjavaState extends State<easyjava> {
                         ),
                         Center(
                           child: Text(
-                            "JAVA QUIZ",
+                            "C QUIZ",
                             style: TextStyle(
                                 letterSpacing: 0.95,
                                 fontFamily: "BreeSerif",
@@ -343,7 +346,7 @@ class _easyjavaState extends State<easyjava> {
                           problem,
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                              fontSize: displayWidth(context) * 0.06,
+                              fontSize: displayWidth(context) * 0.04,
                               color: Colors.black,
                               fontWeight: FontWeight.bold),
                         ),
@@ -368,10 +371,16 @@ class _easyjavaState extends State<easyjava> {
                                 padding: const EdgeInsets.only(top: 8.0),
                                 child: GestureDetector(
                                   onTap: () {
+                                    ++attempts;
                                     if (option1 == correct) {
                                       setState(() {
+                                        if (mylist[i].isFirstAttemp) {
+                                          mylist[i].UpdateFirstAttempt();
+                                          ++correctanswer;
+                                        }
                                         currentColor1 = Colors.green;
                                       });
+
                                       Future.delayed(
                                           const Duration(microseconds: 35555),
                                           () {
@@ -379,6 +388,9 @@ class _easyjavaState extends State<easyjava> {
                                       });
                                     } else {
                                       setState(() {
+                                        if (mylist[i].isFirstAttemp == true) {
+                                          mylist[i].UpdateFirstAttempt();
+                                        }
                                         currentColor1 = Colors.red[400];
                                       });
                                       Future.delayed(
@@ -402,7 +414,7 @@ class _easyjavaState extends State<easyjava> {
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
                                               fontSize:
-                                                  displayWidth(context) * 0.04,
+                                                  displayWidth(context) * 0.035,
                                               fontWeight: FontWeight.bold),
                                         ),
                                       ),
@@ -414,10 +426,17 @@ class _easyjavaState extends State<easyjava> {
                                 padding: const EdgeInsets.only(top: 8.0),
                                 child: GestureDetector(
                                   onTap: () {
+                                    ++attempts;
                                     if (option2 == correct) {
                                       setState(() {
                                         currentColor2 = Colors.green;
+
+                                        if (mylist[i].isFirstAttemp) {
+                                          mylist[i].UpdateFirstAttempt();
+                                          correctanswer++;
+                                        }
                                       });
+
                                       Future.delayed(
                                           const Duration(microseconds: 35555),
                                           () {
@@ -425,6 +444,9 @@ class _easyjavaState extends State<easyjava> {
                                       });
                                     } else {
                                       setState(() {
+                                        if (mylist[i].isFirstAttemp) {
+                                          mylist[i].UpdateFirstAttempt();
+                                        }
                                         currentColor2 = Colors.red[400];
                                       });
                                       Future.delayed(
@@ -448,7 +470,7 @@ class _easyjavaState extends State<easyjava> {
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
                                               fontSize:
-                                                  displayWidth(context) * 0.04,
+                                                  displayWidth(context) * 0.035,
                                               fontWeight: FontWeight.bold),
                                         ),
                                       ),
@@ -465,10 +487,17 @@ class _easyjavaState extends State<easyjava> {
                                 padding: const EdgeInsets.only(top: 8.0),
                                 child: GestureDetector(
                                   onTap: () {
+                                    ++attempts;
                                     if (option3 == correct) {
                                       setState(() {
+                                        if (mylist[i].isFirstAttemp) {
+                                          mylist[i].UpdateFirstAttempt();
+                                          correctanswer++;
+                                        }
+
                                         currentColor3 = Colors.green;
                                       });
+
                                       Future.delayed(
                                           const Duration(microseconds: 35555),
                                           () {
@@ -476,6 +505,9 @@ class _easyjavaState extends State<easyjava> {
                                       });
                                     } else {
                                       setState(() {
+                                        if (mylist[i].isFirstAttemp) {
+                                          mylist[i].UpdateFirstAttempt();
+                                        }
                                         currentColor3 = Colors.red[400];
                                       });
                                       Future.delayed(
@@ -499,7 +531,7 @@ class _easyjavaState extends State<easyjava> {
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
                                               fontSize:
-                                                  displayWidth(context) * 0.04,
+                                                  displayWidth(context) * 0.035,
                                               fontWeight: FontWeight.bold),
                                         ),
                                       ),
@@ -511,10 +543,17 @@ class _easyjavaState extends State<easyjava> {
                                 padding: const EdgeInsets.only(top: 8.0),
                                 child: GestureDetector(
                                   onTap: () {
+                                    ++attempts;
                                     if (option4 == correct) {
                                       setState(() {
+                                        if (mylist[i].isFirstAttemp) {
+                                          mylist[i].UpdateFirstAttempt();
+                                          correctanswer++;
+                                        }
+
                                         currentColor4 = Colors.green;
                                       });
+
                                       Future.delayed(
                                           const Duration(microseconds: 35555),
                                           () {
@@ -523,7 +562,11 @@ class _easyjavaState extends State<easyjava> {
                                     } else {
                                       setState(() {
                                         currentColor4 = Colors.red[400];
+                                        if (mylist[i].isFirstAttemp) {
+                                          mylist[i].UpdateFirstAttempt();
+                                        }
                                       });
+
                                       Future.delayed(
                                           const Duration(microseconds: 35555),
                                           () {
@@ -545,7 +588,7 @@ class _easyjavaState extends State<easyjava> {
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
                                               fontSize:
-                                                  displayWidth(context) * 0.04,
+                                                  displayWidth(context) * 0.035,
                                               fontWeight: FontWeight.bold),
                                         ),
                                       ),

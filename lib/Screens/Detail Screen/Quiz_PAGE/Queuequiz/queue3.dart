@@ -1,8 +1,8 @@
-import 'package:CP_App/Providers/Quiz/queue/q3.dart';
-import 'package:flutter/material.dart';
-import 'package:CP_App/Helpers/DeviceSize.dart';
-import 'package:provider/provider.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:CP_App/Helpers/DeviceSize.dart';
+import 'package:CP_App/Providers/Quiz/queue/q3.dart';
 
 class hardqueue extends StatefulWidget {
   @override
@@ -24,6 +24,7 @@ class _hardqueueState extends State<hardqueue> {
 
   Widget build(BuildContext context) {
     final mylist = Provider.of<q3>(context, listen: true).ListOfQueuequestions;
+    // final myObject = Provider.of<SingleQuizQuestion>(context);
 
     void _correctAnswerBottomSheet(context) {
       showModalBottomSheet(
@@ -155,7 +156,7 @@ class _hardqueueState extends State<hardqueue> {
           ? "CONGRATULATIONS "
           : "QUIZ OVER";
       String tag = (correctanswer > mylist.length / 2)
-          ? "Hard level cleared !!"
+          ? "hard level cleared !!"
           : "Better luck next time !";
       if (correctanswer >= mylist.length / 2)
         bgcolor = Colors.tealAccent[400];
@@ -285,7 +286,7 @@ class _hardqueueState extends State<hardqueue> {
 
     Widget MyQuizPage() {
       return Hero(
-          tag: "Queuequiz",
+          tag: "Cquiz",
           child: Scaffold(
             body: Stack(
               alignment: Alignment.center,
@@ -317,7 +318,7 @@ class _hardqueueState extends State<hardqueue> {
                         ),
                         Center(
                           child: Text(
-                            "Queue QUIZ",
+                            "C QUIZ",
                             style: TextStyle(
                                 letterSpacing: 0.95,
                                 fontFamily: "BreeSerif",
@@ -345,7 +346,7 @@ class _hardqueueState extends State<hardqueue> {
                           problem,
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                              fontSize: displayWidth(context) * 0.06,
+                              fontSize: displayWidth(context) * 0.04,
                               color: Colors.black,
                               fontWeight: FontWeight.bold),
                         ),
@@ -370,6 +371,7 @@ class _hardqueueState extends State<hardqueue> {
                                 padding: const EdgeInsets.only(top: 8.0),
                                 child: GestureDetector(
                                   onTap: () {
+                                    ++attempts;
                                     if (option1 == correct) {
                                       setState(() {
                                         if (mylist[i].isFirstAttemp) {
@@ -412,7 +414,7 @@ class _hardqueueState extends State<hardqueue> {
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
                                               fontSize:
-                                                  displayWidth(context) * 0.04,
+                                                  displayWidth(context) * 0.035,
                                               fontWeight: FontWeight.bold),
                                         ),
                                       ),
@@ -424,6 +426,7 @@ class _hardqueueState extends State<hardqueue> {
                                 padding: const EdgeInsets.only(top: 8.0),
                                 child: GestureDetector(
                                   onTap: () {
+                                    ++attempts;
                                     if (option2 == correct) {
                                       setState(() {
                                         currentColor2 = Colors.green;
@@ -467,7 +470,7 @@ class _hardqueueState extends State<hardqueue> {
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
                                               fontSize:
-                                                  displayWidth(context) * 0.04,
+                                                  displayWidth(context) * 0.035,
                                               fontWeight: FontWeight.bold),
                                         ),
                                       ),
@@ -484,6 +487,7 @@ class _hardqueueState extends State<hardqueue> {
                                 padding: const EdgeInsets.only(top: 8.0),
                                 child: GestureDetector(
                                   onTap: () {
+                                    ++attempts;
                                     if (option3 == correct) {
                                       setState(() {
                                         if (mylist[i].isFirstAttemp) {
@@ -527,7 +531,7 @@ class _hardqueueState extends State<hardqueue> {
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
                                               fontSize:
-                                                  displayWidth(context) * 0.04,
+                                                  displayWidth(context) * 0.035,
                                               fontWeight: FontWeight.bold),
                                         ),
                                       ),
@@ -539,6 +543,7 @@ class _hardqueueState extends State<hardqueue> {
                                 padding: const EdgeInsets.only(top: 8.0),
                                 child: GestureDetector(
                                   onTap: () {
+                                    ++attempts;
                                     if (option4 == correct) {
                                       setState(() {
                                         if (mylist[i].isFirstAttemp) {
@@ -583,7 +588,7 @@ class _hardqueueState extends State<hardqueue> {
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
                                               fontSize:
-                                                  displayWidth(context) * 0.04,
+                                                  displayWidth(context) * 0.035,
                                               fontWeight: FontWeight.bold),
                                         ),
                                       ),

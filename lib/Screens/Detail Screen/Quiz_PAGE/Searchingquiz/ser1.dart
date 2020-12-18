@@ -1,8 +1,8 @@
+import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
 import 'package:CP_App/Providers/Quiz/searching/se1.dart';
-import 'package:percent_indicator/circular_percent_indicator.dart';
 
 class easyse extends StatefulWidget {
   @override
@@ -287,7 +287,7 @@ class _easyseState extends State<easyse> {
 
     Widget MyQuizPage() {
       return Hero(
-          tag: "Searchingquiz",
+          tag: "Cquiz",
           child: Scaffold(
             body: Stack(
               alignment: Alignment.center,
@@ -347,7 +347,7 @@ class _easyseState extends State<easyse> {
                           problem,
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                              fontSize: displayWidth(context) * 0.06,
+                              fontSize: displayWidth(context) * 0.04,
                               color: Colors.black,
                               fontWeight: FontWeight.bold),
                         ),
@@ -372,6 +372,7 @@ class _easyseState extends State<easyse> {
                                 padding: const EdgeInsets.only(top: 8.0),
                                 child: GestureDetector(
                                   onTap: () {
+                                    ++attempts;
                                     if (option1 == correct) {
                                       setState(() {
                                         if (mylist[i].isFirstAttemp) {
@@ -414,7 +415,7 @@ class _easyseState extends State<easyse> {
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
                                               fontSize:
-                                                  displayWidth(context) * 0.04,
+                                                  displayWidth(context) * 0.035,
                                               fontWeight: FontWeight.bold),
                                         ),
                                       ),
@@ -426,6 +427,7 @@ class _easyseState extends State<easyse> {
                                 padding: const EdgeInsets.only(top: 8.0),
                                 child: GestureDetector(
                                   onTap: () {
+                                    ++attempts;
                                     if (option2 == correct) {
                                       setState(() {
                                         currentColor2 = Colors.green;
@@ -469,7 +471,7 @@ class _easyseState extends State<easyse> {
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
                                               fontSize:
-                                                  displayWidth(context) * 0.04,
+                                                  displayWidth(context) * 0.035,
                                               fontWeight: FontWeight.bold),
                                         ),
                                       ),
@@ -486,6 +488,7 @@ class _easyseState extends State<easyse> {
                                 padding: const EdgeInsets.only(top: 8.0),
                                 child: GestureDetector(
                                   onTap: () {
+                                    ++attempts;
                                     if (option3 == correct) {
                                       setState(() {
                                         if (mylist[i].isFirstAttemp) {
@@ -529,7 +532,7 @@ class _easyseState extends State<easyse> {
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
                                               fontSize:
-                                                  displayWidth(context) * 0.04,
+                                                  displayWidth(context) * 0.035,
                                               fontWeight: FontWeight.bold),
                                         ),
                                       ),
@@ -541,6 +544,7 @@ class _easyseState extends State<easyse> {
                                 padding: const EdgeInsets.only(top: 8.0),
                                 child: GestureDetector(
                                   onTap: () {
+                                    ++attempts;
                                     if (option4 == correct) {
                                       setState(() {
                                         if (mylist[i].isFirstAttemp) {
@@ -585,7 +589,7 @@ class _easyseState extends State<easyse> {
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
                                               fontSize:
-                                                  displayWidth(context) * 0.04,
+                                                  displayWidth(context) * 0.035,
                                               fontWeight: FontWeight.bold),
                                         ),
                                       ),

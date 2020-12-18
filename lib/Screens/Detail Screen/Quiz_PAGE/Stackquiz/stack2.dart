@@ -1,15 +1,15 @@
-import 'package:flutter/material.dart';
-import 'package:CP_App/Helpers/DeviceSize.dart';
-import 'package:provider/provider.dart';
-import 'package:CP_App/Providers/Quiz/stack/st2.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:CP_App/Helpers/DeviceSize.dart';
+import 'package:CP_App/Providers/Quiz/stack/st2.dart';
 
-class mediumstack extends StatefulWidget {
+class easystack extends StatefulWidget {
   @override
-  _mediumstackState createState() => _mediumstackState();
+  _easystackState createState() => _easystackState();
 }
 
-class _mediumstackState extends State<mediumstack> {
+class _easystackState extends State<easystack> {
   @override
   int i = 0;
   int correctanswer = 0;
@@ -156,7 +156,7 @@ class _mediumstackState extends State<mediumstack> {
           ? "CONGRATULATIONS "
           : "QUIZ OVER";
       String tag = (correctanswer > mylist.length / 2)
-          ? "Medium level cleared !!"
+          ? "Easy level cleared !!"
           : "Better luck next time !";
       if (correctanswer >= mylist.length / 2)
         bgcolor = Colors.tealAccent[400];
@@ -286,7 +286,7 @@ class _mediumstackState extends State<mediumstack> {
 
     Widget MyQuizPage() {
       return Hero(
-          tag: "Stackquiz",
+          tag: "Cquiz",
           child: Scaffold(
             body: Stack(
               alignment: Alignment.center,
@@ -318,7 +318,7 @@ class _mediumstackState extends State<mediumstack> {
                         ),
                         Center(
                           child: Text(
-                            "Stack QUIZ",
+                            "C QUIZ",
                             style: TextStyle(
                                 letterSpacing: 0.95,
                                 fontFamily: "BreeSerif",
@@ -346,7 +346,7 @@ class _mediumstackState extends State<mediumstack> {
                           problem,
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                              fontSize: displayWidth(context) * 0.06,
+                              fontSize: displayWidth(context) * 0.04,
                               color: Colors.black,
                               fontWeight: FontWeight.bold),
                         ),
@@ -371,6 +371,7 @@ class _mediumstackState extends State<mediumstack> {
                                 padding: const EdgeInsets.only(top: 8.0),
                                 child: GestureDetector(
                                   onTap: () {
+                                    ++attempts;
                                     if (option1 == correct) {
                                       setState(() {
                                         if (mylist[i].isFirstAttemp) {
@@ -413,7 +414,7 @@ class _mediumstackState extends State<mediumstack> {
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
                                               fontSize:
-                                                  displayWidth(context) * 0.04,
+                                                  displayWidth(context) * 0.035,
                                               fontWeight: FontWeight.bold),
                                         ),
                                       ),
@@ -425,6 +426,7 @@ class _mediumstackState extends State<mediumstack> {
                                 padding: const EdgeInsets.only(top: 8.0),
                                 child: GestureDetector(
                                   onTap: () {
+                                    ++attempts;
                                     if (option2 == correct) {
                                       setState(() {
                                         currentColor2 = Colors.green;
@@ -468,7 +470,7 @@ class _mediumstackState extends State<mediumstack> {
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
                                               fontSize:
-                                                  displayWidth(context) * 0.04,
+                                                  displayWidth(context) * 0.035,
                                               fontWeight: FontWeight.bold),
                                         ),
                                       ),
@@ -485,6 +487,7 @@ class _mediumstackState extends State<mediumstack> {
                                 padding: const EdgeInsets.only(top: 8.0),
                                 child: GestureDetector(
                                   onTap: () {
+                                    ++attempts;
                                     if (option3 == correct) {
                                       setState(() {
                                         if (mylist[i].isFirstAttemp) {
@@ -528,7 +531,7 @@ class _mediumstackState extends State<mediumstack> {
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
                                               fontSize:
-                                                  displayWidth(context) * 0.04,
+                                                  displayWidth(context) * 0.035,
                                               fontWeight: FontWeight.bold),
                                         ),
                                       ),
@@ -540,6 +543,7 @@ class _mediumstackState extends State<mediumstack> {
                                 padding: const EdgeInsets.only(top: 8.0),
                                 child: GestureDetector(
                                   onTap: () {
+                                    ++attempts;
                                     if (option4 == correct) {
                                       setState(() {
                                         if (mylist[i].isFirstAttemp) {
@@ -584,7 +588,7 @@ class _mediumstackState extends State<mediumstack> {
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
                                               fontSize:
-                                                  displayWidth(context) * 0.04,
+                                                  displayWidth(context) * 0.035,
                                               fontWeight: FontWeight.bold),
                                         ),
                                       ),

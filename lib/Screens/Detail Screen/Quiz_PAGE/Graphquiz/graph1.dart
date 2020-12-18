@@ -1,15 +1,15 @@
+import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:flutter/material.dart';
-import 'package:CP_App/Helpers/DeviceSize.dart';
 import 'package:provider/provider.dart';
+import 'package:CP_App/Helpers/DeviceSize.dart';
 import 'package:CP_App/Providers/Quiz/graph/gr1.dart';
-import 'package:percent_indicator/percent_indicator.dart';
 
-class easygraph extends StatefulWidget {
+class easygr extends StatefulWidget {
   @override
-  _easygraphState createState() => _easygraphState();
+  _easygrState createState() => _easygrState();
 }
 
-class _easygraphState extends State<easygraph> {
+class _easygrState extends State<easygr> {
   @override
   int i = 0;
   int correctanswer = 0;
@@ -24,6 +24,7 @@ class _easygraphState extends State<easygraph> {
 
   Widget build(BuildContext context) {
     final mylist = Provider.of<gr1>(context, listen: true).ListOfGraphquestions;
+    // final myObject = Provider.of<SingleQuizQuestion>(context);
 
     void _correctAnswerBottomSheet(context) {
       showModalBottomSheet(
@@ -285,7 +286,7 @@ class _easygraphState extends State<easygraph> {
 
     Widget MyQuizPage() {
       return Hero(
-          tag: "graphquiz",
+          tag: "Cquiz",
           child: Scaffold(
             body: Stack(
               alignment: Alignment.center,
@@ -317,7 +318,7 @@ class _easygraphState extends State<easygraph> {
                         ),
                         Center(
                           child: Text(
-                            "Graph QUIZ",
+                            "C QUIZ",
                             style: TextStyle(
                                 letterSpacing: 0.95,
                                 fontFamily: "BreeSerif",
@@ -345,7 +346,7 @@ class _easygraphState extends State<easygraph> {
                           problem,
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                              fontSize: displayWidth(context) * 0.06,
+                              fontSize: displayWidth(context) * 0.04,
                               color: Colors.black,
                               fontWeight: FontWeight.bold),
                         ),
@@ -370,6 +371,7 @@ class _easygraphState extends State<easygraph> {
                                 padding: const EdgeInsets.only(top: 8.0),
                                 child: GestureDetector(
                                   onTap: () {
+                                    ++attempts;
                                     if (option1 == correct) {
                                       setState(() {
                                         if (mylist[i].isFirstAttemp) {
@@ -412,7 +414,7 @@ class _easygraphState extends State<easygraph> {
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
                                               fontSize:
-                                                  displayWidth(context) * 0.04,
+                                                  displayWidth(context) * 0.035,
                                               fontWeight: FontWeight.bold),
                                         ),
                                       ),
@@ -424,6 +426,7 @@ class _easygraphState extends State<easygraph> {
                                 padding: const EdgeInsets.only(top: 8.0),
                                 child: GestureDetector(
                                   onTap: () {
+                                    ++attempts;
                                     if (option2 == correct) {
                                       setState(() {
                                         currentColor2 = Colors.green;
@@ -467,7 +470,7 @@ class _easygraphState extends State<easygraph> {
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
                                               fontSize:
-                                                  displayWidth(context) * 0.04,
+                                                  displayWidth(context) * 0.035,
                                               fontWeight: FontWeight.bold),
                                         ),
                                       ),
@@ -484,6 +487,7 @@ class _easygraphState extends State<easygraph> {
                                 padding: const EdgeInsets.only(top: 8.0),
                                 child: GestureDetector(
                                   onTap: () {
+                                    ++attempts;
                                     if (option3 == correct) {
                                       setState(() {
                                         if (mylist[i].isFirstAttemp) {
@@ -527,7 +531,7 @@ class _easygraphState extends State<easygraph> {
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
                                               fontSize:
-                                                  displayWidth(context) * 0.04,
+                                                  displayWidth(context) * 0.035,
                                               fontWeight: FontWeight.bold),
                                         ),
                                       ),
@@ -539,6 +543,7 @@ class _easygraphState extends State<easygraph> {
                                 padding: const EdgeInsets.only(top: 8.0),
                                 child: GestureDetector(
                                   onTap: () {
+                                    ++attempts;
                                     if (option4 == correct) {
                                       setState(() {
                                         if (mylist[i].isFirstAttemp) {
@@ -583,7 +588,7 @@ class _easygraphState extends State<easygraph> {
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
                                               fontSize:
-                                                  displayWidth(context) * 0.04,
+                                                  displayWidth(context) * 0.035,
                                               fontWeight: FontWeight.bold),
                                         ),
                                       ),
