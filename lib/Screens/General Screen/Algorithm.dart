@@ -116,7 +116,7 @@ class Algo_State extends State<Algo> {
                   child: Text(
                     listtoshow[index].title,
                     style: TextStyle(
-                        fontSize: displayWidth(context) * 0.045,
+                        fontSize: displayWidth(context) * 0.04,
                         fontFamily: "Fredoka One"),
                   ),
                 ),
