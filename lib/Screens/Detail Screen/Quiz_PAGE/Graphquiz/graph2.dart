@@ -1,15 +1,15 @@
-import 'package:CP_App/Providers/Quiz/graph/gr2.dart';
-import 'package:flutter/material.dart';
-import 'package:CP_App/Helpers/DeviceSize.dart';
-import 'package:provider/provider.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:CP_App/Helpers/DeviceSize.dart';
+import 'package:CP_App/Providers/Quiz/graph/gr2.dart';
 
-class mediumgraph extends StatefulWidget {
+class mediumgr extends StatefulWidget {
   @override
-  _mediumgraphState createState() => _mediumgraphState();
+  _mediumgrState createState() => _mediumgrState();
 }
 
-class _mediumgraphState extends State<mediumgraph> {
+class _mediumgrState extends State<mediumgr> {
   @override
   int i = 0;
   int correctanswer = 0;
@@ -24,6 +24,7 @@ class _mediumgraphState extends State<mediumgraph> {
 
   Widget build(BuildContext context) {
     final mylist = Provider.of<gr2>(context, listen: true).ListOfGraphquestions;
+    // final myObject = Provider.of<SingleQuizQuestion>(context);
 
     void _correctAnswerBottomSheet(context) {
       showModalBottomSheet(
@@ -155,7 +156,7 @@ class _mediumgraphState extends State<mediumgraph> {
           ? "CONGRATULATIONS "
           : "QUIZ OVER";
       String tag = (correctanswer > mylist.length / 2)
-          ? "Medium level cleared !!"
+          ? "medium level cleared !!"
           : "Better luck next time !";
       if (correctanswer >= mylist.length / 2)
         bgcolor = Colors.tealAccent[400];
@@ -285,7 +286,7 @@ class _mediumgraphState extends State<mediumgraph> {
 
     Widget MyQuizPage() {
       return Hero(
-          tag: "graphquiz",
+          tag: "Cquiz",
           child: Scaffold(
             body: Stack(
               alignment: Alignment.center,
@@ -317,7 +318,7 @@ class _mediumgraphState extends State<mediumgraph> {
                         ),
                         Center(
                           child: Text(
-                            "Graph QUIZ",
+                            "C QUIZ",
                             style: TextStyle(
                                 letterSpacing: 0.95,
                                 fontFamily: "BreeSerif",
@@ -345,7 +346,7 @@ class _mediumgraphState extends State<mediumgraph> {
                           problem,
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                              fontSize: displayWidth(context) * 0.06,
+                              fontSize: displayWidth(context) * 0.04,
                               color: Colors.black,
                               fontWeight: FontWeight.bold),
                         ),
@@ -370,6 +371,7 @@ class _mediumgraphState extends State<mediumgraph> {
                                 padding: const EdgeInsets.only(top: 8.0),
                                 child: GestureDetector(
                                   onTap: () {
+                                    ++attempts;
                                     if (option1 == correct) {
                                       setState(() {
                                         if (mylist[i].isFirstAttemp) {
@@ -412,7 +414,7 @@ class _mediumgraphState extends State<mediumgraph> {
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
                                               fontSize:
-                                                  displayWidth(context) * 0.04,
+                                                  displayWidth(context) * 0.035,
                                               fontWeight: FontWeight.bold),
                                         ),
                                       ),
@@ -424,6 +426,7 @@ class _mediumgraphState extends State<mediumgraph> {
                                 padding: const EdgeInsets.only(top: 8.0),
                                 child: GestureDetector(
                                   onTap: () {
+                                    ++attempts;
                                     if (option2 == correct) {
                                       setState(() {
                                         currentColor2 = Colors.green;
@@ -467,7 +470,7 @@ class _mediumgraphState extends State<mediumgraph> {
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
                                               fontSize:
-                                                  displayWidth(context) * 0.04,
+                                                  displayWidth(context) * 0.035,
                                               fontWeight: FontWeight.bold),
                                         ),
                                       ),
@@ -484,6 +487,7 @@ class _mediumgraphState extends State<mediumgraph> {
                                 padding: const EdgeInsets.only(top: 8.0),
                                 child: GestureDetector(
                                   onTap: () {
+                                    ++attempts;
                                     if (option3 == correct) {
                                       setState(() {
                                         if (mylist[i].isFirstAttemp) {
@@ -527,7 +531,7 @@ class _mediumgraphState extends State<mediumgraph> {
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
                                               fontSize:
-                                                  displayWidth(context) * 0.04,
+                                                  displayWidth(context) * 0.035,
                                               fontWeight: FontWeight.bold),
                                         ),
                                       ),
@@ -539,6 +543,7 @@ class _mediumgraphState extends State<mediumgraph> {
                                 padding: const EdgeInsets.only(top: 8.0),
                                 child: GestureDetector(
                                   onTap: () {
+                                    ++attempts;
                                     if (option4 == correct) {
                                       setState(() {
                                         if (mylist[i].isFirstAttemp) {
@@ -583,7 +588,7 @@ class _mediumgraphState extends State<mediumgraph> {
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
                                               fontSize:
-                                                  displayWidth(context) * 0.04,
+                                                  displayWidth(context) * 0.035,
                                               fontWeight: FontWeight.bold),
                                         ),
                                       ),
