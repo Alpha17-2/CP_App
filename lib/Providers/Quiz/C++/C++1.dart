@@ -10,6 +10,7 @@ class cplus1 extends ChangeNotifier {
       option3: "Class",
       option4: "String",
       correct: "Class",
+      isFirstAttemp: true,
     ),
 
     SingleQuizQuestion(
@@ -20,6 +21,7 @@ class cplus1 extends ChangeNotifier {
       option3: "delete[] ptr;",
       option4: "[]delete ptr;",
       correct: "delete[] ptr;",
+      isFirstAttemp: true,
     ),
     SingleQuizQuestion(
       question: "Escape sequence character '\0' occupies____amount of memory.?",
@@ -28,6 +30,7 @@ class cplus1 extends ChangeNotifier {
       option3: "2",
       option4: "4",
       correct: "1",
+      isFirstAttemp: true,
     ),
     SingleQuizQuestion(
       question: "Declaration a pointer more than once may cause___.?",
@@ -36,6 +39,7 @@ class cplus1 extends ChangeNotifier {
       option3: "Trap",
       option4: "Null",
       correct: "Trap",
+      isFirstAttemp: true,
     ),
     SingleQuizQuestion(
       question: "An expression A.B in c++ means___.?",
@@ -44,6 +48,7 @@ class cplus1 extends ChangeNotifier {
       option3: "Product of A and B",
       option4: "None of these",
       correct: "B is memeber of object A",
+      isFirstAttemp: true,
     ),
     SingleQuizQuestion(
       question: "Which operator has highest precedence in * / % ?",
@@ -52,6 +57,7 @@ class cplus1 extends ChangeNotifier {
       option3: "%",
       option4: "all have same precedence",
       correct: "all have same precedence",
+      isFirstAttemp: true,
     ),
     SingleQuizQuestion(
       question: "What is size of void in bytes?",
@@ -60,6 +66,7 @@ class cplus1 extends ChangeNotifier {
       option3: "4",
       option4: "0",
       correct: "0",
+      isFirstAttemp: true,
     ),
 
     //page 2

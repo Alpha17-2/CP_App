@@ -13,6 +13,7 @@ class cplus2 extends ChangeNotifier {
       option3: "read(ch)",
       option4: "scanf(ch)",
       correct: "cin.get(ch)",
+      isFirstAttemp: true,
     ),
 
     SingleQuizQuestion(
@@ -22,6 +23,7 @@ class cplus2 extends ChangeNotifier {
       option2: "Overloaded",
       option3: "Encapsulated",
       option4: "Reprehensible",
+      isFirstAttemp: true,
       correct: "Extensible",
     ),
     SingleQuizQuestion(
@@ -29,6 +31,7 @@ class cplus2 extends ChangeNotifier {
       option1: "+",
       option2: "-",
       option3: "*",
+      isFirstAttemp: true,
       option4: "::",
       correct: "::",
     ),
@@ -39,6 +42,7 @@ class cplus2 extends ChangeNotifier {
       option3: "asm",
       option4: "None of these",
       correct: "void",
+      isFirstAttemp: true,
     ),
 
     SingleQuizQuestion(
@@ -46,6 +50,7 @@ class cplus2 extends ChangeNotifier {
       option1: "calloc()",
       option2: "malloc()",
       option3: "allocate",
+      isFirstAttemp: true,
       option4: "New",
       correct: "New",
     ),
@@ -56,6 +61,7 @@ class cplus2 extends ChangeNotifier {
       option2: "Sealed class",
       option3: "Pure Local class",
       option4: "Abstract class",
+      isFirstAttemp: true,
       correct: "Abstract class",
     ),
     SingleQuizQuestion(
@@ -65,6 +71,7 @@ class cplus2 extends ChangeNotifier {
       option3: "Encapsulation",
       option4: "Both A and B",
       correct: "Inheritance",
+      isFirstAttemp: true,
     ),
   ];
 

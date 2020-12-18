@@ -192,8 +192,10 @@ class dshome extends StatelessWidget {
                     left: displayWidth(context) * 0.31,
                     child: GestureDetector(
                       onTap: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => null));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => classification()));
                       },
                       child: Card(
                         elevation: 20.0,
