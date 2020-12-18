@@ -4,12 +4,12 @@ import 'package:provider/provider.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
 import 'package:CP_App/Providers/Quiz/graph/gr3.dart';
 
-class hardgr extends StatefulWidget {
+class hardgraph extends StatefulWidget {
   @override
-  _hardgrState createState() => _hardgrState();
+  _hardgraphState createState() => _hardgraphState();
 }
 
-class _hardgrState extends State<hardgr> {
+class _hardgraphState extends State<hardgraph> {
   @override
   int i = 0;
   int correctanswer = 0;

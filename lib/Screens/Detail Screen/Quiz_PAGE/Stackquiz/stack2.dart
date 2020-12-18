@@ -4,12 +4,12 @@ import 'package:provider/provider.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
 import 'package:CP_App/Providers/Quiz/stack/st2.dart';
 
-class easystack extends StatefulWidget {
+class mediumstack extends StatefulWidget {
   @override
-  _easystackState createState() => _easystackState();
+  _mediumstackState createState() => _mediumstackState();
 }
 
-class _easystackState extends State<easystack> {
+class _mediumstackState extends State<mediumstack> {
   @override
   int i = 0;
   int correctanswer = 0;
@@ -156,7 +156,7 @@ class _easystackState extends State<easystack> {
           ? "CONGRATULATIONS "
           : "QUIZ OVER";
       String tag = (correctanswer > mylist.length / 2)
-          ? "Easy level cleared !!"
+          ? "medium level cleared !!"
           : "Better luck next time !";
       if (correctanswer >= mylist.length / 2)
         bgcolor = Colors.tealAccent[400];

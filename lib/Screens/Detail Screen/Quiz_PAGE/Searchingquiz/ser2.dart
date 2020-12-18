@@ -4,12 +4,12 @@ import 'package:provider/provider.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
 import 'package:CP_App/Providers/Quiz/searching/se2.dart';
 
-class easyse extends StatefulWidget {
+class mediumse extends StatefulWidget {
   @override
-  _easyseState createState() => _easyseState();
+  _mediumseState createState() => _mediumseState();
 }
 
-class _easyseState extends State<easyse> {
+class _mediumseState extends State<mediumse> {
   @override
   int i = 0;
   int correctanswer = 0;
@@ -157,7 +157,7 @@ class _easyseState extends State<easyse> {
           ? "CONGRATULATIONS "
           : "QUIZ OVER";
       String tag = (correctanswer > mylist.length / 2)
-          ? "Easy level cleared !!"
+          ? "medium level cleared !!"
           : "Better luck next time !";
       if (correctanswer >= mylist.length / 2)
         bgcolor = Colors.tealAccent[400];

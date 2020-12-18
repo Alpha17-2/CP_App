@@ -4,12 +4,12 @@ import 'package:provider/provider.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
 import 'package:CP_App/Providers/Quiz/graph/gr2.dart';
 
-class mediumgr extends StatefulWidget {
+class mediumgraph extends StatefulWidget {
   @override
-  _mediumgrState createState() => _mediumgrState();
+  _mediumgraphState createState() => _mediumgraphState();
 }
 
-class _mediumgrState extends State<mediumgr> {
+class _mediumgraphState extends State<mediumgraph> {
   @override
   int i = 0;
   int correctanswer = 0;

@@ -4,12 +4,12 @@ import 'package:provider/provider.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
 import 'package:CP_App/Providers/Quiz/linkedlist/ll1.dart';
 
-class easyll1 extends StatefulWidget {
+class easyll extends StatefulWidget {
   @override
-  _easyll1State createState() => _easyll1State();
+  _easyllState createState() => _easyllState();
 }
 
-class _easyll1State extends State<easyll1> {
+class _easyllState extends State<easyll> {
   @override
   int i = 0;
   int correctanswer = 0;

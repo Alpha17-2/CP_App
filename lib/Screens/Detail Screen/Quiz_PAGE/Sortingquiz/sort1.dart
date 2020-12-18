@@ -4,12 +4,12 @@ import 'package:provider/provider.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
 import 'package:CP_App/Providers/Quiz/sorting/srt1.dart';
 
-class easysrt extends StatefulWidget {
+class easysort extends StatefulWidget {
   @override
-  _easysrtState createState() => _easysrtState();
+  _easysortState createState() => _easysortState();
 }
 
-class _easysrtState extends State<easysrt> {
+class _easysortState extends State<easysort> {
   @override
   int i = 0;
   int correctanswer = 0;
