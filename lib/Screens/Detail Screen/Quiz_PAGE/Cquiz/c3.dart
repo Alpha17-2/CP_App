@@ -1,8 +1,8 @@
+import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
 import 'package:CP_App/Providers/Quiz/C/cl3list.dart';
-import 'package:percent_indicator/circular_percent_indicator.dart';
 
 class hardc extends StatefulWidget {
   @override
@@ -156,7 +156,7 @@ class _hardcState extends State<hardc> {
           ? "CONGRATULATIONS "
           : "QUIZ OVER";
       String tag = (correctanswer > mylist.length / 2)
-          ? "Hard level cleared !!"
+          ? "Easy level cleared !!"
           : "Better luck next time !";
       if (correctanswer >= mylist.length / 2)
         bgcolor = Colors.tealAccent[400];
@@ -297,56 +297,49 @@ class _hardcState extends State<hardc> {
                     color: Colors.deepPurple,
                     height: displayHeight(context) * 0.35,
                     width: displayWidth(context) * 1.0,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Padding(
-                              padding:
-                                  const EdgeInsets.only(top: 20.0, left: 8.0),
-                              child: IconButton(
-                                  iconSize: displayHeight(context) * 0.035,
-                                  icon: Icon(Icons.arrow_back),
-                                  onPressed: () {
-                                    Navigator.of(context).pop();
-                                  }),
-                            ),
-                          ],
-                        ),
-                        Center(
-                          child: Text(
-                            "C QUIZ",
-                            style: TextStyle(
-                                letterSpacing: 0.95,
-                                fontFamily: "BreeSerif",
-                                fontSize: displayWidth(context) * 0.09,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.yellow),
-                          ),
-                        ),
-                      ],
+                  ),
+                ),
+                Positioned(
+                  top: displayHeight(context) * 0.03,
+                  left: displayWidth(context) * 0.01,
+                  child: IconButton(
+                    iconSize: displayHeight(context) * 0.035,
+                    icon: Icon(Icons.arrow_back),
+                    onPressed: () {
+                      Navigator.of(context).pop();
+                    },
+                  ),
+                ),
+                Positioned(
+                  top: displayHeight(context) * 0.035,
+                  child: Center(
+                    child: Text(
+                      "C QUIZ",
+                      style: TextStyle(
+                          letterSpacing: 0.95,
+                          fontFamily: "BreeSerif",
+                          fontSize: displayWidth(context) * 0.09,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.yellow),
                     ),
                   ),
                 ),
                 Positioned(
-                  top: displayHeight(context) * 0.2,
+                  top: displayHeight(context) * 0.12,
                   child: Card(
                     elevation: 16.0,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15.0)),
                     color: Colors.white,
                     child: Container(
-                      height: displayHeight(context) * 0.28,
+                      height: displayHeight(context) * 0.37,
                       width: displayWidth(context) * 0.85,
                       child: Center(
                         child: Text(
                           problem,
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                              fontSize: displayWidth(context) * 0.06,
+                              fontSize: displayWidth(context) * 0.04,
                               color: Colors.black,
                               fontWeight: FontWeight.bold),
                         ),
@@ -371,6 +364,7 @@ class _hardcState extends State<hardc> {
                                 padding: const EdgeInsets.only(top: 8.0),
                                 child: GestureDetector(
                                   onTap: () {
+                                    ++attempts;
                                     if (option1 == correct) {
                                       setState(() {
                                         if (mylist[i].isFirstAttemp) {
@@ -413,7 +407,7 @@ class _hardcState extends State<hardc> {
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
                                               fontSize:
-                                                  displayWidth(context) * 0.04,
+                                                  displayWidth(context) * 0.035,
                                               fontWeight: FontWeight.bold),
                                         ),
                                       ),
@@ -425,6 +419,7 @@ class _hardcState extends State<hardc> {
                                 padding: const EdgeInsets.only(top: 8.0),
                                 child: GestureDetector(
                                   onTap: () {
+                                    ++attempts;
                                     if (option2 == correct) {
                                       setState(() {
                                         currentColor2 = Colors.green;
@@ -468,7 +463,7 @@ class _hardcState extends State<hardc> {
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
                                               fontSize:
-                                                  displayWidth(context) * 0.04,
+                                                  displayWidth(context) * 0.035,
                                               fontWeight: FontWeight.bold),
                                         ),
                                       ),
@@ -485,6 +480,7 @@ class _hardcState extends State<hardc> {
                                 padding: const EdgeInsets.only(top: 8.0),
                                 child: GestureDetector(
                                   onTap: () {
+                                    ++attempts;
                                     if (option3 == correct) {
                                       setState(() {
                                         if (mylist[i].isFirstAttemp) {
@@ -528,7 +524,7 @@ class _hardcState extends State<hardc> {
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
                                               fontSize:
-                                                  displayWidth(context) * 0.04,
+                                                  displayWidth(context) * 0.035,
                                               fontWeight: FontWeight.bold),
                                         ),
                                       ),
@@ -540,6 +536,7 @@ class _hardcState extends State<hardc> {
                                 padding: const EdgeInsets.only(top: 8.0),
                                 child: GestureDetector(
                                   onTap: () {
+                                    ++attempts;
                                     if (option4 == correct) {
                                       setState(() {
                                         if (mylist[i].isFirstAttemp) {
@@ -584,7 +581,7 @@ class _hardcState extends State<hardc> {
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
                                               fontSize:
-                                                  displayWidth(context) * 0.04,
+                                                  displayWidth(context) * 0.035,
                                               fontWeight: FontWeight.bold),
                                         ),
                                       ),
