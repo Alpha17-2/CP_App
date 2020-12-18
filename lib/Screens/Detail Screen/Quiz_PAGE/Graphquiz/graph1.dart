@@ -4,12 +4,12 @@ import 'package:provider/provider.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
 import 'package:CP_App/Providers/Quiz/graph/gr1.dart';
 
-class easygr extends StatefulWidget {
+class easygraph extends StatefulWidget {
   @override
-  _easygrState createState() => _easygrState();
+  _easygraphState createState() => _easygraphState();
 }
 
-class _easygrState extends State<easygr> {
+class _easygraphState extends State<easygraph> {
   @override
   int i = 0;
   int correctanswer = 0;

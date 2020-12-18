@@ -4,12 +4,12 @@ import 'package:provider/provider.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
 import 'package:CP_App/Providers/Quiz/sorting/srt2.dart';
 
-class easysrt extends StatefulWidget {
+class mediumsort extends StatefulWidget {
   @override
-  _easysrtState createState() => _easysrtState();
+  _mediumsortState createState() => _mediumsortState();
 }
 
-class _easysrtState extends State<easysrt> {
+class _mediumsortState extends State<mediumsort> {
   @override
   int i = 0;
   int correctanswer = 0;
@@ -157,7 +157,7 @@ class _easysrtState extends State<easysrt> {
           ? "CONGRATULATIONS "
           : "QUIZ OVER";
       String tag = (correctanswer > mylist.length / 2)
-          ? "Easy level cleared !!"
+          ? "medium level cleared !!"
           : "Better luck next time !";
       if (correctanswer >= mylist.length / 2)
         bgcolor = Colors.tealAccent[400];
