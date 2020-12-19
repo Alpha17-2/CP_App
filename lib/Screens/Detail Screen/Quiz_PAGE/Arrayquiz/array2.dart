@@ -156,13 +156,14 @@ class _mediumarrayState extends State<mediumarray> {
           ? "CONGRATULATIONS "
           : "QUIZ OVER";
       String tag = (correctanswer > mylist.length / 2)
-          ? "medium level cleared !!"
+          ? "Easy level cleared !!"
           : "Better luck next time !";
       if (correctanswer >= mylist.length / 2)
         bgcolor = Colors.tealAccent[400];
       else
         bgcolor = Colors.red[300];
       double percenntage = (correctanswer / mylist.length) * 100;
+      int p = percenntage.toInt();
       return Scaffold(
         body: Stack(
           alignment: Alignment.center,
@@ -205,7 +206,7 @@ class _mediumarrayState extends State<mediumarray> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Text(percenntage.toString().substring(0, 5) + " %",
+                      Text(p.toString() + " %",
                           style: TextStyle(
                             fontSize: displayWidth(context) * 0.0475,
                             fontWeight: FontWeight.w600,
@@ -318,7 +319,7 @@ class _mediumarrayState extends State<mediumarray> {
                         ),
                         Center(
                           child: Text(
-                            "C QUIZ",
+                            "ARRAY QUIZ",
                             style: TextStyle(
                                 letterSpacing: 0.95,
                                 fontFamily: "BreeSerif",

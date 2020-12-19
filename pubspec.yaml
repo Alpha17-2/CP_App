@@ -226,7 +226,11 @@ flutter:
       - images/cflogo.png
       - images/tclogo.jpeg
       - images/aclogo.png
-      
+      - images/ts1.png
+      - images/ts2.png
+      - images/ts3.png
+      - images/ts4.png
+      - images/ts5.png
       - images/CSES2.jpg
       - images/pros.jpg
       - images/adv.jpg

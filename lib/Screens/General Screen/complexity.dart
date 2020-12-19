@@ -1,3 +1,4 @@
+import 'package:CP_App/Screens/Detail%20Screen/TimeComplexity/Timecomplexity.dart';
 import 'package:flutter/material.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
 
@@ -82,12 +83,36 @@ class complexity extends StatelessWidget {
                               ),
                               mydiv,
                               Row(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  FlatButton(onPressed: null, child: Text(""))
-                                ],
-                              )
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    GestureDetector(
+                                      onTap: () {
+                                        Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    timecomplexity()));
+                                      },
+                                      child: Card(
+                                        elevation: 15.0,
+                                        shape: RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(8.0)),
+                                        child: Padding(
+                                          padding: EdgeInsets.all(8.0),
+                                          child: Text(
+                                            "Types",
+                                            style: TextStyle(
+                                                fontSize:
+                                                    displayWidth(context) *
+                                                        0.038),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    Card(),
+                                  ])
                             ],
                           ),
                         ),

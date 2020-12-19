@@ -40,6 +40,7 @@ import 'package:CP_App/Providers/Quiz/tree/t1.dart';
 import 'package:CP_App/Providers/Quiz/tree/t2.dart';
 import 'package:CP_App/Providers/Quiz/tree/t3.dart';
 import 'package:CP_App/Providers/Algorithms/algocardlist.dart';
+import 'package:CP_App/Providers/TimeSpace/timespacelist.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:CP_App/Screens/Display%20Screens/Splash.dart';
@@ -109,6 +110,9 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (context) => dplist()),
         ChangeNotifierProvider(create: (context) => mathlist()),
         ChangeNotifierProvider(create: (context) => sortlist()),
+        ChangeNotifierProvider(
+          create: (context) => tslist(),
+        ),
       ],
       child: MaterialApp(
         theme: ThemeData(
