@@ -222,8 +222,7 @@ class Algo_State extends State<Algo> {
               color: Colors.white,
             ),
             child: Padding(
-              padding:
-                  EdgeInsets.only(top: 30, bottom: 30, left: 30, right: 30),
+              padding: EdgeInsets.all(30.0),
               child: ListView.builder(
                   itemCount: listtoshow.length,
                   itemBuilder: (context, index) {

@@ -49,13 +49,7 @@ class timecomplexity_State extends State<timecomplexity> {
           "1.Sorting algorithms like Bubble Sort, Selection Sort and Insertion Sort.",
       "Exponential": "1. Finding subsets",
     };
-    final code = {
-      "Constant": "",
-      "Linear": "",
-      "Logarithmic": "",
-      "Quadratic": "",
-      "Exponential": "",
-    };
+
     final alist = Provider.of<tslist>(context).list;
 
     final problemtitlestyle = TextStyle(
@@ -261,7 +255,13 @@ class timecomplexity_State extends State<timecomplexity> {
                       fontSize: displayWidth(context) * 0.038,
                       fontWeight: FontWeight.w500,
                     ),
-                  )
+                  ),
+                  Opacity(
+                    opacity: 0.0,
+                    child: Divider(
+                      height: displayHeight(context) * 0.02,
+                    ),
+                  ),
                 ],
               ),
             ),

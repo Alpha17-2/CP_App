@@ -1,6 +1,7 @@
 import 'package:CP_App/Screens/Detail%20Screen/TimeComplexity/Timecomplexity.dart';
 import 'package:flutter/material.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
+import 'package:CP_App/Screens/Detail Screen/TimeComplexity/notations.dart';
 
 class complexity extends StatelessWidget {
   @override
@@ -111,7 +112,31 @@ class complexity extends StatelessWidget {
                                         ),
                                       ),
                                     ),
-                                    Card(),
+                                    GestureDetector(
+                                      onTap: () {
+                                        Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    notations()));
+                                      },
+                                      child: Card(
+                                        elevation: 15.0,
+                                        shape: RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(8.0)),
+                                        child: Padding(
+                                          padding: EdgeInsets.all(8.0),
+                                          child: Text(
+                                            "Notations",
+                                            style: TextStyle(
+                                                fontSize:
+                                                    displayWidth(context) *
+                                                        0.038),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
                                   ])
                             ],
                           ),
