@@ -149,7 +149,7 @@ class notations extends StatelessWidget {
               top: displayHeight(context) * 0.05,
               child: Center(
                 child: Text(
-                  "Asymtomatic \nNotations",
+                  "Asymptotic \nNotations",
                   style: TextStyle(
                     fontFamily: "PatuaOne",
                     fontSize: displayWidth(context) * 0.08,

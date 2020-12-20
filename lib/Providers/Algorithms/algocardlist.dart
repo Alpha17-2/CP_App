@@ -3,12 +3,12 @@ import 'singlealgocard.dart';
 
 class algocardlist extends ChangeNotifier {
   List<singlealgocard> list_of_cards = [
-    singlealgocard(title: "Graph", isSelected: true, mycolor: Colors.red[200]),
+    singlealgocard(title: "Basic", isSelected: true, mycolor: Colors.red[200]),
+    singlealgocard(title: "Graph", isSelected: false, mycolor: Colors.white),
     singlealgocard(title: "DP", isSelected: false, mycolor: Colors.white),
+    singlealgocard(title: "Sorting", isSelected: false, mycolor: Colors.white),
     singlealgocard(
-        title: "Sorting &\nSearching",
-        isSelected: false,
-        mycolor: Colors.white),
+        title: "Searching", isSelected: false, mycolor: Colors.white),
     singlealgocard(title: "Maths", isSelected: false, mycolor: Colors.white),
     singlealgocard(title: "DS", isSelected: false, mycolor: Colors.white),
   ];

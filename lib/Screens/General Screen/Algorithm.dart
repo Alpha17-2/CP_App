@@ -1,7 +1,9 @@
+import 'package:CP_App/Providers/Algorithms/basic.dart';
 import 'package:CP_App/Providers/Algorithms/dplist.dart';
 import 'package:CP_App/Providers/Algorithms/dslist.dart';
 import 'package:CP_App/Providers/Algorithms/graphlist.dart';
 import 'package:CP_App/Providers/Algorithms/mathlist.dart';
+import 'package:CP_App/Providers/Algorithms/search.dart';
 import 'package:CP_App/Providers/Algorithms/sortlist.dart';
 import 'package:flutter/material.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
@@ -16,7 +18,7 @@ class Algo extends StatefulWidget {
 
 class Algo_State extends State<Algo> {
   @override
-  var currentProblem = "Graph";
+  var currentProblem = "Basic";
   var listtoshow = [];
 
   Widget build(BuildContext context) {
@@ -29,10 +31,12 @@ class Algo_State extends State<Algo> {
     final graph = Provider.of<graphlist>(context).list;
     final dp = Provider.of<dplist>(context).list;
     final sort = Provider.of<sortlist>(context).list;
+    final search = Provider.of<searchlist>(context).list;
     final maths = Provider.of<mathlist>(context).list;
     final ds = Provider.of<dslist>(context).list;
+    final basic = Provider.of<basiclist>(context).list;
     if (listtoshow.length == 0) {
-      listtoshow = graph;
+      listtoshow = basic;
     }
 
     final problemtitlestyle = TextStyle(
@@ -51,14 +55,18 @@ class Algo_State extends State<Algo> {
               currentProblem = alist[index].title;
               if (currentProblem == "Graph")
                 listtoshow = graph;
+              else if (currentProblem == "Basic")
+                listtoshow = basic;
               else if (currentProblem == "DP")
                 listtoshow = dp;
+              else if (currentProblem == "Sorting")
+                listtoshow = sort;
               else if (currentProblem == "Maths")
                 listtoshow = maths;
               else if (currentProblem == "DS")
                 listtoshow = ds;
               else
-                listtoshow = sort;
+                listtoshow = search;
 
               for (int k = 0; k < alist.length; k++) {
                 if (k != index) alist[k].reverse();
@@ -224,10 +232,11 @@ class Algo_State extends State<Algo> {
             child: Padding(
               padding: EdgeInsets.all(30.0),
               child: ListView.builder(
-                  itemCount: listtoshow.length,
-                  itemBuilder: (context, index) {
-                    return MyAlgorithms(index);
-                  }),
+                itemCount: listtoshow.length,
+                itemBuilder: (context, index) {
+                  return MyAlgorithms(index);
+                },
+              ),
             ),
           ),
         ),

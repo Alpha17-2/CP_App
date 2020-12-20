@@ -1,7 +1,9 @@
+import 'package:CP_App/Providers/Algorithms/basic.dart';
 import 'package:CP_App/Providers/Algorithms/dplist.dart';
 import 'package:CP_App/Providers/Algorithms/dslist.dart';
 import 'package:CP_App/Providers/Algorithms/graphlist.dart';
 import 'package:CP_App/Providers/Algorithms/mathlist.dart';
+import 'package:CP_App/Providers/Algorithms/search.dart';
 import 'package:CP_App/Providers/Algorithms/sortlist.dart';
 import 'package:CP_App/Providers/Quiz/C++/C++1.dart';
 import 'package:CP_App/Providers/Quiz/C++/C++2.dart';
@@ -110,6 +112,10 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (context) => dplist()),
         ChangeNotifierProvider(create: (context) => mathlist()),
         ChangeNotifierProvider(create: (context) => sortlist()),
+        ChangeNotifierProvider(create: (context) => basiclist()),
+        ChangeNotifierProvider(
+          create: (context) => searchlist(),
+        ),
         ChangeNotifierProvider(
           create: (context) => tslist(),
         ),

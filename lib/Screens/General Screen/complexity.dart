@@ -143,7 +143,71 @@ class complexity extends StatelessWidget {
                         ),
                       ),
                       mydiv2,
-                      mydiv2,
+                      Card(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15.0)),
+                        elevation: 15.0,
+                        // color: Color(0xfbbE6E6FA),
+                        child: Padding(
+                          padding: const EdgeInsets.all(16.0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                '• Space Complexity :',
+                                style: TextStyle(
+                                    fontSize: k,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.blue[900],
+                                    fontFamily: 'Acme'),
+                              ),
+                              mydiv,
+                              Text(
+                                'Space complexity is an amount of memory used by the algorithm (including the input values of the algorithm), to execute it completely and produce the result.',
+                                style: TextStyle(
+                                    fontSize: s, fontWeight: FontWeight.w500),
+                              ),
+                              mydiv,
+                              Text(
+                                "Memory usage during program execution",
+                                style: TextStyle(
+                                    fontSize: s,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.red),
+                              ),
+                              mydiv,
+                              Text(
+                                '1.	Instruction Space is used to save compiled instruction in the memory.',
+                                style: TextStyle(
+                                    fontSize: s, fontWeight: FontWeight.w400),
+                              ),
+                              Opacity(
+                                opacity: 0.0,
+                                child: Divider(
+                                  height: displayHeight(context) * 0.005,
+                                ),
+                              ),
+                              Text(
+                                '2.	Environmental Stack is used to storing the addresses while a module calls another module or functions during execution.',
+                                style: TextStyle(
+                                    fontSize: s, fontWeight: FontWeight.w400),
+                              ),
+                              Opacity(
+                                opacity: 0.0,
+                                child: Divider(
+                                  height: displayHeight(context) * 0.005,
+                                ),
+                              ),
+                              Text(
+                                '3.	Data space is used to store data, variables, and constants which are stored by the program and it is updated during execution.',
+                                style: TextStyle(
+                                    fontSize: s, fontWeight: FontWeight.w400),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 ),
@@ -160,14 +224,14 @@ class complexity extends StatelessWidget {
                 onPressed: () {
                   Navigator.pop(context);
                 }),
-            top: displayHeight(context) * 0.045,
+            top: displayHeight(context) * 0.064,
             left: displayWidth(context) * 0.02,
           ),
           Positioned(
-              top: displayHeight(context) * 0.1,
+              top: displayHeight(context) * 0.065,
               child: Center(
                 child: Text(
-                  "Time &\nSpace Complexity",
+                  "Time & Space \nComplexity",
                   style: TextStyle(
                     fontFamily: "PatuaOne",
                     fontSize: displayWidth(context) * 0.08,
