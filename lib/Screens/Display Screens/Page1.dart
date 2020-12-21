@@ -1,4 +1,5 @@
 import 'package:CP_App/Screens/General%20Screen/Algorithm.dart';
+import 'package:CP_App/Screens/General%20Screen/C++%20Stl.dart';
 import 'package:CP_App/Screens/General%20Screen/complexity.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
@@ -638,61 +639,69 @@ class _Page1State extends State<Page1> {
 
                       // End of Card 4
 
-                      Card(
-                        // Card 5 => Quiz
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20.0)),
-                        elevation: 8.0,
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Cplusstl()));
+                        },
+                        child: Card(
+                          // Card 5 => STL
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20.0)),
+                          elevation: 8.0,
 
-                        child: ClipPath(
-                          child: Container(
-                            decoration: BoxDecoration(
-                                gradient: LinearGradient(
-                              begin: Alignment.bottomLeft,
-                              end: Alignment.topRight,
-                              colors: [
-                                Color(0xfbba8ff78),
-                                Color(0xfbb78ffd6),
-                              ],
-                            )),
-                            height: displayHeight(context) * 0.12,
-                            width: displayWidth(context) * 0.235,
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Column(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceEvenly,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  CircleAvatar(
-                                    backgroundColor: Colors.red[300],
-                                    backgroundImage:
-                                        AssetImage("images/stl.jpg"),
-                                    radius: displayWidth(context) * 0.045,
-                                  ),
-                                  Opacity(
-                                    opacity: 0.0,
-                                    child: Divider(
-                                      height: displayHeight(context) * 0.002,
-                                    ),
-                                  ),
-                                  Text(
-                                    "C++ STL",
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      color: Colors.black,
-                                      letterSpacing: 0.65,
-                                      fontSize: displayWidth(context) * 0.03,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  )
+                          child: ClipPath(
+                            child: Container(
+                              decoration: BoxDecoration(
+                                  gradient: LinearGradient(
+                                begin: Alignment.bottomLeft,
+                                end: Alignment.topRight,
+                                colors: [
+                                  Color(0xfbba8ff78),
+                                  Color(0xfbb78ffd6),
                                 ],
+                              )),
+                              height: displayHeight(context) * 0.12,
+                              width: displayWidth(context) * 0.235,
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    CircleAvatar(
+                                      backgroundColor: Colors.red[300],
+                                      backgroundImage:
+                                          AssetImage("images/stl.jpg"),
+                                      radius: displayWidth(context) * 0.045,
+                                    ),
+                                    Opacity(
+                                      opacity: 0.0,
+                                      child: Divider(
+                                        height: displayHeight(context) * 0.002,
+                                      ),
+                                    ),
+                                    Text(
+                                      "C++ STL",
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                        color: Colors.black,
+                                        letterSpacing: 0.65,
+                                        fontSize: displayWidth(context) * 0.03,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    )
+                                  ],
+                                ),
                               ),
                             ),
+                            clipper: ShapeBorderClipper(
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(20.0))),
                           ),
-                          clipper: ShapeBorderClipper(
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(20.0))),
                         ),
                       ),
                       // End of Card 5

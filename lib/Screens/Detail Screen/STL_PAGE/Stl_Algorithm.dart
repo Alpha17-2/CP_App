@@ -6,17 +6,19 @@ class Stl_Algo extends StatelessWidget {
   Widget build(BuildContext context) {
     final headingStyle = TextStyle(
         color: Colors.purple[800],
-        fontSize: displayWidth(context) * 0.07,
+        fontSize: displayWidth(context) * 0.045,
         fontWeight: FontWeight.bold);
     final subheadingstyle = TextStyle(
-        color: Colors.orange[800],
-        fontSize: displayWidth(context) * 0.05,
-        fontWeight: FontWeight.bold);
+      color: Colors.orange[800],
+      fontFamily: "PatuaOne",
+      fontSize: displayWidth(context) * 0.04,
+      // fontWeight: FontWeight.bold
+    );
     final normalTextStyle = TextStyle(
       color: Colors.black,
-      fontSize: displayWidth(context) * 0.045,
+      fontSize: displayWidth(context) * 0.036,
     );
-    double fontSize = displayWidth(context) * 0.045;
+    double fontSize = displayWidth(context) * 0.036;
     double smallDivider = displayHeight(context) * 0.02;
     var introText1 =
         "They are extremely useful in Competitive programming as they eliminate our need to write the code manually for performing some basic operations like sorting or binary searching.\n\nSTL consists of ocean of algorithms. But we have to include header file ";
@@ -34,7 +36,7 @@ class Stl_Algo extends StatelessWidget {
             children: <TextSpan>[
           new TextSpan(
             text:
-                "A particular element can be searched in a vector with the help of ",
+                "• A particular element can be searched in a vector with the help of ",
           ),
           new TextSpan(
             text: "find()",
@@ -42,7 +44,7 @@ class Stl_Algo extends StatelessWidget {
           ),
           new TextSpan(
               text:
-                  " function. This takes three arguments start address , end address and the value to be searched. It returns an iterator pointing to the value which is being searched.")
+                  " function.\n• This takes three arguments start address , end address and the value to be searched.\n• It returns an iterator pointing to the value which is being searched.")
         ]));
     final SearchNote = new RichText(
         text: TextSpan(
@@ -53,31 +55,32 @@ class Stl_Algo extends StatelessWidget {
             children: <TextSpan>[
           new TextSpan(
             text: "Here ",
-            style: TextStyle(fontWeight: FontWeight.bold),
+            style: TextStyle(
+                //fontWeight: FontWeight.bold
+                ),
           ),
           new TextSpan(
             text: "start ",
-            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.teal),
           ),
           new TextSpan(
             text: "is the address of the first element and ",
-            style: TextStyle(fontWeight: FontWeight.bold),
+            style: TextStyle(
+                //fontWeight: FontWeight.bold
+                ),
           ),
-          new TextSpan(
-            text: "end ",
-            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.teal),
-          ),
+          new TextSpan(),
           new TextSpan(
             text: " is the address of the second element and ",
-            style: TextStyle(fontWeight: FontWeight.bold),
+            style: TextStyle(//fontWeight: FontWeight.bold
+                ),
           ),
           new TextSpan(
             text: "value ",
-            style: TextStyle(color: Colors.teal, fontWeight: FontWeight.bold),
           ),
           new TextSpan(
             text: "is the element which is to be searched.",
-            style: TextStyle(fontWeight: FontWeight.bold),
+            style: TextStyle(//fontWeight: FontWeight.bold
+                ),
           ),
         ]));
     final SearchingDetails = new RichText(
@@ -111,8 +114,10 @@ class Stl_Algo extends StatelessWidget {
           ),
           new TextSpan(
               text: "O(N log N)",
-              style:
-                  TextStyle(color: Colors.teal, fontWeight: FontWeight.bold)),
+              style: TextStyle(
+                  //color: Colors.teal,
+                  //fontWeight: FontWeight.bold
+                  )),
           new TextSpan(text: " where N is the size of data structure.")
         ],
       ),
@@ -123,13 +128,7 @@ class Stl_Algo extends StatelessWidget {
         children: <TextSpan>[
           new TextSpan(
               text:
-                  "Sorting means arranging the data either in increasing or non increasing order. We can apply various types of sorting algorithms such as "),
-          new TextSpan(
-              text:
-                  "Insertion sort , Selection sort , Bubble sort , Quick sort , Radix sort , Heap sort ",
-              style: new TextStyle(
-                  color: Colors.orange, fontWeight: FontWeight.bold)),
-          new TextSpan(text: "inorder to sort our data.\n\n"),
+                  "Sorting means arranging the data either in increasing or non increasing order."),
           new TextSpan(text: "STL provides an inbuilt function named "),
           new TextSpan(
               text: "sort() ",
@@ -140,22 +139,21 @@ class Stl_Algo extends StatelessWidget {
           new TextSpan(text: "to sort the data.\n\n"),
           new TextSpan(
               text:
-                  "This function accepts two arguments i.e. starting and end address of the container in which sorting is performed if sorting is to be preformed in increasing order.But one more parameter is added to it if sorting is to be performed in decreasing order.\n\n"),
-          new TextSpan(
-              text: "Syntax : \n\n",
-              style: TextStyle(
-                  fontWeight: FontWeight.bold, color: Colors.black54)),
+                  "This function accepts two arguments i.e. starting and end address of the container in which sorting is performed if sorting is to be preformed in increasing order.\n"),
           new TextSpan(
             text: " sort(first , last)",
-            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.teal),
+            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.red),
           ),
           new TextSpan(
-            text: " - Increasing Order.\n",
+            text: " - Increasing Order.\n\n",
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
           new TextSpan(
+              text:
+                  "One more parameter is added to it if sorting is to be performed in decreasing order.\n"),
+          new TextSpan(
             text: " sort(first , last , greater<int>()) ",
-            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.teal),
+            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.red),
           ),
           new TextSpan(
             text: "- Decreasing Order.\n\n",
@@ -163,28 +161,28 @@ class Stl_Algo extends StatelessWidget {
           ),
           new TextSpan(
             text: "Here ",
-            style: TextStyle(fontWeight: FontWeight.bold),
           ),
           new TextSpan(
             text: "First ",
-            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.teal),
           ),
           new TextSpan(
             text: "is the address of the first element and ",
-            style: TextStyle(fontWeight: FontWeight.bold),
           ),
           new TextSpan(
             text: "Second ",
-            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.teal),
           ),
           new TextSpan(
             text: "is the address of the second element.",
-            style: TextStyle(fontWeight: FontWeight.bold),
           ),
           new TextSpan(
               text: "\n\nSorting for various data structures:- \n",
               style: TextStyle(
-                  fontWeight: FontWeight.bold, color: Colors.black54)),
+                //fontWeight: FontWeight.bold,
+                color: Colors.blue[900],
+                fontFamily: "PatuaOne",
+                fontSize: displayWidth(context) * 0.045,
+                //color: Colors.black54
+              )),
         ],
       ),
     );
@@ -236,9 +234,9 @@ class Stl_Algo extends StatelessWidget {
                 "There are various types of algorithms such as :-",
                 style: TextStyle(
                     color: Colors.blue[900],
-                    fontFamily: "CreteRound",
-                    fontWeight: FontWeight.bold,
-                    fontSize: displayWidth(context) * 0.055),
+                    fontFamily: "PatuaOne",
+                    //fontWeight: FontWeight.bold,
+                    fontSize: displayWidth(context) * 0.045),
               ),
               Opacity(
                 opacity: 0.0,
@@ -259,44 +257,18 @@ class Stl_Algo extends StatelessWidget {
               Sortingdetailtext,
               Text(
                 "1. Arrays :- ",
-                style:
-                    TextStyle(fontSize: fontSize, fontWeight: FontWeight.bold),
+                style: TextStyle(
+                  fontSize: displayWidth(context) * 0.045,
+                  fontWeight: FontWeight.bold,
+                  //color: Colors.red
+                ),
               ),
               Text(
                 "Suppose an array A containing n Integers. Then sorting can be performed in the following ways ",
                 style: normalTextStyle,
               ),
               Text(
-                "• Increasing Order : ",
-                style:
-                    TextStyle(fontSize: fontSize, fontWeight: FontWeight.bold),
-              ),
-              Opacity(
-                opacity: 0.0,
-                child: Divider(
-                  height: displayHeight(context) * 0.001,
-                ),
-              ),
-              Text(
-                "   sort(A,A+n)",
-                style: TextStyle(
-                    color: Colors.red,
-                    fontSize: displayWidth(context) * 0.045,
-                    fontWeight: FontWeight.bold),
-              ),
-              Text(
-                "• Decreasing Order : ",
-                style:
-                    TextStyle(fontSize: fontSize, fontWeight: FontWeight.bold),
-              ),
-              Opacity(
-                opacity: 0.0,
-                child: Divider(
-                  height: displayHeight(context) * 0.001,
-                ),
-              ),
-              Text(
-                "   sort(A,A+n,greater<int>())",
+                "sort( A, A+n )",
                 style: TextStyle(
                     color: Colors.red,
                     fontSize: displayWidth(context) * 0.045,
@@ -310,44 +282,18 @@ class Stl_Algo extends StatelessWidget {
               ),
               Text(
                 "2. Vector :- ",
-                style:
-                    TextStyle(fontSize: fontSize, fontWeight: FontWeight.bold),
+                style: TextStyle(
+                  fontSize: displayWidth(context) * 0.045,
+                  fontWeight: FontWeight.bold,
+                  // color: Colors.red
+                ),
               ),
               Text(
                 "Suppose a vector A containing n Integers. Then sorting can be performed in the following ways ",
                 style: normalTextStyle,
               ),
               Text(
-                "• Increasing Order : ",
-                style:
-                    TextStyle(fontSize: fontSize, fontWeight: FontWeight.bold),
-              ),
-              Opacity(
-                opacity: 0.0,
-                child: Divider(
-                  height: displayHeight(context) * 0.001,
-                ),
-              ),
-              Text(
-                "   sort(A.begin(),A.end())",
-                style: TextStyle(
-                    color: Colors.red,
-                    fontSize: displayWidth(context) * 0.045,
-                    fontWeight: FontWeight.bold),
-              ),
-              Text(
-                "• Decreasing Order : ",
-                style:
-                    TextStyle(fontSize: fontSize, fontWeight: FontWeight.bold),
-              ),
-              Opacity(
-                opacity: 0.0,
-                child: Divider(
-                  height: displayHeight(context) * 0.001,
-                ),
-              ),
-              Text(
-                "   sort(A.begin(),A.end(),greater<int>())",
+                "sort( A.begin(), A.end() )",
                 style: TextStyle(
                     color: Colors.red,
                     fontSize: displayWidth(context) * 0.045,
@@ -361,44 +307,18 @@ class Stl_Algo extends StatelessWidget {
               ),
               Text(
                 "3. Strings :- ",
-                style:
-                    TextStyle(fontSize: fontSize, fontWeight: FontWeight.bold),
+                style: TextStyle(
+                  fontSize: displayWidth(context) * 0.045,
+                  fontWeight: FontWeight.bold,
+                  // color: Colors.red
+                ),
               ),
               Text(
                 "Suppose a string A consisting of n characters. Then sorting can be performed in the following ways ",
                 style: normalTextStyle,
               ),
               Text(
-                "• Increasing Order : ",
-                style:
-                    TextStyle(fontSize: fontSize, fontWeight: FontWeight.bold),
-              ),
-              Opacity(
-                opacity: 0.0,
-                child: Divider(
-                  height: displayHeight(context) * 0.001,
-                ),
-              ),
-              Text(
-                "   sort(A.begin(),A.end())",
-                style: TextStyle(
-                    color: Colors.red,
-                    fontSize: displayWidth(context) * 0.045,
-                    fontWeight: FontWeight.bold),
-              ),
-              Text(
-                "• Decreasing Order : ",
-                style:
-                    TextStyle(fontSize: fontSize, fontWeight: FontWeight.bold),
-              ),
-              Opacity(
-                opacity: 0.0,
-                child: Divider(
-                  height: displayHeight(context) * 0.001,
-                ),
-              ),
-              Text(
-                "   sort(A.begin(),A.end(),greater<int>())",
+                "sort( A.begin(), A.end() )",
                 style: TextStyle(
                     color: Colors.red,
                     fontSize: displayWidth(context) * 0.045,
@@ -407,7 +327,7 @@ class Stl_Algo extends StatelessWidget {
               Opacity(
                 opacity: 0.0,
                 child: Divider(
-                  height: displayHeight(context) * 0.007,
+                  height: smallDivider,
                 ),
               ),
               NoteForSorting,
@@ -437,9 +357,10 @@ class Stl_Algo extends StatelessWidget {
               Text(
                 "Searching can be performed in two ways :",
                 style: TextStyle(
-                    fontSize: fontSize,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black54),
+                    fontSize: displayWidth(context) * 0.045,
+                    fontFamily: "PatuaOne",
+                    //fontWeight: FontWeight.bold,
+                    color: Colors.blue[900]),
               ),
               Opacity(
                 opacity: 0.0,
@@ -483,7 +404,7 @@ class Stl_Algo extends StatelessWidget {
                 ),
               ),
               Text(
-                "We can  apply binary searching over any data structure only if it is sorted . It follows divide and conquer technique which works by recursively breaking an array into two halves until we get the target value ,or all the values are exhausted. At each step we will compare the target value with the middle value. If the middle element is equal to the target element that means the element is present in the array and we have completed our search. Else we have to continue our search and compare the middle element with our target element. If it is smaller than the target element (A[mid]<target value) then we will check it in right subarray else(A[mid]>target value) we will check it in left subarray until all the elements are checked or until we get the desired value.\nThe return type of this function is bool i.e. it returns either true or false.",
+                "• We can  apply binary searching over any data structure only if it is sorted . It follows divide and conquer technique\n• At each step we will compare the target value with the middle value.\n• If the middle element is equal to the target element that means the element is present in the array.\n• Else we have to continue our search and compare the middle element with our target element.\n• If it is smaller than the target element (A[mid]<target value) then we will check it in right subarray\n• Else if(A[mid]>target value) we will check it in left subarray until all the elements are checked or until we get the desired value.\n•The return type of this function is bool i.e. it returns either true or false.",
                 style: TextStyle(fontSize: fontSize),
               ),
               Opacity(
@@ -495,9 +416,10 @@ class Stl_Algo extends StatelessWidget {
               Text(
                 "Syntax :",
                 style: TextStyle(
-                    fontSize: fontSize,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black54),
+                  fontSize: fontSize,
+                  // fontWeight: FontWeight.bold,
+                  // color: Colors.black54
+                ),
               ),
               Opacity(
                 opacity: 0.0,
@@ -510,7 +432,7 @@ class Stl_Algo extends StatelessWidget {
                 style: TextStyle(
                     fontSize: fontSize,
                     fontWeight: FontWeight.bold,
-                    color: Colors.teal),
+                    color: Colors.red),
               ),
               Opacity(
                 opacity: 0.0,
@@ -528,14 +450,16 @@ class Stl_Algo extends StatelessWidget {
               Text(
                 "Searching on different data structures",
                 style: TextStyle(
-                    color: Colors.black54,
-                    fontSize: fontSize,
-                    fontWeight: FontWeight.bold),
+                  color: Colors.blue[900],
+                  fontSize: displayWidth(context) * 0.045,
+                  fontFamily: "PatuaOne",
+                  //fontWeight: FontWeight.bold
+                ),
               ),
               Opacity(
                 opacity: 0.0,
                 child: Divider(
-                  height: displayHeight(context) * 0.007,
+                  height: smallDivider,
                 ),
               ),
               Text(
@@ -559,9 +483,10 @@ class Stl_Algo extends StatelessWidget {
               Text(
                 "Syntax :",
                 style: TextStyle(
-                    fontSize: fontSize,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black54),
+                  fontSize: fontSize,
+                  fontWeight: FontWeight.bold,
+                  // color: Colors.black54
+                ),
               ),
               Opacity(
                 opacity: 0.0,
@@ -602,7 +527,7 @@ class Stl_Algo extends StatelessWidget {
               Opacity(
                 opacity: 0.0,
                 child: Divider(
-                  height: smallDivider,
+                  height: displayHeight(context) * 0.01,
                 ),
               ),
               Text(
@@ -643,9 +568,15 @@ class Stl_Algo extends StatelessWidget {
                 ),
               ),
               Text(
-                "A particular element can be searched in a map with the help of find() function. This takes only one argument and i.e. the key to be searched in map.\nIt returns an iterator pointing to the key which is being searched.",
+                "• A particular element can be searched in a map with the help of find() function.\n• This takes only one argument and i.e. the key to be searched in map.\n• It returns an iterator pointing to the key which is being searched.",
                 style: TextStyle(
                   fontSize: fontSize,
+                ),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.015,
                 ),
               ),
               Text(
@@ -704,22 +635,28 @@ class Stl_Algo extends StatelessWidget {
                   //fontWeight: FontWeight.w500,
                 ),
               ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.0065,
+                ),
+              ),
               Text(
-                "unordered maps:-\n",
+                "unordered maps:-",
                 style: TextStyle(
                   fontSize: fontSize,
                   fontWeight: FontWeight.bold,
                 ),
               ),
               Text(
-                "O(1)\n",
+                "O(1)",
                 style: TextStyle(
                   fontSize: fontSize,
                   //fontWeight: FontWeight.w500,
                 ),
               ),
               Text(
-                "ordered maps:-\n",
+                "ordered maps:-",
                 style: TextStyle(
                   fontSize: fontSize,
                   fontWeight: FontWeight.bold,
@@ -750,9 +687,15 @@ class Stl_Algo extends StatelessWidget {
                 ),
               ),
               Text(
-                "A particular element can be searched in a set with the help of find() function.This takes only one argument and i.e. the element to be searched in set.\nIt returns an iterator pointing to the element which is being searched.",
+                "• A particular element can be searched in a set with the help of find() function.\n• This takes only one argument and i.e. the element to be searched in set.\n• It returns an iterator pointing to the element which is being searched.",
                 style: TextStyle(
                   fontSize: fontSize,
+                ),
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.015,
                 ),
               ),
               Text(
@@ -814,32 +757,6 @@ class Stl_Algo extends StatelessWidget {
               Opacity(
                 opacity: 0.0,
                 child: Divider(
-                  height: displayHeight(context) * 0.0065,
-                ),
-              ),
-              Text(
-                "we can also use count() function. As we are aware of the fact that set only contains unique values that means each element is only present once in the map.so If count returns 1 then the element is present else not present.\nif(S.count(value))==1, then element is present else not.",
-                style: TextStyle(
-                  fontSize: fontSize,
-                  //fontWeight: FontWeight.w500,
-                ),
-              ),
-              Opacity(
-                opacity: 0.0,
-                child: Divider(
-                  height: displayHeight(context) * 0.0065,
-                ),
-              ),
-              Text(
-                "2.Time complexity of count() :- O(N)",
-                style: TextStyle(
-                  fontSize: fontSize,
-                  //fontWeight: FontWeight.w500,
-                ),
-              ),
-              Opacity(
-                opacity: 0.0,
-                child: Divider(
                   height: smallDivider,
                 ),
               ),
@@ -855,13 +772,19 @@ class Stl_Algo extends StatelessWidget {
                 ),
               ),
               Text(
-                "The first occurence of a substring in a string can be found out with the help of find() function.\nIt returns the index of first character of that substring .It takes two arguments the substring to be searched and the index from which you want searching to start.",
+                "• The first occurence of a substring in a string can be found out with the help of find() function.\n• It returns the index of first character of that substring .\n• It takes two arguments the substring to be searched and the index from which you want searching to start.",
                 style: TextStyle(
                   fontSize: fontSize,
                 ),
               ),
+              Opacity(
+                opacity: 0.0,
+                child: Divider(
+                  height: displayHeight(context) * 0.015,
+                ),
+              ),
               Text(
-                "suppose we created a string named str and the substring to be searched is s1 . Then searching can be done in the following way:-\nIf searching is to be performed from starting position as by default starting position is 0:-\n",
+                "suppose we created a string named str and the substring to be searched is s1 . Then searching can be done in the following way:-\n\nIf searching is to be performed from starting position as by default starting position is 0:-",
                 style: TextStyle(fontSize: fontSize, color: Colors.black),
               ),
               Text(
@@ -872,11 +795,11 @@ class Stl_Algo extends StatelessWidget {
                     color: Colors.red),
               ),
               Text(
-                "If searching is to be performed from any another index instead of 0:-\n",
+                "If searching is to be performed from any another index instead of 0:-",
                 style: TextStyle(fontSize: fontSize, color: Colors.black),
               ),
               Text(
-                "int pos=str.find(s1)\n",
+                "int pos=str.find(s1)",
                 style: TextStyle(
                     fontSize: fontSize,
                     fontWeight: FontWeight.bold,
@@ -885,7 +808,7 @@ class Stl_Algo extends StatelessWidget {
               Opacity(
                 opacity: 0.0,
                 child: Divider(
-                  height: smallDivider,
+                  height: displayWidth(context) * 0.035,
                 ),
               ),
               Text(

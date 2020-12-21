@@ -4,11 +4,11 @@ import 'package:CP_App/Helpers/DeviceSize.dart';
 class Vector_Container extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    double smallDivider = displayHeight(context) * 0.028;
+    double smallDivider = displayHeight(context) * 0.02;
     double verysmallDivider = displayHeight(context) * 0.01;
-    double fontsize = displayWidth(context) * 0.045;
-    double headingfontsize = displayWidth(context) * 0.062;
-    double functionfontsize = displayWidth(context) * 0.055;
+    double fontsize = displayWidth(context) * 0.036;
+    double headingfontsize = displayWidth(context) * 0.045;
+    double functionfontsize = displayWidth(context) * 0.045;
     final text1 = new RichText(
       text: TextSpan(
           style: TextStyle(
@@ -17,26 +17,26 @@ class Vector_Container extends StatelessWidget {
           ),
           children: <TextSpan>[
             new TextSpan(
-                text: "We can either use  ",
-                style: TextStyle(fontWeight: FontWeight.bold)),
+              text: "We can either use  ",
+            ),
             new TextSpan(
-                text: "#include<vector> ",
+                text: "#include <vector> ",
                 style: TextStyle(
                     color: Colors.red,
                     fontWeight: FontWeight.bold,
-                    fontSize: displayWidth(context) * 0.048)),
+                    fontSize: displayWidth(context) * 0.036)),
             new TextSpan(text: "or "),
             new TextSpan(
-                text: "#include<bits/stdc++.h>\n\n",
+                text: "#include <bits/stdc++.h>\n\n",
                 style: TextStyle(
-                    fontSize: displayWidth(context) * 0.048,
+                    fontSize: displayWidth(context) * 0.036,
                     color: Colors.red,
                     fontWeight: FontWeight.bold)),
             new TextSpan(
               text: "Syntax : \n",
               style: TextStyle(
-                  color: Colors.black54,
-                  fontWeight: FontWeight.bold,
+                  //  color: Colors.black54,
+                  fontWeight: FontWeight.w500,
                   fontSize: fontsize),
             ),
             new TextSpan(
@@ -67,8 +67,9 @@ class Vector_Container extends StatelessWidget {
                 Text(
                   "Vectors also known as sequence containers , are actually dynamic arrays as they can change their size when operations such as insertion or deletion takes place unlike static arrays, but like arrays they store their elements in contiguous locations which can be accessed through iterators. ",
                   style: TextStyle(
-                      fontSize: displayWidth(context) * 0.045,
-                      fontWeight: FontWeight.bold),
+                    fontSize: displayWidth(context) * 0.036,
+                    //fontWeight: FontWeight.bold
+                  ),
                 ),
                 Opacity(
                   opacity: 0.0,
@@ -77,8 +78,8 @@ class Vector_Container extends StatelessWidget {
                 Text(
                   "To use vector :- ",
                   style: TextStyle(
-                      color: Colors.black54,
-                      fontWeight: FontWeight.bold,
+                      //color: Colors.black54,
+                      // fontWeight: FontWeight.bold,
                       fontSize: fontsize),
                 ),
                 Opacity(
@@ -97,8 +98,9 @@ class Vector_Container extends StatelessWidget {
                 Text(
                   "Functions of vector :-",
                   style: TextStyle(
-                      color: Colors.blue[700],
-                      fontWeight: FontWeight.bold,
+                      color: Colors.blue[900],
+                      //fontWeight: FontWeight.bold,
+                      fontFamily: "PatuaOne",
                       fontSize: headingfontsize),
                 ),
                 Opacity(

@@ -6,15 +6,14 @@ import '../../../Helpers/DeviceSize.dart';
 class Stl_Functors extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    double fontsize = displayWidth(context) * 0.045;
+    double fontsize = displayWidth(context) * 0.036;
     final headingStyle = TextStyle(
         color: Colors.purple[800],
-        fontSize: displayWidth(context) * 0.07,
+        fontSize: displayWidth(context) * 0.045,
         fontWeight: FontWeight.bold);
-    double headingfontsize = displayWidth(context) * 0.062;
+    double headingfontsize = displayWidth(context) * 0.045;
     double verysmallDivider = displayHeight(context) * 0.01;
-    double functionfontsize = displayWidth(context) * 0.055;
-    double smallDivider = displayHeight(context) * 0.028;
+    double smallDivider = displayHeight(context) * 0.02;
     final introtext = new RichText(
       text: TextSpan(
           style: TextStyle(
@@ -99,8 +98,9 @@ class Stl_Functors extends StatelessWidget {
                 Text(
                   "It works in two forms :-",
                   style: TextStyle(
-                      color: Colors.blue[700],
-                      fontWeight: FontWeight.bold,
+                      color: Colors.blue[900],
+                      fontWeight: FontWeight.w400,
+                      fontFamily: "PatuaOne",
                       fontSize: headingfontsize),
                 ),
                 Opacity(
@@ -112,10 +112,10 @@ class Stl_Functors extends StatelessWidget {
                 Text(
                   "• Unary Operators:-",
                   style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.purple,
-                    fontSize: headingfontsize,
-                  ),
+                      fontWeight: FontWeight.w500,
+                      color: Colors.purple,
+                      fontSize: headingfontsize,
+                      fontFamily: "PatuaOne"),
                 ),
                 Opacity(
                   opacity: 0.0,
@@ -171,10 +171,10 @@ class Stl_Functors extends StatelessWidget {
                 Text(
                   "• Binary Operators:-",
                   style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.purple,
-                    fontSize: headingfontsize,
-                  ),
+                      fontWeight: FontWeight.w500,
+                      color: Colors.purple,
+                      fontSize: headingfontsize,
+                      fontFamily: "PatuaOne"),
                 ),
                 Opacity(
                   opacity: 0.0,

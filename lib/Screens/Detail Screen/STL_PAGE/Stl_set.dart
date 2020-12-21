@@ -6,15 +6,16 @@ class Stl_Set extends StatelessWidget {
   Widget build(BuildContext context) {
     double smallDivider = displayHeight(context) * 0.028;
     double verysmallDivider = displayHeight(context) * 0.01;
-    double fontsize = displayWidth(context) * 0.045;
-    double headingfontsize = displayWidth(context) * 0.062;
-    double functionfontsize = displayWidth(context) * 0.055;
+    double fontsize = displayWidth(context) * 0.036;
+    double headingfontsize = displayWidth(context) * 0.045;
+    double functionfontsize = displayWidth(context) * 0.045;
     final text1 = new RichText(
       text: TextSpan(
           style: TextStyle(
-              fontSize: fontsize,
-              color: Colors.black,
-              fontWeight: FontWeight.bold),
+            fontSize: fontsize,
+            color: Colors.black,
+            //fontWeight: FontWeight.bold
+          ),
           children: <TextSpan>[
             new TextSpan(
                 text:
@@ -48,33 +49,33 @@ class Stl_Set extends StatelessWidget {
             new TextSpan(
               text: "To use set :- \n",
               style: TextStyle(
-                  color: Colors.black54,
-                  fontWeight: FontWeight.bold,
-                  fontSize: displayWidth(context) * 0.048),
+                  //color: Colors.black54,
+                  // fontWeight: FontWeight.bold,
+                  fontSize: displayWidth(context) * 0.036),
             ),
             new TextSpan(
-                text: "#include<set> ",
+                text: "#include <set> ",
                 style: TextStyle(
                     letterSpacing: 0.8,
                     color: Colors.red,
                     fontWeight: FontWeight.bold,
-                    fontSize: displayWidth(context) * 0.042)),
+                    fontSize: displayWidth(context) * 0.036)),
             new TextSpan(
                 text: "or ",
-                style: TextStyle(fontSize: displayWidth(context) * 0.042)),
+                style: TextStyle(fontSize: displayWidth(context) * 0.036)),
             new TextSpan(
                 text: "#include<bits/stdc++.h>\n\n",
                 style: TextStyle(
                     letterSpacing: 0.8,
-                    fontSize: displayWidth(context) * 0.042,
+                    fontSize: displayWidth(context) * 0.036,
                     color: Colors.red,
                     fontWeight: FontWeight.bold)),
             new TextSpan(
               text: "Syntax : \n",
               style: TextStyle(
-                  color: Colors.black54,
-                  fontWeight: FontWeight.bold,
-                  fontSize: displayWidth(context) * 0.048),
+                  //color: Colors.black54,
+                  //fontWeight: FontWeight.bold,
+                  fontSize: displayWidth(context) * 0.036),
             ),
             new TextSpan(
               text: "set<data_type>name;\n\n",
@@ -82,14 +83,14 @@ class Stl_Set extends StatelessWidget {
                   letterSpacing: 0.8,
                   color: Colors.red,
                   fontWeight: FontWeight.bold,
-                  fontSize: displayWidth(context) * 0.042),
+                  fontSize: displayWidth(context) * 0.036),
             ),
             new TextSpan(
               text: "Example : \n",
               style: TextStyle(
-                  color: Colors.black54,
-                  fontWeight: FontWeight.bold,
-                  fontSize: displayWidth(context) * 0.048),
+                  //color: Colors.black54,
+                  //fontWeight: FontWeight.bold,
+                  fontSize: displayWidth(context) * 0.036),
             ),
             new TextSpan(
               text: "set<int>s;",
@@ -97,7 +98,7 @@ class Stl_Set extends StatelessWidget {
                   letterSpacing: 0.8,
                   color: Colors.red,
                   fontWeight: FontWeight.bold,
-                  fontSize: displayWidth(context) * 0.042),
+                  fontSize: displayWidth(context) * 0.036),
             ),
           ]),
     );
@@ -125,8 +126,9 @@ class Stl_Set extends StatelessWidget {
               Text(
                 "Functions of set :-",
                 style: TextStyle(
-                    color: Colors.blue[700],
-                    fontWeight: FontWeight.bold,
+                    color: Colors.blue[900],
+                    fontFamily: "PatuaOne",
+                    //fontWeight: FontWeight.bold,
                     fontSize: headingfontsize),
               ),
               Opacity(

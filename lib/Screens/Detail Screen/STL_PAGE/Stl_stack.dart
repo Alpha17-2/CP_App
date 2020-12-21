@@ -4,17 +4,18 @@ import 'package:CP_App/Helpers/DeviceSize.dart';
 class Stl_Stack extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    double smallDivider = displayHeight(context) * 0.028;
+    double smallDivider = displayHeight(context) * 0.02;
     double verysmallDivider = displayHeight(context) * 0.01;
-    double fontsize = displayWidth(context) * 0.045;
-    double headingfontsize = displayWidth(context) * 0.062;
-    double functionfontsize = displayWidth(context) * 0.055;
+    double fontsize = displayWidth(context) * 0.036;
+    double headingfontsize = displayWidth(context) * 0.045;
+    double functionfontsize = displayWidth(context) * 0.045;
     final text1 = new RichText(
       text: TextSpan(
           style: TextStyle(
-              fontSize: fontsize,
-              color: Colors.black,
-              fontWeight: FontWeight.bold),
+            fontSize: fontsize,
+            color: Colors.black,
+            //fontWeight: FontWeight.bold
+          ),
           children: <TextSpan>[
             new TextSpan(text: "Stack is a data structure that follows "),
             new TextSpan(
@@ -32,9 +33,9 @@ class Stl_Stack extends StatelessWidget {
             new TextSpan(
               text: "To use stack :- \n",
               style: TextStyle(
-                  color: Colors.black54,
-                  fontWeight: FontWeight.bold,
-                  fontSize: displayWidth(context) * 0.048),
+                  //color: Colors.black54,
+                  //fontWeight: FontWeight.bold,
+                  fontSize: displayWidth(context) * 0.036),
             ),
             new TextSpan(
                 text: "#include<stack> ",
@@ -42,37 +43,37 @@ class Stl_Stack extends StatelessWidget {
                     letterSpacing: 0.8,
                     color: Colors.red,
                     fontWeight: FontWeight.bold,
-                    fontSize: displayWidth(context) * 0.042)),
+                    fontSize: displayWidth(context) * 0.036)),
             new TextSpan(
                 text: "or ",
-                style: TextStyle(fontSize: displayWidth(context) * 0.042)),
+                style: TextStyle(fontSize: displayWidth(context) * 0.036)),
             new TextSpan(
                 text: "#include<bits/stdc++.h>\n\n",
                 style: TextStyle(
                     letterSpacing: 0.8,
-                    fontSize: displayWidth(context) * 0.042,
+                    fontSize: displayWidth(context) * 0.036,
                     color: Colors.red,
                     fontWeight: FontWeight.bold)),
             new TextSpan(
               text: "Syntax : \n",
               style: TextStyle(
-                  color: Colors.black54,
-                  fontWeight: FontWeight.bold,
-                  fontSize: displayWidth(context) * 0.048),
+                  // color: Colors.black54,
+                  // fontWeight: FontWeight.bold,
+                  fontSize: displayWidth(context) * 0.036),
             ),
             new TextSpan(
               text: "stack<data_type>stack_name;\n\n",
               style: TextStyle(
                   color: Colors.red,
                   fontWeight: FontWeight.bold,
-                  fontSize: displayWidth(context) * 0.042),
+                  fontSize: displayWidth(context) * 0.036),
             ),
             new TextSpan(
               text: "Example : ",
               style: TextStyle(
-                  color: Colors.black54,
-                  fontWeight: FontWeight.bold,
-                  fontSize: displayWidth(context) * 0.048),
+                  // color: Colors.black54,
+                  //fontWeight: FontWeight.bold,
+                  fontSize: displayWidth(context) * 0.036),
             ),
           ]),
     );
@@ -114,8 +115,9 @@ class Stl_Stack extends StatelessWidget {
               Text(
                 "Functions of stack :-",
                 style: TextStyle(
-                    color: Colors.blue[700],
-                    fontWeight: FontWeight.bold,
+                    color: Colors.blue[900],
+                    //fontWeight: FontWeight.bold,
+                    fontFamily: "PatuaOne",
                     fontSize: headingfontsize),
               ),
               Opacity(

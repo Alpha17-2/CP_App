@@ -6,17 +6,20 @@ class Stl_Priorityqueue extends StatelessWidget {
   Widget build(BuildContext context) {
     double smallDivider = displayHeight(context) * 0.028;
     double verysmallDivider = displayHeight(context) * 0.01;
-    double fontsize = displayWidth(context) * 0.045;
-    double headingfontsize = displayWidth(context) * 0.062;
-    double functionfontsize = displayWidth(context) * 0.055;
+    double fontsize = displayWidth(context) * 0.036;
+    double headingfontsize = displayWidth(context) * 0.045;
+    double functionfontsize = displayWidth(context) * 0.045;
     final text1 = new RichText(
       text: TextSpan(
           style: TextStyle(
-              fontSize: fontsize,
-              color: Colors.black,
-              fontWeight: FontWeight.bold),
+            fontSize: fontsize,
+            color: Colors.black,
+            //fontWeight: FontWeight.bold
+          ),
           children: <TextSpan>[
-            new TextSpan(text: "In this data structure every element has an priority associated with it and the elements are inserted in this container on the basis of their priority . The element with "),
+            new TextSpan(
+                text:
+                    "In this data structure every element has an priority associated with it and the elements are inserted in this container on the basis of their priority . The element with "),
             new TextSpan(
                 text: "greatest ",
                 style:
@@ -30,17 +33,16 @@ class Stl_Priorityqueue extends StatelessWidget {
                 text:
                     " priority .So we can say that elements are arranged in "),
             new TextSpan(
-                text:"decreasing",
-                 style:
-                    TextStyle(color: Colors.red, fontWeight: FontWeight.bold)
-                ),
-            new TextSpan(text:"order in this type of queue.\n\n"),
+                text: "decreasing ",
+                style:
+                    TextStyle(color: Colors.red, fontWeight: FontWeight.bold)),
+            new TextSpan(text: "order in this type of queue.\n\n"),
             new TextSpan(
               text: "To use priority queue :- \n",
               style: TextStyle(
-                  color: Colors.black54,
-                  fontWeight: FontWeight.bold,
-                  fontSize: displayWidth(context) * 0.048),
+                  // color: Colors.black54,
+                  // fontWeight: FontWeight.bold,
+                  fontSize: displayWidth(context) * 0.036),
             ),
             new TextSpan(
                 text: "#include<queue> ",
@@ -48,7 +50,7 @@ class Stl_Priorityqueue extends StatelessWidget {
                     letterSpacing: 0.8,
                     color: Colors.red,
                     fontWeight: FontWeight.bold,
-                    fontSize: displayWidth(context) * 0.042)),
+                    fontSize: displayWidth(context) * 0.036)),
             new TextSpan(
                 text: "or ",
                 style: TextStyle(fontSize: displayWidth(context) * 0.042)),
@@ -56,29 +58,29 @@ class Stl_Priorityqueue extends StatelessWidget {
                 text: "#include<bits/stdc++.h>\n\n",
                 style: TextStyle(
                     letterSpacing: 0.8,
-                    fontSize: displayWidth(context) * 0.042,
+                    fontSize: displayWidth(context) * 0.036,
                     color: Colors.red,
                     fontWeight: FontWeight.bold)),
             new TextSpan(
               text: "Syntax : \n",
               style: TextStyle(
-                  color: Colors.black54,
-                  fontWeight: FontWeight.bold,
-                  fontSize: displayWidth(context) * 0.048),
+                  //  color: Colors.black54,
+                  // fontWeight: FontWeight.bold,
+                  fontSize: displayWidth(context) * 0.036),
             ),
             new TextSpan(
               text: "priority_queue<data_type>stack_name;\n\n",
               style: TextStyle(
                   color: Colors.red,
                   fontWeight: FontWeight.bold,
-                  fontSize: displayWidth(context) * 0.042),
+                  fontSize: displayWidth(context) * 0.036),
             ),
             new TextSpan(
               text: "Example : ",
               style: TextStyle(
-                  color: Colors.black54,
-                  fontWeight: FontWeight.bold,
-                  fontSize: displayWidth(context) * 0.048),
+                  //  color: Colors.black54,
+                  //  fontWeight: FontWeight.bold,
+                  fontSize: displayWidth(context) * 0.036),
             ),
           ]),
     );
@@ -109,7 +111,7 @@ class Stl_Priorityqueue extends StatelessWidget {
                     letterSpacing: 0.8,
                     color: Colors.red,
                     fontWeight: FontWeight.bold,
-                    fontSize: displayWidth(context) * 0.042),
+                    fontSize: displayWidth(context) * 0.036),
               ),
               Opacity(
                 opacity: 0.0,
@@ -120,8 +122,9 @@ class Stl_Priorityqueue extends StatelessWidget {
               Text(
                 "Functions of priority queue :-",
                 style: TextStyle(
-                    color: Colors.blue[700],
-                    fontWeight: FontWeight.bold,
+                    color: Colors.blue[900],
+                    //fontWeight: FontWeight.bold,
+                    fontFamily: "PatuaOne",
                     fontSize: headingfontsize),
               ),
               Opacity(

@@ -12,7 +12,7 @@ import 'Stl_queue.dart';
 class Stl_Contain extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    double fontsize = displayWidth(context) * 0.045;
+    double fontsize = displayWidth(context) * 0.036;
     final introText = new RichText(
         text: TextSpan(
             style: TextStyle(
@@ -71,8 +71,9 @@ class Stl_Contain extends StatelessWidget {
                 Text(
                   "Commonly used containers along with their functions.",
                   style: TextStyle(
-                      fontSize: displayWidth(context) * 0.045,
-                      fontWeight: FontWeight.bold),
+                    fontSize: displayWidth(context) * 0.036,
+                    //fontWeight: FontWeight.bold
+                  ),
                 ),
                 Opacity(
                   opacity: 0.0,

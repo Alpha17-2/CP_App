@@ -4,22 +4,23 @@ import 'package:CP_App/Helpers/DeviceSize.dart';
 class Stl_Map extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    double smallDivider = displayHeight(context) * 0.028;
+    double smallDivider = displayHeight(context) * 0.02;
     double verysmallDivider = displayHeight(context) * 0.004;
-    double fontsize = displayWidth(context) * 0.045;
-    double headingfontsize = displayWidth(context) * 0.062;
-    double functionfontsize = displayWidth(context) * 0.055;
+    double fontsize = displayWidth(context) * 0.036;
+    double headingfontsize = displayWidth(context) * 0.045;
+    double functionfontsize = displayWidth(context) * 0.045;
     final text1 = new RichText(
       text: TextSpan(
           style: TextStyle(
-              fontSize: fontsize,
-              color: Colors.black,
-              fontWeight: FontWeight.bold),
+            fontSize: fontsize,
+            color: Colors.black,
+            //fontWeight: FontWeight.bold
+          ),
           children: <TextSpan>[
             new TextSpan(
-                text:
-                    "As the name suggests, it does mapping of the elements stored in it. It consists of keys and values. Every key has it's own value. We have unique keys in maps but can have duplicate values.\n",
-                style: TextStyle(fontWeight: FontWeight.bold)),
+              text:
+                  "As the name suggests, it does mapping of the elements stored in it. It consists of keys and values. Every key has it's own value. We have unique keys in maps but can have duplicate values.\n",
+            ),
             new TextSpan(
                 text: "The most common iterators associated with maps are "),
             new TextSpan(
@@ -37,9 +38,9 @@ class Stl_Map extends StatelessWidget {
             new TextSpan(
               text: "To use map :- \n",
               style: TextStyle(
-                  color: Colors.black54,
-                  fontWeight: FontWeight.bold,
-                  fontSize: displayWidth(context) * 0.048),
+                  //color: Colors.black54,
+                  // fontWeight: FontWeight.bold,
+                  fontSize: displayWidth(context) * 0.036),
             ),
             new TextSpan(
                 text: "#include<map> ",
@@ -47,7 +48,7 @@ class Stl_Map extends StatelessWidget {
                     letterSpacing: 0.8,
                     color: Colors.red,
                     fontWeight: FontWeight.bold,
-                    fontSize: displayWidth(context) * 0.042)),
+                    fontSize: displayWidth(context) * 0.036)),
             new TextSpan(
                 text: "or ",
                 style: TextStyle(fontSize: displayWidth(context) * 0.042)),
@@ -55,29 +56,22 @@ class Stl_Map extends StatelessWidget {
                 text: "#include<bits/stdc++.h>\n\n",
                 style: TextStyle(
                     letterSpacing: 0.8,
-                    fontSize: displayWidth(context) * 0.042,
+                    fontSize: displayWidth(context) * 0.036,
                     color: Colors.red,
                     fontWeight: FontWeight.bold)),
             new TextSpan(
               text: "Syntax : \n",
               style: TextStyle(
-                  color: Colors.black54,
-                  fontWeight: FontWeight.bold,
-                  fontSize: displayWidth(context) * 0.048),
+                  //color: Colors.black54,
+                  // fontWeight: FontWeight.bold,
+                  fontSize: displayWidth(context) * 0.036),
             ),
             new TextSpan(
-              text: "map< data_type1, data_type2 >map_name ;\n\n",
+              text: "map< data_type1, data_type2 >map_name ;",
               style: TextStyle(
                   color: Colors.red,
                   fontWeight: FontWeight.bold,
-                  fontSize: displayWidth(context) * 0.042),
-            ),
-            new TextSpan(
-              text: "Example : ",
-              style: TextStyle(
-                  color: Colors.black54,
-                  fontWeight: FontWeight.bold,
-                  fontSize: displayWidth(context) * 0.048),
+                  fontSize: displayWidth(context) * 0.036),
             ),
           ]),
     );
@@ -102,58 +96,6 @@ class Stl_Map extends StatelessWidget {
             children: [
               text1,
               Opacity(
-                  opacity: 0.0,
-                  child: Divider(
-                    height: verysmallDivider,
-                  )),
-              Text(
-                "map<string,int>m ;",
-                style: TextStyle(
-                    letterSpacing: 0.8,
-                    color: Colors.red,
-                    fontWeight: FontWeight.bold,
-                    fontSize: displayWidth(context) * 0.042),
-              ),
-              Opacity(
-                  opacity: 0.0,
-                  child: Divider(
-                    height: verysmallDivider,
-                  )),
-              Text(
-                "map<int,int>m ;",
-                style: TextStyle(
-                    letterSpacing: 0.8,
-                    color: Colors.red,
-                    fontWeight: FontWeight.bold,
-                    fontSize: displayWidth(context) * 0.042),
-              ),
-              Opacity(
-                  opacity: 0.0,
-                  child: Divider(
-                    height: verysmallDivider,
-                  )),
-              Text(
-                "map<int,char>m ;",
-                style: TextStyle(
-                    letterSpacing: 0.8,
-                    color: Colors.red,
-                    fontWeight: FontWeight.bold,
-                    fontSize: displayWidth(context) * 0.042),
-              ),
-              Opacity(
-                  opacity: 0.0,
-                  child: Divider(
-                    height: verysmallDivider,
-                  )),
-              Text(
-                "map<int,vector<int>>m ;",
-                style: TextStyle(
-                    letterSpacing: 0.8,
-                    color: Colors.red,
-                    fontWeight: FontWeight.bold,
-                    fontSize: displayWidth(context) * 0.042),
-              ),
-              Opacity(
                 opacity: 0.0,
                 child: Divider(
                   height: smallDivider,
@@ -162,8 +104,9 @@ class Stl_Map extends StatelessWidget {
               Text(
                 "Functions of map :-",
                 style: TextStyle(
-                    color: Colors.blue[700],
-                    fontWeight: FontWeight.bold,
+                    color: Colors.blue[900],
+                    //fontWeight: FontWeight.bold,
+                    fontFamily: "PatuaOne",
                     fontSize: headingfontsize),
               ),
               Opacity(
@@ -204,8 +147,10 @@ class Stl_Map extends StatelessWidget {
               ),
               Text(
                 "map_name.insert({key,pair});",
-                style:
-                    TextStyle(fontSize: fontsize, fontWeight: FontWeight.bold),
+                style: TextStyle(
+                  fontSize: fontsize,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
               Opacity(
                 opacity: 0.0,
@@ -222,9 +167,10 @@ class Stl_Map extends StatelessWidget {
               Text(
                 "m.insert({\"Name\",45});",
                 style: TextStyle(
-                    letterSpacing: 0.8,
-                    fontSize: fontsize,
-                    fontWeight: FontWeight.bold),
+                  letterSpacing: 0.8,
+                  fontSize: fontsize,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
               Divider(
                 height: smallDivider,

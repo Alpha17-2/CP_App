@@ -39,9 +39,9 @@ class complexity extends StatelessWidget {
             ),
           ),
           Positioned(
-            top: displayHeight(context) * 0.25,
+            top: displayHeight(context) * 0.18,
             child: Container(
-              height: displayHeight(context) * 0.75,
+              height: displayHeight(context) * 0.82,
               width: displayWidth(context),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.only(
@@ -234,7 +234,7 @@ class complexity extends StatelessWidget {
                   "Time & Space \nComplexity",
                   style: TextStyle(
                     fontFamily: "PatuaOne",
-                    fontSize: displayWidth(context) * 0.08,
+                    fontSize: displayWidth(context) * 0.07,
                   ),
                 ),
               )),

@@ -26,17 +26,19 @@ class languages extends StatelessWidget {
             ),
           ),
           Positioned(
-              left: displayWidth(context) * 0.07,
-              top: displayHeight(context) * 0.12,
-              child: Text(
-                "Programming\nLanguages",
-                style: TextStyle(
-                  fontFamily: "PatuaOne",
-                  fontSize: displayWidth(context) * 0.09,
+              left: displayWidth(context) * 0.25,
+              top: displayHeight(context) * 0.08,
+              child: Center(
+                child: Text(
+                  "Programming\nLanguages",
+                  style: TextStyle(
+                    fontFamily: "PatuaOne",
+                    fontSize: displayWidth(context) * 0.075,
+                  ),
                 ),
               )),
           Positioned(
-            top: displayHeight(context) * 0.32,
+            top: displayHeight(context) * 0.25,
             child: Container(
               height: displayHeight(context) * 0.75,
               width: displayWidth(context),
@@ -50,20 +52,20 @@ class languages extends StatelessWidget {
             ),
           ),
           Positioned(
-            top: displayHeight(context) * 0.215,
+            top: displayHeight(context) * 0.18,
             right: displayWidth(context) * 0.0315,
             child: CircleAvatar(
-              radius: displayWidth(context) * 0.15,
+              radius: displayWidth(context) * 0.175,
               backgroundColor: Colors.black,
               child: CircleAvatar(
-                radius: displayWidth(context) * 0.145,
+                radius: displayWidth(context) * 0.17,
                 backgroundImage: AssetImage('images/x15.png'),
                 backgroundColor: Colors.yellow[100],
               ),
             ),
           ),
           Positioned(
-            top: displayHeight(context) * 0.419,
+            top: displayHeight(context) * 0.375,
             child: Card(
               // color: Color(0xfbbecf3f9),
               shape: RoundedRectangleBorder(
@@ -71,7 +73,7 @@ class languages extends StatelessWidget {
               elevation: 15.0,
               child: ClipPath(
                 child: Container(
-                  height: displayHeight(context) * 0.22,
+                  height: displayHeight(context) * 0.27,
                   width: displayWidth(context) * 0.8,
                   child: Padding(
                     padding: const EdgeInsets.all(12.0),
@@ -79,9 +81,9 @@ class languages extends StatelessWidget {
                       child: Text(
                         "As we know the indespensability of programming languages in competitive programming, one should be aware of the choices they make. As for now, Programming languages such as C++ , Java and Python are prominent of all.",
                         style: TextStyle(
-                          fontSize: displayWidth(context) * 0.037,
-                          fontWeight: FontWeight.w500,
-                        ),
+                            fontSize: displayWidth(context) * 0.045,
+                            fontWeight: FontWeight.w500,
+                            fontFamily: "PatuaOne"),
                       ),
                     ),
                   ),
@@ -97,7 +99,7 @@ class languages extends StatelessWidget {
             left: displayWidth(context) * 0.1,
             right: displayWidth(context) * 0.1,
             child: Text(
-              "The languages mentioned above are summed up below.",
+              "The languages mentioned above are summed up below :",
               style: TextStyle(
                 fontSize: displayWidth(context) * 0.042,
                 fontWeight: FontWeight.w500,
@@ -114,7 +116,7 @@ class languages extends StatelessWidget {
                 onPressed: () {
                   Navigator.pop(context);
                 }),
-            top: displayHeight(context) * 0.04,
+            top: displayHeight(context) * 0.075,
             left: displayWidth(context) * 0.02,
           ),
           Positioned(
@@ -143,7 +145,7 @@ class languages extends StatelessWidget {
                         Color(0xfbb91EAE4),
                       ],
                     )),
-                    height: displayHeight(context) * 0.13,
+                    height: displayHeight(context) * 0.12,
                     width: displayWidth(context) * 0.255,
                     child: Padding(
                       padding: const EdgeInsets.all(4.0),
@@ -202,7 +204,7 @@ class languages extends StatelessWidget {
                         Color(0xfbbf7797d),
                       ],
                     )),
-                    height: displayHeight(context) * 0.13,
+                    height: displayHeight(context) * 0.12,
                     width: displayWidth(context) * 0.255,
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
@@ -261,7 +263,7 @@ class languages extends StatelessWidget {
                         Color(0xfbbFFEDBC),
                       ],
                     )),
-                    height: displayHeight(context) * 0.13,
+                    height: displayHeight(context) * 0.12,
                     width: displayWidth(context) * 0.255,
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
