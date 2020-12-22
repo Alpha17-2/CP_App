@@ -59,6 +59,16 @@ class c3 extends ChangeNotifier {
       option4: "switch",
       correct: "do-while",
     ),
+    SingleQuizQuestion(
+      question:
+          "Identify the incorrect file opening mode from the following." ,
+      option1: "r",
+      option2: "w",
+      option3: "x",
+      isFirstAttemp: true,
+      option4: "a",
+      correct: "x"
+    ),
   ];
 
   List<SingleQuizQuestion> get ListOfCquestions {

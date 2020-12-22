@@ -1,8 +1,8 @@
-import 'package:flutter/material.dart';
-import 'package:CP_App/Helpers/DeviceSize.dart';
-import 'package:provider/provider.dart';
 import 'package:CP_App/Providers/Quiz/C++/C++2.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:CP_App/Helpers/DeviceSize.dart';
 
 class mediumcplus extends StatefulWidget {
   @override
@@ -25,6 +25,8 @@ class _mediumcplusState extends State<mediumcplus> {
   Widget build(BuildContext context) {
     final mylist =
         Provider.of<cplus2>(context, listen: true).ListOfCplusquestions;
+    // final myObject = Provider.of<SingleQuizQuestion>(context);
+
     void _correctAnswerBottomSheet(context) {
       showModalBottomSheet(
           context: context,
@@ -319,7 +321,7 @@ class _mediumcplusState extends State<mediumcplus> {
                         style: TextStyle(
                             letterSpacing: 0.95,
                             fontFamily: "BreeSerif",
-                            fontSize: displayWidth(context) * 0.065,
+                            fontSize: displayWidth(context) * 0.08,
                             fontWeight: FontWeight.bold,
                             color: Colors.yellow),
                       ),
@@ -338,14 +340,17 @@ class _mediumcplusState extends State<mediumcplus> {
                 child: Container(
                   height: displayHeight(context) * 0.28,
                   width: displayWidth(context) * 0.85,
-                  child: Center(
-                    child: Text(
-                      problem,
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                          fontSize: displayWidth(context) * 0.04,
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold),
+                  child: Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Center(
+                      child: Text(
+                        problem,
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            fontSize: displayWidth(context) * 0.04,
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold),
+                      ),
                     ),
                   ),
                 ),
@@ -368,6 +373,7 @@ class _mediumcplusState extends State<mediumcplus> {
                             padding: const EdgeInsets.only(top: 8.0),
                             child: GestureDetector(
                               onTap: () {
+                                ++attempts;
                                 if (option1 == correct) {
                                   setState(() {
                                     if (mylist[i].isFirstAttemp) {
@@ -419,6 +425,7 @@ class _mediumcplusState extends State<mediumcplus> {
                             padding: const EdgeInsets.only(top: 8.0),
                             child: GestureDetector(
                               onTap: () {
+                                ++attempts;
                                 if (option2 == correct) {
                                   setState(() {
                                     currentColor2 = Colors.green;
@@ -476,6 +483,7 @@ class _mediumcplusState extends State<mediumcplus> {
                             padding: const EdgeInsets.only(top: 8.0),
                             child: GestureDetector(
                               onTap: () {
+                                ++attempts;
                                 if (option3 == correct) {
                                   setState(() {
                                     if (mylist[i].isFirstAttemp) {
@@ -528,6 +536,7 @@ class _mediumcplusState extends State<mediumcplus> {
                             padding: const EdgeInsets.only(top: 8.0),
                             child: GestureDetector(
                               onTap: () {
+                                ++attempts;
                                 if (option4 == correct) {
                                   setState(() {
                                     if (mylist[i].isFirstAttemp) {

@@ -337,14 +337,17 @@ class _mediumcState extends State<mediumc> {
                 child: Container(
                   height: displayHeight(context) * 0.28,
                   width: displayWidth(context) * 0.85,
-                  child: Center(
-                    child: Text(
-                      problem,
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                          fontSize: displayWidth(context) * 0.04,
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold),
+                  child: Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Center(
+                      child: Text(
+                        problem,
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            fontSize: displayWidth(context) * 0.04,
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold),
+                      ),
                     ),
                   ),
                 ),
