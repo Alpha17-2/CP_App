@@ -306,6 +306,7 @@ class _hardcplusState extends State<hardcplus> {
                 iconSize: displayHeight(context) * 0.035,
                 icon: Icon(Icons.arrow_back),
                 onPressed: () {
+                  correctanswer = 0;
                   for (int i = 0; i < mylist.length; ++i) {
                     mylist[i].restoreAll();
                   }

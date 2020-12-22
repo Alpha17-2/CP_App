@@ -16,7 +16,7 @@ class q3 extends ChangeNotifier {
     SingleQuizQuestion(
       question:
           "Let n insert and m(<=n) delete operations be performed in an arbitrary order on an empty queue Q.Let x any y be the number of push and pop operation performed respectively in the process. Which one of the following is true for all m and n?",
-      option1: "n+<=x<2n and 2m<=y<=n+m",
+      option1: "n+m<=x<2n and 2m<=y<=n+m",
       option2: "n+m<=x<2n and 2m<=y<=2n",
       option3: "2m<=x<2n and 2m<=y<=n+m",
       option4: "2m<=x<2n and 2m <=y<=2n",
@@ -57,7 +57,7 @@ class q3 extends ChangeNotifier {
     ),
     SingleQuizQuestion(
       question:
-          "void fun(int n)\n{\n IntQueue q=new intQueue();\n q.enqueue(0);\nq.enqueue(1);\n for(int i=0;i<n;i++)\n{\n int a= q.dequeue();\n int b=q.dequeue();\n q.enqueue(b);\n q.enqueue(a+b);\n print(a);\n }\n}\n What does the function fun do?",
+          "void fun(int n)\n{\n   IntQueue q=new intQueue();\n   q.enqueue(0);\n   q.enqueue(1);\n   for( int i=0; i<n; i++)\n{\n   int a = q.dequeue();\n   int b = q.dequeue();\n   q.enqueue(b);\n   q.enqueue(a+b);\n   print(a);\n }\n}\nWhat does the function fun do?",
       option1: "Prints numbers from 0 to n-1",
       option2: "Prints numbers from n-1 to 0",
       option3: "Prints first n Fibonacci numbers",

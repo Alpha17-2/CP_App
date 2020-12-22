@@ -9,6 +9,7 @@ class j1 extends ChangeNotifier {
       option1: "int",
       option2: "long",
       option3: "byte",
+      isFirstAttemp: true,
       option4: "float",
       correct: "int",
     ),
@@ -19,6 +20,7 @@ class j1 extends ChangeNotifier {
       option2: "Memory usage",
       option3: "Garbage creation",
       option4: "Precision",
+      isFirstAttemp: true,
       correct: "Precision",
     ),
     SingleQuizQuestion(
@@ -27,6 +29,7 @@ class j1 extends ChangeNotifier {
       option1: "int",
       option2: "float",
       option3: "BigDecimal",
+      isFirstAttemp: true,
       option4: "double",
       correct: "BigDecimal",
     ),
@@ -34,6 +37,7 @@ class j1 extends ChangeNotifier {
       question:
           "Which of these operators is used to allocate memory to array variable in Java?",
       option1: "malloc",
+      isFirstAttemp: true,
       option2: "calloc",
       option3: "new",
       option4: "new malloc",
@@ -47,6 +51,7 @@ class j1 extends ChangeNotifier {
       option3: "Queue",
       option4: "Tree",
       correct: "Stack",
+      isFirstAttemp: true,
     ),
     SingleQuizQuestion(
       question:
@@ -56,6 +61,7 @@ class j1 extends ChangeNotifier {
       option3: "Compile time error",
       option4: "Runs successfully",
       correct: "Compile time error",
+      isFirstAttemp: true,
     ),
     SingleQuizQuestion(
       question:
@@ -63,6 +69,7 @@ class j1 extends ChangeNotifier {
       option1: "Interpreter",
       option2: "Destructor",
       option3: "Constructor",
+      isFirstAttemp: true,
       option4: "Object",
       correct: "Constructor",
     ),

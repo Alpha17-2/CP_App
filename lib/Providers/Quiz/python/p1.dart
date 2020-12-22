@@ -10,6 +10,7 @@ class p1 extends ChangeNotifier {
       option3: "pass",
       option4: "nonlocal",
       correct: "eval",
+      isFirstAttemp: true,
     ),
     SingleQuizQuestion(
       question: "Which is the correct operator for power(XY) ?",
@@ -17,6 +18,7 @@ class p1 extends ChangeNotifier {
       option2: "X^^Y",
       option3: "X**Y",
       option4: "X*Y",
+      isFirstAttemp: true,
       correct: "X**Y",
     ),
     SingleQuizQuestion(
@@ -25,6 +27,7 @@ class p1 extends ChangeNotifier {
       option1: "a",
       option2: "bc",
       option3: "bca",
+      isFirstAttemp: true,
       option4: "abc",
       correct: "abc",
     ),
@@ -33,6 +36,7 @@ class p1 extends ChangeNotifier {
           "To concatenate two strings to a third what statements are applicable ?",
       option1: "s3 = s1 . s2",
       option2: "s3 = s1.__add__(s2)",
+      isFirstAttemp: true,
       option3: "s3 = s1.add(s2)",
       option4: "s3 = s1 * s2",
       correct: "s3 = s1.__add__(s2)",
@@ -44,6 +48,7 @@ class p1 extends ChangeNotifier {
       option3: "bool",
       option4: "str",
       correct: "str",
+      isFirstAttemp: true,
     ),
     SingleQuizQuestion(
       question:
@@ -53,6 +58,7 @@ class p1 extends ChangeNotifier {
       option3: "print(max(t))",
       option4: "print(len(t))",
       correct: "t[3] = 45",
+      isFirstAttemp: true,
     ),
     SingleQuizQuestion(
       question:
@@ -61,6 +67,7 @@ class p1 extends ChangeNotifier {
       option2: "remove",
       option3: "update",
       option4: "sum",
+      isFirstAttemp: true,
       correct: "sum",
     ),
   ];

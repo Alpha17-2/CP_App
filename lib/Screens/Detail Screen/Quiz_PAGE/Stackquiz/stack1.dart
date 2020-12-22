@@ -1,8 +1,9 @@
+import 'package:CP_App/Providers/Quiz/python/p1.dart';
+import 'package:CP_App/Providers/Quiz/stack/st1.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
-import 'package:CP_App/Providers/Quiz/stack/st1.dart';
 
 class easystack extends StatefulWidget {
   @override
@@ -24,8 +25,6 @@ class _easystackState extends State<easystack> {
 
   Widget build(BuildContext context) {
     final mylist = Provider.of<st1>(context, listen: true).ListOfStackquestions;
-    // final myObject = Provider.of<SingleQuizQuestion>(context);
-
     void _correctAnswerBottomSheet(context) {
       showModalBottomSheet(
           context: context,
@@ -163,6 +162,7 @@ class _easystackState extends State<easystack> {
       else
         bgcolor = Colors.red[300];
       double percenntage = (correctanswer / mylist.length) * 100;
+      int p = percenntage.toInt();
       return Scaffold(
         body: Stack(
           alignment: Alignment.center,
@@ -205,7 +205,7 @@ class _easystackState extends State<easystack> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Text(percenntage.toString().substring(0, 5) + " %",
+                      Text(p.toString() + " %",
                           style: TextStyle(
                             fontSize: displayWidth(context) * 0.0475,
                             fontWeight: FontWeight.w600,
@@ -285,352 +285,344 @@ class _easystackState extends State<easystack> {
     }
 
     Widget MyQuizPage() {
-      return Hero(
-          tag: "Cquiz",
-          child: Scaffold(
-            body: Stack(
-              alignment: Alignment.center,
-              children: [
-                Positioned(
-                  top: 0,
-                  child: Container(
-                    color: Colors.deepPurple,
-                    height: displayHeight(context) * 0.35,
-                    width: displayWidth(context) * 1.0,
-                    child: Column(
+      return Scaffold(
+        body: Stack(
+          alignment: Alignment.center,
+          children: [
+            Positioned(
+              top: 0,
+              child: Container(
+                color: Colors.deepPurple,
+                height: displayHeight(context) * 0.35,
+                width: displayWidth(context) * 1.0,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
                       mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Padding(
-                              padding:
-                                  const EdgeInsets.only(top: 20.0, left: 8.0),
-                              child: IconButton(
-                                  iconSize: displayHeight(context) * 0.035,
-                                  icon: Icon(Icons.arrow_back),
-                                  onPressed: () {
-                                    Navigator.of(context).pop();
-                                  }),
-                            ),
-                          ],
-                        ),
-                        Center(
-                          child: Text(
-                            "C QUIZ",
-                            style: TextStyle(
-                                letterSpacing: 0.95,
-                                fontFamily: "BreeSerif",
-                                fontSize: displayWidth(context) * 0.09,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.yellow),
-                          ),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 20.0, left: 8.0),
+                          child: IconButton(
+                              iconSize: displayHeight(context) * 0.035,
+                              icon: Icon(Icons.arrow_back),
+                              onPressed: () {
+                                correctanswer = 0;
+                                for (int i = 0; i < mylist.length; ++i) {
+                                  mylist[i].restoreAll();
+                                }
+                                Navigator.of(context).pop();
+                              }),
                         ),
                       ],
                     ),
-                  ),
+                    Center(
+                      child: Text(
+                        "STACK QUIZ",
+                        style: TextStyle(
+                            letterSpacing: 0.95,
+                            fontFamily: "BreeSerif",
+                            fontSize: displayWidth(context) * 0.08,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.yellow),
+                      ),
+                    ),
+                  ],
                 ),
-                Positioned(
-                  top: displayHeight(context) * 0.2,
-                  child: Card(
-                    elevation: 16.0,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15.0)),
-                    color: Colors.white,
-                    child: Container(
-                      height: displayHeight(context) * 0.28,
-                      width: displayWidth(context) * 0.85,
-                      child: Center(
-                        child: Text(
-                          problem,
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                              fontSize: displayWidth(context) * 0.04,
-                              color: Colors.black,
-                              fontWeight: FontWeight.bold),
-                        ),
+              ),
+            ),
+            Positioned(
+              top: displayHeight(context) * 0.2,
+              child: Card(
+                elevation: 16.0,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15.0)),
+                color: Colors.white,
+                child: Container(
+                  height: displayHeight(context) * 0.28,
+                  width: displayWidth(context) * 0.85,
+                  child: Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Center(
+                      child: Text(
+                        problem,
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            fontSize: displayWidth(context) * 0.04,
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold),
                       ),
                     ),
                   ),
                 ),
-                Positioned(
-                  child: Card(
-                    color: Colors.deepPurple,
-                    child: Container(
-                      height: displayHeight(context) * 0.48,
-                      width: displayWidth(context) * 1.0,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
+              ),
+            ),
+            Positioned(
+              child: Card(
+                color: Colors.deepPurple,
+                child: Container(
+                  height: displayHeight(context) * 0.48,
+                  width: displayWidth(context) * 1.0,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.only(top: 8.0),
-                                child: GestureDetector(
-                                  onTap: () {
-                                    ++attempts;
-                                    if (option1 == correct) {
-                                      setState(() {
-                                        if (mylist[i].isFirstAttemp) {
-                                          mylist[i].UpdateFirstAttempt();
-                                          ++correctanswer;
-                                        }
-                                        currentColor1 = Colors.green;
-                                      });
-
-                                      Future.delayed(
-                                          const Duration(microseconds: 35555),
-                                          () {
-                                        _correctAnswerBottomSheet(context);
-                                      });
-                                    } else {
-                                      setState(() {
-                                        if (mylist[i].isFirstAttemp == true) {
-                                          mylist[i].UpdateFirstAttempt();
-                                        }
-                                        currentColor1 = Colors.red[400];
-                                      });
-                                      Future.delayed(
-                                          const Duration(microseconds: 35555),
-                                          () {
-                                        _wrongAnswerBottomSheet(context);
-                                      });
+                          Padding(
+                            padding: const EdgeInsets.only(top: 8.0),
+                            child: GestureDetector(
+                              onTap: () {
+                                ++attempts;
+                                if (option1 == correct) {
+                                  setState(() {
+                                    if (mylist[i].isFirstAttemp) {
+                                      mylist[i].UpdateFirstAttempt();
+                                      ++correctanswer;
                                     }
-                                  },
-                                  child: Card(
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(15.0)),
-                                    color: currentColor1,
-                                    child: Container(
-                                      height: displayHeight(context) * 0.16,
-                                      width: displayWidth(context) * 0.475,
-                                      child: Center(
-                                        child: Text(
-                                          option1,
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(
-                                              fontSize:
-                                                  displayWidth(context) * 0.035,
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                      ),
+                                    currentColor1 = Colors.green;
+                                  });
+
+                                  Future.delayed(
+                                      const Duration(microseconds: 35555), () {
+                                    _correctAnswerBottomSheet(context);
+                                  });
+                                } else {
+                                  setState(() {
+                                    if (mylist[i].isFirstAttemp == true) {
+                                      mylist[i].UpdateFirstAttempt();
+                                    }
+                                    currentColor1 = Colors.red[400];
+                                  });
+                                  Future.delayed(
+                                      const Duration(microseconds: 35555), () {
+                                    _wrongAnswerBottomSheet(context);
+                                  });
+                                }
+                              },
+                              child: Card(
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(15.0)),
+                                color: currentColor1,
+                                child: Container(
+                                  height: displayHeight(context) * 0.16,
+                                  width: displayWidth(context) * 0.475,
+                                  child: Center(
+                                    child: Text(
+                                      option1,
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                          fontSize:
+                                              displayWidth(context) * 0.035,
+                                          fontWeight: FontWeight.bold),
                                     ),
                                   ),
                                 ),
                               ),
-                              Padding(
-                                padding: const EdgeInsets.only(top: 8.0),
-                                child: GestureDetector(
-                                  onTap: () {
-                                    ++attempts;
-                                    if (option2 == correct) {
-                                      setState(() {
-                                        currentColor2 = Colors.green;
-
-                                        if (mylist[i].isFirstAttemp) {
-                                          mylist[i].UpdateFirstAttempt();
-                                          correctanswer++;
-                                        }
-                                      });
-
-                                      Future.delayed(
-                                          const Duration(microseconds: 35555),
-                                          () {
-                                        _correctAnswerBottomSheet(context);
-                                      });
-                                    } else {
-                                      setState(() {
-                                        if (mylist[i].isFirstAttemp) {
-                                          mylist[i].UpdateFirstAttempt();
-                                        }
-                                        currentColor2 = Colors.red[400];
-                                      });
-                                      Future.delayed(
-                                          const Duration(microseconds: 35555),
-                                          () {
-                                        _wrongAnswerBottomSheet(context);
-                                      });
-                                    }
-                                  },
-                                  child: Card(
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(15.0)),
-                                    color: currentColor2,
-                                    child: Container(
-                                      height: displayHeight(context) * 0.16,
-                                      width: displayWidth(context) * 0.475,
-                                      child: Center(
-                                        child: Text(
-                                          option2,
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(
-                                              fontSize:
-                                                  displayWidth(context) * 0.035,
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.only(top: 8.0),
-                                child: GestureDetector(
-                                  onTap: () {
-                                    ++attempts;
-                                    if (option3 == correct) {
-                                      setState(() {
-                                        if (mylist[i].isFirstAttemp) {
-                                          mylist[i].UpdateFirstAttempt();
-                                          correctanswer++;
-                                        }
-
-                                        currentColor3 = Colors.green;
-                                      });
-
-                                      Future.delayed(
-                                          const Duration(microseconds: 35555),
-                                          () {
-                                        _correctAnswerBottomSheet(context);
-                                      });
-                                    } else {
-                                      setState(() {
-                                        if (mylist[i].isFirstAttemp) {
-                                          mylist[i].UpdateFirstAttempt();
-                                        }
-                                        currentColor3 = Colors.red[400];
-                                      });
-                                      Future.delayed(
-                                          const Duration(microseconds: 35555),
-                                          () {
-                                        _wrongAnswerBottomSheet(context);
-                                      });
-                                    }
-                                  },
-                                  child: Card(
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(15.0)),
-                                    color: currentColor3,
-                                    child: Container(
-                                      height: displayHeight(context) * 0.16,
-                                      width: displayWidth(context) * 0.475,
-                                      child: Center(
-                                        child: Text(
-                                          option3,
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(
-                                              fontSize:
-                                                  displayWidth(context) * 0.035,
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(top: 8.0),
-                                child: GestureDetector(
-                                  onTap: () {
-                                    ++attempts;
-                                    if (option4 == correct) {
-                                      setState(() {
-                                        if (mylist[i].isFirstAttemp) {
-                                          mylist[i].UpdateFirstAttempt();
-                                          correctanswer++;
-                                        }
-
-                                        currentColor4 = Colors.green;
-                                      });
-
-                                      Future.delayed(
-                                          const Duration(microseconds: 35555),
-                                          () {
-                                        _correctAnswerBottomSheet(context);
-                                      });
-                                    } else {
-                                      setState(() {
-                                        currentColor4 = Colors.red[400];
-                                        if (mylist[i].isFirstAttemp) {
-                                          mylist[i].UpdateFirstAttempt();
-                                        }
-                                      });
-
-                                      Future.delayed(
-                                          const Duration(microseconds: 35555),
-                                          () {
-                                        _wrongAnswerBottomSheet(context);
-                                      });
-                                    }
-                                  },
-                                  child: Card(
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(15.0)),
-                                    color: currentColor4,
-                                    child: Container(
-                                      height: displayHeight(context) * 0.16,
-                                      width: displayWidth(context) * 0.475,
-                                      child: Center(
-                                        child: Text(
-                                          option4,
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(
-                                              fontSize:
-                                                  displayWidth(context) * 0.035,
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                          Opacity(
-                            opacity: 0.0,
-                            child: Divider(
-                              height: displayHeight(context) * 0.006,
                             ),
                           ),
-                          Center(
-                            child: FlatButton(
-                                color: Colors.blue,
-                                onPressed: () {
-                                  if (i != 0) {
-                                    setState(() {
-                                      --i;
-                                    });
-                                  }
-                                },
-                                child: Text(
-                                  "PREVIOUS QUESTION",
-                                  style: TextStyle(
-                                      color: Colors.black,
-                                      fontSize: displayWidth(context) * 0.025,
-                                      fontWeight: FontWeight.bold),
-                                )),
-                          )
+                          Padding(
+                            padding: const EdgeInsets.only(top: 8.0),
+                            child: GestureDetector(
+                              onTap: () {
+                                ++attempts;
+                                if (option2 == correct) {
+                                  setState(() {
+                                    currentColor2 = Colors.green;
+
+                                    if (mylist[i].isFirstAttemp) {
+                                      mylist[i].UpdateFirstAttempt();
+                                      correctanswer++;
+                                    }
+                                  });
+
+                                  Future.delayed(
+                                      const Duration(microseconds: 35555), () {
+                                    _correctAnswerBottomSheet(context);
+                                  });
+                                } else {
+                                  setState(() {
+                                    if (mylist[i].isFirstAttemp) {
+                                      mylist[i].UpdateFirstAttempt();
+                                    }
+                                    currentColor2 = Colors.red[400];
+                                  });
+                                  Future.delayed(
+                                      const Duration(microseconds: 35555), () {
+                                    _wrongAnswerBottomSheet(context);
+                                  });
+                                }
+                              },
+                              child: Card(
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(15.0)),
+                                color: currentColor2,
+                                child: Container(
+                                  height: displayHeight(context) * 0.16,
+                                  width: displayWidth(context) * 0.475,
+                                  child: Center(
+                                    child: Text(
+                                      option2,
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                          fontSize:
+                                              displayWidth(context) * 0.035,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
                         ],
                       ),
-                    ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(top: 8.0),
+                            child: GestureDetector(
+                              onTap: () {
+                                ++attempts;
+                                if (option3 == correct) {
+                                  setState(() {
+                                    if (mylist[i].isFirstAttemp) {
+                                      mylist[i].UpdateFirstAttempt();
+                                      correctanswer++;
+                                    }
+
+                                    currentColor3 = Colors.green;
+                                  });
+
+                                  Future.delayed(
+                                      const Duration(microseconds: 35555), () {
+                                    _correctAnswerBottomSheet(context);
+                                  });
+                                } else {
+                                  setState(() {
+                                    if (mylist[i].isFirstAttemp) {
+                                      mylist[i].UpdateFirstAttempt();
+                                    }
+                                    currentColor3 = Colors.red[400];
+                                  });
+                                  Future.delayed(
+                                      const Duration(microseconds: 35555), () {
+                                    _wrongAnswerBottomSheet(context);
+                                  });
+                                }
+                              },
+                              child: Card(
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(15.0)),
+                                color: currentColor3,
+                                child: Container(
+                                  height: displayHeight(context) * 0.16,
+                                  width: displayWidth(context) * 0.475,
+                                  child: Center(
+                                    child: Text(
+                                      option3,
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                          fontSize:
+                                              displayWidth(context) * 0.035,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 8.0),
+                            child: GestureDetector(
+                              onTap: () {
+                                ++attempts;
+                                if (option4 == correct) {
+                                  setState(() {
+                                    if (mylist[i].isFirstAttemp) {
+                                      mylist[i].UpdateFirstAttempt();
+                                      correctanswer++;
+                                    }
+
+                                    currentColor4 = Colors.green;
+                                  });
+
+                                  Future.delayed(
+                                      const Duration(microseconds: 35555), () {
+                                    _correctAnswerBottomSheet(context);
+                                  });
+                                } else {
+                                  setState(() {
+                                    currentColor4 = Colors.red[400];
+                                    if (mylist[i].isFirstAttemp) {
+                                      mylist[i].UpdateFirstAttempt();
+                                    }
+                                  });
+
+                                  Future.delayed(
+                                      const Duration(microseconds: 35555), () {
+                                    _wrongAnswerBottomSheet(context);
+                                  });
+                                }
+                              },
+                              child: Card(
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(15.0)),
+                                color: currentColor4,
+                                child: Container(
+                                  height: displayHeight(context) * 0.16,
+                                  width: displayWidth(context) * 0.475,
+                                  child: Center(
+                                    child: Text(
+                                      option4,
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                          fontSize:
+                                              displayWidth(context) * 0.035,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Opacity(
+                        opacity: 0.0,
+                        child: Divider(
+                          height: displayHeight(context) * 0.006,
+                        ),
+                      ),
+                      Center(
+                        child: FlatButton(
+                            color: Colors.blue,
+                            onPressed: () {
+                              if (i != 0) {
+                                setState(() {
+                                  --i;
+                                });
+                              }
+                            },
+                            child: Text(
+                              "PREVIOUS QUESTION",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: displayWidth(context) * 0.025,
+                                  fontWeight: FontWeight.bold),
+                            )),
+                      )
+                    ],
                   ),
-                  top: displayHeight(context) * 0.520,
                 ),
-              ],
+              ),
+              top: displayHeight(context) * 0.520,
             ),
-          ));
+          ],
+        ),
+      );
     }
 
     if (i < mylist.length)

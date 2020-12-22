@@ -1,8 +1,8 @@
+import 'package:CP_App/Providers/Quiz/array/ar3.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
-import 'package:CP_App/Providers/Quiz/array/ar3.dart';
 
 class hardarray extends StatefulWidget {
   @override
@@ -296,67 +296,71 @@ class _hardarrayState extends State<hardarray> {
                 color: Colors.deepPurple,
                 height: displayHeight(context) * 0.35,
                 width: displayWidth(context) * 1.0,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(top: 20.0, left: 8.0),
-                          child: IconButton(
-                              iconSize: displayHeight(context) * 0.035,
-                              icon: Icon(Icons.arrow_back),
-                              onPressed: () {
-                                Navigator.of(context).pop();
-                              }),
-                        ),
-                      ],
-                    ),
-                    Center(
-                      child: Text(
-                        "ARRAY QUIZ",
-                        style: TextStyle(
-                            letterSpacing: 0.95,
-                            fontFamily: "BreeSerif",
-                            fontSize: displayWidth(context) * 0.09,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.yellow),
-                      ),
-                    ),
-                  ],
+              ),
+            ),
+            Positioned(
+              top: displayHeight(context) * 0.03,
+              left: displayWidth(context) * 0.01,
+              child: IconButton(
+                iconSize: displayHeight(context) * 0.035,
+                icon: Icon(Icons.arrow_back),
+                onPressed: () {
+                  setState(() {
+                    correctanswer = 0;
+                    for (int i = 0; i < mylist.length; ++i) {
+                      mylist[i].restoreAll();
+                    }
+                  });
+                  Navigator.of(context).pop();
+                },
+              ),
+            ),
+            Positioned(
+              top: displayHeight(context) * 0.035,
+              child: Center(
+                child: Text(
+                  "ARRAY QUIZ",
+                  style: TextStyle(
+                      letterSpacing: 0.95,
+                      fontFamily: "BreeSerif",
+                      fontSize: displayWidth(context) * 0.09,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.yellow),
                 ),
               ),
             ),
             Positioned(
-              top: displayHeight(context) * 0.2,
+              top: displayHeight(context) * 0.12,
               child: Card(
                 elevation: 16.0,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0)),
                 color: Colors.white,
                 child: Container(
-                  height: displayHeight(context) * 0.28,
-                  width: displayWidth(context) * 0.85,
-                  child: Center(
-                    child: Text(
-                      problem,
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                          fontSize: displayWidth(context) * 0.04,
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold),
+                  height: displayHeight(context) * 0.4,
+                  width: displayWidth(context) * 0.9,
+                  child: Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Center(
+                      child: Text(
+                        problem,
+                        textAlign: TextAlign.start,
+                        style: TextStyle(
+                            fontSize: displayWidth(context) * 0.036,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500),
+                      ),
                     ),
                   ),
                 ),
               ),
             ),
             Positioned(
+              top: displayHeight(context) * 0.55,
               child: Card(
                 color: Colors.deepPurple,
                 child: Container(
-                  height: displayHeight(context) * 0.48,
+                  height: displayHeight(context) * 0.45,
                   width: displayWidth(context) * 1.0,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -410,7 +414,7 @@ class _hardarrayState extends State<hardarray> {
                                       style: TextStyle(
                                           fontSize:
                                               displayWidth(context) * 0.035,
-                                          fontWeight: FontWeight.bold),
+                                          fontWeight: FontWeight.w500),
                                     ),
                                   ),
                                 ),
@@ -463,7 +467,7 @@ class _hardarrayState extends State<hardarray> {
                                       style: TextStyle(
                                           fontSize:
                                               displayWidth(context) * 0.035,
-                                          fontWeight: FontWeight.bold),
+                                          fontWeight: FontWeight.w500),
                                     ),
                                   ),
                                 ),
@@ -486,7 +490,6 @@ class _hardarrayState extends State<hardarray> {
                                       mylist[i].UpdateFirstAttempt();
                                       correctanswer++;
                                     }
-
                                     currentColor3 = Colors.green;
                                   });
 
@@ -521,7 +524,7 @@ class _hardarrayState extends State<hardarray> {
                                       style: TextStyle(
                                           fontSize:
                                               displayWidth(context) * 0.035,
-                                          fontWeight: FontWeight.bold),
+                                          fontWeight: FontWeight.w500),
                                     ),
                                   ),
                                 ),
@@ -575,7 +578,7 @@ class _hardarrayState extends State<hardarray> {
                                       style: TextStyle(
                                           fontSize:
                                               displayWidth(context) * 0.035,
-                                          fontWeight: FontWeight.bold),
+                                          fontWeight: FontWeight.w500),
                                     ),
                                   ),
                                 ),
@@ -612,7 +615,6 @@ class _hardarrayState extends State<hardarray> {
                   ),
                 ),
               ),
-              top: displayHeight(context) * 0.520,
             ),
           ],
         ),

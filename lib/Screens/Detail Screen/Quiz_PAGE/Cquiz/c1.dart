@@ -309,6 +309,12 @@ class _easycState extends State<easyc> {
                               iconSize: displayHeight(context) * 0.035,
                               icon: Icon(Icons.arrow_back),
                               onPressed: () {
+                                setState(() {
+                                  correctanswer = 0;
+                                  for (int i = 0; i < mylist.length; ++i) {
+                                    mylist[i].restoreAll();
+                                  }
+                                });
                                 Navigator.of(context).pop();
                               }),
                         ),

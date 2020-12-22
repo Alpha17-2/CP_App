@@ -348,7 +348,7 @@ class _hardjavaState extends State<hardjava> {
                         style: TextStyle(
                             fontSize: displayWidth(context) * 0.036,
                             color: Colors.black,
-                            fontWeight: FontWeight.bold),
+                            fontWeight: FontWeight.w500),
                       ),
                     ),
                   ),
@@ -414,7 +414,7 @@ class _hardjavaState extends State<hardjava> {
                                       style: TextStyle(
                                           fontSize:
                                               displayWidth(context) * 0.035,
-                                          fontWeight: FontWeight.bold),
+                                          fontWeight: FontWeight.w500),
                                     ),
                                   ),
                                 ),
@@ -467,7 +467,7 @@ class _hardjavaState extends State<hardjava> {
                                       style: TextStyle(
                                           fontSize:
                                               displayWidth(context) * 0.035,
-                                          fontWeight: FontWeight.bold),
+                                          fontWeight: FontWeight.w500),
                                     ),
                                   ),
                                 ),
@@ -524,7 +524,7 @@ class _hardjavaState extends State<hardjava> {
                                       style: TextStyle(
                                           fontSize:
                                               displayWidth(context) * 0.035,
-                                          fontWeight: FontWeight.bold),
+                                          fontWeight: FontWeight.w500),
                                     ),
                                   ),
                                 ),
@@ -578,7 +578,7 @@ class _hardjavaState extends State<hardjava> {
                                       style: TextStyle(
                                           fontSize:
                                               displayWidth(context) * 0.035,
-                                          fontWeight: FontWeight.bold),
+                                          fontWeight: FontWeight.w500),
                                     ),
                                   ),
                                 ),

@@ -787,8 +787,8 @@ class Page4 extends StatelessWidget {
                                 ),
                                 GestureDetector(
                                   onTap: () {
-                                    ShowPopUp(context, easyll(), mediumll(),
-                                        hardll());
+                                    ShowPopUp(context, easylinkedlist(),
+                                        mediumlinkedlist(), hardlinkedlist());
                                   },
                                   child: Card(
                                     child: Container(

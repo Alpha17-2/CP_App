@@ -1,8 +1,8 @@
-import 'package:flutter/material.dart';
-import 'package:CP_App/Helpers/DeviceSize.dart';
-import 'package:provider/provider.dart';
-import 'package:CP_App/Providers/Quiz/C/cl2list.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:CP_App/Helpers/DeviceSize.dart';
+import 'package:CP_App/Providers/Quiz/C/cl2list.dart';
 
 class mediumc extends StatefulWidget {
   @override
@@ -24,6 +24,8 @@ class _mediumcState extends State<mediumc> {
 
   Widget build(BuildContext context) {
     final mylist = Provider.of<c2>(context, listen: true).ListOfCquestions;
+    // final myObject = Provider.of<SingleQuizQuestion>(context);
+
     void _correctAnswerBottomSheet(context) {
       showModalBottomSheet(
           context: context,
@@ -307,6 +309,12 @@ class _mediumcState extends State<mediumc> {
                               iconSize: displayHeight(context) * 0.035,
                               icon: Icon(Icons.arrow_back),
                               onPressed: () {
+                                setState(() {
+                                  correctanswer = 0;
+                                  for (int i = 0; i < mylist.length; ++i) {
+                                    mylist[i].restoreAll();
+                                  }
+                                });
                                 Navigator.of(context).pop();
                               }),
                         ),
@@ -318,7 +326,7 @@ class _mediumcState extends State<mediumc> {
                         style: TextStyle(
                             letterSpacing: 0.95,
                             fontFamily: "BreeSerif",
-                            fontSize: displayWidth(context) * 0.065,
+                            fontSize: displayWidth(context) * 0.09,
                             fontWeight: FontWeight.bold,
                             color: Colors.yellow),
                       ),
@@ -370,6 +378,7 @@ class _mediumcState extends State<mediumc> {
                             padding: const EdgeInsets.only(top: 8.0),
                             child: GestureDetector(
                               onTap: () {
+                                ++attempts;
                                 if (option1 == correct) {
                                   setState(() {
                                     if (mylist[i].isFirstAttemp) {
@@ -421,6 +430,7 @@ class _mediumcState extends State<mediumc> {
                             padding: const EdgeInsets.only(top: 8.0),
                             child: GestureDetector(
                               onTap: () {
+                                ++attempts;
                                 if (option2 == correct) {
                                   setState(() {
                                     currentColor2 = Colors.green;
@@ -478,6 +488,7 @@ class _mediumcState extends State<mediumc> {
                             padding: const EdgeInsets.only(top: 8.0),
                             child: GestureDetector(
                               onTap: () {
+                                ++attempts;
                                 if (option3 == correct) {
                                   setState(() {
                                     if (mylist[i].isFirstAttemp) {
@@ -530,6 +541,7 @@ class _mediumcState extends State<mediumc> {
                             padding: const EdgeInsets.only(top: 8.0),
                             child: GestureDetector(
                               onTap: () {
+                                ++attempts;
                                 if (option4 == correct) {
                                   setState(() {
                                     if (mylist[i].isFirstAttemp) {

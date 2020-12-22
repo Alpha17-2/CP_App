@@ -14,12 +14,13 @@ class st3 extends ChangeNotifier {
       isFirstAttemp: true,
     ),
     SingleQuizQuestion(
-      question: "The result evaluating the postfix expression 10 5+60 6/*8- is",
+      question:
+          "The result evaluating the postfix expression\n   10 5+60 6/*8- is",
       option1: "284",
       option2: "213",
       option3: "142",
       option4: "71",
-      correct: "142",
+      correct: "284",
       isFirstAttemp: true,
     ),
     SingleQuizQuestion(
@@ -37,7 +38,7 @@ class st3 extends ChangeNotifier {
           "Consider the following operation perform on a stack of size 5: Push(a);Pop();Push(b);Push(c);Pop();Push(d);Pop();Pop();Push(e) Which of the following statements is correct?",
       option1: "Underflow occurs",
       option2: "overflow occurs",
-      option3: "Stack operations are preformed smoothly",
+      option3: "Stack operations are performed smoothly",
       option4: "None of the above",
       correct: "Stack operations are performed smoothly",
       isFirstAttemp: true,

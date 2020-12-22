@@ -1,8 +1,8 @@
+import 'package:CP_App/Providers/Quiz/array/ar1.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
-import 'package:CP_App/Providers/Quiz/array/ar1.dart';
 
 class easyarray extends StatefulWidget {
   @override
@@ -309,6 +309,12 @@ class _easyarrayState extends State<easyarray> {
                               iconSize: displayHeight(context) * 0.035,
                               icon: Icon(Icons.arrow_back),
                               onPressed: () {
+                                setState(() {
+                                  correctanswer = 0;
+                                  for (int i = 0; i < mylist.length; ++i) {
+                                    mylist[i].restoreAll();
+                                  }
+                                });
                                 Navigator.of(context).pop();
                               }),
                         ),
@@ -339,14 +345,17 @@ class _easyarrayState extends State<easyarray> {
                 child: Container(
                   height: displayHeight(context) * 0.28,
                   width: displayWidth(context) * 0.85,
-                  child: Center(
-                    child: Text(
-                      problem,
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                          fontSize: displayWidth(context) * 0.04,
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold),
+                  child: Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Center(
+                      child: Text(
+                        problem,
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            fontSize: displayWidth(context) * 0.04,
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold),
+                      ),
                     ),
                   ),
                 ),
