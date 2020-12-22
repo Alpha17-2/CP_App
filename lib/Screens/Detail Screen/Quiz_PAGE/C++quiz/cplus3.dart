@@ -306,6 +306,9 @@ class _hardcplusState extends State<hardcplus> {
                 iconSize: displayHeight(context) * 0.035,
                 icon: Icon(Icons.arrow_back),
                 onPressed: () {
+                  for (int i = 0; i < mylist.length; ++i) {
+                    mylist[i].restoreAll();
+                  }
                   Navigator.of(context).pop();
                 },
               ),
@@ -334,14 +337,17 @@ class _hardcplusState extends State<hardcplus> {
                 child: Container(
                   height: displayHeight(context) * 0.4,
                   width: displayWidth(context) * 0.9,
-                  child: Center(
-                    child: Text(
-                      problem,
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                          fontSize: displayWidth(context) * 0.036,
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold),
+                  child: Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Center(
+                      child: Text(
+                        problem,
+                        textAlign: TextAlign.start,
+                        style: TextStyle(
+                            fontSize: displayWidth(context) * 0.036,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500),
+                      ),
                     ),
                   ),
                 ),
@@ -406,7 +412,7 @@ class _hardcplusState extends State<hardcplus> {
                                       style: TextStyle(
                                           fontSize:
                                               displayWidth(context) * 0.035,
-                                          fontWeight: FontWeight.bold),
+                                          fontWeight: FontWeight.w500),
                                     ),
                                   ),
                                 ),
@@ -459,7 +465,7 @@ class _hardcplusState extends State<hardcplus> {
                                       style: TextStyle(
                                           fontSize:
                                               displayWidth(context) * 0.035,
-                                          fontWeight: FontWeight.bold),
+                                          fontWeight: FontWeight.w500),
                                     ),
                                   ),
                                 ),
@@ -516,7 +522,7 @@ class _hardcplusState extends State<hardcplus> {
                                       style: TextStyle(
                                           fontSize:
                                               displayWidth(context) * 0.035,
-                                          fontWeight: FontWeight.bold),
+                                          fontWeight: FontWeight.w500),
                                     ),
                                   ),
                                 ),
@@ -570,7 +576,7 @@ class _hardcplusState extends State<hardcplus> {
                                       style: TextStyle(
                                           fontSize:
                                               displayWidth(context) * 0.035,
-                                          fontWeight: FontWeight.bold),
+                                          fontWeight: FontWeight.w500),
                                     ),
                                   ),
                                 ),

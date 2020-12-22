@@ -4,12 +4,12 @@ import '../SingleQuestion.dart';
 class cplus1 extends ChangeNotifier {
   List<SingleQuizQuestion> cplusl1 = [
     SingleQuizQuestion(
-      question: "Which of the following is an abstract data type.?",
-      option1: "Int",
-      option2: "Float",
-      option3: "Class",
-      option4: "String",
-      correct: "Class",
+      question: "Which of the following is an abstract data type ?",
+      option1: "int",
+      option2: "float",
+      option3: "class",
+      option4: "string",
+      correct: "class",
       isFirstAttemp: true,
     ),
 
@@ -24,7 +24,7 @@ class cplus1 extends ChangeNotifier {
       isFirstAttemp: true,
     ),
     SingleQuizQuestion(
-      question: "Escape sequence character '\0' occupies____amount of memory.?",
+      question: "Escape sequence character '\0' occupies____amount of memory ?",
       option1: "0",
       option2: "1",
       option3: "2",
@@ -33,7 +33,7 @@ class cplus1 extends ChangeNotifier {
       isFirstAttemp: true,
     ),
     SingleQuizQuestion(
-      question: "Declaration a pointer more than once may cause___.?",
+      question: "Declaring a pointer more than once may cause___ ?",
       option1: "Error",
       option2: "Abort",
       option3: "Trap",
@@ -42,12 +42,12 @@ class cplus1 extends ChangeNotifier {
       isFirstAttemp: true,
     ),
     SingleQuizQuestion(
-      question: "An expression A.B in c++ means___.?",
-      option1: "A is memeber of object B",
-      option2: "B is memeber of object A",
+      question: "What does the expression A.B in c++ means ?",
+      option1: "A is member of object B",
+      option2: "B is member of object A",
       option3: "Product of A and B",
       option4: "None of these",
-      correct: "B is memeber of object A",
+      correct: "B is member of object A",
       isFirstAttemp: true,
     ),
     SingleQuizQuestion(

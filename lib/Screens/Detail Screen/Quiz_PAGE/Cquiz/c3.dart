@@ -305,6 +305,12 @@ class _hardcState extends State<hardc> {
                 iconSize: displayHeight(context) * 0.035,
                 icon: Icon(Icons.arrow_back),
                 onPressed: () {
+                  setState(() {
+                    correctanswer = 0;
+                    for (int i = 0; i < mylist.length; ++i) {
+                      mylist[i].restoreAll();
+                    }
+                  });
                   Navigator.of(context).pop();
                 },
               ),
@@ -333,14 +339,17 @@ class _hardcState extends State<hardc> {
                 child: Container(
                   height: displayHeight(context) * 0.4,
                   width: displayWidth(context) * 0.9,
-                  child: Center(
-                    child: Text(
-                      problem,
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                          fontSize: displayWidth(context) * 0.036,
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold),
+                  child: Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Center(
+                      child: Text(
+                        problem,
+                        textAlign: TextAlign.start,
+                        style: TextStyle(
+                            fontSize: displayWidth(context) * 0.036,
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold),
+                      ),
                     ),
                   ),
                 ),

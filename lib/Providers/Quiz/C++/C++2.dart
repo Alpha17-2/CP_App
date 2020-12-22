@@ -46,13 +46,13 @@ class cplus2 extends ChangeNotifier {
     ),
 
     SingleQuizQuestion(
-      question: "In c++, dynamic memory allocation is done using____operator.?",
+      question: "In c++, dynamic memory allocation is done using____operator ?",
       option1: "calloc()",
       option2: "malloc()",
       option3: "allocate",
       isFirstAttemp: true,
-      option4: "New",
-      correct: "New",
+      option4: "new",
+      correct: "new",
     ),
     SingleQuizQuestion(
       question:
@@ -65,7 +65,7 @@ class cplus2 extends ChangeNotifier {
       correct: "Abstract class",
     ),
     SingleQuizQuestion(
-      question: "Reusability of code in C++ is achieved through ____.?",
+      question: "Reusability of code in C++ is achieved through ____ ",
       option1: "Polymorphism",
       option2: "Inheritance",
       option3: "Encapsulation",

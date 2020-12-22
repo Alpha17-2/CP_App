@@ -310,6 +310,10 @@ class _mediumcplusState extends State<mediumcplus> {
                               iconSize: displayHeight(context) * 0.035,
                               icon: Icon(Icons.arrow_back),
                               onPressed: () {
+                                for (int i = 0; i < mylist.length; ++i) {
+                                  mylist[i].restoreAll();
+                                }
+
                                 Navigator.of(context).pop();
                               }),
                         ),
