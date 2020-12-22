@@ -4,6 +4,11 @@ import 'algosingle.dart';
 class searchlist extends ChangeNotifier {
   List<algosingle> searchlis = [
     algosingle(
+      title: "Linear Search",
+      link:
+          "https://github.com/swaadheenta/Sorting-Searching_Algorithms/blob/main/Linear%20Search.cpp",
+    ),
+    algosingle(
         title: "Binary Search",
         link:
             "https://github.com/swaadheenta/Sorting-Searching_Algorithms/blob/main/Binary%20search.cpp"),

@@ -325,7 +325,7 @@ class ArrayPage extends StatelessWidget {
               GestureDetector(
                 onTap: () {
                   _linkopen(
-                      "https://github.com/swaadheenta/Basic_Algorithms/blob/main/Insertion%20in%20an%20array.cpp");
+                      "https://github.com/swaadheenta/Sorting-Searching_Algorithms/blob/main/Selection%20sort.cpp");
                 },
                 child: Text(
                   "Click here to see implementation",
@@ -345,7 +345,7 @@ class ArrayPage extends StatelessWidget {
               GestureDetector(
                 onTap: () {
                   _linkopen(
-                      "https://github.com/swaadheenta/Basic_Algorithms/blob/main/Insertion%20in%20an%20array.cpp");
+                      "https://github.com/swaadheenta/Sorting-Searching_Algorithms/blob/main/Linear%20Search.cpp");
                 },
                 child: Text(
                   "Click here to see implementation",
