@@ -34,15 +34,28 @@ class Python extends StatelessWidget {
                         bottomRight: Radius.circular(30)),
                   ))),
           Positioned(
-              left: displayWidth(context) * 0.15,
+              left: displayWidth(context) * 0.25,
               top: displayHeight(context) * 0.07,
               child: Text(
                 "Python",
                 style: TextStyle(
                   fontFamily: "PatuaOne",
-                  fontSize: displayWidth(context) * 0.09,
+                  fontSize: displayWidth(context) * 0.085,
                 ),
               )),
+          Positioned(
+            child: IconButton(
+                icon: Icon(
+                  Icons.arrow_back_sharp,
+                  color: Colors.black,
+                  size: displayWidth(context) * 0.07,
+                ),
+                onPressed: () {
+                  Navigator.pop(context);
+                }),
+            top: displayHeight(context) * 0.065,
+            left: displayWidth(context) * 0.02,
+          ),
           Positioned(
               top: displayHeight(context) * 0.15,
               left: displayWidth(context) * 0.04,
@@ -71,19 +84,7 @@ class Python extends StatelessWidget {
               ),
             ),
           ),
-          Positioned(
-            child: IconButton(
-                icon: Icon(
-                  Icons.arrow_back_sharp,
-                  color: Colors.black,
-                  size: displayWidth(context) * 0.07,
-                ),
-                onPressed: () {
-                  Navigator.pop(context);
-                }),
-            top: displayHeight(context) * 0.045,
-            left: displayWidth(context) * 0.02,
-          ),
+
           //1st card !!
           Positioned(
               top: displayHeight(context) * 0.5,

@@ -37,9 +37,9 @@ class Pythondisadv extends StatelessWidget {
           ),
         ),
         Positioned(
-          top: displayHeight(context) * 0.25,
+          top: displayHeight(context) * 0.22,
           child: Container(
-            height: displayHeight(context) * 0.75,
+            height: displayHeight(context) * 0.78,
             width: displayWidth(context),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.only(
@@ -159,14 +159,14 @@ class Pythondisadv extends StatelessWidget {
               onPressed: () {
                 Navigator.pop(context);
               }),
-          top: displayHeight(context) * 0.045,
+          top: displayHeight(context) * 0.097,
           left: displayWidth(context) * 0.02,
         ),
         Positioned(
-            top: displayHeight(context) * 0.12,
+            top: displayHeight(context) * 0.1,
             child: Center(
               child: Text(
-                "Disdvantages",
+                "Disadvantages",
                 style: TextStyle(
                   fontFamily: "PatuaOne",
                   fontSize: displayWidth(context) * 0.09,

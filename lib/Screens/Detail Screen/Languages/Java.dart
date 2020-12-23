@@ -34,7 +34,7 @@ class Java extends StatelessWidget {
                         bottomRight: Radius.circular(30)),
                   ))),
           Positioned(
-              left: displayWidth(context) * 0.15,
+              left: displayWidth(context) * 0.25,
               top: displayHeight(context) * 0.07,
               child: Text(
                 "Java",
@@ -44,7 +44,20 @@ class Java extends StatelessWidget {
                 ),
               )),
           Positioned(
-              top: displayHeight(context) * 0.15,
+            child: IconButton(
+                icon: Icon(
+                  Icons.arrow_back_sharp,
+                  color: Colors.black,
+                  size: displayWidth(context) * 0.07,
+                ),
+                onPressed: () {
+                  Navigator.pop(context);
+                }),
+            top: displayHeight(context) * 0.072,
+            left: displayWidth(context) * 0.02,
+          ),
+          Positioned(
+              top: displayHeight(context) * 0.18,
               child: Container(
                 height: displayHeight(context) * 0.235,
                 width: displayWidth(context) * 0.8,
@@ -61,7 +74,7 @@ class Java extends StatelessWidget {
                 ),
               )),
           Positioned(
-            top: displayHeight(context) * 0.089,
+            top: displayHeight(context) * 0.125,
             right: displayWidth(context) * 0.025,
             child: CircleAvatar(
               radius: displayWidth(context) * 0.085,
@@ -73,19 +86,7 @@ class Java extends StatelessWidget {
               ),
             ),
           ),
-          Positioned(
-            child: IconButton(
-                icon: Icon(
-                  Icons.arrow_back_sharp,
-                  color: Colors.black,
-                  size: displayWidth(context) * 0.07,
-                ),
-                onPressed: () {
-                  Navigator.pop(context);
-                }),
-            top: displayHeight(context) * 0.045,
-            left: displayWidth(context) * 0.02,
-          ),
+
           //1st card !!
           Positioned(
               top: displayHeight(context) * 0.5,

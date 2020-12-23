@@ -37,9 +37,9 @@ class Cplusadv extends StatelessWidget {
           ),
         ),
         Positioned(
-          top: displayHeight(context) * 0.25,
+          top: displayHeight(context) * 0.17,
           child: Container(
-            height: displayHeight(context) * 0.75,
+            height: displayHeight(context) * 0.83,
             width: displayWidth(context),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.only(
@@ -159,11 +159,11 @@ class Cplusadv extends StatelessWidget {
               onPressed: () {
                 Navigator.pop(context);
               }),
-          top: displayHeight(context) * 0.045,
+          top: displayHeight(context) * 0.06,
           left: displayWidth(context) * 0.02,
         ),
         Positioned(
-            top: displayHeight(context) * 0.12,
+            top: displayHeight(context) * 0.06,
             child: Center(
               child: Text(
                 "Advantages",

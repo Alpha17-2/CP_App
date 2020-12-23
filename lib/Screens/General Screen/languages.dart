@@ -55,17 +55,17 @@ class languages extends StatelessWidget {
             top: displayHeight(context) * 0.18,
             right: displayWidth(context) * 0.0315,
             child: CircleAvatar(
-              radius: displayWidth(context) * 0.175,
+              radius: displayWidth(context) * 0.15,
               backgroundColor: Colors.black,
               child: CircleAvatar(
-                radius: displayWidth(context) * 0.17,
+                radius: displayWidth(context) * 0.145,
                 backgroundImage: AssetImage('images/x15.png'),
                 backgroundColor: Colors.yellow[100],
               ),
             ),
           ),
           Positioned(
-            top: displayHeight(context) * 0.375,
+            top: displayHeight(context) * 0.355,
             child: Card(
               // color: Color(0xfbbecf3f9),
               shape: RoundedRectangleBorder(

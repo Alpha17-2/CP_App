@@ -11,12 +11,13 @@ import 'package:provider/provider.dart';
 import 'package:CP_App/Providers/Algorithms/algocardlist.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class Algo extends StatefulWidget {
+class Page0 extends StatefulWidget {
+  // Algorithms
   @override
-  Algo_State createState() => Algo_State();
+  _Page0State createState() => _Page0State();
 }
 
-class Algo_State extends State<Algo> {
+class _Page0State extends State<Page0> {
   @override
   var currentProblem = "Basic";
   var listtoshow = [];
@@ -178,19 +179,6 @@ class Algo_State extends State<Algo> {
             ),
           ),
         )),
-        Positioned(
-          child: IconButton(
-              icon: Icon(
-                Icons.arrow_back_sharp,
-                color: Colors.black,
-                size: displayWidth(context) * 0.07,
-              ),
-              onPressed: () {
-                Navigator.pop(context);
-              }),
-          top: displayHeight(context) * 0.065,
-          left: displayWidth(context) * 0.015,
-        ),
         Positioned(
           left: displayWidth(context) * 0.25,
           top: displayHeight(context) * 0.08,

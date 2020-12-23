@@ -34,8 +34,8 @@ class Cplus extends StatelessWidget {
                         bottomRight: Radius.circular(30)),
                   ))),
           Positioned(
-              left: displayWidth(context) * 0.15,
-              top: displayHeight(context) * 0.1,
+              left: displayWidth(context) * 0.25,
+              top: displayHeight(context) * 0.07,
               child: Text(
                 "C++",
                 style: TextStyle(
@@ -84,7 +84,7 @@ class Cplus extends StatelessWidget {
                 onPressed: () {
                   Navigator.pop(context);
                 }),
-            top: displayHeight(context) * 0.045,
+            top: displayHeight(context) * 0.07,
             left: displayWidth(context) * 0.02,
           ),
           //1st card !!

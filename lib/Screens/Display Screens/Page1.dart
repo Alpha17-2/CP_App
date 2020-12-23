@@ -1,292 +1,203 @@
-import 'package:CP_App/Screens/General%20Screen/Algorithm.dart';
-import 'package:CP_App/Screens/General%20Screen/C++%20Stl.dart';
-import 'package:CP_App/Screens/General%20Screen/complexity.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:CP_App/Helpers/DeviceSize.dart';
-import 'package:CP_App/Screens/General Screen/languages.dart';
-import 'package:CP_App/Screens/General Screen/whatiscp.dart';
+import 'package:CP_App/Screens/Detail Screen/Quiz_PAGE/Arrayquiz/array1.dart';
+import 'package:CP_App/Screens/Detail Screen/Quiz_PAGE/Arrayquiz/array2.dart';
+import 'package:CP_App/Screens/Detail Screen/Quiz_PAGE/Arrayquiz/array3.dart';
+import 'package:CP_App/Screens/Detail Screen/Quiz_PAGE/Binarytreequiz/bt1.dart';
+import 'package:CP_App/Screens/Detail Screen/Quiz_PAGE/Binarytreequiz/bt2.dart';
+import 'package:CP_App/Screens/Detail Screen/Quiz_PAGE/Binarytreequiz/bt3.dart';
+import 'package:CP_App/Screens/Detail Screen/Quiz_PAGE/C++quiz/cplus1.dart';
+import 'package:CP_App/Screens/Detail Screen/Quiz_PAGE/C++quiz/cplus2.dart';
+import 'package:CP_App/Screens/Detail Screen/Quiz_PAGE/C++quiz/cplus3.dart';
+import 'package:CP_App/Screens/Detail Screen/Quiz_PAGE/Cquiz/c1.dart';
+import 'package:CP_App/Screens/Detail Screen/Quiz_PAGE/Cquiz/c2.dart';
+import 'package:CP_App/Screens/Detail Screen/Quiz_PAGE/Cquiz/c3.dart';
+import 'package:CP_App/Screens/Detail Screen/Quiz_PAGE/Graphquiz/graph1.dart';
+import 'package:CP_App/Screens/Detail Screen/Quiz_PAGE/Graphquiz/graph2.dart';
+import 'package:CP_App/Screens/Detail Screen/Quiz_PAGE/Graphquiz/graph3.dart';
+import 'package:CP_App/Screens/Detail Screen/Quiz_PAGE/Javaquiz/java1.dart';
+import 'package:CP_App/Screens/Detail Screen/Quiz_PAGE/Javaquiz/java2.dart';
+import 'package:CP_App/Screens/Detail Screen/Quiz_PAGE/Javaquiz/java3.dart';
+import 'package:CP_App/Screens/Detail Screen/Quiz_PAGE/LinkedListquiz/ll1.dart';
+import 'package:CP_App/Screens/Detail Screen/Quiz_PAGE/LinkedListquiz/ll2.dart';
+import 'package:CP_App/Screens/Detail Screen/Quiz_PAGE/LinkedListquiz/ll3.dart';
+import 'package:CP_App/Screens/Detail Screen/Quiz_PAGE/Pythonquiz/python1.dart';
+import 'package:CP_App/Screens/Detail Screen/Quiz_PAGE/Pythonquiz/python2.dart';
+import 'package:CP_App/Screens/Detail Screen/Quiz_PAGE/Pythonquiz/python3.dart';
+import 'package:CP_App/Screens/Detail Screen/Quiz_PAGE/Queuequiz/queue1.dart';
+import 'package:CP_App/Screens/Detail Screen/Quiz_PAGE/Queuequiz/queue2.dart';
+import 'package:CP_App/Screens/Detail Screen/Quiz_PAGE/Queuequiz/queue3.dart';
+import 'package:CP_App/Screens/Detail Screen/Quiz_PAGE/Searchingquiz/ser1.dart';
+import 'package:CP_App/Screens/Detail Screen/Quiz_PAGE/Searchingquiz/ser2.dart';
+import 'package:CP_App/Screens/Detail Screen/Quiz_PAGE/Searchingquiz/ser3.dart';
+import 'package:CP_App/Screens/Detail Screen/Quiz_PAGE/Sortingquiz/sort1.dart';
+import 'package:CP_App/Screens/Detail Screen/Quiz_PAGE/Sortingquiz/sort2.dart';
+import 'package:CP_App/Screens/Detail Screen/Quiz_PAGE/Sortingquiz/sort3.dart';
+import 'package:CP_App/Screens/Detail Screen/Quiz_PAGE/Stackquiz/stack1.dart';
+import 'package:CP_App/Screens/Detail Screen/Quiz_PAGE/Stackquiz/stack2.dart';
+import 'package:CP_App/Screens/Detail Screen/Quiz_PAGE/Stackquiz/stack3.dart';
 
-import 'package:CP_App/Screens/General Screen/Computational.dart';
-import 'package:CP_App/Screens/Detail Screen/DS/dshome.dart';
-import 'package:intl/intl.dart';
-import 'package:url_launcher/url_launcher.dart';
-
-class Page1 extends StatefulWidget {
-  @override
-  _Page1State createState() => _Page1State();
-}
-
-class _Page1State extends State<Page1> {
+class Page1 extends StatelessWidget {
+  // Quiz
   @override
   Widget build(BuildContext context) {
-    Widget MyContestCard(BuildContext context, DocumentSnapshot doc) {
-      Future<void> _launched;
-      Future<void> _launchinBrowser(String url) async {
-        if (await canLaunch(url)) {
-          await launch(url, forceWebView: false, forceSafariVC: false);
-        } else {
-          throw 'Could not launch';
-        }
-      }
-
-      final textsize = displayWidth(context) * 0.035;
-      final dividerlength = displayHeight(context) * 0.0079;
-      final String title = doc['title'];
-      final type = doc['type'];
-      String typeToPrint = "";
-      final String sdate = DateFormat.yMMMd()
-          .add_jm()
-          .format(DateTime.parse(doc['start'].toDate().toString()));
-      final String edate = DateFormat.yMMMd()
-          .add_jm()
-          .format(DateTime.parse(doc['end'].toDate().toString()));
-
-      final String platform = doc['platform'];
-      String url = doc['link'];
-      String platImage;
-      bool singleday = false;
-      List<Color> finallistofcolor = [];
-      List<Color> hr = [
-        Colors.green[100],
-        Colors.green[200],
-        Colors.green[300]
-      ];
-      List<Color> ac = [Color(0xffbed4264), Color(0xffbffedbc)];
-      List<Color> he = [Color(0xfbb757F9A), Color(0xfbbD7DDE8)];
-      List<Color> cc = [
-        Color(0xfbbc1a5ce),
-        Color(0xfbb847db3),
-        Color(0xfbb585792)
-      ];
-
-      List<Color> tc = [
-        Color(0xfbbA1FFCE),
-        Color(0xfbbFAFFD1),
-      ];
-      List<Color> cf = [
-        Color(0xbb58cced),
-        Color(0xbb3895d3),
-        Color(0xbb1261a0),
-      ];
-      List<Color> lc = [
-        Color(0xfbb83a4d4),
-        Color(0xfbbb6fbff),
-      ];
-      List<Color> gg = [Color(0xfbbD3CCE3), Color(0xfbbE9E4F0)];
-
-      if (platform == 'cc') {
-        platImage = "images/mynewcc.png";
-        finallistofcolor = cc;
-      } else if (platform == 'cf') {
-        platImage = 'images/mynewcf.png';
-        finallistofcolor = cf;
-      } else if (platform == 'lc') {
-        platImage = 'images/lc12.png';
-        finallistofcolor = lc;
-      } else if (platform == 'hr') {
-        finallistofcolor = hr;
-        platImage = 'images/x3.png';
-      } else if (platform == 'ac') {
-        platImage = 'images/ac1.png';
-        finallistofcolor = ac;
-      } else if (platform == 'he') {
-        platImage = 'images/x1.png';
-        finallistofcolor = he;
-      } else if (platform == 'tc') {
-        platImage = 'images/tc11.png';
-        finallistofcolor = tc;
-      } else {
-        platImage = 'images/google.jpg';
-        finallistofcolor = gg;
-      }
-
-      if (type == "coding") {
-        typeToPrint = "Coding Challenge";
-      } else if (type == "hackathon") {
-        typeToPrint = "Hackathon";
-      } else {
-        typeToPrint = "Hiring Challenge";
-      }
-
-      return Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(15.0),
-            topRight: Radius.circular(15.0),
-          ),
-          gradient: LinearGradient(
-              colors: finallistofcolor,
-              begin: Alignment.bottomLeft,
-              end: Alignment.topRight),
-        ),
-        height: displayHeight(context) * 0.365,
-        width: displayWidth(context) * 0.6,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(top: 9.5),
-              child: Center(
-                child: Image.asset(
-                  platImage,
-                  height: displayHeight(context) * 0.1,
-                  width: displayWidth(context) * 0.4,
-                  fit: BoxFit.fitWidth,
-                ),
+    final div = Opacity(
+      opacity: 0.0,
+      child: Divider(
+        height: displayHeight(context) * 0.025,
+      ),
+    );
+    final div2 = Opacity(
+      opacity: 0.0,
+      child: Divider(
+        height: displayHeight(context) * 0.0195,
+      ),
+    );
+    void ShowPopUp(
+        BuildContext context, Widget easy, Widget medium, Widget hard) {
+      showModalBottomSheet(
+        context: (context),
+        builder: (builder) {
+          return Container(
+            height: displayHeight(context) * 0.25,
+            width: displayWidth(context),
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                colors: [
+                  Color(0xfbbd9a7c7),
+                  Color(0xfbbfffcdc),
+                ],
+                begin: Alignment.bottomLeft,
+                end: Alignment.topRight,
               ),
             ),
-            Center(
-              child: Container(
-                height: displayHeight(context) * 0.24,
-                width: displayWidth(context) * 0.55,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(30),
-                    topRight: Radius.circular(30),
+            child: Stack(
+              alignment: Alignment.center,
+              children: [
+                Positioned(
+                  top: displayHeight(context) * 0.02,
+                  child: Text(
+                    "Choose Difficulty",
+                    style: TextStyle(
+                      fontSize: displayWidth(context) * 0.05,
+                      fontWeight: FontWeight.w500,
+                    ),
                   ),
                 ),
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 16.0, left: 14.0),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        title,
-                        style: TextStyle(
-                            fontSize: displayWidth(context) * 0.038,
-                            fontWeight: FontWeight.bold),
-                      ),
-                      Opacity(
-                        opacity: 0.0,
-                        child: Divider(
-                          height: displayHeight(context) * 0.009,
-                        ),
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Icon(
-                            Icons.alarm_add_sharp,
-                            size: displayWidth(context) * 0.065,
-                            color: Colors.green,
-                          ),
-                          Opacity(
-                            opacity: 0.0,
-                            child: VerticalDivider(
-                              width: displayWidth(context) * 0.015,
+                Positioned(
+                    top: displayHeight(context) * 0.1,
+                    left: displayWidth(context) * 0.08,
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => easy));
+                      },
+                      child: Card(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8.0)),
+                        elevation: 15.0,
+                        child: Container(
+                          height: displayHeight(context) * 0.05,
+                          width: displayWidth(context) * 0.2,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(8.0),
+                            gradient: LinearGradient(
+                              colors: [
+                                Colors.green[200],
+                                Colors.green[300],
+                                Colors.green[400],
+                              ],
                             ),
                           ),
-                          Text(
-                            sdate,
-                            style: TextStyle(
-                                fontSize: displayWidth(context) * 0.035,
-                                fontWeight: FontWeight.w600),
-                          ),
-                        ],
-                      ),
-                      Opacity(
-                        opacity: 0.0,
-                        child: Divider(
-                          height: displayHeight(context) * 0.007,
-                        ),
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Icon(
-                            Icons.alarm_off_rounded,
-                            size: displayWidth(context) * 0.065,
-                            color: Colors.red,
-                          ),
-                          Opacity(
-                            opacity: 0.0,
-                            child: VerticalDivider(
-                              width: displayWidth(context) * 0.015,
+                          child: Center(
+                            child: Text(
+                              "Easy",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: displayWidth(context) * 0.042),
                             ),
                           ),
-                          Text(
-                            edate,
-                            style: TextStyle(
-                                fontSize: displayWidth(context) * 0.035,
-                                fontWeight: FontWeight.w600),
-                          ),
-                        ],
-                      ),
-                      Opacity(
-                        opacity: 0.0,
-                        child: Divider(
-                          height: displayHeight(context) * 0.007,
                         ),
                       ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Icon(
-                            Icons.computer_outlined,
-                            size: displayWidth(context) * 0.065,
-                            color: Colors.blue[800],
-                          ),
-                          Opacity(
-                            opacity: 0.0,
-                            child: VerticalDivider(
-                              width: displayWidth(context) * 0.015,
+                    )),
+                Positioned(
+                    top: displayHeight(context) * 0.1,
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => medium));
+                      },
+                      child: Card(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8.0)),
+                        elevation: 15.0,
+                        child: Container(
+                          height: displayHeight(context) * 0.05,
+                          width: displayWidth(context) * 0.2,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(8.0),
+                            gradient: LinearGradient(
+                              colors: [
+                                Colors.blue[300],
+                                Colors.blue[400],
+                                Colors.blue[500],
+                              ],
                             ),
                           ),
-                          Text(
-                            typeToPrint,
-                            style: TextStyle(
-                                fontSize: displayWidth(context) * 0.039,
-                                fontWeight: FontWeight.w600),
+                          child: Center(
+                            child: Text(
+                              "Medium",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: displayWidth(context) * 0.045),
+                            ),
                           ),
-                        ],
-                      ),
-                      Opacity(
-                        opacity: 0.0,
-                        child: Divider(
-                          height: displayHeight(context) * 0.005,
                         ),
                       ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(right: 10.0),
-                            child: GestureDetector(
-                              onTap: () {
-                                _launchinBrowser(url);
-                              },
-                              child: Card(
-                                color: Colors.purple,
-                                child: Padding(
-                                  padding: const EdgeInsets.only(
-                                      top: 4.0,
-                                      left: 10.0,
-                                      right: 10.0,
-                                      bottom: 4.0),
-                                  child: Text(
-                                    "GO",
-                                    style: TextStyle(
-                                      fontSize: displayWidth(context) * 0.035,
-                                      color: Colors.white,
-                                    ),
-                                  ),
-                                ),
-                              ),
+                    )),
+                Positioned(
+                    top: displayHeight(context) * 0.1,
+                    right: displayWidth(context) * 0.08,
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => hard));
+                      },
+                      child: Card(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8.0)),
+                        elevation: 15.0,
+                        child: Container(
+                          height: displayHeight(context) * 0.05,
+                          width: displayWidth(context) * 0.2,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(8.0),
+                            gradient: LinearGradient(
+                              colors: [
+                                Colors.red[200],
+                                Colors.red[300],
+                                Colors.red[400],
+                              ],
                             ),
                           ),
-                        ],
+                          child: Center(
+                            child: Text(
+                              "Hard",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: displayWidth(context) * 0.042),
+                            ),
+                          ),
+                        ),
                       ),
-                    ],
-                  ),
-                ),
-              ),
+                    )),
+              ],
             ),
-          ],
-        ),
+          );
+        },
       );
     }
 
@@ -295,537 +206,907 @@ class _Page1State extends State<Page1> {
         alignment: Alignment.center,
         children: [
           Container(
-            height: displayHeight(context) * 1.0,
-            width: displayWidth(context) * 1.0,
-            color: Color(0xbbfaf6f3),
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                colors: [
+                  Color(0xfbb000046),
+                  Color(0xfbb1CB5E0),
+                ],
+                begin: Alignment.bottomLeft,
+                end: Alignment.topRight,
+              ),
+            ),
             constraints: BoxConstraints.expand(),
           ),
           Positioned(
-              top: 0.0,
-              child: Container(
-                height: displayHeight(context) * 0.425,
-                width: displayWidth(context),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(40),
-                      bottomRight: Radius.circular(40)),
-                  gradient: LinearGradient(
-                    colors: [
-                      Color(0xfbb000046),
-                      Color(0xfbb1CB5E0),
-                    ],
-                    begin: Alignment.bottomLeft,
-                    end: Alignment.topRight,
-                  ),
-                ),
-              )),
-          Positioned(
-            child: CircleAvatar(
-              radius: displayWidth(context) * 0.0799,
-              backgroundColor: Colors.purple,
-              child: CircleAvatar(
-                radius: displayWidth(context) * 0.073,
-                backgroundImage: AssetImage('images/applogo.png'),
-              ),
+            child: Image(
+              image: AssetImage("images/op6.png"),
+              fit: BoxFit.fill,
+              height: displayHeight(context) * 0.3,
             ),
-            top: displayHeight(context) * 0.065,
+            top: displayHeight(context) * 0.02,
           ),
           Positioned(
-            top: displayHeight(context) * 0.1555,
-            child: Text(
-              "Star Coding",
-              style: TextStyle(
-                  color: Colors.black,
-                  fontFamily: "Fredoka One",
-                  fontSize: displayWidth(context) * 0.045),
-            ),
-          ),
-          Positioned(
-            top: displayHeight(context) * 0.18,
-            // left: displayWidth(context) * 0.035,
+            top: displayHeight(context) * 0.3,
             child: Container(
-              height: displayHeight(context) * 0.225,
-              width: displayWidth(context) * 1.0,
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => whatiscp()));
-                        },
-                        child: Card(
-                          // Card 1 => Cp
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20.0)),
-                          elevation: 8.0,
-
-                          child: ClipPath(
-                            child: Container(
-                              decoration: BoxDecoration(
-                                  gradient: LinearGradient(
-                                begin: Alignment.bottomLeft,
-                                end: Alignment.topRight,
-                                colors: [
-                                  Color(0xfbb7F7FD5),
-                                  Color(0xfbb86A8E7),
-                                  Color(0xfbb91EAE4),
-                                ],
-                              )),
-                              height: displayHeight(context) * 0.12,
-                              width: displayWidth(context) * 0.235,
-                              child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Column(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceEvenly,
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    CircleAvatar(
-                                      backgroundColor: Colors.white,
-                                      backgroundImage:
-                                          AssetImage("images/qmark2.png"),
-                                      radius: displayWidth(context) * 0.045,
-                                    ),
-                                    Text(
-                                      "What is CP ?",
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                        color: Colors.black,
-                                        letterSpacing: 0.65,
-                                        fontSize: displayWidth(context) * 0.025,
-                                        fontWeight: FontWeight.bold,
+              height: displayHeight(context) * (0.7 - 0.068),
+              width: displayWidth(context),
+              decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(55.0),
+                    topRight: Radius.circular(55.0),
+                  )),
+              child: SingleChildScrollView(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(top: 35.0, left: 35.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Programming Languages",
+                            style: TextStyle(
+                                fontSize: displayWidth(context) * 0.05,
+                                fontFamily: "PatuaOne"),
+                          ),
+                        ],
+                      ),
+                    ),
+                    div,
+                    Card(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      elevation: 20.0,
+                      child: ClipPath(
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: Color(0xfbbF0F0F0),
+                          ),
+                          height: displayHeight(context) * 0.1,
+                          width: displayWidth(context) * 0.75,
+                          child: Padding(
+                            padding:
+                                const EdgeInsets.only(left: 10.0, right: 10.0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                ClipRRect(
+                                  borderRadius: BorderRadius.circular(15.0),
+                                  child: Container(
+                                    child: Image(
+                                      image: AssetImage(
+                                        "images/C.jpg",
                                       ),
-                                    )
-                                  ],
+                                      height: displayHeight(context) * 0.08,
+                                      width: displayWidth(context) * 0.18,
+                                      fit: BoxFit.fill,
+                                    ),
+                                  ),
                                 ),
-                              ),
+                                Text(
+                                  "C",
+                                  style: TextStyle(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: displayWidth(context) * 0.05),
+                                ),
+                                GestureDetector(
+                                  onTap: () {
+                                    ShowPopUp(
+                                        context, easyc(), mediumc(), hardc());
+                                  },
+                                  child: Card(
+                                    child: Container(
+                                      height: displayHeight(context) * 0.05,
+                                      width: displayWidth(context) * 0.13,
+                                      child: Center(
+                                        child: Icon(
+                                          Icons.arrow_forward_ios,
+                                          color: Colors.black,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
                             ),
-                            clipper: ShapeBorderClipper(
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(20.0))),
+                          ),
+                        ),
+                        clipper: ShapeBorderClipper(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20),
                           ),
                         ),
                       ),
-
-                      //// End of card 1
-                      Opacity(
-                        opacity: 0.0,
-                        child: VerticalDivider(
-                          width: displayWidth(context) * 0.0155,
-                        ),
+                    ),
+                    div2,
+                    Card(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
                       ),
-
-                      // Start of Card 2
-
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => languages()));
-                        },
-                        child: Card(
-                          // Card 2 => Programming Languages
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20.0)),
-                          elevation: 8.0,
-
-                          child: ClipPath(
-                            child: Container(
-                              decoration: BoxDecoration(
-                                  gradient: LinearGradient(
-                                begin: Alignment.bottomLeft,
-                                end: Alignment.topRight,
-                                colors: [
-                                  Color(0xfbbC6FFDD),
-                                  Color(0xfbbFBD786),
-                                  Color(0xfbbf7797d),
-                                ],
-                              )),
-                              height: displayHeight(context) * 0.12,
-                              width: displayWidth(context) * 0.235,
-                              child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Column(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceEvenly,
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    CircleAvatar(
-                                      backgroundColor: Colors.red[300],
-                                      backgroundImage:
-                                          AssetImage("images/choice.jpg"),
-                                      radius: displayWidth(context) * 0.045,
-                                    ),
-                                    Text(
-                                      "Languages",
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                        color: Colors.black,
-                                        letterSpacing: 0.65,
-                                        fontSize: displayWidth(context) * 0.025,
-                                        fontWeight: FontWeight.bold,
+                      elevation: 20.0,
+                      child: ClipPath(
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: Color(0xfbbF0F0F0),
+                          ),
+                          height: displayHeight(context) * 0.1,
+                          width: displayWidth(context) * 0.75,
+                          child: Padding(
+                            padding:
+                                const EdgeInsets.only(left: 10.0, right: 10.0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                ClipRRect(
+                                  borderRadius: BorderRadius.circular(15.0),
+                                  child: Container(
+                                    child: Image(
+                                      image: AssetImage(
+                                        "images/C++.jpg",
                                       ),
-                                    )
-                                  ],
+                                      height: displayHeight(context) * 0.08,
+                                      width: displayWidth(context) * 0.18,
+                                      fit: BoxFit.fill,
+                                    ),
+                                  ),
                                 ),
-                              ),
+                                Text(
+                                  "C++",
+                                  style: TextStyle(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: displayWidth(context) * 0.05),
+                                ),
+                                GestureDetector(
+                                  onTap: () {
+                                    ShowPopUp(context, easycplus(),
+                                        mediumcplus(), hardcplus());
+                                  },
+                                  child: Card(
+                                    child: Container(
+                                      height: displayHeight(context) * 0.05,
+                                      width: displayWidth(context) * 0.13,
+                                      child: Center(
+                                        child: Icon(
+                                          Icons.arrow_forward_ios,
+                                          color: Colors.black,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
                             ),
-                            clipper: ShapeBorderClipper(
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(20.0))),
+                          ),
+                        ),
+                        clipper: ShapeBorderClipper(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20),
                           ),
                         ),
                       ),
-
-                      Opacity(
-                        opacity: 0.0,
-                        child: VerticalDivider(
-                          width: displayWidth(context) * 0.0155,
-                        ),
+                    ),
+                    div2,
+                    Card(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
                       ),
-
-                      // End of card 2
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => complexity()));
-                        },
-                        child: Card(
-                          // Card 3 => Computational Complexity
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20.0)),
-                          elevation: 8.0,
-
-                          child: ClipPath(
-                            child: Container(
-                              decoration: BoxDecoration(
-                                  gradient: LinearGradient(
-                                begin: Alignment.bottomLeft,
-                                end: Alignment.topRight,
-                                colors: [
-                                  Color(0xfbb9796f0),
-                                  Color(0xfbbfbc7d4),
-                                ],
-                              )),
-                              height: displayHeight(context) * 0.12,
-                              width: displayWidth(context) * 0.235,
-                              child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Column(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceEvenly,
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    CircleAvatar(
-                                      backgroundColor: Colors.red[300],
-                                      backgroundImage:
-                                          AssetImage("images/timespace.png"),
-                                      radius: displayWidth(context) * 0.045,
-                                    ),
-                                    Opacity(
-                                      opacity: 0.0,
-                                      child: Divider(
-                                        height: displayHeight(context) * 0.002,
+                      elevation: 20.0,
+                      child: ClipPath(
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: Color(0xfbbF0F0F0),
+                          ),
+                          height: displayHeight(context) * 0.1,
+                          width: displayWidth(context) * 0.75,
+                          child: Padding(
+                            padding:
+                                const EdgeInsets.only(left: 10.0, right: 10.0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                ClipRRect(
+                                  borderRadius: BorderRadius.circular(15.0),
+                                  child: Container(
+                                    child: Image(
+                                      image: AssetImage(
+                                        "images/java.png",
                                       ),
+                                      height: displayHeight(context) * 0.08,
+                                      width: displayWidth(context) * 0.18,
+                                      fit: BoxFit.fill,
                                     ),
-                                    Text(
-                                      "Complexity",
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                        color: Colors.black,
-                                        letterSpacing: 0.65,
-                                        fontSize: displayWidth(context) * 0.025,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    )
-                                  ],
+                                  ),
                                 ),
-                              ),
+                                Text(
+                                  "Java",
+                                  style: TextStyle(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: displayWidth(context) * 0.05),
+                                ),
+                                GestureDetector(
+                                  onTap: () {
+                                    ShowPopUp(context, easyjava(), mediumjava(),
+                                        hardjava());
+                                  },
+                                  child: Card(
+                                    child: Container(
+                                      height: displayHeight(context) * 0.05,
+                                      width: displayWidth(context) * 0.13,
+                                      child: Center(
+                                        child: Icon(
+                                          Icons.arrow_forward_ios,
+                                          color: Colors.black,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
                             ),
-                            clipper: ShapeBorderClipper(
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(20.0))),
+                          ),
+                        ),
+                        clipper: ShapeBorderClipper(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20),
                           ),
                         ),
                       ),
-                      Opacity(
-                        opacity: 0.0,
-                        child: VerticalDivider(
-                          width: displayWidth(context) * 0.0155,
-                        ),
+                    ),
+                    div2,
+                    Card(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
                       ),
-
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => dshome()));
-                        },
-                        child: Card(
-                          // Card 4 => Data Structures
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20.0)),
-                          elevation: 8.0,
-
-                          child: ClipPath(
-                            child: Container(
-                              decoration: BoxDecoration(
-                                  gradient: LinearGradient(
-                                begin: Alignment.bottomLeft,
-                                end: Alignment.topRight,
-                                colors: [
-                                  Color(0xfbbED4264),
-                                  Color(0xfbbFFEDBC),
-                                ],
-                              )),
-                              height: displayHeight(context) * 0.12,
-                              width: displayWidth(context) * 0.235,
-                              child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Column(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceEvenly,
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    CircleAvatar(
-                                      backgroundColor: Colors.red[300],
-                                      backgroundImage:
-                                          AssetImage("images/ds.jpg"),
-                                      radius: displayWidth(context) * 0.045,
-                                    ),
-                                    Opacity(
-                                      opacity: 0.0,
-                                      child: Divider(
-                                        height: displayHeight(context) * 0.002,
+                      elevation: 20.0,
+                      child: ClipPath(
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: Color(0xfbbF0F0F0),
+                          ),
+                          height: displayHeight(context) * 0.1,
+                          width: displayWidth(context) * 0.75,
+                          child: Padding(
+                            padding:
+                                const EdgeInsets.only(left: 10.0, right: 10.0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                ClipRRect(
+                                  borderRadius: BorderRadius.circular(15.0),
+                                  child: Container(
+                                    child: Image(
+                                      image: AssetImage(
+                                        "images/Python.jpg",
                                       ),
+                                      height: displayHeight(context) * 0.08,
+                                      width: displayWidth(context) * 0.18,
+                                      fit: BoxFit.fill,
                                     ),
-                                    Text(
-                                      "DS",
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                        color: Colors.black,
-                                        letterSpacing: 0.65,
-                                        fontSize: displayWidth(context) * 0.025,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    )
-                                  ],
+                                  ),
                                 ),
-                              ),
+                                Text(
+                                  "Python",
+                                  style: TextStyle(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: displayWidth(context) * 0.05),
+                                ),
+                                GestureDetector(
+                                  onTap: () {
+                                    ShowPopUp(context, easypython(),
+                                        mediumpython(), hardpython());
+                                  },
+                                  child: Card(
+                                    child: Container(
+                                      height: displayHeight(context) * 0.05,
+                                      width: displayWidth(context) * 0.13,
+                                      child: Center(
+                                        child: Icon(
+                                          Icons.arrow_forward_ios,
+                                          color: Colors.black,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
                             ),
-                            clipper: ShapeBorderClipper(
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(20.0))),
+                          ),
+                        ),
+                        clipper: ShapeBorderClipper(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20),
                           ),
                         ),
                       ),
-                      Opacity(
-                        opacity: 0.0,
-                        child: VerticalDivider(
-                          width: displayWidth(context) * 0.0155,
+                    ),
+                    div,
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 35.0),
+                          child: Text(
+                            "Data Structures",
+                            style: TextStyle(
+                                fontSize: displayWidth(context) * 0.05,
+                                fontFamily: "PatuaOne"),
+                          ),
                         ),
+                      ],
+                    ),
+                    div,
+                    Card(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
                       ),
-
-                      // End of Card 4
-
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => Cplusstl()));
-                        },
-                        child: Card(
-                          // Card 5 => STL
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20.0)),
-                          elevation: 8.0,
-
-                          child: ClipPath(
-                            child: Container(
-                              decoration: BoxDecoration(
-                                  gradient: LinearGradient(
-                                begin: Alignment.bottomLeft,
-                                end: Alignment.topRight,
-                                colors: [
-                                  Color(0xfbba8ff78),
-                                  Color(0xfbb78ffd6),
-                                ],
-                              )),
-                              height: displayHeight(context) * 0.12,
-                              width: displayWidth(context) * 0.235,
-                              child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Column(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceEvenly,
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    CircleAvatar(
-                                      backgroundColor: Colors.red[300],
-                                      backgroundImage:
-                                          AssetImage("images/stl.jpg"),
-                                      radius: displayWidth(context) * 0.045,
-                                    ),
-                                    Opacity(
-                                      opacity: 0.0,
-                                      child: Divider(
-                                        height: displayHeight(context) * 0.002,
+                      elevation: 20.0,
+                      child: ClipPath(
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: Color(0xfbbF0F0F0),
+                          ),
+                          height: displayHeight(context) * 0.1,
+                          width: displayWidth(context) * 0.75,
+                          child: Padding(
+                            padding:
+                                const EdgeInsets.only(left: 10.0, right: 10.0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                ClipRRect(
+                                  borderRadius: BorderRadius.circular(15.0),
+                                  child: Container(
+                                    child: Image(
+                                      image: AssetImage(
+                                        "images/array.jpg",
                                       ),
+                                      height: displayHeight(context) * 0.08,
+                                      width: displayWidth(context) * 0.18,
+                                      fit: BoxFit.fill,
                                     ),
-                                    Text(
-                                      "C++ STL",
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                        color: Colors.black,
-                                        letterSpacing: 0.65,
-                                        fontSize: displayWidth(context) * 0.03,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    )
-                                  ],
+                                  ),
                                 ),
-                              ),
+                                Text(
+                                  "Array",
+                                  style: TextStyle(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: displayWidth(context) * 0.05),
+                                ),
+                                GestureDetector(
+                                  onTap: () {
+                                    ShowPopUp(context, easyarray(),
+                                        mediumarray(), hardarray());
+                                  },
+                                  child: Card(
+                                    child: Container(
+                                      height: displayHeight(context) * 0.05,
+                                      width: displayWidth(context) * 0.13,
+                                      child: Center(
+                                        child: Icon(
+                                          Icons.arrow_forward_ios,
+                                          color: Colors.black,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
                             ),
-                            clipper: ShapeBorderClipper(
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(20.0))),
+                          ),
+                        ),
+                        clipper: ShapeBorderClipper(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20),
                           ),
                         ),
                       ),
-                      // End of Card 5
-                      Opacity(
-                        opacity: 0.0,
-                        child: VerticalDivider(
-                          width: displayWidth(context) * 0.0155,
-                        ),
+                    ),
+                    div2,
+                    Card(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
                       ),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: (context) => Algo()));
-                        },
-                        child: Card(
-                          // Card 6 => Algorithms
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20.0)),
-                          elevation: 8.0,
-
-                          child: ClipPath(
-                            child: Container(
-                              decoration: BoxDecoration(
-                                color: Color(0xbbfaf6f3),
-                              ),
-                              height: displayHeight(context) * 0.12,
-                              width: displayWidth(context) * 0.235,
-                              child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Column(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceEvenly,
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    CircleAvatar(
-                                      backgroundColor: Colors.red[300],
-                                      backgroundImage:
-                                          AssetImage("images/stl.jpg"),
-                                      radius: displayWidth(context) * 0.045,
-                                    ),
-                                    Opacity(
-                                      opacity: 0.0,
-                                      child: Divider(
-                                        height: displayHeight(context) * 0.002,
+                      elevation: 20.0,
+                      child: ClipPath(
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: Color(0xfbbF0F0F0),
+                          ),
+                          height: displayHeight(context) * 0.1,
+                          width: displayWidth(context) * 0.75,
+                          child: Padding(
+                            padding:
+                                const EdgeInsets.only(left: 10.0, right: 10.0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                ClipRRect(
+                                  borderRadius: BorderRadius.circular(15.0),
+                                  child: Container(
+                                    child: Image(
+                                      image: AssetImage(
+                                        "images/stack.png",
                                       ),
+                                      height: displayHeight(context) * 0.08,
+                                      width: displayWidth(context) * 0.18,
+                                      fit: BoxFit.fill,
                                     ),
-                                    Text(
-                                      "Algorithms",
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                        color: Colors.black,
-                                        letterSpacing: 0.65,
-                                        fontSize: displayWidth(context) * 0.03,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    )
-                                  ],
+                                  ),
                                 ),
-                              ),
+                                Text(
+                                  "Stack",
+                                  style: TextStyle(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: displayWidth(context) * 0.05),
+                                ),
+                                GestureDetector(
+                                  onTap: () {
+                                    ShowPopUp(context, easystack(),
+                                        mediumstack(), hardstack());
+                                  },
+                                  child: Card(
+                                    child: Container(
+                                      height: displayHeight(context) * 0.05,
+                                      width: displayWidth(context) * 0.13,
+                                      child: Center(
+                                        child: Icon(
+                                          Icons.arrow_forward_ios,
+                                          color: Colors.black,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
                             ),
-                            clipper: ShapeBorderClipper(
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(20.0))),
+                          ),
+                        ),
+                        clipper: ShapeBorderClipper(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20),
                           ),
                         ),
                       ),
-                    ],
-                  ),
+                    ),
+                    div2,
+                    Card(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      elevation: 20.0,
+                      child: ClipPath(
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: Color(0xfbbF0F0F0),
+                          ),
+                          height: displayHeight(context) * 0.1,
+                          width: displayWidth(context) * 0.75,
+                          child: Padding(
+                            padding:
+                                const EdgeInsets.only(left: 10.0, right: 10.0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                ClipRRect(
+                                  borderRadius: BorderRadius.circular(15.0),
+                                  child: Container(
+                                    child: Image(
+                                      image: AssetImage(
+                                        "images/queue.jpg",
+                                      ),
+                                      height: displayHeight(context) * 0.08,
+                                      width: displayWidth(context) * 0.18,
+                                      fit: BoxFit.fill,
+                                    ),
+                                  ),
+                                ),
+                                Text(
+                                  "Queue",
+                                  style: TextStyle(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: displayWidth(context) * 0.05),
+                                ),
+                                GestureDetector(
+                                  onTap: () {
+                                    ShowPopUp(context, easyqueue(),
+                                        mediumqueue(), hardqueue());
+                                  },
+                                  child: Card(
+                                    child: Container(
+                                      height: displayHeight(context) * 0.05,
+                                      width: displayWidth(context) * 0.13,
+                                      child: Center(
+                                        child: Icon(
+                                          Icons.arrow_forward_ios,
+                                          color: Colors.black,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        clipper: ShapeBorderClipper(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                        ),
+                      ),
+                    ),
+                    div2,
+                    Card(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      elevation: 20.0,
+                      child: ClipPath(
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: Color(0xfbbF0F0F0),
+                          ),
+                          height: displayHeight(context) * 0.1,
+                          width: displayWidth(context) * 0.75,
+                          child: Padding(
+                            padding:
+                                const EdgeInsets.only(left: 10.0, right: 10.0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                ClipRRect(
+                                  borderRadius: BorderRadius.circular(15.0),
+                                  child: Container(
+                                    child: Image(
+                                      image: AssetImage(
+                                        "images/linkedlist.png",
+                                      ),
+                                      height: displayHeight(context) * 0.08,
+                                      width: displayWidth(context) * 0.18,
+                                      fit: BoxFit.fill,
+                                    ),
+                                  ),
+                                ),
+                                Text(
+                                  "Linked List",
+                                  style: TextStyle(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: displayWidth(context) * 0.05),
+                                ),
+                                GestureDetector(
+                                  onTap: () {
+                                    ShowPopUp(context, easylinkedlist(),
+                                        mediumlinkedlist(), hardlinkedlist());
+                                  },
+                                  child: Card(
+                                    child: Container(
+                                      height: displayHeight(context) * 0.05,
+                                      width: displayWidth(context) * 0.13,
+                                      child: Center(
+                                        child: Icon(
+                                          Icons.arrow_forward_ios,
+                                          color: Colors.black,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        clipper: ShapeBorderClipper(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                        ),
+                      ),
+                    ),
+                    div2,
+                    Card(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      elevation: 20.0,
+                      child: ClipPath(
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: Color(0xfbbF0F0F0),
+                          ),
+                          height: displayHeight(context) * 0.1,
+                          width: displayWidth(context) * 0.75,
+                          child: Padding(
+                            padding:
+                                const EdgeInsets.only(left: 10.0, right: 10.0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                ClipRRect(
+                                  borderRadius: BorderRadius.circular(15.0),
+                                  child: Container(
+                                    child: Image(
+                                      image: AssetImage(
+                                        "images/binarytree.png",
+                                      ),
+                                      height: displayHeight(context) * 0.08,
+                                      width: displayWidth(context) * 0.18,
+                                      fit: BoxFit.fill,
+                                    ),
+                                  ),
+                                ),
+                                Text(
+                                  "Binary Tree",
+                                  style: TextStyle(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: displayWidth(context) * 0.05),
+                                ),
+                                GestureDetector(
+                                  onTap: () {
+                                    ShowPopUp(context, easybt(), mediumbt(),
+                                        hardbt());
+                                  },
+                                  child: Card(
+                                    child: Container(
+                                      height: displayHeight(context) * 0.05,
+                                      width: displayWidth(context) * 0.13,
+                                      child: Center(
+                                        child: Icon(
+                                          Icons.arrow_forward_ios,
+                                          color: Colors.black,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        clipper: ShapeBorderClipper(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                        ),
+                      ),
+                    ),
+                    div2,
+                    Card(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      elevation: 20.0,
+                      child: ClipPath(
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: Color(0xfbbF0F0F0),
+                          ),
+                          height: displayHeight(context) * 0.1,
+                          width: displayWidth(context) * 0.75,
+                          child: Padding(
+                            padding:
+                                const EdgeInsets.only(left: 10.0, right: 10.0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                ClipRRect(
+                                  borderRadius: BorderRadius.circular(15.0),
+                                  child: Container(
+                                    child: Image(
+                                      image: AssetImage(
+                                        "images/graph.png",
+                                      ),
+                                      height: displayHeight(context) * 0.08,
+                                      width: displayWidth(context) * 0.18,
+                                      fit: BoxFit.fill,
+                                    ),
+                                  ),
+                                ),
+                                Text(
+                                  "Graph",
+                                  style: TextStyle(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: displayWidth(context) * 0.05),
+                                ),
+                                GestureDetector(
+                                  onTap: () {
+                                    ShowPopUp(context, easygraph(),
+                                        mediumgraph(), hardgraph());
+                                  },
+                                  child: Card(
+                                    child: Container(
+                                      height: displayHeight(context) * 0.05,
+                                      width: displayWidth(context) * 0.13,
+                                      child: Center(
+                                        child: Icon(
+                                          Icons.arrow_forward_ios,
+                                          color: Colors.black,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        clipper: ShapeBorderClipper(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                        ),
+                      ),
+                    ),
+                    div,
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 35.0),
+                          child: Text(
+                            "Analysis of Algorithms",
+                            style: TextStyle(
+                                fontSize: displayWidth(context) * 0.05,
+                                fontFamily: "PatuaOne"),
+                          ),
+                        ),
+                      ],
+                    ),
+                    div,
+                    Card(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      elevation: 20.0,
+                      child: ClipPath(
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: Color(0xfbbF0F0F0),
+                          ),
+                          height: displayHeight(context) * 0.1,
+                          width: displayWidth(context) * 0.75,
+                          child: Padding(
+                            padding:
+                                const EdgeInsets.only(left: 10.0, right: 10.0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                ClipRRect(
+                                  borderRadius: BorderRadius.circular(15.0),
+                                  child: Container(
+                                    child: Image(
+                                      image: AssetImage(
+                                        "images/sorting.png",
+                                      ),
+                                      height: displayHeight(context) * 0.08,
+                                      width: displayWidth(context) * 0.18,
+                                      fit: BoxFit.fill,
+                                    ),
+                                  ),
+                                ),
+                                Text(
+                                  "Sorting",
+                                  style: TextStyle(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: displayWidth(context) * 0.05),
+                                ),
+                                GestureDetector(
+                                  onTap: () {
+                                    ShowPopUp(context, easysort(), mediumsort(),
+                                        hardsort());
+                                  },
+                                  child: Card(
+                                    child: Container(
+                                      height: displayHeight(context) * 0.05,
+                                      width: displayWidth(context) * 0.13,
+                                      child: Center(
+                                        child: Icon(
+                                          Icons.arrow_forward_ios,
+                                          color: Colors.black,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        clipper: ShapeBorderClipper(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                        ),
+                      ),
+                    ),
+                    div,
+                    Card(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      elevation: 20.0,
+                      child: ClipPath(
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: Color(0xfbbF0F0F0),
+                          ),
+                          height: displayHeight(context) * 0.1,
+                          width: displayWidth(context) * 0.75,
+                          child: Padding(
+                            padding:
+                                const EdgeInsets.only(left: 10.0, right: 10.0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                ClipRRect(
+                                  borderRadius: BorderRadius.circular(15.0),
+                                  child: Container(
+                                    child: Image(
+                                      image: AssetImage(
+                                        "images/search.png",
+                                      ),
+                                      height: displayHeight(context) * 0.08,
+                                      width: displayWidth(context) * 0.18,
+                                      fit: BoxFit.fill,
+                                    ),
+                                  ),
+                                ),
+                                Text(
+                                  "Searching",
+                                  style: TextStyle(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: displayWidth(context) * 0.05),
+                                ),
+                                GestureDetector(
+                                  onTap: () {
+                                    ShowPopUp(context, easyse(), mediumse(),
+                                        hardse());
+                                  },
+                                  child: Card(
+                                    child: Container(
+                                      height: displayHeight(context) * 0.05,
+                                      width: displayWidth(context) * 0.13,
+                                      child: Center(
+                                        child: Icon(
+                                          Icons.arrow_forward_ios,
+                                          color: Colors.black,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        clipper: ShapeBorderClipper(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
           ),
-          Positioned(
-              top: displayHeight(context) * 0.47,
-              child: Container(
-                //color: Colors.blue,
-                height: displayHeight(context) * 0.4,
-                width: displayWidth(context),
-                // decoration: BoxDecoration(),
-              )),
-          Positioned(
-              top: displayHeight(context) * 0.49,
-              left: displayWidth(context) * 0.04,
-              child: Text(
-                "Upcoming Contests",
-                style: TextStyle(
-                  fontFamily: "PatuaOne",
-                  fontSize: displayWidth(context) * 0.047,
-                  fontWeight: FontWeight.w500,
-                ),
-              )),
-          Positioned(
-              top: displayHeight(context) * 0.54,
-              child: Container(
-                //color: Colors.yellow,
-                height: displayHeight(context) * 0.365,
-                width: displayWidth(context),
-                // decoration: BoxDecoration(),
-                child: StreamBuilder(
-                  builder: (context, snapshot) {
-                    if (!snapshot.hasData)
-                      return CircularProgressIndicator(
-                        backgroundColor: Colors.blue,
-                      );
-                    return Padding(
-                      padding: const EdgeInsets.only(left: 12.0),
-                      child: ListView.builder(
-                        itemBuilder: (BuildContext context, int index) {
-                          return Padding(
-                            padding: const EdgeInsets.only(right: 20.0),
-                            child: MyContestCard(
-                                context, snapshot.data.documents[index]),
-                          );
-                        },
-                        itemCount: snapshot.data.documents.length,
-                        scrollDirection: Axis.horizontal,
-                      ),
-                    );
-                  },
-                  stream: FirebaseFirestore.instance
-                      .collection('contestlist')
-                      .snapshots(),
-                ),
-              )),
         ],
       ),
     );

@@ -37,9 +37,9 @@ class Javaadv extends StatelessWidget {
           ),
         ),
         Positioned(
-          top: displayHeight(context) * 0.25,
+          top: displayHeight(context) * 0.2,
           child: Container(
-            height: displayHeight(context) * 0.75,
+            height: displayHeight(context) * 0.8,
             width: displayWidth(context),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.only(
@@ -246,11 +246,11 @@ class Javaadv extends StatelessWidget {
               onPressed: () {
                 Navigator.pop(context);
               }),
-          top: displayHeight(context) * 0.045,
+          top: displayHeight(context) * 0.1,
           left: displayWidth(context) * 0.02,
         ),
         Positioned(
-            top: displayHeight(context) * 0.12,
+            top: displayHeight(context) * 0.1,
             child: Center(
               child: Text(
                 "Advantages",

@@ -129,7 +129,7 @@ class Javadisadv extends StatelessWidget {
               onPressed: () {
                 Navigator.pop(context);
               }),
-          top: displayHeight(context) * 0.045,
+          top: displayHeight(context) * 0.12,
           left: displayWidth(context) * 0.02,
         ),
         Positioned(
