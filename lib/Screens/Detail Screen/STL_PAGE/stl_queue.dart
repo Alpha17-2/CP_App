@@ -46,11 +46,11 @@ class Stl_queue extends StatelessWidget {
                 text:
                     "end respectively .This is also dynamic i.e. can automatically resize itself.\n\n"),
             new TextSpan(
-              text: "To use queue:-\n",
+              text: "To use queue:-\n\n",
               style: TextStyle(
                   //color: Colors.black54,
                   //fontWeight: FontWeight.bold,
-                  fontSize: displayWidth(context) * 0.048),
+                  fontSize: displayWidth(context) * 0.04),
             ),
             new TextSpan(text: "We can either use "),
             new TextSpan(
@@ -68,7 +68,7 @@ class Stl_queue extends StatelessWidget {
                     fontSize: displayWidth(context) * 0.036,
                     color: Colors.red,
                     fontWeight: FontWeight.bold)),
-            new TextSpan(text: "header file\n\n "),
+            new TextSpan(text: "header file\n\n"),
             new TextSpan(
               text: "Syntax \n",
               style: TextStyle(
@@ -280,7 +280,7 @@ class Stl_queue extends StatelessWidget {
                 ),
               ),
               Text(
-                "It is used to access the first element which was inserted in the queue.",
+                "It is used to access the first or the oldest element of the queue ",
                 style: TextStyle(fontSize: fontsize),
               ),
               Opacity(
@@ -345,7 +345,7 @@ class Stl_queue extends StatelessWidget {
                 ),
               ),
               Text(
-                "It is used to access the last element which was inserted in the queue.",
+                "It is used to access the last or newest element of the queue ",
                 style: TextStyle(fontSize: fontsize),
               ),
               Opacity(

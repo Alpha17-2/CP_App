@@ -208,7 +208,7 @@ class _Page0State extends State<Page0> {
         Positioned(
           top: displayHeight(context) * 0.25,
           child: Container(
-            height: displayHeight(context) * 0.75,
+            height: displayHeight(context) * (0.75 - 0.068),
             width: displayWidth(context),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.only(

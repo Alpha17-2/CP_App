@@ -134,168 +134,171 @@ class _Page4State extends State<Page4> {
         c = Colors.red;
       else
         c = Colors.orange;
-      return Container(
-        // height: displayHeight(context) * 0.55,
-        width: displayWidth(context) * 0.92,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(15),
-          color: Colors.white,
-        ),
-        child: Column(
-          //
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(top: 16.0),
-              child: Center(
-                child: Text(
-                  doc['title'],
-                  style: TextStyle(
-                      color: c,
-                      fontSize: displayWidth(context) * 0.05,
-                      fontWeight: FontWeight.w600),
+      return Padding(
+        padding: const EdgeInsets.only(right: 8.0, left: 8.0),
+        child: Container(
+          // height: displayHeight(context) * 0.55,
+          width: displayWidth(context) * 0.92,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(15),
+            color: Colors.white,
+          ),
+          child: Column(
+            //
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 16.0),
+                child: Center(
+                  child: Text(
+                    doc['title'],
+                    style: TextStyle(
+                        color: c,
+                        fontSize: displayWidth(context) * 0.05,
+                        fontWeight: FontWeight.w600),
+                  ),
                 ),
               ),
-            ),
-            Container(
-              height: displayHeight(context) * 0.45,
-              width: displayWidth(context),
-              child: Padding(
-                padding: const EdgeInsets.only(left: 12.0, right: 12.0),
-                child: SingleChildScrollView(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      div2,
-                      Text(
-                        "Problem Statement :",
-                        style: TextStyle(
-                          fontSize: displayWidth(context) * 0.04,
-                          color: Colors.blue[800],
-                          fontWeight: FontWeight.bold,
+              Container(
+                height: displayHeight(context) * 0.45,
+                width: displayWidth(context),
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 12.0, right: 12.0),
+                  child: SingleChildScrollView(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        div2,
+                        Text(
+                          "Problem Statement :",
+                          style: TextStyle(
+                            fontSize: displayWidth(context) * 0.04,
+                            color: Colors.blue[800],
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
-                      ),
-                      div3,
-                      Text(
-                        doc['problem'],
-                        style: TextStyle(
-                            fontSize: displayWidth(context) * 0.0365,
-                            fontWeight: FontWeight.w400),
-                      ),
-                      div2,
-                      Text(
-                        "Input :",
-                        style: TextStyle(
-                          fontSize: displayWidth(context) * 0.04,
-                          color: Colors.blue[800],
-                          fontWeight: FontWeight.bold,
+                        div3,
+                        Text(
+                          doc['problem'],
+                          style: TextStyle(
+                              fontSize: displayWidth(context) * 0.0365,
+                              fontWeight: FontWeight.w400),
                         ),
-                      ),
-                      div3,
-                      Container(
-                        height: displayHeight(context) * 0.08,
-                        width: displayWidth(context),
-                        child: ListView.builder(
-                          padding: EdgeInsets.zero,
-                          itemBuilder: (context, index) {
-                            return Text(
-                              receiveInput[index],
-                              style: TextStyle(
-                                  fontSize: displayWidth(context) * 0.0365),
-                            );
-                          },
-                          itemCount: receiveInput.length,
+                        div2,
+                        Text(
+                          "Input :",
+                          style: TextStyle(
+                            fontSize: displayWidth(context) * 0.04,
+                            color: Colors.blue[800],
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
-                      ),
-                      div3,
-                      Text(
-                        "Output :",
-                        style: TextStyle(
-                          fontSize: displayWidth(context) * 0.04,
-                          color: Colors.blue[800],
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      div3,
-                      Container(
-                        height: displayHeight(context) * 0.1,
-                        width: displayWidth(context),
-                        child: Padding(
-                          padding: const EdgeInsets.only(bottom: 8.0),
+                        div3,
+                        Container(
+                          height: displayHeight(context) * 0.08,
+                          width: displayWidth(context),
                           child: ListView.builder(
                             padding: EdgeInsets.zero,
                             itemBuilder: (context, index) {
                               return Text(
-                                receiveOutput[index],
+                                receiveInput[index],
                                 style: TextStyle(
                                     fontSize: displayWidth(context) * 0.0365),
                               );
                             },
-                            itemCount: receiveOutput.length,
+                            itemCount: receiveInput.length,
                           ),
                         ),
-                      ),
-                      div2,
-                    ],
+                        div3,
+                        Text(
+                          "Output :",
+                          style: TextStyle(
+                            fontSize: displayWidth(context) * 0.04,
+                            color: Colors.blue[800],
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        div3,
+                        Container(
+                          height: displayHeight(context) * 0.1,
+                          width: displayWidth(context),
+                          child: Padding(
+                            padding: const EdgeInsets.only(bottom: 8.0),
+                            child: ListView.builder(
+                              padding: EdgeInsets.zero,
+                              itemBuilder: (context, index) {
+                                return Text(
+                                  receiveOutput[index],
+                                  style: TextStyle(
+                                      fontSize: displayWidth(context) * 0.0365),
+                                );
+                              },
+                              itemCount: receiveOutput.length,
+                            ),
+                          ),
+                        ),
+                        div2,
+                      ],
+                    ),
                   ),
                 ),
               ),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                FlatButton.icon(
-                    //color: Colors.blue[300],
-                    onPressed: () {
-                      explanationsPopup();
-                    },
-                    icon: Icon(
-                      Icons.app_registration,
-                      size: 15,
-                      color: Colors.green[600],
-                    ),
-                    label: Text(
-                      "Explanation",
-                      style: TextStyle(
-                          fontSize: displayWidth(context) * 0.0315,
-                          fontWeight: FontWeight.bold),
-                    )),
-                FlatButton.icon(
-                    // color: Colors.purple[300],
-                    onPressed: () {
-                      showInSnackBar(doc['pre']);
-                    },
-                    icon: Icon(
-                      Icons.account_tree,
-                      size: 15,
-                      color: Colors.blue[800],
-                    ),
-                    label: Text(
-                      "Pre-requisite",
-                      style:
-                          TextStyle(fontSize: displayWidth(context) * 0.0315),
-                    )),
-                FlatButton.icon(
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  FlatButton.icon(
+                      //color: Colors.blue[300],
+                      onPressed: () {
+                        explanationsPopup();
+                      },
+                      icon: Icon(
+                        Icons.app_registration,
+                        size: 15,
+                        color: Colors.green[600],
+                      ),
+                      label: Text(
+                        "Explanation",
+                        style: TextStyle(
+                            fontSize: displayWidth(context) * 0.0315,
+                            fontWeight: FontWeight.bold),
+                      )),
+                  FlatButton.icon(
+                      // color: Colors.purple[300],
+                      onPressed: () {
+                        showInSnackBar(doc['pre']);
+                      },
+                      icon: Icon(
+                        Icons.account_tree,
+                        size: 15,
+                        color: Colors.blue[800],
+                      ),
+                      label: Text(
+                        "Pre-requisite",
+                        style:
+                            TextStyle(fontSize: displayWidth(context) * 0.0315),
+                      )),
+                  FlatButton.icon(
 
-                    // color: Colors.red[300],
-                    onPressed: () {
-                      return _linkopen(doc['link']);
-                    },
-                    icon: Icon(
-                      Icons.screen_search_desktop,
-                      size: 15,
-                      color: Colors.red,
-                    ),
-                    label: Text(
-                      "Solution",
-                      style:
-                          TextStyle(fontSize: displayWidth(context) * 0.0315),
-                    ))
-              ],
-            )
-          ],
+                      // color: Colors.red[300],
+                      onPressed: () {
+                        return _linkopen(doc['link']);
+                      },
+                      icon: Icon(
+                        Icons.screen_search_desktop,
+                        size: 15,
+                        color: Colors.red,
+                      ),
+                      label: Text(
+                        "Solution",
+                        style:
+                            TextStyle(fontSize: displayWidth(context) * 0.0315),
+                      ))
+                ],
+              )
+            ],
+          ),
         ),
       );
     }
@@ -377,7 +380,7 @@ class _Page4State extends State<Page4> {
           Positioned(
             top: displayHeight(context) * 0.125,
             left: displayWidth(context) * 0.04,
-            right: displayWidth(context) * 0.025,
+            right: displayWidth(context) * 0.04,
             child: SizedBox(
               height: displayHeight(context) * 0.06,
               child: ListView.builder(
@@ -391,8 +394,8 @@ class _Page4State extends State<Page4> {
           ),
           Positioned(
             top: displayHeight(context) * 0.22,
-            left: displayWidth(context) * 0.04,
-            right: displayWidth(context) * 0.04,
+            left: displayWidth(context) * 0.005,
+            right: displayWidth(context) * 0.005,
             child: Container(
               height: displayHeight(context) * 0.6,
               width: displayWidth(context),
@@ -432,13 +435,16 @@ class _Page4State extends State<Page4> {
                         ),
                       ),
                     );
-                  return ListView.builder(
-                    itemBuilder: (BuildContext context, int index) {
-                      return _showProblem(
-                          context, snapshot.data.documents[index]);
-                    },
-                    itemCount: snapshot.data.documents.length,
-                    scrollDirection: Axis.horizontal,
+                  return Padding(
+                    padding: const EdgeInsets.only(left: 8.0, right: 8.0),
+                    child: ListView.builder(
+                      itemBuilder: (BuildContext context, int index) {
+                        return _showProblem(
+                            context, snapshot.data.documents[index]);
+                      },
+                      itemCount: snapshot.data.documents.length,
+                      scrollDirection: Axis.horizontal,
+                    ),
                   );
                 },
                 stream: FirebaseFirestore.instance

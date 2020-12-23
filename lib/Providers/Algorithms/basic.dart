@@ -6,7 +6,7 @@ class basiclist extends ChangeNotifier {
     algosingle(
         title: "Frequency Array",
         link:
-            "https://github.com/swaadheenta/Basic_Algorithms/blob/main/Frequency%20of%20array.cpp"),
+            "https://github.com/swaadheenta/Basic_Algorithms/blob/main/Frequency%20array.cpp"),
     algosingle(
         title: "Maximum Subarray Sum",
         link:

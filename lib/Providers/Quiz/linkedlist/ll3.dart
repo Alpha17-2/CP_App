@@ -5,12 +5,12 @@ class ll3 extends ChangeNotifier {
   List<SingleQuizQuestion> lll3 = [
     SingleQuizQuestion(
       question:
-          "What does the following function do for a given linked list with first node as head ?\n void fun1(Struct node* head)\n{\n if (head==null)\n  return;\n\n fun1(head->next);\n printf(\"%d\",head->data);\n}",
+          "What does the following function do for a given linked list with first node as head ?\n\n void fun1(Struct node* head)\n{\n if (head==null)\n  return;\n fun1(head->next);\n printf(\"%d\",head->data);\n}",
       option1: "Prints all nodes of linked list",
-      option2: "Print all nodes of linked list in reverse oder",
+      option2: "Print all nodes of linked list in reverse order",
       option3: "Prints alternate nodes of linked list",
-      option4: "Print alternate nodes in reverse oder",
-      correct: "Print all nodes of linked list in reverse oder ",
+      option4: "Print alternate nodes in reverse order",
+      correct: "Print all nodes of linked list in reverse order",
       isFirstAttemp: true,
     ),
     SingleQuizQuestion(
@@ -30,7 +30,7 @@ class ll3 extends ChangeNotifier {
       option2: "removal of a node",
       option3: "inserting a node",
       option4: "modifying an existing node",
-      correct: "inserting node",
+      correct: "inserting a node",
       isFirstAttemp: true,
     ),
     SingleQuizQuestion(
