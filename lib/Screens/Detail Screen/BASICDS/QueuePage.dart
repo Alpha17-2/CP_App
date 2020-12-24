@@ -9,7 +9,7 @@ class Queuepage extends StatelessWidget {
     double verysmallDivider = displayHeight(context) * 0.01;
     double fontsize = displayWidth(context) * 0.04;
     double keywordsize = displayWidth(context) * 0.050;
-    double headingfontsize = displayWidth(context) * 0.062;
+    double headingfontsize = displayWidth(context) * 0.05;
     double subheadingfontsize = displayWidth(context) * 0.053;
     double keywordfontsize = displayWidth(context) * 0.048;
     final mydiv = Opacity(
@@ -28,7 +28,7 @@ class Queuepage extends StatelessWidget {
     final t1 = new RichText(
       text: TextSpan(
           style: TextStyle(
-              fontSize: fontsize,
+              fontSize: displayWidth(context) * 0.037,
               color: Colors.black,
               fontWeight: FontWeight.w500),
           children: <TextSpan>[
@@ -128,7 +128,7 @@ class Queuepage extends StatelessWidget {
                       fontSize: headingfontsize,
                       color: Colors.deepPurple,
                       fontFamily: "PatuaOne",
-                      fontWeight: FontWeight.bold,
+                      fontWeight: FontWeight.w500,
                     ),
                   ),
                   Opacity(
@@ -142,7 +142,7 @@ class Queuepage extends StatelessWidget {
                       fontSize: subheadingfontsize,
                       color: Colors.blue[600],
                       fontFamily: "Breeserif",
-                      fontWeight: FontWeight.bold,
+                      fontWeight: FontWeight.w500,
                       letterSpacing: 0.5,
                     ),
                   ),
@@ -157,7 +157,7 @@ class Queuepage extends StatelessWidget {
                       fontSize: subheadingfontsize,
                       color: Colors.teal,
                       fontFamily: "Acme",
-                      fontWeight: FontWeight.bold,
+                      fontWeight: FontWeight.w500,
                       letterSpacing: 0.7,
                     ),
                   ),
@@ -227,10 +227,10 @@ class Queuepage extends StatelessWidget {
                   Text(
                     "Illustration :- ",
                     style: TextStyle(
-                      fontSize: displayWidth(context) * 0.065,
+                      fontSize: displayWidth(context) * 0.06,
                       color: Colors.red,
                       fontFamily: "PatuaOne",
-                      fontWeight: FontWeight.bold,
+                      fontWeight: FontWeight.w500,
                     ),
                   ),
                   mydiv,
@@ -254,7 +254,7 @@ class Queuepage extends StatelessWidget {
                       fontSize: subheadingfontsize,
                       color: Colors.teal,
                       fontFamily: "Acme",
-                      fontWeight: FontWeight.bold,
+                      fontWeight: FontWeight.w500,
                       letterSpacing: 0.7,
                     ),
                   ),
@@ -314,7 +314,7 @@ class Queuepage extends StatelessWidget {
                       fontSize: keywordfontsize,
                       color: Colors.red,
                       fontFamily: "PatuaOne",
-                      fontWeight: FontWeight.bold,
+                      fontWeight: FontWeight.w500,
                     ),
                   ),
                   Padding(
@@ -337,7 +337,7 @@ class Queuepage extends StatelessWidget {
                       fontSize: subheadingfontsize,
                       color: Colors.blue[600],
                       fontFamily: "Breeserif",
-                      fontWeight: FontWeight.bold,
+                      fontWeight: FontWeight.w500,
                       letterSpacing: 0.5,
                     ),
                   ),
@@ -352,7 +352,7 @@ class Queuepage extends StatelessWidget {
                       fontSize: subheadingfontsize,
                       color: Colors.teal,
                       fontFamily: "Acme",
-                      fontWeight: FontWeight.bold,
+                      fontWeight: FontWeight.w500,
                       letterSpacing: 0.7,
                     ),
                   ),
@@ -425,7 +425,7 @@ class Queuepage extends StatelessWidget {
                       fontSize: keywordfontsize,
                       color: Colors.red,
                       fontFamily: "PatuaOne",
-                      fontWeight: FontWeight.bold,
+                      fontWeight: FontWeight.w500,
                     ),
                   ),
                   Padding(
@@ -447,7 +447,7 @@ class Queuepage extends StatelessWidget {
                       fontSize: subheadingfontsize,
                       color: Colors.teal,
                       fontFamily: "Acme",
-                      fontWeight: FontWeight.bold,
+                      fontWeight: FontWeight.w500,
                       letterSpacing: 0.7,
                     ),
                   ),
@@ -520,7 +520,7 @@ class Queuepage extends StatelessWidget {
                       fontSize: keywordfontsize,
                       color: Colors.red,
                       fontFamily: "PatuaOne",
-                      fontWeight: FontWeight.bold,
+                      fontWeight: FontWeight.w500,
                     ),
                   ),
                   Padding(
@@ -543,7 +543,7 @@ class Queuepage extends StatelessWidget {
                       fontSize: subheadingfontsize,
                       color: Colors.blue[600],
                       fontFamily: "Breeserif",
-                      fontWeight: FontWeight.bold,
+                      fontWeight: FontWeight.w500,
                       letterSpacing: 0.5,
                     ),
                   ),
@@ -611,7 +611,7 @@ class Queuepage extends StatelessWidget {
                       fontSize: keywordfontsize,
                       color: Colors.red,
                       fontFamily: "PatuaOne",
-                      fontWeight: FontWeight.bold,
+                      fontWeight: FontWeight.w500,
                     ),
                   ),
                   Padding(
@@ -632,7 +632,7 @@ class Queuepage extends StatelessWidget {
                         fontSize: subheadingfontsize,
                         color: Colors.teal,
                         fontFamily: "Acme",
-                        fontWeight: FontWeight.bold,
+                        fontWeight: FontWeight.w500,
                         letterSpacing: 0.7,
                       )),
                   Opacity(
@@ -662,7 +662,7 @@ class Queuepage extends StatelessWidget {
                       fontSize: keywordfontsize,
                       color: Colors.red,
                       fontFamily: "PatuaOne",
-                      fontWeight: FontWeight.bold,
+                      fontWeight: FontWeight.w500,
                     ),
                   ),
                   Padding(
@@ -683,7 +683,7 @@ class Queuepage extends StatelessWidget {
                     style: TextStyle(
                         fontSize: subheadingfontsize,
                         color: Colors.orange[800],
-                        fontWeight: FontWeight.bold),
+                        fontWeight: FontWeight.w500),
                   ),
                   Opacity(
                       opacity: 0.0,
@@ -695,7 +695,7 @@ class Queuepage extends StatelessWidget {
                         fontSize: subheadingfontsize,
                         color: Colors.teal,
                         fontFamily: "Acme",
-                        fontWeight: FontWeight.bold,
+                        fontWeight: FontWeight.w500,
                         letterSpacing: 0.7,
                       )),
                   Opacity(
@@ -716,7 +716,7 @@ class Queuepage extends StatelessWidget {
                     "Here time complexity will be O(1).",
                     style: TextStyle(
                         fontSize: displayWidth(context) * 0.05,
-                        fontWeight: FontWeight.w600),
+                        fontWeight: FontWeight.w500),
                   ),
                   mydiv2,
                   Text(
@@ -725,7 +725,7 @@ class Queuepage extends StatelessWidget {
                       fontSize: keywordfontsize,
                       color: Colors.red,
                       fontFamily: "PatuaOne",
-                      fontWeight: FontWeight.bold,
+                      fontWeight: FontWeight.w500,
                     ),
                   ),
                   Padding(
@@ -746,7 +746,7 @@ class Queuepage extends StatelessWidget {
                         fontSize: subheadingfontsize,
                         color: Colors.teal,
                         fontFamily: "Acme",
-                        fontWeight: FontWeight.bold,
+                        fontWeight: FontWeight.w500,
                         letterSpacing: 0.7,
                       )),
                   Opacity(
@@ -767,7 +767,7 @@ class Queuepage extends StatelessWidget {
                     "Here time complexity will be O(N).",
                     style: TextStyle(
                         fontSize: displayWidth(context) * 0.05,
-                        fontWeight: FontWeight.w600),
+                        fontWeight: FontWeight.w500),
                   ),
                   mydiv2,
                   Text(
@@ -776,7 +776,7 @@ class Queuepage extends StatelessWidget {
                       fontSize: keywordfontsize,
                       color: Colors.red,
                       fontFamily: "PatuaOne",
-                      fontWeight: FontWeight.bold,
+                      fontWeight: FontWeight.w500,
                     ),
                   ),
                   Padding(

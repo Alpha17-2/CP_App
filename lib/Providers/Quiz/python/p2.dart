@@ -10,6 +10,7 @@ class p2 extends ChangeNotifier {
       option3: "s={abcd}",
       option4: "s={2, 2.2, 3, ‘xyz’}",
       correct: "s={abcd}",
+      isFirstAttemp: true,
     ),
     SingleQuizQuestion(
       question:
@@ -18,6 +19,7 @@ class p2 extends ChangeNotifier {
       option2: "-5",
       option3: "5",
       option4: "5.0",
+      isFirstAttemp: true,
       correct: "5.0",
     ),
     SingleQuizQuestion(
@@ -26,6 +28,7 @@ class p2 extends ChangeNotifier {
       option1: "Interface",
       option2: "Modularity",
       option3: "Client",
+      isFirstAttemp: true,
       option4: "Docstring",
       correct: "Docstring",
     ),
@@ -36,6 +39,7 @@ class p2 extends ChangeNotifier {
       option3: "__sum__()",
       option4: "None of the above",
       correct: "__add__()",
+      isFirstAttemp: true,
     ),
     SingleQuizQuestion(
       question: "Which of the following is not a class method?",
@@ -43,6 +47,7 @@ class p2 extends ChangeNotifier {
       option2: "Non-static",
       option3: "Bounded",
       option4: "Unbounded",
+      isFirstAttemp: true,
       correct: "Non-static",
     ),
     SingleQuizQuestion(
@@ -52,6 +57,7 @@ class p2 extends ChangeNotifier {
       option2: "x ^ y",
       option3: "x & y",
       option4: "x – y",
+      isFirstAttemp: true,
       correct: "x ^ y",
     ),
     SingleQuizQuestion(
@@ -60,6 +66,7 @@ class p2 extends ChangeNotifier {
       option1: "list",
       option2: "tuple",
       option3: "dictionary",
+      isFirstAttemp: true,
       option4: "set",
       correct: "dictionary",
     ),

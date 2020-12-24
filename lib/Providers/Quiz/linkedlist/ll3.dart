@@ -64,10 +64,10 @@ class ll3 extends ChangeNotifier {
       option2:
           "the elements in the list are sorted in non-decreasing order of data value.",
       option3:
-          "the elements in the list are sorted in non-increasing oder of data value.",
+          "the elements in the list are sorted in non-increasing order of data value.",
       option4: "None of them.",
       correct:
-          "the elements in the list are sorted in non-decreasing oder of data value.",
+          "the elements in the list are sorted in non-decreasing order of data value.",
       isFirstAttemp: true,
     ),
     SingleQuizQuestion(

@@ -47,7 +47,7 @@ class cplus3 extends ChangeNotifier {
       question:
           "From the below class choose the proper definition of the member function f().\n\ntemplate <class T>\nclass abc {\n void f();\n};",
       option1: "template <class T>\nvoid abc::f() {}",
-      option2: "template<class T>\nvoid abc::f() {}",
+      option2: "template <T>\nvoid abc::f() {}",
       option3: "template<T>\nvoid abc<class T>::f() {}",
       isFirstAttemp: true,
       option4: "template<T>\nvoid abc<T>::f() {}",

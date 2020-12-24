@@ -169,7 +169,7 @@ class StackPage extends StatelessWidget {
     final text1 = new RichText(
       text: TextSpan(
           style: TextStyle(
-              fontSize: fontsize,
+              fontSize: displayWidth(context) * 0.037,
               color: Colors.black,
               fontWeight: FontWeight.w500),
           children: <TextSpan>[
@@ -310,8 +310,8 @@ class StackPage extends StatelessWidget {
                 style: TextStyle(
                     color: Colors.blue,
                     fontFamily: "CreteRound",
-                    fontSize: displayWidth(context) * 0.06,
-                    fontWeight: FontWeight.bold),
+                    fontSize: displayWidth(context) * 0.055,
+                    fontWeight: FontWeight.w500),
               ),
               Opacity(
                 opacity: 0.0,
@@ -324,8 +324,8 @@ class StackPage extends StatelessWidget {
                 style: TextStyle(
                     color: Colors.deepPurple,
                     fontFamily: "PatuaOne",
-                    fontSize: displayWidth(context) * 0.065,
-                    fontWeight: FontWeight.bold),
+                    fontSize: displayWidth(context) * 0.06,
+                    fontWeight: FontWeight.w500),
               ),
               Opacity(
                 opacity: 0.0,
@@ -336,7 +336,7 @@ class StackPage extends StatelessWidget {
               Text(
                 "Inserting an element on the top of stack.",
                 style: TextStyle(
-                    fontSize: displayWidth(context) * 0.05,
+                    fontSize: displayWidth(context) * 0.047,
                     fontWeight: FontWeight.bold),
               ),
               Opacity(
@@ -394,8 +394,8 @@ class StackPage extends StatelessWidget {
                 style: TextStyle(
                     color: Colors.deepPurple,
                     fontFamily: "PatuaOne",
-                    fontSize: displayWidth(context) * 0.065,
-                    fontWeight: FontWeight.bold),
+                    fontSize: displayWidth(context) * 0.06,
+                    fontWeight: FontWeight.w500),
               ),
               Opacity(
                 opacity: 0.0,
@@ -406,7 +406,7 @@ class StackPage extends StatelessWidget {
               Text(
                 "Removing or deleting elements from the top of the stack.",
                 style: TextStyle(
-                    fontSize: displayWidth(context) * 0.05,
+                    fontSize: displayWidth(context) * 0.047,
                     fontWeight: FontWeight.bold),
               ),
               Opacity(
@@ -464,8 +464,8 @@ class StackPage extends StatelessWidget {
                 style: TextStyle(
                     color: Colors.blue,
                     fontFamily: "CreteRound",
-                    fontSize: displayWidth(context) * 0.0625,
-                    fontWeight: FontWeight.bold),
+                    fontSize: displayWidth(context) * 0.06,
+                    fontWeight: FontWeight.w500),
               ),
               Opacity(
                 opacity: 0.0,
@@ -478,8 +478,8 @@ class StackPage extends StatelessWidget {
                 style: TextStyle(
                     color: Colors.deepPurple,
                     fontFamily: "PatuaOne",
-                    fontSize: displayWidth(context) * 0.065,
-                    fontWeight: FontWeight.bold),
+                    fontSize: displayWidth(context) * 0.061,
+                    fontWeight: FontWeight.w500),
               ),
               Opacity(
                 opacity: 0.0,
@@ -576,8 +576,8 @@ class StackPage extends StatelessWidget {
                 style: TextStyle(
                     color: Colors.deepPurple,
                     fontFamily: "PatuaOne",
-                    fontSize: displayWidth(context) * 0.065,
-                    fontWeight: FontWeight.bold),
+                    fontSize: displayWidth(context) * 0.061,
+                    fontWeight: FontWeight.w500),
               ),
               Opacity(
                 opacity: 0.0,

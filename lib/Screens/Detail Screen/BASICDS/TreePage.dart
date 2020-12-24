@@ -13,7 +13,7 @@ class _TreePageState extends State<TreePage> {
   Widget build(BuildContext context) {
     double smallDivider = displayHeight(context) * 0.028;
     double verysmallDivider = displayHeight(context) * 0.01;
-    double fontsize = displayWidth(context) * 0.04;
+    double fontsize = displayWidth(context) * 0.037;
     double headingsize = displayWidth(context) * 0.055;
 
     final mydiv = Opacity(
@@ -1317,9 +1317,9 @@ class _TreePageState extends State<TreePage> {
           BottomNavyBarItem(
             inactiveColor: Colors.purple,
             activeColor: Colors.lightBlue,
-            icon: Icon(Icons.assignment),
+            icon: Icon(Icons.account_tree_outlined),
             title: Text(
-              'Data Structure',
+              'Types',
               style: TextStyle(
                 fontSize: displayWidth(context) * 0.03,
               ),

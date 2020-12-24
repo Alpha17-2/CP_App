@@ -50,7 +50,7 @@ class c3 extends ChangeNotifier {
         correct: "a = 11,c = 10"),
     SingleQuizQuestion(
         question:
-            "What will be the output of the code ?\n\n   void main()\n   {\n   int x = 1;\n   do\n   printf(\"%d\",x);\n   while(x++<=1);\n}.",
+            "What will be the output of the code ?\n\n   void main()\n   {\n   int x = 1;\n   do\n   printf(\"%d\",x);\n   while(x++<=1);\n   }",
         option1: "1",
         option2: "1 2",
         option3: "No output",

@@ -24,7 +24,7 @@ class cplus1 extends ChangeNotifier {
       isFirstAttemp: true,
     ),
     SingleQuizQuestion(
-      question: "Escape sequence character '\0' occupies____amount of memory ?",
+      question: 'Escape sequence character \\0 occupies____amount of memory ?',
       option1: "0",
       option2: "1",
       option3: "2",

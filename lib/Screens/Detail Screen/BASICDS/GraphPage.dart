@@ -692,7 +692,7 @@ class Graphpage extends StatelessWidget {
                       image: AssetImage(
                         "images/g4.png",
                       ),
-                      fit: BoxFit.fitWidth),
+                      fit: BoxFit.fill),
                 ),
               ),
               Opacity(

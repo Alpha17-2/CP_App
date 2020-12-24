@@ -51,7 +51,7 @@ class ar1 extends ChangeNotifier {
       isFirstAttemp: true,
     ),
     SingleQuizQuestion(
-      question: " If int arr[1]={10} , what will be the output of cout<<0[arr]",
+      question: " If int arr[1]={10} , what will be the output of cout<<arr[0]",
       option1: "Compile time error",
       option2: "Run time error",
       option3: "10",
